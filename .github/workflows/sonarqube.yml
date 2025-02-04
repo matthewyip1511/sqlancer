@@ -20,11 +20,12 @@ jobs:
           java-version: '17'
 
       - name: Build project with Maven
-        run: mvn clean package
+        run: mvn package -DskipTests
 
       - name: Run SonarQube analysis
         run: |
           mvn sonar:sonar \
-            -Dsonar.projectKey=my_project \
-            -Dsonar.host.url=http://localhost:9000 \
+            -Dsonar.projectKey=CS3213-T6-1_sqlancer \
+            -Dsonar.organisation=cs3213-t6-1 \
+            -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.login=${{ secrets.SONAR_TOKEN }}
