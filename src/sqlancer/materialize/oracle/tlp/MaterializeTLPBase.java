@@ -1,5 +1,7 @@
 package sqlancer.materialize.oracle.tlp;
 
+import static sqlancer.materialize.MaterializeUtils.getJoinStatements;
+
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,6 +9,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import sqlancer.Randomly;
+import sqlancer.common.ast.JoinBase;
 import sqlancer.common.gen.ExpressionGenerator;
 import sqlancer.common.oracle.TernaryLogicPartitioningOracleBase;
 import sqlancer.common.oracle.TestOracle;
@@ -20,7 +23,6 @@ import sqlancer.materialize.ast.MaterializeColumnValue;
 import sqlancer.materialize.ast.MaterializeConstant;
 import sqlancer.materialize.ast.MaterializeExpression;
 import sqlancer.materialize.ast.MaterializeJoin;
-import sqlancer.materialize.ast.MaterializeJoin.MaterializeJoinType;
 import sqlancer.materialize.ast.MaterializeSelect;
 import sqlancer.materialize.ast.MaterializeSelect.ForClause;
 import sqlancer.materialize.ast.MaterializeSelect.MaterializeFromTable;
@@ -52,33 +54,7 @@ public class MaterializeTLPBase
         generateSelectBase(tables, joins);
     }
 
-    protected List<MaterializeJoin> getJoinStatements(MaterializeGlobalState globalState,
-            List<MaterializeColumn> columns, List<MaterializeTable> tables) {
-        List<MaterializeJoin> joinStatements = new ArrayList<>();
-        MaterializeExpressionGenerator gen = new MaterializeExpressionGenerator(globalState).setColumns(columns);
-        for (int i = 1; i < tables.size(); i++) {
-            MaterializeExpression joinClause = gen.generateExpression(MaterializeDataType.BOOLEAN);
-            MaterializeTable table = Randomly.fromList(tables);
-            tables.remove(table);
-            MaterializeJoinType options = MaterializeJoinType.getRandom();
-            MaterializeJoin j = new MaterializeJoin(new MaterializeFromTable(table, Randomly.getBoolean()), joinClause,
-                    options);
-            joinStatements.add(j);
-        }
-        // JOIN subqueries
-        for (int i = 0; i < Randomly.smallNumber(); i++) {
-            MaterializeTables subqueryTables = globalState.getSchema().getRandomTableNonEmptyTables();
-            MaterializeSubquery subquery = MaterializeTLPBase.createSubquery(globalState, String.format("sub%d", i),
-                    subqueryTables);
-            MaterializeExpression joinClause = gen.generateExpression(MaterializeDataType.BOOLEAN);
-            MaterializeJoinType options = MaterializeJoinType.getRandom();
-            MaterializeJoin j = new MaterializeJoin(subquery, joinClause, options);
-            joinStatements.add(j);
-        }
-
-        return joinStatements;
-    }
-
+    @SuppressWarnings("unchecked")
     protected void generateSelectBase(List<MaterializeTable> tables, List<MaterializeJoin> joins) {
         List<MaterializeExpression> tableList = tables.stream()
                 .map(t -> new MaterializeFromTable(t, Randomly.getBoolean())).collect(Collectors.toList());
@@ -88,7 +64,7 @@ public class MaterializeTLPBase
         select.setFetchColumns(generateFetchColumns());
         select.setFromList(tableList);
         select.setWhereClause(null);
-        select.setJoinClauses(joins);
+        select.setJoinClauses((List<JoinBase<MaterializeExpression>>) (List<?>) joins);
         if (Randomly.getBoolean()) {
             select.setForClause(ForClause.getRandom());
         }

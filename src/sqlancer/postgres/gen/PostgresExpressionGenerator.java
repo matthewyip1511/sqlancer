@@ -1,5 +1,7 @@
 package sqlancer.postgres.gen;
 
+import static sqlancer.postgres.PostgresUtils.createSubquery;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -11,6 +13,7 @@ import java.util.stream.Stream;
 
 import sqlancer.IgnoreMeException;
 import sqlancer.Randomly;
+import sqlancer.common.ast.JoinBase.JoinType;
 import sqlancer.common.ast.SelectBase.SelectType;
 import sqlancer.common.gen.CERTGenerator;
 import sqlancer.common.gen.ExpressionGenerator;
@@ -50,7 +53,6 @@ import sqlancer.postgres.ast.PostgresFunction.PostgresFunctionWithResult;
 import sqlancer.postgres.ast.PostgresFunctionWithUnknownResult;
 import sqlancer.postgres.ast.PostgresInOperation;
 import sqlancer.postgres.ast.PostgresJoin;
-import sqlancer.postgres.ast.PostgresJoin.PostgresJoinType;
 import sqlancer.postgres.ast.PostgresLikeOperation;
 import sqlancer.postgres.ast.PostgresOrderByTerm;
 import sqlancer.postgres.ast.PostgresOrderByTerm.PostgresOrder;
@@ -62,7 +64,6 @@ import sqlancer.postgres.ast.PostgresPostfixText;
 import sqlancer.postgres.ast.PostgresPrefixOperation;
 import sqlancer.postgres.ast.PostgresPrefixOperation.PrefixOperator;
 import sqlancer.postgres.ast.PostgresSelect;
-import sqlancer.postgres.ast.PostgresSelect.ForClause;
 import sqlancer.postgres.ast.PostgresSelect.PostgresFromTable;
 import sqlancer.postgres.ast.PostgresSelect.PostgresSubquery;
 import sqlancer.postgres.ast.PostgresSimilarTo;
@@ -609,35 +610,6 @@ public class PostgresExpressionGenerator implements ExpressionGenerator<Postgres
         return this;
     }
 
-    public static PostgresSubquery createSubquery(PostgresGlobalState globalState, String name, PostgresTables tables) {
-        List<PostgresExpression> columns = new ArrayList<>();
-        PostgresExpressionGenerator gen = new PostgresExpressionGenerator(globalState).setColumns(tables.getColumns());
-        for (int i = 0; i < Randomly.smallNumber() + 1; i++) {
-            columns.add(gen.generateExpression(0));
-        }
-        PostgresSelect select = new PostgresSelect();
-        select.setFromList(tables.getTables().stream().map(t -> new PostgresFromTable(t, Randomly.getBoolean()))
-                .collect(Collectors.toList()));
-        select.setFetchColumns(columns);
-        if (Randomly.getBoolean()) {
-            select.setWhereClause(gen.generateExpression(0, PostgresDataType.BOOLEAN));
-        }
-        if (Randomly.getBooleanWithRatherLowProbability()) {
-            select.setOrderByClauses(gen.generateOrderBys());
-        }
-        if (Randomly.getBoolean()) {
-            select.setLimitClause(PostgresConstant.createIntConstant(Randomly.getPositiveOrZeroNonCachedInteger()));
-            if (Randomly.getBoolean()) {
-                select.setOffsetClause(
-                        PostgresConstant.createIntConstant(Randomly.getPositiveOrZeroNonCachedInteger()));
-            }
-        }
-        if (Randomly.getBooleanWithRatherLowProbability()) {
-            select.setForClause(ForClause.getRandom());
-        }
-        return new PostgresSubquery(select, name);
-    }
-
     @Override
     public PostgresExpression generatePredicate() {
         return generateExpression(PostgresDataType.BOOLEAN);
@@ -677,7 +649,7 @@ public class PostgresExpressionGenerator implements ExpressionGenerator<Postgres
             PostgresExpression joinClause = generateExpression(PostgresDataType.BOOLEAN);
             PostgresTable table = Randomly.fromList(targetTables);
             targetTables.remove(table);
-            PostgresJoinType options = PostgresJoinType.getRandom();
+            JoinType options = JoinType.getRandomForDatabase("POSTGRES");
             PostgresJoin j = new PostgresJoin(new PostgresFromTable(table, Randomly.getBoolean()), joinClause, options);
             joinStatements.add(j);
         }
@@ -686,7 +658,7 @@ public class PostgresExpressionGenerator implements ExpressionGenerator<Postgres
             PostgresTables subqueryTables = globalState.getSchema().getRandomTableNonEmptyTables();
             PostgresSubquery subquery = createSubquery(globalState, String.format("sub%d", i), subqueryTables);
             PostgresExpression joinClause = generateExpression(PostgresDataType.BOOLEAN);
-            PostgresJoinType options = PostgresJoinType.getRandom();
+            JoinType options = JoinType.getRandomForDatabase("POSTGRES");
             PostgresJoin j = new PostgresJoin(subquery, joinClause, options);
             joinStatements.add(j);
         }
@@ -775,7 +747,7 @@ public class PostgresExpressionGenerator implements ExpressionGenerator<Postgres
         PostgresJoin join = (PostgresJoin) Randomly.fromList(select.getJoinList());
 
         // Exclude CROSS for on condition
-        if (join.getType() == PostgresJoinType.CROSS) {
+        if (join.getType() == JoinType.CROSS) {
             List<PostgresColumn> columns = new ArrayList<>();
             columns.addAll(((PostgresTableReference) join.getLeftTable()).getTable().getColumns());
             columns.addAll(((PostgresTableReference) join.getRightTable()).getTable().getColumns());
@@ -783,15 +755,15 @@ public class PostgresExpressionGenerator implements ExpressionGenerator<Postgres
             join.setOnClause(joinGen2.generateExpression(0, PostgresDataType.BOOLEAN));
         }
 
-        PostgresJoinType newJoinType = PostgresJoinType.INNER;
-        if (join.getType() == PostgresJoinType.LEFT || join.getType() == PostgresJoinType.RIGHT) {
-            newJoinType = PostgresJoinType.getRandomExcept(PostgresJoinType.LEFT, PostgresJoinType.RIGHT);
+        JoinType newJoinType = JoinType.INNER;
+        if (join.getType() == JoinType.LEFT || join.getType() == JoinType.RIGHT) {
+            newJoinType = JoinType.getRandomExcept("POSTGRES", JoinType.LEFT, JoinType.RIGHT);
         } else {
-            newJoinType = PostgresJoinType.getRandomExcept(join.getType());
+            newJoinType = JoinType.getRandomExcept("POSTGRES", join.getType());
         }
         boolean increase = join.getType().ordinal() < newJoinType.ordinal();
         join.setType(newJoinType);
-        if (newJoinType == PostgresJoinType.CROSS) {
+        if (newJoinType == JoinType.CROSS) {
             join.setOnClause(null);
         }
         return increase;
