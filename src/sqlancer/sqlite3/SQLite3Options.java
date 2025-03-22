@@ -82,6 +82,10 @@ public class SQLite3Options implements DBMSSpecificOptions<SQLite3OracleFactory>
         @Parameter(names = "--use-custom-script", description = "Use a custom script to generate database tables for testing")
         private String customScriptPath = null;
 
+        public String getCustomScriptPath() {
+                return customScriptPath;
+        }
+
         @Override
         public List<SQLite3OracleFactory> getTestOracleFactory() {
                 return Arrays.asList(oracles);

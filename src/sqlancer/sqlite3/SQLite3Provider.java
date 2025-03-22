@@ -182,23 +182,30 @@ public class SQLite3Provider extends SQLProviderAdapter<SQLite3GlobalState, SQLi
     public void generateDatabase(SQLite3GlobalState globalState) throws Exception {
         Randomly r = new Randomly(SQLite3SpecialStringGenerator::generate);
         globalState.setRandomly(r);
+
         if (globalState.getDbmsSpecificOptions().generateDatabase) {
-
             addSensiblePragmaDefaults(globalState);
-            int nrTablesToCreate = 1;
-            if (Randomly.getBoolean()) {
-                nrTablesToCreate++;
-            }
-            while (Randomly.getBooleanWithSmallProbability()) {
-                nrTablesToCreate++;
-            }
-            int i = 0;
 
-            do {
-                SQLQueryAdapter tableQuery = getTableQuery(globalState, i++);
-                globalState.executeStatement(tableQuery);
-            } while (globalState.getSchema().getDatabaseTables().size() < nrTablesToCreate);
-            assert globalState.getSchema().getTables().getTables().size() == nrTablesToCreate;
+            String customScriptPath = globalState.getDbmsSpecificOptions().getCustomScriptPath();
+            if (customScriptPath != null) {
+                executeCustomScript(globalState, customScriptPath);
+            } else {
+                int nrTablesToCreate = 1;
+                if (Randomly.getBoolean()) {
+                    nrTablesToCreate++;
+                }
+                while (Randomly.getBooleanWithSmallProbability()) {
+                    nrTablesToCreate++;
+                }
+                int i = 0;
+
+                do {
+                    SQLQueryAdapter tableQuery = getTableQuery(globalState, i++);
+                    globalState.executeStatement(tableQuery);
+                } while (globalState.getSchema().getDatabaseTables().size() < nrTablesToCreate);
+                assert globalState.getSchema().getTables().getTables().size() == nrTablesToCreate;
+            }
+
             checkTablesForGeneratedColumnLoops(globalState);
             if (globalState.getDbmsSpecificOptions().testDBStats && Randomly.getBooleanWithSmallProbability()) {
                 SQLQueryAdapter tableQuery = new SQLQueryAdapter(
@@ -220,6 +227,12 @@ public class SQLite3Provider extends SQLProviderAdapter<SQLite3GlobalState, SQLi
             query = SQLite3TransactionGenerator.generateRollbackTransaction(globalState);
             globalState.executeStatement(query);
         }
+    }
+
+    private void executeCustomScript(SQLite3GlobalState globalState, String customScriptPath) throws Exception {
+        System.out.println("Executing custom script: " + customScriptPath);
+        System.out.println("This is not supported yet");
+        System.exit(1);
     }
 
     private void checkTablesForGeneratedColumnLoops(SQLite3GlobalState globalState) throws Exception {
