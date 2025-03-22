@@ -97,7 +97,16 @@ public abstract class DatabendConstant extends DatabendDorisConstant implements 
         // }
     }
 
-    public static class DatabendIntConstant extends DatabendConstant {
+    public static abstract class DatabendNumericConstant<T> extends DatabendConstant {
+        protected final T value;
+
+        public DatabendNumericConstant(T value) {
+            this.value = value;
+        }
+
+
+    }
+    public static class DatabendIntConstant extends DatabendNumericConstant<Long> {
 
         private final long value;
 
