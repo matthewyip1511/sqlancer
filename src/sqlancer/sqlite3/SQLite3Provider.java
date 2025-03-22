@@ -2,6 +2,8 @@ package sqlancer.sqlite3;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -230,9 +232,26 @@ public class SQLite3Provider extends SQLProviderAdapter<SQLite3GlobalState, SQLi
     }
 
     private void executeCustomScript(SQLite3GlobalState globalState, String customScriptPath) throws Exception {
-        System.out.println("Executing custom script: " + customScriptPath);
-        System.out.println("This is not supported yet");
-        System.exit(1);
+        try {
+            String sqlScript = new String(Files.readAllBytes(Paths.get(customScriptPath)));
+            String[] statements = sqlScript.split(";");
+
+            for (String statement : statements) {
+                statement = statement.trim();
+                if (!statement.isEmpty()) {
+                    SQLQueryAdapter queryAdapter = new SQLQueryAdapter(statement + ";");
+                    globalState.executeStatement(queryAdapter);
+                }
+            }
+
+            // Force schema reload to recognize the custom tables
+            // globalState.getSchema().setDatabaseName(globalState.getDatabaseName());
+            globalState.updateSchema();
+
+        } catch (IOException e) {
+            System.err.println("Failed to read custom SQL script from: " + customScriptPath);
+            throw new Exception();
+        }
     }
 
     private void checkTablesForGeneratedColumnLoops(SQLite3GlobalState globalState) throws Exception {
