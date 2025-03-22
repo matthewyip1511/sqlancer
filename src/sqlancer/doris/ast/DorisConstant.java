@@ -1,13 +1,11 @@
 package sqlancer.doris.ast;
 
+import sqlancer.DatabendDorisConstant;
 import sqlancer.doris.DorisSchema.DorisDataType;
 import sqlancer.doris.utils.DorisNumberUtils;
 
-public abstract class DorisConstant implements DorisExpression {
-
-    private DorisConstant() {
-    }
-
+public abstract class DorisConstant extends DatabendDorisConstant implements DorisExpression {
+/*
     public boolean isNull() {
         return false;
     }
@@ -27,7 +25,7 @@ public abstract class DorisConstant implements DorisExpression {
     public boolean isFloat() {
         return false;
     }
-
+*/
     public boolean isNum() {
         // for INT, FLOAT, BOOLEAN
         return false;
@@ -40,7 +38,7 @@ public abstract class DorisConstant implements DorisExpression {
     public boolean isDatetime() {
         return false;
     }
-
+/*
     public boolean asBoolean() {
         throw new UnsupportedOperationException(this.toString());
     }
@@ -56,7 +54,7 @@ public abstract class DorisConstant implements DorisExpression {
     public double asFloat() {
         throw new UnsupportedOperationException(this.toString());
     }
-
+*/
     public abstract DorisConstant cast(DorisDataType dataType);
 
     public abstract DorisConstant valueEquals(DorisConstant rightVal);

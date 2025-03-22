@@ -3,13 +3,11 @@ package sqlancer.databend.ast;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 
+import sqlancer.DatabendDorisConstant;
 import sqlancer.databend.DatabendSchema.DatabendDataType;
 
-public abstract class DatabendConstant implements DatabendExpression {
-
-    private DatabendConstant() {
-    }
-
+public abstract class DatabendConstant extends DatabendDorisConstant implements DatabendExpression {
+/*
     public boolean isNull() {
         return false;
     }
@@ -29,9 +27,9 @@ public abstract class DatabendConstant implements DatabendExpression {
     public boolean isFloat() {
         return false;
     }
-
+*/
     public abstract DatabendConstant cast(DatabendDataType dataType);
-
+/*
     public boolean asBoolean() {
         throw new UnsupportedOperationException(this.toString());
     }
@@ -47,7 +45,7 @@ public abstract class DatabendConstant implements DatabendExpression {
     public double asFloat() {
         throw new UnsupportedOperationException(this.toString());
     }
-
+*/
     protected Timestamp truncateTimestamp(long val) {
         // Databend supports `date` and `timestamp` type where the year cannot exceed `9999`,
         // the value is truncated to ensure generate legitimate `date` and `timestamp` value.
