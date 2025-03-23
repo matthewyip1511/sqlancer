@@ -41,5 +41,4 @@ public class DatabendDorisConstant {
         throw new UnsupportedOperationException(this.toString());
     }
 
-
 }

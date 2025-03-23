@@ -783,7 +783,6 @@ public abstract class PrestoConstant implements PrestoExpression {
             return String.valueOf(value);
         }
 
-
     }
 
     public static class PrestoArrayConstant extends PrestoConstant {
