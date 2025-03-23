@@ -80,7 +80,7 @@ public abstract class DatabendConstant extends DatabendDorisConstant implements 
         // }
     }
 
-    public static abstract class DatabendNumericConstant<T extends Number> extends DatabendConstant {
+    public abstract static class DatabendNumericConstant<T extends Number> extends DatabendConstant {
         protected final T value;
 
         public DatabendNumericConstant(T value) {
