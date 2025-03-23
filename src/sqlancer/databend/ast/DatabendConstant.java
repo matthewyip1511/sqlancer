@@ -97,21 +97,30 @@ public abstract class DatabendConstant extends DatabendDorisConstant implements 
         // }
     }
 
-    public static abstract class DatabendNumericConstant<T> extends DatabendConstant {
+    public static abstract class DatabendNumericConstant<T extends Number> extends DatabendConstant {
         protected final T value;
 
         public DatabendNumericConstant(T value) {
             this.value = value;
         }
 
-
+        public DatabendConstant isLessThan(DatabendConstant rightVal) {
+            if (rightVal.isNull()) {
+                return DatabendConstant.createNullConstant();
+            } else if (rightVal.isInt()) {
+                return DatabendConstant.createBooleanConstant(value.doubleValue() < rightVal.asInt());
+            } else if (rightVal.isFloat()) {
+                return DatabendConstant.createBooleanConstant(value.doubleValue() < rightVal.asFloat());
+            } else {
+                throw new AssertionError(rightVal);
+            }
+        }
     }
+
     public static class DatabendIntConstant extends DatabendNumericConstant<Long> {
 
-        private final long value;
-
         public DatabendIntConstant(long value) {
-            this.value = value;
+            super(value);
         }
 
         @Override
@@ -162,7 +171,7 @@ public abstract class DatabendConstant extends DatabendDorisConstant implements 
             }
 
         }
-
+/*
         @Override
         public DatabendConstant isLessThan(DatabendConstant rightVal) {
             if (rightVal.isNull()) {
@@ -175,19 +184,18 @@ public abstract class DatabendConstant extends DatabendDorisConstant implements 
                 throw new AssertionError(rightVal);
             }
         }
-
+*/
         @Override
         public DatabendDataType getExpectedType() {
             return DatabendDataType.INT;
         }
     }
 
-    public static class DatabendFloatConstant extends DatabendConstant {
+    public static class DatabendFloatConstant extends DatabendNumericConstant<Double> {
 
-        private final double value;
 
         public DatabendFloatConstant(double value) {
-            this.value = value;
+            super(value);
         }
 
         public double getValue() {
@@ -216,7 +224,7 @@ public abstract class DatabendConstant extends DatabendDorisConstant implements 
             case FLOAT:
                 return this;
             case INT:
-                return DatabendConstant.createIntConstant((long) value);
+                return DatabendConstant.createIntConstant(value.longValue());
             case BOOLEAN:
                 return DatabendConstant.createBooleanConstant(value != 0);
             case VARCHAR:
@@ -235,7 +243,7 @@ public abstract class DatabendConstant extends DatabendDorisConstant implements 
         public DatabendConstant isEquals(DatabendConstant rightVal) {
             return null;
         }
-
+/*
         @Override
         public DatabendConstant isLessThan(DatabendConstant rightVal) {
             if (rightVal.isNull()) {
@@ -248,6 +256,7 @@ public abstract class DatabendConstant extends DatabendDorisConstant implements 
                 throw new AssertionError(rightVal);
             }
         }
+ */
     }
 
     public static class DatabendStringConstant extends DatabendConstant {
