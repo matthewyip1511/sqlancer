@@ -221,7 +221,7 @@ public abstract class DorisConstant extends DatabendDorisConstant implements Dor
         public DorisConstant cast(DorisDataType dataType) {
             switch (dataType) {
             case INT:
-                return new DorisIntConstant((long) value);
+                return new DorisIntConstant(value.longValue());
             case FLOAT:
             case DECIMAL:
                 return this;
