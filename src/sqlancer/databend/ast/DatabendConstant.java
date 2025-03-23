@@ -104,6 +104,7 @@ public abstract class DatabendConstant extends DatabendDorisConstant implements 
             this.value = value;
         }
 
+        @Override
         public DatabendConstant isLessThan(DatabendConstant rightVal) {
             if (rightVal.isNull()) {
                 return DatabendConstant.createNullConstant();
@@ -340,23 +341,22 @@ public abstract class DatabendConstant extends DatabendDorisConstant implements 
         }
     }
 
-    public static class DatabendDateConstant extends DatabendConstant {
+    public abstract static class DatabendTemporalConstant extends DatabendConstant {
+        protected String textRepr;
 
-        public String textRepr;
-
-        public DatabendDateConstant(long val) {
+        public DatabendTemporalConstant(long val) {
             Timestamp timestamp = truncateTimestamp(val);
-            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+            SimpleDateFormat dateFormat;
+            if (this instanceof DatabendDateConstant) {
+                dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+            } else {
+                dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            }
             textRepr = dateFormat.format(timestamp);
         }
 
         public String getValue() {
             return textRepr;
-        }
-
-        @Override
-        public String toString() {
-            return String.format("DATE '%s'", textRepr);
         }
 
         @Override
@@ -374,26 +374,21 @@ public abstract class DatabendConstant extends DatabendDorisConstant implements 
             return null;
         }
     }
+    public static class DatabendDateConstant extends DatabendTemporalConstant {
 
-    public static class DatabendTimestampConstant extends DatabendConstant {
-
-        public String textRepr;
-
-        public DatabendTimestampConstant(long val) {
-            Timestamp timestamp = truncateTimestamp(val);
-            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            textRepr = dateFormat.format(timestamp);
+        public DatabendDateConstant(long val) {
+            super(val);
         }
-
+/*
         public String getValue() {
             return textRepr;
         }
-
+*/
         @Override
         public String toString() {
-            return String.format("TIMESTAMP '%s'", textRepr);
+            return String.format("DATE '%s'", textRepr);
         }
-
+/*
         @Override
         public DatabendConstant cast(DatabendDataType dataType) {
             return null;
@@ -408,6 +403,41 @@ public abstract class DatabendConstant extends DatabendDorisConstant implements 
         public DatabendConstant isLessThan(DatabendConstant rightVal) {
             return null;
         }
+
+ */
+    }
+
+    public static class DatabendTimestampConstant extends DatabendTemporalConstant {
+
+        public DatabendTimestampConstant(long val) {
+            super(val);
+        }
+/*
+        public String getValue() {
+            return textRepr;
+        }
+*/
+        @Override
+        public String toString() {
+            return String.format("TIMESTAMP '%s'", textRepr);
+        }
+/*
+        @Override
+        public DatabendConstant cast(DatabendDataType dataType) {
+            return null;
+        }
+
+        @Override
+        public DatabendConstant isEquals(DatabendConstant rightVal) {
+            return null;
+        }
+
+        @Override
+        public DatabendConstant isLessThan(DatabendConstant rightVal) {
+            return null;
+        }
+
+ */
     }
 
     public static class DatabendBooleanConstant extends DatabendConstant {
