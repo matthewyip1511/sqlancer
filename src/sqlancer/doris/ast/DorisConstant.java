@@ -78,7 +78,7 @@ public abstract class DorisConstant extends DatabendDorisConstant implements Dor
     }
 
     public abstract static class DorisNumericConstant<T extends Number> extends DorisConstant {
-        private final T value;
+        protected final T value;
 
         public DorisNumericConstant(T value) {
             this.value = value;
@@ -95,12 +95,10 @@ public abstract class DorisConstant extends DatabendDorisConstant implements Dor
 
     }
 
-    public static class DorisIntConstant extends DorisConstant {
-
-        private final long value;
+    public static class DorisIntConstant extends DorisNumericConstant<Long> {
 
         public DorisIntConstant(long value) {
-            this.value = value;
+            super(value);
         }
 
         @Override
@@ -189,12 +187,10 @@ public abstract class DorisConstant extends DatabendDorisConstant implements Dor
 
     }
 
-    public static class DorisFloatConstant extends DorisConstant {
-
-        private final double value;
+    public static class DorisFloatConstant extends DorisNumericConstant<Double> {
 
         public DorisFloatConstant(double value) {
-            this.value = value;
+            super(value);
         }
         /*
          * public double getValue() { return value; }
