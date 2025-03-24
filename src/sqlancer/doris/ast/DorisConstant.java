@@ -5,17 +5,7 @@ import sqlancer.doris.DorisSchema.DorisDataType;
 import sqlancer.doris.utils.DorisNumberUtils;
 
 public abstract class DorisConstant extends DatabendDorisConstant implements DorisExpression {
-    /*
-     * public boolean isNull() { return false; }
-     *
-     * public boolean isInt() { return false; }
-     *
-     * public boolean isBoolean() { return false; }
-     *
-     * public boolean isString() { return false; }
-     *
-     * public boolean isFloat() { return false; }
-     */
+
     public boolean isNum() {
         // for INT, FLOAT, BOOLEAN
         return false;
@@ -29,15 +19,6 @@ public abstract class DorisConstant extends DatabendDorisConstant implements Dor
         return false;
     }
 
-    /*
-     * public boolean asBoolean() { throw new UnsupportedOperationException(this.toString()); }
-     *
-     * public long asInt() { throw new UnsupportedOperationException(this.toString()); }
-     *
-     * public String asString() { throw new UnsupportedOperationException(this.toString()); }
-     *
-     * public double asFloat() { throw new UnsupportedOperationException(this.toString()); }
-     */
     public abstract DorisConstant cast(DorisDataType dataType);
 
     public abstract DorisConstant valueEquals(DorisConstant rightVal);
@@ -105,19 +86,11 @@ public abstract class DorisConstant extends DatabendDorisConstant implements Dor
         public String toString() {
             return String.valueOf(value);
         }
-        /*
-         * public long getValue() { return value; }
-         *
-         */
 
         @Override
         public boolean isInt() {
             return true;
         }
-        /*
-         * @Override public boolean isNum() { return true; }
-         *
-         */
 
         @Override
         public DorisConstant cast(DorisDataType dataType) {
@@ -192,19 +165,11 @@ public abstract class DorisConstant extends DatabendDorisConstant implements Dor
         public DorisFloatConstant(double value) {
             super(value);
         }
-        /*
-         * public double getValue() { return value; }
-         *
-         */
 
         @Override
         public boolean isFloat() {
             return true;
         }
-        /*
-         * @Override public boolean isNum() { return true; }
-         *
-         */
 
         @Override
         public String toString() {
@@ -414,19 +379,11 @@ public abstract class DorisConstant extends DatabendDorisConstant implements Dor
         public DorisDateConstant(String textRepr) {
             super(textRepr);
         }
-        /*
-         * public String getValue() { return textRepr; }
-         *
-         */
 
         @Override
         public String toString() {
             return String.format("DATE '%s'", textRepr);
         }
-        /*
-         * @Override public String asString() { return textRepr; }
-         *
-         */
 
         @Override
         public DorisConstant cast(DorisDataType dataType) {
@@ -493,19 +450,11 @@ public abstract class DorisConstant extends DatabendDorisConstant implements Dor
         public DorisDatetimeConstant() {
             super();
         }
-        /*
-         * public String getValue() { return textRepr; }
-         *
-         */
 
         @Override
         public String toString() {
             return String.format("TIMESTAMP '%s'", textRepr);
         }
-        /*
-         * @Override public String asString() { return textRepr; }
-         *
-         */
 
         @Override
         public DorisConstant cast(DorisDataType dataType) {
@@ -597,13 +546,13 @@ public abstract class DorisConstant extends DatabendDorisConstant implements Dor
         }
 
         @Override
-        public boolean asBoolean() {
-            return value;
+        public boolean isBoolean() {
+            return true;
         }
 
         @Override
-        public boolean isBoolean() {
-            return true;
+        public boolean asBoolean() {
+            return value;
         }
 
         @Override
