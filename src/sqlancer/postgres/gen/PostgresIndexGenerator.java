@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import sqlancer.Randomly;
+import sqlancer.SQLIndexGenerator;
 import sqlancer.common.DBMSCommon;
 import sqlancer.common.query.ExpectedErrors;
 import sqlancer.common.query.SQLQueryAdapter;
@@ -15,13 +16,9 @@ import sqlancer.postgres.PostgresSchema.PostgresTable;
 import sqlancer.postgres.PostgresVisitor;
 import sqlancer.postgres.ast.PostgresExpression;
 
-public final class PostgresIndexGenerator {
+public final class PostgresIndexGenerator extends SQLIndexGenerator {
 
     private PostgresIndexGenerator() {
-    }
-
-    public enum IndexType {
-        BTREE, HASH, GIST, GIN
     }
 
     public static SQLQueryAdapter generate(PostgresGlobalState globalState) {

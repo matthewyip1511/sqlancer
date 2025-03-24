@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import sqlancer.Randomly;
+import sqlancer.SQLIndexGenerator;
 import sqlancer.common.DBMSCommon;
 import sqlancer.common.query.ExpectedErrors;
 import sqlancer.common.query.SQLQueryAdapter;
@@ -17,7 +18,7 @@ import sqlancer.yugabyte.ysql.YSQLSchema.YSQLTable;
 import sqlancer.yugabyte.ysql.YSQLVisitor;
 import sqlancer.yugabyte.ysql.ast.YSQLExpression;
 
-public final class YSQLIndexGenerator {
+public final class YSQLIndexGenerator extends SQLIndexGenerator {
 
     private YSQLIndexGenerator() {
     }
@@ -135,9 +136,4 @@ public final class YSQLIndexGenerator {
             }
         }
     }
-
-    public enum IndexType {
-        BTREE, HASH, GIST, GIN
-    }
-
 }
