@@ -2,7 +2,7 @@ package sqlancer;
 
 import sqlancer.common.query.ExpectedErrors;
 
-public class SQLIndexGenerator {
+public abstract class SQLIndexGenerator {
 
     protected SQLIndexGenerator() {
     }
