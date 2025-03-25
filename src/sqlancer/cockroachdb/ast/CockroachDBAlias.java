@@ -2,34 +2,13 @@ package sqlancer.cockroachdb.ast;
 
 import sqlancer.common.visitor.UnaryOperation;
 
-public class CockroachDBAlias implements UnaryOperation<CockroachDBExpression>, CockroachDBExpression {
-
-    private final CockroachDBExpression expr;
-    private final String alias;
-
+public class CockroachDBAlias extends UnaryOperation<CockroachDBExpression> implements CockroachDBExpression {
     public CockroachDBAlias(CockroachDBExpression expr, String alias) {
-        this.expr = expr;
-        this.alias = alias;
+        super(expr, alias);
     }
 
     @Override
     public CockroachDBExpression getExpression() {
-        return expr;
+        return super.getExpression();
     }
-
-    @Override
-    public String getOperatorRepresentation() {
-        return " as " + alias;
-    }
-
-    @Override
-    public OperatorKind getOperatorKind() {
-        return OperatorKind.POSTFIX;
-    }
-
-    @Override
-    public boolean omitBracketsWhenPrinting() {
-        return true;
-    }
-
 }

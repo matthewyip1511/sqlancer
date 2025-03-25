@@ -1,19 +1,32 @@
 package sqlancer.common.visitor;
 
-public interface UnaryOperation<T> {
+public abstract class UnaryOperation<T> {
+    T expression;
+    String alias;
 
-    enum OperatorKind {
+    public UnaryOperation(T expression, String alias) {
+        this.expression = expression;
+        this.alias = alias;
+    }
+
+    protected enum OperatorKind {
         PREFIX, POSTFIX
     }
 
-    T getExpression();
+    public T getExpression() {
+        return expression;
+    };
 
-    String getOperatorRepresentation();
-
-    default boolean omitBracketsWhenPrinting() {
-        return false;
+    public String getOperatorRepresentation() {
+        return " as " + alias;
     }
 
-    OperatorKind getOperatorKind();
+    public boolean omitBracketsWhenPrinting() {
+        return true;
+    }
+
+    public OperatorKind getOperatorKind() {
+        return OperatorKind.POSTFIX;
+    };
 
 }
