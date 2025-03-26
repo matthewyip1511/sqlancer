@@ -18,6 +18,6 @@ public class TestSQLiteNoREC {
     public void testSqliteNoREC_customTable() {
         assertEquals(0, Main.executeMain(new String[] { "--random-seed", "0", "--timeout-seconds", TestConfig.SECONDS,
                 "--num-threads", "1", "--num-queries", TestConfig.NUM_QUERIES, "sqlite3", "--oracle", "NoREC",
-                "--use-custom-script", "../src/custom_tables.sql" }));
+                "--use-custom-script", "../custom_tables.sql" }));
     }
 }
