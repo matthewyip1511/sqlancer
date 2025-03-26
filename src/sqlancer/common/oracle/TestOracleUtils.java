@@ -94,7 +94,7 @@ public final class TestOracleUtils {
                 resultString = result.getString(1);
             }
         } catch (SQLException e) {
-            if (!e.getMessage().contains("Not implemented type") || isEnabled) {  
+            if (!e.getMessage().contains("Not implemented type") || isEnabled) {
                 throw new AssertionError(queryString, e);
             } else {
                 throw new IgnoreMeException();
