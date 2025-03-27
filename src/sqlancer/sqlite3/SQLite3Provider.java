@@ -1,6 +1,7 @@
 package sqlancer.sqlite3;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -10,6 +11,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import org.sqlite.FileException;
 
 import com.google.auto.service.AutoService;
 
@@ -246,7 +249,7 @@ public class SQLite3Provider extends SQLProviderAdapter<SQLite3GlobalState, SQLi
             }
         } catch (IOException e) {
             System.err.println("Failed to read custom SQL script from: " + customScriptPath);
-            throw new Exception();
+            throw new FileNotFoundException();
         }
     }
 

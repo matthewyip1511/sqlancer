@@ -80,7 +80,7 @@ public class SQLite3Options implements DBMSSpecificOptions<SQLite3OracleFactory>
     public int maxNumIndexes = 20;
 
     @Parameter(names = "--use-custom-script", description = "Use a custom script to generate database tables for testing")
-    private String customScriptPath = null;
+    public String customScriptPath;
 
     public String getCustomScriptPath() {
         return customScriptPath;
