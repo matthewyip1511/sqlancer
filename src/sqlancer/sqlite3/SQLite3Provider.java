@@ -249,7 +249,7 @@ public class SQLite3Provider extends SQLProviderAdapter<SQLite3GlobalState, SQLi
             }
         } catch (IOException e) {
             System.err.println("Failed to read custom SQL script from: " + customScriptPath);
-            throw new FileNotFoundException();
+            throw new IgnoreMeException();
         }
     }
 
