@@ -55,7 +55,8 @@ public class SQLite3Provider extends SQLProviderAdapter<SQLite3GlobalState, SQLi
 
     // PRAGMAS to achieve good performance
     private static final List<String> DEFAULT_PRAGMAS = Arrays.asList("PRAGMA cache_size = 50000;",
-            "PRAGMA temp_store=MEMORY;", "PRAGMA synchronous=off;");
+            "PRAGMA temp_store=MEMORY;", "PRAGMA synchronous=off;", "PRAGMA journal_mode = WAL;",
+            "PRAGMA locking_mode = EXCLUSIVE;");
 
     public SQLite3Provider() {
         super(SQLite3GlobalState.class, SQLite3Options.class);
@@ -243,11 +244,6 @@ public class SQLite3Provider extends SQLProviderAdapter<SQLite3GlobalState, SQLi
                     globalState.executeStatement(queryAdapter);
                 }
             }
-
-            // Force schema reload to recognize the custom tables
-            // globalState.getSchema().setDatabaseName(globalState.getDatabaseName());
-            globalState.updateSchema();
-
         } catch (IOException e) {
             System.err.println("Failed to read custom SQL script from: " + customScriptPath);
             throw new Exception();
