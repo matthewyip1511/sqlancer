@@ -27,6 +27,6 @@ public class TestSQLitePQS {
                 "--num-threads", "1", "--num-queries", "1000", "--random-string-generation", "ALPHANUMERIC_SPECIALCHAR",
                 "--database-prefix", "pqsdb" /* Workaround for connections not being closed */, "sqlite3", "--oracle",
                 "PQS", "--test-fts", "false", "--test-rtree", "false", "--test-check-constraints", "false",
-                "--test-in-operator", "false", "--use-custom-script", "../custom_tables.sql" }));
+                "--test-in-operator", "false", "--use-custom-script", "test/sqlancer/custom_tables.sql" }));
     }
 }
