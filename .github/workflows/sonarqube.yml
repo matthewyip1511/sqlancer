@@ -20,7 +20,7 @@ jobs:
           java-version: '17'
 
       - name: Run Maven
-        run: mvn package -DskipTests
+        run: mvn package -P all -DskipTests
 
       - name: Run SonarQube analysis
         run: |
