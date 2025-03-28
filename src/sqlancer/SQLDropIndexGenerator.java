@@ -8,10 +8,6 @@ import sqlancer.common.query.SQLQueryAdapter;
 import sqlancer.common.schema.TableIndex;
 
 public abstract class SQLDropIndexGenerator {
-
-    private SQLDropIndexGenerator() {
-    }
-
     public static SQLQueryAdapter create(List<? extends TableIndex> indexes) {
         StringBuilder sb = new StringBuilder();
         sb.append("DROP INDEX ");
