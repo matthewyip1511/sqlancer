@@ -1,8 +1,6 @@
 package sqlancer.yugabyte.ysql.gen;
 
-import sqlancer.Randomly;
 import sqlancer.SQLDiscardGenerator;
-import sqlancer.common.query.ExpectedErrors;
 import sqlancer.common.query.SQLQueryAdapter;
 import sqlancer.yugabyte.ysql.YSQLGlobalState;
 import sqlancer.yugabyte.ysql.YSQLSchema.YSQLTable.TableType;
