@@ -8,7 +8,6 @@ import java.util.function.Function;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-import sqlancer.IgnoreMeException;
 import sqlancer.Randomly;
 import sqlancer.SQLCommon;
 import sqlancer.common.DBMSCommon;
@@ -120,12 +119,8 @@ public final class PostgresCommon {
             break;
         case INT:
             /*
-            if (Randomly.getBoolean() && allowSerial) {
-                serial = true;
-                sb.append(Randomly.fromOptions("serial", "bigserial"));
-            } else {
-                sb.append(Randomly.fromOptions("smallint", "integer", "bigint"));
-            }
+             * if (Randomly.getBoolean() && allowSerial) { serial = true; sb.append(Randomly.fromOptions("serial",
+             * "bigserial")); } else { sb.append(Randomly.fromOptions("smallint", "integer", "bigint")); }
              */
             serial = SQLCommon.appendIntDataType(sb, allowSerial);
             break;
@@ -262,7 +257,6 @@ public final class PostgresCommon {
     private static void addTableConstraint(StringBuilder sb, PostgresTable table, PostgresGlobalState globalState,
             TableConstraints t, ExpectedErrors errors) {
         List<PostgresColumn> randomNonEmptyColumnSubset = table.getRandomNonEmptyColumnSubset();
-        List<PostgresColumn> otherColumns;
         PostgresCommon.addCommonExpressionErrors(errors);
         switch (t) {
         case CHECK:
@@ -286,45 +280,23 @@ public final class PostgresCommon {
             break;
         case FOREIGN_KEY:
             /*
-            sb.append("FOREIGN KEY (");
-            sb.append(randomNonEmptyColumnSubset.stream().map(c -> c.getName()).collect(Collectors.joining(", ")));
-            sb.append(") REFERENCES ");
-            PostgresTable randomOtherTable = globalState.getSchema().getRandomTable(tab -> !tab.isView());
-            sb.append(randomOtherTable.getName());
-            if (randomOtherTable.getColumns().size() < randomNonEmptyColumnSubset.size()) {
-                throw new IgnoreMeException();
-            }
-            otherColumns = randomOtherTable.getRandomNonEmptyColumnSubset(randomNonEmptyColumnSubset.size());
-            sb.append("(");
-            sb.append(otherColumns.stream().map(c -> c.getName()).collect(Collectors.joining(", ")));
-            sb.append(")");
-            if (Randomly.getBoolean()) {
-                sb.append(" ");
-                sb.append(Randomly.fromOptions("MATCH FULL", "MATCH SIMPLE"));
-            }
-            if (Randomly.getBoolean()) {
-                sb.append(" ON DELETE ");
-                errors.add("ERROR: invalid ON DELETE action for foreign key constraint containing generated column");
-                deleteOrUpdateAction(sb);
-            }
-            if (Randomly.getBoolean()) {
-                sb.append(" ON UPDATE ");
-                errors.add("invalid ON UPDATE action for foreign key constraint containing generated column");
-                deleteOrUpdateAction(sb);
-            }
-            if (Randomly.getBoolean()) {
-                sb.append(" ");
-                if (Randomly.getBoolean()) {
-                    sb.append("DEFERRABLE");
-                    if (Randomly.getBoolean()) {
-                        sb.append(" ");
-                        sb.append(Randomly.fromOptions("INITIALLY DEFERRED", "INITIALLY IMMEDIATE"));
-                    }
-                } else {
-                    sb.append("NOT DEFERRABLE");
-                }
-            }
-
+             * sb.append("FOREIGN KEY ("); sb.append(randomNonEmptyColumnSubset.stream().map(c ->
+             * c.getName()).collect(Collectors.joining(", "))); sb.append(") REFERENCES "); PostgresTable
+             * randomOtherTable = globalState.getSchema().getRandomTable(tab -> !tab.isView());
+             * sb.append(randomOtherTable.getName()); if (randomOtherTable.getColumns().size() <
+             * randomNonEmptyColumnSubset.size()) { throw new IgnoreMeException(); } otherColumns =
+             * randomOtherTable.getRandomNonEmptyColumnSubset(randomNonEmptyColumnSubset.size()); sb.append("(");
+             * sb.append(otherColumns.stream().map(c -> c.getName()).collect(Collectors.joining(", "))); sb.append(")");
+             * if (Randomly.getBoolean()) { sb.append(" "); sb.append(Randomly.fromOptions("MATCH FULL",
+             * "MATCH SIMPLE")); } if (Randomly.getBoolean()) { sb.append(" ON DELETE ");
+             * errors.add("ERROR: invalid ON DELETE action for foreign key constraint containing generated column");
+             * deleteOrUpdateAction(sb); } if (Randomly.getBoolean()) { sb.append(" ON UPDATE ");
+             * errors.add("invalid ON UPDATE action for foreign key constraint containing generated column");
+             * deleteOrUpdateAction(sb); } if (Randomly.getBoolean()) { sb.append(" "); if (Randomly.getBoolean()) {
+             * sb.append("DEFERRABLE"); if (Randomly.getBoolean()) { sb.append(" ");
+             * sb.append(Randomly.fromOptions("INITIALLY DEFERRED", "INITIALLY IMMEDIATE")); } } else {
+             * sb.append("NOT DEFERRABLE"); } }
+             *
              */
             SQLCommon.addTableConstraintForeignKey(randomNonEmptyColumnSubset, sb, globalState, errors);
             break;
@@ -388,23 +360,10 @@ public final class PostgresCommon {
             sb.append(")");
         }
         /*
-        if (Randomly.getBoolean()) {
-            sb.append(" ");
-            sb.append(Randomly.fromList(globalState.getOpClasses()));
-        }
-        if (Randomly.getBoolean()) {
-            sb.append(" ");
-            sb.append(Randomly.fromOptions("ASC", "DESC"));
-        }
-        if (Randomly.getBoolean()) {
-            sb.append(" NULLS ");
-            sb.append(Randomly.fromOptions("FIRST", "LAST"));
-        }
+         * if (Randomly.getBoolean()) { sb.append(" "); sb.append(Randomly.fromList(globalState.getOpClasses())); } if
+         * (Randomly.getBoolean()) { sb.append(" "); sb.append(Randomly.fromOptions("ASC", "DESC")); } if
+         * (Randomly.getBoolean()) { sb.append(" NULLS "); sb.append(Randomly.fromOptions("FIRST", "LAST")); }
          */
         SQLCommon.appendExcludedElementHelper(sb, globalState);
-    }
-
-    private static void deleteOrUpdateAction(StringBuilder sb) {
-        sb.append(Randomly.fromOptions("NO ACTION", "RESTRICT", "CASCADE", "SET NULL", "SET DEFAULT"));
     }
 }
