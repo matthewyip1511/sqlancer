@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 
 import sqlancer.IgnoreMeException;
 import sqlancer.Randomly;
+import sqlancer.SQLCommon;
 import sqlancer.common.query.ExpectedErrors;
 import sqlancer.common.schema.AbstractTableColumn;
 import sqlancer.yugabyte.ysql.YSQLErrors;
@@ -30,12 +31,16 @@ public final class YSQLCommon {
             sb.append("boolean");
             break;
         case INT:
+            /*
             if (Randomly.getBoolean() && allowSerial) {
                 serial = true;
                 sb.append(Randomly.fromOptions("serial", "bigserial"));
             } else {
                 sb.append(Randomly.fromOptions("smallint", "integer", "bigint"));
             }
+
+             */
+            serial = SQLCommon.appendIntDataType(sb, allowSerial);
             break;
         case TEXT:
             if (Randomly.getBoolean()) {
@@ -74,6 +79,7 @@ public final class YSQLCommon {
             sb.append("bytea");
             break;
         case BIT:
+            /*
             sb.append("BIT");
             // if (Randomly.getBoolean()) {
             sb.append(" VARYING");
@@ -81,9 +87,15 @@ public final class YSQLCommon {
             sb.append("(");
             sb.append(Randomly.getNotCachedInteger(1, 500));
             sb.append(")");
+
+             */
+            SQLCommon.appendBitDataType(sb);
             break;
         case INET:
-            sb.append("inet");
+            /*
+            SQLCommon.appendInetDataType(sb);
+            
+             */
             break;
         default:
             throw new AssertionError(type);

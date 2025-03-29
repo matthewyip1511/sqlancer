@@ -10,6 +10,7 @@ import java.util.stream.Collectors;
 
 import sqlancer.IgnoreMeException;
 import sqlancer.Randomly;
+import sqlancer.SQLCommon;
 import sqlancer.common.DBMSCommon;
 import sqlancer.common.query.ExpectedErrors;
 import sqlancer.postgres.PostgresGlobalState;
@@ -118,12 +119,15 @@ public final class PostgresCommon {
             sb.append("boolean");
             break;
         case INT:
+            /*
             if (Randomly.getBoolean() && allowSerial) {
                 serial = true;
                 sb.append(Randomly.fromOptions("serial", "bigserial"));
             } else {
                 sb.append(Randomly.fromOptions("smallint", "integer", "bigint"));
             }
+             */
+            serial = SQLCommon.appendIntDataType(sb, allowSerial);
             break;
         case TEXT:
             if (Randomly.getBoolean()) {
@@ -172,7 +176,7 @@ public final class PostgresCommon {
             sb.append(")");
             break;
         case INET:
-            sb.append("inet");
+            SQLCommon.appendInetDataType(sb);
             break;
         default:
             throw new AssertionError(type);
