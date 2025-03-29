@@ -94,7 +94,7 @@ public final class YSQLCommon {
         case INET:
             /*
             SQLCommon.appendInetDataType(sb);
-            
+
              */
             break;
         default:
@@ -226,6 +226,7 @@ public final class YSQLCommon {
             sb.append(")");
             break;
         case FOREIGN_KEY:
+            /*
             sb.append("FOREIGN KEY (");
             sb.append(randomNonEmptyColumnSubset.stream().map(AbstractTableColumn::getName)
                     .collect(Collectors.joining(", ")));
@@ -265,6 +266,9 @@ public final class YSQLCommon {
                     sb.append("NOT DEFERRABLE");
                 }
             }
+
+             */
+            SQLCommon.addTableConstraintForeignKey(randomNonEmptyColumnSubset, sb, globalState, errors);
             break;
         default:
             throw new AssertionError(t);

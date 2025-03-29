@@ -285,6 +285,7 @@ public final class PostgresCommon {
             appendIndexParameters(sb, globalState, errors);
             break;
         case FOREIGN_KEY:
+            /*
             sb.append("FOREIGN KEY (");
             sb.append(randomNonEmptyColumnSubset.stream().map(c -> c.getName()).collect(Collectors.joining(", ")));
             sb.append(") REFERENCES ");
@@ -323,6 +324,9 @@ public final class PostgresCommon {
                     sb.append("NOT DEFERRABLE");
                 }
             }
+
+             */
+            SQLCommon.addTableConstraintForeignKey(randomNonEmptyColumnSubset, sb, globalState, errors);
             break;
         case EXCLUDE:
             sb.append("EXCLUDE ");

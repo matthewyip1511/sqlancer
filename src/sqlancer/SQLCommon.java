@@ -1,5 +1,13 @@
 package sqlancer;
 
+import sqlancer.common.query.ExpectedErrors;
+import sqlancer.common.schema.AbstractRelationalTable;
+import sqlancer.common.schema.AbstractTableColumn;
+import sqlancer.materialize.MaterializeSchema;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class SQLCommon {
     public static boolean appendIntDataType(StringBuilder sb, boolean allowSerial) {
         boolean serial = false;
@@ -24,5 +32,51 @@ public class SQLCommon {
 
     public static void appendInetDataType(StringBuilder sb) {
         sb.append("inet");
+    }
+
+    public static void addTableConstraintForeignKey(List<? extends AbstractTableColumn<?, ?>> randomNonEmptyColumnSubset, StringBuilder sb, ExpandedGlobalState<?, ?> globalState, ExpectedErrors errors) {
+        List<AbstractTableColumn<?, ?>> otherColumns;
+        sb.append("FOREIGN KEY (");
+        sb.append(randomNonEmptyColumnSubset.stream().map(c -> c.getName()).collect(Collectors.joining(", ")));
+        sb.append(") REFERENCES ");
+        AbstractRelationalTable<?, ?, ?> randomOtherTable = (AbstractRelationalTable<?, ?, ?>) globalState.getSchema().getRandomTable(tab -> !tab.isView());
+        sb.append(randomOtherTable.getName());
+        if (randomOtherTable.getColumns().size() < randomNonEmptyColumnSubset.size()) {
+            throw new IgnoreMeException();
+        }
+        otherColumns = (List<AbstractTableColumn<?, ?>>) randomOtherTable.getRandomNonEmptyColumnSubset(randomNonEmptyColumnSubset.size());
+        sb.append("(");
+        sb.append(otherColumns.stream().map(c -> c.getName()).collect(Collectors.joining(", ")));
+        sb.append(")");
+        if (Randomly.getBoolean()) {
+            sb.append(" ");
+            sb.append(Randomly.fromOptions("MATCH FULL", "MATCH SIMPLE"));
+        }
+        if (Randomly.getBoolean()) {
+            sb.append(" ON DELETE ");
+            errors.add("ERROR: invalid ON DELETE action for foreign key constraint containing generated column");
+            deleteOrUpdateAction(sb);
+        }
+        if (Randomly.getBoolean()) {
+            sb.append(" ON UPDATE ");
+            errors.add("invalid ON UPDATE action for foreign key constraint containing generated column");
+            deleteOrUpdateAction(sb);
+        }
+        if (Randomly.getBoolean()) {
+            sb.append(" ");
+            if (Randomly.getBoolean()) {
+                sb.append("DEFERRABLE");
+                if (Randomly.getBoolean()) {
+                    sb.append(" ");
+                    sb.append(Randomly.fromOptions("INITIALLY DEFERRED", "INITIALLY IMMEDIATE"));
+                }
+            } else {
+                sb.append("NOT DEFERRABLE");
+            }
+        }
+    }
+
+    private static void deleteOrUpdateAction(StringBuilder sb) {
+        sb.append(Randomly.fromOptions("NO ACTION", "RESTRICT", "CASCADE", "SET NULL", "SET DEFAULT"));
     }
 }

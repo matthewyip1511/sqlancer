@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 
 import sqlancer.IgnoreMeException;
 import sqlancer.Randomly;
+import sqlancer.SQLCommon;
 import sqlancer.common.DBMSCommon;
 import sqlancer.common.query.ExpectedErrors;
 import sqlancer.materialize.MaterializeGlobalState;
@@ -184,6 +185,7 @@ public final class MaterializeCommon {
             sb.append(")");
             break;
         case FOREIGN_KEY:
+            /*
             sb.append("FOREIGN KEY (");
             sb.append(randomNonEmptyColumnSubset.stream().map(c -> c.getName()).collect(Collectors.joining(", ")));
             sb.append(") REFERENCES ");
@@ -222,6 +224,9 @@ public final class MaterializeCommon {
                     sb.append("NOT DEFERRABLE");
                 }
             }
+
+             */
+            SQLCommon.addTableConstraintForeignKey(randomNonEmptyColumnSubset, sb, globalState, errors);
             break;
         case EXCLUDE:
             sb.append("EXCLUDE ");
