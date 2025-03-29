@@ -1,13 +1,13 @@
 package sqlancer;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import sqlancer.common.query.ExpectedErrors;
 import sqlancer.common.schema.AbstractRelationalTable;
 import sqlancer.common.schema.AbstractTableColumn;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
-public class SQLCommon {
+public final class SQLCommon {
     public static boolean appendIntDataType(StringBuilder sb, boolean allowSerial) {
         boolean serial = false;
         if (Randomly.getBoolean() && allowSerial) {
