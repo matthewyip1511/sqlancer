@@ -1,4 +1,7 @@
 package sqlancer;
 
-public class SQLConstant {
+public final class SQLConstant {
+    private SQLConstant() {
+    }
+
 }
