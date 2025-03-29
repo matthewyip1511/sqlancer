@@ -387,6 +387,7 @@ public final class PostgresCommon {
             sb.append(PostgresVisitor.asString(PostgresExpressionGenerator.generateExpression(globalState, columns)));
             sb.append(")");
         }
+        /*
         if (Randomly.getBoolean()) {
             sb.append(" ");
             sb.append(Randomly.fromList(globalState.getOpClasses()));
@@ -399,6 +400,8 @@ public final class PostgresCommon {
             sb.append(" NULLS ");
             sb.append(Randomly.fromOptions("FIRST", "LAST"));
         }
+         */
+        SQLCommon.appendExcludedElementHelper(sb, globalState);
     }
 
     private static void deleteOrUpdateAction(StringBuilder sb) {

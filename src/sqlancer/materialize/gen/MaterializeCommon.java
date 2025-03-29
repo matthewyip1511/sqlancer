@@ -279,6 +279,7 @@ public final class MaterializeCommon {
                     .asString(MaterializeExpressionGenerator.generateExpression(globalState, columns)));
             sb.append(")");
         }
+        /*
         if (Randomly.getBoolean()) {
             sb.append(" ");
             sb.append(Randomly.fromList(globalState.getOpClasses()));
@@ -291,6 +292,9 @@ public final class MaterializeCommon {
             sb.append(" NULLS ");
             sb.append(Randomly.fromOptions("FIRST", "LAST"));
         }
+
+         */
+        SQLCommon.appendExcludedElementHelper(sb, globalState);
     }
 
     private static void deleteOrUpdateAction(StringBuilder sb) {

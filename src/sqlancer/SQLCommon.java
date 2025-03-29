@@ -76,6 +76,21 @@ public class SQLCommon {
         }
     }
 
+    public static void appendExcludedElementHelper(StringBuilder sb, ExpandedGlobalState<?, ?> globalState) {
+        if (Randomly.getBoolean()) {
+            sb.append(" ");
+            sb.append(Randomly.fromList(globalState.getOpClasses()));
+        }
+        if (Randomly.getBoolean()) {
+            sb.append(" ");
+            sb.append(Randomly.fromOptions("ASC", "DESC"));
+        }
+        if (Randomly.getBoolean()) {
+            sb.append(" NULLS ");
+            sb.append(Randomly.fromOptions("FIRST", "LAST"));
+        }
+    }
+
     private static void deleteOrUpdateAction(StringBuilder sb) {
         sb.append(Randomly.fromOptions("NO ACTION", "RESTRICT", "CASCADE", "SET NULL", "SET DEFAULT"));
     }
