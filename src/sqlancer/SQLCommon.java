@@ -8,6 +8,10 @@ import sqlancer.common.schema.AbstractRelationalTable;
 import sqlancer.common.schema.AbstractTableColumn;
 
 public final class SQLCommon {
+
+    private SQLCommon() {
+    }
+    
     public static boolean appendIntDataType(StringBuilder sb, boolean allowSerial) {
         boolean serial = false;
         if (Randomly.getBoolean() && allowSerial) {
