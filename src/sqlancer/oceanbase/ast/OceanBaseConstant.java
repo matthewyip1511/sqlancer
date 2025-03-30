@@ -210,23 +210,11 @@ public abstract class OceanBaseConstant implements OceanBaseExpression {
 
         @Override
         public boolean asBooleanNotNull() {
-            /*
-             * for (int i = value.length(); i >= 1; i--) { try { String substring = value.substring(0, i); Double val =
-             * Double.valueOf(substring); return val != 0 && !Double.isNaN(val); } catch (NumberFormatException e) { //
-             * ignore } } return false;
-             *
-             */
             return SQLConstant.asBooleanNotNullConstantHelper(value, 1);
         }
 
         @Override
         public String getTextRepresentation() {
-            /*
-             * StringBuilder sb = new StringBuilder(); String quotes = singleQuotes ? "'" : "\""; sb.append(quotes);
-             * String text = value.replace(quotes, quotes + quotes).replace("\\", "\\\\"); sb.append(text);
-             * sb.append(quotes); return sb.toString();
-             *
-             */
             return SQLConstant.getTextRepresentationHelper(value, singleQuotes);
         }
 

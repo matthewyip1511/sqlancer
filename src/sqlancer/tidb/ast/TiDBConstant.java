@@ -49,11 +49,6 @@ public class TiDBConstant implements TiDBExpression {
 
         @Override
         public String toString() {
-            /*
-             * if (value == Double.POSITIVE_INFINITY) { return "'+Inf'"; } else if (value == Double.NEGATIVE_INFINITY) {
-             * return "'-Inf'"; } return String.valueOf(value);
-             *
-             */
             return SQLConstant.duckTiDBYCQLHelper(value);
         }
 
