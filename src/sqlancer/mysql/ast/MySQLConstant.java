@@ -316,6 +316,7 @@ public abstract class MySQLConstant implements MySQLExpression {
         public String getTextRepresentation() {
             return "NULL";
         }
+
         @Override
         public boolean isNull() {
             return true;

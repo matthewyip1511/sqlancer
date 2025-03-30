@@ -286,14 +286,12 @@ public final class PostgresCommon {
             sb.append(")");
             appendIndexParameters(sb, globalState, errors);
             /*
-            errors.add("is not valid");
-            errors.add("no operator matches");
-            errors.add("operator does not exist");
-            errors.add("unknown has no default operator class");
-            errors.add("exclusion constraints are not supported on partitioned tables");
-            errors.add("The exclusion operator must be related to the index operator class for the constraint");
-            errors.add("could not create exclusion constraint");
-
+             * errors.add("is not valid"); errors.add("no operator matches"); errors.add("operator does not exist");
+             * errors.add("unknown has no default operator class");
+             * errors.add("exclusion constraints are not supported on partitioned tables");
+             * errors.add("The exclusion operator must be related to the index operator class for the constraint");
+             * errors.add("could not create exclusion constraint");
+             *
              */
             SQLCommon.appendTableConstraintExclude(errors);
             // TODO: index parameters
