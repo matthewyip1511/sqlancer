@@ -4,6 +4,7 @@ import java.math.BigInteger;
 
 import sqlancer.IgnoreMeException;
 import sqlancer.Randomly;
+import sqlancer.SQLConstant;
 import sqlancer.mysql.MySQLSchema.MySQLDataType;
 import sqlancer.mysql.ast.MySQLCastOperation.CastType;
 
@@ -97,6 +98,7 @@ public abstract class MySQLConstant implements MySQLExpression {
         @Override
         public boolean asBooleanNotNull() {
             // TODO implement as cast
+            /*
             for (int i = value.length(); i >= 0; i--) {
                 try {
                     String substring = value.substring(0, i);
@@ -107,11 +109,15 @@ public abstract class MySQLConstant implements MySQLExpression {
                 }
             }
             return false;
+
+             */
+            return SQLConstant.asBooleanNotNullConstantHelper(value, 0);
             // return castAs(CastType.SIGNED).getInt() != 0;
         }
 
         @Override
         public String getTextRepresentation() {
+            /*
             StringBuilder sb = new StringBuilder();
             String quotes = singleQuotes ? "'" : "\"";
             sb.append(quotes);
@@ -119,6 +125,9 @@ public abstract class MySQLConstant implements MySQLExpression {
             sb.append(text);
             sb.append(quotes);
             return sb.toString();
+
+             */
+            return SQLConstant.getTextRepresentationHelper(value, singleQuotes);
         }
 
         @Override
@@ -151,11 +160,11 @@ public abstract class MySQLConstant implements MySQLExpression {
 
         @Override
         public MySQLConstant castAs(CastType type) {
+            /*
             if (type == CastType.SIGNED || type == CastType.UNSIGNED) {
                 String value = this.value;
                 while (value.startsWith(" ") || value.startsWith("\t") || value.startsWith("\n")) {
                     if (value.startsWith("\n")) {
-                        /* workaround for https://bugs.mysql.com/bug.php?id=96294 */
                         throw new IgnoreMeException();
                     }
                     value = value.substring(1);
@@ -173,6 +182,8 @@ public abstract class MySQLConstant implements MySQLExpression {
             } else {
                 throw new AssertionError();
             }
+             */
+            return (MySQLConstant) SQLConstant.castAsHelper(this.value, 0 , type);
         }
 
         @Override

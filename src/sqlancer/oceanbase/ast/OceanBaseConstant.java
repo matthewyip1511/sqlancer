@@ -5,6 +5,7 @@ import java.math.BigInteger;
 
 import sqlancer.IgnoreMeException;
 import sqlancer.Randomly;
+import sqlancer.SQLConstant;
 import sqlancer.oceanbase.OceanBaseSchema.OceanBaseDataType;
 import sqlancer.oceanbase.ast.OceanBaseCastOperation.CastType;
 
@@ -209,6 +210,7 @@ public abstract class OceanBaseConstant implements OceanBaseExpression {
 
         @Override
         public boolean asBooleanNotNull() {
+            /*
             for (int i = value.length(); i >= 1; i--) {
                 try {
                     String substring = value.substring(0, i);
@@ -219,10 +221,14 @@ public abstract class OceanBaseConstant implements OceanBaseExpression {
                 }
             }
             return false;
+
+             */
+            return SQLConstant.asBooleanNotNullConstantHelper(value, 1);
         }
 
         @Override
         public String getTextRepresentation() {
+            /*
             StringBuilder sb = new StringBuilder();
             String quotes = singleQuotes ? "'" : "\"";
             sb.append(quotes);
@@ -230,6 +236,9 @@ public abstract class OceanBaseConstant implements OceanBaseExpression {
             sb.append(text);
             sb.append(quotes);
             return sb.toString();
+
+             */
+            return SQLConstant.getTextRepresentationHelper(value, singleQuotes);
         }
 
         @Override
@@ -270,6 +279,7 @@ public abstract class OceanBaseConstant implements OceanBaseExpression {
             if (isNull()) {
                 return OceanBaseConstant.createNullConstant();
             }
+            /*
             if (type == CastType.SIGNED || type == CastType.UNSIGNED) {
                 String value = this.value;
                 while (value.startsWith(" ") || value.startsWith("\t") || value.startsWith("\n")) {
@@ -290,6 +300,9 @@ public abstract class OceanBaseConstant implements OceanBaseExpression {
             } else {
                 throw new AssertionError();
             }
+
+             */
+            return (OceanBaseConstant) SQLConstant.castAsHelper(this.value, 1, type);
         }
 
         @Override
