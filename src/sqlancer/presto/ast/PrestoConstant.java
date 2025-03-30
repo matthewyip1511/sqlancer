@@ -309,7 +309,7 @@ public abstract class PrestoConstant extends DatabendDorisPrestoConstant impleme
     public boolean isArray() {
         return false;
     }
-    
+
     public static class PrestoNullConstant extends PrestoConstant {
 
         @Override

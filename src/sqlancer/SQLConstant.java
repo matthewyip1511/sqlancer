@@ -82,4 +82,13 @@ public final class SQLConstant {
             throw new AssertionError();
         }
     }
+
+    public static String duckTiDBYCQLHelper(double value) {
+        if (value == Double.POSITIVE_INFINITY) {
+            return "'+Inf'";
+        } else if (value == Double.NEGATIVE_INFINITY) {
+            return "'-Inf'";
+        }
+        return String.valueOf(value);
+    }
 }
