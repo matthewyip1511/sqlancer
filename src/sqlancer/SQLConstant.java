@@ -64,12 +64,12 @@ public final class SQLConstant {
                 try {
                     String substring = value.substring(0, i);
                     long val = Long.parseLong(substring);
-                    return MySQLConstant.createIntConstant(val, type == CastType.SIGNED);
+                    return MySQLConstant.createIntConstant(val, type.name().equals(CastType.SIGNED.name()));
                 } catch (NumberFormatException e) {
                     // ignore
                 }
             }
-            return MySQLConstant.createIntConstant(0, type == CastType.SIGNED);
+            return MySQLConstant.createIntConstant(0, type.name().equals(CastType.SIGNED.name()));
         } else {
             throw new AssertionError();
         }
