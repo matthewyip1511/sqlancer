@@ -461,12 +461,8 @@ public abstract class PostgresConstant implements PostgresExpression {
         @Override
         public String getTextRepresentation() {
             /*
-            if (Double.isFinite(val)) {
-                return String.valueOf(val);
-            } else {
-                return "'" + val + "'";
-            }
-
+             * if (Double.isFinite(val)) { return String.valueOf(val); } else { return "'" + val + "'"; }
+             *
              */
             return SQLConstant.getTextRepresentationHelper(val);
         }
@@ -489,12 +485,8 @@ public abstract class PostgresConstant implements PostgresExpression {
         @Override
         public String getTextRepresentation() {
             /*
-            if (Double.isFinite(val)) {
-                return String.valueOf(val);
-            } else {
-                return "'" + val + "'";
-            }
-
+             * if (Double.isFinite(val)) { return String.valueOf(val); } else { return "'" + val + "'"; }
+             *
              */
             return SQLConstant.getTextRepresentationHelper(val);
         }

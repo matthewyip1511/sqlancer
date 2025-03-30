@@ -509,12 +509,8 @@ public abstract class YSQLConstant implements YSQLExpression {
         @Override
         public String getTextRepresentation() {
             /*
-            if (Double.isFinite(val)) {
-                return String.valueOf(val);
-            } else {
-                return "'" + val + "'";
-            }
-
+             * if (Double.isFinite(val)) { return String.valueOf(val); } else { return "'" + val + "'"; }
+             *
              */
             return SQLConstant.getTextRepresentationHelper(val);
         }
@@ -537,12 +533,8 @@ public abstract class YSQLConstant implements YSQLExpression {
         @Override
         public String getTextRepresentation() {
             /*
-            if (Double.isFinite(val)) {
-                return String.valueOf(val);
-            } else {
-                return "'" + val + "'";
-            }
-
+             * if (Double.isFinite(val)) { return String.valueOf(val); } else { return "'" + val + "'"; }
+             *
              */
             return SQLConstant.getTextRepresentationHelper(val);
         }
