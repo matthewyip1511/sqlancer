@@ -328,6 +328,11 @@
       <artifactId>postgresql</artifactId>
       <version>42.5.1</version>
     </dependency>
+    <dependency>
+      <groupId>com.clickhouse</groupId>
+      <artifactId>clickhouse-client</artifactId>
+      <version>0.3.2</version>
+    </dependency>
   </dependencies>
   <reporting>
     <plugins>
