@@ -6,10 +6,6 @@ import java.util.stream.Collectors;
 import sqlancer.common.query.ExpectedErrors;
 import sqlancer.common.schema.AbstractRelationalTable;
 import sqlancer.common.schema.AbstractTableColumn;
-import sqlancer.postgres.PostgresGlobalState;
-import sqlancer.postgres.PostgresSchema;
-import sqlancer.postgres.PostgresVisitor;
-import sqlancer.postgres.gen.PostgresExpressionGenerator;
 
 public final class SQLCommon {
 
