@@ -360,13 +360,8 @@ public abstract class OceanBaseConstant implements OceanBaseExpression {
         }
 
         @Override
-        public boolean isInt() {
-            return true;
-        }
-
-        @Override
-        public long getInt() {
-            return value;
+        public String getTextRepresentation() {
+            return stringRepresentation;
         }
 
         @Override
@@ -375,8 +370,13 @@ public abstract class OceanBaseConstant implements OceanBaseExpression {
         }
 
         @Override
-        public String getTextRepresentation() {
-            return stringRepresentation;
+        public long getInt() {
+            return value;
+        }
+
+        @Override
+        public boolean isInt() {
+            return true;
         }
 
         @Override

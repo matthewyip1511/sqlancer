@@ -50,6 +50,14 @@ public final class SQLConstant {
         return sb.toString();
     }
 
+    public static String getTextRepresentationHelper(double val) {
+        if (Double.isFinite(val)) {
+            return String.valueOf(val);
+        } else {
+            return "'" + val + "'";
+        }
+    }
+
     public static Expression<?> castAsHelper(String v, int limit, Enum<?> type) {
         if (type.name().equals(CastType.SIGNED.name()) || type.name().equals(CastType.UNSIGNED.name())) {
             String value = v;

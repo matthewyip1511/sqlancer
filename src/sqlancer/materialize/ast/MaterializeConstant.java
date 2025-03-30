@@ -3,6 +3,7 @@ package sqlancer.materialize.ast;
 import java.math.BigDecimal;
 
 import sqlancer.IgnoreMeException;
+import sqlancer.SQLConstant;
 import sqlancer.materialize.MaterializeSchema.MaterializeDataType;
 
 public abstract class MaterializeConstant implements MaterializeExpression {
@@ -439,11 +440,15 @@ public abstract class MaterializeConstant implements MaterializeExpression {
 
         @Override
         public String getTextRepresentation() {
+            /*
             if (Double.isFinite(val)) {
                 return String.valueOf(val);
             } else {
                 return "'" + val + "'";
             }
+
+             */
+            return SQLConstant.getTextRepresentationHelper(val);
         }
 
         @Override
@@ -463,11 +468,15 @@ public abstract class MaterializeConstant implements MaterializeExpression {
 
         @Override
         public String getTextRepresentation() {
+            /*
             if (Double.isFinite(val)) {
                 return String.valueOf(val);
             } else {
                 return "'" + val + "'";
             }
+
+             */
+            return SQLConstant.getTextRepresentationHelper(val);
         }
 
         @Override
