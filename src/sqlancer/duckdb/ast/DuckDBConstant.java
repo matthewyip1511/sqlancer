@@ -1,9 +1,9 @@
 package sqlancer.duckdb.ast;
 
-import sqlancer.SQLConstant;
-
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
+
+import sqlancer.SQLConstant;
 
 public class DuckDBConstant implements DuckDBExpression {
 
