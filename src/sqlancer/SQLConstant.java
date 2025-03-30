@@ -50,8 +50,9 @@ public final class SQLConstant {
         return sb.toString();
     }
 
-    public static Expression<?> castAsHelper(String value, int limit, Enum<?> type) {
+    public static Expression<?> castAsHelper(String v, int limit, Enum<?> type) {
         if (type == CastType.SIGNED || type == CastType.UNSIGNED) {
+            String value = v;
             while (value.startsWith(" ") || value.startsWith("\t") || value.startsWith("\n")) {
                 if (value.startsWith("\n")) {
                     /* workaround for https://bugs.mysql.com/bug.php?id=96294 */
