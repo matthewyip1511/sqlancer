@@ -440,10 +440,6 @@ public abstract class MaterializeConstant implements MaterializeExpression {
 
         @Override
         public String getTextRepresentation() {
-            /*
-             * if (Double.isFinite(val)) { return String.valueOf(val); } else { return "'" + val + "'"; }
-             *
-             */
             return SQLConstant.getTextRepresentationHelper(val);
         }
 
@@ -464,10 +460,6 @@ public abstract class MaterializeConstant implements MaterializeExpression {
 
         @Override
         public String getTextRepresentation() {
-            /*
-             * if (Double.isFinite(val)) { return String.valueOf(val); } else { return "'" + val + "'"; }
-             *
-             */
             return SQLConstant.getTextRepresentationHelper(val);
         }
 

@@ -149,15 +149,6 @@ public abstract class MySQLConstant implements MySQLExpression {
 
         @Override
         public MySQLConstant castAs(CastType type) {
-            /*
-             * if (type == CastType.SIGNED || type == CastType.UNSIGNED) { String value = this.value; while
-             * (value.startsWith(" ") || value.startsWith("\t") || value.startsWith("\n")) { if (value.startsWith("\n"))
-             * { throw new IgnoreMeException(); } value = value.substring(1); } for (int i = value.length(); i >= 0;
-             * i--) { try { String substring = value.substring(0, i); long val = Long.parseLong(substring); return
-             * MySQLConstant.createIntConstant(val, type == CastType.SIGNED); } catch (NumberFormatException e) { //
-             * ignore } } return MySQLConstant.createIntConstant(0, type == CastType.SIGNED); } else { throw new
-             * AssertionError(); }
-             */
             return (MySQLConstant) SQLConstant.castAsHelper(this.value, 0, type);
         }
 
