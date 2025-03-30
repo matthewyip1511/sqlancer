@@ -51,7 +51,7 @@ public final class SQLConstant {
     }
 
     public static Expression<?> castAsHelper(String v, int limit, Enum<?> type) {
-        if (type == CastType.SIGNED || type == CastType.UNSIGNED) {
+        if (type.name().equals(CastType.SIGNED.name()) || type.name().equals(CastType.UNSIGNED.name())) {
             String value = v;
             while (value.startsWith(" ") || value.startsWith("\t") || value.startsWith("\n")) {
                 if (value.startsWith("\n")) {
