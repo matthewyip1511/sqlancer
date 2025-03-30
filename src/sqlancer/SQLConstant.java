@@ -16,6 +16,7 @@ public final class SQLConstant {
         }
 
     }
+
     public static <T extends Number> String clickhouseFloatToString(T value) {
         double doubleVal = value.doubleValue();
         if (doubleVal == Double.POSITIVE_INFINITY) {
@@ -49,7 +50,7 @@ public final class SQLConstant {
         return sb.toString();
     }
 
-    public static <T>Expression<?> castAsHelper(String value, int limit, Enum<?> type) {
+    public static <T> Expression<?> castAsHelper(String value, int limit, Enum<?> type) {
         if (type == CastType.SIGNED || type == CastType.UNSIGNED) {
             while (value.startsWith(" ") || value.startsWith("\t") || value.startsWith("\n")) {
                 if (value.startsWith("\n")) {

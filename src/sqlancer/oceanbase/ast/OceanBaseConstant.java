@@ -211,17 +211,10 @@ public abstract class OceanBaseConstant implements OceanBaseExpression {
         @Override
         public boolean asBooleanNotNull() {
             /*
-            for (int i = value.length(); i >= 1; i--) {
-                try {
-                    String substring = value.substring(0, i);
-                    Double val = Double.valueOf(substring);
-                    return val != 0 && !Double.isNaN(val);
-                } catch (NumberFormatException e) {
-                    // ignore
-                }
-            }
-            return false;
-
+             * for (int i = value.length(); i >= 1; i--) { try { String substring = value.substring(0, i); Double val =
+             * Double.valueOf(substring); return val != 0 && !Double.isNaN(val); } catch (NumberFormatException e) { //
+             * ignore } } return false;
+             *
              */
             return SQLConstant.asBooleanNotNullConstantHelper(value, 1);
         }
@@ -229,14 +222,10 @@ public abstract class OceanBaseConstant implements OceanBaseExpression {
         @Override
         public String getTextRepresentation() {
             /*
-            StringBuilder sb = new StringBuilder();
-            String quotes = singleQuotes ? "'" : "\"";
-            sb.append(quotes);
-            String text = value.replace(quotes, quotes + quotes).replace("\\", "\\\\");
-            sb.append(text);
-            sb.append(quotes);
-            return sb.toString();
-
+             * StringBuilder sb = new StringBuilder(); String quotes = singleQuotes ? "'" : "\""; sb.append(quotes);
+             * String text = value.replace(quotes, quotes + quotes).replace("\\", "\\\\"); sb.append(text);
+             * sb.append(quotes); return sb.toString();
+             *
              */
             return SQLConstant.getTextRepresentationHelper(value, singleQuotes);
         }
@@ -280,27 +269,14 @@ public abstract class OceanBaseConstant implements OceanBaseExpression {
                 return OceanBaseConstant.createNullConstant();
             }
             /*
-            if (type == CastType.SIGNED || type == CastType.UNSIGNED) {
-                String value = this.value;
-                while (value.startsWith(" ") || value.startsWith("\t") || value.startsWith("\n")) {
-                    if (value.startsWith("\n")) {
-                        throw new IgnoreMeException();
-                    }
-                    value = value.substring(1);
-                }
-                for (int i = value.length(); i >= 1; i--) {
-                    try {
-                        String substring = value.substring(0, i);
-                        long val = Long.parseLong(substring);
-                        return OceanBaseConstant.createIntConstant(val, type == CastType.SIGNED);
-                    } catch (NumberFormatException e) {
-                    }
-                }
-                return OceanBaseConstant.createIntConstant(0, type == CastType.SIGNED);
-            } else {
-                throw new AssertionError();
-            }
-
+             * if (type == CastType.SIGNED || type == CastType.UNSIGNED) { String value = this.value; while
+             * (value.startsWith(" ") || value.startsWith("\t") || value.startsWith("\n")) { if (value.startsWith("\n"))
+             * { throw new IgnoreMeException(); } value = value.substring(1); } for (int i = value.length(); i >= 1;
+             * i--) { try { String substring = value.substring(0, i); long val = Long.parseLong(substring); return
+             * OceanBaseConstant.createIntConstant(val, type == CastType.SIGNED); } catch (NumberFormatException e) { }
+             * } return OceanBaseConstant.createIntConstant(0, type == CastType.SIGNED); } else { throw new
+             * AssertionError(); }
+             *
              */
             return (OceanBaseConstant) SQLConstant.castAsHelper(this.value, 1, type);
         }
