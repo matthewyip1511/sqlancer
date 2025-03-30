@@ -1,7 +1,5 @@
 package sqlancer.oceanbase.ast;
 
-import sqlancer.SQLConstant;
-
 public class OceanBaseCastOperation implements OceanBaseExpression {
 
     private final OceanBaseExpression expr;
