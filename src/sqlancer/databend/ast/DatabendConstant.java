@@ -3,10 +3,10 @@ package sqlancer.databend.ast;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 
-import sqlancer.DatabendDorisConstant;
+import sqlancer.DatabendDorisPrestoConstant;
 import sqlancer.databend.DatabendSchema.DatabendDataType;
 
-public abstract class DatabendConstant extends DatabendDorisConstant implements DatabendExpression {
+public abstract class DatabendConstant extends DatabendDorisPrestoConstant implements DatabendExpression {
 
     public abstract DatabendConstant cast(DatabendDataType dataType);
 

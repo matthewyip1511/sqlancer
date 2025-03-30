@@ -1,6 +1,6 @@
 package sqlancer;
 
-public class DatabendDorisConstant {
+public class DatabendDorisPrestoConstant {
 
     public boolean isNull() {
         return false;

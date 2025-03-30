@@ -1,10 +1,10 @@
 package sqlancer.doris.ast;
 
-import sqlancer.DatabendDorisConstant;
+import sqlancer.DatabendDorisPrestoConstant;
 import sqlancer.doris.DorisSchema.DorisDataType;
 import sqlancer.doris.utils.DorisNumberUtils;
 
-public abstract class DorisConstant extends DatabendDorisConstant implements DorisExpression {
+public abstract class DorisConstant extends DatabendDorisPrestoConstant implements DorisExpression {
 
     public boolean isNum() {
         // for INT, FLOAT, BOOLEAN
