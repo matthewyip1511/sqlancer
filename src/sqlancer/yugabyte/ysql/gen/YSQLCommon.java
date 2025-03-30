@@ -83,10 +83,7 @@ public final class YSQLCommon {
             SQLCommon.appendBitDataType(sb);
             break;
         case INET:
-            /*
-             * SQLCommon.appendInetDataType(sb);
-             *
-             */
+            SQLCommon.appendInetDataType(sb);
             break;
         default:
             throw new AssertionError(type);
