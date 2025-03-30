@@ -313,6 +313,10 @@ public abstract class MySQLConstant implements MySQLExpression {
     public static class MySQLNullConstant extends MySQLConstant {
 
         @Override
+        public String getTextRepresentation() {
+            return "NULL";
+        }
+        @Override
         public boolean isNull() {
             return true;
         }
@@ -320,11 +324,6 @@ public abstract class MySQLConstant implements MySQLExpression {
         @Override
         public boolean asBooleanNotNull() {
             throw new UnsupportedOperationException(this.toString());
-        }
-
-        @Override
-        public String getTextRepresentation() {
-            return "NULL";
         }
 
         @Override
