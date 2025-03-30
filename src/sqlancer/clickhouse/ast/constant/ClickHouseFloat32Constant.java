@@ -14,13 +14,9 @@ public class ClickHouseFloat32Constant extends ClickHouseNumericConstant<Float> 
     @Override
     public String toString() {
         /*
-        if (value == Double.POSITIVE_INFINITY) {
-            return "'+Inf'";
-        } else if (value == Double.NEGATIVE_INFINITY) {
-            return "'-Inf'";
-        }
-        return String.valueOf(value);
-
+         * if (value == Double.POSITIVE_INFINITY) { return "'+Inf'"; } else if (value == Double.NEGATIVE_INFINITY) {
+         * return "'-Inf'"; } return String.valueOf(value);
+         *
          */
         return SQLConstant.clickhouseFloatToString(value);
     }
