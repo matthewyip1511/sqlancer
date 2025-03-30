@@ -31,11 +31,6 @@ public final class YSQLCommon {
             sb.append("boolean");
             break;
         case INT:
-            /*
-             * if (Randomly.getBoolean() && allowSerial) { serial = true; sb.append(Randomly.fromOptions("serial",
-             * "bigserial")); } else { sb.append(Randomly.fromOptions("smallint", "integer", "bigint")); }
-             *
-             */
             serial = SQLCommon.appendIntDataType(sb, allowSerial);
             break;
         case TEXT:
@@ -75,11 +70,6 @@ public final class YSQLCommon {
             sb.append("bytea");
             break;
         case BIT:
-            /*
-             * sb.append("BIT"); // if (Randomly.getBoolean()) { sb.append(" VARYING"); // } sb.append("(");
-             * sb.append(Randomly.getNotCachedInteger(1, 500)); sb.append(")");
-             *
-             */
             SQLCommon.appendBitDataType(sb);
             break;
         case INET:
@@ -213,26 +203,6 @@ public final class YSQLCommon {
             sb.append(")");
             break;
         case FOREIGN_KEY:
-            /*
-             * sb.append("FOREIGN KEY (");
-             * sb.append(randomNonEmptyColumnSubset.stream().map(AbstractTableColumn::getName)
-             * .collect(Collectors.joining(", "))); sb.append(") REFERENCES "); YSQLTable randomOtherTable =
-             * globalState.getSchema().getRandomTable(tab -> !tab.isView()); sb.append(randomOtherTable.getName()); if
-             * (randomOtherTable.getColumns().size() < randomNonEmptyColumnSubset.size()) { throw new
-             * IgnoreMeException(); } otherColumns =
-             * randomOtherTable.getRandomNonEmptyColumnSubset(randomNonEmptyColumnSubset.size()); sb.append("(");
-             * sb.append(otherColumns.stream().map(AbstractTableColumn::getName).collect(Collectors.joining(", ")));
-             * sb.append(")"); if (Randomly.getBoolean()) { sb.append(" "); sb.append(Randomly.fromOptions("MATCH FULL",
-             * "MATCH SIMPLE")); } if (Randomly.getBoolean()) { sb.append(" ON DELETE ");
-             * errors.add("ERROR: invalid ON DELETE action for foreign key constraint containing generated column");
-             * deleteOrUpdateAction(sb); } if (Randomly.getBoolean()) { sb.append(" ON UPDATE ");
-             * errors.add("invalid ON UPDATE action for foreign key constraint containing generated column");
-             * deleteOrUpdateAction(sb); } if (Randomly.getBoolean()) { sb.append(" "); if (Randomly.getBoolean()) {
-             * sb.append("DEFERRABLE"); if (Randomly.getBoolean()) { sb.append(" ");
-             * sb.append(Randomly.fromOptions("INITIALLY DEFERRED", "INITIALLY IMMEDIATE")); } } else {
-             * sb.append("NOT DEFERRABLE"); } }
-             *
-             */
             SQLCommon.addTableConstraintForeignKey(randomNonEmptyColumnSubset, sb, globalState, errors);
             break;
         default:

@@ -4,4 +4,5 @@ public final class SQLConstant {
     private SQLConstant() {
     }
 
+
 }
