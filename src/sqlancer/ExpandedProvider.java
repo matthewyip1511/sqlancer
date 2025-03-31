@@ -92,7 +92,8 @@ public abstract class ExpandedProvider<G extends SQLGlobalState<O, ? extends Abs
         return nrPerformed;
     }
 
-    protected CommonExplainComponents prepareExplainQuery(String selectStr, String explainPrefix, G globalState) throws Exception {
+    protected CommonExplainComponents prepareExplainQuery(String selectStr, String explainPrefix, G globalState)
+            throws Exception {
         String queryPlan = "";
         String explainQuery = explainPrefix + selectStr;
         if (globalState.getOptions().logEachSelect()) {
@@ -115,7 +116,8 @@ public abstract class ExpandedProvider<G extends SQLGlobalState<O, ? extends Abs
         public boolean afterProjection;
         public SQLancerResultSet rs;
 
-        public CommonExplainComponents(String queryPlan, String explainQuery, boolean afterProjection, SQLancerResultSet rs) {
+        public CommonExplainComponents(String queryPlan, String explainQuery, boolean afterProjection,
+                SQLancerResultSet rs) {
             this.queryPlan = queryPlan;
             this.explainQuery = explainQuery;
             this.afterProjection = afterProjection;
