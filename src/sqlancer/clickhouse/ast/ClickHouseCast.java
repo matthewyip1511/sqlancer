@@ -1,10 +1,8 @@
 package sqlancer.clickhouse.ast;
 
-import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.util.Optional;
-import java.util.regex.Pattern;
 
 import com.clickhouse.client.ClickHouseDataType;
 
@@ -18,13 +16,11 @@ public final class ClickHouseCast implements ClickHouseExpression {
      * static final double MIN_INT_FOR_WHICH_CONVERSION_TO_INT_IS_TRIED = -Math.pow(2, 51 - 1);
      *
      */
-
-    private static final byte FILE_SEPARATOR = 0x1c;
-    private static final byte GROUP_SEPARATOR = 0x1d;
-    private static final byte RECORD_SEPARATOR = 0x1e;
-    private static final byte UNIT_SEPARATOR = 0x1f;
-    private static final byte SYNCHRONOUS_IDLE = 0x16;
-
+    /*
+     * private static final byte FILE_SEPARATOR = 0x1c; private static final byte GROUP_SEPARATOR = 0x1d; private static
+     * final byte RECORD_SEPARATOR = 0x1e; private static final byte UNIT_SEPARATOR = 0x1f; private static final byte
+     * SYNCHRONOUS_IDLE = 0x16;
+     */
     static Connection castDatabase;
 
     private ClickHouseCast() {

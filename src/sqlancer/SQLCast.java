@@ -1,10 +1,5 @@
 package sqlancer;
 
-import sqlancer.clickhouse.ast.constant.ClickHouseCreateConstant;
-import sqlancer.common.ast.newast.Expression;
-import sqlancer.common.schema.AbstractTableColumn;
-import sqlancer.sqlite3.ast.SQLite3Constant;
-
 import java.math.BigDecimal;
 import java.util.function.Function;
 import java.util.regex.Pattern;

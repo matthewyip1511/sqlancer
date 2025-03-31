@@ -1,27 +1,26 @@
 package sqlancer.sqlite3.ast;
 
-import java.math.BigDecimal;
 import java.nio.charset.Charset;
 import java.sql.Connection;
 import java.util.Optional;
-import java.util.regex.Pattern;
 
 import sqlancer.IgnoreMeException;
 import sqlancer.SQLCast;
-import sqlancer.clickhouse.ast.constant.ClickHouseCreateConstant;
 import sqlancer.sqlite3.schema.SQLite3DataType;
 
 public final class SQLite3Cast implements SQLite3Expression {
-
-    private static final double MAX_INT_FOR_WHICH_CONVERSION_TO_INT_IS_TRIED = Math.pow(2, 51 - 1) - 1;
-    private static final double MIN_INT_FOR_WHICH_CONVERSION_TO_INT_IS_TRIED = -Math.pow(2, 51 - 1);
+    /*
+     * private static final double MAX_INT_FOR_WHICH_CONVERSION_TO_INT_IS_TRIED = Math.pow(2, 51 - 1) - 1; private
+     * static final double MIN_INT_FOR_WHICH_CONVERSION_TO_INT_IS_TRIED = -Math.pow(2, 51 - 1);
+     *
+     */
     public static final Charset DEFAULT_ENCODING = Charset.forName("UTF-8");
-
-    private static final byte FILE_SEPARATOR = 0x1c;
-    private static final byte GROUP_SEPARATOR = 0x1d;
-    private static final byte RECORD_SEPARATOR = 0x1e;
-    private static final byte UNIT_SEPARATOR = 0x1f;
-    private static final byte SYNCHRONOUS_IDLE = 0x16;
+    /*
+     * private static final byte FILE_SEPARATOR = 0x1c; private static final byte GROUP_SEPARATOR = 0x1d; private static
+     * final byte RECORD_SEPARATOR = 0x1e; private static final byte UNIT_SEPARATOR = 0x1f; private static final byte
+     * SYNCHRONOUS_IDLE = 0x16;
+     *
+     */
 
     static Connection castDatabase;
 
@@ -159,51 +158,20 @@ public final class SQLite3Cast implements SQLite3Expression {
             throw new AssertionError(value);
         }
     }
-
-    private static boolean startsWithWhitespace(String asString) {
-        if (asString.isEmpty()) {
-            return false;
-        }
-        char c = asString.charAt(0);
-        switch (c) {
-        case ' ':
-        case '\t':
-        case 0x0b:
-        case '\f':
-        case '\n':
-        case '\r':
-            return true;
-        default:
-            return false;
-        }
-    }
-
-    private static boolean unprintAbleCharThatLetsBecomeNumberZero(String s) {
-        // non-printable characters are ignored by Double.valueOf
-        for (int i = 0; i < s.length(); i++) {
-            char charAt = s.charAt(i);
-            if (!Character.isISOControl(charAt) && !Character.isWhitespace(charAt)) {
-                return false;
-            }
-            switch (charAt) {
-            case GROUP_SEPARATOR:
-            case FILE_SEPARATOR:
-            case RECORD_SEPARATOR:
-            case UNIT_SEPARATOR:
-            case SYNCHRONOUS_IDLE:
-                return true;
-            default:
-                // fall through
-            }
-
-            if (Character.isWhitespace(charAt)) {
-                continue;
-            } else {
-                return true;
-            }
-        }
-        return false;
-    }
+    /*
+     * private static boolean startsWithWhitespace(String asString) { if (asString.isEmpty()) { return false; } char c =
+     * asString.charAt(0); switch (c) { case ' ': case '\t': case 0x0b: case '\f': case '\n': case '\r': return true;
+     * default: return false; } }
+     *
+     * private static boolean unprintAbleCharThatLetsBecomeNumberZero(String s) { // non-printable characters are
+     * ignored by Double.valueOf for (int i = 0; i < s.length(); i++) { char charAt = s.charAt(i); if
+     * (!Character.isISOControl(charAt) && !Character.isWhitespace(charAt)) { return false; } switch (charAt) { case
+     * GROUP_SEPARATOR: case FILE_SEPARATOR: case RECORD_SEPARATOR: case UNIT_SEPARATOR: case SYNCHRONOUS_IDLE: return
+     * true; default: // fall through }
+     *
+     * if (Character.isWhitespace(charAt)) { continue; } else { return true; } } return false; }
+     *
+     */
 
     public static SQLite3Constant castToText(SQLite3Constant cons) {
         if (cons.getDataType() == SQLite3DataType.TEXT) {
