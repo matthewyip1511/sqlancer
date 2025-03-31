@@ -19,6 +19,7 @@ public final class SQLCast {
 
     private static final double MAX_INT_FOR_WHICH_CONVERSION_TO_INT_IS_TRIED = Math.pow(2, 51 - 1) - 1;
     private static final double MIN_INT_FOR_WHICH_CONVERSION_TO_INT_IS_TRIED = -Math.pow(2, 51 - 1);
+
     private SQLCast() {
 
     }
@@ -55,7 +56,8 @@ public final class SQLCast {
         return createConstant.apply(0L);
     }
 
-    public static <T> T convertInternal(String asString, boolean convertRealToInt,boolean noNumIsRealZero, boolean convertIntToReal, Function<Long, T> createConstant1, Function<Double, T> createConstant2) {
+    public static <T> T convertInternal(String asString, boolean convertRealToInt, boolean noNumIsRealZero,
+            boolean convertIntToReal, Function<Long, T> createConstant1, Function<Double, T> createConstant2) {
         while (startsWithWhitespace(asString)) {
             asString = asString.substring(1);
         }
@@ -101,15 +103,15 @@ public final class SQLCast {
         }
         char c = asString.charAt(0);
         switch (c) {
-            case ' ':
-            case '\t':
-            case 0x0b:
-            case '\f':
-            case '\n':
-            case '\r':
-                return true;
-            default:
-                return false;
+        case ' ':
+        case '\t':
+        case 0x0b:
+        case '\f':
+        case '\n':
+        case '\r':
+            return true;
+        default:
+            return false;
         }
     }
 
@@ -121,14 +123,14 @@ public final class SQLCast {
                 return false;
             }
             switch (charAt) {
-                case GROUP_SEPARATOR:
-                case FILE_SEPARATOR:
-                case RECORD_SEPARATOR:
-                case UNIT_SEPARATOR:
-                case SYNCHRONOUS_IDLE:
-                    return true;
-                default:
-                    // fall through
+            case GROUP_SEPARATOR:
+            case FILE_SEPARATOR:
+            case RECORD_SEPARATOR:
+            case UNIT_SEPARATOR:
+            case SYNCHRONOUS_IDLE:
+                return true;
+            default:
+                // fall through
             }
 
             if (Character.isWhitespace(charAt)) {

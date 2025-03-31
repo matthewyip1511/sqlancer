@@ -75,36 +75,16 @@ public final class SQLite3Cast implements SQLite3Expression {
         case TEXT:
             String asString = cons.asString();
             /*
-            while (startsWithWhitespace(asString)) {
-                asString = asString.substring(1);
-            }
-            if (!asString.isEmpty() && unprintAbleCharThatLetsBecomeNumberZero(asString)) {
-                return SQLite3Constant.createIntConstant(0);
-            }
-            for (int i = asString.length(); i >= 0; i--) {
-                try {
-                    String substring = asString.substring(0, i);
-                    Pattern p = Pattern.compile("[+-]?\\d\\d*");
-                    if (p.matcher(substring).matches()) {
-                        BigDecimal bg = new BigDecimal(substring);
-                        long result;
-                        try {
-                            result = bg.longValueExact();
-                        } catch (ArithmeticException e) {
-                            if (substring.startsWith("-")) {
-                                result = Long.MIN_VALUE;
-                            } else {
-                                result = Long.MAX_VALUE;
-                            }
-                        }
-                        return SQLite3Constant.createIntConstant(result);
-                    }
-                } catch (Exception e) {
-
-                }
-            }
-            return SQLite3Constant.createIntConstant(0);
-
+             * while (startsWithWhitespace(asString)) { asString = asString.substring(1); } if (!asString.isEmpty() &&
+             * unprintAbleCharThatLetsBecomeNumberZero(asString)) { return SQLite3Constant.createIntConstant(0); } for
+             * (int i = asString.length(); i >= 0; i--) { try { String substring = asString.substring(0, i); Pattern p =
+             * Pattern.compile("[+-]?\\d\\d*"); if (p.matcher(substring).matches()) { BigDecimal bg = new
+             * BigDecimal(substring); long result; try { result = bg.longValueExact(); } catch (ArithmeticException e) {
+             * if (substring.startsWith("-")) { result = Long.MIN_VALUE; } else { result = Long.MAX_VALUE; } } return
+             * SQLite3Constant.createIntConstant(result); } } catch (Exception e) {
+             *
+             * } } return SQLite3Constant.createIntConstant(0);
+             *
              */
             return SQLCast.castToIntText(asString, SQLite3Constant::createIntConstant);
         default:
@@ -155,46 +135,26 @@ public final class SQLite3Cast implements SQLite3Expression {
         case TEXT:
             String asString = value.asString();
             /*
-            while (startsWithWhitespace(asString)) {
-                asString = asString.substring(1);
-            }
-            if (!asString.isEmpty() && unprintAbleCharThatLetsBecomeNumberZero(asString)) {
-                return SQLite3Constant.createIntConstant(0);
-            }
-            if (asString.toLowerCase().startsWith("-infinity") || asString.toLowerCase().startsWith("infinity")
-                    || asString.startsWith("NaN")) {
-                return SQLite3Constant.createIntConstant(0);
-            }
-            for (int i = asString.length(); i >= 0; i--) {
-                try {
-                    String substring = asString.substring(0, i);
-                    double d = Double.parseDouble(substring);
-                    BigDecimal first = new BigDecimal(substring);
-                    long longValue = first.longValue();
-                    BigDecimal second = BigDecimal.valueOf(longValue);
-                    boolean isWithinConvertibleRange = longValue >= MIN_INT_FOR_WHICH_CONVERSION_TO_INT_IS_TRIED
-                            && longValue <= MAX_INT_FOR_WHICH_CONVERSION_TO_INT_IS_TRIED && convertRealToInt;
-                    boolean isFloatingPointNumber = substring.contains(".") || substring.toUpperCase().contains("E");
-                    boolean doubleShouldBeConvertedToInt = isFloatingPointNumber && first.compareTo(second) == 0
-                            && isWithinConvertibleRange;
-                    boolean isInteger = !isFloatingPointNumber && first.compareTo(second) == 0;
-                    if (doubleShouldBeConvertedToInt || isInteger && !convertIntToReal) {
-                        // see https://www.sqlite.org/src/tktview/afdc5a29dc
-                        return SQLite3Constant.createIntConstant(first.longValue());
-                    } else {
-                        return SQLite3Constant.createRealConstant(d);
-                    }
-                } catch (Exception e) {
-                }
-            }
-            if (noNumIsRealZero) {
-                return SQLite3Constant.createRealConstant(0.0);
-            } else {
-                return SQLite3Constant.createIntConstant(0);
-            }
-
+             * while (startsWithWhitespace(asString)) { asString = asString.substring(1); } if (!asString.isEmpty() &&
+             * unprintAbleCharThatLetsBecomeNumberZero(asString)) { return SQLite3Constant.createIntConstant(0); } if
+             * (asString.toLowerCase().startsWith("-infinity") || asString.toLowerCase().startsWith("infinity") ||
+             * asString.startsWith("NaN")) { return SQLite3Constant.createIntConstant(0); } for (int i =
+             * asString.length(); i >= 0; i--) { try { String substring = asString.substring(0, i); double d =
+             * Double.parseDouble(substring); BigDecimal first = new BigDecimal(substring); long longValue =
+             * first.longValue(); BigDecimal second = BigDecimal.valueOf(longValue); boolean isWithinConvertibleRange =
+             * longValue >= MIN_INT_FOR_WHICH_CONVERSION_TO_INT_IS_TRIED && longValue <=
+             * MAX_INT_FOR_WHICH_CONVERSION_TO_INT_IS_TRIED && convertRealToInt; boolean isFloatingPointNumber =
+             * substring.contains(".") || substring.toUpperCase().contains("E"); boolean doubleShouldBeConvertedToInt =
+             * isFloatingPointNumber && first.compareTo(second) == 0 && isWithinConvertibleRange; boolean isInteger =
+             * !isFloatingPointNumber && first.compareTo(second) == 0; if (doubleShouldBeConvertedToInt || isInteger &&
+             * !convertIntToReal) { // see https://www.sqlite.org/src/tktview/afdc5a29dc return
+             * SQLite3Constant.createIntConstant(first.longValue()); } else { return
+             * SQLite3Constant.createRealConstant(d); } } catch (Exception e) { } } if (noNumIsRealZero) { return
+             * SQLite3Constant.createRealConstant(0.0); } else { return SQLite3Constant.createIntConstant(0); }
+             *
              */
-            return SQLCast.convertInternal(asString,convertRealToInt, noNumIsRealZero, convertIntToReal, SQLite3Constant::createIntConstant, SQLite3Constant::createRealConstant);
+            return SQLCast.convertInternal(asString, convertRealToInt, noNumIsRealZero, convertIntToReal,
+                    SQLite3Constant::createIntConstant, SQLite3Constant::createRealConstant);
         default:
             throw new AssertionError(value);
         }
