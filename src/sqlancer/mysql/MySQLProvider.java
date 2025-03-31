@@ -1,9 +1,6 @@
 package sqlancer.mysql;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -12,7 +9,6 @@ import com.google.auto.service.AutoService;
 import sqlancer.AbstractAction;
 import sqlancer.DatabaseProvider;
 import sqlancer.IgnoreMeException;
-import sqlancer.MainOptions;
 import sqlancer.Randomly;
 import sqlancer.SQLConnection;
 import sqlancer.SQLProviderAdapter;
@@ -173,33 +169,7 @@ public class MySQLProvider extends SQLProviderAdapter<MySQLGlobalState, MySQLOpt
 
     @Override
     public SQLConnection createDatabase(MySQLGlobalState globalState) throws SQLException {
-        String username = globalState.getOptions().getUserName();
-        String password = globalState.getOptions().getPassword();
-        String host = globalState.getOptions().getHost();
-        int port = globalState.getOptions().getPort();
-        if (host == null) {
-            host = MySQLOptions.DEFAULT_HOST;
-        }
-        if (port == MainOptions.NO_SET_PORT) {
-            port = MySQLOptions.DEFAULT_PORT;
-        }
-        String databaseName = globalState.getDatabaseName();
-        globalState.getState().logStatement("DROP DATABASE IF EXISTS " + databaseName);
-        globalState.getState().logStatement("CREATE DATABASE " + databaseName);
-        globalState.getState().logStatement("USE " + databaseName);
-        String url = String.format("jdbc:mysql://%s:%d?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true",
-                host, port);
-        Connection con = DriverManager.getConnection(url, username, password);
-        try (Statement s = con.createStatement()) {
-            s.execute("DROP DATABASE IF EXISTS " + databaseName);
-        }
-        try (Statement s = con.createStatement()) {
-            s.execute("CREATE DATABASE " + databaseName);
-        }
-        try (Statement s = con.createStatement()) {
-            s.execute("USE " + databaseName);
-        }
-        return new SQLConnection(con);
+        return createDatabaseCommon(globalState, MySQLOptions.DEFAULT_HOST, MySQLOptions.DEFAULT_PORT, false);
     }
 
     @Override

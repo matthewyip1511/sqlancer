@@ -1,6 +1,5 @@
 package sqlancer.cockroachdb;
 
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -12,13 +11,13 @@ import java.util.stream.Collectors;
 import com.google.auto.service.AutoService;
 
 import sqlancer.DatabaseProvider;
+import sqlancer.ExpandedProvider;
 import sqlancer.IgnoreMeException;
 import sqlancer.Main.QueryManager;
 import sqlancer.MainOptions;
 import sqlancer.Randomly;
 import sqlancer.SQLConnection;
 import sqlancer.SQLGlobalState;
-import sqlancer.SQLProviderAdapter;
 import sqlancer.cockroachdb.CockroachDBProvider.CockroachDBGlobalState;
 import sqlancer.cockroachdb.CockroachDBSchema.CockroachDBTable;
 import sqlancer.cockroachdb.gen.CockroachDBCommentOnGenerator;
@@ -42,7 +41,7 @@ import sqlancer.common.query.SQLQueryProvider;
 import sqlancer.common.query.SQLancerResultSet;
 
 @AutoService(DatabaseProvider.class)
-public class CockroachDBProvider extends SQLProviderAdapter<CockroachDBGlobalState, CockroachDBOptions> {
+public class CockroachDBProvider extends ExpandedProvider<CockroachDBGlobalState, CockroachDBOptions> {
 
     public CockroachDBProvider() {
         super(CockroachDBGlobalState.class, CockroachDBOptions.class);
@@ -300,23 +299,15 @@ public class CockroachDBProvider extends SQLProviderAdapter<CockroachDBGlobalSta
 
     @Override
     public String getQueryPlan(String selectStr, CockroachDBGlobalState globalState) throws Exception {
-        String queryPlan = "";
-        String explainQuery = "EXPLAIN (OPT) " + selectStr;
-        if (globalState.getOptions().logEachSelect()) {
-            globalState.getLogger().writeCurrent(explainQuery);
-            try {
-                globalState.getLogger().getCurrentFileWriter().flush();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        SQLQueryAdapter q = new SQLQueryAdapter(explainQuery);
-        boolean afterProjection = false; // Remove the concrete expression after each Projection operator
-        try (SQLancerResultSet rs = q.executeAndGet(globalState)) {
+        CommonExplainComponents components = prepareExplainQuery(selectStr, "EXPLAIN (OPT) ", globalState);
+        String queryPlan = components.queryPlan;
+        boolean afterProjection = components.afterProjection;
+
+        try (SQLancerResultSet rs = components.rs) {
             if (rs != null) {
                 while (rs.next()) {
                     String targetQueryPlan = rs.getString(1).replace("└──", "").replace("├──", "").replace("│", "")
-                            .trim() + ";"; // Unify format
+                            .trim() + ";";
                     if (afterProjection) {
                         afterProjection = false;
                         continue;
@@ -324,7 +315,6 @@ public class CockroachDBProvider extends SQLProviderAdapter<CockroachDBGlobalSta
                     if (targetQueryPlan.startsWith("projections")) {
                         afterProjection = true;
                     }
-                    // Remove all concrete expressions by keywords
                     if (targetQueryPlan.contains(">") || targetQueryPlan.contains("<") || targetQueryPlan.contains("=")
                             || targetQueryPlan.contains("*") || targetQueryPlan.contains("+")
                             || targetQueryPlan.contains("'")) {
@@ -334,9 +324,8 @@ public class CockroachDBProvider extends SQLProviderAdapter<CockroachDBGlobalSta
                 }
             }
         } catch (AssertionError e) {
-            throw new AssertionError("Explain failed: " + explainQuery);
+            throw new AssertionError("Explain failed: " + components.explainQuery);
         }
-
         return queryPlan;
     }
 
