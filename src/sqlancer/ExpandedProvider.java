@@ -1,10 +1,10 @@
 package sqlancer;
 
+import java.io.IOException;
+
 import sqlancer.common.query.SQLQueryAdapter;
 import sqlancer.common.query.SQLancerResultSet;
 import sqlancer.common.schema.AbstractSchema;
-
-import java.io.IOException;
 
 public abstract class ExpandedProvider<G extends SQLGlobalState<O, ? extends AbstractSchema<G, ?>>, O extends DBMSSpecificOptions<? extends OracleFactory<G>>>
         extends SQLProviderAdapter<G, O> {
