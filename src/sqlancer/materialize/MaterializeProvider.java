@@ -1,7 +1,6 @@
 package sqlancer.materialize;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.StringReader;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -239,25 +238,16 @@ public class MaterializeProvider extends ExpandedProvider<MaterializeGlobalState
 
     @Override
     public String getQueryPlan(String selectStr, MaterializeGlobalState globalState) throws Exception {
-        String queryPlan = "";
-        String explainQuery = "EXPLAIN OPTIMIZED PLAN FOR " + selectStr;
-        if (globalState.getOptions().logEachSelect()) {
-            globalState.getLogger().writeCurrent(explainQuery);
-            try {
-                globalState.getLogger().getCurrentFileWriter().flush();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        SQLQueryAdapter q = new SQLQueryAdapter(explainQuery);
-        boolean afterProjection = false; // Remove the concrete expression after each Projection operator
-        SQLancerResultSet rs = q.executeAndGet(globalState);
-        if (rs != null) {
-            while (rs.next()) {
+        CommonExplainComponents components = prepareExplainQuery(selectStr, "EXPLAIN OPTIMIZED PLAN FOR ", globalState);
+        String queryPlan = components.queryPlan;
+        boolean afterProjection = components.afterProjection;
+
+        if (components.rs != null) {
+            while (components.rs.next()) {
                 String line;
-                BufferedReader bufReader = new BufferedReader(new StringReader(rs.getString(1)));
+                BufferedReader bufReader = new BufferedReader(new StringReader(components.rs.getString(1)));
                 while ((line = bufReader.readLine()) != null) {
-                    String targetQueryPlan = line.trim() + ";"; // Unify format
+                    String targetQueryPlan = line.trim() + ";";
                     if (targetQueryPlan.startsWith("Explained Query:")) {
                         continue;
                     }
@@ -268,7 +258,6 @@ public class MaterializeProvider extends ExpandedProvider<MaterializeGlobalState
                     if (targetQueryPlan.startsWith("Project")) {
                         afterProjection = true;
                     }
-                    // Remove all concrete expressions by keywords
                     if (targetQueryPlan.contains(">") || targetQueryPlan.contains("<") || targetQueryPlan.contains("=")
                             || targetQueryPlan.contains("*") || targetQueryPlan.contains("+")
                             || targetQueryPlan.contains("'")) {
@@ -278,7 +267,6 @@ public class MaterializeProvider extends ExpandedProvider<MaterializeGlobalState
                 }
             }
         }
-
         return queryPlan;
     }
 

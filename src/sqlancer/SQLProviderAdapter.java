@@ -1,5 +1,9 @@
 package sqlancer;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.List;
 
 import sqlancer.common.log.LoggableFactory;
@@ -40,5 +44,47 @@ public abstract class SQLProviderAdapter<G extends SQLGlobalState<O, ? extends A
         } catch (Throwable t2) {
             throw new IgnoreMeException();
         }
+    }
+
+    protected SQLConnection createDatabaseCommon(G globalState, String defaultHost, int defaultPort,
+            boolean handleEmptyPassword) throws SQLException {
+
+        String username = globalState.getOptions().getUserName();
+        String password = globalState.getOptions().getPassword();
+
+        if (handleEmptyPassword && "\"\"".equals(password)) {
+            password = "";
+        }
+
+        String host = globalState.getOptions().getHost();
+        int port = globalState.getOptions().getPort();
+
+        if (host == null) {
+            host = defaultHost;
+        }
+        if (port == MainOptions.NO_SET_PORT) {
+            port = defaultPort;
+        }
+
+        String databaseName = globalState.getDatabaseName();
+        globalState.getState().logStatement("DROP DATABASE IF EXISTS " + databaseName);
+        globalState.getState().logStatement("CREATE DATABASE " + databaseName);
+        globalState.getState().logStatement("USE " + databaseName);
+
+        String url = String.format("jdbc:mysql://%s:%d?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true",
+                host, port);
+        Connection con = DriverManager.getConnection(url, username, password);
+
+        try (Statement s = con.createStatement()) {
+            s.execute("DROP DATABASE IF EXISTS " + databaseName);
+        }
+        try (Statement s = con.createStatement()) {
+            s.execute("CREATE DATABASE " + databaseName);
+        }
+        try (Statement s = con.createStatement()) {
+            s.execute("USE " + databaseName);
+        }
+
+        return new SQLConnection(con);
     }
 }
