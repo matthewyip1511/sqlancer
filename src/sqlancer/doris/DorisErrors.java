@@ -62,8 +62,8 @@ public final class DorisErrors {
         return errors;
     }
 
-    public static void addExpressionErrors(ExpectedErrors errors) {
-        errors.addAll(getExpressionErrors());
+    public static void addInsertErrors(ExpectedErrors errors) {
+        errors.addAll(getInsertErrors());
     }
 
     public static List<String> getInsertErrors() {
@@ -78,8 +78,7 @@ public final class DorisErrors {
         return errors;
     }
 
-    public static void addInsertErrors(ExpectedErrors errors) {
-        errors.addAll(getInsertErrors());
+    public static void addExpressionErrors(ExpectedErrors errors) {
+        errors.addAll(getExpressionErrors());
     }
-
 }

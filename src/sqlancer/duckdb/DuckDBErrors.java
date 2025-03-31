@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
 
+import sqlancer.SQLErrors;
 import sqlancer.common.query.ExpectedErrors;
 
 public final class DuckDBErrors {
@@ -84,28 +85,24 @@ public final class DuckDBErrors {
     }
 
     private static List<String> getFunctionErrors() {
-        ArrayList<String> errors = new ArrayList<>();
+        /*
+         * ArrayList<String> errors = new ArrayList<>();
+         *
+         * errors.add("SUBSTRING cannot handle negative lengths"); errors.add("is undefined outside [-1,1]"); // ACOS
+         * etc errors.add("invalid type specifier"); // PRINTF errors.add("argument index out of range"); // PRINTF
+         * errors.add("invalid format string"); // PRINTF errors.add("number is too big"); // PRINTF
+         * errors.add("Like pattern must not end with escape character!"); // LIKE
+         * errors.add("Could not choose a best candidate function for the function call \"date_part"); // date_part
+         * errors.add("extract specifier"); // date_part errors.add("not recognized"); // date_part
+         * errors.add("not supported"); // date_part errors.add("Failed to cast"); errors.add("Conversion Error");
+         * errors.add("Could not cast value"); errors.add("Insufficient padding in RPAD"); // RPAD
+         * errors.add("Could not choose a best candidate function for the function call"); // monthname
+         * errors.add("expected a numeric precision field"); // ROUND
+         * errors.add("with non-constant precision is not supported"); // ROUND
+         *
+         */
 
-        errors.add("SUBSTRING cannot handle negative lengths");
-        errors.add("is undefined outside [-1,1]"); // ACOS etc
-        errors.add("invalid type specifier"); // PRINTF
-        errors.add("argument index out of range"); // PRINTF
-        errors.add("invalid format string"); // PRINTF
-        errors.add("number is too big"); // PRINTF
-        errors.add("Like pattern must not end with escape character!"); // LIKE
-        errors.add("Could not choose a best candidate function for the function call \"date_part"); // date_part
-        errors.add("extract specifier"); // date_part
-        errors.add("not recognized"); // date_part
-        errors.add("not supported"); // date_part
-        errors.add("Failed to cast");
-        errors.add("Conversion Error");
-        errors.add("Could not cast value");
-        errors.add("Insufficient padding in RPAD"); // RPAD
-        errors.add("Could not choose a best candidate function for the function call"); // monthname
-        errors.add("expected a numeric precision field"); // ROUND
-        errors.add("with non-constant precision is not supported"); // ROUND
-
-        return errors;
+        return SQLErrors.getFunctionErrorsHelper();
     }
 
     public static List<String> getInsertErrors() {
@@ -132,10 +129,6 @@ public final class DuckDBErrors {
         return errors;
     }
 
-    public static void addInsertErrors(ExpectedErrors errors) {
-        errors.addAll(getInsertErrors());
-    }
-
     public static List<String> getGroupByErrors() {
         ArrayList<String> errors = new ArrayList<>();
 
@@ -144,6 +137,10 @@ public final class DuckDBErrors {
         errors.add("GROUP BY term out of range");
 
         return errors;
+    }
+
+    public static void addInsertErrors(ExpectedErrors errors) {
+        errors.addAll(getInsertErrors());
     }
 
     public static void addGroupByErrors(ExpectedErrors errors) {
