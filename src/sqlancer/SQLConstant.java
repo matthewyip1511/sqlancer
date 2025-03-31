@@ -58,7 +58,8 @@ public final class SQLConstant {
         }
     }
 
-    public static String getTextRepresentationRange(long left, boolean leftIsInclusive, long right, boolean rightIsInclusive) {
+    public static String getTextRepresentationRange(long left, boolean leftIsInclusive, long right,
+            boolean rightIsInclusive) {
         StringBuilder sb = new StringBuilder();
         sb.append("'");
         if (leftIsInclusive) {

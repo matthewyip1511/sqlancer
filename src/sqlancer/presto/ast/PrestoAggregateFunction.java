@@ -155,7 +155,7 @@ public enum PrestoAggregateFunction implements PrestoFunction {
 
         @Override
         public List<PrestoExpression> getArgumentsForReturnType(PrestoTypedExpressionGenerator gen, int depth,
-                                                                PrestoCompositeDataType returnType, boolean orderable) {
+                PrestoCompositeDataType returnType, boolean orderable) {
             PrestoCompositeDataType returnTypeLocal = Objects.requireNonNullElseGet(returnType,
                     () -> PrestoCompositeDataType.fromDataType(getReturnType()));
             return super.getArgumentsForReturnType(gen, depth, returnTypeLocal, orderable);
@@ -165,12 +165,11 @@ public enum PrestoAggregateFunction implements PrestoFunction {
         public PrestoDataType getReturnType() {
             return Randomly.fromList(PrestoDataType.getOrderableTypes());
         }
-        
+
         @Override
         public boolean isCompatibleWithReturnType(PrestoCompositeDataType returnType) {
             return true;
         }
-
 
     },
     // TODO:
