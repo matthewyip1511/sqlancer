@@ -1,5 +1,7 @@
 package sqlancer.materialize.gen;
 
+import static sqlancer.materialize.MaterializeUtils.getJoinStatements;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -22,7 +24,6 @@ import sqlancer.materialize.MaterializeSchema.MaterializeColumn;
 import sqlancer.materialize.MaterializeSchema.MaterializeDataType;
 import sqlancer.materialize.MaterializeSchema.MaterializeRowValue;
 import sqlancer.materialize.MaterializeSchema.MaterializeTable;
-import sqlancer.materialize.MaterializeSchema.MaterializeTables;
 import sqlancer.materialize.ast.MaterializeAggregate;
 import sqlancer.materialize.ast.MaterializeAggregate.MaterializeAggregateFunction;
 import sqlancer.materialize.ast.MaterializeBetweenOperation;
@@ -43,7 +44,6 @@ import sqlancer.materialize.ast.MaterializeFunction.MaterializeFunctionWithResul
 import sqlancer.materialize.ast.MaterializeFunctionWithUnknownResult;
 import sqlancer.materialize.ast.MaterializeInOperation;
 import sqlancer.materialize.ast.MaterializeJoin;
-import sqlancer.materialize.ast.MaterializeJoin.MaterializeJoinType;
 import sqlancer.materialize.ast.MaterializeLikeOperation;
 import sqlancer.materialize.ast.MaterializeOrderByTerm;
 import sqlancer.materialize.ast.MaterializeOrderByTerm.MaterializeOrder;
@@ -56,8 +56,6 @@ import sqlancer.materialize.ast.MaterializePrefixOperation;
 import sqlancer.materialize.ast.MaterializePrefixOperation.PrefixOperator;
 import sqlancer.materialize.ast.MaterializeSelect;
 import sqlancer.materialize.ast.MaterializeSelect.MaterializeFromTable;
-import sqlancer.materialize.ast.MaterializeSelect.MaterializeSubquery;
-import sqlancer.materialize.oracle.tlp.MaterializeTLPBase;
 
 public class MaterializeExpressionGenerator implements ExpressionGenerator<MaterializeExpression>,
         NoRECGenerator<MaterializeSelect, MaterializeJoin, MaterializeExpression, MaterializeTable, MaterializeColumn>,
@@ -117,7 +115,7 @@ public class MaterializeExpressionGenerator implements ExpressionGenerator<Mater
 
     private enum BooleanExpression {
         POSTFIX_OPERATOR, NOT, BINARY_LOGICAL_OPERATOR, BINARY_COMPARISON, FUNCTION, LIKE, BETWEEN, IN_OPERATION,
-        POSIX_REGEX;
+        POSIX_REGEX
     }
 
     private MaterializeExpression generateFunctionWithUnknownResult(int depth, MaterializeDataType type) {
@@ -270,23 +268,7 @@ public class MaterializeExpressionGenerator implements ExpressionGenerator<Mater
         }
         if (Randomly.getBooleanWithRatherLowProbability() || depth > maxDepth) {
             // generic expression
-            if (Randomly.getBoolean() || depth > maxDepth) {
-                if (Randomly.getBooleanWithRatherLowProbability()) {
-                    return generateConstant(r, dataType);
-                } else {
-                    if (filterColumns(dataType).isEmpty()) {
-                        return generateConstant(r, dataType);
-                    } else {
-                        return createColumnOfType(dataType);
-                    }
-                }
-            } else {
-                if (Randomly.getBoolean()) {
-                    return new MaterializeCastOperation(generateExpression(depth + 1), getCompoundDataType(dataType));
-                } else {
-                    return generateFunctionWithUnknownResult(depth, dataType);
-                }
-            }
+            return generateGenericExpression(depth, dataType);
         } else {
             switch (dataType) {
             case BOOLEAN:
@@ -303,6 +285,30 @@ public class MaterializeExpressionGenerator implements ExpressionGenerator<Mater
                 return generateBitExpression(depth);
             default:
                 throw new AssertionError(dataType);
+            }
+        }
+    }
+
+    private MaterializeExpression generateGenericExpression(int depth, MaterializeDataType dataType) {
+        if (Randomly.getBoolean() || depth > maxDepth) {
+            return generateGenericConstant(dataType);
+        } else {
+            if (Randomly.getBoolean()) {
+                return new MaterializeCastOperation(generateExpression(depth + 1), getCompoundDataType(dataType));
+            } else {
+                return generateFunctionWithUnknownResult(depth, dataType);
+            }
+        }
+    }
+
+    private MaterializeExpression generateGenericConstant(MaterializeDataType dataType) {
+        if (Randomly.getBooleanWithRatherLowProbability()) {
+            return generateConstant(r, dataType);
+        } else {
+            if (filterColumns(dataType).isEmpty()) {
+                return generateConstant(r, dataType);
+            } else {
+                return createColumnOfType(dataType);
             }
         }
     }
@@ -361,19 +367,17 @@ public class MaterializeExpressionGenerator implements ExpressionGenerator<Mater
 
     private enum BitExpression {
         BINARY_OPERATION
-    };
+    }
 
     private MaterializeExpression generateBitExpression(int depth) {
         BitExpression option;
         option = Randomly.fromOptions(BitExpression.values());
-        switch (option) {
-        case BINARY_OPERATION:
+        if (option == BitExpression.BINARY_OPERATION) {
             return new MaterializeBinaryBitOperation(MaterializeBinaryBitOperator.getRandom(),
                     generateExpression(depth + 1, MaterializeDataType.BIT),
                     generateExpression(depth + 1, MaterializeDataType.BIT));
-        default:
-            throw new AssertionError();
         }
+        throw new AssertionError();
     }
 
     private enum IntExpression {
@@ -553,29 +557,7 @@ public class MaterializeExpressionGenerator implements ExpressionGenerator<Mater
 
     @Override
     public List<MaterializeJoin> getRandomJoinClauses() {
-        List<MaterializeJoin> joinStatements = new ArrayList<>();
-        MaterializeExpressionGenerator gen = new MaterializeExpressionGenerator(globalState).setColumns(columns);
-        for (int i = 1; i < tables.size(); i++) {
-            MaterializeExpression joinClause = gen.generateExpression(MaterializeDataType.BOOLEAN);
-            MaterializeTable table = Randomly.fromList(tables);
-            tables.remove(table);
-            MaterializeJoinType options = MaterializeJoinType.getRandom();
-            MaterializeJoin j = new MaterializeJoin(new MaterializeFromTable(table, Randomly.getBoolean()), joinClause,
-                    options);
-            joinStatements.add(j);
-        }
-        // JOIN subqueries
-        for (int i = 0; i < Randomly.smallNumber(); i++) {
-            MaterializeTables subqueryTables = globalState.getSchema().getRandomTableNonEmptyTables();
-            MaterializeSubquery subquery = MaterializeTLPBase.createSubquery(globalState, String.format("sub%d", i),
-                    subqueryTables);
-            MaterializeExpression joinClause = gen.generateExpression(MaterializeDataType.BOOLEAN);
-            MaterializeJoinType options = MaterializeJoinType.getRandom();
-            MaterializeJoin j = new MaterializeJoin(subquery, joinClause, options);
-            joinStatements.add(j);
-        }
-
-        return joinStatements;
+        return getJoinStatements(globalState, columns, tables);
     }
 
     @Override

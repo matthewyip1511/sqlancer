@@ -1,6 +1,7 @@
 package sqlancer.common.oracle;
 
-import java.io.IOException;
+import static sqlancer.common.oracle.TestOracleUtils.logQueryIfEnabled;
+
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +11,7 @@ import sqlancer.IgnoreMeException;
 import sqlancer.Randomly;
 import sqlancer.SQLGlobalState;
 import sqlancer.common.DBMSCommon;
+import sqlancer.common.ast.JoinBase;
 import sqlancer.common.ast.newast.Expression;
 import sqlancer.common.ast.newast.Join;
 import sqlancer.common.ast.newast.Select;
@@ -45,6 +47,7 @@ public class CERTOracle<Z extends Select<J, E, T, C>, J extends Join<E, T, C>, E
         this.queryPlanParser = queryPlanParser;
     }
 
+    @SuppressWarnings("unchecked")
     @Override
     public void check() throws SQLException {
         S schema = state.getSchema();
@@ -55,7 +58,7 @@ public class CERTOracle<Z extends Select<J, E, T, C>, J extends Join<E, T, C>, E
 
         Z select = gen.generateSelect();
         select.setFetchColumns(fetchColumns);
-        select.setJoinClauses(gen.getRandomJoinClauses());
+        select.setJoinClauses((List<JoinBase<E>>) (List<?>) gen.getRandomJoinClauses());
         select.setFromList(gen.getTableRefs());
 
         if (Randomly.getBoolean()) {
@@ -94,14 +97,7 @@ public class CERTOracle<Z extends Select<J, E, T, C>, J extends Join<E, T, C>, E
         Optional<Long> row = Optional.empty();
 
         // Log the query
-        if (globalState.getOptions().logEachSelect()) {
-            globalState.getLogger().writeCurrent(explainQuery);
-            try {
-                globalState.getLogger().getCurrentFileWriter().flush();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+        logQueryIfEnabled(globalState, explainQuery);
 
         // Get the row count
         SQLQueryAdapter q = new SQLQueryAdapter(explainQuery, errors);

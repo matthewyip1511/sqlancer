@@ -22,7 +22,8 @@ import sqlancer.clickhouse.ast.ClickHouseBinaryFunctionOperation;
 import sqlancer.clickhouse.ast.ClickHouseBinaryLogicalOperation;
 import sqlancer.clickhouse.ast.ClickHouseColumnReference;
 import sqlancer.clickhouse.ast.ClickHouseExpression;
-import sqlancer.clickhouse.ast.ClickHouseExpression.ClickHouseJoin;
+import sqlancer.clickhouse.ast.ClickHouseJoin;
+import sqlancer.clickhouse.ast.ClickHouseJoinOnClause;
 import sqlancer.clickhouse.ast.ClickHouseSelect;
 import sqlancer.clickhouse.ast.ClickHouseTableReference;
 import sqlancer.clickhouse.ast.ClickHouseUnaryFunctionOperation;
@@ -102,33 +103,7 @@ public class ClickHouseExpressionGenerator
             return new ClickHouseAggregate(generateExpressionWithColumns(columns, remainingDepth - 1),
                     ClickHouseAggregate.ClickHouseAggregateFunction.getRandom());
         }
-        if (columns.isEmpty() || remainingDepth <= 2 && Randomly.getBooleanWithRatherLowProbability()) {
-            return generateConstant(null);
-        }
-
-        if (remainingDepth <= 2 || Randomly.getBooleanWithRatherLowProbability()) {
-            return columns.get((int) Randomly.getNotCachedInteger(0, columns.size() - 1));
-        }
-
-        ColumnLike expr = Randomly.fromOptions(ColumnLike.values());
-        switch (expr) {
-        case UNARY_PREFIX:
-            return new ClickHouseUnaryPrefixOperation(generateExpressionWithColumns(columns, remainingDepth - 1),
-                    ClickHouseUnaryPrefixOperator.MINUS);
-        case BINARY_ARITHMETIC:
-            return new ClickHouseBinaryArithmeticOperation(generateExpressionWithColumns(columns, remainingDepth - 1),
-                    generateExpressionWithColumns(columns, remainingDepth - 1),
-                    ClickHouseBinaryArithmeticOperation.ClickHouseBinaryArithmeticOperator.getRandom());
-        case UNARY_FUNCTION:
-            return new ClickHouseUnaryFunctionOperation(generateExpressionWithColumns(columns, remainingDepth - 1),
-                    ClickHouseUnaryFunctionOperation.ClickHouseUnaryFunctionOperator.getRandom());
-        case BINARY_FUNCTION:
-            return new ClickHouseBinaryFunctionOperation(generateExpressionWithColumns(columns, remainingDepth - 1),
-                    generateExpressionWithColumns(columns, remainingDepth - 1),
-                    ClickHouseBinaryFunctionOperation.ClickHouseBinaryFunctionOperator.getRandom());
-        default:
-            throw new AssertionError(expr);
-        }
+        return generateExpressionWithColumns(columns, remainingDepth);
     }
 
     public ClickHouseExpression generateExpressionWithExpression(List<ClickHouseExpression> expression,
@@ -227,13 +202,13 @@ public class ClickHouseExpressionGenerator
         }
     }
 
-    protected ClickHouseExpression.ClickHouseJoinOnClause generateJoinClause(ClickHouseTableReference leftTable,
+    protected ClickHouseJoinOnClause generateJoinClause(ClickHouseTableReference leftTable,
             ClickHouseTableReference rightTable) {
         List<ClickHouseColumnReference> leftColumns = leftTable.getColumnReferences();
         List<ClickHouseColumnReference> rightColumns = rightTable.getColumnReferences();
         ClickHouseExpression leftExpr = generateExpressionWithColumns(leftColumns, 2);
         ClickHouseExpression rightExpr = generateExpressionWithColumns(rightColumns, 2);
-        return new ClickHouseExpression.ClickHouseJoinOnClause(leftExpr, rightExpr);
+        return new ClickHouseJoinOnClause(leftExpr, rightExpr);
     }
 
     @Override
@@ -264,31 +239,33 @@ public class ClickHouseExpressionGenerator
         return ClickHouseLancerDataType.getRandom();
     }
 
-    public List<ClickHouseExpression.ClickHouseJoin> getRandomJoinClauses(ClickHouseTableReference left,
+    public List<ClickHouseJoin> getRandomJoinClauses(ClickHouseTableReference left,
             List<ClickHouseSchema.ClickHouseTable> tables) {
-        List<ClickHouseExpression.ClickHouseJoin> joinStatements = new ArrayList<>();
+        List<ClickHouseJoin> joinStatements = new ArrayList<>();
         if (!globalState.getDbmsSpecificOptions().testJoins) {
             return joinStatements;
         }
         List<ClickHouseTableReference> leftTables = new ArrayList<>();
         leftTables.add(left);
         if (Randomly.getBoolean() && !tables.isEmpty()) {
-            int nrJoinClauses = (int) Randomly.getNotCachedInteger(0, tables.size());
-            for (int i = 0; i < nrJoinClauses; i++) {
-                ClickHouseTableReference leftTable = leftTables
-                        .get((int) Randomly.getNotCachedInteger(0, leftTables.size() - 1));
-                ClickHouseTableReference rightTable = new ClickHouseTableReference(Randomly.fromList(tables),
-                        "right_" + i);
-                ClickHouseExpression.ClickHouseJoinOnClause joinClause = generateJoinClause(leftTable, rightTable);
-                ClickHouseExpression.ClickHouseJoin.JoinType options = Randomly
-                        .fromOptions(ClickHouseExpression.ClickHouseJoin.JoinType.values());
-                ClickHouseExpression.ClickHouseJoin j = new ClickHouseExpression.ClickHouseJoin(leftTable, rightTable,
-                        options, joinClause);
-                joinStatements.add(j);
-                leftTables.add(rightTable);
-            }
+            generateRandomJoins(tables, joinStatements, leftTables);
         }
         return joinStatements;
+    }
+
+    private void generateRandomJoins(List<ClickHouseTable> tables, List<ClickHouseJoin> joinStatements,
+            List<ClickHouseTableReference> leftTables) {
+        int numberOfJoinClauses = (int) Randomly.getNotCachedInteger(0, tables.size());
+        for (int i = 0; i < numberOfJoinClauses; i++) {
+            ClickHouseTableReference leftTable = leftTables
+                    .get((int) Randomly.getNotCachedInteger(0, leftTables.size() - 1));
+            ClickHouseTableReference rightTable = new ClickHouseTableReference(Randomly.fromList(tables), "right_" + i);
+            ClickHouseJoinOnClause joinClause = generateJoinClause(leftTable, rightTable);
+            ClickHouseJoin.JoinType options = Randomly.fromOptions(ClickHouseJoin.JoinType.getValues("CLICKHOUSE"));
+            ClickHouseJoin j = new ClickHouseJoin(leftTable, rightTable, options, joinClause);
+            joinStatements.add(j);
+            leftTables.add(rightTable);
+        }
     }
 
     @Override
@@ -379,27 +356,14 @@ public class ClickHouseExpressionGenerator
 
     @Override
     public List<ClickHouseJoin> getRandomJoinClauses() {
-        List<ClickHouseExpression.ClickHouseJoin> joinStatements = new ArrayList<>();
+        List<ClickHouseJoin> joinStatements = new ArrayList<>();
         if (globalState.getClickHouseOptions().testJoins && Randomly.getBoolean()) {
             return joinStatements;
         }
         List<ClickHouseTableReference> leftTables = new ArrayList<>();
         leftTables.add(new ClickHouseTableReference(tables.get(0), null));
         if (Randomly.getBoolean() && !tables.isEmpty()) {
-            int nrJoinClauses = (int) Randomly.getNotCachedInteger(0, tables.size());
-            for (int i = 0; i < nrJoinClauses; i++) {
-                ClickHouseTableReference leftTable = leftTables
-                        .get((int) Randomly.getNotCachedInteger(0, leftTables.size() - 1));
-                ClickHouseTableReference rightTable = new ClickHouseTableReference(Randomly.fromList(tables),
-                        "right_" + i);
-                ClickHouseExpression.ClickHouseJoinOnClause joinClause = generateJoinClause(leftTable, rightTable);
-                ClickHouseExpression.ClickHouseJoin.JoinType options = Randomly
-                        .fromOptions(ClickHouseExpression.ClickHouseJoin.JoinType.values());
-                ClickHouseExpression.ClickHouseJoin j = new ClickHouseExpression.ClickHouseJoin(leftTable, rightTable,
-                        options, joinClause);
-                joinStatements.add(j);
-                leftTables.add(rightTable);
-            }
+            generateRandomJoins(tables, joinStatements, leftTables);
         }
         return joinStatements;
     }

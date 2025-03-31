@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 
 import sqlancer.IgnoreMeException;
 import sqlancer.Randomly;
+import sqlancer.common.ast.JoinBase.JoinType;
 import sqlancer.common.gen.CERTGenerator;
 import sqlancer.common.gen.TLPWhereGenerator;
 import sqlancer.common.gen.UntypedExpressionGenerator;
@@ -33,7 +34,6 @@ import sqlancer.tidb.ast.TiDBExpression;
 import sqlancer.tidb.ast.TiDBFunctionCall;
 import sqlancer.tidb.ast.TiDBFunctionCall.TiDBFunction;
 import sqlancer.tidb.ast.TiDBJoin;
-import sqlancer.tidb.ast.TiDBJoin.JoinType;
 import sqlancer.tidb.ast.TiDBOrderingTerm;
 import sqlancer.tidb.ast.TiDBRegexOperation;
 import sqlancer.tidb.ast.TiDBRegexOperation.TiDBRegexOperator;
@@ -68,27 +68,7 @@ public class TiDBExpressionGenerator extends UntypedExpressionGenerator<TiDBExpr
     @Override
     public TiDBExpression generateConstant() {
         TiDBDataType type = TiDBDataType.getRandom();
-        if (Randomly.getBooleanWithRatherLowProbability()) {
-            return TiDBConstant.createNullConstant();
-        }
-        switch (type) {
-        case INT:
-            return TiDBConstant.createIntConstant(globalState.getRandomly().getInteger());
-        case BLOB:
-        case TEXT:
-            return TiDBConstant.createStringConstant(globalState.getRandomly().getString());
-        case BOOL:
-            return TiDBConstant.createBooleanConstant(Randomly.getBoolean());
-        case FLOATING:
-            return TiDBConstant.createFloatConstant(globalState.getRandomly().getDouble());
-        case CHAR:
-            return TiDBConstant.createStringConstant(globalState.getRandomly().getChar());
-        case DECIMAL:
-        case NUMERIC:
-            return TiDBConstant.createIntConstant(globalState.getRandomly().getInteger());
-        default:
-            throw new AssertionError();
-        }
+        return generateConstant(type);
     }
 
     @Override
@@ -294,9 +274,9 @@ public class TiDBExpressionGenerator extends UntypedExpressionGenerator<TiDBExpr
         if (join.getJoinType() == JoinType.LEFT || join.getJoinType() == JoinType.RIGHT) { // No invarient relation
                                                                                            // between LEFT and RIGHT
                                                                                            // join
-            newJoinType = JoinType.getRandomExcept(JoinType.NATURAL, JoinType.LEFT, JoinType.RIGHT);
+            newJoinType = JoinType.getRandomExcept("TIDB", JoinType.NATURAL, JoinType.LEFT, JoinType.RIGHT);
         } else {
-            newJoinType = JoinType.getRandomExcept(JoinType.NATURAL, join.getJoinType());
+            newJoinType = JoinType.getRandomExcept("TIDB", JoinType.NATURAL, join.getJoinType());
         }
         assert newJoinType != JoinType.NATURAL; // Natural Join is not supported for CERT
         boolean increase = join.getJoinType().ordinal() < newJoinType.ordinal();
@@ -315,22 +295,6 @@ public class TiDBExpressionGenerator extends UntypedExpressionGenerator<TiDBExpr
             select.setWhereClause(generateExpression());
         }
         return increase;
-    }
-
-    boolean mutateHaving(TiDBSelect select) {
-        if (select.getGroupByExpressions().size() == 0) {
-            select.setGroupByExpressions(select.getFetchColumns());
-            select.setHavingClause(generateExpression());
-            return false;
-        } else {
-            if (select.getHavingClause() == null) {
-                select.setHavingClause(generateExpression());
-                return false;
-            } else {
-                select.setHavingClause(null);
-                return true;
-            }
-        }
     }
 
     boolean mutateAnd(TiDBSelect select) {

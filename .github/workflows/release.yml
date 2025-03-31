@@ -35,7 +35,7 @@ jobs:
           distribution: 'temurin'
           java-version: '11'
       - name: Build SQLancer
-        run: mvn -B package -DskipTests=true
+        run: mvn -B package -P all -DskipTests=true
       - name: Push to Docker Hub
         uses: docker/build-push-action@v1
         with:
