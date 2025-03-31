@@ -574,13 +574,6 @@ public abstract class YSQLConstant implements YSQLExpression {
 
         @Override
         public String getTextRepresentation() {
-            /*
-             * StringBuilder sb = new StringBuilder(); sb.append("'"); if (leftIsInclusive) { sb.append("["); } else {
-             * sb.append("("); } sb.append(left); sb.append(","); sb.append(right); if (rightIsInclusive) {
-             * sb.append("]"); } else { sb.append(")"); } sb.append("'"); sb.append("::int4range"); return
-             * sb.toString();
-             *
-             */
             return SQLConstant.getTextRepresentationRange(left, leftIsInclusive, right, rightIsInclusive);
         }
 
