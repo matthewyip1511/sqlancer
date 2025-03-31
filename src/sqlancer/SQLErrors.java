@@ -4,6 +4,11 @@ import java.util.ArrayList;
 
 public final class SQLErrors {
 
+    private SQLErrors() {
+
+    }
+
+    @SuppressWarnings("PMD.LooseCoupling")
     public static ArrayList<String> getFunctionErrorsHelper() {
         ArrayList<String> errors = new ArrayList<>();
 
