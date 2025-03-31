@@ -19,7 +19,8 @@ public final class SQLCast {
 
     }
 
-    public static <T> T castToIntText(String asString, Function<Long, T> createConstant) {
+    public static <T> T castToIntText(String string, Function<Long, T> createConstant) {
+        String asString = string;
         while (startsWithWhitespace(asString)) {
             asString = asString.substring(1);
         }
@@ -51,8 +52,9 @@ public final class SQLCast {
         return createConstant.apply(0L);
     }
 
-    public static <T> T convertInternal(String asString, boolean convertRealToInt, boolean noNumIsRealZero,
+    public static <T> T convertInternal(String string, boolean convertRealToInt, boolean noNumIsRealZero,
             boolean convertIntToReal, Function<Long, T> createConstant1, Function<Double, T> createConstant2) {
+        String asString = string;
         while (startsWithWhitespace(asString)) {
             asString = asString.substring(1);
         }
