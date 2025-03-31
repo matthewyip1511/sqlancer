@@ -148,28 +148,29 @@ public enum PrestoAggregateFunction implements PrestoFunction {
     // Returns the value of x associated with the minimum value of y over all input values.
     MIN_BY("min_by", null) {
         @Override
-        public boolean isCompatibleWithReturnType(PrestoCompositeDataType returnType) {
-            return true;
-        }
-
-        @Override
         public PrestoDataType[] getArgumentTypes(PrestoCompositeDataType returnType) {
             return new PrestoDataType[] { returnType.getPrimitiveDataType(),
                     Randomly.fromList(PrestoDataType.getOrderableTypes()) };
         }
 
         @Override
-        public PrestoDataType getReturnType() {
-            return Randomly.fromList(PrestoDataType.getOrderableTypes());
-        }
-
-        @Override
         public List<PrestoExpression> getArgumentsForReturnType(PrestoTypedExpressionGenerator gen, int depth,
-                PrestoCompositeDataType returnType, boolean orderable) {
+                                                                PrestoCompositeDataType returnType, boolean orderable) {
             PrestoCompositeDataType returnTypeLocal = Objects.requireNonNullElseGet(returnType,
                     () -> PrestoCompositeDataType.fromDataType(getReturnType()));
             return super.getArgumentsForReturnType(gen, depth, returnTypeLocal, orderable);
         }
+
+        @Override
+        public PrestoDataType getReturnType() {
+            return Randomly.fromList(PrestoDataType.getOrderableTypes());
+        }
+        
+        @Override
+        public boolean isCompatibleWithReturnType(PrestoCompositeDataType returnType) {
+            return true;
+        }
+
 
     },
     // TODO:

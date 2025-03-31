@@ -440,7 +440,7 @@ public abstract class MaterializeConstant implements MaterializeExpression {
 
         @Override
         public String getTextRepresentation() {
-            return SQLConstant.getTextRepresentationHelper(val);
+            return SQLConstant.getTextRepresentationNumeric(val);
         }
 
         @Override
@@ -460,7 +460,7 @@ public abstract class MaterializeConstant implements MaterializeExpression {
 
         @Override
         public String getTextRepresentation() {
-            return SQLConstant.getTextRepresentationHelper(val);
+            return SQLConstant.getTextRepresentationNumeric(val);
         }
 
         @Override

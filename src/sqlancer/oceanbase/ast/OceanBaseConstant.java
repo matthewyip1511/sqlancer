@@ -215,7 +215,7 @@ public abstract class OceanBaseConstant implements OceanBaseExpression {
 
         @Override
         public String getTextRepresentation() {
-            return SQLConstant.getTextRepresentationHelper(value, singleQuotes);
+            return SQLConstant.getTextRepresentationText(value, singleQuotes);
         }
 
         @Override

@@ -104,7 +104,7 @@ public abstract class MySQLConstant implements MySQLExpression {
 
         @Override
         public String getTextRepresentation() {
-            return SQLConstant.getTextRepresentationHelper(value, singleQuotes);
+            return SQLConstant.getTextRepresentationText(value, singleQuotes);
         }
 
         @Override

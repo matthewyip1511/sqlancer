@@ -460,7 +460,7 @@ public abstract class PostgresConstant implements PostgresExpression {
 
         @Override
         public String getTextRepresentation() {
-            return SQLConstant.getTextRepresentationHelper(val);
+            return SQLConstant.getTextRepresentationNumeric(val);
         }
 
         @Override
@@ -480,7 +480,7 @@ public abstract class PostgresConstant implements PostgresExpression {
 
         @Override
         public String getTextRepresentation() {
-            return SQLConstant.getTextRepresentationHelper(val);
+            return SQLConstant.getTextRepresentationNumeric(val);
         }
 
         @Override
@@ -526,6 +526,7 @@ public abstract class PostgresConstant implements PostgresExpression {
 
         @Override
         public String getTextRepresentation() {
+            /*
             StringBuilder sb = new StringBuilder();
             sb.append("'");
             if (leftIsInclusive) {
@@ -544,6 +545,9 @@ public abstract class PostgresConstant implements PostgresExpression {
             sb.append("'");
             sb.append("::int4range");
             return sb.toString();
+
+             */
+            return SQLConstant.getTextRepresentationRange(left, leftIsInclusive, right, rightIsInclusive);
         }
 
         @Override

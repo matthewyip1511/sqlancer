@@ -40,7 +40,7 @@ public final class SQLConstant {
         return false;
     }
 
-    public static String getTextRepresentationHelper(String value, boolean singleQuotes) {
+    public static String getTextRepresentationText(String value, boolean singleQuotes) {
         StringBuilder sb = new StringBuilder();
         String quotes = singleQuotes ? "'" : "\"";
         sb.append(quotes);
@@ -50,12 +50,33 @@ public final class SQLConstant {
         return sb.toString();
     }
 
-    public static String getTextRepresentationHelper(double val) {
+    public static String getTextRepresentationNumeric(double val) {
         if (Double.isFinite(val)) {
             return String.valueOf(val);
         } else {
             return "'" + val + "'";
         }
+    }
+
+    public static String getTextRepresentationRange(long left, boolean leftIsInclusive, long right, boolean rightIsInclusive) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("'");
+        if (leftIsInclusive) {
+            sb.append("[");
+        } else {
+            sb.append("(");
+        }
+        sb.append(left);
+        sb.append(",");
+        sb.append(right);
+        if (rightIsInclusive) {
+            sb.append("]");
+        } else {
+            sb.append(")");
+        }
+        sb.append("'");
+        sb.append("::int4range");
+        return sb.toString();
     }
 
     public static Expression<?> castAsHelper(String v, int limit, Enum<?> type) {
