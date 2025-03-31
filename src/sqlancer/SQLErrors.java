@@ -8,8 +8,7 @@ public final class SQLErrors {
 
     }
 
-    @SuppressWarnings("PMD.LooseCoupling")
-    public static ArrayList<String> getFunctionErrorsHelper() {
+    public static ArrayList<String> getFunctionErrorsHelper() { // NOPMD
         ArrayList<String> errors = new ArrayList<>();
 
         errors.add("SUBSTRING cannot handle negative lengths");
