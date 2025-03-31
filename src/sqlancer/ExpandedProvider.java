@@ -1,6 +1,10 @@
 package sqlancer;
 
+import sqlancer.common.query.SQLQueryAdapter;
+import sqlancer.common.query.SQLancerResultSet;
 import sqlancer.common.schema.AbstractSchema;
+
+import java.io.IOException;
 
 public abstract class ExpandedProvider<G extends SQLGlobalState<O, ? extends AbstractSchema<G, ?>>, O extends DBMSSpecificOptions<? extends OracleFactory<G>>>
         extends SQLProviderAdapter<G, O> {
@@ -86,5 +90,36 @@ public abstract class ExpandedProvider<G extends SQLGlobalState<O, ? extends Abs
             throw new AssertionError(action);
         }
         return nrPerformed;
+    }
+
+    protected CommonExplainComponents prepareExplainQuery(String selectStr, String explainPrefix, G globalState) throws Exception {
+        String queryPlan = "";
+        String explainQuery = explainPrefix + selectStr;
+        if (globalState.getOptions().logEachSelect()) {
+            globalState.getLogger().writeCurrent(explainQuery);
+            try {
+                globalState.getLogger().getCurrentFileWriter().flush();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        SQLQueryAdapter q = new SQLQueryAdapter(explainQuery);
+        boolean afterProjection = false;
+        SQLancerResultSet rs = q.executeAndGet(globalState);
+        return new CommonExplainComponents(queryPlan, explainQuery, afterProjection, rs);
+    }
+
+    protected static class CommonExplainComponents {
+        public String queryPlan;
+        public String explainQuery;
+        public boolean afterProjection;
+        public SQLancerResultSet rs;
+
+        public CommonExplainComponents(String queryPlan, String explainQuery, boolean afterProjection, SQLancerResultSet rs) {
+            this.queryPlan = queryPlan;
+            this.explainQuery = explainQuery;
+            this.afterProjection = afterProjection;
+            this.rs = rs;
+        }
     }
 }
