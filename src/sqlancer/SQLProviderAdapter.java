@@ -46,10 +46,7 @@ public abstract class SQLProviderAdapter<G extends SQLGlobalState<O, ? extends A
         }
     }
 
-    protected SQLConnection createDatabaseCommon(
-            G globalState,
-            String defaultHost,
-            int defaultPort,
+    protected SQLConnection createDatabaseCommon(G globalState, String defaultHost, int defaultPort,
             boolean handleEmptyPassword) throws SQLException {
 
         String username = globalState.getOptions().getUserName();

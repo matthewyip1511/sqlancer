@@ -111,12 +111,7 @@ public class DorisProvider extends SQLProviderAdapter<DorisGlobalState, DorisOpt
 
     @Override
     public SQLConnection createDatabase(DorisGlobalState globalState) throws SQLException {
-        return createDatabaseCommon(
-                globalState,
-                DorisOptions.DEFAULT_HOST,
-                DorisOptions.DEFAULT_PORT,
-                true
-        );
+        return createDatabaseCommon(globalState, DorisOptions.DEFAULT_HOST, DorisOptions.DEFAULT_PORT, true);
     }
 
     @Override

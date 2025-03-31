@@ -169,12 +169,7 @@ public class MySQLProvider extends SQLProviderAdapter<MySQLGlobalState, MySQLOpt
 
     @Override
     public SQLConnection createDatabase(MySQLGlobalState globalState) throws SQLException {
-        return createDatabaseCommon(
-                globalState,
-                MySQLOptions.DEFAULT_HOST,
-                MySQLOptions.DEFAULT_PORT,
-                false
-        );
+        return createDatabaseCommon(globalState, MySQLOptions.DEFAULT_HOST, MySQLOptions.DEFAULT_PORT, false);
     }
 
     @Override
