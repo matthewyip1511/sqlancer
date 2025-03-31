@@ -1,12 +1,13 @@
 package sqlancer;
 
+import java.util.List;
+import java.util.function.Function;
+
 import sqlancer.common.DBMSCommon;
 import sqlancer.common.ast.newast.Expression;
 import sqlancer.common.query.ExpectedErrors;
 import sqlancer.common.schema.AbstractRelationalTable;
 import sqlancer.common.schema.TableIndex;
-import java.util.List;
-import java.util.function.Function;
 
 public abstract class SQLIndexGenerator {
 
