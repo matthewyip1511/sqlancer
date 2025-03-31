@@ -8,12 +8,16 @@ import java.util.regex.Pattern;
 
 import com.clickhouse.client.ClickHouseDataType;
 
+import sqlancer.SQLCast;
 import sqlancer.clickhouse.ast.constant.ClickHouseCreateConstant;
 
 public final class ClickHouseCast implements ClickHouseExpression {
 
+    /*
     private static final double MAX_INT_FOR_WHICH_CONVERSION_TO_INT_IS_TRIED = Math.pow(2, 51 - 1) - 1;
     private static final double MIN_INT_FOR_WHICH_CONVERSION_TO_INT_IS_TRIED = -Math.pow(2, 51 - 1);
+
+     */
 
     private static final byte FILE_SEPARATOR = 0x1c;
     private static final byte GROUP_SEPARATOR = 0x1d;
@@ -59,6 +63,7 @@ public final class ClickHouseCast implements ClickHouseExpression {
             return ClickHouseCreateConstant.createInt32Constant((long) cons.asDouble());
         case String:
             String asString = cons.asString();
+            /*
             while (startsWithWhitespace(asString)) {
                 asString = asString.substring(1);
             }
@@ -88,6 +93,8 @@ public final class ClickHouseCast implements ClickHouseExpression {
                 }
             }
             return ClickHouseCreateConstant.createInt32Constant(0);
+             */
+            return SQLCast.castToIntText(asString, ClickHouseCreateConstant::createInt32Constant);
         default:
             throw new AssertionError();
         }
@@ -128,6 +135,7 @@ public final class ClickHouseCast implements ClickHouseExpression {
             return value;
         case String:
             String asString = value.asString();
+            /*
             while (startsWithWhitespace(asString)) {
                 asString = asString.substring(1);
             }
@@ -165,11 +173,14 @@ public final class ClickHouseCast implements ClickHouseExpression {
             } else {
                 return ClickHouseCreateConstant.createInt32Constant(0);
             }
+
+             */
+            return SQLCast.convertInternal(asString, convertRealToInt, noNumIsRealZero, convertIntToReal, ClickHouseCreateConstant::createInt32Constant, ClickHouseCreateConstant::createFloat64Constant);
         default:
             throw new AssertionError(value);
         }
     }
-
+/*
     private static boolean startsWithWhitespace(String asString) {
         if (asString.isEmpty()) {
             return false;
@@ -187,6 +198,7 @@ public final class ClickHouseCast implements ClickHouseExpression {
             return false;
         }
     }
+
 
     private static boolean unprintAbleCharThatLetsBecomeNumberZero(String s) {
         // non-printable characters are ignored by Double.valueOf
@@ -214,6 +226,8 @@ public final class ClickHouseCast implements ClickHouseExpression {
         }
         return false;
     }
+    
+ */
 
     public static ClickHouseConstant castToText(ClickHouseConstant cons) {
         if (cons.getDataType() == ClickHouseDataType.String) {

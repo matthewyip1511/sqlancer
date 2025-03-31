@@ -7,6 +7,8 @@ import java.util.Optional;
 import java.util.regex.Pattern;
 
 import sqlancer.IgnoreMeException;
+import sqlancer.SQLCast;
+import sqlancer.clickhouse.ast.constant.ClickHouseCreateConstant;
 import sqlancer.sqlite3.schema.SQLite3DataType;
 
 public final class SQLite3Cast implements SQLite3Expression {
@@ -72,6 +74,7 @@ public final class SQLite3Cast implements SQLite3Expression {
             return SQLite3Constant.createIntConstant((long) cons.asDouble());
         case TEXT:
             String asString = cons.asString();
+            /*
             while (startsWithWhitespace(asString)) {
                 asString = asString.substring(1);
             }
@@ -101,6 +104,9 @@ public final class SQLite3Cast implements SQLite3Expression {
                 }
             }
             return SQLite3Constant.createIntConstant(0);
+
+             */
+            return SQLCast.castToIntText(asString, SQLite3Constant::createIntConstant);
         default:
             throw new AssertionError();
         }
@@ -148,6 +154,7 @@ public final class SQLite3Cast implements SQLite3Expression {
             return value;
         case TEXT:
             String asString = value.asString();
+            /*
             while (startsWithWhitespace(asString)) {
                 asString = asString.substring(1);
             }
@@ -185,6 +192,9 @@ public final class SQLite3Cast implements SQLite3Expression {
             } else {
                 return SQLite3Constant.createIntConstant(0);
             }
+
+             */
+            return SQLCast.convertInternal(asString,convertRealToInt, noNumIsRealZero, convertIntToReal, SQLite3Constant::createIntConstant, SQLite3Constant::createRealConstant);
         default:
             throw new AssertionError(value);
         }
