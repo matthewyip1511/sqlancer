@@ -5,7 +5,6 @@ import java.util.stream.Collectors;
 
 import sqlancer.Randomly;
 import sqlancer.SQLIndexGenerator;
-import sqlancer.common.DBMSCommon;
 import sqlancer.common.query.ExpectedErrors;
 import sqlancer.common.query.SQLQueryAdapter;
 import sqlancer.common.schema.AbstractTableColumn;
@@ -13,7 +12,6 @@ import sqlancer.yugabyte.ysql.YSQLErrors;
 import sqlancer.yugabyte.ysql.YSQLGlobalState;
 import sqlancer.yugabyte.ysql.YSQLSchema.YSQLColumn;
 import sqlancer.yugabyte.ysql.YSQLSchema.YSQLDataType;
-import sqlancer.yugabyte.ysql.YSQLSchema.YSQLIndex;
 import sqlancer.yugabyte.ysql.YSQLSchema.YSQLTable;
 import sqlancer.yugabyte.ysql.YSQLVisitor;
 import sqlancer.yugabyte.ysql.ast.YSQLExpression;
@@ -26,65 +24,13 @@ public final class YSQLIndexGenerator extends SQLIndexGenerator {
     public static SQLQueryAdapter generate(YSQLGlobalState globalState) {
         ExpectedErrors errors = SQLIndexGenerator.generateErrors();
         StringBuilder sb = new StringBuilder();
-        sb.append("CREATE");
-        if (Randomly.getBoolean()) {
-            sb.append(" UNIQUE");
-        }
-        sb.append(" INDEX ");
         YSQLTable randomTable = globalState.getSchema().getRandomTable(t -> !t.isView()); // TODO: materialized
-        // views
-        String indexName = getNewIndexName(randomTable);
-        sb.append(indexName);
-        sb.append(" ON ");
-        if (Randomly.getBoolean()) {
-            sb.append("ONLY ");
-        }
-        sb.append(randomTable.getName());
-        IndexType method;
-        if (Randomly.getBoolean()) {
-            sb.append(" USING ");
-            method = Randomly.fromOptions(IndexType.values());
-            sb.append(method);
-        } else {
-            method = IndexType.BTREE;
-        }
 
-        sb.append("(");
-        if (method == IndexType.HASH) {
-            sb.append(randomTable.getRandomColumn().getName());
-        } else {
-            for (int i = 0; i < Randomly.smallNumber() + 1; i++) {
-                if (i != 0) {
-                    sb.append(", ");
-                }
-                if (Randomly.getBoolean()) {
-                    sb.append(randomTable.getRandomColumn().getName());
-                } else {
-                    sb.append("(");
-                    YSQLExpression expression = YSQLExpressionGenerator.generateExpression(globalState,
-                            randomTable.getColumns());
-                    sb.append(YSQLVisitor.asString(expression));
-                    sb.append(")");
-                }
+        IndexType method = SQLIndexGenerator.generateHelper(
+                globalState, errors, sb, randomTable, (YSQLGlobalState state,
+                        List<YSQLColumn> columns) -> YSQLExpressionGenerator.generateExpression(state, columns),
+                YSQLVisitor::asString);
 
-                if (Randomly.getBooleanWithRatherLowProbability()) {
-                    sb.append(" ");
-                    sb.append(globalState.getRandomOpclass());
-                    errors.add("does not accept");
-                    errors.add("does not exist for access method");
-                }
-                if (Randomly.getBoolean()) {
-                    sb.append(" ");
-                    sb.append(Randomly.fromOptions("ASC", "DESC"));
-                }
-                if (Randomly.getBooleanWithRatherLowProbability()) {
-                    sb.append(" NULLS ");
-                    sb.append(Randomly.fromOptions("FIRST", "LAST"));
-                }
-            }
-        }
-
-        sb.append(")");
         if (Randomly.getBoolean() && method != IndexType.HASH) {
             sb.append(" INCLUDE(");
             List<YSQLColumn> columns = randomTable.getRandomNonEmptyColumnSubset();
@@ -113,16 +59,5 @@ public final class YSQLIndexGenerator extends SQLIndexGenerator {
         errors.add("cannot cast");
         YSQLErrors.addCommonExpressionErrors(errors);
         return new SQLQueryAdapter(sb.toString(), errors);
-    }
-
-    private static String getNewIndexName(YSQLTable randomTable) {
-        List<YSQLIndex> indexes = randomTable.getIndexes();
-        int indexI = 0;
-        while (true) {
-            String indexName = DBMSCommon.createIndexName(indexI++);
-            if (indexes.stream().noneMatch(i -> i.getIndexName().equals(indexName))) {
-                return indexName;
-            }
-        }
     }
 }

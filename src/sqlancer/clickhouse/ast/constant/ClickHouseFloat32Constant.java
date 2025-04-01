@@ -2,6 +2,7 @@ package sqlancer.clickhouse.ast.constant;
 
 import com.clickhouse.client.ClickHouseDataType;
 
+import sqlancer.SQLConstantUtils;
 import sqlancer.clickhouse.ast.ClickHouseNumericConstant;
 
 public class ClickHouseFloat32Constant extends ClickHouseNumericConstant<Float> {
@@ -12,12 +13,7 @@ public class ClickHouseFloat32Constant extends ClickHouseNumericConstant<Float> 
 
     @Override
     public String toString() {
-        if (value == Double.POSITIVE_INFINITY) {
-            return "'+Inf'";
-        } else if (value == Double.NEGATIVE_INFINITY) {
-            return "'-Inf'";
-        }
-        return String.valueOf(value);
+        return SQLConstantUtils.clickhouseFloatToString(value);
     }
 
     @Override

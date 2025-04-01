@@ -1,5 +1,7 @@
 package sqlancer.tidb.ast;
 
+import sqlancer.SQLConstantUtils;
+
 public class TiDBConstant implements TiDBExpression {
 
     private TiDBConstant() {
@@ -47,12 +49,7 @@ public class TiDBConstant implements TiDBExpression {
 
         @Override
         public String toString() {
-            if (value == Double.POSITIVE_INFINITY) {
-                return "'+Inf'";
-            } else if (value == Double.NEGATIVE_INFINITY) {
-                return "'-Inf'";
-            }
-            return String.valueOf(value);
+            return SQLConstantUtils.duckTiDBYCQLHelper(value);
         }
 
     }

@@ -33,10 +33,6 @@ public final class OceanBaseErrors {
         return errors;
     }
 
-    public static void addExpressionErrors(ExpectedErrors errors) {
-        errors.addAll(getExpressionErrors());
-    }
-
     public static List<String> getInsertErrors() {
         ArrayList<String> errors = new ArrayList<>();
 
@@ -69,5 +65,9 @@ public final class OceanBaseErrors {
 
     public static void addInsertErrors(ExpectedErrors errors) {
         errors.addAll(getInsertErrors());
+    }
+
+    public static void addExpressionErrors(ExpectedErrors errors) {
+        errors.addAll(getExpressionErrors());
     }
 }

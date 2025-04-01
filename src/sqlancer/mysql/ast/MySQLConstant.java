@@ -4,6 +4,7 @@ import java.math.BigInteger;
 
 import sqlancer.IgnoreMeException;
 import sqlancer.Randomly;
+import sqlancer.SQLConstantUtils;
 import sqlancer.mysql.MySQLSchema.MySQLDataType;
 import sqlancer.mysql.ast.MySQLCastOperation.CastType;
 
@@ -97,28 +98,13 @@ public abstract class MySQLConstant implements MySQLExpression {
         @Override
         public boolean asBooleanNotNull() {
             // TODO implement as cast
-            for (int i = value.length(); i >= 0; i--) {
-                try {
-                    String substring = value.substring(0, i);
-                    Double val = Double.valueOf(substring);
-                    return val != 0 && !Double.isNaN(val);
-                } catch (NumberFormatException e) {
-                    // ignore
-                }
-            }
-            return false;
+            return SQLConstantUtils.asBooleanNotNullConstantHelper(value, 0);
             // return castAs(CastType.SIGNED).getInt() != 0;
         }
 
         @Override
         public String getTextRepresentation() {
-            StringBuilder sb = new StringBuilder();
-            String quotes = singleQuotes ? "'" : "\"";
-            sb.append(quotes);
-            String text = value.replace(quotes, quotes + quotes).replace("\\", "\\\\");
-            sb.append(text);
-            sb.append(quotes);
-            return sb.toString();
+            return SQLConstantUtils.getTextRepresentationText(value, singleQuotes);
         }
 
         @Override
@@ -151,28 +137,7 @@ public abstract class MySQLConstant implements MySQLExpression {
 
         @Override
         public MySQLConstant castAs(CastType type) {
-            if (type == CastType.SIGNED || type == CastType.UNSIGNED) {
-                String value = this.value;
-                while (value.startsWith(" ") || value.startsWith("\t") || value.startsWith("\n")) {
-                    if (value.startsWith("\n")) {
-                        /* workaround for https://bugs.mysql.com/bug.php?id=96294 */
-                        throw new IgnoreMeException();
-                    }
-                    value = value.substring(1);
-                }
-                for (int i = value.length(); i >= 0; i--) {
-                    try {
-                        String substring = value.substring(0, i);
-                        long val = Long.parseLong(substring);
-                        return MySQLConstant.createIntConstant(val, type == CastType.SIGNED);
-                    } catch (NumberFormatException e) {
-                        // ignore
-                    }
-                }
-                return MySQLConstant.createIntConstant(0, type == CastType.SIGNED);
-            } else {
-                throw new AssertionError();
-            }
+            return (MySQLConstant) SQLConstantUtils.castAsHelper(this.value, 0, type);
         }
 
         @Override
@@ -336,6 +301,11 @@ public abstract class MySQLConstant implements MySQLExpression {
     public static class MySQLNullConstant extends MySQLConstant {
 
         @Override
+        public String getTextRepresentation() {
+            return "NULL";
+        }
+
+        @Override
         public boolean isNull() {
             return true;
         }
@@ -343,11 +313,6 @@ public abstract class MySQLConstant implements MySQLExpression {
         @Override
         public boolean asBooleanNotNull() {
             throw new UnsupportedOperationException(this.toString());
-        }
-
-        @Override
-        public String getTextRepresentation() {
-            return "NULL";
         }
 
         @Override

@@ -3,6 +3,7 @@ package sqlancer.presto;
 import java.util.ArrayList;
 import java.util.List;
 
+import sqlancer.SQLErrorsUtils;
 import sqlancer.common.query.ExpectedErrors;
 
 public final class PrestoErrors {
@@ -109,32 +110,30 @@ public final class PrestoErrors {
     }
 
     private static List<String> getFunctionErrors() {
-        ArrayList<String> errors = new ArrayList<>();
+        ArrayList<String> errors = SQLErrorsUtils.getFunctionErrorsHelper();
 
-        errors.add("SUBSTRING cannot handle negative lengths");
-        errors.add("is undefined outside [-1,1]"); // ACOS etc
-        errors.add("invalid type specifier"); // PRINTF
-        errors.add("argument index out of range"); // PRINTF
-        errors.add("invalid format string"); // PRINTF
-        errors.add("number is too big"); // PRINTF
-        errors.add("Like pattern must not end with escape character!"); // LIKE
-        errors.add("Could not choose a best candidate function for the function call \"date_part"); // date_part
-        errors.add("extract specifier"); // date_part
-        errors.add("not recognized"); // date_part
-        errors.add("not supported"); // date_part
-        errors.add("Failed to cast");
-        errors.add("Conversion Error");
-        errors.add("Could not cast value");
-        errors.add("Insufficient padding in RPAD"); // RPAD
-        errors.add("Could not choose a best candidate function for the function call"); // monthname
-        errors.add("expected a numeric precision field"); // ROUND
-        errors.add("with non-constant precision is not supported"); // ROUND
         errors.add("Unexpected parameters");
         errors.add("not registered");
         errors.add("Expected: least(E) E:orderable");
         errors.add("Expected: greatest(E) E:orderable");
         errors.add("Expected: max_by(V, K) K:orderable, V, max_by(V, K, bigint) V, K:orderable");
         errors.add("Expected: min_by(V, K) K:orderable, V, min_by(V, K, bigint) V, K:orderable");
+        return errors;
+    }
+
+    public static void addGroupByErrors(ExpectedErrors errors) {
+        errors.addAll(getGroupByErrors());
+    }
+
+    public static void addInsertErrors(ExpectedErrors errors) {
+        errors.addAll(getInsertErrors());
+    }
+
+    public static List<String> getGroupByErrors() {
+        ArrayList<String> errors = new ArrayList<>();
+
+        errors.add("must be an aggregate expression or appear in GROUP BY clause");
+
         return errors;
     }
 
@@ -168,21 +167,4 @@ public final class PrestoErrors {
 
         return errors;
     }
-
-    public static void addInsertErrors(ExpectedErrors errors) {
-        errors.addAll(getInsertErrors());
-    }
-
-    public static List<String> getGroupByErrors() {
-        ArrayList<String> errors = new ArrayList<>();
-
-        errors.add("must be an aggregate expression or appear in GROUP BY clause");
-
-        return errors;
-    }
-
-    public static void addGroupByErrors(ExpectedErrors errors) {
-        errors.addAll(getGroupByErrors());
-    }
-
 }

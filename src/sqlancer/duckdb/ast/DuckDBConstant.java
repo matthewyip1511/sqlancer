@@ -3,6 +3,8 @@ package sqlancer.duckdb.ast;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 
+import sqlancer.SQLConstantUtils;
+
 public class DuckDBConstant implements DuckDBExpression {
 
     private DuckDBConstant() {
@@ -50,14 +52,8 @@ public class DuckDBConstant implements DuckDBExpression {
 
         @Override
         public String toString() {
-            if (value == Double.POSITIVE_INFINITY) {
-                return "'+Inf'";
-            } else if (value == Double.NEGATIVE_INFINITY) {
-                return "'-Inf'";
-            }
-            return String.valueOf(value);
+            return SQLConstantUtils.duckTiDBYCQLHelper(value);
         }
-
     }
 
     public static class DuckDBTextConstant extends DuckDBConstant {

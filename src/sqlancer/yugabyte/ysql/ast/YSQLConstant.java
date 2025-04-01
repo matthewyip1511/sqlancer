@@ -3,6 +3,7 @@ package sqlancer.yugabyte.ysql.ast;
 import java.math.BigDecimal;
 
 import sqlancer.IgnoreMeException;
+import sqlancer.SQLConstantUtils;
 import sqlancer.yugabyte.ysql.YSQLSchema.YSQLDataType;
 
 public abstract class YSQLConstant implements YSQLExpression {
@@ -507,11 +508,7 @@ public abstract class YSQLConstant implements YSQLExpression {
 
         @Override
         public String getTextRepresentation() {
-            if (Double.isFinite(val)) {
-                return String.valueOf(val);
-            } else {
-                return "'" + val + "'";
-            }
+            return SQLConstantUtils.getTextRepresentationNumeric(val);
         }
 
         @Override
@@ -531,11 +528,7 @@ public abstract class YSQLConstant implements YSQLExpression {
 
         @Override
         public String getTextRepresentation() {
-            if (Double.isFinite(val)) {
-                return String.valueOf(val);
-            } else {
-                return "'" + val + "'";
-            }
+            return SQLConstantUtils.getTextRepresentationNumeric(val);
         }
 
         @Override
@@ -581,24 +574,7 @@ public abstract class YSQLConstant implements YSQLExpression {
 
         @Override
         public String getTextRepresentation() {
-            StringBuilder sb = new StringBuilder();
-            sb.append("'");
-            if (leftIsInclusive) {
-                sb.append("[");
-            } else {
-                sb.append("(");
-            }
-            sb.append(left);
-            sb.append(",");
-            sb.append(right);
-            if (rightIsInclusive) {
-                sb.append("]");
-            } else {
-                sb.append(")");
-            }
-            sb.append("'");
-            sb.append("::int4range");
-            return sb.toString();
+            return SQLConstantUtils.getTextRepresentationRange(left, leftIsInclusive, right, rightIsInclusive);
         }
 
         @Override

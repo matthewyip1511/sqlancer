@@ -1,6 +1,13 @@
 package sqlancer;
 
+import java.util.List;
+import java.util.function.Function;
+
+import sqlancer.common.DBMSCommon;
+import sqlancer.common.ast.newast.Expression;
 import sqlancer.common.query.ExpectedErrors;
+import sqlancer.common.schema.AbstractRelationalTable;
+import sqlancer.common.schema.TableIndex;
 
 public abstract class SQLIndexGenerator {
 
@@ -43,4 +50,79 @@ public abstract class SQLIndexGenerator {
 
     }
 
+    protected static <G extends ExpandedGlobalState<?, ?>, T extends AbstractRelationalTable<?, ?, ?>, C, E extends Expression<?>> IndexType generateHelper(
+            G globalState, ExpectedErrors errors, StringBuilder sb, T randomTable,
+            SQLExpressionGenerator<G, C, E> expressionGenerator, Function<E, String> asString) {
+        sb.append("CREATE");
+        if (Randomly.getBoolean()) {
+            sb.append(" UNIQUE");
+        }
+        sb.append(" INDEX ");
+        // views
+        String indexName = getNewIndexName(randomTable);
+        sb.append(indexName);
+        sb.append(" ON ");
+        if (Randomly.getBoolean()) {
+            sb.append("ONLY ");
+        }
+        sb.append(randomTable.getName());
+        IndexType method;
+        if (Randomly.getBoolean()) {
+            sb.append(" USING ");
+            method = Randomly.fromOptions(IndexType.values());
+            sb.append(method);
+        } else {
+            method = IndexType.BTREE;
+        }
+
+        sb.append("(");
+        if (method == IndexType.HASH) {
+            sb.append(randomTable.getRandomColumn().getName());
+        } else {
+            for (int i = 0; i < Randomly.smallNumber() + 1; i++) {
+                if (i != 0) {
+                    sb.append(", ");
+                }
+                if (Randomly.getBoolean()) {
+                    sb.append(randomTable.getRandomColumn().getName());
+                } else {
+                    sb.append("(");
+                    @SuppressWarnings("unchecked")
+                    E expression = expressionGenerator.generate(globalState, (List<C>) randomTable.getColumns());
+                    sb.append(asString.apply(expression));
+                    sb.append(")");
+                }
+
+                if (Randomly.getBooleanWithRatherLowProbability()) {
+                    sb.append(" ");
+                    sb.append(globalState.getRandomOpclass());
+                    errors.add("does not accept");
+                    errors.add("does not exist for access method");
+                }
+                if (Randomly.getBoolean()) {
+                    sb.append(" ");
+                    sb.append(Randomly.fromOptions("ASC", "DESC"));
+                }
+                if (Randomly.getBooleanWithRatherLowProbability()) {
+                    sb.append(" NULLS ");
+                    sb.append(Randomly.fromOptions("FIRST", "LAST"));
+                }
+            }
+        }
+
+        sb.append(")");
+        return method;
+    }
+
+    private static String getNewIndexName(AbstractRelationalTable<?, ?, ?> randomTable) {
+        @SuppressWarnings("unchecked")
+        List<TableIndex> indexes = (List<TableIndex>) randomTable.getIndexes();
+        int indexI = 0;
+        while (true) {
+            String indexName = DBMSCommon.createIndexName(indexI++);
+            if (indexes.stream().noneMatch(i -> i.getIndexName().equals(indexName))) {
+                return indexName;
+            }
+        }
+    }
 }

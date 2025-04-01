@@ -4,8 +4,8 @@ import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
 
-import sqlancer.IgnoreMeException;
 import sqlancer.Randomly;
+import sqlancer.SQLCommonUtils;
 import sqlancer.common.DBMSCommon;
 import sqlancer.common.query.ExpectedErrors;
 import sqlancer.materialize.MaterializeGlobalState;
@@ -167,7 +167,6 @@ public final class MaterializeCommon {
     private static void addTableConstraint(StringBuilder sb, MaterializeTable table, MaterializeGlobalState globalState,
             TableConstraints t, ExpectedErrors errors) {
         List<MaterializeColumn> randomNonEmptyColumnSubset = table.getRandomNonEmptyColumnSubset();
-        List<MaterializeColumn> otherColumns;
         MaterializeCommon.addCommonExpressionErrors(errors);
         switch (t) {
         case CHECK:
@@ -184,44 +183,7 @@ public final class MaterializeCommon {
             sb.append(")");
             break;
         case FOREIGN_KEY:
-            sb.append("FOREIGN KEY (");
-            sb.append(randomNonEmptyColumnSubset.stream().map(c -> c.getName()).collect(Collectors.joining(", ")));
-            sb.append(") REFERENCES ");
-            MaterializeTable randomOtherTable = globalState.getSchema().getRandomTable(tab -> !tab.isView());
-            sb.append(randomOtherTable.getName());
-            if (randomOtherTable.getColumns().size() < randomNonEmptyColumnSubset.size()) {
-                throw new IgnoreMeException();
-            }
-            otherColumns = randomOtherTable.getRandomNonEmptyColumnSubset(randomNonEmptyColumnSubset.size());
-            sb.append("(");
-            sb.append(otherColumns.stream().map(c -> c.getName()).collect(Collectors.joining(", ")));
-            sb.append(")");
-            if (Randomly.getBoolean()) {
-                sb.append(" ");
-                sb.append(Randomly.fromOptions("MATCH FULL", "MATCH SIMPLE"));
-            }
-            if (Randomly.getBoolean()) {
-                sb.append(" ON DELETE ");
-                errors.add("ERROR: invalid ON DELETE action for foreign key constraint containing generated column");
-                deleteOrUpdateAction(sb);
-            }
-            if (Randomly.getBoolean()) {
-                sb.append(" ON UPDATE ");
-                errors.add("invalid ON UPDATE action for foreign key constraint containing generated column");
-                deleteOrUpdateAction(sb);
-            }
-            if (Randomly.getBoolean()) {
-                sb.append(" ");
-                if (Randomly.getBoolean()) {
-                    sb.append("DEFERRABLE");
-                    if (Randomly.getBoolean()) {
-                        sb.append(" ");
-                        sb.append(Randomly.fromOptions("INITIALLY DEFERRED", "INITIALLY IMMEDIATE"));
-                    }
-                } else {
-                    sb.append("NOT DEFERRABLE");
-                }
-            }
+            SQLCommonUtils.addTableConstraintForeignKey(randomNonEmptyColumnSubset, sb, globalState, errors);
             break;
         case EXCLUDE:
             sb.append("EXCLUDE ");
@@ -236,13 +198,7 @@ public final class MaterializeCommon {
                 appendOperator(sb, globalState.getOperators());
             }
             sb.append(")");
-            errors.add("is not valid");
-            errors.add("no operator matches");
-            errors.add("operator does not exist");
-            errors.add("unknown has no default operator class");
-            errors.add("exclusion constraints are not supported on partitioned tables");
-            errors.add("The exclusion operator must be related to the index operator class for the constraint");
-            errors.add("could not create exclusion constraint");
+            SQLCommonUtils.appendTableConstraintExclude(errors);
             // TODO: index parameters
             if (Randomly.getBoolean()) {
                 sb.append(" WHERE ");
@@ -274,22 +230,7 @@ public final class MaterializeCommon {
                     .asString(MaterializeExpressionGenerator.generateExpression(globalState, columns)));
             sb.append(")");
         }
-        if (Randomly.getBoolean()) {
-            sb.append(" ");
-            sb.append(Randomly.fromList(globalState.getOpClasses()));
-        }
-        if (Randomly.getBoolean()) {
-            sb.append(" ");
-            sb.append(Randomly.fromOptions("ASC", "DESC"));
-        }
-        if (Randomly.getBoolean()) {
-            sb.append(" NULLS ");
-            sb.append(Randomly.fromOptions("FIRST", "LAST"));
-        }
-    }
-
-    private static void deleteOrUpdateAction(StringBuilder sb) {
-        sb.append(Randomly.fromOptions("NO ACTION", "RESTRICT", "CASCADE", "SET NULL", "SET DEFAULT"));
+        SQLCommonUtils.appendExcludedElementHelper(sb, globalState);
     }
 
     public static String getFreeIndexName(MaterializeSchema s) {

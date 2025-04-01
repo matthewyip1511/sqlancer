@@ -8,11 +8,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import sqlancer.DatabendDorisPrestoConstant;
 import sqlancer.Randomly;
 import sqlancer.presto.PrestoConstantUtils;
 import sqlancer.presto.PrestoSchema;
 
-public abstract class PrestoConstant implements PrestoExpression {
+public abstract class PrestoConstant extends DatabendDorisPrestoConstant implements PrestoExpression {
 
     private static final String[] TIME_ZONES = { "Africa/Abidjan", "Africa/Accra", "Africa/Addis_Ababa",
             "Africa/Algiers", "Africa/Asmara", "Africa/Asmera", "Africa/Bamako", "Africa/Bangui", "Africa/Banjul",
@@ -305,44 +306,8 @@ public abstract class PrestoConstant implements PrestoExpression {
         }
     }
 
-    public boolean isNull() {
-        return false;
-    }
-
-    public boolean isInt() {
-        return false;
-    }
-
-    public boolean isBoolean() {
-        return false;
-    }
-
     public boolean isArray() {
         return false;
-    }
-
-    public boolean isString() {
-        return false;
-    }
-
-    public boolean isFloat() {
-        return false;
-    }
-
-    public boolean asBoolean() {
-        throw new UnsupportedOperationException(this.toString());
-    }
-
-    public long asInt() {
-        throw new UnsupportedOperationException(this.toString());
-    }
-
-    public String asString() {
-        throw new UnsupportedOperationException(this.toString());
-    }
-
-    public double asFloat() {
-        throw new UnsupportedOperationException(this.toString());
     }
 
     public static class PrestoNullConstant extends PrestoConstant {
