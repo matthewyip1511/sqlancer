@@ -7,9 +7,9 @@ import sqlancer.common.query.ExpectedErrors;
 import sqlancer.common.schema.AbstractRelationalTable;
 import sqlancer.common.schema.AbstractTableColumn;
 
-public final class SQLCommon {
+public final class SQLCommonUtils {
 
-    private SQLCommon() {
+    private SQLCommonUtils() {
     }
 
     public static boolean appendIntDataType(StringBuilder sb, boolean allowSerial) {

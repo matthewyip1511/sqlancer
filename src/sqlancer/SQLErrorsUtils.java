@@ -2,9 +2,9 @@ package sqlancer;
 
 import java.util.ArrayList;
 
-public final class SQLErrors {
+public final class SQLErrorsUtils {
 
-    private SQLErrors() {
+    private SQLErrorsUtils() {
 
     }
 

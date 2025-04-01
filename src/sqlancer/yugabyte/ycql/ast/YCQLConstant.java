@@ -3,7 +3,7 @@ package sqlancer.yugabyte.ycql.ast;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 
-import sqlancer.SQLConstant;
+import sqlancer.SQLConstantUtils;
 
 public class YCQLConstant implements YCQLExpression {
 
@@ -52,7 +52,7 @@ public class YCQLConstant implements YCQLExpression {
 
         @Override
         public String toString() {
-            return SQLConstant.duckTiDBYCQLHelper(value);
+            return SQLConstantUtils.duckTiDBYCQLHelper(value);
         }
 
     }

@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 import sqlancer.IgnoreMeException;
 import sqlancer.Randomly;
-import sqlancer.SQLCommon;
+import sqlancer.SQLCommonUtils;
 import sqlancer.common.query.ExpectedErrors;
 import sqlancer.common.schema.AbstractTableColumn;
 import sqlancer.yugabyte.ysql.YSQLErrors;
@@ -31,7 +31,7 @@ public final class YSQLCommon {
             sb.append("boolean");
             break;
         case INT:
-            serial = SQLCommon.appendIntDataType(sb, allowSerial);
+            serial = SQLCommonUtils.appendIntDataType(sb, allowSerial);
             break;
         case TEXT:
             if (Randomly.getBoolean()) {
@@ -70,10 +70,10 @@ public final class YSQLCommon {
             sb.append("bytea");
             break;
         case BIT:
-            SQLCommon.appendBitDataType(sb);
+            SQLCommonUtils.appendBitDataType(sb);
             break;
         case INET:
-            SQLCommon.appendInetDataType(sb);
+            SQLCommonUtils.appendInetDataType(sb);
             break;
         default:
             throw new AssertionError(type);
@@ -203,7 +203,7 @@ public final class YSQLCommon {
             sb.append(")");
             break;
         case FOREIGN_KEY:
-            SQLCommon.addTableConstraintForeignKey(randomNonEmptyColumnSubset, sb, globalState, errors);
+            SQLCommonUtils.addTableConstraintForeignKey(randomNonEmptyColumnSubset, sb, globalState, errors);
             break;
         default:
             throw new AssertionError(t);

@@ -5,7 +5,7 @@ import java.sql.Connection;
 import java.util.Optional;
 
 import sqlancer.IgnoreMeException;
-import sqlancer.SQLCast;
+import sqlancer.SQLCastUtils;
 import sqlancer.sqlite3.schema.SQLite3DataType;
 
 public final class SQLite3Cast implements SQLite3Expression {
@@ -63,7 +63,7 @@ public final class SQLite3Cast implements SQLite3Expression {
             return SQLite3Constant.createIntConstant((long) cons.asDouble());
         case TEXT:
             String asString = cons.asString();
-            return SQLCast.castToIntText(asString, SQLite3Constant::createIntConstant);
+            return SQLCastUtils.castToIntText(asString, SQLite3Constant::createIntConstant);
         default:
             throw new AssertionError();
         }
@@ -111,7 +111,7 @@ public final class SQLite3Cast implements SQLite3Expression {
             return value;
         case TEXT:
             String asString = value.asString();
-            return SQLCast.convertInternal(asString, convertRealToInt, noNumIsRealZero, convertIntToReal,
+            return SQLCastUtils.convertInternal(asString, convertRealToInt, noNumIsRealZero, convertIntToReal,
                     SQLite3Constant::createIntConstant, SQLite3Constant::createRealConstant);
         default:
             throw new AssertionError(value);

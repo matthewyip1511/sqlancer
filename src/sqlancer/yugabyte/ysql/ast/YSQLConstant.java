@@ -3,7 +3,7 @@ package sqlancer.yugabyte.ysql.ast;
 import java.math.BigDecimal;
 
 import sqlancer.IgnoreMeException;
-import sqlancer.SQLConstant;
+import sqlancer.SQLConstantUtils;
 import sqlancer.yugabyte.ysql.YSQLSchema.YSQLDataType;
 
 public abstract class YSQLConstant implements YSQLExpression {
@@ -508,7 +508,7 @@ public abstract class YSQLConstant implements YSQLExpression {
 
         @Override
         public String getTextRepresentation() {
-            return SQLConstant.getTextRepresentationNumeric(val);
+            return SQLConstantUtils.getTextRepresentationNumeric(val);
         }
 
         @Override
@@ -528,7 +528,7 @@ public abstract class YSQLConstant implements YSQLExpression {
 
         @Override
         public String getTextRepresentation() {
-            return SQLConstant.getTextRepresentationNumeric(val);
+            return SQLConstantUtils.getTextRepresentationNumeric(val);
         }
 
         @Override
@@ -574,7 +574,7 @@ public abstract class YSQLConstant implements YSQLExpression {
 
         @Override
         public String getTextRepresentation() {
-            return SQLConstant.getTextRepresentationRange(left, leftIsInclusive, right, rightIsInclusive);
+            return SQLConstantUtils.getTextRepresentationRange(left, leftIsInclusive, right, rightIsInclusive);
         }
 
         @Override

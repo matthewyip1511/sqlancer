@@ -5,7 +5,7 @@ import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
 
 import sqlancer.Randomly;
-import sqlancer.SQLCommon;
+import sqlancer.SQLCommonUtils;
 import sqlancer.common.DBMSCommon;
 import sqlancer.common.query.ExpectedErrors;
 import sqlancer.materialize.MaterializeGlobalState;
@@ -183,7 +183,7 @@ public final class MaterializeCommon {
             sb.append(")");
             break;
         case FOREIGN_KEY:
-            SQLCommon.addTableConstraintForeignKey(randomNonEmptyColumnSubset, sb, globalState, errors);
+            SQLCommonUtils.addTableConstraintForeignKey(randomNonEmptyColumnSubset, sb, globalState, errors);
             break;
         case EXCLUDE:
             sb.append("EXCLUDE ");
@@ -198,7 +198,7 @@ public final class MaterializeCommon {
                 appendOperator(sb, globalState.getOperators());
             }
             sb.append(")");
-            SQLCommon.appendTableConstraintExclude(errors);
+            SQLCommonUtils.appendTableConstraintExclude(errors);
             // TODO: index parameters
             if (Randomly.getBoolean()) {
                 sb.append(" WHERE ");
@@ -230,7 +230,7 @@ public final class MaterializeCommon {
                     .asString(MaterializeExpressionGenerator.generateExpression(globalState, columns)));
             sb.append(")");
         }
-        SQLCommon.appendExcludedElementHelper(sb, globalState);
+        SQLCommonUtils.appendExcludedElementHelper(sb, globalState);
     }
 
     public static String getFreeIndexName(MaterializeSchema s) {

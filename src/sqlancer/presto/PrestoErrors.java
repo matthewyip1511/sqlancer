@@ -3,7 +3,7 @@ package sqlancer.presto;
 import java.util.ArrayList;
 import java.util.List;
 
-import sqlancer.SQLErrors;
+import sqlancer.SQLErrorsUtils;
 import sqlancer.common.query.ExpectedErrors;
 
 public final class PrestoErrors {
@@ -110,7 +110,7 @@ public final class PrestoErrors {
     }
 
     private static List<String> getFunctionErrors() {
-        ArrayList<String> errors = SQLErrors.getFunctionErrorsHelper();
+        ArrayList<String> errors = SQLErrorsUtils.getFunctionErrorsHelper();
 
         errors.add("Unexpected parameters");
         errors.add("not registered");

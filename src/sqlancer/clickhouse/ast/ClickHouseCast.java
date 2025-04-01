@@ -6,7 +6,7 @@ import java.util.Optional;
 
 import com.clickhouse.client.ClickHouseDataType;
 
-import sqlancer.SQLCast;
+import sqlancer.SQLCastUtils;
 import sqlancer.clickhouse.ast.constant.ClickHouseCreateConstant;
 
 public final class ClickHouseCast implements ClickHouseExpression {
@@ -49,7 +49,7 @@ public final class ClickHouseCast implements ClickHouseExpression {
             return ClickHouseCreateConstant.createInt32Constant((long) cons.asDouble());
         case String:
             String asString = cons.asString();
-            return SQLCast.castToIntText(asString, ClickHouseCreateConstant::createInt32Constant);
+            return SQLCastUtils.castToIntText(asString, ClickHouseCreateConstant::createInt32Constant);
         default:
             throw new AssertionError();
         }
@@ -90,7 +90,7 @@ public final class ClickHouseCast implements ClickHouseExpression {
             return value;
         case String:
             String asString = value.asString();
-            return SQLCast.convertInternal(asString, convertRealToInt, noNumIsRealZero, convertIntToReal,
+            return SQLCastUtils.convertInternal(asString, convertRealToInt, noNumIsRealZero, convertIntToReal,
                     ClickHouseCreateConstant::createInt32Constant, ClickHouseCreateConstant::createFloat64Constant);
         default:
             throw new AssertionError(value);

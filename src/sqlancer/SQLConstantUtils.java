@@ -3,8 +3,8 @@ package sqlancer;
 import sqlancer.common.ast.newast.Expression;
 import sqlancer.mysql.ast.MySQLConstant;
 
-public final class SQLConstant {
-    private SQLConstant() {
+public final class SQLConstantUtils {
+    private SQLConstantUtils() {
     }
 
     public enum CastType {

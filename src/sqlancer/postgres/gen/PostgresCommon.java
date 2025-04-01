@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 import sqlancer.Randomly;
-import sqlancer.SQLCommon;
+import sqlancer.SQLCommonUtils;
 import sqlancer.common.DBMSCommon;
 import sqlancer.common.query.ExpectedErrors;
 import sqlancer.postgres.PostgresGlobalState;
@@ -118,7 +118,7 @@ public final class PostgresCommon {
             sb.append("boolean");
             break;
         case INT:
-            serial = SQLCommon.appendIntDataType(sb, allowSerial);
+            serial = SQLCommonUtils.appendIntDataType(sb, allowSerial);
             break;
         case TEXT:
             if (Randomly.getBoolean()) {
@@ -158,10 +158,10 @@ public final class PostgresCommon {
             sb.append("money");
             break;
         case BIT:
-            SQLCommon.appendBitDataType(sb);
+            SQLCommonUtils.appendBitDataType(sb);
             break;
         case INET:
-            SQLCommon.appendInetDataType(sb);
+            SQLCommonUtils.appendInetDataType(sb);
             break;
         default:
             throw new AssertionError(type);
@@ -269,7 +269,7 @@ public final class PostgresCommon {
             appendIndexParameters(sb, globalState, errors);
             break;
         case FOREIGN_KEY:
-            SQLCommon.addTableConstraintForeignKey(randomNonEmptyColumnSubset, sb, globalState, errors);
+            SQLCommonUtils.addTableConstraintForeignKey(randomNonEmptyColumnSubset, sb, globalState, errors);
             break;
         case EXCLUDE:
             sb.append("EXCLUDE ");
@@ -285,7 +285,7 @@ public final class PostgresCommon {
             }
             sb.append(")");
             appendIndexParameters(sb, globalState, errors);
-            SQLCommon.appendTableConstraintExclude(errors);
+            SQLCommonUtils.appendTableConstraintExclude(errors);
             // TODO: index parameters
             if (Randomly.getBoolean()) {
                 sb.append(" WHERE ");
@@ -324,6 +324,6 @@ public final class PostgresCommon {
             sb.append(PostgresVisitor.asString(PostgresExpressionGenerator.generateExpression(globalState, columns)));
             sb.append(")");
         }
-        SQLCommon.appendExcludedElementHelper(sb, globalState);
+        SQLCommonUtils.appendExcludedElementHelper(sb, globalState);
     }
 }

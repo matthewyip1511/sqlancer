@@ -5,7 +5,7 @@ import java.math.BigInteger;
 
 import sqlancer.IgnoreMeException;
 import sqlancer.Randomly;
-import sqlancer.SQLConstant;
+import sqlancer.SQLConstantUtils;
 import sqlancer.oceanbase.OceanBaseSchema.OceanBaseDataType;
 import sqlancer.oceanbase.ast.OceanBaseCastOperation.CastType;
 
@@ -210,12 +210,12 @@ public abstract class OceanBaseConstant implements OceanBaseExpression {
 
         @Override
         public boolean asBooleanNotNull() {
-            return SQLConstant.asBooleanNotNullConstantHelper(value, 1);
+            return SQLConstantUtils.asBooleanNotNullConstantHelper(value, 1);
         }
 
         @Override
         public String getTextRepresentation() {
-            return SQLConstant.getTextRepresentationText(value, singleQuotes);
+            return SQLConstantUtils.getTextRepresentationText(value, singleQuotes);
         }
 
         @Override
@@ -256,7 +256,7 @@ public abstract class OceanBaseConstant implements OceanBaseExpression {
             if (isNull()) {
                 return OceanBaseConstant.createNullConstant();
             }
-            return (OceanBaseConstant) SQLConstant.castAsHelper(this.value, 1, type);
+            return (OceanBaseConstant) SQLConstantUtils.castAsHelper(this.value, 1, type);
         }
 
         @Override

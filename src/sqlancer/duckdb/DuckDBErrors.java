@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
 
-import sqlancer.SQLErrors;
+import sqlancer.SQLErrorsUtils;
 import sqlancer.common.query.ExpectedErrors;
 
 public final class DuckDBErrors {
@@ -85,7 +85,7 @@ public final class DuckDBErrors {
     }
 
     private static List<String> getFunctionErrors() {
-        return SQLErrors.getFunctionErrorsHelper();
+        return SQLErrorsUtils.getFunctionErrorsHelper();
     }
 
     public static List<String> getInsertErrors() {

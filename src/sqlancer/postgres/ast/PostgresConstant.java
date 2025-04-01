@@ -3,7 +3,7 @@ package sqlancer.postgres.ast;
 import java.math.BigDecimal;
 
 import sqlancer.IgnoreMeException;
-import sqlancer.SQLConstant;
+import sqlancer.SQLConstantUtils;
 import sqlancer.postgres.PostgresSchema.PostgresDataType;
 
 public abstract class PostgresConstant implements PostgresExpression {
@@ -460,7 +460,7 @@ public abstract class PostgresConstant implements PostgresExpression {
 
         @Override
         public String getTextRepresentation() {
-            return SQLConstant.getTextRepresentationNumeric(val);
+            return SQLConstantUtils.getTextRepresentationNumeric(val);
         }
 
         @Override
@@ -480,7 +480,7 @@ public abstract class PostgresConstant implements PostgresExpression {
 
         @Override
         public String getTextRepresentation() {
-            return SQLConstant.getTextRepresentationNumeric(val);
+            return SQLConstantUtils.getTextRepresentationNumeric(val);
         }
 
         @Override
@@ -526,7 +526,7 @@ public abstract class PostgresConstant implements PostgresExpression {
 
         @Override
         public String getTextRepresentation() {
-            return SQLConstant.getTextRepresentationRange(left, leftIsInclusive, right, rightIsInclusive);
+            return SQLConstantUtils.getTextRepresentationRange(left, leftIsInclusive, right, rightIsInclusive);
         }
 
         @Override

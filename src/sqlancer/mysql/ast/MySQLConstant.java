@@ -4,7 +4,7 @@ import java.math.BigInteger;
 
 import sqlancer.IgnoreMeException;
 import sqlancer.Randomly;
-import sqlancer.SQLConstant;
+import sqlancer.SQLConstantUtils;
 import sqlancer.mysql.MySQLSchema.MySQLDataType;
 import sqlancer.mysql.ast.MySQLCastOperation.CastType;
 
@@ -98,13 +98,13 @@ public abstract class MySQLConstant implements MySQLExpression {
         @Override
         public boolean asBooleanNotNull() {
             // TODO implement as cast
-            return SQLConstant.asBooleanNotNullConstantHelper(value, 0);
+            return SQLConstantUtils.asBooleanNotNullConstantHelper(value, 0);
             // return castAs(CastType.SIGNED).getInt() != 0;
         }
 
         @Override
         public String getTextRepresentation() {
-            return SQLConstant.getTextRepresentationText(value, singleQuotes);
+            return SQLConstantUtils.getTextRepresentationText(value, singleQuotes);
         }
 
         @Override
@@ -137,7 +137,7 @@ public abstract class MySQLConstant implements MySQLExpression {
 
         @Override
         public MySQLConstant castAs(CastType type) {
-            return (MySQLConstant) SQLConstant.castAsHelper(this.value, 0, type);
+            return (MySQLConstant) SQLConstantUtils.castAsHelper(this.value, 0, type);
         }
 
         @Override

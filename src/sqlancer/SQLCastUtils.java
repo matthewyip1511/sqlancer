@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.util.function.Function;
 import java.util.regex.Pattern;
 
-public final class SQLCast {
+public final class SQLCastUtils {
 
     private static final byte FILE_SEPARATOR = 0x1c;
     private static final byte GROUP_SEPARATOR = 0x1d;
@@ -15,7 +15,7 @@ public final class SQLCast {
     private static final double MAX_INT_FOR_WHICH_CONVERSION_TO_INT_IS_TRIED = Math.pow(2, 51 - 1) - 1;
     private static final double MIN_INT_FOR_WHICH_CONVERSION_TO_INT_IS_TRIED = -Math.pow(2, 51 - 1);
 
-    private SQLCast() {
+    private SQLCastUtils() {
 
     }
 

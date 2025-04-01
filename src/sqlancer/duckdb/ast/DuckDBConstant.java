@@ -3,7 +3,7 @@ package sqlancer.duckdb.ast;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 
-import sqlancer.SQLConstant;
+import sqlancer.SQLConstantUtils;
 
 public class DuckDBConstant implements DuckDBExpression {
 
@@ -52,7 +52,7 @@ public class DuckDBConstant implements DuckDBExpression {
 
         @Override
         public String toString() {
-            return SQLConstant.duckTiDBYCQLHelper(value);
+            return SQLConstantUtils.duckTiDBYCQLHelper(value);
         }
     }
 
