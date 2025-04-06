@@ -193,43 +193,60 @@ public class SQLite3Provider extends SQLProviderAdapter<SQLite3GlobalState, SQLi
             if (customScriptPath != null) {
                 executeCustomScript(globalState, customScriptPath);
             } else {
-                int nrTablesToCreate = 1;
-                if (Randomly.getBoolean()) {
-                    nrTablesToCreate++;
-                }
-                while (Randomly.getBooleanWithSmallProbability()) {
-                    nrTablesToCreate++;
-                }
-                int i = 0;
-
-                do {
-                    SQLQueryAdapter tableQuery = getTableQuery(globalState, i++);
-                    globalState.executeStatement(tableQuery);
-                } while (globalState.getSchema().getDatabaseTables().size() < nrTablesToCreate);
-                assert globalState.getSchema().getTables().getTables().size() == nrTablesToCreate;
+                generateRandomTables(globalState);
             }
 
             checkTablesForGeneratedColumnLoops(globalState);
-            if (globalState.getDbmsSpecificOptions().testDBStats && Randomly.getBooleanWithSmallProbability()) {
-                SQLQueryAdapter tableQuery = new SQLQueryAdapter(
-                        "CREATE VIRTUAL TABLE IF NOT EXISTS stat USING dbstat(main)");
-                globalState.executeStatement(tableQuery);
-            }
-            StatementExecutor<SQLite3GlobalState, Action> se = new StatementExecutor<>(globalState, Action.values(),
-                    SQLite3Provider::mapActions, (q) -> {
-                        if (q.couldAffectSchema() && globalState.getSchema().getDatabaseTables().isEmpty()) {
-                            throw new IgnoreMeException();
-                        }
-                    });
-            se.executeStatements();
-
-            SQLQueryAdapter query = SQLite3TransactionGenerator.generateCommit(globalState);
-            globalState.executeStatement(query);
-
-            // also do an abort for DEFERRABLE INITIALLY DEFERRED
-            query = SQLite3TransactionGenerator.generateRollbackTransaction(globalState);
-            globalState.executeStatement(query);
+            createDbStatsTableIfNeeded(globalState);
+            executeStatements(globalState);
+            finalizeTransactions(globalState);
         }
+    }
+
+    private void generateRandomTables(SQLite3GlobalState globalState) throws Exception {
+        int nrTablesToCreate = 1;
+        if (Randomly.getBoolean()) {
+            nrTablesToCreate++;
+        }
+        while (Randomly.getBooleanWithSmallProbability()) {
+            nrTablesToCreate++;
+        }
+
+        int tableIndex = 0;
+        do {
+            SQLQueryAdapter tableQuery = getTableQuery(globalState, tableIndex++);
+            globalState.executeStatement(tableQuery);
+        } while (globalState.getSchema().getDatabaseTables().size() < nrTablesToCreate);
+
+        assert globalState.getSchema().getTables().getTables().size() == nrTablesToCreate;
+    }
+
+    private void createDbStatsTableIfNeeded(SQLite3GlobalState globalState) throws Exception {
+        if (globalState.getDbmsSpecificOptions().testDBStats && Randomly.getBooleanWithSmallProbability()) {
+            SQLQueryAdapter tableQuery = new SQLQueryAdapter(
+                    "CREATE VIRTUAL TABLE IF NOT EXISTS stat USING dbstat(main)");
+            globalState.executeStatement(tableQuery);
+        }
+    }
+
+    private void executeStatements(SQLite3GlobalState globalState) throws Exception {
+        StatementExecutor<SQLite3GlobalState, Action> se = new StatementExecutor<>(globalState, Action.values(),
+                SQLite3Provider::mapActions, (q) -> {
+                    if (q.couldAffectSchema() && globalState.getSchema().getDatabaseTables().isEmpty()) {
+                        throw new IgnoreMeException();
+                    }
+                });
+        se.executeStatements();
+    }
+
+    private void finalizeTransactions(SQLite3GlobalState globalState) throws Exception {
+        // Commit any pending transactions
+        SQLQueryAdapter commitQuery = SQLite3TransactionGenerator.generateCommit(globalState);
+        globalState.executeStatement(commitQuery);
+
+        // Also do an abort for DEFERRABLE INITIALLY DEFERRED
+        SQLQueryAdapter rollbackQuery = SQLite3TransactionGenerator.generateRollbackTransaction(globalState);
+        globalState.executeStatement(rollbackQuery);
     }
 
     private void executeCustomScript(SQLite3GlobalState globalState, String customScriptPath) throws Exception {
