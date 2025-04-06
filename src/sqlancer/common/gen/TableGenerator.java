@@ -5,6 +5,9 @@ import sqlancer.GlobalState;
 /**
  * Interface for custom table generation strategies. This allows database providers to implement specific table
  * generation logic.
+ *
+ * @param <G>
+ *            The type of the global state that contains the database connection and schema
  */
 public interface TableGenerator<G extends GlobalState<?, ?, ?>> {
 
