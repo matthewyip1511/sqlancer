@@ -108,6 +108,22 @@ public abstract class ProviderAdapter<G extends GlobalState<O, ? extends Abstrac
 
     public abstract void generateDatabase(G globalState) throws Exception;
 
+    /**
+     * Generate tables from a custom SQL script if the DBMS supports it. Default implementation throws
+     * UnsupportedOperationException.
+     *
+     * @param globalState
+     *            The global state
+     * @param customScriptPath
+     *            Path to the custom SQL script
+     *
+     * @throws Exception
+     *             If an error occurs during generation
+     */
+    protected void generateCustomTables(G globalState, String customScriptPath) throws Exception {
+        throw new UnsupportedOperationException("Custom table generation not supported by this DBMS");
+    }
+
     // QPG: entry function
     @Override
     public void generateAndTestDatabaseWithQueryPlanGuidance(G globalState) throws Exception {
@@ -141,7 +157,8 @@ public abstract class ProviderAdapter<G extends GlobalState<O, ? extends Abstrac
                         }
                         localState.executedWithoutError();
                     }
-                    // exit loop to mutate tables if no new query plans have been found after a while
+                    // exit loop to mutate tables if no new query plans have been found after a
+                    // while
                     if (numOfNoNewQueryPlans > globalState.getOptions().getQPGMaxMutationInterval()) {
                         mutateTables(globalState);
                         break;
@@ -182,13 +199,15 @@ public abstract class ProviderAdapter<G extends GlobalState<O, ? extends Abstrac
             currentMutationOperator = selectedActionIndex;
         }
 
-        // Clear the variables for storing the rewards of the action on a set of newly generated queries
+        // Clear the variables for storing the rewards of the action on a set of newly
+        // generated queries
         currentSelectRewards = 0;
         currentSelectCounts = 0;
         return true;
     }
 
-    // QPG: add a query plan to the query plan pool and return true if the query plan is new
+    // QPG: add a query plan to the query plan pool and return true if the query
+    // plan is new
     private boolean addQueryPlan(String selectStr, G globalState) throws Exception {
         String queryPlan = getQueryPlan(selectStr, globalState);
 
@@ -206,7 +225,8 @@ public abstract class ProviderAdapter<G extends GlobalState<O, ? extends Abstrac
         }
     }
 
-    // Obtain the reward of the current action based on the queries associated with the query plan pool
+    // Obtain the reward of the current action based on the queries associated with
+    // the query plan pool
     private int checkQueryPlan(G globalState) throws Exception {
         int newQueryPlanFound = 0;
         HashMap<String, String> modifiedQueryPlan = new HashMap<>();
@@ -235,12 +255,14 @@ public abstract class ProviderAdapter<G extends GlobalState<O, ? extends Abstrac
                 * globalState.getOptions().getQPGk();
     }
 
-    // QPG: initialize the weighted average reward of all mutation operators (required implementation in specific DBMS)
+    // QPG: initialize the weighted average reward of all mutation operators
+    // (required implementation in specific DBMS)
     protected double[] initializeWeightedAverageReward() {
         throw new UnsupportedOperationException();
     }
 
-    // QPG: obtain the query plan of a query (required implementation in specific DBMS)
+    // QPG: obtain the query plan of a query (required implementation in specific
+    // DBMS)
     protected String getQueryPlan(String selectStr, G globalState) throws Exception {
         throw new UnsupportedOperationException();
     }
@@ -250,7 +272,8 @@ public abstract class ProviderAdapter<G extends GlobalState<O, ? extends Abstrac
         throw new UnsupportedOperationException();
     }
 
-    // QPG: add rows to all tables (required implementation in specific DBMS when enabling PQS oracle for QPG)
+    // QPG: add rows to all tables (required implementation in specific DBMS when
+    // enabling PQS oracle for QPG)
     protected boolean addRowsToAllTables(G globalState) throws Exception {
         throw new UnsupportedOperationException();
     }
