@@ -184,6 +184,8 @@ public final class SQLite3Errors {
                 "[SQLITE_IOERR_SHORT_READ] The VFS layer was unable to obtain as many bytes as was requested (disk I/O error)");
         errors.add("[SQLITE_NOTADB] File opened that is not a database file (file is not a database)");
         errors.add("[SQLITE_PROTOCOL] NOT USED. Database lock protocol error (locking protocol)");
+        errors.add(
+                "[SQLITE_READONLY_DBMOVED] The database file has been moved since it was opened (attempt to write a readonly database)");
 
         return errors;
     }
