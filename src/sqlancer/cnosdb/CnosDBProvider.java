@@ -53,9 +53,13 @@ public class CnosDBProvider extends ProviderAdapter<CnosDBGlobalState, CnosDBOpt
 
     @Override
     public void generateDatabase(CnosDBGlobalState globalState) throws Exception {
+        generateRandomTables(globalState);
+    }
+
+    @Override
+    public void generateRandomTables(CnosDBGlobalState globalState) throws Exception {
         createTables(globalState, Randomly.fromOptions(4, 5, 6));
         prepareTables(globalState);
-
     }
 
     @Override

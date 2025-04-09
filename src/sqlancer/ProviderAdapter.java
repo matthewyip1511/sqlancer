@@ -109,6 +109,32 @@ public abstract class ProviderAdapter<G extends GlobalState<O, ? extends Abstrac
     public abstract void generateDatabase(G globalState) throws Exception;
 
     /**
+     * Extract the custom script path from the DBMS-specific options if available. Returns null if not supported or not
+     * specified.
+     */
+    protected String getCustomScriptPath(G globalState) {
+        try {
+            // Use reflection or other means to safely check for customScriptPath
+            // This is a placeholder - implement based on your options structure
+            return null;
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    /**
+     * Generate random tables for the database. Each DBMS should override this method.
+     */
+    protected abstract void generateRandomTables(G globalState) throws Exception;
+
+    /**
+     * Check tables for validity after creation. Default implementation does nothing.
+     */
+    protected void checkTablesForValidity(G globalState) throws Exception {
+        // Default implementation does nothing
+    }
+
+    /**
      * Generate tables from a custom SQL script if the DBMS supports it. Default implementation throws
      * UnsupportedOperationException.
      *

@@ -75,6 +75,11 @@ public class QuestDBProvider extends SQLProviderAdapter<QuestDBGlobalState, Ques
 
     @Override
     public void generateDatabase(QuestDBGlobalState globalState) throws Exception {
+        generateRandomTables(globalState);
+    }
+
+    @Override
+    public void generateRandomTables(QuestDBGlobalState globalState) throws Exception {
         for (int i = 0; i < Randomly.fromOptions(1, 2); i++) {
             boolean success;
             do {

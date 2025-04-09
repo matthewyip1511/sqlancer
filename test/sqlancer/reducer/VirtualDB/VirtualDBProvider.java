@@ -31,6 +31,11 @@ public class VirtualDBProvider extends SQLProviderAdapter<VirtualDBGlobalState, 
     }
 
     @Override
+    public void generateRandomTables(VirtualDBGlobalState globalState) throws Exception {
+
+    }
+
+    @Override
     public Reproducer<VirtualDBGlobalState> generateAndTestDatabase(VirtualDBGlobalState globalState) throws Exception {
         return state -> {
             if (globalState.getBugInducingCondition() == null)

@@ -38,11 +38,13 @@ public class PrestoProvider extends SQLProviderAdapter<PrestoGlobalState, Presto
         if (Objects.requireNonNull(a) == Action.INSERT) {
             return r.getInteger(0, globalState.getOptions().getMaxNumberInserts());
             // case UPDATE:
-            // return r.getInteger(0, globalState.getDbmsSpecificOptions().maxNumUpdates + 1);
+            // return r.getInteger(0, globalState.getDbmsSpecificOptions().maxNumUpdates +
+            // 1);
             // case EXPLAIN:
             // return r.getInteger(0, 2);
             // case DELETE:
-            // return r.getInteger(0, globalState.getDbmsSpecificOptions().maxNumDeletes + 1);
+            // return r.getInteger(0, globalState.getDbmsSpecificOptions().maxNumDeletes +
+            // 1);
             // case CREATE_VIEW:
             // return r.getInteger(0, globalState.getDbmsSpecificOptions().maxNumViews + 1);
         }
@@ -51,6 +53,11 @@ public class PrestoProvider extends SQLProviderAdapter<PrestoGlobalState, Presto
 
     @Override
     public void generateDatabase(PrestoGlobalState globalState) throws Exception {
+        generateRandomTables(globalState);
+    }
+
+    @Override
+    public void generateRandomTables(PrestoGlobalState globalState) throws Exception {
         for (int i = 0; i < Randomly.fromOptions(1, 2); i++) {
             boolean success;
             do {
@@ -164,7 +171,8 @@ public class PrestoProvider extends SQLProviderAdapter<PrestoGlobalState, Presto
     }
 
     public enum Action implements AbstractAction<PrestoGlobalState> {
-        // SHOW_TABLES((g) -> new SQLQueryAdapter("SHOW TABLES", new ExpectedErrors(), false, false)), //
+        // SHOW_TABLES((g) -> new SQLQueryAdapter("SHOW TABLES", new ExpectedErrors(),
+        // false, false)), //
         INSERT(PrestoInsertGenerator::getQuery);
         // TODO : check actions based on connector
         // DELETE(PrestoDeleteGenerator::generate), //
@@ -176,7 +184,8 @@ public class PrestoProvider extends SQLProviderAdapter<PrestoGlobalState, Presto
         // PrestoErrors.addGroupByErrors(errors);
         // return new SQLQueryAdapter(
         // "EXPLAIN " + PrestoToStringVisitor
-        // .asString(PrestoRandomQuerySynthesizer.generateSelect(g, Randomly.smallNumber() + 1)),
+        // .asString(PrestoRandomQuerySynthesizer.generateSelect(g,
+        // Randomly.smallNumber() + 1)),
         // errors);
         // });
 

@@ -102,6 +102,11 @@ public class OceanBaseProvider extends SQLProviderAdapter<OceanBaseGlobalState, 
 
     @Override
     public void generateDatabase(OceanBaseGlobalState globalState) throws Exception {
+        generateRandomTables(globalState);
+    }
+
+    @Override
+    public void generateRandomTables(OceanBaseGlobalState globalState) throws Exception {
         while (globalState.getSchema().getDatabaseTables().size() < Randomly.smallNumber() + 1) {
             String tableName = DBMSCommon.createTableName(globalState.getSchema().getDatabaseTables().size());
             SQLQueryAdapter createTable = OceanBaseTableGenerator.generate(globalState, tableName);

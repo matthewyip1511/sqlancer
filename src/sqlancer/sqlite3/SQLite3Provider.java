@@ -203,7 +203,8 @@ public class SQLite3Provider extends SQLProviderAdapter<SQLite3GlobalState, SQLi
         }
     }
 
-    private void generateRandomTables(SQLite3GlobalState globalState) throws Exception {
+    @Override
+    protected void generateRandomTables(SQLite3GlobalState globalState) throws Exception {
         int nrTablesToCreate = 1;
         if (Randomly.getBoolean()) {
             nrTablesToCreate++;

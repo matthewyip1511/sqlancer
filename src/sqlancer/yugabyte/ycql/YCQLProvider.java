@@ -97,6 +97,11 @@ public class YCQLProvider extends SQLProviderAdapter<YCQLGlobalState, YCQLOption
 
     @Override
     public void generateDatabase(YCQLGlobalState globalState) throws Exception {
+        generateRandomTables(globalState);
+    }
+
+    @Override
+    public void generateRandomTables(YCQLGlobalState globalState) throws Exception {
         for (int i = 0; i < Randomly.fromOptions(1, 2); i++) {
             boolean success;
             do {
