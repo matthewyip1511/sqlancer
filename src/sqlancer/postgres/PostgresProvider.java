@@ -116,6 +116,11 @@ public class PostgresProvider extends ExpandedProvider<PostgresGlobalState, Post
 
     @Override
     public void generateDatabase(PostgresGlobalState globalState) throws Exception {
+        generateRandomTables(globalState);
+    }
+
+    @Override
+    public void generateRandomTables(PostgresGlobalState globalState) throws Exception {
         readFunctions(globalState);
         createTables(globalState, Randomly.fromOptions(4, 5, 6));
         prepareTables(globalState);
@@ -125,7 +130,8 @@ public class PostgresProvider extends ExpandedProvider<PostgresGlobalState, Post
             String[] extensionNames = extensionsList.split(",");
 
             /*
-             * To avoid of a test interference with an extension objects, create them in a separate schema. Of course,
+             * To avoid of a test interference with an extension objects, create them in a
+             * separate schema. Of course,
              * they must be truly relocatable.
              */
             globalState.executeStatement(new SQLQueryAdapter("CREATE SCHEMA extensions;", true));
