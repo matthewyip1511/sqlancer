@@ -67,6 +67,11 @@ public class MaterializeProvider extends ExpandedProvider<MaterializeGlobalState
 
     @Override
     public void generateDatabase(MaterializeGlobalState globalState) throws Exception {
+        generateRandomTables(globalState);
+    }
+
+    @Override
+    public void generateRandomTables(MaterializeGlobalState globalState) throws Exception {
         readFunctions(globalState);
         createTables(globalState, Randomly.fromOptions(4, 5, 6));
         prepareTables(globalState);
