@@ -111,6 +111,12 @@ public abstract class ProviderAdapter<G extends GlobalState<O, ? extends Abstrac
     /**
      * Extract the custom script path from the DBMS-specific options if available. Returns null if not supported or not
      * specified.
+     *
+     * @param globalState
+     *            The global state
+     *
+     * @return The custom script path or null
+     *
      */
     protected String getCustomScriptPath(G globalState) {
         try {
@@ -124,11 +130,22 @@ public abstract class ProviderAdapter<G extends GlobalState<O, ? extends Abstrac
 
     /**
      * Generate random tables for the database. Each DBMS should override this method.
+     *
+     * @param globalState
+     *            The global state
+     *
+     * @throws Exception
+     *             If an error occurs during table generation
      */
     protected abstract void generateRandomTables(G globalState) throws Exception;
 
     /**
      * Check tables for validity after creation. Default implementation does nothing.
+     *
+     * @param globalState
+     *            The global state
+     *
+     * @throws Exception
      */
     protected void checkTablesForValidity(G globalState) throws Exception {
         // Default implementation does nothing
