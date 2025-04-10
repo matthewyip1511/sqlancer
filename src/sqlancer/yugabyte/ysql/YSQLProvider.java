@@ -57,6 +57,11 @@ public class YSQLProvider extends ExpandedProvider<YSQLGlobalState, YSQLOptions>
 
     @Override
     public void generateDatabase(YSQLGlobalState globalState) throws Exception {
+        generateRandomTables(globalState);
+    }
+
+    @Override
+    public void generateRandomTables(YSQLGlobalState globalState) throws Exception {
         readFunctions(globalState);
         createTables(globalState, Randomly.fromOptions(4, 5, 6));
         prepareTables(globalState);

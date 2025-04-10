@@ -88,6 +88,11 @@ public class DorisProvider extends SQLProviderAdapter<DorisGlobalState, DorisOpt
 
     @Override
     public void generateDatabase(DorisGlobalState globalState) throws Exception {
+        generateRandomTables(globalState);
+    }
+
+    @Override
+    public void generateRandomTables(DorisGlobalState globalState) throws Exception {
         for (int i = 0; i < Randomly.fromOptions(1, 2); i++) {
             boolean success = false;
             do {

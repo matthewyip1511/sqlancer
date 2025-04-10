@@ -116,6 +116,11 @@ public class PostgresProvider extends ExpandedProvider<PostgresGlobalState, Post
 
     @Override
     public void generateDatabase(PostgresGlobalState globalState) throws Exception {
+        generateRandomTables(globalState);
+    }
+
+    @Override
+    public void generateRandomTables(PostgresGlobalState globalState) throws Exception {
         readFunctions(globalState);
         createTables(globalState, Randomly.fromOptions(4, 5, 6));
         prepareTables(globalState);

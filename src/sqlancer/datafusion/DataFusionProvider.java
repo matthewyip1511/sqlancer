@@ -36,6 +36,11 @@ public class DataFusionProvider extends SQLProviderAdapter<DataFusionGlobalState
 
     @Override
     public void generateDatabase(DataFusionGlobalState globalState) throws Exception {
+        generateRandomTables(globalState);
+    }
+
+    @Override
+    public void generateRandomTables(DataFusionGlobalState globalState) throws Exception {
         int tableCount = Randomly.fromOptions(1, 2, 3, 4, 5, 6, 7);
         for (int i = 0; i < tableCount; i++) {
             SQLQueryAdapter queryCreateRandomTable = new DataFusionTableGenerator().getQuery(globalState);

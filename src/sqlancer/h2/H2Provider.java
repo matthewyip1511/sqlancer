@@ -78,6 +78,11 @@ public class H2Provider extends SQLProviderAdapter<H2GlobalState, H2Options> {
 
     @Override
     public void generateDatabase(H2GlobalState globalState) throws Exception {
+        generateRandomTables(globalState);
+    }
+
+    @Override
+    public void generateRandomTables(H2GlobalState globalState) throws Exception {
         if (Randomly.getBoolean()) {
             H2SetGenerator.getQuery(globalState).execute(globalState);
         }

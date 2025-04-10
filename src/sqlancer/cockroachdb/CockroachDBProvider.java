@@ -126,6 +126,11 @@ public class CockroachDBProvider extends ExpandedProvider<CockroachDBGlobalState
 
     @Override
     public void generateDatabase(CockroachDBGlobalState globalState) throws Exception {
+        generateRandomTables(globalState);
+    }
+
+    @Override
+    public void generateRandomTables(CockroachDBGlobalState globalState) throws Exception {
         QueryManager<SQLConnection> manager = globalState.getManager();
         MainOptions options = globalState.getOptions();
         List<String> standardSettings = new ArrayList<>();

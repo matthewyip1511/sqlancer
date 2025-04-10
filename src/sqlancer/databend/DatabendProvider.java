@@ -69,7 +69,8 @@ public class DatabendProvider extends SQLProviderAdapter<DatabendGlobalState, Da
             return r.getInteger(0, 2);
         // TODO 等待databend实现update && delete
         // case UPDATE:
-        // return r.getInteger(0, globalState.getDbmsSpecificOptions().maxNumUpdates + 1);
+        // return r.getInteger(0, globalState.getDbmsSpecificOptions().maxNumUpdates +
+        // 1);
         case DELETE:
             return r.getInteger(0, globalState.getDbmsSpecificOptions().maxNumDeletes + 1);
         case CREATE_VIEW:
@@ -90,6 +91,11 @@ public class DatabendProvider extends SQLProviderAdapter<DatabendGlobalState, Da
 
     @Override
     public void generateDatabase(DatabendGlobalState globalState) throws Exception {
+        generateRandomTables(globalState);
+    }
+
+    @Override
+    public void generateRandomTables(DatabendGlobalState globalState) throws Exception {
         for (int i = 0; i < Randomly.fromOptions(3, 4); i++) {
             boolean success;
             do {
