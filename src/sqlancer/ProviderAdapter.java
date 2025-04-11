@@ -1,8 +1,5 @@
 package sqlancer;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -14,9 +11,7 @@ import sqlancer.StateToReproduce.OracleRunReproductionState;
 import sqlancer.common.DBMSCommon;
 import sqlancer.common.oracle.CompositeTestOracle;
 import sqlancer.common.oracle.TestOracle;
-import sqlancer.common.query.SQLQueryAdapter;
 import sqlancer.common.schema.AbstractSchema;
-import sqlancer.sqlite3.SQLite3GlobalState;
 
 public abstract class ProviderAdapter<G extends GlobalState<O, ? extends AbstractSchema<G, ?>, C>, O extends DBMSSpecificOptions<? extends OracleFactory<G>>, C extends SQLancerDBConnection>
         implements DatabaseProvider<G, O, C> {
@@ -134,6 +129,26 @@ public abstract class ProviderAdapter<G extends GlobalState<O, ? extends Abstrac
     }
 
     /**
+     * Generate tables for the database. This method will check if a custom script path is provided and call the
+     * appropriate method.
+     *
+     * @param globalState
+     *            The global state
+     * @param customScriptPath
+     *            The custom script path or null
+     *
+     * @throws Exception
+     *             If an error occurs during table generation
+     */
+    protected void generateTables(G globalState, String customScriptPath) throws Exception {
+        if (customScriptPath != null) {
+            generateCustomTables(globalState, customScriptPath);
+        } else {
+            generateRandomTables(globalState);
+        }
+    }
+
+    /**
      * Generate random tables for the database. Each DBMS should override this method.
      *
      * @param globalState
@@ -168,22 +183,8 @@ public abstract class ProviderAdapter<G extends GlobalState<O, ? extends Abstrac
      * @throws Exception
      *             If an error occurs during generation
      */
-    protected void generateCustomTables(SQLite3GlobalState globalState, String customScriptPath) throws Exception {
-        try {
-            String sqlScript = new String(Files.readAllBytes(Paths.get(customScriptPath)));
-            String[] statements = sqlScript.split(";");
-
-            for (String statement : statements) {
-                statement = statement.trim();
-                if (!statement.isEmpty()) {
-                    SQLQueryAdapter queryAdapter = new SQLQueryAdapter(statement + ";");
-                    globalState.executeStatement(queryAdapter);
-                }
-            }
-        } catch (IOException e) {
-            System.err.println("Failed to read custom SQL script from: " + customScriptPath);
-            throw new IgnoreMeException();
-        }
+    protected void generateCustomTables(G globalState, String customScriptPath) throws Exception {
+        throw new UnsupportedOperationException("Custom table generation not supported by this DBMS");
     }
 
     // QPG: entry function

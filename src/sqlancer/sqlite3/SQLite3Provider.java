@@ -2,6 +2,8 @@ package sqlancer.sqlite3;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -188,16 +190,31 @@ public class SQLite3Provider extends SQLProviderAdapter<SQLite3GlobalState, SQLi
             addSensiblePragmaDefaults(globalState);
 
             String customScriptPath = globalState.getDbmsSpecificOptions().getCustomScriptPath();
-            if (customScriptPath != null) {
-                generateCustomTables(globalState, customScriptPath);
-            } else {
-                generateRandomTables(globalState);
-            }
+            generateTables(globalState, customScriptPath);
 
             checkTablesForGeneratedColumnLoops(globalState);
             createDbStatsTableIfNeeded(globalState);
             executeStatements(globalState);
             finalizeTransactions(globalState);
+        }
+    }
+
+    @Override
+    protected void generateCustomTables(SQLite3GlobalState globalState, String customScriptPath) throws Exception {
+        try {
+            String sqlScript = new String(Files.readAllBytes(Paths.get(customScriptPath)));
+            String[] statements = sqlScript.split(";");
+
+            for (String statement : statements) {
+                statement = statement.trim();
+                if (!statement.isEmpty()) {
+                    SQLQueryAdapter queryAdapter = new SQLQueryAdapter(statement + ";");
+                    globalState.executeStatement(queryAdapter);
+                }
+            }
+        } catch (IOException e) {
+            System.err.println("Failed to read custom SQL script from: " + customScriptPath);
+            throw new IgnoreMeException();
         }
     }
 
