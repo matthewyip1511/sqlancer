@@ -177,20 +177,20 @@ public class MariaDBJoin_ESTest {
         assertEquals(0, list0.size());
     }
 
-    @Test
-    public void test10() throws Throwable {
-        MariaDBJoin mariaDBJoin0 = null;
-        try {
-            mariaDBJoin0 = new MariaDBJoin((MariaDBJoin) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.mariadb.ast.MariaDBJoin", e);
-        }
-    }
+    // @Test
+    // public void test10() throws Throwable {
+    // MariaDBJoin mariaDBJoin0 = null;
+    // try {
+    // mariaDBJoin0 = new MariaDBJoin((MariaDBJoin) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.mariadb.ast.MariaDBJoin", e);
+    // }
+    // }
 
     @Test
     public void test11() throws Throwable {

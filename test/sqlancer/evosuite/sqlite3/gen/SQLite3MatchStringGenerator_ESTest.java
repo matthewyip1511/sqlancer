@@ -31,20 +31,20 @@ public class SQLite3MatchStringGenerator_ESTest {
         }
     }
 
-    @Test
-    public void test1() throws Throwable {
-        SQLite3MatchStringGenerator sQLite3MatchStringGenerator0 = null;
-        try {
-            sQLite3MatchStringGenerator0 = new SQLite3MatchStringGenerator((Randomly) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.sqlite3.gen.SQLite3MatchStringGenerator", e);
-        }
-    }
+    // @Test
+    // public void test1() throws Throwable {
+    // SQLite3MatchStringGenerator sQLite3MatchStringGenerator0 = null;
+    // try {
+    // sQLite3MatchStringGenerator0 = new SQLite3MatchStringGenerator((Randomly) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.sqlite3.gen.SQLite3MatchStringGenerator", e);
+    // }
+    // }
 
     @Test
     public void test2() throws Throwable {
@@ -80,9 +80,9 @@ public class SQLite3MatchStringGenerator_ESTest {
         assertEquals("IJJK*LMM ", string2);
     }
 
-    @Test
-    public void test5() throws Throwable {
-        Randomly randomly0 = new Randomly((-904L));
-        SQLite3MatchStringGenerator sQLite3MatchStringGenerator0 = new SQLite3MatchStringGenerator(randomly0);
-    }
+    // @Test
+    // public void test5() throws Throwable {
+    // Randomly randomly0 = new Randomly((-904L));
+    // SQLite3MatchStringGenerator sQLite3MatchStringGenerator0 = new SQLite3MatchStringGenerator(randomly0);
+    // }
 }

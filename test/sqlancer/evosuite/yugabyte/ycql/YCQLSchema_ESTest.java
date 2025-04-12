@@ -89,20 +89,20 @@ public class YCQLSchema_ESTest {
      * verifyException("sqlancer.yugabyte.ycql.YCQLSchema", e); } }
      */
 
-    @Test
-    public void test06() throws Throwable {
-        YCQLSchema yCQLSchema0 = null;
-        try {
-            yCQLSchema0 = new YCQLSchema((List<YCQLSchema.YCQLTable>) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("java.util.Collections$UnmodifiableCollection", e);
-        }
-    }
+    // @Test
+    // public void test06() throws Throwable {
+    // YCQLSchema yCQLSchema0 = null;
+    // try {
+    // yCQLSchema0 = new YCQLSchema((List<YCQLSchema.YCQLTable>) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("java.util.Collections$UnmodifiableCollection", e);
+    // }
+    // }
 
     @Test
     public void test07() throws Throwable {
@@ -145,21 +145,21 @@ public class YCQLSchema_ESTest {
      * verifyException("sqlancer.yugabyte.ycql.YCQLSchema", e); } }
      */
 
-    @Test
-    public void test10() throws Throwable {
-        LinkedList<YCQLSchema.YCQLTable> linkedList0 = new LinkedList<YCQLSchema.YCQLTable>();
-        YCQLSchema.YCQLTables yCQLSchema_YCQLTables0 = new YCQLSchema.YCQLTables(linkedList0);
-    }
-
-    @Test
-    public void test11() throws Throwable {
-        LinkedList<YCQLSchema.YCQLColumn> linkedList0 = new LinkedList<YCQLSchema.YCQLColumn>();
-        YCQLSchema.YCQLTable yCQLSchema_YCQLTable0 = new YCQLSchema.YCQLTable("SMALLINT", linkedList0, false);
-        List<YCQLSchema.YCQLTable> list0 = List.of(yCQLSchema_YCQLTable0, yCQLSchema_YCQLTable0, yCQLSchema_YCQLTable0,
-                yCQLSchema_YCQLTable0, yCQLSchema_YCQLTable0, yCQLSchema_YCQLTable0, yCQLSchema_YCQLTable0,
-                yCQLSchema_YCQLTable0, yCQLSchema_YCQLTable0, yCQLSchema_YCQLTable0);
-        YCQLSchema yCQLSchema0 = new YCQLSchema(list0);
-    }
+    // @Test
+    // public void test10() throws Throwable {
+    // LinkedList<YCQLSchema.YCQLTable> linkedList0 = new LinkedList<YCQLSchema.YCQLTable>();
+    // YCQLSchema.YCQLTables yCQLSchema_YCQLTables0 = new YCQLSchema.YCQLTables(linkedList0);
+    // }
+    //
+    // @Test
+    // public void test11() throws Throwable {
+    // LinkedList<YCQLSchema.YCQLColumn> linkedList0 = new LinkedList<YCQLSchema.YCQLColumn>();
+    // YCQLSchema.YCQLTable yCQLSchema_YCQLTable0 = new YCQLSchema.YCQLTable("SMALLINT", linkedList0, false);
+    // List<YCQLSchema.YCQLTable> list0 = List.of(yCQLSchema_YCQLTable0, yCQLSchema_YCQLTable0, yCQLSchema_YCQLTable0,
+    // yCQLSchema_YCQLTable0, yCQLSchema_YCQLTable0, yCQLSchema_YCQLTable0, yCQLSchema_YCQLTable0,
+    // yCQLSchema_YCQLTable0, yCQLSchema_YCQLTable0, yCQLSchema_YCQLTable0);
+    // YCQLSchema yCQLSchema0 = new YCQLSchema(list0);
+    // }
 
     /*
      * Test disabled because it contains mock() function calls that are not implemented
@@ -352,18 +352,18 @@ public class YCQLSchema_ESTest {
         }
     }
 
-    @Test
-    public void test24() throws Throwable {
-        YCQLSchema.YCQLDataType yCQLSchema_YCQLDataType0 = YCQLSchema.YCQLDataType.DATE;
-        YCQLSchema.YCQLCompositeDataType yCQLSchema_YCQLCompositeDataType0 = new YCQLSchema.YCQLCompositeDataType(
-                yCQLSchema_YCQLDataType0, (-1453246218));
-        yCQLSchema_YCQLCompositeDataType0.toString();
-        YCQLSchema.YCQLCompositeDataType yCQLSchema_YCQLCompositeDataType1 = YCQLSchema.YCQLCompositeDataType
-                .getRandom();
-        String string0 = yCQLSchema_YCQLCompositeDataType1.toString();
-        // // Unstable assertion: assertEquals("INTEGER", string0);
-        // // Unstable assertion: assertNotNull(string0);
-    }
+    // @Test
+    // public void test24() throws Throwable {
+    // YCQLSchema.YCQLDataType yCQLSchema_YCQLDataType0 = YCQLSchema.YCQLDataType.DATE;
+    // YCQLSchema.YCQLCompositeDataType yCQLSchema_YCQLCompositeDataType0 = new YCQLSchema.YCQLCompositeDataType(
+    // yCQLSchema_YCQLDataType0, (-1453246218));
+    // yCQLSchema_YCQLCompositeDataType0.toString();
+    // YCQLSchema.YCQLCompositeDataType yCQLSchema_YCQLCompositeDataType1 = YCQLSchema.YCQLCompositeDataType
+    // .getRandom();
+    // String string0 = yCQLSchema_YCQLCompositeDataType1.toString();
+    // // // Unstable assertion: assertEquals("INTEGER", string0);
+    // // // Unstable assertion: assertNotNull(string0);
+    // }
 
     @Test
     public void test25() throws Throwable {

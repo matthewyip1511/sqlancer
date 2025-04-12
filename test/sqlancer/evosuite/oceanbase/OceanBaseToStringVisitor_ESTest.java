@@ -18,9 +18,6 @@ import sqlancer.oceanbase.OceanBaseToStringVisitor;
 
 public class OceanBaseToStringVisitor_ESTest {
 
-    private void verifyException(String s, Exception e) {
-    }
-
     @Test
     public void test00() throws Throwable {
         OceanBaseToStringVisitor oceanBaseToStringVisitor0 = new OceanBaseToStringVisitor();

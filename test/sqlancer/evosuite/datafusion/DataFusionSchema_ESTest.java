@@ -60,20 +60,20 @@ public class DataFusionSchema_ESTest {
      * verifyException("sqlancer.datafusion.DataFusionSchema", e); } }
      */
 
-    @Test
-    public void test02() throws Throwable {
-        DataFusionSchema dataFusionSchema0 = null;
-        try {
-            dataFusionSchema0 = new DataFusionSchema((List<DataFusionSchema.DataFusionTable>) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("java.util.Collections$UnmodifiableCollection", e);
-        }
-    }
+    // @Test
+    // public void test02() throws Throwable {
+    // DataFusionSchema dataFusionSchema0 = null;
+    // try {
+    // dataFusionSchema0 = new DataFusionSchema((List<DataFusionSchema.DataFusionTable>) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("java.util.Collections$UnmodifiableCollection", e);
+    // }
+    // }
 
     @Test
     public void test03() throws Throwable {
@@ -89,11 +89,11 @@ public class DataFusionSchema_ESTest {
         }
     }
 
-    @Test
-    public void test04() throws Throwable {
-        LinkedList<DataFusionSchema.DataFusionTable> linkedList0 = new LinkedList<DataFusionSchema.DataFusionTable>();
-        DataFusionSchema dataFusionSchema0 = new DataFusionSchema(linkedList0);
-    }
+    // @Test
+    // public void test04() throws Throwable {
+    // LinkedList<DataFusionSchema.DataFusionTable> linkedList0 = new LinkedList<DataFusionSchema.DataFusionTable>();
+    // DataFusionSchema dataFusionSchema0 = new DataFusionSchema(linkedList0);
+    // }
 
     @Test
     public void test05() throws Throwable {

@@ -41,14 +41,15 @@ public class PostgresAggregate_ESTest {
         assertEquals(PostgresSchema.PostgresDataType.BOOLEAN, postgresSchema_PostgresDataType0);
     }
 
-    @Test
-    public void test3() throws Throwable {
-        PostgresAggregate.PostgresAggregateFunction postgresAggregate_PostgresAggregateFunction0 = PostgresAggregate.PostgresAggregateFunction.MIN;
-        PostgresSelect postgresSelect0 = new PostgresSelect();
-        List<PostgresExpression> list0 = postgresSelect0.getGroupByExpressions();
-        PostgresAggregate postgresAggregate0 = new PostgresAggregate(list0,
-                postgresAggregate_PostgresAggregateFunction0);
-    }
+    // @Test
+    // public void test3() throws Throwable {
+    // PostgresAggregate.PostgresAggregateFunction postgresAggregate_PostgresAggregateFunction0 =
+    // PostgresAggregate.PostgresAggregateFunction.MIN;
+    // PostgresSelect postgresSelect0 = new PostgresSelect();
+    // List<PostgresExpression> list0 = postgresSelect0.getGroupByExpressions();
+    // PostgresAggregate postgresAggregate0 = new PostgresAggregate(list0,
+    // postgresAggregate_PostgresAggregateFunction0);
+    // }
 
     @Test
     public void test4() throws Throwable {

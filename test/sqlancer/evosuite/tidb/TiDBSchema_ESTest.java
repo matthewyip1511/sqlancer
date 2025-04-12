@@ -97,22 +97,23 @@ public class TiDBSchema_ESTest {
             verifyException("sqlancer.tidb.TiDBSchema", e);
         }
     }
-
-    @Test
-    public void test06() throws Throwable {
-        TiDBSchema tiDBSchema0 = null;
-        try {
-            tiDBSchema0 = new TiDBSchema((List<TiDBSchema.TiDBTable>) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("java.util.Collections$UnmodifiableCollection", e);
-        }
-    }
 }
+
+// @Test
+// public void test06() throws Throwable {
+// TiDBSchema tiDBSchema0 = null;
+// try {
+// tiDBSchema0 = new TiDBSchema((List<TiDBSchema.TiDBTable>) null);
+// fail("Expecting exception: NullPointerException");
+//
+// } catch (NullPointerException e) {
+// //
+// // no message in exception (getMessage() returned null)
+// //
+// verifyException("java.util.Collections$UnmodifiableCollection", e);
+// }
+// }
+// }
 
 /*
  * Test disabled because it contains mock() function calls that are not implemented

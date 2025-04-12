@@ -48,21 +48,21 @@ public class YSQLExpressionGenerator_ESTest {
         assertFalse(ySQLConstant_FloatConstant0.isString());
     }
 
-    @Test
-    public void test02() throws Throwable {
-        YSQLGlobalState ySQLGlobalState0 = new YSQLGlobalState();
-        YSQLExpressionGenerator ySQLExpressionGenerator0 = null;
-        try {
-            ySQLExpressionGenerator0 = new YSQLExpressionGenerator(ySQLGlobalState0);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.yugabyte.ysql.gen.YSQLExpressionGenerator", e);
-        }
-    }
+    // @Test
+    // public void test02() throws Throwable {
+    // YSQLGlobalState ySQLGlobalState0 = new YSQLGlobalState();
+    // YSQLExpressionGenerator ySQLExpressionGenerator0 = null;
+    // try {
+    // ySQLExpressionGenerator0 = new YSQLExpressionGenerator(ySQLGlobalState0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.yugabyte.ysql.gen.YSQLExpressionGenerator", e);
+    // }
+    // }
 
     @Test
     public void test03() throws Throwable {

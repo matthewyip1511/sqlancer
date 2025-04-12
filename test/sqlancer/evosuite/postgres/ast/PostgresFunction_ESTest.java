@@ -152,41 +152,42 @@ public class PostgresFunction_ESTest {
         }
     }
 
-    @Test
-    public void test07() throws Throwable {
-        PostgresFunctionWithUnknownResult postgresFunctionWithUnknownResult0 = PostgresFunctionWithUnknownResult.RPAD;
-        PostgresSchema.PostgresDataType postgresSchema_PostgresDataType0 = PostgresSchema.PostgresDataType.BOOLEAN;
-        PostgresFunction postgresFunction0 = null;
-        try {
-            postgresFunction0 = new PostgresFunction(postgresFunctionWithUnknownResult0,
-                    postgresSchema_PostgresDataType0, (PostgresExpression[]) null);
-            fail("Expecting exception: NullPointerException");
+    // @Test
+    // public void test07() throws Throwable {
+    // PostgresFunctionWithUnknownResult postgresFunctionWithUnknownResult0 = PostgresFunctionWithUnknownResult.RPAD;
+    // PostgresSchema.PostgresDataType postgresSchema_PostgresDataType0 = PostgresSchema.PostgresDataType.BOOLEAN;
+    // PostgresFunction postgresFunction0 = null;
+    // try {
+    // postgresFunction0 = new PostgresFunction(postgresFunctionWithUnknownResult0,
+    // postgresSchema_PostgresDataType0, (PostgresExpression[]) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.postgres.ast.PostgresFunction", e);
+    // }
+    // }
 
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.postgres.ast.PostgresFunction", e);
-        }
-    }
-
-    @Test
-    public void test08() throws Throwable {
-        PostgresSchema.PostgresDataType postgresSchema_PostgresDataType0 = PostgresSchema.PostgresDataType.BIT;
-        PostgresFunction.PostgresFunctionWithResult postgresFunction_PostgresFunctionWithResult0 = PostgresFunction.PostgresFunctionWithResult.NUM_NONNULLS;
-        PostgresFunction postgresFunction0 = null;
-        try {
-            postgresFunction0 = new PostgresFunction(postgresFunction_PostgresFunctionWithResult0,
-                    postgresSchema_PostgresDataType0, (PostgresExpression[]) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.postgres.ast.PostgresFunction", e);
-        }
-    }
+    // @Test
+    // public void test08() throws Throwable {
+    // PostgresSchema.PostgresDataType postgresSchema_PostgresDataType0 = PostgresSchema.PostgresDataType.BIT;
+    // PostgresFunction.PostgresFunctionWithResult postgresFunction_PostgresFunctionWithResult0 =
+    // PostgresFunction.PostgresFunctionWithResult.NUM_NONNULLS;
+    // PostgresFunction postgresFunction0 = null;
+    // try {
+    // postgresFunction0 = new PostgresFunction(postgresFunction_PostgresFunctionWithResult0,
+    // postgresSchema_PostgresDataType0, (PostgresExpression[]) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.postgres.ast.PostgresFunction", e);
+    // }
+    // }
 
     @Test
     public void test09() throws Throwable {

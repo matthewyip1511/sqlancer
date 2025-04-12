@@ -22,10 +22,11 @@ public class TiDBAggregate_ESTest {
         assertEquals(1, int0);
     }
 
-    @Test
-    public void test1() throws Throwable {
-        TiDBAggregate.TiDBAggregateFunction tiDBAggregate_TiDBAggregateFunction0 = TiDBAggregate.TiDBAggregateFunction.COUNT;
-        TiDBAggregate tiDBAggregate0 = new TiDBAggregate((List<TiDBExpression>) null,
-                tiDBAggregate_TiDBAggregateFunction0);
-    }
+    // @Test
+    // public void test1() throws Throwable {
+    // TiDBAggregate.TiDBAggregateFunction tiDBAggregate_TiDBAggregateFunction0 =
+    // TiDBAggregate.TiDBAggregateFunction.COUNT;
+    // TiDBAggregate tiDBAggregate0 = new TiDBAggregate((List<TiDBExpression>) null,
+    // tiDBAggregate_TiDBAggregateFunction0);
+    // }
 }

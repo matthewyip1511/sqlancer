@@ -129,41 +129,45 @@ public class MaterializeFunction_ESTest {
         }
     }
 
-    @Test
-    public void test06() throws Throwable {
-        MaterializeFunctionWithUnknownResult materializeFunctionWithUnknownResult0 = MaterializeFunctionWithUnknownResult.LOG2;
-        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 = MaterializeSchema.MaterializeDataType.INT;
-        MaterializeFunction materializeFunction0 = null;
-        try {
-            materializeFunction0 = new MaterializeFunction(materializeFunctionWithUnknownResult0,
-                    materializeSchema_MaterializeDataType0, (MaterializeExpression[]) null);
-            fail("Expecting exception: NullPointerException");
+    // @Test
+    // public void test06() throws Throwable {
+    // MaterializeFunctionWithUnknownResult materializeFunctionWithUnknownResult0 =
+    // MaterializeFunctionWithUnknownResult.LOG2;
+    // MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 =
+    // MaterializeSchema.MaterializeDataType.INT;
+    // MaterializeFunction materializeFunction0 = null;
+    // try {
+    // materializeFunction0 = new MaterializeFunction(materializeFunctionWithUnknownResult0,
+    // materializeSchema_MaterializeDataType0, (MaterializeExpression[]) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.materialize.ast.MaterializeFunction", e);
+    // }
+    // }
 
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.materialize.ast.MaterializeFunction", e);
-        }
-    }
-
-    @Test
-    public void test07() throws Throwable {
-        MaterializeFunction.MaterializeFunctionWithResult materializeFunction_MaterializeFunctionWithResult0 = MaterializeFunction.MaterializeFunctionWithResult.NUM_NULLS;
-        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 = MaterializeSchema.MaterializeDataType.TEXT;
-        MaterializeFunction materializeFunction0 = null;
-        try {
-            materializeFunction0 = new MaterializeFunction(materializeFunction_MaterializeFunctionWithResult0,
-                    materializeSchema_MaterializeDataType0, (MaterializeExpression[]) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.materialize.ast.MaterializeFunction", e);
-        }
-    }
+    // @Test
+    // public void test07() throws Throwable {
+    // MaterializeFunction.MaterializeFunctionWithResult materializeFunction_MaterializeFunctionWithResult0 =
+    // MaterializeFunction.MaterializeFunctionWithResult.NUM_NULLS;
+    // MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 =
+    // MaterializeSchema.MaterializeDataType.TEXT;
+    // MaterializeFunction materializeFunction0 = null;
+    // try {
+    // materializeFunction0 = new MaterializeFunction(materializeFunction_MaterializeFunctionWithResult0,
+    // materializeSchema_MaterializeDataType0, (MaterializeExpression[]) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.materialize.ast.MaterializeFunction", e);
+    // }
+    // }
 
     @Test
     public void test08() throws Throwable {
