@@ -32,7 +32,7 @@ public class CockroachDBSelect_ESTest {
         CockroachDBJoin.JoinType cockroachDBJoin_JoinType0 = CockroachDBJoin.JoinType.INNER;
         CockroachDBJoin cockroachDBJoin0 = new CockroachDBJoin(cockroachDBSelect0, cockroachDBSelect0,
                 cockroachDBSelect0, cockroachDBJoin_JoinType0);
-        linkedList0.addLast(cockroachDBJoin0);
+        linkedList0.add(cockroachDBJoin0);
         cockroachDBSelect0.setJoinClauses(linkedList0);
         List<JoinBase<CockroachDBExpression>> list0 = cockroachDBSelect0.getJoinClauses();
         assertEquals(1, list0.size());
