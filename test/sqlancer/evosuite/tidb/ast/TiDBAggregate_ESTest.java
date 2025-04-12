@@ -6,11 +6,9 @@
 package sqlancer.evosuite.tidb.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
-import java.util.List;
 
 import org.junit.jupiter.api.Test;
 import sqlancer.tidb.ast.TiDBAggregate;
-import sqlancer.tidb.ast.TiDBExpression;
 
 public class TiDBAggregate_ESTest {
 

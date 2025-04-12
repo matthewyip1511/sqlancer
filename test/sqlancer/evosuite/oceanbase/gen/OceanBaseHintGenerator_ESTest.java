@@ -15,9 +15,6 @@ import sqlancer.oceanbase.OceanBaseSchema;
 
 public class OceanBaseHintGenerator_ESTest {
 
-    private void verifyException(String s, Exception e) {
-    }
-
     @Test
     public void test00() throws Throwable {
         OceanBaseSelect oceanBaseSelect0 = new OceanBaseSelect();

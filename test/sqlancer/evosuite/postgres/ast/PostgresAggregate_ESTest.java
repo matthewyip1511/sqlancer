@@ -10,8 +10,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import sqlancer.postgres.ast.PostgresAggregate;
-import sqlancer.postgres.ast.PostgresExpression;
-import sqlancer.postgres.ast.PostgresSelect;
 import sqlancer.postgres.PostgresSchema;
 
 public class PostgresAggregate_ESTest {
