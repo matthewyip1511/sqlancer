@@ -129,7 +129,7 @@ public abstract class SQLite3Constant implements SQLite3Expression {
         }
 
         @Override
-        String getStringRepresentation() {
+        public String getStringRepresentation() {
             return String.valueOf(value);
         }
 
@@ -376,7 +376,7 @@ public abstract class SQLite3Constant implements SQLite3Expression {
         }
 
         @Override
-        String getStringRepresentation() {
+        public String getStringRepresentation() {
             return text;
         }
 
@@ -463,7 +463,7 @@ public abstract class SQLite3Constant implements SQLite3Expression {
         }
 
         @Override
-        String getStringRepresentation() {
+        public String getStringRepresentation() {
             String hexRepr = SQLite3Visitor.byteArrayToHex(bytes);
             return String.format("x'%s'", hexRepr);
         }

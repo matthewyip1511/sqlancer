@@ -6,6 +6,7 @@
 package sqlancer.evosuite.yugabyte.ycql.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.yugabyte.ycql.ast.YCQLBetweenOperation;
 import sqlancer.yugabyte.ycql.ast.YCQLExpression;

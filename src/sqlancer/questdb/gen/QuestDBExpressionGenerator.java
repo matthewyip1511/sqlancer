@@ -67,7 +67,7 @@ public class QuestDBExpressionGenerator extends UntypedExpressionGenerator<Quest
     }
 
     @Override
-    protected QuestDBExpression generateExpression(int depth) {
+    public QuestDBExpression generateExpression(int depth) {
         if (depth >= globalState.getOptions().getMaxExpressionDepth() || Randomly.getBoolean()) {
             return generateLeafNode();
         }
@@ -100,7 +100,7 @@ public class QuestDBExpressionGenerator extends UntypedExpressionGenerator<Quest
     }
 
     @Override
-    protected QuestDBExpression generateColumn() {
+    public QuestDBExpression generateColumn() {
         QuestDBColumn column = Randomly.fromList(columns);
         return new QuestDBColumnReference(column);
     }

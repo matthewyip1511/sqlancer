@@ -16,7 +16,7 @@ public class JSQLParserBasedTransformation extends Transformation {
     }
 
     @Override
-    protected void onStatementChanged() {
+    public void onStatementChanged() {
         if (statementChangedHandler != null) {
             statementChangedHandler.accept(this.statement.toString());
         }

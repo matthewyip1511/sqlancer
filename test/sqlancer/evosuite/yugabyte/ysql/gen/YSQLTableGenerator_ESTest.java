@@ -6,7 +6,7 @@
 package sqlancer.evosuite.yugabyte.ysql.gen;
 
 import static org.junit.jupiter.api.Assertions.*;
-import org.evosuite.runtime.Random;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.yugabyte.ysql.gen.YSQLTableGenerator;
 import sqlancer.yugabyte.ysql.YSQLGlobalState;

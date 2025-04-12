@@ -6,6 +6,7 @@
 package sqlancer.evosuite.tidb.oracle;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.tidb.oracle.TiDBDQPOracle;
 import sqlancer.tidb.TiDBProvider;

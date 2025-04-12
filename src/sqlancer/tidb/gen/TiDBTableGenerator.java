@@ -156,7 +156,7 @@ public class TiDBTableGenerator {
         }
     }
 
-    static void appendSpecifiers(StringBuilder sb, TiDBDataType type) {
+    public static void appendSpecifiers(StringBuilder sb, TiDBDataType type) {
         if (type == TiDBDataType.TEXT || type == TiDBDataType.BLOB) {
             sb.append("(");
             sb.append(Randomly.getNotCachedInteger(1, 500));

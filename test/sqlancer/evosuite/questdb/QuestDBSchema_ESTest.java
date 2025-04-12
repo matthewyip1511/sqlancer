@@ -6,16 +6,10 @@
 package sqlancer.evosuite.questdb;
 
 import static org.junit.jupiter.api.Assertions.*;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.LinkedList;
-import java.util.List;
-import org.evosuite.runtime.Random;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.questdb.QuestDBSchema;
-import sqlancer.SQLConnection;
 
 public class QuestDBSchema_ESTest {
 
@@ -81,55 +75,33 @@ public class QuestDBSchema_ESTest {
      * ViolatedAssumptionAnswer()); doReturn("U.(ZCpx**?Z4fE.G", "zd!N \"d^IMORO(}WWJ",
      * "FLOAT").when(resultSet0).getString(anyString());
      */
-    doReturn(true, true, true, false).when(resultSet0).next();
-        PreparedStatement preparedStatement0 = mock(PreparedStatement.class, new ViolatedAssumptionAnswer());
-        doReturn(resultSet0).when(preparedStatement0).executeQuery(anyString());
-        Connection connection0 = mock(Connection.class, new ViolatedAssumptionAnswer());
-        doReturn(preparedStatement0).when(connection0).prepareStatement(anyString());
-        SQLConnection sQLConnection0 = new SQLConnection(connection0);
-        Statement statement0 = sQLConnection0.prepareStatement("=m");
-        Connection connection1 = mock(Connection.class, new ViolatedAssumptionAnswer());
-        doReturn(statement0).when(connection1).createStatement();
-        SQLConnection sQLConnection1 = new SQLConnection(connection1);
-        List<String> list0 = QuestDBSchema.getTableNames(sQLConnection1);
-        assertEquals(3, list0.size());
-    }
-
-    @Test
-    public void test05() throws Throwable {
-        // Undeclared exception!
-        try {
-            QuestDBSchema.getTableNames((SQLConnection) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.questdb.QuestDBSchema", e);
-        }
-    }
-
-    @Test
-    public void test06() throws Throwable {
-        LinkedList<QuestDBSchema.QuestDBTable> linkedList0 = new LinkedList<QuestDBSchema.QuestDBTable>();
-        linkedList0.offer((QuestDBSchema.QuestDBTable) null);
-        QuestDBSchema questDBSchema0 = new QuestDBSchema(linkedList0);
-        // Undeclared exception!
-        try {
-            questDBSchema0.getRandomTableNonEmptyTables();
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.common.schema.AbstractTables", e);
-        }
-    }
-
     /*
-     * Test disabled because it contains mock() function calls that are not implemented
+     * doReturn(true, true, true, false).when(resultSet0).next(); PreparedStatement preparedStatement0 =
+     * mock(PreparedStatement.class, new ViolatedAssumptionAnswer());
+     * doReturn(resultSet0).when(preparedStatement0).executeQuery(anyString()); Connection connection0 =
+     * mock(Connection.class, new ViolatedAssumptionAnswer());
+     * doReturn(preparedStatement0).when(connection0).prepareStatement(anyString()); SQLConnection sQLConnection0 = new
+     * SQLConnection(connection0); Statement statement0 = sQLConnection0.prepareStatement("=m"); Connection connection1
+     * = mock(Connection.class, new ViolatedAssumptionAnswer());
+     * doReturn(statement0).when(connection1).createStatement(); SQLConnection sQLConnection1 = new
+     * SQLConnection(connection1); List<String> list0 = QuestDBSchema.getTableNames(sQLConnection1); assertEquals(3,
+     * list0.size()); }
+     *
+     * @Test public void test05() throws Throwable { // Undeclared exception! try {
+     * QuestDBSchema.getTableNames((SQLConnection) null); fail("Expecting exception: NullPointerException");
+     *
+     * } catch (NullPointerException e) { // // no message in exception (getMessage() returned null) //
+     * verifyException("sqlancer.questdb.QuestDBSchema", e); } }
+     *
+     * @Test public void test06() throws Throwable { LinkedList<QuestDBSchema.QuestDBTable> linkedList0 = new
+     * LinkedList<QuestDBSchema.QuestDBTable>(); linkedList0.offer((QuestDBSchema.QuestDBTable) null); QuestDBSchema
+     * questDBSchema0 = new QuestDBSchema(linkedList0); // Undeclared exception! try {
+     * questDBSchema0.getRandomTableNonEmptyTables(); fail("Expecting exception: NullPointerException");
+     *
+     * } catch (NullPointerException e) { // // no message in exception (getMessage() returned null) //
+     * verifyException("sqlancer.common.schema.AbstractTables", e); } }
+     *
+     * /* Test disabled because it contains mock() function calls that are not implemented
      *
      * @Test public void test07() throws Throwable { QuestDBSchema.QuestDBDataType questDBSchema_QuestDBDataType0 =
      * QuestDBSchema.QuestDBDataType.INT; QuestDBSchema.QuestDBCompositeDataType questDBSchema_QuestDBCompositeDataType0
@@ -220,6 +192,7 @@ public class QuestDBSchema_ESTest {
         assertEquals(QuestDBSchema.QuestDBDataType.BOOLEAN,
                 questDBSchema_QuestDBCompositeDataType0.getPrimitiveDataType());
     }
+}
 
 /*
  * Test disabled because it contains mock() function calls that are not implemented

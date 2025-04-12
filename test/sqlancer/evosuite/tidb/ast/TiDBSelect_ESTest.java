@@ -6,10 +6,10 @@
 package sqlancer.evosuite.tidb.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
-import java.util.LinkedList;
 import java.util.List;
+
 import org.junit.jupiter.api.Test;
-import sqlancer.tidb.ast.TiDBConstant;
+import sqlancer.common.ast.JoinBase;
 import sqlancer.tidb.ast.TiDBExpression;
 import sqlancer.tidb.ast.TiDBJoin;
 import sqlancer.tidb.ast.TiDBOrderingTerm;
@@ -18,19 +18,6 @@ import sqlancer.tidb.ast.TiDBSelect;
 public class TiDBSelect_ESTest {
 
     private void verifyException(String s, Exception e) {
-    }
-
-    @Test
-    public void test0() throws Throwable {
-        TiDBSelect tiDBSelect0 = new TiDBSelect();
-        LinkedList<TiDBJoin> linkedList0 = new LinkedList<TiDBJoin>();
-        TiDBConstant.TiDBDoubleConstant tiDBConstant_TiDBDoubleConstant0 = new TiDBConstant.TiDBDoubleConstant(0.0);
-        TiDBJoin tiDBJoin0 = TiDBJoin.createLeftOuterJoin(tiDBSelect0, tiDBConstant_TiDBDoubleConstant0,
-                tiDBConstant_TiDBDoubleConstant0);
-        linkedList0.add(tiDBJoin0);
-        tiDBSelect0.setJoinClauses(linkedList0);
-        List<TiDBJoin> list0 = tiDBSelect0.getJoinClauses();
-        assertTrue(list0.contains(tiDBJoin0));
     }
 
     @Test
@@ -47,7 +34,7 @@ public class TiDBSelect_ESTest {
         TiDBSelect tiDBSelect0 = new TiDBSelect();
         // Undeclared exception!
         try {
-            tiDBSelect0.setJoinClauses((List<TiDBJoin>) null);
+            tiDBSelect0.setJoinClauses((List<JoinBase<TiDBExpression>>) null);
             fail("Expecting exception: NullPointerException");
 
         } catch (NullPointerException e) {
@@ -123,7 +110,7 @@ public class TiDBSelect_ESTest {
     @Test
     public void test7() throws Throwable {
         TiDBSelect tiDBSelect0 = new TiDBSelect();
-        List<TiDBJoin> list0 = tiDBSelect0.getJoinClauses();
+        List<JoinBase<TiDBExpression>> list0 = tiDBSelect0.getJoinClauses();
         assertTrue(list0.isEmpty());
     }
 

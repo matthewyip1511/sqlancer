@@ -7,6 +7,7 @@ package sqlancer.evosuite.tidb.oracle;
 
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.LinkedList;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.common.gen.ExpressionGenerator;
 import sqlancer.tidb.ast.TiDBExpression;

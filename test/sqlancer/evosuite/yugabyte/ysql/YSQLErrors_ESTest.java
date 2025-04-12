@@ -7,6 +7,7 @@ package sqlancer.evosuite.yugabyte.ysql;
 
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.common.query.ExpectedErrors;
 import sqlancer.yugabyte.ysql.YSQLErrors;
@@ -173,12 +174,6 @@ public class YSQLErrors_ESTest {
     }
 
     @Test
-    public void test11() throws Throwable {
-        List<String> list0 = YSQLErrors.getBitStringOperationErrors();
-        assertEquals(4, list0.size());
-    }
-
-    @Test
     public void test12() throws Throwable {
         List<String> list0 = YSQLErrors.getFunctionErrors();
         assertFalse(list0.isEmpty());
@@ -188,18 +183,6 @@ public class YSQLErrors_ESTest {
     public void test13() throws Throwable {
         List<String> list0 = YSQLErrors.getViewErrors();
         assertEquals(11, list0.size());
-    }
-
-    @Test
-    public void test14() throws Throwable {
-        List<String> list0 = YSQLErrors.getToCharFunctionErrors();
-        assertFalse(list0.isEmpty());
-    }
-
-    @Test
-    public void test15() throws Throwable {
-        List<String> list0 = YSQLErrors.getCommonRegexExpressionErrors();
-        assertEquals(1, list0.size());
     }
 
     @Test

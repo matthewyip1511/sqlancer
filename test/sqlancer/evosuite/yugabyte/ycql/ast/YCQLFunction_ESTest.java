@@ -5,9 +5,10 @@
 
 package sqlancer.evosuite.yugabyte.ycql.ast;
 
-import static org.junit.jupiter.api.Assertions.*;
 import java.util.LinkedList;
+
 import org.junit.jupiter.api.Test;
+
 import sqlancer.yugabyte.ycql.ast.YCQLConstant;
 import sqlancer.yugabyte.ycql.ast.YCQLExpression;
 import sqlancer.yugabyte.ycql.ast.YCQLFunction;

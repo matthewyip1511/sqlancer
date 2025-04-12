@@ -66,7 +66,7 @@ public class RoundDoubleConstant extends Transformation {
     }
 
     @Override
-    protected void onStatementChanged() {
+    public void onStatementChanged() {
         if (statementChangedHandler != null) {
             statementChangedHandler.accept(currentString);
         }

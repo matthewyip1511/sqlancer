@@ -6,6 +6,7 @@
 package sqlancer.evosuite.tidb.gen;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.tidb.gen.TiDBUpdateGenerator;
 import sqlancer.tidb.TiDBProvider;

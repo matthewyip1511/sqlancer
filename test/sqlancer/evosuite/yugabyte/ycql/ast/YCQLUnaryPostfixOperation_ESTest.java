@@ -5,7 +5,6 @@
 
 package sqlancer.evosuite.yugabyte.ycql.ast;
 
-import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import sqlancer.h2.H2ExpressionGenerator;
 import sqlancer.yugabyte.ycql.ast.YCQLConstant;

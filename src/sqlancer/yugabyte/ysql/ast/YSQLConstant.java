@@ -159,7 +159,7 @@ public abstract class YSQLConstant implements YSQLExpression {
         }
 
         @Override
-        protected YSQLConstant isLessThan(YSQLConstant rightVal) {
+        public YSQLConstant isLessThan(YSQLConstant rightVal) {
             if (rightVal.isNull()) {
                 return YSQLConstant.createNullConstant();
             } else if (rightVal.isString()) {
@@ -214,7 +214,7 @@ public abstract class YSQLConstant implements YSQLExpression {
         }
 
         @Override
-        protected YSQLConstant isLessThan(YSQLConstant rightVal) {
+        public YSQLConstant isLessThan(YSQLConstant rightVal) {
             return YSQLConstant.createNullConstant();
         }
 
@@ -274,7 +274,7 @@ public abstract class YSQLConstant implements YSQLExpression {
         }
 
         @Override
-        protected YSQLConstant isLessThan(YSQLConstant rightVal) {
+        public YSQLConstant isLessThan(YSQLConstant rightVal) {
             if (rightVal.isNull()) {
                 return YSQLConstant.createNullConstant();
             } else if (rightVal.isInt()) {
@@ -387,7 +387,7 @@ public abstract class YSQLConstant implements YSQLExpression {
         }
 
         @Override
-        protected YSQLConstant isLessThan(YSQLConstant rightVal) {
+        public YSQLConstant isLessThan(YSQLConstant rightVal) {
             if (rightVal.isNull()) {
                 return YSQLConstant.createNullConstant();
             } else if (rightVal.isInt()) {
@@ -448,7 +448,7 @@ public abstract class YSQLConstant implements YSQLExpression {
         }
 
         @Override
-        protected YSQLConstant isLessThan(YSQLConstant rightVal) {
+        public YSQLConstant isLessThan(YSQLConstant rightVal) {
             return null;
         }
 

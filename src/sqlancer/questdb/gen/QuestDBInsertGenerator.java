@@ -42,7 +42,7 @@ public class QuestDBInsertGenerator extends AbstractInsertGenerator<QuestDBColum
     }
 
     @Override
-    protected void insertColumns(List<QuestDBColumn> columns) {
+    public void insertColumns(List<QuestDBColumn> columns) {
         sb.append("(");
         for (int nrColumn = 0; nrColumn < columns.size(); nrColumn++) {
             if (nrColumn != 0) {
@@ -54,7 +54,7 @@ public class QuestDBInsertGenerator extends AbstractInsertGenerator<QuestDBColum
     }
 
     @Override
-    protected void insertValue(QuestDBColumn questDBColumn) {
+    public void insertValue(QuestDBColumn questDBColumn) {
         sb.append(QuestDBToStringVisitor.asString(new QuestDBExpressionGenerator(globalState).generateConstant()));
     }
 }

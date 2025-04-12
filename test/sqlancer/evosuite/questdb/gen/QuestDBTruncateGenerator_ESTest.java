@@ -6,6 +6,7 @@
 package sqlancer.evosuite.questdb.gen;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.questdb.gen.QuestDBTruncateGenerator;
 import sqlancer.questdb.QuestDBProvider;

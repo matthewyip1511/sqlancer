@@ -6,6 +6,7 @@
 package sqlancer.evosuite.yugabyte.ysql.oracle.tlp;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.yugabyte.ysql.oracle.tlp.YSQLTLPHavingOracle;
 import sqlancer.yugabyte.ysql.YSQLGlobalState;

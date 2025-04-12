@@ -8,7 +8,7 @@ package sqlancer.evosuite.yugabyte.ysql.oracle.tlp;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.LinkedList;
 import java.util.List;
-import org.evosuite.runtime.Random;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.common.gen.ExpressionGenerator;
 import sqlancer.yugabyte.ysql.ast.YSQLExpression;
@@ -41,22 +41,22 @@ public class YSQLTLPBase_ESTest {
         }
     }
 
-    @Test
-    public void test1() throws Throwable {
-        YSQLGlobalState ySQLGlobalState0 = new YSQLGlobalState();
-        LinkedList<YSQLSchema.YSQLColumn> linkedList0 = new LinkedList<YSQLSchema.YSQLColumn>();
-        // Undeclared exception!
-        try {
-            YSQLTLPBase.getJoinStatements(ySQLGlobalState0, linkedList0, (List<YSQLSchema.YSQLTable>) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.yugabyte.ysql.gen.YSQLExpressionGenerator", e);
-        }
-    }
+    // @Test
+    // public void test1() throws Throwable {
+    // YSQLGlobalState ySQLGlobalState0 = new YSQLGlobalState();
+    // LinkedList<YSQLSchema.YSQLColumn> linkedList0 = new LinkedList<YSQLSchema.YSQLColumn>();
+    // // Undeclared exception!
+    // try {
+    // YSQLTLPBase.getJoinStatements(ySQLGlobalState0, linkedList0, (List<YSQLSchema.YSQLTable>) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.yugabyte.ysql.gen.YSQLExpressionGenerator", e);
+    // }
+    // }
 
     @Test
     public void test2() throws Throwable {

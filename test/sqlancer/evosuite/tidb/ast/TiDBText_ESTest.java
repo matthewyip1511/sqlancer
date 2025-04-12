@@ -7,6 +7,7 @@ package sqlancer.evosuite.tidb.ast;
 
 import sqlancer.tidb.ast.TiDBText;
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 
 public class TiDBText_ESTest {

@@ -85,7 +85,7 @@ public class YSQLPivotedQuerySynthesisOracle
     }
 
     @Override
-    protected Query<SQLConnection> getContainmentCheckQuery(Query<?> query) throws SQLException {
+    public Query<SQLConnection> getContainmentCheckQuery(Query<?> query) throws SQLException {
         StringBuilder sb = new StringBuilder();
         sb.append("SELECT * FROM ("); // ANOTHER SELECT TO USE ORDER BY without restrictions
         sb.append(query.getUnterminatedQueryString());
@@ -131,7 +131,7 @@ public class YSQLPivotedQuerySynthesisOracle
     }
 
     @Override
-    protected String getExpectedValues(YSQLExpression expr) {
+    public String getExpectedValues(YSQLExpression expr) {
         return YSQLVisitor.asExpectedValues(expr);
     }
 

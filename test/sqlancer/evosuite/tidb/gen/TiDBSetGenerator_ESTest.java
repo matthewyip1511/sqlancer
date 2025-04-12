@@ -6,7 +6,7 @@
 package sqlancer.evosuite.tidb.gen;
 
 import static org.junit.jupiter.api.Assertions.*;
-import org.evosuite.runtime.Random;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.common.query.SQLQueryAdapter;
 import sqlancer.tidb.gen.TiDBSetGenerator;

@@ -7,6 +7,7 @@ package sqlancer.evosuite.tidb.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.LinkedList;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.common.schema.TableIndex;
 import sqlancer.tidb.ast.TiDBTableReference;

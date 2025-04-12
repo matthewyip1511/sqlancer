@@ -7,6 +7,7 @@ package sqlancer.evosuite.yugabyte.ycql.ast;
 
 import sqlancer.yugabyte.ycql.ast.YCQLSelect;
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 
 public class YCQLSelect_ESTest {

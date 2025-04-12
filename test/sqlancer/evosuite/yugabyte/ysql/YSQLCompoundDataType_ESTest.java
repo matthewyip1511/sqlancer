@@ -7,6 +7,7 @@ package sqlancer.evosuite.yugabyte.ysql;
 
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.Optional;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.yugabyte.ysql.YSQLCompoundDataType;
 import sqlancer.yugabyte.ysql.YSQLSchema;

@@ -5,6 +5,7 @@ import static sqlancer.yugabyte.ysql.YSQLUtils.getJoinStatements;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -49,7 +50,7 @@ public class YSQLTLPBase extends TernaryLogicPartitioningOracleBase<YSQLExpressi
     }
 
     @SuppressWarnings("unchecked")
-    protected void generateSelectBase(List<YSQLTable> tables, List<YSQLJoin> joins) {
+    public void generateSelectBase(List<YSQLTable> tables, List<YSQLJoin> joins) {
         List<YSQLExpression> tableList = tables.stream()
                 .map(t -> new YSQLSelect.YSQLFromTable(t, Randomly.getBoolean())).collect(Collectors.toList());
         gen = new YSQLExpressionGenerator(state).setColumns(targetTables.getColumns());
@@ -64,7 +65,7 @@ public class YSQLTLPBase extends TernaryLogicPartitioningOracleBase<YSQLExpressi
         }
     }
 
-    List<YSQLExpression> generateFetchColumns() {
+    public List<YSQLExpression> generateFetchColumns() {
         if (Randomly.getBooleanWithRatherLowProbability()) {
             return Arrays.asList(new YSQLColumnValue(YSQLColumn.createDummy("*"), null));
         }
@@ -77,7 +78,7 @@ public class YSQLTLPBase extends TernaryLogicPartitioningOracleBase<YSQLExpressi
     }
 
     @Override
-    protected ExpressionGenerator<YSQLExpression> getGen() {
+    public ExpressionGenerator<YSQLExpression> getGen() {
         return gen;
     }
 
