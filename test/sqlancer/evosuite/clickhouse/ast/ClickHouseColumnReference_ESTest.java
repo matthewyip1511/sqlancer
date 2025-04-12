@@ -6,11 +6,14 @@
 package sqlancer.evosuite.clickhouse.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.LinkedList;
+
 import org.junit.jupiter.api.Test;
+
 import sqlancer.clickhouse.ast.ClickHouseAliasOperation;
 import sqlancer.clickhouse.ast.ClickHouseColumnReference;
-import sqlancer.clickhouse.ast.ClickHouseExpression;
+import sqlancer.clickhouse.ast.ClickHouseSubquery;
 import sqlancer.clickhouse.ast.constant.ClickHouseInt16Constant;
 import sqlancer.clickhouse.ClickHouseSchema;
 import sqlancer.common.schema.TableIndex;
@@ -101,7 +104,7 @@ public class ClickHouseColumnReference_ESTest {
 
     @Test
     public void test8() throws Throwable {
-        ClickHouseExpression.ClickHouseSubquery clickHouseExpression_ClickHouseSubquery0 = new ClickHouseExpression.ClickHouseSubquery(
+        ClickHouseSubquery clickHouseExpression_ClickHouseSubquery0 = new ClickHouseSubquery(
                 "");
         ClickHouseAliasOperation clickHouseAliasOperation0 = new ClickHouseAliasOperation(
                 clickHouseExpression_ClickHouseSubquery0, "");

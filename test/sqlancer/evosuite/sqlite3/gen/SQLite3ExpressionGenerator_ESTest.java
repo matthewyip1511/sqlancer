@@ -415,7 +415,6 @@ public class SQLite3ExpressionGenerator_ESTest {
     @Test
     public void test27() throws Throwable {
         SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
-        Random.setNextRandom(47);
         // Undeclared exception!
         try {
             SQLite3ExpressionGenerator.getRandomLiteralValue(sQLite3GlobalState0);
@@ -431,7 +430,6 @@ public class SQLite3ExpressionGenerator_ESTest {
 
     @Test
     public void test28() throws Throwable {
-        Random.setNextRandom(1048033415);
         SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
         // Undeclared exception!
         try {
@@ -448,7 +446,6 @@ public class SQLite3ExpressionGenerator_ESTest {
 
     @Test
     public void test29() throws Throwable {
-        Random.setNextRandom(2432);
         SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
         // Undeclared exception!
         try {
@@ -465,7 +462,6 @@ public class SQLite3ExpressionGenerator_ESTest {
 
     @Test
     public void test30() throws Throwable {
-        Random.setNextRandom(2478);
         SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
         SQLite3Expression sQLite3Expression0 = SQLite3ExpressionGenerator.getRandomLiteralValue(sQLite3GlobalState0);
         assertNull(sQLite3Expression0.getExplicitCollateSequence());

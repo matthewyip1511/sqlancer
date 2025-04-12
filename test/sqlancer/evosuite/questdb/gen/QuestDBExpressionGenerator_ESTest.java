@@ -81,7 +81,6 @@ public class QuestDBExpressionGenerator_ESTest {
 
     @Test
     public void test03() throws Throwable {
-        Random.setNextRandom(6);
         QuestDBProvider.QuestDBGlobalState questDBProvider_QuestDBGlobalState0 = new QuestDBProvider.QuestDBGlobalState();
         QuestDBExpressionGenerator questDBExpressionGenerator0 = new QuestDBExpressionGenerator(
                 questDBProvider_QuestDBGlobalState0);
@@ -128,7 +127,6 @@ public class QuestDBExpressionGenerator_ESTest {
 
     @Test
     public void test05() throws Throwable {
-        Random.setNextRandom((-2075));
         QuestDBProvider.QuestDBGlobalState questDBProvider_QuestDBGlobalState0 = new QuestDBProvider.QuestDBGlobalState();
         QuestDBExpressionGenerator questDBExpressionGenerator0 = new QuestDBExpressionGenerator(
                 questDBProvider_QuestDBGlobalState0);

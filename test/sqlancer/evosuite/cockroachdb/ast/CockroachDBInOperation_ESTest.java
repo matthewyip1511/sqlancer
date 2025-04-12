@@ -6,8 +6,11 @@
 package sqlancer.evosuite.cockroachdb.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.List;
+
 import org.junit.jupiter.api.Test;
+
 import sqlancer.cockroachdb.ast.CockroachDBConcatOperation;
 import sqlancer.cockroachdb.ast.CockroachDBConstant;
 import sqlancer.cockroachdb.ast.CockroachDBExpression;
@@ -16,6 +19,7 @@ import sqlancer.cockroachdb.ast.CockroachDBJoin;
 import sqlancer.cockroachdb.ast.CockroachDBSelect;
 import sqlancer.cockroachdb.CockroachDBProvider;
 import sqlancer.cockroachdb.gen.CockroachDBExpressionGenerator;
+import sqlancer.common.ast.JoinBase;
 
 public class CockroachDBInOperation_ESTest {
 
@@ -51,7 +55,7 @@ public class CockroachDBInOperation_ESTest {
         CockroachDBJoin.JoinType cockroachDBJoin_JoinType0 = CockroachDBJoin.JoinType.FULL;
         CockroachDBJoin cockroachDBJoin0 = CockroachDBJoin.createJoin(cockroachDBSelect0, cockroachDBSelect0,
                 cockroachDBJoin_JoinType0, cockroachDBSelect0);
-        List<CockroachDBJoin> list0 = List.of(cockroachDBJoin0, cockroachDBJoin0, cockroachDBJoin0, cockroachDBJoin0,
+        List<JoinBase<CockroachDBExpression>> list0 = List.of(cockroachDBJoin0, cockroachDBJoin0, cockroachDBJoin0, cockroachDBJoin0,
                 cockroachDBJoin0, cockroachDBJoin0, cockroachDBJoin0);
         cockroachDBSelect0.setJoinClauses(list0);
         List<CockroachDBExpression> list1 = cockroachDBSelect0.getJoinList();

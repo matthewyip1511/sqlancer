@@ -6,6 +6,7 @@
 package sqlancer.evosuite.duckdb.gen;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.duckdb.DuckDBProvider;
 import sqlancer.duckdb.gen.DuckDBRandomQuerySynthesizer;

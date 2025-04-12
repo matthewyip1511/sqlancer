@@ -6,8 +6,11 @@
 package sqlancer.evosuite.cnosdb.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.List;
+
 import org.junit.jupiter.api.Test;
+
 import sqlancer.cnosdb.ast.CnosDBBinaryArithmeticOperation;
 import sqlancer.cnosdb.ast.CnosDBConstant;
 import sqlancer.cnosdb.ast.CnosDBExpression;

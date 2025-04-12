@@ -6,6 +6,7 @@
 package sqlancer.evosuite.common.ast.newast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.LinkedList;
 import java.util.List;
 import org.junit.jupiter.api.Test;
@@ -15,7 +16,7 @@ public class NewFunctionNode_ESTest {
 
     @Test
     public void test0() throws Throwable {
-        Integer integer0 = new Integer(1698);
+        Integer integer0 = 1698;
         NewFunctionNode<Integer, Integer> newFunctionNode0 = new NewFunctionNode<Integer, Integer>((List<Integer>) null,
                 integer0);
         newFunctionNode0.func = integer0;
@@ -28,7 +29,7 @@ public class NewFunctionNode_ESTest {
 
     @Test
     public void test1() throws Throwable {
-        Integer integer0 = new Integer(1698);
+        Integer integer0 = 1698;
         NewFunctionNode<Integer, Integer> newFunctionNode0 = new NewFunctionNode<Integer, Integer>((List<Integer>) null,
                 integer0);
         List<Integer> list0 = newFunctionNode0.getArgs();

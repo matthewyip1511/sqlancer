@@ -45,7 +45,7 @@ public class DataFusionInsertGenerator extends AbstractInsertGenerator<DataFusio
     }
 
     @Override
-    protected void insertValue(DataFusionColumn col) {
+    public void insertValue(DataFusionColumn col) {
         String val = DataFusionToStringVisitor
                 .asString(new DataFusionExpressionGenerator(globalState).generateConstant(col.getType()));
         sb.append(val);

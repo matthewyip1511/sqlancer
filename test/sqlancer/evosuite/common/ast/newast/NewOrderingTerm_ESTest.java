@@ -5,9 +5,11 @@
 
 package sqlancer.evosuite.common.ast.newast;
 
-import sqlancer.common.ast.newast.NewOrderingTerm;
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+
+import sqlancer.common.ast.newast.NewOrderingTerm;
 
 public class NewOrderingTerm_ESTest {
 

@@ -6,6 +6,7 @@
 package sqlancer.evosuite.common.ast.newast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.LinkedList;
 import java.util.List;
 import org.junit.jupiter.api.Test;
@@ -15,7 +16,7 @@ public class NewInOperatorNode_ESTest {
 
     @Test
     public void test0() throws Throwable {
-        Integer integer0 = new Integer((-918));
+        Integer integer0 = (-918);
         LinkedList<Object> linkedList0 = new LinkedList<Object>();
         NewInOperatorNode<Object> newInOperatorNode0 = new NewInOperatorNode<Object>(integer0, linkedList0, false);
         boolean boolean0 = newInOperatorNode0.isNegated();

@@ -6,6 +6,7 @@
 package sqlancer.evosuite.common.oracle;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.cockroachdb.CockroachDBProvider;
 import sqlancer.cockroachdb.oracle.CockroachDBCERTOracle;

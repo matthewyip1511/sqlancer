@@ -6,6 +6,7 @@
 package sqlancer.evosuite.doris;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.common.oracle.TestOracle;
 import sqlancer.doris.DorisOracleFactory;

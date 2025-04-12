@@ -6,8 +6,9 @@
 package sqlancer.evosuite.cockroachdb.gen;
 
 import static org.junit.jupiter.api.Assertions.*;
-import org.evosuite.runtime.Random;
+
 import org.junit.jupiter.api.Test;
+
 import sqlancer.cockroachdb.CockroachDBProvider;
 import sqlancer.cockroachdb.gen.CockroachDBDropViewGenerator;
 
@@ -18,7 +19,6 @@ public class CockroachDBDropViewGenerator_ESTest {
 
     @Test
     public void test0() throws Throwable {
-        Random.setNextRandom((-1));
         CockroachDBProvider.CockroachDBGlobalState cockroachDBProvider_CockroachDBGlobalState0 = new CockroachDBProvider.CockroachDBGlobalState();
         // Undeclared exception!
         try {

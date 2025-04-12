@@ -33,7 +33,6 @@ public class SQLite3ExplainGenerator_ESTest {
 
     @Test
     public void test1() throws Throwable {
-        Random.setNextRandom(1042);
         SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
         // Undeclared exception!
         try {

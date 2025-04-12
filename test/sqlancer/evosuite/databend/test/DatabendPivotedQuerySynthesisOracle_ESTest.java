@@ -6,6 +6,7 @@
 package sqlancer.evosuite.databend.test;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.sql.ResultSet;
 import java.util.function.Consumer;
 import java.util.LinkedList;

@@ -6,6 +6,7 @@
 package sqlancer.evosuite.doris.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.common.ast.newast.NewOrderingTerm;
 import sqlancer.doris.ast.DorisExpression;

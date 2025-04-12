@@ -5,16 +5,18 @@
 
 package sqlancer.evosuite.common.ast.newast;
 
-import sqlancer.common.ast.newast.NewBetweenOperatorNode;
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+
+import sqlancer.common.ast.newast.NewBetweenOperatorNode;
 
 public class NewBetweenOperatorNode_ESTest {
 
     @Test
     public void test0() throws Throwable {
-        Integer integer0 = new Integer((-1));
-        Integer integer1 = new Integer((-1));
+        Integer integer0 = (-1);
+        Integer integer1 = (-1);
         NewBetweenOperatorNode<Object> newBetweenOperatorNode0 = new NewBetweenOperatorNode<Object>(integer0, integer1,
                 integer0, true);
         Object object0 = newBetweenOperatorNode0.getRight();
@@ -27,7 +29,7 @@ public class NewBetweenOperatorNode_ESTest {
         Object object0 = new Object();
         NewBetweenOperatorNode<Object> newBetweenOperatorNode0 = new NewBetweenOperatorNode<Object>(object0, object0,
                 object0, true);
-        Integer integer0 = new Integer(1898);
+        Integer integer0 = 1898;
         newBetweenOperatorNode0.left = (Object) integer0;
         Object object1 = newBetweenOperatorNode0.getRight();
         assertNotNull(object1);
@@ -36,8 +38,8 @@ public class NewBetweenOperatorNode_ESTest {
 
     @Test
     public void test2() throws Throwable {
-        Integer integer0 = new Integer((-1));
-        Integer integer1 = new Integer((-1));
+        Integer integer0 = (-1);
+        Integer integer1 = (-1);
         NewBetweenOperatorNode<Object> newBetweenOperatorNode0 = new NewBetweenOperatorNode<Object>(integer0, integer1,
                 integer0, true);
         newBetweenOperatorNode0.right = (Object) integer1;
@@ -50,7 +52,7 @@ public class NewBetweenOperatorNode_ESTest {
     public void test3() throws Throwable {
         NewBetweenOperatorNode<Object> newBetweenOperatorNode0 = new NewBetweenOperatorNode<Object>((Object) null,
                 (Object) null, (Object) null, true);
-        Integer integer0 = new Integer((-1));
+        Integer integer0 = (-1);
         newBetweenOperatorNode0.middle = (Object) integer0;
         Object object0 = newBetweenOperatorNode0.getLeft();
         assertNull(object0);
@@ -76,7 +78,7 @@ public class NewBetweenOperatorNode_ESTest {
 
     @Test
     public void test6() throws Throwable {
-        Integer integer0 = new Integer((-544));
+        Integer integer0 = (-544);
         NewBetweenOperatorNode<Integer> newBetweenOperatorNode0 = new NewBetweenOperatorNode<Integer>(integer0,
                 integer0, integer0, false);
         Object object0 = new Object();

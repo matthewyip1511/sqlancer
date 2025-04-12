@@ -97,7 +97,6 @@ public class SQLite3InsertGenerator_ESTest {
         SQLite3Schema.SQLite3Table sQLite3Schema_SQLite3Table0 = new SQLite3Schema.SQLite3Table("M&fel7PzG1I$Tm", list0,
                 sQLite3Schema_SQLite3Table_TableKind0, true, true, true, true);
         SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
-        Random.setNextRandom(1956181297);
         // Undeclared exception!
         try {
             SQLite3InsertGenerator.insertRow(sQLite3GlobalState0, sQLite3Schema_SQLite3Table0);

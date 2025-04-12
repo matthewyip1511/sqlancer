@@ -616,7 +616,6 @@ public class TiDBExpressionGenerator_ESTest {
     @Test
     public void test36() throws Throwable {
         TiDBProvider.TiDBGlobalState tiDBProvider_TiDBGlobalState0 = new TiDBProvider.TiDBGlobalState();
-        Random.setNextRandom(31);
         TiDBExpressionGenerator tiDBExpressionGenerator0 = new TiDBExpressionGenerator(tiDBProvider_TiDBGlobalState0);
         // Undeclared exception!
         try {
@@ -634,7 +633,6 @@ public class TiDBExpressionGenerator_ESTest {
     @Test
     public void test37() throws Throwable {
         TiDBProvider.TiDBGlobalState tiDBProvider_TiDBGlobalState0 = new TiDBProvider.TiDBGlobalState();
-        Random.setNextRandom(486);
         TiDBExpressionGenerator tiDBExpressionGenerator0 = new TiDBExpressionGenerator(tiDBProvider_TiDBGlobalState0);
         // Undeclared exception!
         try {
@@ -652,7 +650,6 @@ public class TiDBExpressionGenerator_ESTest {
     @Test
     public void test38() throws Throwable {
         TiDBProvider.TiDBGlobalState tiDBProvider_TiDBGlobalState0 = new TiDBProvider.TiDBGlobalState();
-        Random.setNextRandom(4);
         TiDBExpressionGenerator tiDBExpressionGenerator0 = new TiDBExpressionGenerator(tiDBProvider_TiDBGlobalState0);
         // Undeclared exception!
         try {
@@ -669,7 +666,6 @@ public class TiDBExpressionGenerator_ESTest {
 
     @Test
     public void test39() throws Throwable {
-        Random.setNextRandom(3);
         TiDBProvider.TiDBGlobalState tiDBProvider_TiDBGlobalState0 = new TiDBProvider.TiDBGlobalState();
         TiDBExpressionGenerator tiDBExpressionGenerator0 = new TiDBExpressionGenerator(tiDBProvider_TiDBGlobalState0);
         // Undeclared exception!
@@ -689,7 +685,6 @@ public class TiDBExpressionGenerator_ESTest {
     public void test40() throws Throwable {
         TiDBProvider.TiDBGlobalState tiDBProvider_TiDBGlobalState0 = new TiDBProvider.TiDBGlobalState();
         TiDBExpressionGenerator tiDBExpressionGenerator0 = new TiDBExpressionGenerator(tiDBProvider_TiDBGlobalState0);
-        Random.setNextRandom((-1826));
         TiDBConstant.TiDBBooleanConstant tiDBConstant_TiDBBooleanConstant0 = (TiDBConstant.TiDBBooleanConstant) tiDBExpressionGenerator0
                 .generateConstant();
         assertFalse(tiDBConstant_TiDBBooleanConstant0.getValue());
@@ -716,7 +711,6 @@ public class TiDBExpressionGenerator_ESTest {
     @Test
     public void test42() throws Throwable {
         TiDBProvider.TiDBGlobalState tiDBProvider_TiDBGlobalState0 = new TiDBProvider.TiDBGlobalState();
-        Random.setNextRandom((-13));
         TiDBExpressionGenerator tiDBExpressionGenerator0 = new TiDBExpressionGenerator(tiDBProvider_TiDBGlobalState0);
         // Undeclared exception!
         try {
@@ -753,7 +747,6 @@ public class TiDBExpressionGenerator_ESTest {
 
     @Test
     public void test44() throws Throwable {
-        Random.setNextRandom(432);
         TiDBProvider.TiDBGlobalState tiDBProvider_TiDBGlobalState0 = new TiDBProvider.TiDBGlobalState();
         TiDBExpressionGenerator tiDBExpressionGenerator0 = new TiDBExpressionGenerator(tiDBProvider_TiDBGlobalState0);
         // Undeclared exception!

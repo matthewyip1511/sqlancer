@@ -6,6 +6,7 @@
 package sqlancer.evosuite.duckdb.test;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.duckdb.DuckDBProvider;
 import sqlancer.duckdb.test.DuckDBQueryPartitioningHavingTester;

@@ -6,8 +6,9 @@
 package sqlancer.evosuite.cockroachdb.gen;
 
 import static org.junit.jupiter.api.Assertions.*;
-import org.evosuite.runtime.Random;
+
 import org.junit.jupiter.api.Test;
+
 import sqlancer.cockroachdb.CockroachDBProvider;
 import sqlancer.cockroachdb.gen.CockroachDBSetSessionGenerator;
 import sqlancer.common.query.SQLQueryAdapter;
@@ -20,7 +21,6 @@ public class CockroachDBSetSessionGenerator_ESTest {
     @Test
     public void test0() throws Throwable {
         CockroachDBProvider.CockroachDBGlobalState cockroachDBProvider_CockroachDBGlobalState0 = new CockroachDBProvider.CockroachDBGlobalState();
-        Random.setNextRandom(152);
         SQLQueryAdapter sQLQueryAdapter0 = CockroachDBSetSessionGenerator
                 .create(cockroachDBProvider_CockroachDBGlobalState0);
         assertEquals("SET SESSION VECTORIZE=off;", sQLQueryAdapter0.getQueryString());
@@ -28,7 +28,6 @@ public class CockroachDBSetSessionGenerator_ESTest {
 
     @Test
     public void test1() throws Throwable {
-        Random.setNextRandom(478);
         CockroachDBProvider.CockroachDBGlobalState cockroachDBProvider_CockroachDBGlobalState0 = new CockroachDBProvider.CockroachDBGlobalState();
         SQLQueryAdapter sQLQueryAdapter0 = CockroachDBSetSessionGenerator
                 .create(cockroachDBProvider_CockroachDBGlobalState0);
@@ -38,7 +37,6 @@ public class CockroachDBSetSessionGenerator_ESTest {
     @Test
     public void test2() throws Throwable {
         CockroachDBProvider.CockroachDBGlobalState cockroachDBProvider_CockroachDBGlobalState0 = new CockroachDBProvider.CockroachDBGlobalState();
-        Random.setNextRandom((-409));
         SQLQueryAdapter sQLQueryAdapter0 = CockroachDBSetSessionGenerator
                 .create(cockroachDBProvider_CockroachDBGlobalState0);
         assertEquals("SET SESSION SERIAL_NORMALIZATION='rowid';", sQLQueryAdapter0.getQueryString());
@@ -47,7 +45,6 @@ public class CockroachDBSetSessionGenerator_ESTest {
     @Test
     public void test3() throws Throwable {
         CockroachDBProvider.CockroachDBGlobalState cockroachDBProvider_CockroachDBGlobalState0 = new CockroachDBProvider.CockroachDBGlobalState();
-        Random.setNextRandom(168);
         // Undeclared exception!
         try {
             CockroachDBSetSessionGenerator.create(cockroachDBProvider_CockroachDBGlobalState0);

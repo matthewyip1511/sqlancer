@@ -6,8 +6,11 @@
 package sqlancer.evosuite.cnosdb.gen;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.nio.CharBuffer;
+
 import org.junit.jupiter.api.Test;
+
 import sqlancer.cnosdb.CnosDBSchema;
 import sqlancer.cnosdb.gen.CnosDBCommon;
 

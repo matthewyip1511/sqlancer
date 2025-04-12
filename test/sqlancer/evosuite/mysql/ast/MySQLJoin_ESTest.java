@@ -74,7 +74,6 @@ public class MySQLJoin_ESTest {
 
     @Test
     public void test03() throws Throwable {
-        Random.setNextRandom(2);
         LinkedList<MySQLSchema.MySQLColumn> linkedList0 = new LinkedList<MySQLSchema.MySQLColumn>();
         LinkedList<MySQLSchema.MySQLIndex> linkedList1 = new LinkedList<MySQLSchema.MySQLIndex>();
         MySQLSchema.MySQLTable.MySQLEngine mySQLSchema_MySQLTable_MySQLEngine0 = MySQLSchema.MySQLTable.MySQLEngine.CSV;
@@ -124,7 +123,6 @@ public class MySQLJoin_ESTest {
         linkedList0.addLast((MySQLSchema.MySQLTable) null);
         linkedList0.addLast((MySQLSchema.MySQLTable) null);
         MySQLGlobalState mySQLGlobalState0 = new MySQLGlobalState();
-        Random.setNextRandom(4);
         // Undeclared exception!
         try {
             MySQLJoin.getRandomJoinClauses(linkedList0, mySQLGlobalState0);

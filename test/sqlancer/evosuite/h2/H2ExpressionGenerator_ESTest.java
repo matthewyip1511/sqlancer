@@ -6,9 +6,9 @@
 package sqlancer.evosuite.h2;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.LinkedList;
 import java.util.List;
-import org.evosuite.runtime.Random;
 import org.junit.jupiter.api.Test;
 import sqlancer.common.ast.BinaryOperatorNode;
 import sqlancer.common.schema.AbstractTables;
@@ -172,7 +172,6 @@ public class H2ExpressionGenerator_ESTest {
     @Test
     public void test09() throws Throwable {
         H2Provider.H2GlobalState h2Provider_H2GlobalState0 = new H2Provider.H2GlobalState();
-        Random.setNextRandom(1786);
         H2ExpressionGenerator h2ExpressionGenerator0 = new H2ExpressionGenerator(h2Provider_H2GlobalState0);
         // Undeclared exception!
         try {
@@ -190,7 +189,6 @@ public class H2ExpressionGenerator_ESTest {
     @Test
     public void test10() throws Throwable {
         H2Provider.H2GlobalState h2Provider_H2GlobalState0 = new H2Provider.H2GlobalState();
-        Random.setNextRandom(4);
         H2ExpressionGenerator h2ExpressionGenerator0 = new H2ExpressionGenerator(h2Provider_H2GlobalState0);
         // Undeclared exception!
         try {
@@ -208,7 +206,6 @@ public class H2ExpressionGenerator_ESTest {
     @Test
     public void test11() throws Throwable {
         H2Provider.H2GlobalState h2Provider_H2GlobalState0 = new H2Provider.H2GlobalState();
-        Random.setNextRandom(1623);
         H2ExpressionGenerator h2ExpressionGenerator0 = new H2ExpressionGenerator(h2Provider_H2GlobalState0);
         H2Constant.H2BoolConstant h2Constant_H2BoolConstant0 = (H2Constant.H2BoolConstant) h2ExpressionGenerator0
                 .generateConstant();
@@ -218,7 +215,6 @@ public class H2ExpressionGenerator_ESTest {
     @Test
     public void test12() throws Throwable {
         H2Provider.H2GlobalState h2Provider_H2GlobalState0 = new H2Provider.H2GlobalState();
-        Random.setNextRandom(69823028);
         H2ExpressionGenerator h2ExpressionGenerator0 = new H2ExpressionGenerator(h2Provider_H2GlobalState0);
         // Undeclared exception!
         try {

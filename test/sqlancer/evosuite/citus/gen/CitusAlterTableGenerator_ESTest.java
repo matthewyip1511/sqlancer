@@ -6,10 +6,11 @@
 package sqlancer.evosuite.citus.gen;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.LinkedList;
-import java.util.List;
+
 import org.junit.jupiter.api.Test;
-import sqlancer.citus.CitusGlobalState;
+
 import sqlancer.citus.gen.CitusAlterTableGenerator;
 import sqlancer.postgres.PostgresGlobalState;
 import sqlancer.postgres.PostgresSchema;
@@ -26,7 +27,7 @@ public class CitusAlterTableGenerator_ESTest {
         PostgresSchema.PostgresTable.TableType postgresSchema_PostgresTable_TableType0 = PostgresSchema.PostgresTable.TableType.STANDARD;
         PostgresSchema.PostgresTable postgresSchema_PostgresTable0 = new PostgresSchema.PostgresTable("~2", linkedList0,
                 linkedList1, postgresSchema_PostgresTable_TableType0,
-                (List<PostgresSchema.PostgresStatisticsObject>) null, true, true);
+                 null, true, true);
         PostgresGlobalState postgresGlobalState0 = new PostgresGlobalState();
         // Undeclared exception!
         try {

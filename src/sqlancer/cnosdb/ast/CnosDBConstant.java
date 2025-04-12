@@ -410,7 +410,7 @@ public abstract class CnosDBConstant implements CnosDBExpression {
     public static class TimeStampConstant extends CnosDBConstant {
         final long val;
 
-        TimeStampConstant(long time) {
+        public TimeStampConstant(long time) {
             val = time;
         }
 

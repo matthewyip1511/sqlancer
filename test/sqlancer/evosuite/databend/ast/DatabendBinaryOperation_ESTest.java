@@ -5,7 +5,6 @@
 
 package sqlancer.evosuite.databend.ast;
 
-import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import sqlancer.databend.ast.DatabendBinaryLogicalOperation;
 import sqlancer.databend.ast.DatabendBinaryOperation;

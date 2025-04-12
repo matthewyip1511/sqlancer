@@ -6,15 +6,22 @@
 package sqlancer.evosuite.clickhouse.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.LinkedList;
 import java.util.List;
+
 import org.junit.jupiter.api.Test;
+
 import sqlancer.clickhouse.ast.ClickHouseExpression;
+import sqlancer.clickhouse.ast.ClickHouseJoin;
+import sqlancer.clickhouse.ast.ClickHouseJoinOnClause;
+import sqlancer.clickhouse.ast.ClickHousePostfixText;
 import sqlancer.clickhouse.ast.ClickHouseSelect;
 import sqlancer.clickhouse.ast.ClickHouseTableReference;
 import sqlancer.clickhouse.ast.ClickHouseUnaryPrefixOperation;
 import sqlancer.clickhouse.ast.constant.ClickHouseInt32Constant;
 import sqlancer.clickhouse.ClickHouseSchema;
+import sqlancer.common.ast.JoinBase;
 
 public class ClickHouseSelect_ESTest {
 
@@ -53,27 +60,27 @@ public class ClickHouseSelect_ESTest {
     @Test
     public void test03() throws Throwable {
         ClickHouseSelect clickHouseSelect0 = new ClickHouseSelect();
-        LinkedList<ClickHouseExpression.ClickHouseJoin> linkedList0 = new LinkedList<ClickHouseExpression.ClickHouseJoin>();
+        List<JoinBase<ClickHouseExpression>> linkedList0 = new LinkedList<JoinBase<ClickHouseExpression>>();
         clickHouseSelect0.setJoinClauses(linkedList0);
-        List<ClickHouseExpression.ClickHouseJoin> list0 = clickHouseSelect0.getJoinClauses();
+        List<JoinBase<ClickHouseExpression>> list0 = clickHouseSelect0.getJoinClauses();
         assertTrue(list0.isEmpty());
     }
 
     @Test
     public void test04() throws Throwable {
         ClickHouseSelect clickHouseSelect0 = new ClickHouseSelect();
-        LinkedList<ClickHouseExpression.ClickHouseJoin> linkedList0 = new LinkedList<ClickHouseExpression.ClickHouseJoin>();
-        ClickHouseExpression.ClickHouseJoin.JoinType clickHouseExpression_ClickHouseJoin_JoinType0 = ClickHouseExpression.ClickHouseJoin.JoinType.INNER;
+        LinkedList<JoinBase<ClickHouseExpression>> linkedList0 = new LinkedList<JoinBase<ClickHouseExpression>>();
+        ClickHouseJoin.JoinType clickHouseExpression_ClickHouseJoin_JoinType0 = ClickHouseJoin.JoinType.INNER;
         ClickHouseTableReference clickHouseTableReference0 = new ClickHouseTableReference(
                 (ClickHouseSchema.ClickHouseTable) null, (String) null);
-        ClickHouseExpression.ClickHouseJoinOnClause clickHouseExpression_ClickHouseJoinOnClause0 = new ClickHouseExpression.ClickHouseJoinOnClause(
+        ClickHouseJoinOnClause clickHouseExpression_ClickHouseJoinOnClause0 = new ClickHouseJoinOnClause(
                 clickHouseSelect0, clickHouseTableReference0);
-        ClickHouseExpression.ClickHouseJoin clickHouseExpression_ClickHouseJoin0 = new ClickHouseExpression.ClickHouseJoin(
+        ClickHouseJoin clickHouseExpression_ClickHouseJoin0 = new ClickHouseJoin(
                 (ClickHouseTableReference) null, (ClickHouseTableReference) null,
                 clickHouseExpression_ClickHouseJoin_JoinType0, clickHouseExpression_ClickHouseJoinOnClause0);
         linkedList0.add(clickHouseExpression_ClickHouseJoin0);
         clickHouseSelect0.setJoinClauses(linkedList0);
-        List<ClickHouseExpression.ClickHouseJoin> list0 = clickHouseSelect0.getJoinClauses();
+        List<JoinBase<ClickHouseExpression>> list0 = clickHouseSelect0.getJoinClauses();
         assertFalse(list0.isEmpty());
     }
 
@@ -81,7 +88,7 @@ public class ClickHouseSelect_ESTest {
     public void test05() throws Throwable {
         ClickHouseSelect clickHouseSelect0 = new ClickHouseSelect();
         ClickHouseInt32Constant clickHouseInt32Constant0 = new ClickHouseInt32Constant(0L);
-        ClickHouseExpression.ClickHousePostfixText clickHouseExpression_ClickHousePostfixText0 = new ClickHouseExpression.ClickHousePostfixText(
+        ClickHousePostfixText clickHouseExpression_ClickHousePostfixText0 = new ClickHousePostfixText(
                 "Cng*')OvI9h,", clickHouseInt32Constant0);
         clickHouseSelect0.setHavingClause((ClickHouseExpression) clickHouseExpression_ClickHousePostfixText0);
         clickHouseSelect0.getHavingClause();
@@ -259,8 +266,8 @@ public class ClickHouseSelect_ESTest {
     @Test
     public void test21() throws Throwable {
         ClickHouseSelect clickHouseSelect0 = new ClickHouseSelect();
-        clickHouseSelect0.setJoinClauses((List<ClickHouseExpression.ClickHouseJoin>) null);
-        List<ClickHouseExpression.ClickHouseJoin> list0 = clickHouseSelect0.getJoinClauses();
+        clickHouseSelect0.setJoinClauses((List<JoinBase<ClickHouseExpression>>) null);
+        List<JoinBase<ClickHouseExpression>> list0 = clickHouseSelect0.getJoinClauses();
         assertNull(list0);
     }
 

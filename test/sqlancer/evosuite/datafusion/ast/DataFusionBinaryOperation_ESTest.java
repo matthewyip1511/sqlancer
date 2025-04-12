@@ -5,7 +5,6 @@
 
 package sqlancer.evosuite.datafusion.ast;
 
-import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import sqlancer.datafusion.ast.DataFusionBinaryOperation;
 import sqlancer.datafusion.ast.DataFusionExpression;

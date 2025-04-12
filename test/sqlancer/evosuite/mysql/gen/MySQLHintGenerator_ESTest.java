@@ -51,7 +51,6 @@ public class MySQLHintGenerator_ESTest {
 
     @Test
     public void test2() throws Throwable {
-        Random.setNextRandom((-1946));
         LinkedList<MySQLSchema.MySQLTable> linkedList0 = new LinkedList<MySQLSchema.MySQLTable>();
         // Undeclared exception!
         try {

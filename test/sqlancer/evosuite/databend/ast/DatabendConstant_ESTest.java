@@ -6,6 +6,7 @@
 package sqlancer.evosuite.databend.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.sql.Timestamp;
 import org.junit.jupiter.api.Test;
 import sqlancer.databend.ast.DatabendConstant;

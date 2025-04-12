@@ -6,13 +6,16 @@
 package sqlancer.evosuite.cnosdb;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.Collection;
 import java.util.function.UnaryOperator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
 import java.util.regex.Pattern;
+
 import org.junit.jupiter.api.Test;
+
 import sqlancer.citus.CitusGlobalState;
 import sqlancer.cnosdb.CnosDBComparatorHelper;
 import sqlancer.cnosdb.CnosDBGlobalState;

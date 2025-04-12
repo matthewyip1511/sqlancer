@@ -55,12 +55,12 @@ public class DatabendQueryPartitioningHavingTester extends DatabendQueryPartitio
     }
 
     @Override
-    protected DatabendExpression generatePredicate() {
+    public DatabendExpression generatePredicate() {
         return gen.generateHavingClause();
     }
 
     @Override
-    List<DatabendExpression> generateFetchColumns() {
+    public List<DatabendExpression> generateFetchColumns() {
         return Collections.singletonList(gen.generateHavingClause());
     }
 

@@ -125,7 +125,7 @@ public class CockroachDBCERTOracle extends CERTOracleBase<CockroachDBGlobalState
     }
 
     @Override
-    protected boolean mutateJoin() {
+    public boolean mutateJoin() {
         if (select.getJoinList().isEmpty()) {
             return false;
         }
@@ -147,14 +147,14 @@ public class CockroachDBCERTOracle extends CERTOracleBase<CockroachDBGlobalState
     }
 
     @Override
-    protected boolean mutateDistinct() {
+    public boolean mutateDistinct() {
         boolean increase = select.isDistinct();
         select.setDistinct(!select.isDistinct());
         return increase;
     }
 
     @Override
-    protected boolean mutateWhere() {
+    public boolean mutateWhere() {
         boolean increase = select.getWhereClause() != null;
         if (increase) {
             select.setWhereClause(null);
@@ -165,7 +165,7 @@ public class CockroachDBCERTOracle extends CERTOracleBase<CockroachDBGlobalState
     }
 
     @Override
-    protected boolean mutateGroupBy() {
+    public boolean mutateGroupBy() {
         boolean increase = select.getGroupByExpressions().size() > 0;
         if (increase) {
             select.clearGroupByExpressions();
@@ -176,7 +176,7 @@ public class CockroachDBCERTOracle extends CERTOracleBase<CockroachDBGlobalState
     }
 
     @Override
-    protected boolean mutateHaving() {
+    public boolean mutateHaving() {
         if (select.getGroupByExpressions().size() == 0) {
             select.setGroupByExpressions(select.getFetchColumns());
             select.setHavingClause(gen.generateExpression(CockroachDBDataType.BOOL.get()));
@@ -193,7 +193,7 @@ public class CockroachDBCERTOracle extends CERTOracleBase<CockroachDBGlobalState
     }
 
     @Override
-    protected boolean mutateAnd() {
+    public boolean mutateAnd() {
         if (select.getWhereClause() == null) {
             select.setWhereClause(gen.generateExpression(CockroachDBDataType.BOOL.get()));
         } else {
@@ -205,7 +205,7 @@ public class CockroachDBCERTOracle extends CERTOracleBase<CockroachDBGlobalState
     }
 
     @Override
-    protected boolean mutateOr() {
+    public boolean mutateOr() {
         if (select.getWhereClause() == null) {
             select.setWhereClause(gen.generateExpression(CockroachDBDataType.BOOL.get()));
             return false;
@@ -218,7 +218,7 @@ public class CockroachDBCERTOracle extends CERTOracleBase<CockroachDBGlobalState
     }
 
     @Override
-    protected boolean mutateLimit() {
+    public boolean mutateLimit() {
         boolean increase = select.getLimitClause() != null;
         if (increase) {
             select.setLimitClause(null);

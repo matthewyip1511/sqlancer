@@ -5,9 +5,10 @@
 
 package sqlancer.evosuite.datafusion.ast;
 
-import sqlancer.datafusion.ast.DataFusionConstant;
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+import sqlancer.datafusion.ast.DataFusionConstant;
 
 public class DataFusionConstant_ESTest {
 

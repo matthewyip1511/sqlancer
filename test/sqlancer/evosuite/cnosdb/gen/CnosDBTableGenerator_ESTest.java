@@ -6,7 +6,9 @@
 package sqlancer.evosuite.cnosdb.gen;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+
 import sqlancer.cnosdb.gen.CnosDBTableGenerator;
 import sqlancer.cnosdb.query.CnosDBOtherQuery;
 

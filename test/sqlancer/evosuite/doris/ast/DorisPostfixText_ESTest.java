@@ -6,6 +6,7 @@
 package sqlancer.evosuite.doris.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.doris.ast.DorisConstant;
 import sqlancer.doris.ast.DorisPostfixText;

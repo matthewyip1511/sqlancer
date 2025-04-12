@@ -6,9 +6,12 @@
 package sqlancer.evosuite.cockroachdb.oracle.tlp;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.LinkedList;
 import java.util.List;
+
 import org.junit.jupiter.api.Test;
+
 import sqlancer.cockroachdb.ast.CockroachDBConstant;
 import sqlancer.cockroachdb.ast.CockroachDBExpression;
 import sqlancer.cockroachdb.CockroachDBProvider;

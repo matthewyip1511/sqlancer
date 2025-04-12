@@ -43,7 +43,7 @@ public class H2ExpressionGenerator extends UntypedExpressionGenerator<H2Expressi
     }
 
     @Override
-    protected H2Expression generateExpression(int depth) {
+    public H2Expression generateExpression(int depth) {
         if (depth >= globalState.getOptions().getMaxExpressionDepth() || Randomly.getBoolean()) {
             return generateLeafNode();
         }
@@ -211,7 +211,7 @@ public class H2ExpressionGenerator extends UntypedExpressionGenerator<H2Expressi
     }
 
     @Override
-    protected H2Expression generateColumn() {
+    public H2Expression generateColumn() {
         return new H2ColumnReference(Randomly.fromList(columns));
     }
 

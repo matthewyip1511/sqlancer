@@ -6,10 +6,13 @@
 package sqlancer.evosuite.cnosdb;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+
 import org.junit.jupiter.api.Test;
+
 import sqlancer.cnosdb.ast.CnosDBConstant;
 import sqlancer.cnosdb.client.CnosDBClient;
 import sqlancer.cnosdb.client.CnosDBConnection;

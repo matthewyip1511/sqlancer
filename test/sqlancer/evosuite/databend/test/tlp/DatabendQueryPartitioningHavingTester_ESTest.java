@@ -6,6 +6,7 @@
 package sqlancer.evosuite.databend.test.tlp;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.databend.DatabendProvider;
 import sqlancer.databend.test.tlp.DatabendQueryPartitioningHavingTester;

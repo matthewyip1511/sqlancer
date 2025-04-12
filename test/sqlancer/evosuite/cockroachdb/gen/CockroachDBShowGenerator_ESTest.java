@@ -6,8 +6,9 @@
 package sqlancer.evosuite.cockroachdb.gen;
 
 import static org.junit.jupiter.api.Assertions.*;
-import org.evosuite.runtime.Random;
+
 import org.junit.jupiter.api.Test;
+
 import sqlancer.cockroachdb.CockroachDBProvider;
 import sqlancer.cockroachdb.gen.CockroachDBShowGenerator;
 import sqlancer.common.query.SQLQueryAdapter;
@@ -34,7 +35,6 @@ public class CockroachDBShowGenerator_ESTest {
 
     @Test
     public void test1() throws Throwable {
-        Random.setNextRandom((-2125));
         CockroachDBProvider.CockroachDBGlobalState cockroachDBProvider_CockroachDBGlobalState0 = new CockroachDBProvider.CockroachDBGlobalState();
         SQLQueryAdapter sQLQueryAdapter0 = CockroachDBShowGenerator.show(cockroachDBProvider_CockroachDBGlobalState0);
         assertEquals("SHOW SEQUENCES;", sQLQueryAdapter0.getLogString());
@@ -42,7 +42,6 @@ public class CockroachDBShowGenerator_ESTest {
 
     @Test
     public void test2() throws Throwable {
-        Random.setNextRandom(64);
         SQLQueryAdapter sQLQueryAdapter0 = CockroachDBShowGenerator
                 .show((CockroachDBProvider.CockroachDBGlobalState) null);
         assertEquals("SHOW LOCALITY;", sQLQueryAdapter0.getLogString());
@@ -50,7 +49,6 @@ public class CockroachDBShowGenerator_ESTest {
 
     @Test
     public void test3() throws Throwable {
-        Random.setNextRandom(5);
         CockroachDBShowGenerator.show((CockroachDBProvider.CockroachDBGlobalState) null);
         // Undeclared exception!
         try {
@@ -67,7 +65,6 @@ public class CockroachDBShowGenerator_ESTest {
 
     @Test
     public void test4() throws Throwable {
-        Random.setNextRandom(353);
         SQLQueryAdapter sQLQueryAdapter0 = CockroachDBShowGenerator
                 .show((CockroachDBProvider.CockroachDBGlobalState) null);
         assertEquals("SHOW DATABASES;", sQLQueryAdapter0.getQueryString());
@@ -75,7 +72,6 @@ public class CockroachDBShowGenerator_ESTest {
 
     @Test
     public void test5() throws Throwable {
-        Random.setNextRandom((-2126));
         CockroachDBProvider.CockroachDBGlobalState cockroachDBProvider_CockroachDBGlobalState0 = new CockroachDBProvider.CockroachDBGlobalState();
         SQLQueryAdapter sQLQueryAdapter0 = CockroachDBShowGenerator.show(cockroachDBProvider_CockroachDBGlobalState0);
         assertEquals("SHOW TRACE FOR SESSION;", sQLQueryAdapter0.getQueryString());

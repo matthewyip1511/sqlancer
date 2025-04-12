@@ -208,7 +208,6 @@ public class OceanBaseExpressionGenerator_ESTest {
 
     @Test
     public void test10() throws Throwable {
-        Random.setNextRandom((-4451));
         OceanBaseSelect oceanBaseSelect0 = new OceanBaseSelect();
         OceanBaseGlobalState oceanBaseGlobalState0 = new OceanBaseGlobalState();
         OceanBaseExpressionGenerator oceanBaseExpressionGenerator0 = new OceanBaseExpressionGenerator(
@@ -228,7 +227,6 @@ public class OceanBaseExpressionGenerator_ESTest {
 
     @Test
     public void test11() throws Throwable {
-        Random.setNextRandom(1958052177);
         OceanBaseSelect oceanBaseSelect0 = new OceanBaseSelect();
         OceanBaseGlobalState oceanBaseGlobalState0 = new OceanBaseGlobalState();
         OceanBaseExpressionGenerator oceanBaseExpressionGenerator0 = new OceanBaseExpressionGenerator(
@@ -248,7 +246,6 @@ public class OceanBaseExpressionGenerator_ESTest {
 
     @Test
     public void test12() throws Throwable {
-        Random.setNextRandom((-862));
         OceanBaseSelect oceanBaseSelect0 = new OceanBaseSelect();
         OceanBaseExpressionGenerator oceanBaseExpressionGenerator0 = new OceanBaseExpressionGenerator(
                 (OceanBaseGlobalState) null);
@@ -267,7 +264,6 @@ public class OceanBaseExpressionGenerator_ESTest {
 
     @Test
     public void test13() throws Throwable {
-        Random.setNextRandom(1958052158);
         OceanBaseGlobalState oceanBaseGlobalState0 = new OceanBaseGlobalState();
         OceanBaseExpressionGenerator oceanBaseExpressionGenerator0 = new OceanBaseExpressionGenerator(
                 oceanBaseGlobalState0);
@@ -287,7 +283,6 @@ public class OceanBaseExpressionGenerator_ESTest {
 
     @Test
     public void test14() throws Throwable {
-        Random.setNextRandom(1958052169);
         OceanBaseSelect oceanBaseSelect0 = new OceanBaseSelect();
         OceanBaseGlobalState oceanBaseGlobalState0 = new OceanBaseGlobalState();
         OceanBaseExpressionGenerator oceanBaseExpressionGenerator0 = new OceanBaseExpressionGenerator(
@@ -307,7 +302,6 @@ public class OceanBaseExpressionGenerator_ESTest {
 
     @Test
     public void test15() throws Throwable {
-        Random.setNextRandom(4);
         OceanBaseGlobalState oceanBaseGlobalState0 = new OceanBaseGlobalState();
         OceanBaseExpressionGenerator oceanBaseExpressionGenerator0 = new OceanBaseExpressionGenerator(
                 oceanBaseGlobalState0);

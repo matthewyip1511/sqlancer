@@ -5,9 +5,11 @@
 
 package sqlancer.evosuite.common.ast.newast;
 
-import sqlancer.common.ast.newast.NewAliasNode;
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+
+import sqlancer.common.ast.newast.NewAliasNode;
 
 public class NewAliasNode_ESTest {
 
@@ -21,7 +23,7 @@ public class NewAliasNode_ESTest {
 
     @Test
     public void test1() throws Throwable {
-        Integer integer0 = new Integer(498);
+        Integer integer0 = 498;
         NewAliasNode<Integer> newAliasNode0 = new NewAliasNode<Integer>(integer0, (String) null);
         String string0 = newAliasNode0.getAlias();
         assertNull(string0);
@@ -37,7 +39,7 @@ public class NewAliasNode_ESTest {
 
     @Test
     public void test3() throws Throwable {
-        Integer integer0 = new Integer(1475);
+        Integer integer0 = 1475;
         NewAliasNode<Integer> newAliasNode0 = new NewAliasNode<Integer>(integer0, "p9HZFH'^d2jWwaekEH+");
         String string0 = newAliasNode0.getAlias();
         assertEquals("p9HZFH'^d2jWwaekEH+", string0);

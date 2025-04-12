@@ -18,7 +18,6 @@ public class YSQLTableGenerator_ESTest {
 
     @Test
     public void test0() throws Throwable {
-        Random.setNextRandom(5);
         YSQLGlobalState ySQLGlobalState0 = new YSQLGlobalState();
         // Undeclared exception!
         try {
@@ -36,7 +35,6 @@ public class YSQLTableGenerator_ESTest {
     @Test
     public void test1() throws Throwable {
         YSQLGlobalState ySQLGlobalState0 = new YSQLGlobalState();
-        Random.setNextRandom(1);
         // Undeclared exception!
         try {
             YSQLTableGenerator.generate("~uMo_CxH!_te~pIy", true, ySQLGlobalState0);

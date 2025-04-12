@@ -6,8 +6,11 @@
 package sqlancer.evosuite.clickhouse.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+
 import sqlancer.clickhouse.ast.ClickHouseBinaryArithmeticOperation;
+import sqlancer.clickhouse.ast.ClickHouseExist;
 import sqlancer.clickhouse.ast.ClickHouseExpression;
 import sqlancer.clickhouse.ast.ClickHouseSelect;
 import sqlancer.clickhouse.ast.constant.ClickHouseInt32Constant;
@@ -119,7 +122,7 @@ public class ClickHouseBinaryArithmeticOperation_ESTest {
     public void test9() throws Throwable {
         ClickHouseBinaryArithmeticOperation.ClickHouseBinaryArithmeticOperator clickHouseBinaryArithmeticOperation_ClickHouseBinaryArithmeticOperator0 = ClickHouseBinaryArithmeticOperation.ClickHouseBinaryArithmeticOperator.MINUS;
         ClickHouseInt32Constant clickHouseInt32Constant0 = new ClickHouseInt32Constant(0L);
-        ClickHouseExpression.ClickHouseExist clickHouseExpression_ClickHouseExist0 = new ClickHouseExpression.ClickHouseExist(
+        ClickHouseExist clickHouseExpression_ClickHouseExist0 = new ClickHouseExist(
                 clickHouseInt32Constant0);
         ClickHouseSelect clickHouseSelect0 = new ClickHouseSelect();
         ClickHouseBinaryArithmeticOperation clickHouseBinaryArithmeticOperation0 = ClickHouseBinaryArithmeticOperation

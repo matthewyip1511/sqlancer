@@ -5,9 +5,10 @@
 
 package sqlancer.evosuite.doris.utils;
 
-import sqlancer.doris.utils.DorisNumberUtils;
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+import sqlancer.doris.utils.DorisNumberUtils;
 
 public class DorisNumberUtils_ESTest {
 

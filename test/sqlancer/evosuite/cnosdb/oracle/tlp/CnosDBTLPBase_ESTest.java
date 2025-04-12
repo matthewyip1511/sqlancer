@@ -6,10 +6,12 @@
 package sqlancer.evosuite.cnosdb.oracle.tlp;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.LinkedList;
 import java.util.List;
-import org.evosuite.runtime.Random;
+
 import org.junit.jupiter.api.Test;
+
 import sqlancer.cnosdb.ast.CnosDBExpression;
 import sqlancer.cnosdb.ast.CnosDBJoin;
 import sqlancer.cnosdb.CnosDBGlobalState;
@@ -65,7 +67,6 @@ public class CnosDBTLPBase_ESTest {
 
     @Test
     public void test3() throws Throwable {
-        Random.setNextRandom(1);
         CnosDBGlobalState cnosDBGlobalState0 = new CnosDBGlobalState();
         CnosDBTLPBase cnosDBTLPBase0 = new CnosDBTLPBase(cnosDBGlobalState0);
         List<CnosDBExpression> list0 = cnosDBTLPBase0.generateFetchColumns();

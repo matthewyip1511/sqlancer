@@ -6,7 +6,9 @@
 package sqlancer.evosuite.cockroachdb.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+
 import sqlancer.cockroachdb.ast.CockroachDBColumnReference;
 import sqlancer.cockroachdb.CockroachDBSchema;
 

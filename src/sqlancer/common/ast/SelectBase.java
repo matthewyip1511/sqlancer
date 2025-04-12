@@ -10,7 +10,7 @@ public class SelectBase<T extends Expression<?>> {
 
     List<T> fetchColumns;
     List<T> groupByExpressions = Collections.emptyList();
-    List<T> orderByExpressions = Collections.emptyList();
+    public List<T> orderByExpressions = Collections.emptyList();
     List<T> joinList = Collections.emptyList();
     List<T> fromList;
     T whereClause;

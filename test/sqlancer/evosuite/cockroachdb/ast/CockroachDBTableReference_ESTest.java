@@ -6,8 +6,11 @@
 package sqlancer.evosuite.cockroachdb.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.LinkedList;
+
 import org.junit.jupiter.api.Test;
+
 import sqlancer.cockroachdb.ast.CockroachDBTableReference;
 import sqlancer.cockroachdb.CockroachDBSchema;
 import sqlancer.common.schema.TableIndex;

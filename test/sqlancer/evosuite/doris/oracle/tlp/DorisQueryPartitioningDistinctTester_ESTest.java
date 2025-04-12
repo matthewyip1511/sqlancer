@@ -6,6 +6,7 @@
 package sqlancer.evosuite.doris.oracle.tlp;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.doris.DorisProvider;
 import sqlancer.doris.oracle.tlp.DorisQueryPartitioningDistinctTester;

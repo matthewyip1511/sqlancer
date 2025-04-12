@@ -5,7 +5,6 @@
 
 package sqlancer.evosuite.databend.ast;
 
-import static org.junit.jupiter.api.Assertions.*;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import sqlancer.databend.ast.DatabendExpression;

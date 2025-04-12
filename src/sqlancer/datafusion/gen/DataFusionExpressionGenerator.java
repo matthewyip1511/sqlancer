@@ -47,7 +47,7 @@ public final class DataFusionExpressionGenerator
     }
 
     @Override
-    protected DataFusionDataType getRandomType() {
+    public DataFusionDataType getRandomType() {
         DataFusionDataType dt;
         do {
             dt = Randomly.fromOptions(DataFusionDataType.values());
@@ -57,12 +57,12 @@ public final class DataFusionExpressionGenerator
     }
 
     @Override
-    protected boolean canGenerateColumnOfType(DataFusionDataType type) {
+    public boolean canGenerateColumnOfType(DataFusionDataType type) {
         return true;
     }
 
     @Override
-    protected DataFusionExpression generateExpression(DataFusionDataType type, int depth) {
+    public DataFusionExpression generateExpression(DataFusionDataType type, int depth) {
         if (depth >= globalState.getOptions().getMaxExpressionDepth() || Randomly.getBoolean()) {
             DataFusionDataType expectedType = type;
             if (Randomly.getBooleanWithRatherLowProbability()) { // ~10%
@@ -181,7 +181,7 @@ public final class DataFusionExpressionGenerator
         return new DataFusionFunction<DataFusionBaseExpr>(argExpressions, exprType);
     }
 
-    List<DataFusionColumn> filterColumns(DataFusionDataType type) {
+    public List<DataFusionColumn> filterColumns(DataFusionDataType type) {
         if (columns == null) {
             return Collections.emptyList();
         } else {
@@ -190,7 +190,7 @@ public final class DataFusionExpressionGenerator
     }
 
     @Override
-    protected DataFusionExpression generateColumn(DataFusionDataType type) {
+    public DataFusionExpression generateColumn(DataFusionDataType type) {
         // HACK: if no col of such type exist, generate constant value instead
         List<DataFusionColumn> colsOfType = filterColumns(type);
         if (colsOfType.isEmpty()) {

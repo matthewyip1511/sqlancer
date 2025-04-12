@@ -111,7 +111,6 @@ public class YSQLTLPBase_ESTest {
     public void test5() throws Throwable {
         YSQLGlobalState ySQLGlobalState0 = new YSQLGlobalState();
         YSQLTLPBase ySQLTLPBase0 = new YSQLTLPBase(ySQLGlobalState0);
-        Random.setNextRandom(2391);
         List<YSQLExpression> list0 = ySQLTLPBase0.generateFetchColumns();
         assertEquals(1, list0.size());
     }

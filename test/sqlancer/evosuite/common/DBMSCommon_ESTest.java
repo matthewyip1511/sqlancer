@@ -6,6 +6,7 @@
 package sqlancer.evosuite.common;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.ConcurrentModificationException;
 import java.util.LinkedList;
 import java.util.List;

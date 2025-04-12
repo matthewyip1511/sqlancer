@@ -22,7 +22,6 @@ public class OceanBaseHintGenerator_ESTest {
     @Test
     public void test00() throws Throwable {
         OceanBaseSelect oceanBaseSelect0 = new OceanBaseSelect();
-        Random.setNextRandom(63686731);
         LinkedList<OceanBaseSchema.OceanBaseColumn> linkedList0 = new LinkedList<OceanBaseSchema.OceanBaseColumn>();
         LinkedList<OceanBaseSchema.OceanBaseIndex> linkedList1 = new LinkedList<OceanBaseSchema.OceanBaseIndex>();
         OceanBaseSchema.OceanBaseTable oceanBaseSchema_OceanBaseTable0 = new OceanBaseSchema.OceanBaseTable(
@@ -37,7 +36,6 @@ public class OceanBaseHintGenerator_ESTest {
  * Test disabled because it contains mock() function calls that are not implemented
  *
  * @Test public void test01() throws Throwable { OceanBaseSelect oceanBaseSelect0 = new OceanBaseSelect();
- * Random.setNextRandom(1790); LinkedList<OceanBaseSchema.OceanBaseColumn> linkedList0 = new
  * LinkedList<OceanBaseSchema.OceanBaseColumn>(); LinkedList<OceanBaseSchema.OceanBaseIndex> linkedList1 = new
  * LinkedList<OceanBaseSchema.OceanBaseIndex>(); OceanBaseSchema.OceanBaseTable oceanBaseSchema_OceanBaseTable0 = new
  * OceanBaseSchema.OceanBaseTable( "9ft&eh({/))9<", linkedList0, linkedList1); OceanBaseSchema.OceanBaseIndex
@@ -57,7 +55,6 @@ public class OceanBaseHintGenerator_ESTest {
  * linkedList0); List<OceanBaseSchema.OceanBaseTable> list1 = List.of(oceanBaseSchema_OceanBaseTable0,
  * oceanBaseSchema_OceanBaseTable0, oceanBaseSchema_OceanBaseTable0, oceanBaseSchema_OceanBaseTable0,
  * oceanBaseSchema_OceanBaseTable0, oceanBaseSchema_OceanBaseTable0, oceanBaseSchema_OceanBaseTable0,
- * oceanBaseSchema_OceanBaseTable0); Random.setNextRandom(10); OceanBaseHintGenerator.generateHints(oceanBaseSelect0,
  * list1); assertEquals(OceanBaseSelect.SelectType.ALL, oceanBaseSelect0.getFromOptions()); }
  *
  * @Test public void test03() throws Throwable { OceanBaseSelect oceanBaseSelect0 = new OceanBaseSelect();
@@ -75,11 +72,9 @@ public class OceanBaseHintGenerator_ESTest {
  * List<OceanBaseSchema.OceanBaseTable> list2 = List.of(oceanBaseSchema_OceanBaseTable0,
  * oceanBaseSchema_OceanBaseTable0, oceanBaseSchema_OceanBaseTable0, oceanBaseSchema_OceanBaseTable0,
  * oceanBaseSchema_OceanBaseTable0, oceanBaseSchema_OceanBaseTable0, oceanBaseSchema_OceanBaseTable0,
- * oceanBaseSchema_OceanBaseTable0); Random.setNextRandom(2344); OceanBaseHintGenerator.generateHints(oceanBaseSelect0,
  * list2); OceanBaseHintGenerator.generateHints(oceanBaseSelect0, list2); assertEquals(8, list2.size()); }
  *
  * @Test public void test04() throws Throwable { OceanBaseSelect oceanBaseSelect0 = new OceanBaseSelect();
- * Random.setNextRandom(78); LinkedList<OceanBaseSchema.OceanBaseColumn> linkedList0 = new
  * LinkedList<OceanBaseSchema.OceanBaseColumn>(); LinkedList<OceanBaseSchema.OceanBaseIndex> linkedList1 = new
  * LinkedList<OceanBaseSchema.OceanBaseIndex>(); OceanBaseSchema.OceanBaseTable oceanBaseSchema_OceanBaseTable0 = new
  * OceanBaseSchema.OceanBaseTable( "sqlancer.oceanbase.ast.OceanBaseComputableFunction", linkedList0, linkedList1);
@@ -103,13 +98,11 @@ public class OceanBaseHintGenerator_ESTest {
  *
  * @Test public void test06() throws Throwable { OceanBaseSelect oceanBaseSelect0 = new OceanBaseSelect();
  * LinkedList<OceanBaseSchema.OceanBaseTable> linkedList0 = new LinkedList<OceanBaseSchema.OceanBaseTable>();
- * Random.setNextRandom(3014); // Undeclared exception! try { OceanBaseHintGenerator.generateHints(oceanBaseSelect0,
  * linkedList0); fail("Expecting exception: IndexOutOfBoundsException");
  *
  * } catch (IndexOutOfBoundsException e) { // // Index: 0, Size: 0 // verifyException("java.util.LinkedList", e); } }
  *
  * @Test public void test07() throws Throwable { OceanBaseSelect oceanBaseSelect0 = new OceanBaseSelect();
- * List<OceanBaseSchema.OceanBaseTable> list0 = List.of(); Random.setNextRandom(1790); // Undeclared exception! try {
  * OceanBaseHintGenerator.generateHints(oceanBaseSelect0, list0);
  * fail("Expecting exception: ArrayIndexOutOfBoundsException");
  *
@@ -127,7 +120,6 @@ public class OceanBaseHintGenerator_ESTest {
  * OceanBaseHintGenerator(oceanBaseSelect0, list1); }
  *
  * @Test public void test09() throws Throwable { OceanBaseSelect oceanBaseSelect0 = new OceanBaseSelect();
- * Random.setNextRandom(1790); LinkedList<OceanBaseSchema.OceanBaseColumn> linkedList0 = new
  * LinkedList<OceanBaseSchema.OceanBaseColumn>(); LinkedList<OceanBaseSchema.OceanBaseIndex> linkedList1 = new
  * LinkedList<OceanBaseSchema.OceanBaseIndex>(); OceanBaseSchema.OceanBaseTable oceanBaseSchema_OceanBaseTable0 = new
  * OceanBaseSchema.OceanBaseTable("t%d", linkedList0, linkedList1); linkedList1.add((OceanBaseSchema.OceanBaseIndex)
@@ -140,29 +132,24 @@ public class OceanBaseHintGenerator_ESTest {
  * verifyException("sqlancer.oceanbase.gen.OceanBaseHintGenerator", e); } }
  *
  * @Test public void test10() throws Throwable { OceanBaseSelect oceanBaseSelect0 = new OceanBaseSelect();
- * Random.setNextRandom(1799); LinkedList<OceanBaseSchema.OceanBaseTable> linkedList0 = new
  * LinkedList<OceanBaseSchema.OceanBaseTable>(); OceanBaseHintGenerator.generateHints(oceanBaseSelect0, linkedList0);
  * assertEquals(OceanBaseSelect.SelectType.ALL, oceanBaseSelect0.getFromOptions()); }
  *
  * @Test public void test11() throws Throwable { OceanBaseSelect oceanBaseSelect0 = new OceanBaseSelect();
- * Random.setNextRandom(3344); LinkedList<OceanBaseSchema.OceanBaseTable> linkedList0 = new
  * LinkedList<OceanBaseSchema.OceanBaseTable>(); OceanBaseHintGenerator.generateHints(oceanBaseSelect0, linkedList0);
  * assertEquals(OceanBaseSelect.SelectType.ALL, oceanBaseSelect0.getFromOptions()); }
  *
  * @Test public void test12() throws Throwable { OceanBaseSelect oceanBaseSelect0 = new OceanBaseSelect();
  * LinkedList<OceanBaseSchema.OceanBaseTable> linkedList0 = new LinkedList<OceanBaseSchema.OceanBaseTable>();
- * Random.setNextRandom(1110); // Undeclared exception! try { OceanBaseHintGenerator.generateHints(oceanBaseSelect0,
  * linkedList0); fail("Expecting exception: AssertionError");
  *
  * } catch (AssertionError e) { // // [] 1 // } }
  *
  * @Test public void test13() throws Throwable { OceanBaseSelect oceanBaseSelect0 = new OceanBaseSelect();
- * Random.setNextRandom(1829); OceanBaseHintGenerator.generateHints(oceanBaseSelect0,
  * (List<OceanBaseSchema.OceanBaseTable>) null); assertEquals(OceanBaseSelect.SelectType.ALL,
  * oceanBaseSelect0.getFromOptions()); }
  *
  * @Test public void test14() throws Throwable { OceanBaseSelect oceanBaseSelect0 = new OceanBaseSelect();
- * Random.setNextRandom(1790); LinkedList<OceanBaseSchema.OceanBaseColumn> linkedList0 = new
  * LinkedList<OceanBaseSchema.OceanBaseColumn>(); LinkedList<OceanBaseSchema.OceanBaseIndex> linkedList1 = new
  * LinkedList<OceanBaseSchema.OceanBaseIndex>(); OceanBaseSchema.OceanBaseTable oceanBaseSchema_OceanBaseTable0 = new
  * OceanBaseSchema.OceanBaseTable("t%d", linkedList0, linkedList1); List<OceanBaseSchema.OceanBaseTable> list0 =
@@ -175,35 +162,28 @@ public class OceanBaseHintGenerator_ESTest {
  *
  * @Test public void test15() throws Throwable { OceanBaseSelect oceanBaseSelect0 = new OceanBaseSelect();
  * LinkedList<OceanBaseSchema.OceanBaseTable> linkedList0 = new LinkedList<OceanBaseSchema.OceanBaseTable>();
- * Random.setNextRandom(1105); OceanBaseHintGenerator.generateHints(oceanBaseSelect0, linkedList0);
  * assertEquals(OceanBaseSelect.SelectType.ALL, oceanBaseSelect0.getFromOptions()); }
  *
  * @Test public void test16() throws Throwable { OceanBaseSelect oceanBaseSelect0 = new OceanBaseSelect();
- * Random.setNextRandom(1930); OceanBaseHintGenerator.generateHints(oceanBaseSelect0,
  * (List<OceanBaseSchema.OceanBaseTable>) null); assertEquals(OceanBaseSelect.SelectType.ALL,
  * oceanBaseSelect0.getFromOptions()); }
  *
  * @Test public void test17() throws Throwable { OceanBaseSelect oceanBaseSelect0 = new OceanBaseSelect();
  * LinkedList<OceanBaseSchema.OceanBaseTable> linkedList0 = new LinkedList<OceanBaseSchema.OceanBaseTable>();
- * Random.setNextRandom(4413); OceanBaseHintGenerator.generateHints(oceanBaseSelect0, linkedList0);
  * assertEquals(OceanBaseSelect.SelectType.ALL, oceanBaseSelect0.getFromOptions()); }
  *
  * @Test public void test18() throws Throwable { List<OceanBaseSchema.OceanBaseTable> list0 = List.of();
- * Random.setNextRandom(55); OceanBaseSelect oceanBaseSelect0 = new OceanBaseSelect();
  * OceanBaseHintGenerator.generateHints(oceanBaseSelect0, list0); assertEquals(OceanBaseSelect.SelectType.ALL,
  * oceanBaseSelect0.getFromOptions()); }
  *
  * @Test public void test19() throws Throwable { List<OceanBaseSchema.OceanBaseTable> list0 = List.of();
- * Random.setNextRandom((-6028)); OceanBaseSelect oceanBaseSelect0 = new OceanBaseSelect();
  * OceanBaseHintGenerator.generateHints(oceanBaseSelect0, list0); assertEquals(0, list0.size()); }
  *
  * @Test public void test20() throws Throwable { OceanBaseSelect oceanBaseSelect0 = new OceanBaseSelect();
- * Random.setNextRandom(15); LinkedList<OceanBaseSchema.OceanBaseTable> linkedList0 = new
  * LinkedList<OceanBaseSchema.OceanBaseTable>(); OceanBaseHintGenerator.generateHints(oceanBaseSelect0, linkedList0);
  * assertEquals(0, linkedList0.size()); }
  *
  * @Test public void test21() throws Throwable { OceanBaseSelect oceanBaseSelect0 = new OceanBaseSelect();
- * Random.setNextRandom(1812); LinkedList<OceanBaseSchema.OceanBaseTable> linkedList0 = new
  * LinkedList<OceanBaseSchema.OceanBaseTable>(); OceanBaseHintGenerator.generateHints(oceanBaseSelect0, linkedList0);
  * assertEquals(0, linkedList0.size()); } }
  */

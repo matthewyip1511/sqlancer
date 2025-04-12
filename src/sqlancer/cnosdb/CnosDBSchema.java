@@ -58,7 +58,7 @@ public class CnosDBSchema extends AbstractSchema<CnosDBGlobalState, CnosDBSchema
         return new CnosDBSchema(tables, con.getClient().getDatabase());
     }
 
-    protected static List<CnosDBColumn> getTableColumns(CnosDBConnection con, String tableName) throws Exception {
+    public static List<CnosDBColumn> getTableColumns(CnosDBConnection con, String tableName) throws Exception {
         CnosDBResultSet columnsRes = con.getClient().executeQuery("DESCRIBE TABLE " + tableName);
         List<CnosDBColumn> columns = new ArrayList<>();
         CnosDBTable table = new CnosDBTable(tableName, columns);
@@ -154,7 +154,7 @@ public class CnosDBSchema extends AbstractSchema<CnosDBGlobalState, CnosDBSchema
 
     public static class CnosDBRowValue extends AbstractRowValue<CnosDBTables, CnosDBColumn, CnosDBConstant> {
 
-        protected CnosDBRowValue(CnosDBTables tables, Map<CnosDBColumn, CnosDBConstant> values) {
+        public CnosDBRowValue(CnosDBTables tables, Map<CnosDBColumn, CnosDBConstant> values) {
             super(tables, values);
         }
 

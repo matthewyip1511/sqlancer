@@ -41,7 +41,7 @@ public class DatabendInsertGenerator extends AbstractInsertGenerator<DatabendCol
     }
 
     @Override
-    protected void insertValue(DatabendColumn column) {
+    public void insertValue(DatabendColumn column) {
         // TODO: 等Databend实现DEFAULT关键字,暂时注入普通的value
         // if (Randomly.getBooleanWithRatherLowProbability()) {
         // sb.append("DEFAULT");

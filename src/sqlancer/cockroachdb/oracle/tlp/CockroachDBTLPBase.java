@@ -28,8 +28,8 @@ public class CockroachDBTLPBase
         implements TestOracle<CockroachDBGlobalState> {
 
     CockroachDBSchema s;
-    CockroachDBTables targetTables;
-    CockroachDBExpressionGenerator gen;
+    public CockroachDBTables targetTables;
+    public CockroachDBExpressionGenerator gen;
     CockroachDBSelect select;
 
     public CockroachDBTLPBase(CockroachDBGlobalState state) {
@@ -54,7 +54,7 @@ public class CockroachDBTLPBase
         select.setWhereClause(null);
     }
 
-    List<CockroachDBExpression> generateFetchColumns() {
+    public List<CockroachDBExpression> generateFetchColumns() {
         List<CockroachDBExpression> columns = new ArrayList<>();
         if (Randomly.getBoolean() || targetTables.getColumns().size() == 0) {
             columns.add(new CockroachDBColumnReference(new CockroachDBColumn("*", null, false, false)));
@@ -66,7 +66,7 @@ public class CockroachDBTLPBase
     }
 
     @Override
-    protected ExpressionGenerator<CockroachDBExpression> getGen() {
+    public ExpressionGenerator<CockroachDBExpression> getGen() {
         return gen;
     }
 

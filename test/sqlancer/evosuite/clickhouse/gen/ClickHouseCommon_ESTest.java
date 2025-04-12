@@ -6,9 +6,12 @@
 package sqlancer.evosuite.clickhouse.gen;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.LinkedList;
 import java.util.List;
+
 import org.junit.jupiter.api.Test;
+
 import sqlancer.clickhouse.ClickHouseSchema;
 import sqlancer.clickhouse.gen.ClickHouseCommon;
 import sqlancer.common.schema.TableIndex;

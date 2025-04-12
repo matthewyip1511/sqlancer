@@ -130,8 +130,6 @@ public class MariaDBExpressionGenerator_ESTest {
 
     @Test
     public void test05() throws Throwable {
-        Random.setNextRandom((-735));
-        Random.setNextRandom(833);
         Randomly randomly0 = new Randomly(833);
         MariaDBExpressionGenerator mariaDBExpressionGenerator0 = new MariaDBExpressionGenerator(randomly0);
         MariaDBSchema.MariaDBColumn[] mariaDBSchema_MariaDBColumnArray0 = new MariaDBSchema.MariaDBColumn[5];
@@ -491,7 +489,6 @@ public class MariaDBExpressionGenerator_ESTest {
  * } catch (IllegalStateException e) { // // no message in exception (getMessage() returned null) //
  * verifyException("sqlancer.common.ast.SelectBase", e); } }
  *
- * @Test public void test26() throws Throwable { Randomly randomly0 = new Randomly(); Random.setNextRandom((-714));
  * MariaDBExpressionGenerator mariaDBExpressionGenerator0 = new MariaDBExpressionGenerator(randomly0);
  * mariaDBExpressionGenerator0.generateSelect(); }
  *

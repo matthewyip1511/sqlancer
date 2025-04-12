@@ -6,11 +6,12 @@
 package sqlancer.evosuite.common.visitor;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.math.BigInteger;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import sqlancer.clickhouse.ast.ClickHouseBinaryLogicalOperation;
-import sqlancer.clickhouse.ast.ClickHouseExpression;
+import sqlancer.clickhouse.ast.ClickHousePostfixText;
 import sqlancer.clickhouse.ast.constant.ClickHouseUInt128Constant;
 import sqlancer.clickhouse.ast.constant.ClickHouseUInt256Constant;
 import sqlancer.clickhouse.ClickHouseToStringVisitor;
@@ -231,7 +232,7 @@ public class ToStringVisitor_ESTest {
         ClickHouseToStringVisitor clickHouseToStringVisitor0 = new ClickHouseToStringVisitor();
         BigInteger bigInteger0 = BigInteger.TEN;
         ClickHouseUInt256Constant clickHouseUInt256Constant0 = new ClickHouseUInt256Constant(bigInteger0);
-        ClickHouseExpression.ClickHousePostfixText clickHouseExpression_ClickHousePostfixText0 = new ClickHouseExpression.ClickHousePostfixText(
+        ClickHousePostfixText clickHouseExpression_ClickHousePostfixText0 = new ClickHousePostfixText(
                 "varbit_ops", clickHouseUInt256Constant0);
         ClickHouseBinaryLogicalOperation.ClickHouseBinaryLogicalOperator clickHouseBinaryLogicalOperation_ClickHouseBinaryLogicalOperator0 = ClickHouseBinaryLogicalOperation.ClickHouseBinaryLogicalOperator.OR;
         ClickHouseBinaryLogicalOperation clickHouseBinaryLogicalOperation0 = new ClickHouseBinaryLogicalOperation(

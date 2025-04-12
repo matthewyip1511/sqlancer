@@ -22,7 +22,7 @@ public class CnosDBTLPWhereOracle extends CnosDBTLPBase {
         whereCheck();
     }
 
-    protected void whereCheck() throws Exception {
+    public void whereCheck() throws Exception {
         if (Randomly.getBooleanWithRatherLowProbability()) {
             select.setOrderByClauses(gen.generateOrderBy());
         }

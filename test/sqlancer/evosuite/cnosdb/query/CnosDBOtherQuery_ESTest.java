@@ -6,7 +6,9 @@
 package sqlancer.evosuite.cnosdb.query;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+
 import sqlancer.cnosdb.CnosDBGlobalState;
 import sqlancer.cnosdb.query.CnosDBOtherQuery;
 import sqlancer.common.query.ExpectedErrors;

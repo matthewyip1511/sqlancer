@@ -110,7 +110,6 @@ public class YCQLExpressionGenerator_ESTest {
     @Test
     public void test06() throws Throwable {
         YCQLProvider.YCQLGlobalState yCQLProvider_YCQLGlobalState0 = new YCQLProvider.YCQLGlobalState();
-        Random.setNextRandom((-3983));
         YCQLExpressionGenerator yCQLExpressionGenerator0 = new YCQLExpressionGenerator(yCQLProvider_YCQLGlobalState0);
         // Undeclared exception!
         try {
@@ -127,7 +126,6 @@ public class YCQLExpressionGenerator_ESTest {
 
     @Test
     public void test07() throws Throwable {
-        Random.setNextRandom((-32));
         YCQLProvider.YCQLGlobalState yCQLProvider_YCQLGlobalState0 = new YCQLProvider.YCQLGlobalState();
         YCQLExpressionGenerator yCQLExpressionGenerator0 = new YCQLExpressionGenerator(yCQLProvider_YCQLGlobalState0);
         // Undeclared exception!
@@ -145,7 +143,6 @@ public class YCQLExpressionGenerator_ESTest {
 
     @Test
     public void test08() throws Throwable {
-        Random.setNextRandom(6);
         YCQLProvider.YCQLGlobalState yCQLProvider_YCQLGlobalState0 = new YCQLProvider.YCQLGlobalState();
         YCQLExpressionGenerator yCQLExpressionGenerator0 = new YCQLExpressionGenerator(yCQLProvider_YCQLGlobalState0);
         // Undeclared exception!
@@ -163,7 +160,6 @@ public class YCQLExpressionGenerator_ESTest {
 
     @Test
     public void test09() throws Throwable {
-        Random.setNextRandom((-5));
         YCQLProvider.YCQLGlobalState yCQLProvider_YCQLGlobalState0 = new YCQLProvider.YCQLGlobalState();
         YCQLExpressionGenerator yCQLExpressionGenerator0 = new YCQLExpressionGenerator(yCQLProvider_YCQLGlobalState0);
         YCQLConstant.YCQLBooleanConstant yCQLConstant_YCQLBooleanConstant0 = (YCQLConstant.YCQLBooleanConstant) yCQLExpressionGenerator0

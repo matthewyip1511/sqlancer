@@ -6,10 +6,9 @@
 package sqlancer.evosuite.datafusion;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.nio.file.InvalidPathException;
 import java.util.List;
-import org.evosuite.runtime.testdata.EvoSuiteFile;
-import org.evosuite.runtime.testdata.FileSystemHandling;
 import org.junit.jupiter.api.Test;
 import sqlancer.citus.CitusGlobalState;
 import sqlancer.datafusion.DataFusionProvider;
@@ -20,23 +19,6 @@ public class DataFusionUtil_ESTest {
     private void verifyException(String s, Exception e) {
     }
 
-    @Test
-    public void test00() throws Throwable {
-        DataFusionProvider.DataFusionGlobalState dataFusionProvider_DataFusionGlobalState0 = new DataFusionProvider.DataFusionGlobalState();
-        FileSystemHandling.shouldAllThrowIOExceptions();
-        DataFusionUtil.DataFusionLogger.DataFusionLogType dataFusionUtil_DataFusionLogger_DataFusionLogType0 = DataFusionUtil.DataFusionLogger.DataFusionLogType.ERROR;
-        // Undeclared exception!
-        try {
-            dataFusionProvider_DataFusionGlobalState0.dfLogger
-                    .appendToLog(dataFusionUtil_DataFusionLogger_DataFusionLogType0, "");
-            fail("Expecting exception: AssertionError");
-
-        } catch (AssertionError e) {
-            //
-            // Failed to write to ERROR log: Simulated IOException
-            //
-        }
-    }
 
     @Test
     public void test01() throws Throwable {
@@ -127,24 +109,7 @@ public class DataFusionUtil_ESTest {
         }
     }
 
-    @Test
-    public void test07() throws Throwable {
-        FileSystemHandling.shouldAllThrowIOExceptions();
-        DataFusionUtil.DataFusionInstanceID dataFusionUtil_DataFusionInstanceID0 = new DataFusionUtil.DataFusionInstanceID(
-                (String) null);
-        DataFusionUtil.DataFusionLogger dataFusionUtil_DataFusionLogger0 = null;
-        try {
-            dataFusionUtil_DataFusionLogger0 = new DataFusionUtil.DataFusionLogger(
-                    (DataFusionProvider.DataFusionGlobalState) null, dataFusionUtil_DataFusionInstanceID0);
-            fail("Expecting exception: IOException");
 
-        } catch (Throwable e) {
-            //
-            // Failed to create 'datafusion_custom_log' directory/
-            //
-            verifyException("sqlancer.datafusion.DataFusionUtil$DataFusionLogger", e);
-        }
-    }
 
     @Test
     public void test08() throws Throwable {
@@ -152,49 +117,7 @@ public class DataFusionUtil_ESTest {
         assertEquals("", string0);
     }
 
-    @Test
-    public void test09() throws Throwable {
-        EvoSuiteFile evoSuiteFile0 = new EvoSuiteFile(".\\logs\\datafusion\\O-cur.log");
-        FileSystemHandling.shouldThrowIOException(evoSuiteFile0);
-        FileSystemHandling.appendStringToFile(evoSuiteFile0, "O");
-        String string0 = DataFusionUtil.getReplay("O");
-        assertEquals("", string0);
-    }
 
-    @Test
-    public void test10() throws Throwable {
-        EvoSuiteFile evoSuiteFile0 = new EvoSuiteFile(".\\logs\\datafusion\\O-cur.log");
-        FileSystemHandling.appendStringToFile(evoSuiteFile0, "/*DML*/");
-        String string0 = DataFusionUtil.getReplay("O");
-        assertEquals("/*DML*/\n", string0);
-    }
-
-    @Test
-    public void test11() throws Throwable {
-        EvoSuiteFile evoSuiteFile0 = new EvoSuiteFile(".\\logs\\datafusion\\-cur.log");
-        FileSystemHandling.appendStringToFile(evoSuiteFile0, "m");
-        String string0 = DataFusionUtil.getReplay("");
-        assertEquals("", string0);
-    }
-
-    @Test
-    public void test12() throws Throwable {
-        EvoSuiteFile evoSuiteFile0 = new EvoSuiteFile("logs\\datafusion_custom_log");
-        FileSystemHandling.appendLineToFile(evoSuiteFile0, "bpchar_minmax_ops");
-        DataFusionProvider.DataFusionGlobalState dataFusionProvider_DataFusionGlobalState0 = new DataFusionProvider.DataFusionGlobalState();
-        DataFusionUtil.DataFusionLogger.DataFusionLogType dataFusionUtil_DataFusionLogger_DataFusionLogType0 = DataFusionUtil.DataFusionLogger.DataFusionLogType.ERROR;
-        // Undeclared exception!
-        try {
-            dataFusionProvider_DataFusionGlobalState0.dfLogger
-                    .appendToLog(dataFusionUtil_DataFusionLogger_DataFusionLogType0, "");
-            fail("Expecting exception: AssertionError");
-
-        } catch (AssertionError e) {
-            //
-            // Failed to create FileWriter for errorLogFIle
-            //
-        }
-    }
 
     @Test
     public void test13() throws Throwable {

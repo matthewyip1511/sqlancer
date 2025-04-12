@@ -382,7 +382,6 @@ public class PrestoConstant_ESTest {
 
     @Test
     public void test029() throws Throwable {
-        Random.setNextRandom((-2979));
         PrestoConstant.PrestoJsonConstant prestoConstant_PrestoJsonConstant0 = new PrestoConstant.PrestoJsonConstant();
         assertEquals("{\"val\":false}", prestoConstant_PrestoJsonConstant0.getValue());
     }
@@ -531,7 +530,6 @@ public class PrestoConstant_ESTest {
 
     @Test
     public void test044() throws Throwable {
-        Random.setNextRandom(55);
         PrestoConstant.PrestoJsonConstant prestoConstant_PrestoJsonConstant0 = new PrestoConstant.PrestoJsonConstant();
         assertEquals("{\"val\":null}", prestoConstant_PrestoJsonConstant0.getValue());
     }

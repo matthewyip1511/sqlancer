@@ -6,8 +6,11 @@
 package sqlancer.evosuite.clickhouse.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+
 import sqlancer.clickhouse.ast.ClickHouseExpression;
+import sqlancer.clickhouse.ast.ClickHousePostfixText;
 import sqlancer.clickhouse.ast.ClickHouseUnaryFunctionOperation;
 import sqlancer.clickhouse.ast.constant.ClickHouseInt8Constant;
 import sqlancer.clickhouse.ast.constant.ClickHouseUInt8Constant;
@@ -38,7 +41,7 @@ public class ClickHouseUnaryFunctionOperation_ESTest {
     @Test
     public void test1() throws Throwable {
         ClickHouseInt8Constant clickHouseInt8Constant0 = new ClickHouseInt8Constant(1851);
-        ClickHouseExpression.ClickHousePostfixText clickHouseExpression_ClickHousePostfixText0 = new ClickHouseExpression.ClickHousePostfixText(
+        ClickHousePostfixText clickHouseExpression_ClickHousePostfixText0 = new ClickHousePostfixText(
                 "}O[03;(n(\"?eURg4", clickHouseInt8Constant0);
         ClickHouseUnaryFunctionOperation.ClickHouseUnaryFunctionOperator clickHouseUnaryFunctionOperation_ClickHouseUnaryFunctionOperator0 = ClickHouseUnaryFunctionOperation.ClickHouseUnaryFunctionOperator.LOG;
         ClickHouseUnaryFunctionOperation clickHouseUnaryFunctionOperation0 = new ClickHouseUnaryFunctionOperation(
@@ -50,7 +53,7 @@ public class ClickHouseUnaryFunctionOperation_ESTest {
     @Test
     public void test2() throws Throwable {
         ClickHouseInt8Constant clickHouseInt8Constant0 = new ClickHouseInt8Constant(1851);
-        ClickHouseExpression.ClickHousePostfixText clickHouseExpression_ClickHousePostfixText0 = new ClickHouseExpression.ClickHousePostfixText(
+        ClickHousePostfixText clickHouseExpression_ClickHousePostfixText0 = new ClickHousePostfixText(
                 "}O[03;(n(\"?eURg4", clickHouseInt8Constant0);
         ClickHouseUnaryFunctionOperation.ClickHouseUnaryFunctionOperator clickHouseUnaryFunctionOperation_ClickHouseUnaryFunctionOperator0 = ClickHouseUnaryFunctionOperation.ClickHouseUnaryFunctionOperator.LOG;
         ClickHouseUnaryFunctionOperation clickHouseUnaryFunctionOperation0 = new ClickHouseUnaryFunctionOperation(
@@ -62,7 +65,7 @@ public class ClickHouseUnaryFunctionOperation_ESTest {
     @Test
     public void test3() throws Throwable {
         ClickHouseInt8Constant clickHouseInt8Constant0 = new ClickHouseInt8Constant(1851);
-        ClickHouseExpression.ClickHousePostfixText clickHouseExpression_ClickHousePostfixText0 = new ClickHouseExpression.ClickHousePostfixText(
+        ClickHousePostfixText clickHouseExpression_ClickHousePostfixText0 = new ClickHousePostfixText(
                 "}O[03;(n(\"?eURg4", clickHouseInt8Constant0);
         ClickHouseUnaryFunctionOperation.ClickHouseUnaryFunctionOperator clickHouseUnaryFunctionOperation_ClickHouseUnaryFunctionOperator0 = ClickHouseUnaryFunctionOperation.ClickHouseUnaryFunctionOperator.LOG;
         ClickHouseUnaryFunctionOperation clickHouseUnaryFunctionOperation0 = new ClickHouseUnaryFunctionOperation(

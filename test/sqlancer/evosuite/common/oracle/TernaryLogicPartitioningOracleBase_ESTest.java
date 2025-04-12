@@ -5,7 +5,6 @@
 
 package sqlancer.evosuite.common.oracle;
 
-import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import sqlancer.duckdb.DuckDBProvider;
 import sqlancer.duckdb.test.DuckDBQueryPartitioningGroupByTester;

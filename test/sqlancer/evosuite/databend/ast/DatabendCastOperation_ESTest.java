@@ -6,7 +6,7 @@
 package sqlancer.evosuite.databend.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
-import org.evosuite.runtime.Random;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.databend.ast.DatabendCastOperation;
 import sqlancer.databend.ast.DatabendColumnValue;
@@ -77,7 +77,6 @@ public class DatabendCastOperation_ESTest {
 
     @Test
     public void test04() throws Throwable {
-        Random.setNextRandom(760);
         DatabendSchema.DatabendCompositeDataType databendSchema_DatabendCompositeDataType0 = DatabendSchema.DatabendCompositeDataType
                 .getRandomWithoutNull();
         DatabendSchema.DatabendColumn databendSchema_DatabendColumn0 = new DatabendSchema.DatabendColumn(")|$g`F-",

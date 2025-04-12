@@ -6,7 +6,9 @@
 package sqlancer.evosuite.clickhouse;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+
 import sqlancer.clickhouse.ClickHouseOracleFactory;
 import sqlancer.clickhouse.ClickHouseProvider;
 import sqlancer.common.oracle.TestOracle;

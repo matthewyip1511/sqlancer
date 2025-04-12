@@ -79,7 +79,6 @@ public class HSQLDBExpressionGenerator_ESTest {
         HSQLDBProvider.HSQLDBGlobalState hSQLDBProvider_HSQLDBGlobalState0 = new HSQLDBProvider.HSQLDBGlobalState();
         HSQLDBExpressionGenerator hSQLDBExpressionGenerator0 = new HSQLDBExpressionGenerator(
                 hSQLDBProvider_HSQLDBGlobalState0);
-        Random.setNextRandom(3550);
         HSQLDBSchema.HSQLDBCompositeDataType hSQLDBSchema_HSQLDBCompositeDataType0 = hSQLDBExpressionGenerator0
                 .getRandomType();
         assertEquals(HSQLDBSchema.HSQLDBDataType.BINARY, hSQLDBSchema_HSQLDBCompositeDataType0.getType());

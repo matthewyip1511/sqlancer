@@ -6,7 +6,9 @@
 package sqlancer.evosuite.citus;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+
 import sqlancer.citus.CitusOptions;
 
 public class CitusOptions_ESTest {

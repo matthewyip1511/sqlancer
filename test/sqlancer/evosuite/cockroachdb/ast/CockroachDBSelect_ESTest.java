@@ -6,15 +6,19 @@
 package sqlancer.evosuite.cockroachdb.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.LinkedList;
 import java.util.List;
+
 import org.junit.jupiter.api.Test;
+
 import sqlancer.cockroachdb.ast.CockroachDBExpression;
 import sqlancer.cockroachdb.ast.CockroachDBJoin;
 import sqlancer.cockroachdb.ast.CockroachDBSelect;
 import sqlancer.cockroachdb.CockroachDBProvider;
 import sqlancer.cockroachdb.gen.CockroachDBExpressionGenerator;
 import sqlancer.Randomly;
+import sqlancer.common.ast.JoinBase;
 
 public class CockroachDBSelect_ESTest {
 
@@ -24,13 +28,13 @@ public class CockroachDBSelect_ESTest {
     @Test
     public void test0() throws Throwable {
         CockroachDBSelect cockroachDBSelect0 = new CockroachDBSelect();
-        LinkedList<CockroachDBJoin> linkedList0 = new LinkedList<CockroachDBJoin>();
+        List<JoinBase<CockroachDBExpression>> linkedList0 = new LinkedList<>();
         CockroachDBJoin.JoinType cockroachDBJoin_JoinType0 = CockroachDBJoin.JoinType.INNER;
         CockroachDBJoin cockroachDBJoin0 = new CockroachDBJoin(cockroachDBSelect0, cockroachDBSelect0,
-                cockroachDBJoin_JoinType0, cockroachDBSelect0);
+                cockroachDBSelect0, cockroachDBJoin_JoinType0);
         linkedList0.addLast(cockroachDBJoin0);
         cockroachDBSelect0.setJoinClauses(linkedList0);
-        List<CockroachDBJoin> list0 = cockroachDBSelect0.getJoinClauses();
+        List<JoinBase<CockroachDBExpression>> list0 = cockroachDBSelect0.getJoinClauses();
         assertEquals(1, list0.size());
     }
 
@@ -39,7 +43,7 @@ public class CockroachDBSelect_ESTest {
         CockroachDBSelect cockroachDBSelect0 = new CockroachDBSelect();
         // Undeclared exception!
         try {
-            cockroachDBSelect0.setJoinClauses((List<CockroachDBJoin>) null);
+            cockroachDBSelect0.setJoinClauses((List<JoinBase<CockroachDBExpression>>) null);
             fail("Expecting exception: NullPointerException");
 
         } catch (NullPointerException e) {
@@ -137,7 +141,7 @@ public class CockroachDBSelect_ESTest {
     @Test
     public void test7() throws Throwable {
         CockroachDBSelect cockroachDBSelect0 = new CockroachDBSelect();
-        List<CockroachDBJoin> list0 = cockroachDBSelect0.getJoinClauses();
+        List<JoinBase<CockroachDBExpression>> list0 = cockroachDBSelect0.getJoinClauses();
         assertEquals(0, list0.size());
     }
 

@@ -6,6 +6,7 @@
 package sqlancer.evosuite.cockroachdb;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.LinkedList;
 import java.util.List;
 import org.junit.jupiter.api.Test;
@@ -18,7 +19,6 @@ import sqlancer.cockroachdb.ast.CockroachDBConstant;
 import sqlancer.cockroachdb.ast.CockroachDBExpression;
 import sqlancer.cockroachdb.ast.CockroachDBFunction;
 import sqlancer.cockroachdb.ast.CockroachDBFunctionCall;
-import sqlancer.cockroachdb.ast.CockroachDBIndexReference;
 import sqlancer.cockroachdb.ast.CockroachDBInOperation;
 import sqlancer.cockroachdb.ast.CockroachDBJoin;
 import sqlancer.cockroachdb.ast.CockroachDBMultiValuedComparison;
@@ -88,7 +88,7 @@ public class CockroachDBToStringVisitor_ESTest {
         CockroachDBExpression cockroachDBExpression0 = CockroachDBConstant.createArrayConstant(list0);
         CockroachDBJoin.JoinType cockroachDBJoin_JoinType0 = CockroachDBJoin.JoinType.RIGHT;
         CockroachDBJoin cockroachDBJoin0 = new CockroachDBJoin(cockroachDBExpression0, cockroachDBExpression0,
-                cockroachDBJoin_JoinType0, cockroachDBExpression0);
+                cockroachDBExpression0, cockroachDBJoin_JoinType0);
         CockroachDBCaseOperation cockroachDBCaseOperation0 = new CockroachDBCaseOperation(list0, list0,
                 cockroachDBJoin0);
         CockroachDBInOperation cockroachDBInOperation0 = new CockroachDBInOperation(cockroachDBCaseOperation0, list0);
@@ -171,7 +171,7 @@ public class CockroachDBToStringVisitor_ESTest {
         CockroachDBConstant.CockroachDBNullConstant cockroachDBConstant_CockroachDBNullConstant0 = new CockroachDBConstant.CockroachDBNullConstant();
         CockroachDBJoin.JoinType cockroachDBJoin_JoinType0 = CockroachDBJoin.JoinType.LEFT;
         CockroachDBJoin cockroachDBJoin0 = new CockroachDBJoin(cockroachDBSelect0,
-                cockroachDBConstant_CockroachDBNullConstant0, cockroachDBJoin_JoinType0, cockroachDBSelect0);
+                cockroachDBConstant_CockroachDBNullConstant0, cockroachDBSelect0, cockroachDBJoin_JoinType0);
         CockroachDBFunction cockroachDBFunction0 = CockroachDBFunction.CURRENT_DATABASE;
         CockroachDBFunctionCall cockroachDBFunctionCall0 = new CockroachDBFunctionCall(cockroachDBFunction0, list0);
         CockroachDBJoin cockroachDBJoin1 = CockroachDBJoin.createJoin(cockroachDBFunctionCall0,
@@ -583,8 +583,7 @@ public class CockroachDBToStringVisitor_ESTest {
                 .createFloatConstant(0.0);
         CockroachDBJoin.JoinType cockroachDBJoin_JoinType0 = CockroachDBJoin.JoinType.LEFT;
         CockroachDBJoin cockroachDBJoin0 = new CockroachDBJoin(cockroachDBConstant_CockroachDBDoubleConstant0,
-                cockroachDBConstant_CockroachDBDoubleConstant0, cockroachDBJoin_JoinType0,
-                cockroachDBConstant_CockroachDBDoubleConstant0);
+                cockroachDBConstant_CockroachDBDoubleConstant0, cockroachDBConstant_CockroachDBDoubleConstant0, cockroachDBJoin_JoinType0);
         cockroachDBToStringVisitor0.visit(cockroachDBJoin0);
         assertEquals(CockroachDBJoin.JoinType.LEFT, cockroachDBJoin0.getJoinType());
     }

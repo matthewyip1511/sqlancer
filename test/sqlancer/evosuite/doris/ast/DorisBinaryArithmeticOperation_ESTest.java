@@ -6,8 +6,7 @@
 package sqlancer.evosuite.doris.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
-import java.util.Comparator;
-import java.util.function.BinaryOperator;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.common.ast.BinaryOperatorNode;
 import sqlancer.doris.ast.DorisBinaryArithmeticOperation;

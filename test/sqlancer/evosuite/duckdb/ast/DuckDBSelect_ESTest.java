@@ -6,9 +6,12 @@
 package sqlancer.evosuite.duckdb.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.LinkedList;
 import java.util.List;
 import org.junit.jupiter.api.Test;
+
+import sqlancer.common.ast.JoinBase;
 import sqlancer.duckdb.ast.DuckDBExpression;
 import sqlancer.duckdb.ast.DuckDBJoin;
 import sqlancer.duckdb.ast.DuckDBSelect;
@@ -24,7 +27,7 @@ public class DuckDBSelect_ESTest {
     @Test
     public void test0() throws Throwable {
         DuckDBSelect duckDBSelect0 = new DuckDBSelect();
-        LinkedList<DuckDBJoin> linkedList0 = new LinkedList<DuckDBJoin>();
+        LinkedList<JoinBase<DuckDBExpression>> linkedList0 = new LinkedList<>();
         DuckDBSchema.DuckDBColumn[] duckDBSchema_DuckDBColumnArray0 = new DuckDBSchema.DuckDBColumn[3];
         List<DuckDBSchema.DuckDBColumn> list0 = Randomly.nonEmptySubset(duckDBSchema_DuckDBColumnArray0);
         DuckDBSchema.DuckDBTable duckDBSchema_DuckDBTable0 = new DuckDBSchema.DuckDBTable((String) null, list0, false);
@@ -33,7 +36,7 @@ public class DuckDBSelect_ESTest {
                 duckDBSelect0);
         linkedList0.add(duckDBJoin0);
         duckDBSelect0.setJoinClauses(linkedList0);
-        List<DuckDBJoin> list1 = duckDBSelect0.getJoinClauses();
+        List<JoinBase<DuckDBExpression>> list1 = duckDBSelect0.getJoinClauses();
         assertFalse(list1.isEmpty());
     }
 
@@ -42,7 +45,7 @@ public class DuckDBSelect_ESTest {
         DuckDBSelect duckDBSelect0 = new DuckDBSelect();
         // Undeclared exception!
         try {
-            duckDBSelect0.setJoinClauses((List<DuckDBJoin>) null);
+            duckDBSelect0.setJoinClauses((List<JoinBase<DuckDBExpression>>) null);
             fail("Expecting exception: NullPointerException");
 
         } catch (NullPointerException e) {
@@ -118,7 +121,7 @@ public class DuckDBSelect_ESTest {
     @Test
     public void test6() throws Throwable {
         DuckDBSelect duckDBSelect0 = new DuckDBSelect();
-        List<DuckDBJoin> list0 = duckDBSelect0.getJoinClauses();
+        List<JoinBase<DuckDBExpression>> list0 = duckDBSelect0.getJoinClauses();
         assertEquals(0, list0.size());
     }
 

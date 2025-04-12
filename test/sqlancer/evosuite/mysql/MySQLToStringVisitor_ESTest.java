@@ -603,7 +603,6 @@ public class MySQLToStringVisitor_ESTest {
 
     @Test
     public void test35() throws Throwable {
-        Random.setNextRandom(4);
         MySQLToStringVisitor mySQLToStringVisitor0 = new MySQLToStringVisitor();
         MySQLExpression[] mySQLExpressionArray0 = new MySQLExpression[2];
         List<MySQLExpression> list0 = Randomly.subset(mySQLExpressionArray0);

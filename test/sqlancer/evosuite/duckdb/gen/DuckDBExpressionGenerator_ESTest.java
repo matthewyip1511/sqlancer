@@ -8,7 +8,6 @@ package sqlancer.evosuite.duckdb.gen;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.LinkedList;
 import java.util.List;
-import org.evosuite.runtime.Random;
 import org.junit.jupiter.api.Test;
 import sqlancer.common.ast.BinaryOperatorNode;
 import sqlancer.common.schema.AbstractTables;
@@ -405,7 +404,6 @@ public class DuckDBExpressionGenerator_ESTest {
     @Test
     public void test21() throws Throwable {
         DuckDBProvider.DuckDBGlobalState duckDBProvider_DuckDBGlobalState0 = new DuckDBProvider.DuckDBGlobalState();
-        Random.setNextRandom(11);
         DuckDBExpressionGenerator duckDBExpressionGenerator0 = new DuckDBExpressionGenerator(
                 duckDBProvider_DuckDBGlobalState0);
         // Undeclared exception!
@@ -424,7 +422,6 @@ public class DuckDBExpressionGenerator_ESTest {
     @Test
     public void test22() throws Throwable {
         DuckDBProvider.DuckDBGlobalState duckDBProvider_DuckDBGlobalState0 = new DuckDBProvider.DuckDBGlobalState();
-        Random.setNextRandom(148);
         DuckDBExpressionGenerator duckDBExpressionGenerator0 = new DuckDBExpressionGenerator(
                 duckDBProvider_DuckDBGlobalState0);
         // Undeclared exception!
@@ -443,7 +440,6 @@ public class DuckDBExpressionGenerator_ESTest {
     @Test
     public void test23() throws Throwable {
         DuckDBProvider.DuckDBGlobalState duckDBProvider_DuckDBGlobalState0 = new DuckDBProvider.DuckDBGlobalState();
-        Random.setNextRandom(2653);
         DuckDBExpressionGenerator duckDBExpressionGenerator0 = new DuckDBExpressionGenerator(
                 duckDBProvider_DuckDBGlobalState0);
         // Undeclared exception!
@@ -461,7 +457,6 @@ public class DuckDBExpressionGenerator_ESTest {
 
     @Test
     public void test24() throws Throwable {
-        Random.setNextRandom(5);
         DuckDBProvider.DuckDBGlobalState duckDBProvider_DuckDBGlobalState0 = new DuckDBProvider.DuckDBGlobalState();
         DuckDBExpressionGenerator duckDBExpressionGenerator0 = new DuckDBExpressionGenerator(
                 duckDBProvider_DuckDBGlobalState0);

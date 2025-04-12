@@ -6,7 +6,9 @@
 package sqlancer.evosuite.cnosdb.oracle.tlp;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+
 import sqlancer.cnosdb.CnosDBGlobalState;
 import sqlancer.cnosdb.oracle.tlp.CnosDBTLPAggregateOracle;
 

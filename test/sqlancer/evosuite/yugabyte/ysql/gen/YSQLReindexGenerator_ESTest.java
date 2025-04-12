@@ -18,7 +18,6 @@ public class YSQLReindexGenerator_ESTest {
 
     @Test
     public void test0() throws Throwable {
-        Random.setNextRandom(29);
         YSQLGlobalState ySQLGlobalState0 = new YSQLGlobalState();
         // Undeclared exception!
         try {
@@ -34,7 +33,6 @@ public class YSQLReindexGenerator_ESTest {
 
     @Test
     public void test1() throws Throwable {
-        Random.setNextRandom((-914));
         YSQLGlobalState ySQLGlobalState0 = new YSQLGlobalState();
         // Undeclared exception!
         try {

@@ -6,6 +6,7 @@
 package sqlancer.evosuite.datafusion.gen;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.datafusion.DataFusionProvider;
 import sqlancer.datafusion.gen.DataFusionTableGenerator;

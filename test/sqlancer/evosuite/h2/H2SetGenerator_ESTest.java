@@ -6,7 +6,7 @@
 package sqlancer.evosuite.h2;
 
 import static org.junit.jupiter.api.Assertions.*;
-import org.evosuite.runtime.Random;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.common.query.SQLQueryAdapter;
 import sqlancer.h2.H2Provider;
@@ -19,7 +19,6 @@ public class H2SetGenerator_ESTest {
 
     @Test
     public void test0() throws Throwable {
-        Random.setNextRandom((-3431));
         H2Provider.H2GlobalState h2Provider_H2GlobalState0 = new H2Provider.H2GlobalState();
         SQLQueryAdapter sQLQueryAdapter0 = H2SetGenerator.getQuery(h2Provider_H2GlobalState0);
         assertEquals("SET QUERY_STATISTICS_MAX_ENTRIES 1716;", sQLQueryAdapter0.getLogString());
@@ -30,7 +29,6 @@ public class H2SetGenerator_ESTest {
 
     @Test
     public void test1() throws Throwable {
-        Random.setNextRandom(3258);
         H2Provider.H2GlobalState h2Provider_H2GlobalState0 = new H2Provider.H2GlobalState();
         SQLQueryAdapter sQLQueryAdapter0 = H2SetGenerator.getQuery(h2Provider_H2GlobalState0);
         assertEquals("SET QUERY_STATISTICS FALSE;", sQLQueryAdapter0.getQueryString());
@@ -38,7 +36,6 @@ public class H2SetGenerator_ESTest {
 
     @Test
     public void test2() throws Throwable {
-        Random.setNextRandom((-1930));
         H2Provider.H2GlobalState h2Provider_H2GlobalState0 = new H2Provider.H2GlobalState();
         SQLQueryAdapter sQLQueryAdapter0 = H2SetGenerator.getQuery(h2Provider_H2GlobalState0);
         assertEquals("SET OPTIMIZE_REUSE_RESULTS 1;", sQLQueryAdapter0.getLogString());
@@ -47,7 +44,6 @@ public class H2SetGenerator_ESTest {
     @Test
     public void test3() throws Throwable {
         H2Provider.H2GlobalState h2Provider_H2GlobalState0 = new H2Provider.H2GlobalState();
-        Random.setNextRandom((-1759));
         SQLQueryAdapter sQLQueryAdapter0 = H2SetGenerator.getQuery(h2Provider_H2GlobalState0);
         assertEquals("SET MAX_OPERATION_MEMORY 880;", sQLQueryAdapter0.getLogString());
     }
@@ -55,7 +51,6 @@ public class H2SetGenerator_ESTest {
     @Test
     public void test4() throws Throwable {
         H2Provider.H2GlobalState h2Provider_H2GlobalState0 = new H2Provider.H2GlobalState();
-        Random.setNextRandom((-1587));
         SQLQueryAdapter sQLQueryAdapter0 = H2SetGenerator.getQuery(h2Provider_H2GlobalState0);
         assertEquals("SET MAX_MEMORY_UNDO 794;", sQLQueryAdapter0.getLogString());
     }
@@ -63,7 +58,6 @@ public class H2SetGenerator_ESTest {
     @Test
     public void test5() throws Throwable {
         H2Provider.H2GlobalState h2Provider_H2GlobalState0 = new H2Provider.H2GlobalState();
-        Random.setNextRandom(461);
         SQLQueryAdapter sQLQueryAdapter0 = H2SetGenerator.getQuery(h2Provider_H2GlobalState0);
         assertEquals("SET LAZY_QUERY_EXECUTION 0;", sQLQueryAdapter0.getQueryString());
 

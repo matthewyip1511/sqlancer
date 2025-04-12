@@ -20,7 +20,6 @@ public class PostgresReindexGenerator_ESTest {
     @Test
     public void test0() throws Throwable {
         CitusGlobalState citusGlobalState0 = new CitusGlobalState();
-        Random.setNextRandom('v');
         // Undeclared exception!
         try {
             PostgresReindexGenerator.create(citusGlobalState0);
@@ -36,7 +35,6 @@ public class PostgresReindexGenerator_ESTest {
     @Test
     public void test1() throws Throwable {
         CitusGlobalState citusGlobalState0 = new CitusGlobalState();
-        Random.setNextRandom('i');
         // Undeclared exception!
         try {
             PostgresReindexGenerator.create(citusGlobalState0);

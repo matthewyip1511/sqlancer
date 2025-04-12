@@ -6,6 +6,7 @@
 package sqlancer.evosuite.common.ast.newast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.common.ast.BinaryOperatorNode;
 import sqlancer.common.ast.newast.NewUnaryPrefixOperatorNode;
@@ -45,7 +46,7 @@ public class NewUnaryPrefixOperatorNode_ESTest {
     @Test
     public void test2() throws Throwable {
         H2ExpressionGenerator.H2UnaryPrefixOperator h2ExpressionGenerator_H2UnaryPrefixOperator0 = H2ExpressionGenerator.H2UnaryPrefixOperator.PLUS;
-        Integer integer0 = new Integer((-2273));
+        Integer integer0 = (-2273);
         NewUnaryPrefixOperatorNode<Integer> newUnaryPrefixOperatorNode0 = new NewUnaryPrefixOperatorNode<Integer>(
                 integer0, h2ExpressionGenerator_H2UnaryPrefixOperator0);
         String string0 = newUnaryPrefixOperatorNode0.getOperatorRepresentation();

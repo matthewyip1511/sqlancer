@@ -5,9 +5,10 @@
 
 package sqlancer.evosuite.common.ast.newast;
 
-import sqlancer.common.ast.newast.NewPostfixTextNode;
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+import sqlancer.common.ast.newast.NewPostfixTextNode;
 
 public class NewPostfixTextNode_ESTest {
 
@@ -20,7 +21,7 @@ public class NewPostfixTextNode_ESTest {
 
     @Test
     public void test1() throws Throwable {
-        Integer integer0 = new Integer((-2630));
+        Integer integer0 = (-2630);
         NewPostfixTextNode<Integer> newPostfixTextNode0 = new NewPostfixTextNode<Integer>(integer0, "");
         String string0 = newPostfixTextNode0.getText();
         assertEquals("", string0);
@@ -35,7 +36,7 @@ public class NewPostfixTextNode_ESTest {
 
     @Test
     public void test3() throws Throwable {
-        Integer integer0 = new Integer((-2630));
+        Integer integer0 = (-2630);
         NewPostfixTextNode<Integer> newPostfixTextNode0 = new NewPostfixTextNode<Integer>(integer0, "");
         NewPostfixTextNode<Object> newPostfixTextNode1 = new NewPostfixTextNode<Object>(newPostfixTextNode0, "");
         NewPostfixTextNode newPostfixTextNode2 = (NewPostfixTextNode) newPostfixTextNode1.getExpr();

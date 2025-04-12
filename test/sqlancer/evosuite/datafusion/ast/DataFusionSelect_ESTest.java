@@ -6,9 +6,12 @@
 package sqlancer.evosuite.datafusion.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.List;
 import java.util.Optional;
 import org.junit.jupiter.api.Test;
+
+import sqlancer.common.ast.JoinBase;
 import sqlancer.datafusion.ast.DataFusionExpression;
 import sqlancer.datafusion.ast.DataFusionJoin;
 import sqlancer.datafusion.ast.DataFusionSelect;
@@ -41,7 +44,7 @@ public class DataFusionSelect_ESTest {
         DataFusionSelect dataFusionSelect0 = new DataFusionSelect();
         // Undeclared exception!
         try {
-            dataFusionSelect0.setJoinClauses((List<DataFusionJoin>) null);
+            dataFusionSelect0.setJoinClauses((List<JoinBase<DataFusionExpression>>) null);
             fail("Expecting exception: NullPointerException");
 
         } catch (NullPointerException e) {
@@ -127,7 +130,7 @@ public class DataFusionSelect_ESTest {
     @Test
     public void test07() throws Throwable {
         DataFusionSelect dataFusionSelect0 = new DataFusionSelect();
-        List<DataFusionJoin> list0 = dataFusionSelect0.getJoinClauses();
+        List<JoinBase<DataFusionExpression>> list0 = dataFusionSelect0.getJoinClauses();
         assertEquals(0, list0.size());
     }
 
@@ -151,9 +154,9 @@ public class DataFusionSelect_ESTest {
     public void test09() throws Throwable {
         DataFusionSelect dataFusionSelect0 = new DataFusionSelect();
         DataFusionJoin[] dataFusionJoinArray0 = new DataFusionJoin[7];
-        List<DataFusionJoin> list0 = Randomly.nonEmptySubset(dataFusionJoinArray0);
+        List<JoinBase<DataFusionExpression>> list0 = Randomly.nonEmptySubset(dataFusionJoinArray0);
         dataFusionSelect0.setJoinClauses(list0);
-        List<DataFusionJoin> list1 = dataFusionSelect0.getJoinClauses();
+        List<JoinBase<DataFusionExpression>> list1 = dataFusionSelect0.getJoinClauses();
         assertTrue(list1.equals((Object) list0));
     }
 

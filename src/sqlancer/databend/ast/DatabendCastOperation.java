@@ -20,7 +20,7 @@ public class DatabendCastOperation extends NewUnaryPostfixOperatorNode<DatabendE
         this.type = type.getPrimitiveDataType();
     }
 
-    DatabendExpression getExpression() {
+    public DatabendExpression getExpression() {
         return (DatabendExpression) getExpr();
     }
 

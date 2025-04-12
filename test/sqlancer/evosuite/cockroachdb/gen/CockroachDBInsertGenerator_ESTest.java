@@ -8,8 +8,9 @@ package sqlancer.evosuite.cockroachdb.gen;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.LinkedList;
 import java.util.List;
-import org.evosuite.runtime.Random;
+
 import org.junit.jupiter.api.Test;
+
 import sqlancer.cockroachdb.CockroachDBProvider;
 import sqlancer.cockroachdb.CockroachDBSchema;
 import sqlancer.cockroachdb.gen.CockroachDBInsertGenerator;
@@ -130,7 +131,6 @@ public class CockroachDBInsertGenerator_ESTest {
 
     @Test
     public void test6() throws Throwable {
-        Random.setNextRandom((-1));
         CockroachDBProvider.CockroachDBGlobalState cockroachDBProvider_CockroachDBGlobalState0 = new CockroachDBProvider.CockroachDBGlobalState();
         LinkedList<CockroachDBSchema.CockroachDBColumn> linkedList0 = new LinkedList<CockroachDBSchema.CockroachDBColumn>();
         LinkedList<TableIndex> linkedList1 = new LinkedList<TableIndex>();

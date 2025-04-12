@@ -6,15 +6,19 @@
 package sqlancer.evosuite.cnosdb.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.LinkedList;
 import java.util.List;
+
 import org.junit.jupiter.api.Test;
+
 import sqlancer.cnosdb.ast.CnosDBExpression;
 import sqlancer.cnosdb.ast.CnosDBJoin;
 import sqlancer.cnosdb.ast.CnosDBSelect;
 import sqlancer.cnosdb.ast.CnosDBSimilarTo;
 import sqlancer.cnosdb.CnosDBSchema;
 import sqlancer.Randomly;
+import sqlancer.common.ast.JoinBase;
 
 public class CnosDBSelect_ESTest {
 
@@ -24,8 +28,8 @@ public class CnosDBSelect_ESTest {
     @Test
     public void test00() throws Throwable {
         CnosDBSelect cnosDBSelect0 = new CnosDBSelect();
-        cnosDBSelect0.setJoinClauses((List<CnosDBJoin>) null);
-        List<CnosDBJoin> list0 = cnosDBSelect0.getJoinClauses();
+        cnosDBSelect0.setJoinClauses((List<JoinBase<CnosDBExpression>>) null);
+        List<JoinBase<CnosDBExpression>> list0 = cnosDBSelect0.getJoinClauses();
         assertNull(list0);
     }
 
@@ -33,9 +37,9 @@ public class CnosDBSelect_ESTest {
     public void test01() throws Throwable {
         CnosDBSelect cnosDBSelect0 = new CnosDBSelect();
         CnosDBJoin[] cnosDBJoinArray0 = new CnosDBJoin[2];
-        List<CnosDBJoin> list0 = Randomly.subset(0, cnosDBJoinArray0);
+        List<JoinBase<CnosDBExpression>> list0 = Randomly.subset(0, cnosDBJoinArray0);
         cnosDBSelect0.setJoinClauses(list0);
-        List<CnosDBJoin> list1 = cnosDBSelect0.getJoinClauses();
+        List<JoinBase<CnosDBExpression>> list1 = cnosDBSelect0.getJoinClauses();
         assertEquals(0, list1.size());
     }
 
@@ -134,9 +138,9 @@ public class CnosDBSelect_ESTest {
     public void test12() throws Throwable {
         CnosDBSelect cnosDBSelect0 = new CnosDBSelect();
         CnosDBJoin[] cnosDBJoinArray0 = new CnosDBJoin[3];
-        List<CnosDBJoin> list0 = Randomly.nonEmptySubset(cnosDBJoinArray0);
+        List<JoinBase<CnosDBExpression>> list0 = Randomly.nonEmptySubset(cnosDBJoinArray0);
         cnosDBSelect0.setJoinClauses(list0);
-        List<CnosDBJoin> list1 = cnosDBSelect0.getJoinClauses();
+        List<JoinBase<CnosDBExpression>> list1 = cnosDBSelect0.getJoinClauses();
         assertSame(list1, list0);
     }
 

@@ -36,7 +36,6 @@ public class SQLite3PragmaGenerator_ESTest {
     @Test
     public void test01() throws Throwable {
         SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
-        Random.setNextRandom((-1457));
         SQLite3PragmaGenerator.insertPragma(sQLite3GlobalState0);
         SQLite3PragmaGenerator.insertPragma(sQLite3GlobalState0);
         SQLite3PragmaGenerator.insertPragma(sQLite3GlobalState0);
@@ -54,7 +53,6 @@ public class SQLite3PragmaGenerator_ESTest {
     @Test
     public void test02() throws Throwable {
         SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
-        Random.setNextRandom((-1457));
         SQLite3PragmaGenerator sQLite3PragmaGenerator0 = new SQLite3PragmaGenerator();
         sQLite3PragmaGenerator0.insert(sQLite3GlobalState0);
         sQLite3PragmaGenerator0.insert(sQLite3GlobalState0);
@@ -68,7 +66,6 @@ public class SQLite3PragmaGenerator_ESTest {
     public void test03() throws Throwable {
         SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
         SQLite3PragmaGenerator sQLite3PragmaGenerator0 = new SQLite3PragmaGenerator();
-        Random.setNextRandom(29);
         SQLQueryAdapter sQLQueryAdapter0 = sQLite3PragmaGenerator0.insert(sQLite3GlobalState0);
         assertEquals("PRAGMA integrity_check;", sQLQueryAdapter0.getLogString());
     }
@@ -98,7 +95,6 @@ public class SQLite3PragmaGenerator_ESTest {
     @Test
     public void test05() throws Throwable {
         SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
-        Random.setNextRandom(19);
         SQLite3PragmaGenerator sQLite3PragmaGenerator0 = new SQLite3PragmaGenerator();
         SQLQueryAdapter sQLQueryAdapter0 = sQLite3PragmaGenerator0.insert(sQLite3GlobalState0);
         assertEquals("PRAGMA default_cache_size;", sQLQueryAdapter0.getQueryString());
@@ -108,7 +104,6 @@ public class SQLite3PragmaGenerator_ESTest {
     public void test06() throws Throwable {
         SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
         SQLite3PragmaGenerator sQLite3PragmaGenerator0 = new SQLite3PragmaGenerator();
-        Random.setNextRandom(2571565);
         sQLite3PragmaGenerator0.insert(sQLite3GlobalState0);
         sQLite3PragmaGenerator0.insert(sQLite3GlobalState0);
         SQLite3PragmaGenerator.insertPragma(sQLite3GlobalState0);
@@ -122,7 +117,6 @@ public class SQLite3PragmaGenerator_ESTest {
     @Test
     public void test07() throws Throwable {
         SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
-        Random.setNextRandom((-567));
         SQLQueryAdapter sQLQueryAdapter0 = SQLite3PragmaGenerator.insertPragma(sQLite3GlobalState0);
         assertEquals("PRAGMA cache_size;", sQLQueryAdapter0.getQueryString());
 
@@ -208,7 +202,6 @@ public class SQLite3PragmaGenerator_ESTest {
     public void test11() throws Throwable {
         SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
         SQLite3PragmaGenerator sQLite3PragmaGenerator0 = new SQLite3PragmaGenerator();
-        Random.setNextRandom(4401);
         SQLQueryAdapter sQLQueryAdapter0 = sQLite3PragmaGenerator0.insert(sQLite3GlobalState0);
         assertFalse(sQLQueryAdapter0.couldAffectSchema());
     }
@@ -217,7 +210,6 @@ public class SQLite3PragmaGenerator_ESTest {
     public void test12() throws Throwable {
         SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
         SQLite3PragmaGenerator sQLite3PragmaGenerator0 = new SQLite3PragmaGenerator();
-        Random.setNextRandom(2009382602);
         SQLQueryAdapter sQLQueryAdapter0 = sQLite3PragmaGenerator0.insert(sQLite3GlobalState0);
         assertEquals("PRAGMA soft_heap_limit;", sQLQueryAdapter0.getQueryString());
     }
@@ -226,7 +218,6 @@ public class SQLite3PragmaGenerator_ESTest {
     public void test13() throws Throwable {
         SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
         SQLite3PragmaGenerator sQLite3PragmaGenerator0 = new SQLite3PragmaGenerator();
-        Random.setNextRandom((-3458));
         SQLQueryAdapter sQLQueryAdapter0 = sQLite3PragmaGenerator0.insert(sQLite3GlobalState0);
         assertEquals("PRAGMA shrink_memory;", sQLQueryAdapter0.getLogString());
     }
@@ -235,7 +226,6 @@ public class SQLite3PragmaGenerator_ESTest {
     public void test14() throws Throwable {
         SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
         SQLite3PragmaGenerator sQLite3PragmaGenerator0 = new SQLite3PragmaGenerator();
-        Random.setNextRandom(1224);
         SQLQueryAdapter sQLQueryAdapter0 = sQLite3PragmaGenerator0.insert(sQLite3GlobalState0);
         assertEquals("PRAGMA secure_delete;", sQLQueryAdapter0.getQueryString());
     }
@@ -243,7 +233,6 @@ public class SQLite3PragmaGenerator_ESTest {
     @Test
     public void test15() throws Throwable {
         SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
-        Random.setNextRandom((-1457));
         SQLite3PragmaGenerator sQLite3PragmaGenerator0 = new SQLite3PragmaGenerator();
         sQLite3PragmaGenerator0.insert(sQLite3GlobalState0);
         sQLite3PragmaGenerator0.insert(sQLite3GlobalState0);
@@ -265,7 +254,6 @@ public class SQLite3PragmaGenerator_ESTest {
     @Test
     public void test16() throws Throwable {
         SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
-        Random.setNextRandom((-1457));
         SQLite3PragmaGenerator sQLite3PragmaGenerator0 = new SQLite3PragmaGenerator();
         sQLite3PragmaGenerator0.insert(sQLite3GlobalState0);
         SQLite3PragmaGenerator.insertPragma(sQLite3GlobalState0);
@@ -290,7 +278,6 @@ public class SQLite3PragmaGenerator_ESTest {
     @Test
     public void test17() throws Throwable {
         SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
-        Random.setNextRandom(23);
         SQLite3PragmaGenerator sQLite3PragmaGenerator0 = new SQLite3PragmaGenerator();
         sQLite3PragmaGenerator0.insert(sQLite3GlobalState0);
         sQLite3PragmaGenerator0.insert(sQLite3GlobalState0);

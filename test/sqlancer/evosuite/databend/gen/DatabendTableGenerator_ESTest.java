@@ -6,6 +6,7 @@
 package sqlancer.evosuite.databend.gen;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.databend.DatabendProvider;
 import sqlancer.databend.gen.DatabendTableGenerator;

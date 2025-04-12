@@ -10,7 +10,7 @@ public abstract class DatabendConstant extends DatabendDorisPrestoConstant imple
 
     public abstract DatabendConstant cast(DatabendDataType dataType);
 
-    protected Timestamp truncateTimestamp(long val) {
+    public Timestamp truncateTimestamp(long val) {
         // Databend supports `date` and `timestamp` type where the year cannot exceed `9999`,
         // the value is truncated to ensure generate legitimate `date` and `timestamp` value.
         long t = val % 253380000000000L;

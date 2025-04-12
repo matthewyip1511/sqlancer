@@ -5,7 +5,6 @@
 
 package sqlancer.evosuite.doris.ast;
 
-import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import sqlancer.doris.ast.DorisTableReference;
 import sqlancer.doris.DorisSchema;

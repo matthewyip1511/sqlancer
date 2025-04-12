@@ -6,8 +6,9 @@
 package sqlancer.evosuite.cnosdb.oracle.tlp;
 
 import static org.junit.jupiter.api.Assertions.*;
-import org.evosuite.runtime.Random;
+
 import org.junit.jupiter.api.Test;
+
 import sqlancer.cnosdb.ast.CnosDBSelect;
 import sqlancer.cnosdb.CnosDBGlobalState;
 import sqlancer.cnosdb.oracle.tlp.CnosDBTLPWhereOracle;
@@ -53,7 +54,6 @@ public class CnosDBTLPWhereOracle_ESTest {
 
     @Test
     public void test2() throws Throwable {
-        Random.setNextRandom(1341);
         CnosDBGlobalState cnosDBGlobalState0 = new CnosDBGlobalState();
         CnosDBTLPWhereOracle cnosDBTLPWhereOracle0 = new CnosDBTLPWhereOracle(cnosDBGlobalState0);
         try {

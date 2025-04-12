@@ -5,15 +5,16 @@
 
 package sqlancer.evosuite.common.ast.newast;
 
-import sqlancer.common.ast.newast.NewTernaryNode;
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+import sqlancer.common.ast.newast.NewTernaryNode;
 
 public class NewTernaryNode_ESTest {
 
     @Test
     public void test00() throws Throwable {
-        Integer integer0 = new Integer((-2363));
+        Integer integer0 = (-2363);
         NewTernaryNode<Integer> newTernaryNode0 = new NewTernaryNode<Integer>((Integer) null, integer0, (Integer) null,
                 ";N8$=Z.+%YZ:j", "");
         Integer integer1 = newTernaryNode0.getRight();
@@ -24,8 +25,8 @@ public class NewTernaryNode_ESTest {
 
     @Test
     public void test01() throws Throwable {
-        Integer integer0 = new Integer(0);
-        Integer integer1 = new Integer(0);
+        Integer integer0 = 0;
+        Integer integer1 = 0;
         NewTernaryNode<Integer> newTernaryNode0 = new NewTernaryNode<Integer>(integer0, integer0, integer1, "", "");
         Object object0 = newTernaryNode0.getMiddle();
         assertEquals(0, object0);
@@ -33,7 +34,7 @@ public class NewTernaryNode_ESTest {
 
     @Test
     public void test02() throws Throwable {
-        Integer integer0 = new Integer(0);
+        Integer integer0 = 0;
         NewTernaryNode<Integer> newTernaryNode0 = new NewTernaryNode<Integer>(integer0, integer0, integer0, "",
                 "sqlancer.common.ast.newast.NewTernaryNode");
         String string0 = newTernaryNode0.getRightStr();
@@ -43,7 +44,7 @@ public class NewTernaryNode_ESTest {
 
     @Test
     public void test03() throws Throwable {
-        Integer integer0 = new Integer((-2363));
+        Integer integer0 = (-2363);
         NewTernaryNode<Integer> newTernaryNode0 = new NewTernaryNode<Integer>((Integer) null, integer0, (Integer) null,
                 ";N8$=Z.+%YZ:j", "");
         String string0 = newTernaryNode0.getRightStr();
@@ -53,7 +54,7 @@ public class NewTernaryNode_ESTest {
 
     @Test
     public void test04() throws Throwable {
-        Integer integer0 = new Integer(368);
+        Integer integer0 = 368;
         NewTernaryNode<Integer> newTernaryNode0 = new NewTernaryNode<Integer>(integer0, (Integer) null, (Integer) null,
                 (String) null, (String) null);
         Integer integer1 = newTernaryNode0.getRight();
@@ -62,7 +63,7 @@ public class NewTernaryNode_ESTest {
 
     @Test
     public void test05() throws Throwable {
-        Integer integer0 = new Integer(892);
+        Integer integer0 = 892;
         NewTernaryNode<Integer> newTernaryNode0 = new NewTernaryNode<Integer>(integer0, integer0, integer0,
                 "BP*t,Zo.my|DV", "BP*t,Zo.my|DV");
         NewTernaryNode<Object> newTernaryNode1 = new NewTernaryNode<Object>(newTernaryNode0, "BP*t,Zo.my|DV",
@@ -73,7 +74,7 @@ public class NewTernaryNode_ESTest {
 
     @Test
     public void test06() throws Throwable {
-        Integer integer0 = new Integer(368);
+        Integer integer0 = 368;
         NewTernaryNode<Object> newTernaryNode0 = new NewTernaryNode<Object>(integer0, (Object) null, (Object) null,
                 (String) null, (String) null);
         Object object0 = newTernaryNode0.getMiddle();
@@ -82,7 +83,7 @@ public class NewTernaryNode_ESTest {
 
     @Test
     public void test07() throws Throwable {
-        Integer integer0 = new Integer(892);
+        Integer integer0 = 892;
         NewTernaryNode<Integer> newTernaryNode0 = new NewTernaryNode<Integer>(integer0, integer0, integer0,
                 "BP*t,Zo.my|DV", "BP*t,Zo.my|DV");
         NewTernaryNode<Object> newTernaryNode1 = new NewTernaryNode<Object>(newTernaryNode0, "BP*t,Zo.my|DV",
@@ -94,7 +95,7 @@ public class NewTernaryNode_ESTest {
     @Test
     public void test08() throws Throwable {
         Object object0 = new Object();
-        Integer integer0 = new Integer(0);
+        Integer integer0 = 0;
         NewTernaryNode<Object> newTernaryNode0 = new NewTernaryNode<Object>(object0, integer0, integer0, (String) null,
                 (String) null);
         String string0 = newTernaryNode0.getLeftStr();
@@ -103,7 +104,7 @@ public class NewTernaryNode_ESTest {
 
     @Test
     public void test09() throws Throwable {
-        Integer integer0 = new Integer(892);
+        Integer integer0 = 892;
         NewTernaryNode<Integer> newTernaryNode0 = new NewTernaryNode<Integer>(integer0, integer0, integer0,
                 "BP*t,Zo.my|DV", "BP*t,Zo.my|DV");
         NewTernaryNode<Object> newTernaryNode1 = new NewTernaryNode<Object>(newTernaryNode0, "BP*t,Zo.my|DV",
@@ -114,7 +115,7 @@ public class NewTernaryNode_ESTest {
 
     @Test
     public void test10() throws Throwable {
-        Integer integer0 = new Integer((-2363));
+        Integer integer0 = (-2363);
         NewTernaryNode<Integer> newTernaryNode0 = new NewTernaryNode<Integer>((Integer) null, integer0, (Integer) null,
                 ";N8$=Z.+%YZ:j", "");
         Integer integer1 = newTernaryNode0.getLeft();
@@ -125,7 +126,7 @@ public class NewTernaryNode_ESTest {
 
     @Test
     public void test11() throws Throwable {
-        Integer integer0 = new Integer(892);
+        Integer integer0 = 892;
         NewTernaryNode<Integer> newTernaryNode0 = new NewTernaryNode<Integer>(integer0, integer0, integer0,
                 "BP*t,Zo.my|DV", "BP*t,Zo.my|DV");
         NewTernaryNode<Object> newTernaryNode1 = new NewTernaryNode<Object>(newTernaryNode0, "BP*t,Zo.my|DV",
@@ -136,7 +137,7 @@ public class NewTernaryNode_ESTest {
 
     @Test
     public void test12() throws Throwable {
-        Integer integer0 = new Integer(892);
+        Integer integer0 = 892;
         NewTernaryNode<Integer> newTernaryNode0 = new NewTernaryNode<Integer>(integer0, integer0, integer0,
                 "BP*t,Zo.my|DV", "BP*t,Zo.my|DV");
         NewTernaryNode<Object> newTernaryNode1 = new NewTernaryNode<Object>(newTernaryNode0, "BP*t,Zo.my|DV",
@@ -147,7 +148,7 @@ public class NewTernaryNode_ESTest {
 
     @Test
     public void test13() throws Throwable {
-        Integer integer0 = new Integer(0);
+        Integer integer0 = 0;
         NewTernaryNode<Integer> newTernaryNode0 = new NewTernaryNode<Integer>(integer0, integer0, integer0, "", "");
         String string0 = newTernaryNode0.getLeftStr();
         assertEquals("", string0);

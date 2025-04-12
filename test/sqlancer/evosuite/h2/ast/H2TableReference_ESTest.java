@@ -5,7 +5,6 @@
 
 package sqlancer.evosuite.h2.ast;
 
-import static org.junit.jupiter.api.Assertions.*;
 import java.util.LinkedList;
 import org.junit.jupiter.api.Test;
 import sqlancer.h2.ast.H2TableReference;

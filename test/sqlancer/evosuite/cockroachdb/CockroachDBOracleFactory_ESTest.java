@@ -6,15 +6,13 @@
 package sqlancer.evosuite.cockroachdb;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.cockroachdb.CockroachDBOracleFactory;
 import sqlancer.cockroachdb.CockroachDBProvider;
 import sqlancer.common.oracle.TestOracle;
 
 public class CockroachDBOracleFactory_ESTest {
-
-    private void verifyException(String s, Exception e) {
-    }
 
     @Test
     public void test0() throws Throwable {
@@ -76,6 +74,9 @@ public class CockroachDBOracleFactory_ESTest {
             //
             verifyException("sqlancer.cockroachdb.CockroachDBOracleFactory$2", e);
         }
+    }
+
+    private void verifyException(String s, NoClassDefFoundError e) {
     }
 
     @Test

@@ -41,7 +41,7 @@ public class DorisInsertGenerator extends AbstractInsertGenerator<DorisColumn> {
     }
 
     @Override
-    protected void insertValue(DorisColumn column) {
+    public void insertValue(DorisColumn column) {
         if (column.hasDefaultValue() && Randomly.getBooleanWithRatherLowProbability()) {
             sb.append("DEFAULT");
         } else {

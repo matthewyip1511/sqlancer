@@ -5,9 +5,11 @@
 
 package sqlancer.evosuite.cockroachdb;
 
-import sqlancer.cockroachdb.CockroachDBOptions;
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+
+import sqlancer.cockroachdb.CockroachDBOptions;
 
 public class CockroachDBOptions_ESTest {
 

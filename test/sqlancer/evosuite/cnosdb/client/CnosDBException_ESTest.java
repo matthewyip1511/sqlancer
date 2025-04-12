@@ -6,7 +6,7 @@
 package sqlancer.evosuite.cnosdb.client;
 
 import sqlancer.cnosdb.client.CnosDBException;
-import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 
 public class CnosDBException_ESTest {

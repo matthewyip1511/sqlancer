@@ -6,8 +6,7 @@
 package sqlancer.evosuite.common.log;
 
 import static org.junit.jupiter.api.Assertions.*;
-import org.evosuite.runtime.mock.java.lang.MockException;
-import org.evosuite.runtime.mock.java.lang.MockThrowable;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.common.log.Loggable;
 import sqlancer.common.log.SQLLoggableFactory;
@@ -33,16 +32,16 @@ public class LoggableFactory_ESTest {
         assertEquals("M1dIK<CpTH0EFu@</;", loggable0.getLogString());
     }
 
-    @Test
-    public void test2() throws Throwable {
-        SQLLoggableFactory sQLLoggableFactory0 = new SQLLoggableFactory();
-        MockException mockException0 = new MockException((String) null);
-        Loggable loggable0 = sQLLoggableFactory0.convertStacktraceToLoggable(mockException0);
-        // // Unstable assertion:
-        // assertEquals("--jdk.internal.reflect.GeneratedConstructorAccessor42.newInstance(Unknown
-        // Source)\n--<evosuite>.<evosuite>(<evosuite>)\n--<evosuite>.<evosuite>(<evosuite>)\n--<evosuite>.<evosuite>(<evosuite>)\n--<evosuite>.<evosuite>(<evosuite>)\n--<evosuite>.<evosuite>(<evosuite>)\n--",
-        // loggable0.getLogString());
-    }
+//    @Test
+//    public void test2() throws Throwable {
+//        SQLLoggableFactory sQLLoggableFactory0 = new SQLLoggableFactory();
+//        MockException mockException0 = new MockException((String) null);
+//        Loggable loggable0 = sQLLoggableFactory0.convertStacktraceToLoggable(mockException0);
+//        // // Unstable assertion:
+//        // assertEquals("--jdk.internal.reflect.GeneratedConstructorAccessor42.newInstance(Unknown
+//        // Source)\n--<evosuite>.<evosuite>(<evosuite>)\n--<evosuite>.<evosuite>(<evosuite>)\n--<evosuite>.<evosuite>(<evosuite>)\n--<evosuite>.<evosuite>(<evosuite>)\n--<evosuite>.<evosuite>(<evosuite>)\n--",
+//        // loggable0.getLogString());
+//    }
 
     @Test
     public void test3() throws Throwable {
@@ -84,22 +83,22 @@ public class LoggableFactory_ESTest {
         }
     }
 
-    @Test
-    public void test6() throws Throwable {
-        MockThrowable mockThrowable0 = new MockThrowable("record_image_ops");
-        mockThrowable0.setOriginForDelegate((StackTraceElement) null);
-        SQLLoggableFactory sQLLoggableFactory0 = new SQLLoggableFactory();
-        // Undeclared exception!
-        try {
-            sQLLoggableFactory0.convertStacktraceToLoggable(mockThrowable0);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-        }
-    }
+//    @Test
+//    public void test6() throws Throwable {
+//        MockThrowable mockThrowable0 = new MockThrowable("record_image_ops");
+//        mockThrowable0.setOriginForDelegate((StackTraceElement) null);
+//        SQLLoggableFactory sQLLoggableFactory0 = new SQLLoggableFactory();
+//        // Undeclared exception!
+//        try {
+//            sQLLoggableFactory0.convertStacktraceToLoggable(mockThrowable0);
+//            fail("Expecting exception: NullPointerException");
+//
+//        } catch (NullPointerException e) {
+//            //
+//            // no message in exception (getMessage() returned null)
+//            //
+//        }
+//    }
 
     @Test
     public void test7() throws Throwable {

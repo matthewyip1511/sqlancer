@@ -6,8 +6,11 @@
 package sqlancer.evosuite.h2.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.List;
 import org.junit.jupiter.api.Test;
+
+import sqlancer.common.ast.JoinBase;
 import sqlancer.h2.ast.H2Expression;
 import sqlancer.h2.ast.H2Join;
 import sqlancer.h2.ast.H2Select;
@@ -23,7 +26,7 @@ public class H2Select_ESTest {
         H2Select h2Select0 = new H2Select();
         // Undeclared exception!
         try {
-            h2Select0.setJoinClauses((List<H2Join>) null);
+            h2Select0.setJoinClauses((List<JoinBase<H2Expression>>) null);
             fail("Expecting exception: NullPointerException");
 
         } catch (NullPointerException e) {
@@ -110,9 +113,9 @@ public class H2Select_ESTest {
     public void test5() throws Throwable {
         H2Select h2Select0 = new H2Select();
         H2Join[] h2JoinArray0 = new H2Join[6];
-        List<H2Join> list0 = Randomly.nonEmptySubset(h2JoinArray0);
+        List<JoinBase<H2Expression>> list0 = Randomly.nonEmptySubset(h2JoinArray0);
         h2Select0.setJoinClauses(list0);
-        List<H2Join> list1 = h2Select0.getJoinClauses();
+        List<JoinBase<H2Expression>> list1 = h2Select0.getJoinClauses();
         assertFalse(list1.isEmpty());
     }
 
@@ -135,7 +138,7 @@ public class H2Select_ESTest {
     @Test
     public void test7() throws Throwable {
         H2Select h2Select0 = new H2Select();
-        List<H2Join> list0 = h2Select0.getJoinClauses();
+        List<JoinBase<H2Expression>> list0 = h2Select0.getJoinClauses();
         assertEquals(0, list0.size());
     }
 }

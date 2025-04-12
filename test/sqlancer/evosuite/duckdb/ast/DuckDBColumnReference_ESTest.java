@@ -5,7 +5,6 @@
 
 package sqlancer.evosuite.duckdb.ast;
 
-import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import sqlancer.duckdb.ast.DuckDBColumnReference;
 import sqlancer.duckdb.DuckDBSchema;

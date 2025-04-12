@@ -38,7 +38,7 @@ public class DatabendPivotedQuerySynthesisOracle
     }
 
     @Override
-    protected Query<SQLConnection> getRectifiedQuery() throws Exception {
+    public Query<SQLConnection> getRectifiedQuery() throws Exception {
         DatabendTables randomTables = globalState.getSchema().getRandomTableNonEmptyAndViewTables();
         List<DatabendColumn> columns = randomTables.getColumns();
         DatabendSelect selectStatement = new DatabendSelect();
@@ -86,7 +86,7 @@ public class DatabendPivotedQuerySynthesisOracle
     }
 
     @Override
-    protected Query<SQLConnection> getContainmentCheckQuery(Query<?> pivotRowQuery) throws Exception {
+    public Query<SQLConnection> getContainmentCheckQuery(Query<?> pivotRowQuery) throws Exception {
         StringBuilder sb = new StringBuilder();
         sb.append("SELECT * FROM (");
         sb.append(pivotRowQuery.getUnterminatedQueryString());
@@ -108,7 +108,7 @@ public class DatabendPivotedQuerySynthesisOracle
     }
 
     @Override
-    protected String getExpectedValues(DatabendExpression expr) {
+    public String getExpectedValues(DatabendExpression expr) {
         return DatabendExpectedValueVisitor.asExpectedValues(expr);
     }
 

@@ -215,7 +215,7 @@ public class DatabendSchema extends AbstractSchema<DatabendGlobalState, Databend
 
     public static class DatabendRowValue extends AbstractRowValue<DatabendTables, DatabendColumn, DatabendConstant> {
 
-        DatabendRowValue(DatabendTables tables, Map<DatabendColumn, DatabendConstant> values) {
+        public DatabendRowValue(DatabendTables tables, Map<DatabendColumn, DatabendConstant> values) {
             super(tables, values);
         }
 

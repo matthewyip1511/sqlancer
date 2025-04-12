@@ -8,7 +8,6 @@ package sqlancer.evosuite.doris.ast;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.LinkedList;
 import java.util.List;
-import org.evosuite.runtime.Random;
 import org.junit.jupiter.api.Test;
 import sqlancer.doris.ast.DorisConstant;
 import sqlancer.doris.ast.DorisExpression;
@@ -60,7 +59,6 @@ public class DorisJoin_ESTest {
         DorisTableReference dorisTableReference1 = new DorisTableReference((DorisSchema.DorisTable) null);
         List<DorisTableReference> list0 = List.of(dorisTableReference0, dorisTableReference1, dorisTableReference1,
                 dorisTableReference0, dorisTableReference1, dorisTableReference0);
-        Random.setNextRandom((-2121));
         LinkedList<DorisTableReference> linkedList0 = new LinkedList<DorisTableReference>(list0);
         // Undeclared exception!
         try {

@@ -6,6 +6,7 @@
 package sqlancer.evosuite.common.oracle;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.oceanbase.OceanBaseGlobalState;
 import sqlancer.oceanbase.oracle.OceanBasePivotedQuerySynthesisOracle;

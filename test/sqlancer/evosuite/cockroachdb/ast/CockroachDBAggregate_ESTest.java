@@ -6,19 +6,16 @@
 package sqlancer.evosuite.cockroachdb.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.LinkedList;
 import java.util.List;
-import org.evosuite.runtime.Random;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.cockroachdb.ast.CockroachDBAggregate;
 import sqlancer.cockroachdb.ast.CockroachDBExpression;
-import sqlancer.cockroachdb.ast.CockroachDBIndexReference;
-import sqlancer.cockroachdb.ast.CockroachDBTableReference;
 import sqlancer.cockroachdb.CockroachDBProvider;
 import sqlancer.cockroachdb.CockroachDBSchema;
 import sqlancer.cockroachdb.gen.CockroachDBExpressionGenerator;
-import sqlancer.common.schema.AbstractTables;
-import sqlancer.common.schema.TableIndex;
 
 public class CockroachDBAggregate_ESTest {
 
@@ -48,7 +45,6 @@ public class CockroachDBAggregate_ESTest {
      *
      * @Test public void test2() throws Throwable { CockroachDBAggregate.CockroachDBAggregateFunction
      * cockroachDBAggregate_CockroachDBAggregateFunction0 = CockroachDBAggregate.CockroachDBAggregateFunction.SUM_INT;
-     * Random.setNextRandom((-1198484871)); CockroachDBProvider.CockroachDBGlobalState
      * cockroachDBProvider_CockroachDBGlobalState0 = new CockroachDBProvider.CockroachDBGlobalState();
      * CockroachDBExpressionGenerator cockroachDBExpressionGenerator0 = new CockroachDBExpressionGenerator(
      * cockroachDBProvider_CockroachDBGlobalState0); CockroachDBSchema.CockroachDBTable[]

@@ -5,9 +5,10 @@
 
 package sqlancer.evosuite.common.log;
 
-import sqlancer.common.log.LoggedString;
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+import sqlancer.common.log.LoggedString;
 
 public class LoggedString_ESTest {
 

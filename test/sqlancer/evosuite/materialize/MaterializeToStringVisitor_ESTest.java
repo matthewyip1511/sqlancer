@@ -1078,7 +1078,6 @@ public class MaterializeToStringVisitor_ESTest {
         MaterializePrefixOperation.PrefixOperator materializePrefixOperation_PrefixOperator0 = MaterializePrefixOperation.PrefixOperator.UNARY_MINUS;
         MaterializePrefixOperation materializePrefixOperation0 = new MaterializePrefixOperation(
                 materializeCastOperation0, materializePrefixOperation_PrefixOperator0);
-        Random.setNextRandom(21);
         MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
         MaterializeSelect.MaterializeFromTable materializeSelect_MaterializeFromTable0 = new MaterializeSelect.MaterializeFromTable(
                 (MaterializeSchema.MaterializeTable) null, false);

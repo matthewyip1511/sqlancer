@@ -40,7 +40,6 @@ public class MySQLExpressionGenerator_ESTest {
 
     @Test
     public void test01() throws Throwable {
-        Random.setNextRandom(2554);
         MySQLGlobalState mySQLGlobalState0 = new MySQLGlobalState();
         MySQLExpressionGenerator mySQLExpressionGenerator0 = new MySQLExpressionGenerator(mySQLGlobalState0);
         MySQLSelect mySQLSelect0 = mySQLExpressionGenerator0.generateSelect();
@@ -210,7 +209,6 @@ public class MySQLExpressionGenerator_ESTest {
     @Test
     public void test11() throws Throwable {
         MySQLGlobalState mySQLGlobalState0 = new MySQLGlobalState();
-        Random.setNextRandom(1382);
         MySQLExpressionGenerator mySQLExpressionGenerator0 = new MySQLExpressionGenerator(mySQLGlobalState0);
         MySQLSelect mySQLSelect0 = new MySQLSelect();
         // Undeclared exception!

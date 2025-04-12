@@ -5,16 +5,10 @@
 
 package sqlancer.evosuite.h2;
 
-import static org.junit.jupiter.api.Assertions.*;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.LinkedList;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import sqlancer.h2.H2Schema;
-import sqlancer.SQLConnection;
 
 public class H2Schema_ESTest {
 
@@ -30,6 +24,7 @@ public class H2Schema_ESTest {
         H2Schema h2Schema0 = new H2Schema(linkedList0);
         h2Schema0.getRandomTableNonEmptyTables();
     }
+}
 
 /*
  * Test disabled because it contains mock() function calls that are not implemented

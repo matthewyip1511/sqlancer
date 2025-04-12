@@ -6,13 +6,9 @@
 package sqlancer.evosuite.datafusion;
 
 import static org.junit.jupiter.api.Assertions.*;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+
 import java.util.LinkedList;
 import java.util.List;
-import org.evosuite.runtime.Random;
 import org.junit.jupiter.api.Test;
 import sqlancer.datafusion.ast.DataFusionConstant;
 import sqlancer.datafusion.DataFusionProvider;
@@ -185,7 +181,6 @@ public class DataFusionSchema_ESTest {
 
     @Test
     public void test13() throws Throwable {
-        Random.setNextRandom(814);
         DataFusionSchema.DataFusionDataType dataFusionSchema_DataFusionDataType0 = DataFusionSchema.DataFusionDataType
                 .getRandomWithoutNull();
         assertEquals(DataFusionSchema.DataFusionDataType.BOOLEAN, dataFusionSchema_DataFusionDataType0);

@@ -6,12 +6,16 @@
 package sqlancer.evosuite.clickhouse.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.math.BigInteger;
+
 import org.junit.jupiter.api.Test;
+
 import sqlancer.clickhouse.ast.ClickHouseAggregate;
 import sqlancer.clickhouse.ast.ClickHouseBinaryArithmeticOperation;
 import sqlancer.clickhouse.ast.ClickHouseBinaryFunctionOperation;
 import sqlancer.clickhouse.ast.ClickHouseExpression;
+import sqlancer.clickhouse.ast.ClickHouseJoin;
 import sqlancer.clickhouse.ast.ClickHouseTableReference;
 import sqlancer.clickhouse.ast.constant.ClickHouseNullConstant;
 import sqlancer.clickhouse.ast.constant.ClickHouseUInt128Constant;
@@ -38,8 +42,8 @@ public class ClickHouseBinaryFunctionOperation_ESTest {
         ClickHouseBinaryFunctionOperation.ClickHouseBinaryFunctionOperator clickHouseBinaryFunctionOperation_ClickHouseBinaryFunctionOperator0 = ClickHouseBinaryFunctionOperation.ClickHouseBinaryFunctionOperator.INT_DIV;
         ClickHouseTableReference clickHouseTableReference0 = new ClickHouseTableReference(
                 (ClickHouseSchema.ClickHouseTable) null, "");
-        ClickHouseExpression.ClickHouseJoin.JoinType clickHouseExpression_ClickHouseJoin_JoinType0 = ClickHouseExpression.ClickHouseJoin.JoinType.CROSS;
-        ClickHouseExpression.ClickHouseJoin clickHouseExpression_ClickHouseJoin0 = new ClickHouseExpression.ClickHouseJoin(
+        ClickHouseJoin.JoinType clickHouseExpression_ClickHouseJoin_JoinType0 = ClickHouseJoin.JoinType.CROSS;
+        ClickHouseJoin clickHouseExpression_ClickHouseJoin0 = new ClickHouseJoin(
                 (ClickHouseTableReference) null, clickHouseTableReference0,
                 clickHouseExpression_ClickHouseJoin_JoinType0);
         ClickHouseAggregate clickHouseAggregate0 = new ClickHouseAggregate((ClickHouseExpression) null,

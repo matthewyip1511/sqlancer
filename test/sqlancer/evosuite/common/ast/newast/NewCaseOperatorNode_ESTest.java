@@ -6,6 +6,7 @@
 package sqlancer.evosuite.common.ast.newast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.ConcurrentModificationException;
 import java.util.LinkedList;
 import java.util.List;
@@ -21,7 +22,7 @@ public class NewCaseOperatorNode_ESTest {
     public void test00() throws Throwable {
         LinkedList<Integer> linkedList0 = new LinkedList<Integer>();
         LinkedList<Integer> linkedList1 = new LinkedList<Integer>();
-        Integer integer0 = new Integer((-532));
+        Integer integer0 = (-532);
         linkedList1.add(integer0);
         NewCaseOperatorNode<Integer> newCaseOperatorNode0 = null;
         try {
@@ -83,7 +84,7 @@ public class NewCaseOperatorNode_ESTest {
     public void test05() throws Throwable {
         LinkedList<Object> linkedList0 = new LinkedList<Object>();
         List<Object> list0 = linkedList0.subList(0, 0);
-        Integer integer0 = new Integer(0);
+        Integer integer0 = 0;
         linkedList0.add((Object) null);
         NewCaseOperatorNode<Object> newCaseOperatorNode0 = null;
         try {

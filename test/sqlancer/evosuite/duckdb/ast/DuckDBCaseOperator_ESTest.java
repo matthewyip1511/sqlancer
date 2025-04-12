@@ -6,6 +6,7 @@
 package sqlancer.evosuite.duckdb.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;

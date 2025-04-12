@@ -6,7 +6,9 @@
 package sqlancer.evosuite.cnosdb.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+
 import sqlancer.cnosdb.ast.CnosDBBinaryComparisonOperation;
 import sqlancer.cnosdb.ast.CnosDBBinaryLogicalOperation;
 import sqlancer.cnosdb.ast.CnosDBConstant;

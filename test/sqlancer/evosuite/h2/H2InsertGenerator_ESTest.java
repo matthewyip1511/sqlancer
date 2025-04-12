@@ -6,6 +6,7 @@
 package sqlancer.evosuite.h2;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.h2.H2InsertGenerator;
 import sqlancer.h2.H2Provider;

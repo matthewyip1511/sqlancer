@@ -6,8 +6,11 @@
 package sqlancer.evosuite.databend.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.List;
 import org.junit.jupiter.api.Test;
+
+import sqlancer.common.ast.JoinBase;
 import sqlancer.databend.ast.DatabendExpression;
 import sqlancer.databend.ast.DatabendJoin;
 import sqlancer.databend.ast.DatabendSelect;
@@ -31,7 +34,7 @@ public class DatabendSelect_ESTest {
         DatabendSelect databendSelect0 = new DatabendSelect();
         // Undeclared exception!
         try {
-            databendSelect0.setJoinClauses((List<DatabendJoin>) null);
+            databendSelect0.setJoinClauses((List<JoinBase<DatabendExpression>>) null);
             fail("Expecting exception: NullPointerException");
 
         } catch (NullPointerException e) {
@@ -131,16 +134,16 @@ public class DatabendSelect_ESTest {
     public void test7() throws Throwable {
         DatabendSelect databendSelect0 = new DatabendSelect();
         DatabendJoin[] databendJoinArray0 = new DatabendJoin[7];
-        List<DatabendJoin> list0 = Randomly.nonEmptySubset(databendJoinArray0);
+        List<JoinBase<DatabendExpression>> list0 = Randomly.nonEmptySubset(databendJoinArray0);
         databendSelect0.setJoinClauses(list0);
-        List<DatabendJoin> list1 = databendSelect0.getJoinClauses();
+        List<JoinBase<DatabendExpression>> list1 = databendSelect0.getJoinClauses();
         assertNotSame(list1, list0);
     }
 
     @Test
     public void test8() throws Throwable {
         DatabendSelect databendSelect0 = new DatabendSelect();
-        List<DatabendJoin> list0 = databendSelect0.getJoinClauses();
+        List<JoinBase<DatabendExpression>> list0 = databendSelect0.getJoinClauses();
         assertTrue(list0.isEmpty());
     }
 

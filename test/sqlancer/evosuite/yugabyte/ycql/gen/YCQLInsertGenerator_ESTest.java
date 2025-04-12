@@ -78,7 +78,6 @@ public class YCQLInsertGenerator_ESTest {
         linkedList0.add((YCQLSchema.YCQLColumn) null);
         YCQLProvider.YCQLGlobalState yCQLProvider_YCQLGlobalState0 = new YCQLProvider.YCQLGlobalState();
         YCQLInsertGenerator yCQLInsertGenerator0 = new YCQLInsertGenerator(yCQLProvider_YCQLGlobalState0);
-        Random.setNextRandom(1);
         // Undeclared exception!
         try {
             yCQLInsertGenerator0.insertColumns(linkedList0);
@@ -114,7 +113,6 @@ public class YCQLInsertGenerator_ESTest {
         linkedList0.add((YCQLSchema.YCQLColumn) null);
         linkedList0.add((YCQLSchema.YCQLColumn) null);
         YCQLInsertGenerator yCQLInsertGenerator0 = new YCQLInsertGenerator(yCQLProvider_YCQLGlobalState0);
-        Random.setNextRandom(1625);
         // Undeclared exception!
         try {
             yCQLInsertGenerator0.insertColumns(linkedList0);

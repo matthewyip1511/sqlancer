@@ -6,7 +6,9 @@
 package sqlancer.evosuite.citus.gen;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+
 import sqlancer.citus.gen.CitusUpdateGenerator;
 import sqlancer.postgres.PostgresGlobalState;
 

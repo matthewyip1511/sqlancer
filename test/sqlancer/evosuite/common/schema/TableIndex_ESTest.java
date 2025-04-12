@@ -5,9 +5,10 @@
 
 package sqlancer.evosuite.common.schema;
 
-import sqlancer.common.schema.TableIndex;
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+import sqlancer.common.schema.TableIndex;
 
 public class TableIndex_ESTest {
 

@@ -6,9 +6,9 @@
 package sqlancer.evosuite.datafusion.gen;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.LinkedList;
 import java.util.List;
-import org.evosuite.runtime.Random;
 import org.junit.jupiter.api.Test;
 import sqlancer.common.schema.AbstractTables;
 import sqlancer.datafusion.ast.DataFusionConstant;
@@ -132,7 +132,6 @@ public class DataFusionExpressionGenerator_ESTest {
         DataFusionProvider.DataFusionGlobalState dataFusionProvider_DataFusionGlobalState0 = new DataFusionProvider.DataFusionGlobalState();
         DataFusionExpressionGenerator dataFusionExpressionGenerator0 = new DataFusionExpressionGenerator(
                 dataFusionProvider_DataFusionGlobalState0);
-        Random.setNextRandom(1161);
         List<DataFusionExpression> list0 = dataFusionExpressionGenerator0.generateFetchColumns(false);
         assertEquals(1, list0.size());
     }

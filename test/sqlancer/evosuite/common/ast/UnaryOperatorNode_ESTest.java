@@ -6,6 +6,7 @@
 package sqlancer.evosuite.common.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.oceanbase.ast.OceanBaseConstant;
 import sqlancer.oceanbase.ast.OceanBaseExpression;

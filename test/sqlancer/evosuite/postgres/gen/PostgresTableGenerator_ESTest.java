@@ -38,7 +38,6 @@ public class PostgresTableGenerator_ESTest {
     @Test
     public void test1() throws Throwable {
         CitusGlobalState citusGlobalState0 = new CitusGlobalState();
-        Random.setNextRandom((-222));
         // Undeclared exception!
         try {
             PostgresTableGenerator.generate("UNIQUE(", (PostgresSchema) null, false, citusGlobalState0);

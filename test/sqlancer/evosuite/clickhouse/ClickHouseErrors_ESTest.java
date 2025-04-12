@@ -6,8 +6,11 @@
 package sqlancer.evosuite.clickhouse;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.List;
+
 import org.junit.jupiter.api.Test;
+
 import sqlancer.clickhouse.ClickHouseErrors;
 import sqlancer.common.query.ExpectedErrors;
 
