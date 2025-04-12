@@ -6,6 +6,7 @@
 package sqlancer.evosuite.yugabyte.ycql.gen;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.yugabyte.ycql.gen.YCQLTableGenerator;
 import sqlancer.yugabyte.ycql.YCQLProvider;

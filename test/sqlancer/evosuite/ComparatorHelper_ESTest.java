@@ -11,6 +11,7 @@ import java.util.function.UnaryOperator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.citus.CitusGlobalState;
 import sqlancer.common.query.ExpectedErrors;

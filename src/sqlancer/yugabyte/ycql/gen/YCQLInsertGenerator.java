@@ -45,7 +45,7 @@ public class YCQLInsertGenerator extends AbstractInsertGenerator<YCQLColumn> {
     }
 
     @Override
-    protected void insertColumns(List<YCQLColumn> columns) {
+    public void insertColumns(List<YCQLColumn> columns) {
         sb.append("(");
         for (int nrColumn = 0; nrColumn < columns.size(); nrColumn++) {
             if (nrColumn != 0) {
@@ -57,7 +57,7 @@ public class YCQLInsertGenerator extends AbstractInsertGenerator<YCQLColumn> {
     }
 
     @Override
-    protected void insertValue(YCQLColumn columnYCQL) {
+    public void insertValue(YCQLColumn columnYCQL) {
         // TODO: select a more meaningful value
         sb.append(YCQLToStringVisitor.asString(new YCQLExpressionGenerator(globalState).generateConstant()));
     }

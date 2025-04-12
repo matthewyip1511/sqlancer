@@ -26,8 +26,8 @@ public abstract class TiDBTLPBase extends TernaryLogicPartitioningOracleBase<TiD
         implements TestOracle<TiDBGlobalState> {
 
     TiDBSchema s;
-    TiDBTables targetTables;
-    TiDBExpressionGenerator gen;
+    public TiDBTables targetTables;
+    public TiDBExpressionGenerator gen;
     TiDBSelect select;
 
     public TiDBTLPBase(TiDBGlobalState state) {
@@ -56,12 +56,12 @@ public abstract class TiDBTLPBase extends TernaryLogicPartitioningOracleBase<TiD
         select.setWhereClause(null);
     }
 
-    List<TiDBExpression> generateFetchColumns() {
+    public List<TiDBExpression> generateFetchColumns() {
         return Arrays.asList(new TiDBColumnReference(targetTables.getColumns().get(0)));
     }
 
     @Override
-    protected ExpressionGenerator<TiDBExpression> getGen() {
+    public ExpressionGenerator<TiDBExpression> getGen() {
         return gen;
     }
 

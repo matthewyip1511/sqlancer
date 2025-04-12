@@ -8,9 +8,9 @@ package sqlancer.evosuite.transformations;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
-import java.util.function.Supplier;
 import java.util.LinkedList;
 import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.transformations.Transformation;
 

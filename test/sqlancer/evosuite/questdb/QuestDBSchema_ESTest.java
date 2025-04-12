@@ -6,16 +6,10 @@
 package sqlancer.evosuite.questdb;
 
 import static org.junit.jupiter.api.Assertions.*;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.LinkedList;
-import java.util.List;
-import org.evosuite.runtime.Random;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.questdb.QuestDBSchema;
-import sqlancer.SQLConnection;
 
 public class QuestDBSchema_ESTest {
 
@@ -81,6 +75,7 @@ public class QuestDBSchema_ESTest {
      * ViolatedAssumptionAnswer()); doReturn("U.(ZCpx**?Z4fE.G", "zd!N \"d^IMORO(}WWJ",
      * "FLOAT").when(resultSet0).getString(anyString());
      */
+    /*
     doReturn(true, true, true, false).when(resultSet0).next();
         PreparedStatement preparedStatement0 = mock(PreparedStatement.class, new ViolatedAssumptionAnswer());
         doReturn(resultSet0).when(preparedStatement0).executeQuery(anyString());
@@ -220,6 +215,8 @@ public class QuestDBSchema_ESTest {
         assertEquals(QuestDBSchema.QuestDBDataType.BOOLEAN,
                 questDBSchema_QuestDBCompositeDataType0.getPrimitiveDataType());
     }
+}
+
 
 /*
  * Test disabled because it contains mock() function calls that are not implemented

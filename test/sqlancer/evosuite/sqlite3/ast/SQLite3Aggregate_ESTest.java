@@ -8,6 +8,7 @@ package sqlancer.evosuite.sqlite3.ast;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.LinkedList;
 import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.Randomly;
 import sqlancer.sqlite3.ast.SQLite3Aggregate;

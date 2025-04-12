@@ -8,6 +8,7 @@ package sqlancer.evosuite.yugabyte.ysql.ast;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.LinkedList;
 import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.Randomly;
 import sqlancer.yugabyte.ysql.ast.YSQLBetweenOperation;

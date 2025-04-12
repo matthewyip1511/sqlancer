@@ -6,6 +6,7 @@
 package sqlancer.evosuite.tidb.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.tidb.ast.TiDBBinaryLogicalOperation;
 import sqlancer.tidb.ast.TiDBExpression;

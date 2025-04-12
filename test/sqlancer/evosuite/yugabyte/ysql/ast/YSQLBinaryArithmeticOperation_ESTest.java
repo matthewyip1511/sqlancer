@@ -6,6 +6,7 @@
 package sqlancer.evosuite.yugabyte.ysql.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.yugabyte.ysql.ast.YSQLBinaryArithmeticOperation;
 import sqlancer.yugabyte.ysql.ast.YSQLConstant;

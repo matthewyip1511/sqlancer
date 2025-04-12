@@ -5,7 +5,6 @@
 
 package sqlancer.evosuite.questdb.ast;
 
-import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import sqlancer.questdb.ast.QuestDBColumnReference;
 import sqlancer.questdb.QuestDBSchema;

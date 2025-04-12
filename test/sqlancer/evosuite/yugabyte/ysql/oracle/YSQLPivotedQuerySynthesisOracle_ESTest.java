@@ -8,6 +8,7 @@ package sqlancer.evosuite.yugabyte.ysql.oracle;
 import static org.junit.jupiter.api.Assertions.*;
 import java.math.BigDecimal;
 import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.common.query.SQLQueryAdapter;
 import sqlancer.yugabyte.ysql.ast.YSQLConstant;

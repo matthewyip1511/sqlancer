@@ -6,11 +6,9 @@
 package sqlancer.evosuite.yugabyte.ycql;
 
 import static org.junit.jupiter.api.Assertions.*;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.LinkedList;
 import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.SQLConnection;
 import sqlancer.yugabyte.ycql.YCQLSchema;
@@ -479,6 +477,7 @@ public class YCQLSchema_ESTest {
         assertTrue(boolean0);
         assertTrue(yCQLSchema_YCQLColumn0.isNullable());
     }
+}
 
 /*
  * Test disabled because it contains mock() function calls that are not implemented

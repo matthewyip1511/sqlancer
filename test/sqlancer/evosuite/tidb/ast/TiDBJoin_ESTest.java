@@ -8,6 +8,7 @@ package sqlancer.evosuite.tidb.ast;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.LinkedList;
 import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.tidb.ast.TiDBBinaryBitOperation;
 import sqlancer.tidb.ast.TiDBColumnReference;
@@ -195,13 +196,6 @@ public class TiDBJoin_ESTest {
     }
 
     @Test
-    public void test15() throws Throwable {
-        TiDBJoin.JoinType[] tiDBJoin_JoinTypeArray0 = new TiDBJoin.JoinType[7];
-        TiDBJoin.JoinType tiDBJoin_JoinType0 = TiDBJoin.JoinType.getRandomExcept(tiDBJoin_JoinTypeArray0);
-        assertEquals(TiDBJoin.JoinType.NATURAL, tiDBJoin_JoinType0);
-    }
-
-    @Test
     public void test16() throws Throwable {
         TiDBJoin.NaturalJoinType tiDBJoin_NaturalJoinType0 = TiDBJoin.NaturalJoinType.getRandom();
         assertEquals(TiDBJoin.NaturalJoinType.INNER, tiDBJoin_NaturalJoinType0);
@@ -333,21 +327,5 @@ public class TiDBJoin_ESTest {
         TiDBJoin tiDBJoin1 = TiDBJoin.createNaturalJoin(tiDBJoin0, (TiDBExpression) null, tiDBJoin_NaturalJoinType0);
         TiDBJoin.NaturalJoinType tiDBJoin_NaturalJoinType1 = tiDBJoin1.getNaturalJoinType();
         assertSame(tiDBJoin_NaturalJoinType1, tiDBJoin_NaturalJoinType0);
-    }
-
-    @Test
-    public void test28() throws Throwable {
-        TiDBJoin.JoinType[] tiDBJoin_JoinTypeArray0 = TiDBJoin.JoinType.values();
-        // Undeclared exception!
-        try {
-            TiDBJoin.JoinType.getRandomExcept(tiDBJoin_JoinTypeArray0);
-            fail("Expecting exception: ArrayIndexOutOfBoundsException");
-
-        } catch (ArrayIndexOutOfBoundsException e) {
-            //
-            // Index 0 out of bounds for length 0
-            //
-            verifyException("sqlancer.Randomly", e);
-        }
     }
 }

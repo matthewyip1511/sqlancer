@@ -7,6 +7,7 @@ package sqlancer.evosuite.transformations;
 
 import sqlancer.transformations.RoundDoubleConstant;
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 
 public class RoundDoubleConstant_ESTest {

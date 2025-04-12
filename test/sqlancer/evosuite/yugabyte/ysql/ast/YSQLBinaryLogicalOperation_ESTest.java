@@ -7,6 +7,7 @@ package sqlancer.evosuite.yugabyte.ysql.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.yugabyte.ysql.ast.YSQLAggregate;
 import sqlancer.yugabyte.ysql.ast.YSQLBetweenOperation;

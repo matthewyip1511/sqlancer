@@ -16,7 +16,7 @@ public class Transformation {
 
     protected boolean isChanged;
     protected String current;
-    protected String desc = "";
+    public String desc = "";
 
     protected Consumer<String> statementChangedHandler;
 
@@ -25,7 +25,7 @@ public class Transformation {
     }
 
     @SuppressWarnings("unused")
-    protected Transformation() {
+    public Transformation() {
     }
 
     public static void setBugJudgement(Supplier<Boolean> judgement) {
@@ -112,7 +112,7 @@ public class Transformation {
         return reduceSteps;
     }
 
-    protected void onStatementChanged() {
+    public void onStatementChanged() {
     }
 
     public void setStatementChangedCallBack(Consumer<String> statementChangedHandler) {

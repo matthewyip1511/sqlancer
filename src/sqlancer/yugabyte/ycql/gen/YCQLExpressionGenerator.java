@@ -38,7 +38,7 @@ public final class YCQLExpressionGenerator extends UntypedExpressionGenerator<YC
     }
 
     @Override
-    protected YCQLExpression generateExpression(int depth) {
+    public YCQLExpression generateExpression(int depth) {
         if (depth >= globalState.getOptions().getMaxExpressionDepth() || Randomly.getBoolean()) {
             return generateLeafNode();
         }
@@ -74,7 +74,7 @@ public final class YCQLExpressionGenerator extends UntypedExpressionGenerator<YC
     }
 
     @Override
-    protected YCQLExpression generateColumn() {
+    public YCQLExpression generateColumn() {
         YCQLColumn column = Randomly.fromList(columns);
         return new YCQLColumnReference(column);
     }

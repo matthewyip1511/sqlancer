@@ -7,7 +7,7 @@ package sqlancer.evosuite.yugabyte.ycql.gen;
 
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.LinkedList;
-import org.evosuite.runtime.Random;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.yugabyte.ycql.gen.YCQLInsertGenerator;
 import sqlancer.yugabyte.ycql.YCQLProvider;

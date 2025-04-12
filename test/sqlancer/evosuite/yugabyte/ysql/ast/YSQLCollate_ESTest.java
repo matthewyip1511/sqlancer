@@ -6,8 +6,10 @@
 package sqlancer.evosuite.yugabyte.ysql.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.Randomly;
+import sqlancer.common.ast.JoinBase;
 import sqlancer.yugabyte.ysql.ast.YSQLCollate;
 import sqlancer.yugabyte.ysql.ast.YSQLConstant;
 import sqlancer.yugabyte.ysql.ast.YSQLExpression;
@@ -73,7 +75,7 @@ public class YSQLCollate_ESTest {
 
     @Test
     public void test5() throws Throwable {
-        YSQLJoin.YSQLJoinType ySQLJoin_YSQLJoinType0 = YSQLJoin.YSQLJoinType.FULL;
+        JoinBase.JoinType ySQLJoin_YSQLJoinType0 = JoinBase.JoinType.FULL;
         YSQLJoin ySQLJoin0 = new YSQLJoin((YSQLExpression) null, (YSQLExpression) null, ySQLJoin_YSQLJoinType0);
         YSQLCollate ySQLCollate0 = new YSQLCollate(ySQLJoin0, "");
         // Undeclared exception!

@@ -162,7 +162,7 @@ public class TiDBExpressionGenerator extends UntypedExpressionGenerator<TiDBExpr
     }
 
     @Override
-    protected TiDBExpression generateExpression(int depth) {
+    public TiDBExpression generateExpression(int depth) {
         if (depth >= globalState.getOptions().getMaxExpressionDepth() || Randomly.getBoolean()) {
             return generateLeafNode();
         }
@@ -220,7 +220,7 @@ public class TiDBExpressionGenerator extends UntypedExpressionGenerator<TiDBExpr
     }
 
     @Override
-    protected TiDBExpression generateColumn() {
+    public TiDBExpression generateColumn() {
         TiDBColumn column = Randomly.fromList(columns);
         return new TiDBColumnReference(column);
     }
@@ -250,7 +250,7 @@ public class TiDBExpressionGenerator extends UntypedExpressionGenerator<TiDBExpr
         return Randomly.fromList(mutators).apply(select);
     }
 
-    boolean mutateJoin(TiDBSelect select) {
+    public boolean mutateJoin(TiDBSelect select) {
         if (select.getJoinList().isEmpty()) {
             return false;
         }
@@ -287,7 +287,7 @@ public class TiDBExpressionGenerator extends UntypedExpressionGenerator<TiDBExpr
         return increase;
     }
 
-    boolean mutateWhere(TiDBSelect select) {
+    public boolean mutateWhere(TiDBSelect select) {
         boolean increase = select.getWhereClause() != null;
         if (increase) {
             select.setWhereClause(null);
@@ -297,7 +297,7 @@ public class TiDBExpressionGenerator extends UntypedExpressionGenerator<TiDBExpr
         return increase;
     }
 
-    boolean mutateAnd(TiDBSelect select) {
+    public boolean mutateAnd(TiDBSelect select) {
         if (select.getWhereClause() == null) {
             select.setWhereClause(generateExpression());
         } else {
@@ -308,7 +308,7 @@ public class TiDBExpressionGenerator extends UntypedExpressionGenerator<TiDBExpr
         return false;
     }
 
-    boolean mutateOr(TiDBSelect select) {
+    public boolean mutateOr(TiDBSelect select) {
         if (select.getWhereClause() == null) {
             select.setWhereClause(generateExpression());
             return false;
@@ -320,7 +320,7 @@ public class TiDBExpressionGenerator extends UntypedExpressionGenerator<TiDBExpr
         }
     }
 
-    boolean mutateLimit(TiDBSelect select) {
+    public boolean mutateLimit(TiDBSelect select) {
         boolean increase = select.getLimitClause() != null;
         if (increase) {
             select.setLimitClause(null);

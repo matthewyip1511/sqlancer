@@ -6,7 +6,7 @@
 package sqlancer.evosuite.sqlite3.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
-import java.util.function.Supplier;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.Randomly;
 import sqlancer.sqlite3.ast.SQLite3Constant;
@@ -498,7 +498,7 @@ public class SQLite3Constant_ESTest {
         SQLite3Constant.SQLite3BinaryConstant sQLite3Constant_SQLite3BinaryConstant0 = new SQLite3Constant.SQLite3BinaryConstant(
                 byteArray0);
         byte[] byteArray1 = sQLite3Constant_SQLite3BinaryConstant0.asBinary();
-        assertArrayEquals(new byte[] { (byte) 0, (byte) 0, (byte) 0 }, byteArray1);
+        assertArrayEquals(new byte[]{(byte) 0, (byte) 0, (byte) 0}, byteArray1);
     }
 
     @Test
@@ -1522,3 +1522,4 @@ public class SQLite3Constant_ESTest {
         SQLite3Constant sQLite3Constant1 = sQLite3Constant0.castToBoolean();
         assertEquals(SQLite3DataType.NULL, sQLite3Constant1.getDataType());
     }
+}

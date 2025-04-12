@@ -6,7 +6,9 @@
 package sqlancer.evosuite.yugabyte.ysql.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+import sqlancer.common.ast.JoinBase;
 import sqlancer.yugabyte.ysql.ast.YSQLConstant;
 import sqlancer.yugabyte.ysql.ast.YSQLExpression;
 import sqlancer.yugabyte.ysql.ast.YSQLFunction;
@@ -91,7 +93,7 @@ public class YSQLFunction_ESTest {
         YSQLFunction.YSQLFunctionWithResult ySQLFunction_YSQLFunctionWithResult0 = YSQLFunction.YSQLFunctionWithResult.NUM_NONNULLS;
         YSQLSchema.YSQLDataType ySQLSchema_YSQLDataType0 = YSQLSchema.YSQLDataType.BIT;
         YSQLExpression[] ySQLExpressionArray0 = new YSQLExpression[1];
-        YSQLJoin.YSQLJoinType ySQLJoin_YSQLJoinType0 = YSQLJoin.YSQLJoinType.RIGHT;
+        JoinBase.JoinType ySQLJoin_YSQLJoinType0 = JoinBase.JoinType.RIGHT;
         YSQLJoin ySQLJoin0 = new YSQLJoin((YSQLExpression) null, (YSQLExpression) null, ySQLJoin_YSQLJoinType0);
         ySQLExpressionArray0[0] = (YSQLExpression) ySQLJoin0;
         YSQLFunction ySQLFunction0 = new YSQLFunction(ySQLFunction_YSQLFunctionWithResult0, ySQLSchema_YSQLDataType0,

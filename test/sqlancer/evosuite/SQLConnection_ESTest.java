@@ -5,18 +5,11 @@
 
 package sqlancer.evosuite;
 
-import static org.junit.jupiter.api.Assertions.*;
-import java.sql.Connection;
-import java.sql.DatabaseMetaData;
-import java.sql.PreparedStatement;
-import java.sql.Statement;
-import org.junit.jupiter.api.Test;
-import sqlancer.SQLConnection;
-
 public class SQLConnection_ESTest {
 
     private void verifyException(String s, Exception e) {
     }
+}
 
 /*
  * Test disabled because it contains mock() function calls that are not implemented

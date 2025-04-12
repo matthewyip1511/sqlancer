@@ -10,6 +10,7 @@ import java.math.BigInteger;
 import java.util.function.Supplier;
 import java.util.LinkedList;
 import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.MainOptions;
 import sqlancer.Randomly;
@@ -1171,3 +1172,4 @@ public class Randomly_ESTest {
         } catch (IndexOutOfBoundsException e) {
         }
     }
+}

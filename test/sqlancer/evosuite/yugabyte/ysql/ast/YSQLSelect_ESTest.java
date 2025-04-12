@@ -8,8 +8,10 @@ package sqlancer.evosuite.yugabyte.ysql.ast;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.LinkedList;
 import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.Randomly;
+import sqlancer.common.ast.JoinBase;
 import sqlancer.yugabyte.ysql.ast.YSQLConstant;
 import sqlancer.yugabyte.ysql.ast.YSQLExpression;
 import sqlancer.yugabyte.ysql.ast.YSQLJoin;
@@ -24,8 +26,8 @@ public class YSQLSelect_ESTest {
     @Test
     public void test00() throws Throwable {
         YSQLSelect ySQLSelect0 = new YSQLSelect();
-        ySQLSelect0.setJoinClauses((List<YSQLJoin>) null);
-        List<YSQLJoin> list0 = ySQLSelect0.getJoinClauses();
+        ySQLSelect0.setJoinClauses((List<JoinBase<YSQLExpression>>) null);
+        List<JoinBase<YSQLExpression>> list0 = ySQLSelect0.getJoinClauses();
         assertNull(list0);
     }
 
@@ -33,9 +35,9 @@ public class YSQLSelect_ESTest {
     public void test01() throws Throwable {
         YSQLSelect ySQLSelect0 = new YSQLSelect();
         YSQLJoin[] ySQLJoinArray0 = new YSQLJoin[1];
-        List<YSQLJoin> list0 = Randomly.nonEmptySubset(ySQLJoinArray0);
+        List<JoinBase<YSQLExpression>> list0 = Randomly.nonEmptySubset(ySQLJoinArray0);
         ySQLSelect0.setJoinClauses(list0);
-        List<YSQLJoin> list1 = ySQLSelect0.getJoinClauses();
+        List<JoinBase<YSQLExpression>> list1 = ySQLSelect0.getJoinClauses();
         assertEquals(1, list1.size());
     }
 
@@ -219,9 +221,9 @@ public class YSQLSelect_ESTest {
     public void test19() throws Throwable {
         YSQLSelect ySQLSelect0 = new YSQLSelect();
         YSQLJoin[] ySQLJoinArray0 = new YSQLJoin[8];
-        List<YSQLJoin> list0 = Randomly.subset((-4455), ySQLJoinArray0);
+        List<JoinBase<YSQLExpression>> list0 = Randomly.subset((-4455), ySQLJoinArray0);
         ySQLSelect0.setJoinClauses(list0);
-        List<YSQLJoin> list1 = ySQLSelect0.getJoinClauses();
+        List<JoinBase<YSQLExpression>> list1 = ySQLSelect0.getJoinClauses();
         assertTrue(list1.isEmpty());
     }
 

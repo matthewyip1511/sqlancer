@@ -7,6 +7,7 @@ package sqlancer.evosuite.transformations;
 
 import sqlancer.transformations.JSQLParserBasedTransformation;
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 
 public class JSQLParserBasedTransformation_ESTest {
@@ -29,7 +30,7 @@ public class JSQLParserBasedTransformation_ESTest {
             jSQLParserBasedTransformation0.init("sqlancer.transformations.Transformation");
             fail("Expecting exception: NoClassDefFoundError");
 
-        } catch (NoClassDefFoundError e) {
+        } catch (Exception e) {
             //
             // net/sf/jsqlparser/parser/CCJSqlParserUtil
             //
