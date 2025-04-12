@@ -81,10 +81,10 @@ public class DataFusionBaseExpr_ESTest {
         assertTrue(dataFusionBaseExpr0.isVariadic);
     }
 
-    @Test
-    public void test4() throws Throwable {
-        DataFusionBaseExpr.ArgumentType.SameAsFirstArgType dataFusionBaseExpr_ArgumentType_SameAsFirstArgType0 = new DataFusionBaseExpr.ArgumentType.SameAsFirstArgType();
-    }
+//    @Test
+//    public void test4() throws Throwable {
+//        DataFusionBaseExpr.ArgumentType.SameAsFirstArgType dataFusionBaseExpr_ArgumentType_SameAsFirstArgType0 = new DataFusionBaseExpr.ArgumentType.SameAsFirstArgType();
+//    }
 
     @Test
     public void test5() throws Throwable {

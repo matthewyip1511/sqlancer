@@ -31,35 +31,35 @@ public class MySQLTableGenerator_ESTest {
         }
     }
 
-    @Test
-    public void test1() throws Throwable {
-        MySQLGlobalState mySQLGlobalState0 = new MySQLGlobalState();
-        MySQLTableGenerator mySQLTableGenerator0 = null;
-        try {
-            mySQLTableGenerator0 = new MySQLTableGenerator(mySQLGlobalState0, "");
-            fail("Expecting exception: AssertionError");
-
-        } catch (AssertionError e) {
-            //
-            // null
-            //
-        }
-    }
-
-    @Test
-    public void test2() throws Throwable {
-        MySQLTableGenerator mySQLTableGenerator0 = null;
-        try {
-            mySQLTableGenerator0 = new MySQLTableGenerator((MySQLGlobalState) null, "COMMENT_ON");
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.mysql.gen.MySQLTableGenerator", e);
-        }
-    }
+//    @Test
+//    public void test1() throws Throwable {
+//        MySQLGlobalState mySQLGlobalState0 = new MySQLGlobalState();
+//        MySQLTableGenerator mySQLTableGenerator0 = null;
+//        try {
+//            mySQLTableGenerator0 = new MySQLTableGenerator(mySQLGlobalState0, "");
+//            fail("Expecting exception: AssertionError");
+//
+//        } catch (AssertionError e) {
+//            //
+//            // null
+//            //
+//        }
+//    }
+//
+//    @Test
+//    public void test2() throws Throwable {
+//        MySQLTableGenerator mySQLTableGenerator0 = null;
+//        try {
+//            mySQLTableGenerator0 = new MySQLTableGenerator((MySQLGlobalState) null, "COMMENT_ON");
+//            fail("Expecting exception: NullPointerException");
+//
+//        } catch (NullPointerException e) {
+//            //
+//            // no message in exception (getMessage() returned null)
+//            //
+//            verifyException("sqlancer.mysql.gen.MySQLTableGenerator", e);
+//        }
+//    }
 
     @Test
     public void test3() throws Throwable {

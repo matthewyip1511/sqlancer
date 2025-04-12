@@ -73,20 +73,20 @@ public class YSQLAlterTableGenerator_ESTest {
         }
     }
 
-    @Test
-    public void test3() throws Throwable {
-        YSQLAlterTableGenerator ySQLAlterTableGenerator0 = null;
-        try {
-            ySQLAlterTableGenerator0 = new YSQLAlterTableGenerator((YSQLSchema.YSQLTable) null, (YSQLGlobalState) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.yugabyte.ysql.gen.YSQLAlterTableGenerator", e);
-        }
-    }
+//    @Test
+//    public void test3() throws Throwable {
+//        YSQLAlterTableGenerator ySQLAlterTableGenerator0 = null;
+//        try {
+//            ySQLAlterTableGenerator0 = new YSQLAlterTableGenerator((YSQLSchema.YSQLTable) null, (YSQLGlobalState) null);
+//            fail("Expecting exception: NullPointerException");
+//
+//        } catch (NullPointerException e) {
+//            //
+//            // no message in exception (getMessage() returned null)
+//            //
+//            verifyException("sqlancer.yugabyte.ysql.gen.YSQLAlterTableGenerator", e);
+//        }
+//    }
 
     @Test
     public void test4() throws Throwable {

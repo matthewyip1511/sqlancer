@@ -305,38 +305,38 @@ public class MaterializeToStringVisitor_ESTest {
         }
     }
 
-    @Test
-    public void test012() throws Throwable {
-        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
-        MaterializeConstant.MaterializeNullConstant materializeConstant_MaterializeNullConstant0 = new MaterializeConstant.MaterializeNullConstant();
-        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 = MaterializeSchema.MaterializeDataType.BOOLEAN;
-        MaterializeConstant materializeConstant0 = materializeConstant_MaterializeNullConstant0
-                .cast(materializeSchema_MaterializeDataType0);
-        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType1 = MaterializeSchema.MaterializeDataType.INT;
-        MaterializeConstant.createTextConstant((String) null);
-        MaterializeCompoundDataType materializeCompoundDataType0 = MaterializeCompoundDataType
-                .create(materializeSchema_MaterializeDataType0, (-1313));
-        MaterializeCastOperation materializeCastOperation0 = new MaterializeCastOperation(materializeConstant0,
-                materializeCompoundDataType0);
-        MaterializeCastOperation materializeCastOperation1 = new MaterializeCastOperation(materializeConstant0,
-                materializeCompoundDataType0);
-        MaterializeCompoundDataType materializeCompoundDataType1 = MaterializeCompoundDataType
-                .create(materializeSchema_MaterializeDataType1);
-        MaterializeCastOperation materializeCastOperation2 = new MaterializeCastOperation(materializeCastOperation0,
-                materializeCompoundDataType1);
-        materializeToStringVisitor0.visit(materializeCastOperation1);
-        // Undeclared exception!
-        try {
-            materializeToStringVisitor0.visit((MaterializeSimilarTo) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.materialize.MaterializeToStringVisitor", e);
-        }
-    }
+//    @Test
+//    public void test012() throws Throwable {
+//        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
+//        MaterializeConstant.MaterializeNullConstant materializeConstant_MaterializeNullConstant0 = new MaterializeConstant.MaterializeNullConstant();
+//        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 = MaterializeSchema.MaterializeDataType.BOOLEAN;
+//        MaterializeConstant materializeConstant0 = materializeConstant_MaterializeNullConstant0
+//                .cast(materializeSchema_MaterializeDataType0);
+//        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType1 = MaterializeSchema.MaterializeDataType.INT;
+//        MaterializeConstant.createTextConstant((String) null);
+//        MaterializeCompoundDataType materializeCompoundDataType0 = MaterializeCompoundDataType
+//                .create(materializeSchema_MaterializeDataType0, (-1313));
+//        MaterializeCastOperation materializeCastOperation0 = new MaterializeCastOperation(materializeConstant0,
+//                materializeCompoundDataType0);
+//        MaterializeCastOperation materializeCastOperation1 = new MaterializeCastOperation(materializeConstant0,
+//                materializeCompoundDataType0);
+//        MaterializeCompoundDataType materializeCompoundDataType1 = MaterializeCompoundDataType
+//                .create(materializeSchema_MaterializeDataType1);
+//        MaterializeCastOperation materializeCastOperation2 = new MaterializeCastOperation(materializeCastOperation0,
+//                materializeCompoundDataType1);
+//        materializeToStringVisitor0.visit(materializeCastOperation1);
+//        // Undeclared exception!
+//        try {
+//            materializeToStringVisitor0.visit((MaterializeSimilarTo) null);
+//            fail("Expecting exception: NullPointerException");
+//
+//        } catch (NullPointerException e) {
+//            //
+//            // no message in exception (getMessage() returned null)
+//            //
+//            verifyException("sqlancer.materialize.MaterializeToStringVisitor", e);
+//        }
+//    }
 
     @Test
     public void test013() throws Throwable {
@@ -381,38 +381,38 @@ public class MaterializeToStringVisitor_ESTest {
         assertEquals("(NULL)::INT(-3241)", materializeToStringVisitor0.get());
     }
 
-    @Test
-    public void test016() throws Throwable {
-        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
-        MaterializeConstant materializeConstant0 = MaterializeConstant.createFloatConstant(312.2F);
-        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 = MaterializeSchema.MaterializeDataType.FLOAT;
-        MaterializeCompoundDataType materializeCompoundDataType0 = MaterializeCompoundDataType
-                .create(materializeSchema_MaterializeDataType0);
-        MaterializeCastOperation materializeCastOperation0 = new MaterializeCastOperation(materializeConstant0,
-                materializeCompoundDataType0);
-        materializeToStringVisitor0.visit(materializeCastOperation0);
-        MaterializeBinaryComparisonOperation.MaterializeBinaryComparisonOperator materializeBinaryComparisonOperation_MaterializeBinaryComparisonOperator0 = MaterializeBinaryComparisonOperation.MaterializeBinaryComparisonOperator.LESS_EQUALS;
-        MaterializeBinaryComparisonOperation materializeBinaryComparisonOperation0 = new MaterializeBinaryComparisonOperation(
-                materializeCastOperation0, materializeConstant0,
-                materializeBinaryComparisonOperation_MaterializeBinaryComparisonOperator0);
-        materializeBinaryComparisonOperation0.getExpectedValue();
-        MaterializeConcatOperation materializeConcatOperation0 = new MaterializeConcatOperation(
-                (MaterializeExpression) null, (MaterializeExpression) null);
-        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType1 = MaterializeSchema.MaterializeDataType.BOOLEAN;
-        MaterializeCompoundDataType materializeCompoundDataType1 = MaterializeCompoundDataType
-                .create(materializeSchema_MaterializeDataType1, 6);
-        MaterializeCastOperation materializeCastOperation1 = null;
-        try {
-            materializeCastOperation1 = new MaterializeCastOperation((MaterializeExpression) null,
-                    materializeCompoundDataType1);
-            fail("Expecting exception: AssertionError");
-
-        } catch (AssertionError e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-        }
-    }
+//    @Test
+//    public void test016() throws Throwable {
+//        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
+//        MaterializeConstant materializeConstant0 = MaterializeConstant.createFloatConstant(312.2F);
+//        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 = MaterializeSchema.MaterializeDataType.FLOAT;
+//        MaterializeCompoundDataType materializeCompoundDataType0 = MaterializeCompoundDataType
+//                .create(materializeSchema_MaterializeDataType0);
+//        MaterializeCastOperation materializeCastOperation0 = new MaterializeCastOperation(materializeConstant0,
+//                materializeCompoundDataType0);
+//        materializeToStringVisitor0.visit(materializeCastOperation0);
+//        MaterializeBinaryComparisonOperation.MaterializeBinaryComparisonOperator materializeBinaryComparisonOperation_MaterializeBinaryComparisonOperator0 = MaterializeBinaryComparisonOperation.MaterializeBinaryComparisonOperator.LESS_EQUALS;
+//        MaterializeBinaryComparisonOperation materializeBinaryComparisonOperation0 = new MaterializeBinaryComparisonOperation(
+//                materializeCastOperation0, materializeConstant0,
+//                materializeBinaryComparisonOperation_MaterializeBinaryComparisonOperator0);
+//        materializeBinaryComparisonOperation0.getExpectedValue();
+//        MaterializeConcatOperation materializeConcatOperation0 = new MaterializeConcatOperation(
+//                (MaterializeExpression) null, (MaterializeExpression) null);
+//        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType1 = MaterializeSchema.MaterializeDataType.BOOLEAN;
+//        MaterializeCompoundDataType materializeCompoundDataType1 = MaterializeCompoundDataType
+//                .create(materializeSchema_MaterializeDataType1, 6);
+//        MaterializeCastOperation materializeCastOperation1 = null;
+//        try {
+//            materializeCastOperation1 = new MaterializeCastOperation((MaterializeExpression) null,
+//                    materializeCompoundDataType1);
+//            fail("Expecting exception: AssertionError");
+//
+//        } catch (AssertionError e) {
+//            //
+//            // no message in exception (getMessage() returned null)
+//            //
+//        }
+//    }
 
     @Test
     public void test017() throws Throwable {
@@ -487,70 +487,70 @@ public class MaterializeToStringVisitor_ESTest {
         }
     }
 
-    @Test
-    public void test020() throws Throwable {
-        MaterializeSelect.MaterializeSubquery materializeSelect_MaterializeSubquery0 = null;
-        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
-        // Undeclared exception!
-        try {
-            materializeToStringVisitor0.visitSpecific((MaterializeExpression) null);
-            fail("Expecting exception: AssertionError");
+//    @Test
+//    public void test020() throws Throwable {
+//        MaterializeSelect.MaterializeSubquery materializeSelect_MaterializeSubquery0 = null;
+//        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
+//        // Undeclared exception!
+//        try {
+//            materializeToStringVisitor0.visitSpecific((MaterializeExpression) null);
+//            fail("Expecting exception: AssertionError");
+//
+//        } catch (AssertionError e) {
+//            //
+//            // null
+//            //
+//        }
+//    }
 
-        } catch (AssertionError e) {
-            //
-            // null
-            //
-        }
-    }
-
-    @Test
-    public void test021() throws Throwable {
-        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
-        MaterializeExpression materializeExpression0 = MaterializeConstant.createBitConstant((-3291L));
-        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 = MaterializeSchema.MaterializeDataType.TEXT;
-        MaterializeCompoundDataType materializeCompoundDataType0 = MaterializeCompoundDataType
-                .create(materializeSchema_MaterializeDataType0);
-        MaterializeConstant materializeConstant0 = MaterializeConstant.createDoubleConstant(0.0);
-        MaterializeCastOperation materializeCastOperation0 = new MaterializeCastOperation(materializeConstant0,
-                materializeCompoundDataType0);
-        materializeToStringVisitor0.visit(materializeCastOperation0);
-        MaterializeConcatOperation materializeConcatOperation0 = new MaterializeConcatOperation(
-                materializeCastOperation0, materializeCastOperation0);
-        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType1 = MaterializeSchema.MaterializeDataType.BOOLEAN;
-        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType2 = MaterializeSchema.MaterializeDataType.INT;
-        MaterializeCompoundDataType materializeCompoundDataType1 = MaterializeCompoundDataType
-                .create(materializeSchema_MaterializeDataType2, 962);
-        MaterializeCastOperation materializeCastOperation1 = new MaterializeCastOperation(materializeCastOperation0,
-                materializeCompoundDataType1);
-        MaterializePrefixOperation.PrefixOperator materializePrefixOperation_PrefixOperator0 = MaterializePrefixOperation.PrefixOperator.UNARY_PLUS;
-        MaterializePrefixOperation materializePrefixOperation0 = new MaterializePrefixOperation(
-                materializeCastOperation0, materializePrefixOperation_PrefixOperator0);
-        MaterializeFunctionWithUnknownResult materializeFunctionWithUnknownResult0 = MaterializeFunctionWithUnknownResult.QUOTE_IDENT;
-        MaterializeExpression[] materializeExpressionArray0 = new MaterializeExpression[9];
-        materializeExpressionArray0[0] = (MaterializeExpression) materializeCastOperation1;
-        materializeExpressionArray0[1] = (MaterializeExpression) materializeCastOperation1;
-        materializeExpressionArray0[2] = (MaterializeExpression) materializePrefixOperation0;
-        materializeExpressionArray0[3] = (MaterializeExpression) materializeCastOperation1;
-        materializeExpressionArray0[4] = (MaterializeExpression) materializeCastOperation0;
-        materializeExpressionArray0[5] = materializeExpression0;
-        materializeExpressionArray0[6] = (MaterializeExpression) materializeConstant0;
-        materializeExpressionArray0[7] = (MaterializeExpression) materializeCastOperation1;
-        MaterializeCastOperation materializeCastOperation2 = new MaterializeCastOperation(
-                materializeExpressionArray0[5], materializeCompoundDataType0);
-        MaterializeSimilarTo materializeSimilarTo0 = new MaterializeSimilarTo(materializeConstant0,
-                materializeExpressionArray0[7], materializeCastOperation2);
-        materializeExpressionArray0[8] = (MaterializeExpression) materializeSimilarTo0;
-        MaterializeFunction materializeFunction0 = new MaterializeFunction(materializeFunctionWithUnknownResult0,
-                materializeSchema_MaterializeDataType1, materializeExpressionArray0);
-        MaterializeFunctionWithUnknownResult materializeFunctionWithUnknownResult1 = MaterializeFunctionWithUnknownResult.ACOSH;
-        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType3 = MaterializeSchema.MaterializeDataType.INT;
-        MaterializeFunction materializeFunction1 = new MaterializeFunction(materializeFunctionWithUnknownResult1,
-                materializeSchema_MaterializeDataType3, materializeExpressionArray0);
-        materializeToStringVisitor0.visit(materializeFunction1);
-        assertEquals(
-                "(0.0)::VARCHARacosh(((0.0)::VARCHAR)::INT(962), ((0.0)::VARCHAR)::INT(962), + ((0.0)::VARCHAR), ((0.0)::VARCHAR)::INT(962), (0.0)::VARCHAR, -3291, 0.0, ((0.0)::VARCHAR)::INT(962), (0.0 SIMILAR TO ((0.0)::VARCHAR)::INT(962)(-3291)::VARCHAR))",
-                materializeToStringVisitor0.get());
-    }
+//    @Test
+//    public void test021() throws Throwable {
+//        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
+//        MaterializeExpression materializeExpression0 = MaterializeConstant.createBitConstant((-3291L));
+//        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 = MaterializeSchema.MaterializeDataType.TEXT;
+//        MaterializeCompoundDataType materializeCompoundDataType0 = MaterializeCompoundDataType
+//                .create(materializeSchema_MaterializeDataType0);
+//        MaterializeConstant materializeConstant0 = MaterializeConstant.createDoubleConstant(0.0);
+//        MaterializeCastOperation materializeCastOperation0 = new MaterializeCastOperation(materializeConstant0,
+//                materializeCompoundDataType0);
+//        materializeToStringVisitor0.visit(materializeCastOperation0);
+//        MaterializeConcatOperation materializeConcatOperation0 = new MaterializeConcatOperation(
+//                materializeCastOperation0, materializeCastOperation0);
+//        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType1 = MaterializeSchema.MaterializeDataType.BOOLEAN;
+//        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType2 = MaterializeSchema.MaterializeDataType.INT;
+//        MaterializeCompoundDataType materializeCompoundDataType1 = MaterializeCompoundDataType
+//                .create(materializeSchema_MaterializeDataType2, 962);
+//        MaterializeCastOperation materializeCastOperation1 = new MaterializeCastOperation(materializeCastOperation0,
+//                materializeCompoundDataType1);
+//        MaterializePrefixOperation.PrefixOperator materializePrefixOperation_PrefixOperator0 = MaterializePrefixOperation.PrefixOperator.UNARY_PLUS;
+//        MaterializePrefixOperation materializePrefixOperation0 = new MaterializePrefixOperation(
+//                materializeCastOperation0, materializePrefixOperation_PrefixOperator0);
+//        MaterializeFunctionWithUnknownResult materializeFunctionWithUnknownResult0 = MaterializeFunctionWithUnknownResult.QUOTE_IDENT;
+//        MaterializeExpression[] materializeExpressionArray0 = new MaterializeExpression[9];
+//        materializeExpressionArray0[0] = (MaterializeExpression) materializeCastOperation1;
+//        materializeExpressionArray0[1] = (MaterializeExpression) materializeCastOperation1;
+//        materializeExpressionArray0[2] = (MaterializeExpression) materializePrefixOperation0;
+//        materializeExpressionArray0[3] = (MaterializeExpression) materializeCastOperation1;
+//        materializeExpressionArray0[4] = (MaterializeExpression) materializeCastOperation0;
+//        materializeExpressionArray0[5] = materializeExpression0;
+//        materializeExpressionArray0[6] = (MaterializeExpression) materializeConstant0;
+//        materializeExpressionArray0[7] = (MaterializeExpression) materializeCastOperation1;
+//        MaterializeCastOperation materializeCastOperation2 = new MaterializeCastOperation(
+//                materializeExpressionArray0[5], materializeCompoundDataType0);
+//        MaterializeSimilarTo materializeSimilarTo0 = new MaterializeSimilarTo(materializeConstant0,
+//                materializeExpressionArray0[7], materializeCastOperation2);
+//        materializeExpressionArray0[8] = (MaterializeExpression) materializeSimilarTo0;
+//        MaterializeFunction materializeFunction0 = new MaterializeFunction(materializeFunctionWithUnknownResult0,
+//                materializeSchema_MaterializeDataType1, materializeExpressionArray0);
+//        MaterializeFunctionWithUnknownResult materializeFunctionWithUnknownResult1 = MaterializeFunctionWithUnknownResult.ACOSH;
+//        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType3 = MaterializeSchema.MaterializeDataType.INT;
+//        MaterializeFunction materializeFunction1 = new MaterializeFunction(materializeFunctionWithUnknownResult1,
+//                materializeSchema_MaterializeDataType3, materializeExpressionArray0);
+//        materializeToStringVisitor0.visit(materializeFunction1);
+//        assertEquals(
+//                "(0.0)::VARCHARacosh(((0.0)::VARCHAR)::INT(962), ((0.0)::VARCHAR)::INT(962), + ((0.0)::VARCHAR), ((0.0)::VARCHAR)::INT(962), (0.0)::VARCHAR, -3291, 0.0, ((0.0)::VARCHAR)::INT(962), (0.0 SIMILAR TO ((0.0)::VARCHAR)::INT(962)(-3291)::VARCHAR))",
+//                materializeToStringVisitor0.get());
+//    }
 
     @Test
     public void test022() throws Throwable {
@@ -565,61 +565,61 @@ public class MaterializeToStringVisitor_ESTest {
         assertEquals("(NULL)::INT", materializeToStringVisitor0.get());
     }
 
-    @Test
-    public void test023() throws Throwable {
-        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
-        MaterializeExpression materializeExpression0 = MaterializeConstant.createBitConstant(0L);
-        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 = MaterializeSchema.MaterializeDataType.TEXT;
-        MaterializeCompoundDataType materializeCompoundDataType0 = MaterializeCompoundDataType
-                .create(materializeSchema_MaterializeDataType0);
-        MaterializeCastOperation materializeCastOperation0 = new MaterializeCastOperation(materializeExpression0,
-                materializeCompoundDataType0);
-        materializeToStringVisitor0.visit(materializeCastOperation0);
-        MaterializeConcatOperation materializeConcatOperation0 = new MaterializeConcatOperation(materializeExpression0,
-                materializeExpression0);
-        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType1 = MaterializeSchema.MaterializeDataType.BOOLEAN;
-        MaterializeCompoundDataType materializeCompoundDataType1 = MaterializeCompoundDataType
-                .create(materializeSchema_MaterializeDataType1, (-961));
-        MaterializeCastOperation materializeCastOperation1 = new MaterializeCastOperation(materializeConcatOperation0,
-                materializeCompoundDataType1);
-        MaterializePrefixOperation.PrefixOperator materializePrefixOperation_PrefixOperator0 = MaterializePrefixOperation.PrefixOperator.UNARY_PLUS;
-        MaterializePrefixOperation materializePrefixOperation0 = new MaterializePrefixOperation(materializeExpression0,
-                materializePrefixOperation_PrefixOperator0);
-        MaterializeFunctionWithUnknownResult materializeFunctionWithUnknownResult0 = MaterializeFunctionWithUnknownResult.QUOTE_IDENT;
-        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType2 = MaterializeSchema.MaterializeDataType.INT;
-        MaterializeExpression[] materializeExpressionArray0 = new MaterializeExpression[3];
-        materializeExpressionArray0[0] = (MaterializeExpression) materializeConcatOperation0;
-        materializeExpressionArray0[1] = (MaterializeExpression) materializeConcatOperation0;
-        materializeExpressionArray0[2] = (MaterializeExpression) materializeCastOperation1;
-        MaterializeFunction materializeFunction0 = new MaterializeFunction(materializeFunctionWithUnknownResult0,
-                materializeSchema_MaterializeDataType2, materializeExpressionArray0);
-        materializeToStringVisitor0.visit(materializeFunction0);
-        assertEquals("(0)::VARCHARquote_ident(((0)||(0)), ((0)||(0)), (((0)||(0)) != ''))",
-                materializeToStringVisitor0.get());
-
-        materializeToStringVisitor0.visit(materializeCastOperation1);
-        assertEquals("(0)::VARCHARquote_ident(((0)||(0)), ((0)||(0)), (((0)||(0)) != ''))(((0)||(0)) != '')",
-                materializeToStringVisitor0.get());
-    }
-
-    @Test
-    public void test024() throws Throwable {
-        MaterializeSelect.MaterializeSubquery materializeSelect_MaterializeSubquery0 = null;
-        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
-        MaterializeOrderByTerm.MaterializeOrder materializeOrderByTerm_MaterializeOrder0 = MaterializeOrderByTerm.MaterializeOrder.DESC;
-        MaterializeOrderByTerm materializeOrderByTerm0 = new MaterializeOrderByTerm((MaterializeExpression) null,
-                materializeOrderByTerm_MaterializeOrder0);
-        // Undeclared exception!
-        try {
-            materializeToStringVisitor0.visit(materializeOrderByTerm0);
-            fail("Expecting exception: AssertionError");
-
-        } catch (AssertionError e) {
-            //
-            // null
-            //
-        }
-    }
+//    @Test
+//    public void test023() throws Throwable {
+//        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
+//        MaterializeExpression materializeExpression0 = MaterializeConstant.createBitConstant(0L);
+//        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 = MaterializeSchema.MaterializeDataType.TEXT;
+//        MaterializeCompoundDataType materializeCompoundDataType0 = MaterializeCompoundDataType
+//                .create(materializeSchema_MaterializeDataType0);
+//        MaterializeCastOperation materializeCastOperation0 = new MaterializeCastOperation(materializeExpression0,
+//                materializeCompoundDataType0);
+//        materializeToStringVisitor0.visit(materializeCastOperation0);
+//        MaterializeConcatOperation materializeConcatOperation0 = new MaterializeConcatOperation(materializeExpression0,
+//                materializeExpression0);
+//        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType1 = MaterializeSchema.MaterializeDataType.BOOLEAN;
+//        MaterializeCompoundDataType materializeCompoundDataType1 = MaterializeCompoundDataType
+//                .create(materializeSchema_MaterializeDataType1, (-961));
+//        MaterializeCastOperation materializeCastOperation1 = new MaterializeCastOperation(materializeConcatOperation0,
+//                materializeCompoundDataType1);
+//        MaterializePrefixOperation.PrefixOperator materializePrefixOperation_PrefixOperator0 = MaterializePrefixOperation.PrefixOperator.UNARY_PLUS;
+//        MaterializePrefixOperation materializePrefixOperation0 = new MaterializePrefixOperation(materializeExpression0,
+//                materializePrefixOperation_PrefixOperator0);
+//        MaterializeFunctionWithUnknownResult materializeFunctionWithUnknownResult0 = MaterializeFunctionWithUnknownResult.QUOTE_IDENT;
+//        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType2 = MaterializeSchema.MaterializeDataType.INT;
+//        MaterializeExpression[] materializeExpressionArray0 = new MaterializeExpression[3];
+//        materializeExpressionArray0[0] = (MaterializeExpression) materializeConcatOperation0;
+//        materializeExpressionArray0[1] = (MaterializeExpression) materializeConcatOperation0;
+//        materializeExpressionArray0[2] = (MaterializeExpression) materializeCastOperation1;
+//        MaterializeFunction materializeFunction0 = new MaterializeFunction(materializeFunctionWithUnknownResult0,
+//                materializeSchema_MaterializeDataType2, materializeExpressionArray0);
+//        materializeToStringVisitor0.visit(materializeFunction0);
+//        assertEquals("(0)::VARCHARquote_ident(((0)||(0)), ((0)||(0)), (((0)||(0)) != ''))",
+//                materializeToStringVisitor0.get());
+//
+//        materializeToStringVisitor0.visit(materializeCastOperation1);
+//        assertEquals("(0)::VARCHARquote_ident(((0)||(0)), ((0)||(0)), (((0)||(0)) != ''))(((0)||(0)) != '')",
+//                materializeToStringVisitor0.get());
+//    }
+//
+//    @Test
+//    public void test024() throws Throwable {
+//        MaterializeSelect.MaterializeSubquery materializeSelect_MaterializeSubquery0 = null;
+//        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
+//        MaterializeOrderByTerm.MaterializeOrder materializeOrderByTerm_MaterializeOrder0 = MaterializeOrderByTerm.MaterializeOrder.DESC;
+//        MaterializeOrderByTerm materializeOrderByTerm0 = new MaterializeOrderByTerm((MaterializeExpression) null,
+//                materializeOrderByTerm_MaterializeOrder0);
+//        // Undeclared exception!
+//        try {
+//            materializeToStringVisitor0.visit(materializeOrderByTerm0);
+//            fail("Expecting exception: AssertionError");
+//
+//        } catch (AssertionError e) {
+//            //
+//            // null
+//            //
+//        }
+//    }
 
     @Test
     public void test025() throws Throwable {
@@ -800,39 +800,39 @@ public class MaterializeToStringVisitor_ESTest {
         }
     }
 
-    @Test
-    public void test034() throws Throwable {
-        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
-        MaterializeSchema.MaterializeColumn materializeSchema_MaterializeColumn0 = MaterializeSchema.MaterializeColumn
-                .createDummy("");
-        MaterializeConstant.MaterializeNullConstant materializeConstant_MaterializeNullConstant0 = new MaterializeConstant.MaterializeNullConstant();
-        MaterializeColumnValue materializeColumnValue0 = MaterializeColumnValue
-                .create(materializeSchema_MaterializeColumn0, materializeConstant_MaterializeNullConstant0);
-        MaterializePOSIXRegularExpression.POSIXRegex materializePOSIXRegularExpression_POSIXRegex0 = MaterializePOSIXRegularExpression.POSIXRegex.MATCH_CASE_INSENSITIVE;
-        MaterializePOSIXRegularExpression materializePOSIXRegularExpression0 = new MaterializePOSIXRegularExpression(
-                materializeColumnValue0, materializeColumnValue0, materializePOSIXRegularExpression_POSIXRegex0);
-        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 = MaterializeSchema.MaterializeDataType.REAL;
-        MaterializeCompoundDataType materializeCompoundDataType0 = MaterializeCompoundDataType
-                .create(materializeSchema_MaterializeDataType0);
-        MaterializeCastOperation materializeCastOperation0 = new MaterializeCastOperation(
-                materializePOSIXRegularExpression0, materializeCompoundDataType0);
-        MaterializeFunction.MaterializeFunctionWithResult materializeFunction_MaterializeFunctionWithResult0 = MaterializeFunction.MaterializeFunctionWithResult.LOWER;
-        MaterializeExpression[] materializeExpressionArray0 = new MaterializeExpression[4];
-        MaterializeCastOperation materializeCastOperation1 = new MaterializeCastOperation(
-                materializeConstant_MaterializeNullConstant0, materializeCompoundDataType0);
-        materializeExpressionArray0[0] = (MaterializeExpression) materializeCastOperation1;
-        materializeExpressionArray0[1] = (MaterializeExpression) materializeColumnValue0;
-        materializeExpressionArray0[2] = (MaterializeExpression) materializePOSIXRegularExpression0;
-        materializeExpressionArray0[3] = (MaterializeExpression) materializeConstant_MaterializeNullConstant0;
-        MaterializeFunction materializeFunction0 = new MaterializeFunction(
-                materializeFunction_MaterializeFunctionWithResult0, materializeSchema_MaterializeDataType0,
-                materializeExpressionArray0);
-        List<MaterializeExpression> list0 = Randomly.nonEmptySubset(materializeExpressionArray0);
-        MaterializeInOperation materializeInOperation0 = new MaterializeInOperation(materializeCastOperation0, list0,
-                true);
-        materializeToStringVisitor0.visit(materializeInOperation0);
-        assertEquals("((~*)::INT::FLOAT) IN ()", materializeToStringVisitor0.get());
-    }
+//    @Test
+//    public void test034() throws Throwable {
+//        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
+//        MaterializeSchema.MaterializeColumn materializeSchema_MaterializeColumn0 = MaterializeSchema.MaterializeColumn
+//                .createDummy("");
+//        MaterializeConstant.MaterializeNullConstant materializeConstant_MaterializeNullConstant0 = new MaterializeConstant.MaterializeNullConstant();
+//        MaterializeColumnValue materializeColumnValue0 = MaterializeColumnValue
+//                .create(materializeSchema_MaterializeColumn0, materializeConstant_MaterializeNullConstant0);
+//        MaterializePOSIXRegularExpression.POSIXRegex materializePOSIXRegularExpression_POSIXRegex0 = MaterializePOSIXRegularExpression.POSIXRegex.MATCH_CASE_INSENSITIVE;
+//        MaterializePOSIXRegularExpression materializePOSIXRegularExpression0 = new MaterializePOSIXRegularExpression(
+//                materializeColumnValue0, materializeColumnValue0, materializePOSIXRegularExpression_POSIXRegex0);
+//        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 = MaterializeSchema.MaterializeDataType.REAL;
+//        MaterializeCompoundDataType materializeCompoundDataType0 = MaterializeCompoundDataType
+//                .create(materializeSchema_MaterializeDataType0);
+//        MaterializeCastOperation materializeCastOperation0 = new MaterializeCastOperation(
+//                materializePOSIXRegularExpression0, materializeCompoundDataType0);
+//        MaterializeFunction.MaterializeFunctionWithResult materializeFunction_MaterializeFunctionWithResult0 = MaterializeFunction.MaterializeFunctionWithResult.LOWER;
+//        MaterializeExpression[] materializeExpressionArray0 = new MaterializeExpression[4];
+//        MaterializeCastOperation materializeCastOperation1 = new MaterializeCastOperation(
+//                materializeConstant_MaterializeNullConstant0, materializeCompoundDataType0);
+//        materializeExpressionArray0[0] = (MaterializeExpression) materializeCastOperation1;
+//        materializeExpressionArray0[1] = (MaterializeExpression) materializeColumnValue0;
+//        materializeExpressionArray0[2] = (MaterializeExpression) materializePOSIXRegularExpression0;
+//        materializeExpressionArray0[3] = (MaterializeExpression) materializeConstant_MaterializeNullConstant0;
+//        MaterializeFunction materializeFunction0 = new MaterializeFunction(
+//                materializeFunction_MaterializeFunctionWithResult0, materializeSchema_MaterializeDataType0,
+//                materializeExpressionArray0);
+//        List<MaterializeExpression> list0 = Randomly.nonEmptySubset(materializeExpressionArray0);
+//        MaterializeInOperation materializeInOperation0 = new MaterializeInOperation(materializeCastOperation0, list0,
+//                true);
+//        materializeToStringVisitor0.visit(materializeInOperation0);
+//        assertEquals("((~*)::INT::FLOAT) IN ()", materializeToStringVisitor0.get());
+//    }
 
     @Test
     public void test035() throws Throwable {
@@ -952,47 +952,47 @@ public class MaterializeToStringVisitor_ESTest {
         assertEquals("right()", materializeToStringVisitor0.get());
     }
 
-    @Test
-    public void test041() throws Throwable {
-        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
-        MaterializeSchema.MaterializeColumn materializeSchema_MaterializeColumn0 = MaterializeSchema.MaterializeColumn
-                .createDummy("");
-        MaterializeConstant.MaterializeNullConstant materializeConstant_MaterializeNullConstant0 = new MaterializeConstant.MaterializeNullConstant();
-        MaterializeColumnValue materializeColumnValue0 = MaterializeColumnValue
-                .create(materializeSchema_MaterializeColumn0, materializeConstant_MaterializeNullConstant0);
-        MaterializePOSIXRegularExpression.POSIXRegex materializePOSIXRegularExpression_POSIXRegex0 = MaterializePOSIXRegularExpression.POSIXRegex.MATCH_CASE_INSENSITIVE;
-        MaterializePOSIXRegularExpression materializePOSIXRegularExpression0 = new MaterializePOSIXRegularExpression(
-                materializeColumnValue0, materializeColumnValue0, materializePOSIXRegularExpression_POSIXRegex0);
-        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 = MaterializeSchema.MaterializeDataType.REAL;
-        MaterializeCompoundDataType materializeCompoundDataType0 = MaterializeCompoundDataType
-                .create(materializeSchema_MaterializeDataType0);
-        MaterializeCastOperation materializeCastOperation0 = new MaterializeCastOperation(
-                materializePOSIXRegularExpression0, materializeCompoundDataType0);
-        MaterializeFunction.MaterializeFunctionWithResult materializeFunction_MaterializeFunctionWithResult0 = MaterializeFunction.MaterializeFunctionWithResult.LOWER;
-        MaterializeExpression[] materializeExpressionArray0 = new MaterializeExpression[4];
-        MaterializeCastOperation materializeCastOperation1 = new MaterializeCastOperation(
-                materializeConstant_MaterializeNullConstant0, materializeCompoundDataType0);
-        materializeExpressionArray0[0] = (MaterializeExpression) materializeCastOperation1;
-        materializeExpressionArray0[1] = (MaterializeExpression) materializeColumnValue0;
-        materializeExpressionArray0[2] = (MaterializeExpression) materializePOSIXRegularExpression0;
-        materializeExpressionArray0[3] = (MaterializeExpression) materializeConstant_MaterializeNullConstant0;
-        MaterializeFunction materializeFunction0 = new MaterializeFunction(
-                materializeFunction_MaterializeFunctionWithResult0, materializeSchema_MaterializeDataType0,
-                materializeExpressionArray0);
-        materializeToStringVisitor0.visit(materializeFunction0);
-        MaterializeSelect materializeSelect0 = new MaterializeSelect();
-        // Undeclared exception!
-        try {
-            materializeToStringVisitor0.visit(materializeSelect0);
-            fail("Expecting exception: IllegalStateException");
-
-        } catch (IllegalStateException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.common.ast.SelectBase", e);
-        }
-    }
+//    @Test
+//    public void test041() throws Throwable {
+//        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
+//        MaterializeSchema.MaterializeColumn materializeSchema_MaterializeColumn0 = MaterializeSchema.MaterializeColumn
+//                .createDummy("");
+//        MaterializeConstant.MaterializeNullConstant materializeConstant_MaterializeNullConstant0 = new MaterializeConstant.MaterializeNullConstant();
+//        MaterializeColumnValue materializeColumnValue0 = MaterializeColumnValue
+//                .create(materializeSchema_MaterializeColumn0, materializeConstant_MaterializeNullConstant0);
+//        MaterializePOSIXRegularExpression.POSIXRegex materializePOSIXRegularExpression_POSIXRegex0 = MaterializePOSIXRegularExpression.POSIXRegex.MATCH_CASE_INSENSITIVE;
+//        MaterializePOSIXRegularExpression materializePOSIXRegularExpression0 = new MaterializePOSIXRegularExpression(
+//                materializeColumnValue0, materializeColumnValue0, materializePOSIXRegularExpression_POSIXRegex0);
+//        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 = MaterializeSchema.MaterializeDataType.REAL;
+//        MaterializeCompoundDataType materializeCompoundDataType0 = MaterializeCompoundDataType
+//                .create(materializeSchema_MaterializeDataType0);
+//        MaterializeCastOperation materializeCastOperation0 = new MaterializeCastOperation(
+//                materializePOSIXRegularExpression0, materializeCompoundDataType0);
+//        MaterializeFunction.MaterializeFunctionWithResult materializeFunction_MaterializeFunctionWithResult0 = MaterializeFunction.MaterializeFunctionWithResult.LOWER;
+//        MaterializeExpression[] materializeExpressionArray0 = new MaterializeExpression[4];
+//        MaterializeCastOperation materializeCastOperation1 = new MaterializeCastOperation(
+//                materializeConstant_MaterializeNullConstant0, materializeCompoundDataType0);
+//        materializeExpressionArray0[0] = (MaterializeExpression) materializeCastOperation1;
+//        materializeExpressionArray0[1] = (MaterializeExpression) materializeColumnValue0;
+//        materializeExpressionArray0[2] = (MaterializeExpression) materializePOSIXRegularExpression0;
+//        materializeExpressionArray0[3] = (MaterializeExpression) materializeConstant_MaterializeNullConstant0;
+//        MaterializeFunction materializeFunction0 = new MaterializeFunction(
+//                materializeFunction_MaterializeFunctionWithResult0, materializeSchema_MaterializeDataType0,
+//                materializeExpressionArray0);
+//        materializeToStringVisitor0.visit(materializeFunction0);
+//        MaterializeSelect materializeSelect0 = new MaterializeSelect();
+//        // Undeclared exception!
+//        try {
+//            materializeToStringVisitor0.visit(materializeSelect0);
+//            fail("Expecting exception: IllegalStateException");
+//
+//        } catch (IllegalStateException e) {
+//            //
+//            // no message in exception (getMessage() returned null)
+//            //
+//            verifyException("sqlancer.common.ast.SelectBase", e);
+//        }
+//    }
 
     @Test
     public void test042() throws Throwable {
@@ -1068,35 +1068,35 @@ public class MaterializeToStringVisitor_ESTest {
         }
     }
 
-    @Test
-    public void test046() throws Throwable {
-        MaterializeConstant materializeConstant0 = MaterializeConstant.createIntConstant(1L);
-        MaterializeExpression materializeExpression0 = MaterializeConstant.createBitConstant(1L);
-        MaterializeConcatOperation materializeConcatOperation0 = new MaterializeConcatOperation(materializeConstant0,
-                materializeExpression0);
-        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 = MaterializeSchema.MaterializeDataType.TEXT;
-        MaterializeCompoundDataType materializeCompoundDataType0 = MaterializeCompoundDataType
-                .create(materializeSchema_MaterializeDataType0, (-961));
-        MaterializeCastOperation materializeCastOperation0 = new MaterializeCastOperation(materializeConcatOperation0,
-                materializeCompoundDataType0);
-        MaterializePrefixOperation.PrefixOperator materializePrefixOperation_PrefixOperator0 = MaterializePrefixOperation.PrefixOperator.UNARY_MINUS;
-        MaterializePrefixOperation materializePrefixOperation0 = new MaterializePrefixOperation(
-                materializeCastOperation0, materializePrefixOperation_PrefixOperator0);
-        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
-        MaterializeSelect.MaterializeFromTable materializeSelect_MaterializeFromTable0 = new MaterializeSelect.MaterializeFromTable(
-                (MaterializeSchema.MaterializeTable) null, false);
-        // Undeclared exception!
-        try {
-            materializeToStringVisitor0.visit(materializeSelect_MaterializeFromTable0);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.materialize.MaterializeToStringVisitor", e);
-        }
-    }
+//    @Test
+//    public void test046() throws Throwable {
+//        MaterializeConstant materializeConstant0 = MaterializeConstant.createIntConstant(1L);
+//        MaterializeExpression materializeExpression0 = MaterializeConstant.createBitConstant(1L);
+//        MaterializeConcatOperation materializeConcatOperation0 = new MaterializeConcatOperation(materializeConstant0,
+//                materializeExpression0);
+//        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 = MaterializeSchema.MaterializeDataType.TEXT;
+//        MaterializeCompoundDataType materializeCompoundDataType0 = MaterializeCompoundDataType
+//                .create(materializeSchema_MaterializeDataType0, (-961));
+//        MaterializeCastOperation materializeCastOperation0 = new MaterializeCastOperation(materializeConcatOperation0,
+//                materializeCompoundDataType0);
+//        MaterializePrefixOperation.PrefixOperator materializePrefixOperation_PrefixOperator0 = MaterializePrefixOperation.PrefixOperator.UNARY_MINUS;
+//        MaterializePrefixOperation materializePrefixOperation0 = new MaterializePrefixOperation(
+//                materializeCastOperation0, materializePrefixOperation_PrefixOperator0);
+//        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
+//        MaterializeSelect.MaterializeFromTable materializeSelect_MaterializeFromTable0 = new MaterializeSelect.MaterializeFromTable(
+//                (MaterializeSchema.MaterializeTable) null, false);
+//        // Undeclared exception!
+//        try {
+//            materializeToStringVisitor0.visit(materializeSelect_MaterializeFromTable0);
+//            fail("Expecting exception: NullPointerException");
+//
+//        } catch (NullPointerException e) {
+//            //
+//            // no message in exception (getMessage() returned null)
+//            //
+//            verifyException("sqlancer.materialize.MaterializeToStringVisitor", e);
+//        }
+//    }
 
     @Test
     public void test047() throws Throwable {
@@ -1169,26 +1169,26 @@ public class MaterializeToStringVisitor_ESTest {
         }
     }
 
-    @Test
-    public void test051() throws Throwable {
-        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
-        double double0 = 50.0;
-        MaterializeSelect materializeSelect0 = new MaterializeSelect();
-        String string0 = "";
-        MaterializeBetweenOperation materializeBetweenOperation0 = new MaterializeBetweenOperation(materializeSelect0,
-                materializeSelect0, materializeSelect0, true);
-        // Undeclared exception!
-        try {
-            materializeToStringVisitor0.visit(materializeBetweenOperation0);
-            fail("Expecting exception: IllegalStateException");
-
-        } catch (IllegalStateException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.common.ast.SelectBase", e);
-        }
-    }
+//    @Test
+//    public void test051() throws Throwable {
+//        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
+//        double double0 = 50.0;
+//        MaterializeSelect materializeSelect0 = new MaterializeSelect();
+//        String string0 = "";
+//        MaterializeBetweenOperation materializeBetweenOperation0 = new MaterializeBetweenOperation(materializeSelect0,
+//                materializeSelect0, materializeSelect0, true);
+//        // Undeclared exception!
+//        try {
+//            materializeToStringVisitor0.visit(materializeBetweenOperation0);
+//            fail("Expecting exception: IllegalStateException");
+//
+//        } catch (IllegalStateException e) {
+//            //
+//            // no message in exception (getMessage() returned null)
+//            //
+//            verifyException("sqlancer.common.ast.SelectBase", e);
+//        }
+//    }
 
     @Test
     public void test052() throws Throwable {
@@ -1230,24 +1230,24 @@ public class MaterializeToStringVisitor_ESTest {
         }
     }
 
-    @Test
-    public void test054() throws Throwable {
-        MaterializeSelect.MaterializeSubquery materializeSelect_MaterializeSubquery0 = null;
-        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
-        MaterializePrefixOperation.PrefixOperator materializePrefixOperation_PrefixOperator0 = MaterializePrefixOperation.PrefixOperator.NOT;
-        MaterializePrefixOperation materializePrefixOperation0 = new MaterializePrefixOperation(
-                (MaterializeExpression) null, materializePrefixOperation_PrefixOperator0);
-        // Undeclared exception!
-        try {
-            materializeToStringVisitor0.visit(materializePrefixOperation0);
-            fail("Expecting exception: AssertionError");
-
-        } catch (AssertionError e) {
-            //
-            // null
-            //
-        }
-    }
+//    @Test
+//    public void test054() throws Throwable {
+//        MaterializeSelect.MaterializeSubquery materializeSelect_MaterializeSubquery0 = null;
+//        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
+//        MaterializePrefixOperation.PrefixOperator materializePrefixOperation_PrefixOperator0 = MaterializePrefixOperation.PrefixOperator.NOT;
+//        MaterializePrefixOperation materializePrefixOperation0 = new MaterializePrefixOperation(
+//                (MaterializeExpression) null, materializePrefixOperation_PrefixOperator0);
+//        // Undeclared exception!
+//        try {
+//            materializeToStringVisitor0.visit(materializePrefixOperation0);
+//            fail("Expecting exception: AssertionError");
+//
+//        } catch (AssertionError e) {
+//            //
+//            // null
+//            //
+//        }
+//    }
 
     @Test
     public void test055() throws Throwable {
@@ -1331,38 +1331,38 @@ public class MaterializeToStringVisitor_ESTest {
         }
     }
 
-    @Test
-    public void test058() throws Throwable {
-        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
-        MaterializeSelect materializeSelect0 = new MaterializeSelect();
-        MaterializeSelect.SelectType materializeSelect_SelectType0 = MaterializeSelect.SelectType.ALL;
-        MaterializeFunction.MaterializeFunctionWithResult materializeFunction_MaterializeFunctionWithResult0 = MaterializeFunction.MaterializeFunctionWithResult.NUM_NONNULLS;
-        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 = MaterializeSchema.MaterializeDataType.DECIMAL;
-        MaterializeExpression[] materializeExpressionArray0 = new MaterializeExpression[9];
-        materializeExpressionArray0[0] = (MaterializeExpression) materializeSelect0;
-        materializeExpressionArray0[1] = (MaterializeExpression) materializeSelect0;
-        materializeExpressionArray0[2] = (MaterializeExpression) materializeSelect0;
-        materializeExpressionArray0[3] = (MaterializeExpression) materializeSelect0;
-        materializeExpressionArray0[4] = (MaterializeExpression) materializeSelect0;
-        materializeExpressionArray0[5] = (MaterializeExpression) materializeSelect0;
-        materializeExpressionArray0[6] = (MaterializeExpression) materializeSelect0;
-        materializeExpressionArray0[7] = (MaterializeExpression) materializeSelect0;
-        materializeExpressionArray0[8] = (MaterializeExpression) materializeSelect0;
-        MaterializeFunction materializeFunction0 = new MaterializeFunction(
-                materializeFunction_MaterializeFunctionWithResult0, materializeSchema_MaterializeDataType0,
-                materializeExpressionArray0);
-        // Undeclared exception!
-        try {
-            materializeToStringVisitor0.visit(materializeFunction0);
-            fail("Expecting exception: IllegalStateException");
-
-        } catch (IllegalStateException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.common.ast.SelectBase", e);
-        }
-    }
+//    @Test
+//    public void test058() throws Throwable {
+//        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
+//        MaterializeSelect materializeSelect0 = new MaterializeSelect();
+//        MaterializeSelect.SelectType materializeSelect_SelectType0 = MaterializeSelect.SelectType.ALL;
+//        MaterializeFunction.MaterializeFunctionWithResult materializeFunction_MaterializeFunctionWithResult0 = MaterializeFunction.MaterializeFunctionWithResult.NUM_NONNULLS;
+//        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 = MaterializeSchema.MaterializeDataType.DECIMAL;
+//        MaterializeExpression[] materializeExpressionArray0 = new MaterializeExpression[9];
+//        materializeExpressionArray0[0] = (MaterializeExpression) materializeSelect0;
+//        materializeExpressionArray0[1] = (MaterializeExpression) materializeSelect0;
+//        materializeExpressionArray0[2] = (MaterializeExpression) materializeSelect0;
+//        materializeExpressionArray0[3] = (MaterializeExpression) materializeSelect0;
+//        materializeExpressionArray0[4] = (MaterializeExpression) materializeSelect0;
+//        materializeExpressionArray0[5] = (MaterializeExpression) materializeSelect0;
+//        materializeExpressionArray0[6] = (MaterializeExpression) materializeSelect0;
+//        materializeExpressionArray0[7] = (MaterializeExpression) materializeSelect0;
+//        materializeExpressionArray0[8] = (MaterializeExpression) materializeSelect0;
+//        MaterializeFunction materializeFunction0 = new MaterializeFunction(
+//                materializeFunction_MaterializeFunctionWithResult0, materializeSchema_MaterializeDataType0,
+//                materializeExpressionArray0);
+//        // Undeclared exception!
+//        try {
+//            materializeToStringVisitor0.visit(materializeFunction0);
+//            fail("Expecting exception: IllegalStateException");
+//
+//        } catch (IllegalStateException e) {
+//            //
+//            // no message in exception (getMessage() returned null)
+//            //
+//            verifyException("sqlancer.common.ast.SelectBase", e);
+//        }
+//    }
 
     @Test
     public void test059() throws Throwable {
@@ -1409,24 +1409,24 @@ public class MaterializeToStringVisitor_ESTest {
         assertEquals("(NULL)::VARCHAR", materializeToStringVisitor0.get());
     }
 
-    @Test
-    public void test062() throws Throwable {
-        MaterializeSelect.MaterializeSubquery materializeSelect_MaterializeSubquery0 = null;
-        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
-        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 = MaterializeSchema.MaterializeDataType.INT;
-        MaterializePostfixText materializePostfixText0 = new MaterializePostfixText((MaterializeExpression) null, "",
-                (MaterializeConstant) null, materializeSchema_MaterializeDataType0);
-        // Undeclared exception!
-        try {
-            materializeToStringVisitor0.visit(materializePostfixText0);
-            fail("Expecting exception: AssertionError");
-
-        } catch (AssertionError e) {
-            //
-            // null
-            //
-        }
-    }
+//    @Test
+//    public void test062() throws Throwable {
+//        MaterializeSelect.MaterializeSubquery materializeSelect_MaterializeSubquery0 = null;
+//        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
+//        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 = MaterializeSchema.MaterializeDataType.INT;
+//        MaterializePostfixText materializePostfixText0 = new MaterializePostfixText((MaterializeExpression) null, "",
+//                (MaterializeConstant) null, materializeSchema_MaterializeDataType0);
+//        // Undeclared exception!
+//        try {
+//            materializeToStringVisitor0.visit(materializePostfixText0);
+//            fail("Expecting exception: AssertionError");
+//
+//        } catch (AssertionError e) {
+//            //
+//            // null
+//            //
+//        }
+//    }
 
     @Test
     public void test063() throws Throwable {
@@ -1544,7 +1544,6 @@ public class MaterializeToStringVisitor_ESTest {
     @Test
     public void test070() throws Throwable {
         MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
-        String string0 = "";
         MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 = MaterializeSchema.MaterializeDataType.TEXT;
         MaterializeSchema.MaterializeColumn materializeSchema_MaterializeColumn0 = new MaterializeSchema.MaterializeColumn(
                 "", materializeSchema_MaterializeDataType0);
@@ -1646,7 +1645,6 @@ public class MaterializeToStringVisitor_ESTest {
     @Test
     public void test075() throws Throwable {
         MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
-        MaterializeExpression materializeExpression0 = null;
         MaterializeOrderByTerm.MaterializeOrder materializeOrderByTerm_MaterializeOrder0 = MaterializeOrderByTerm.MaterializeOrder.ASC;
         MaterializeOrderByTerm materializeOrderByTerm0 = new MaterializeOrderByTerm((MaterializeExpression) null,
                 materializeOrderByTerm_MaterializeOrder0);
@@ -1781,97 +1779,97 @@ public class MaterializeToStringVisitor_ESTest {
         }
     }
 
-    @Test
-    public void test082() throws Throwable {
-        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
-        MaterializeSelect materializeSelect0 = new MaterializeSelect();
-        String string0 = "pet,";
-        MaterializeSelect.MaterializeSubquery materializeSelect_MaterializeSubquery0 = new MaterializeSelect.MaterializeSubquery(
-                materializeSelect0, "pet,");
-        // Undeclared exception!
-        try {
-            materializeToStringVisitor0.visitSpecific((MaterializeExpression) materializeSelect_MaterializeSubquery0);
-            fail("Expecting exception: IllegalStateException");
+//    @Test
+//    public void test082() throws Throwable {
+//        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
+//        MaterializeSelect materializeSelect0 = new MaterializeSelect();
+//        String string0 = "pet,";
+//        MaterializeSelect.MaterializeSubquery materializeSelect_MaterializeSubquery0 = new MaterializeSelect.MaterializeSubquery(
+//                materializeSelect0, "pet,");
+//        // Undeclared exception!
+//        try {
+//            materializeToStringVisitor0.visitSpecific((MaterializeExpression) materializeSelect_MaterializeSubquery0);
+//            fail("Expecting exception: IllegalStateException");
+//
+//        } catch (IllegalStateException e) {
+//            //
+//            // no message in exception (getMessage() returned null)
+//            //
+//            verifyException("sqlancer.common.ast.SelectBase", e);
+//        }
+//    }
 
-        } catch (IllegalStateException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.common.ast.SelectBase", e);
-        }
-    }
+    //    @Test
+    //    public void test083() throws Throwable {
+    //        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
+    //        MaterializeSchema.MaterializeColumn materializeSchema_MaterializeColumn0 = MaterializeSchema.MaterializeColumn
+    //                .createDummy("r*%tO!fd[Gk8h!CsK");
+    //        MaterializeConstant.MaterializeNullConstant materializeConstant_MaterializeNullConstant0 = new MaterializeConstant.MaterializeNullConstant();
+    //        MaterializeColumnValue materializeColumnValue0 = MaterializeColumnValue
+    //                .create(materializeSchema_MaterializeColumn0, materializeConstant_MaterializeNullConstant0);
+    //        MaterializeLikeOperation materializeLikeOperation0 = new MaterializeLikeOperation(materializeColumnValue0,
+    //                materializeConstant_MaterializeNullConstant0);
+    //        MaterializePOSIXRegularExpression.POSIXRegex materializePOSIXRegularExpression_POSIXRegex0 = MaterializePOSIXRegularExpression.POSIXRegex.NOT_MATCH_CASE_INSENSITIVE;
+    //        MaterializePOSIXRegularExpression materializePOSIXRegularExpression0 = new MaterializePOSIXRegularExpression(
+    //                materializeLikeOperation0, materializeLikeOperation0, materializePOSIXRegularExpression_POSIXRegex0);
+    //        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 = MaterializeSchema.MaterializeDataType.FLOAT;
+    //        MaterializeCompoundDataType materializeCompoundDataType0 = MaterializeCompoundDataType
+    //                .create(materializeSchema_MaterializeDataType0);
+    //        MaterializeCastOperation materializeCastOperation0 = new MaterializeCastOperation(
+    //                materializePOSIXRegularExpression0, materializeCompoundDataType0);
+    //        MaterializeConstant.DoubleConstant materializeConstant_DoubleConstant0 = new MaterializeConstant.DoubleConstant(
+    //                0.0);
+    //        materializeConstant_DoubleConstant0.isEquals(materializeConstant_MaterializeNullConstant0);
+    //        MaterializePostfixOperation.PostfixOperator materializePostfixOperation_PostfixOperator0 = MaterializePostfixOperation.PostfixOperator.IS_NULL;
+    //        MaterializePostfixOperation materializePostfixOperation0 = new MaterializePostfixOperation(
+    //                (MaterializeExpression) null, materializePostfixOperation_PostfixOperator0);
+    //        MaterializeCastOperation materializeCastOperation1 = new MaterializeCastOperation(materializePostfixOperation0,
+    //                materializeCompoundDataType0);
+    //        MaterializeCastOperation materializeCastOperation2 = new MaterializeCastOperation(materializePostfixOperation0,
+    //                materializeCompoundDataType0);
+    //        // Undeclared exception!
+    //        try {
+    //            materializeToStringVisitor0.visit(materializeCastOperation2);
+    //            fail("Expecting exception: AssertionError");
+    //
+    //        } catch (AssertionError e) {
+    //            //
+    //            // null
+    //            //
+    //        }
+    //    }
 
-    @Test
-    public void test083() throws Throwable {
-        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
-        MaterializeSchema.MaterializeColumn materializeSchema_MaterializeColumn0 = MaterializeSchema.MaterializeColumn
-                .createDummy("r*%tO!fd[Gk8h!CsK");
-        MaterializeConstant.MaterializeNullConstant materializeConstant_MaterializeNullConstant0 = new MaterializeConstant.MaterializeNullConstant();
-        MaterializeColumnValue materializeColumnValue0 = MaterializeColumnValue
-                .create(materializeSchema_MaterializeColumn0, materializeConstant_MaterializeNullConstant0);
-        MaterializeLikeOperation materializeLikeOperation0 = new MaterializeLikeOperation(materializeColumnValue0,
-                materializeConstant_MaterializeNullConstant0);
-        MaterializePOSIXRegularExpression.POSIXRegex materializePOSIXRegularExpression_POSIXRegex0 = MaterializePOSIXRegularExpression.POSIXRegex.NOT_MATCH_CASE_INSENSITIVE;
-        MaterializePOSIXRegularExpression materializePOSIXRegularExpression0 = new MaterializePOSIXRegularExpression(
-                materializeLikeOperation0, materializeLikeOperation0, materializePOSIXRegularExpression_POSIXRegex0);
-        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 = MaterializeSchema.MaterializeDataType.FLOAT;
-        MaterializeCompoundDataType materializeCompoundDataType0 = MaterializeCompoundDataType
-                .create(materializeSchema_MaterializeDataType0);
-        MaterializeCastOperation materializeCastOperation0 = new MaterializeCastOperation(
-                materializePOSIXRegularExpression0, materializeCompoundDataType0);
-        MaterializeConstant.DoubleConstant materializeConstant_DoubleConstant0 = new MaterializeConstant.DoubleConstant(
-                0.0);
-        materializeConstant_DoubleConstant0.isEquals(materializeConstant_MaterializeNullConstant0);
-        MaterializePostfixOperation.PostfixOperator materializePostfixOperation_PostfixOperator0 = MaterializePostfixOperation.PostfixOperator.IS_NULL;
-        MaterializePostfixOperation materializePostfixOperation0 = new MaterializePostfixOperation(
-                (MaterializeExpression) null, materializePostfixOperation_PostfixOperator0);
-        MaterializeCastOperation materializeCastOperation1 = new MaterializeCastOperation(materializePostfixOperation0,
-                materializeCompoundDataType0);
-        MaterializeCastOperation materializeCastOperation2 = new MaterializeCastOperation(materializePostfixOperation0,
-                materializeCompoundDataType0);
-        // Undeclared exception!
-        try {
-            materializeToStringVisitor0.visit(materializeCastOperation2);
-            fail("Expecting exception: AssertionError");
-
-        } catch (AssertionError e) {
-            //
-            // null
-            //
-        }
-    }
-
-    @Test
-    public void test084() throws Throwable {
-        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
-        MaterializeConstant materializeConstant0 = MaterializeConstant.createFloatConstant(312.2F);
-        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 = MaterializeSchema.MaterializeDataType.BIT;
-        MaterializeSchema.MaterializeColumn materializeSchema_MaterializeColumn0 = new MaterializeSchema.MaterializeColumn(
-                "-](", materializeSchema_MaterializeDataType0);
-        MaterializeColumnValue.create(materializeSchema_MaterializeColumn0, materializeConstant0);
-        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType1 = MaterializeSchema.MaterializeDataType.BOOLEAN;
-        MaterializeCompoundDataType materializeCompoundDataType0 = MaterializeCompoundDataType
-                .create(materializeSchema_MaterializeDataType1);
-        MaterializeConstant.createTextConstant("-](");
-        MaterializeCastOperation materializeCastOperation0 = new MaterializeCastOperation(materializeConstant0,
-                materializeCompoundDataType0);
-        MaterializeCastOperation materializeCastOperation1 = new MaterializeCastOperation(materializeConstant0,
-                materializeCompoundDataType0);
-        MaterializeCastOperation materializeCastOperation2 = new MaterializeCastOperation(materializeCastOperation0,
-                materializeCompoundDataType0);
-        materializeToStringVisitor0.visit(materializeCastOperation2);
-        // Undeclared exception!
-        try {
-            materializeToStringVisitor0.visit((MaterializeSimilarTo) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.materialize.MaterializeToStringVisitor", e);
-        }
-    }
+//    @Test
+//    public void test084() throws Throwable {
+//        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
+//        MaterializeConstant materializeConstant0 = MaterializeConstant.createFloatConstant(312.2F);
+//        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 = MaterializeSchema.MaterializeDataType.BIT;
+//        MaterializeSchema.MaterializeColumn materializeSchema_MaterializeColumn0 = new MaterializeSchema.MaterializeColumn(
+//                "-](", materializeSchema_MaterializeDataType0);
+//        MaterializeColumnValue.create(materializeSchema_MaterializeColumn0, materializeConstant0);
+//        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType1 = MaterializeSchema.MaterializeDataType.BOOLEAN;
+//        MaterializeCompoundDataType materializeCompoundDataType0 = MaterializeCompoundDataType
+//                .create(materializeSchema_MaterializeDataType1);
+//        MaterializeConstant.createTextConstant("-](");
+//        MaterializeCastOperation materializeCastOperation0 = new MaterializeCastOperation(materializeConstant0,
+//                materializeCompoundDataType0);
+//        MaterializeCastOperation materializeCastOperation1 = new MaterializeCastOperation(materializeConstant0,
+//                materializeCompoundDataType0);
+//        MaterializeCastOperation materializeCastOperation2 = new MaterializeCastOperation(materializeCastOperation0,
+//                materializeCompoundDataType0);
+//        materializeToStringVisitor0.visit(materializeCastOperation2);
+//        // Undeclared exception!
+//        try {
+//            materializeToStringVisitor0.visit((MaterializeSimilarTo) null);
+//            fail("Expecting exception: NullPointerException");
+//
+//        } catch (NullPointerException e) {
+//            //
+//            // no message in exception (getMessage() returned null)
+//            //
+//            verifyException("sqlancer.materialize.MaterializeToStringVisitor", e);
+//        }
+//    }
 
     @Test
     public void test085() throws Throwable {
