@@ -19,7 +19,6 @@ public class DataFusionUtil_ESTest {
     private void verifyException(String s, Exception e) {
     }
 
-
     @Test
     public void test01() throws Throwable {
         // Undeclared exception!
@@ -109,15 +108,11 @@ public class DataFusionUtil_ESTest {
         }
     }
 
-
-
     @Test
     public void test08() throws Throwable {
         String string0 = DataFusionUtil.getReplay("QZd");
         assertEquals("", string0);
     }
-
-
 
     @Test
     public void test13() throws Throwable {

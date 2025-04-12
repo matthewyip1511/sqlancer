@@ -43,9 +43,8 @@ public class ClickHouseBinaryFunctionOperation_ESTest {
         ClickHouseTableReference clickHouseTableReference0 = new ClickHouseTableReference(
                 (ClickHouseSchema.ClickHouseTable) null, "");
         ClickHouseJoin.JoinType clickHouseExpression_ClickHouseJoin_JoinType0 = ClickHouseJoin.JoinType.CROSS;
-        ClickHouseJoin clickHouseExpression_ClickHouseJoin0 = new ClickHouseJoin(
-                (ClickHouseTableReference) null, clickHouseTableReference0,
-                clickHouseExpression_ClickHouseJoin_JoinType0);
+        ClickHouseJoin clickHouseExpression_ClickHouseJoin0 = new ClickHouseJoin((ClickHouseTableReference) null,
+                clickHouseTableReference0, clickHouseExpression_ClickHouseJoin_JoinType0);
         ClickHouseAggregate clickHouseAggregate0 = new ClickHouseAggregate((ClickHouseExpression) null,
                 (ClickHouseAggregate.ClickHouseAggregateFunction) null);
         ClickHouseBinaryFunctionOperation clickHouseBinaryFunctionOperation0 = new ClickHouseBinaryFunctionOperation(

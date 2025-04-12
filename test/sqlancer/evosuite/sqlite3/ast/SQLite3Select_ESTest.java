@@ -92,15 +92,15 @@ public class SQLite3Select_ESTest {
         assertTrue(list0.isEmpty());
     }
 
-//    @Test
-//    public void test08() throws Throwable {
-//        SQLite3Select sQLite3Select0 = new SQLite3Select();
-//        JoinBase<SQLite3Expression>[] sQLite3Expression_JoinArray0 = new JoinBase<SQLite3Expression>[7];
-//        List<JoinBase<SQLite3Expression>> list0 = Randomly.nonEmptySubset(sQLite3Expression_JoinArray0);
-//        sQLite3Select0.setJoinClauses(list0);
-//        List<JoinBase<SQLite3Expression>> list1 = sQLite3Select0.getJoinClauses();
-//        assertSame(list1, list0);
-//    }
+    // @Test
+    // public void test08() throws Throwable {
+    // SQLite3Select sQLite3Select0 = new SQLite3Select();
+    // JoinBase<SQLite3Expression>[] sQLite3Expression_JoinArray0 = new JoinBase<SQLite3Expression>[7];
+    // List<JoinBase<SQLite3Expression>> list0 = Randomly.nonEmptySubset(sQLite3Expression_JoinArray0);
+    // sQLite3Select0.setJoinClauses(list0);
+    // List<JoinBase<SQLite3Expression>> list1 = sQLite3Select0.getJoinClauses();
+    // assertSame(list1, list0);
+    // }
 
     @Test
     public void test09() throws Throwable {
@@ -248,24 +248,24 @@ public class SQLite3Select_ESTest {
         assertTrue(list0.isEmpty());
     }
 
-//    @Test
-//    public void test25() throws Throwable {
-//        SQLite3Select sQLite3Select0 = new SQLite3Select();
-//        JoinBase<SQLite3Expression>[] sQLite3Expression_JoinArray0 = new JoinBase<SQLite3Expression>[7];
-//        List<JoinBase<SQLite3Expression>> list0 = Randomly.nonEmptySubset(sQLite3Expression_JoinArray0);
-//        sQLite3Select0.setJoinClauses(list0);
-//        SQLite3Select sQLite3Select1 = null;
-//        try {
-//            sQLite3Select1 = new SQLite3Select(sQLite3Select0);
-//            fail("Expecting exception: NullPointerException");
-//
-//        } catch (NullPointerException e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//            verifyException("sqlancer.sqlite3.ast.SQLite3Expression$Join", e);
-//        }
-//    }
+    // @Test
+    // public void test25() throws Throwable {
+    // SQLite3Select sQLite3Select0 = new SQLite3Select();
+    // JoinBase<SQLite3Expression>[] sQLite3Expression_JoinArray0 = new JoinBase<SQLite3Expression>[7];
+    // List<JoinBase<SQLite3Expression>> list0 = Randomly.nonEmptySubset(sQLite3Expression_JoinArray0);
+    // sQLite3Select0.setJoinClauses(list0);
+    // SQLite3Select sQLite3Select1 = null;
+    // try {
+    // sQLite3Select1 = new SQLite3Select(sQLite3Select0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.sqlite3.ast.SQLite3Expression$Join", e);
+    // }
+    // }
 
     @Test
     public void test26() throws Throwable {

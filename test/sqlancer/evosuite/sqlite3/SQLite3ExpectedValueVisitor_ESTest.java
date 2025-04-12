@@ -77,9 +77,9 @@ public class SQLite3ExpectedValueVisitor_ESTest {
         SQLite3PostfixUnaryOperation sQLite3Expression_SQLite3PostfixUnaryOperation0 = new SQLite3PostfixUnaryOperation(
                 sQLite3Expression_SQLite3PostfixUnaryOperation_PostfixUnaryOperator0, sQLite3Expression0);
         SQLite3BinaryOperation.BinaryOperator sQLite3Expression_SQLite3BinaryOperation_BinaryOperator0 = SQLite3BinaryOperation.BinaryOperator.SHIFT_LEFT;
-        SQLite3BinaryOperation sQLite3Expression_SQLite3BinaryOperation0 = SQLite3BinaryOperation
-                .create(sQLite3Expression0, sQLite3Expression_SQLite3PostfixUnaryOperation0,
-                        sQLite3Expression_SQLite3BinaryOperation_BinaryOperator0);
+        SQLite3BinaryOperation sQLite3Expression_SQLite3BinaryOperation0 = SQLite3BinaryOperation.create(
+                sQLite3Expression0, sQLite3Expression_SQLite3PostfixUnaryOperation0,
+                sQLite3Expression_SQLite3BinaryOperation_BinaryOperator0);
         sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_SQLite3BinaryOperation0);
         assertEquals(
                 "(()<<((() IS TRUE))) -- null explicit collate: null implicit collate: null\n\t -- null explicit collate: null implicit collate: null\n\t(() IS TRUE) -- null explicit collate: null implicit collate: null\n\t\t -- null explicit collate: null implicit collate: null\n",
@@ -91,8 +91,7 @@ public class SQLite3ExpectedValueVisitor_ESTest {
         SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
         SQLite3Constant.SQLite3IntConstant sQLite3Constant_SQLite3IntConstant0 = new SQLite3Constant.SQLite3IntConstant(
                 (-1L), true);
-        SQLite3Distinct sQLite3Expression_SQLite3Distinct0 = new SQLite3Distinct(
-                sQLite3Constant_SQLite3IntConstant0);
+        SQLite3Distinct sQLite3Expression_SQLite3Distinct0 = new SQLite3Distinct(sQLite3Constant_SQLite3IntConstant0);
         sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_SQLite3Distinct0);
         assertEquals(
                 "DISTINCT 0Xffffffffffffffff -- (INT) -1 explicit collate: null implicit collate: null\n\t0Xffffffffffffffff -- (INT) -1 explicit collate: null implicit collate: null\n",
@@ -106,8 +105,8 @@ public class SQLite3ExpectedValueVisitor_ESTest {
         SQLite3Schema.SQLite3Column.SQLite3CollateSequence sQLite3Schema_SQLite3Column_SQLite3CollateSequence0 = SQLite3Schema.SQLite3Column.SQLite3CollateSequence.BINARY;
         SQLite3Schema.SQLite3Column sQLite3Schema_SQLite3Column0 = new SQLite3Schema.SQLite3Column("", sQLite3DataType0,
                 true, sQLite3Schema_SQLite3Column_SQLite3CollateSequence0, true);
-        SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = new SQLite3ColumnName(
-                sQLite3Schema_SQLite3Column0, (SQLite3Constant) null);
+        SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = new SQLite3ColumnName(sQLite3Schema_SQLite3Column0,
+                (SQLite3Constant) null);
         sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_SQLite3ColumnName0);
         assertEquals(" -- null explicit collate: null implicit collate: BINARY\n", sQLite3ExpectedValueVisitor0.get());
     }
@@ -134,8 +133,8 @@ public class SQLite3ExpectedValueVisitor_ESTest {
         SQLite3Constant.SQLite3BinaryConstant sQLite3Constant_SQLite3BinaryConstant0 = new SQLite3Constant.SQLite3BinaryConstant(
                 byteArray0);
         SQLite3Constant sQLite3Constant0 = SQLite3Constant.createIntConstant((long) (byte) (-1));
-        SQLite3BetweenOperation sQLite3Expression_BetweenOperation0 = new SQLite3BetweenOperation(
-                sQLite3Constant0, false, sQLite3Constant_SQLite3BinaryConstant0, sQLite3Constant0);
+        SQLite3BetweenOperation sQLite3Expression_BetweenOperation0 = new SQLite3BetweenOperation(sQLite3Constant0,
+                false, sQLite3Constant_SQLite3BinaryConstant0, sQLite3Constant0);
         sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_BetweenOperation0);
         assertEquals(
                 "((-1) BETWEEN (x'00000000') AND (-1)) -- (INT) 0 explicit collate: null implicit collate: null\n\t((((-1)>=(x'00000000')))AND(((-1)<=(-1)))) -- (INT) 0 explicit collate: null implicit collate: null\n\t\t((-1)>=(x'00000000')) -- (INT) 0 explicit collate: null implicit collate: null\n\t\t\t-1 -- (INT) -1 explicit collate: null implicit collate: null\n\t\t\tx'00000000' -- (BINARY) x'00000000' explicit collate: null implicit collate: null\n\t\t((-1)<=(-1)) -- (INT) 1 explicit collate: null implicit collate: null\n\t\t\t-1 -- (INT) -1 explicit collate: null implicit collate: null\n\t\t\t-1 -- (INT) -1 explicit collate: null implicit collate: null\n",
@@ -165,8 +164,8 @@ public class SQLite3ExpectedValueVisitor_ESTest {
     public void test007() throws Throwable {
         SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
         SQLite3Select sQLite3Select0 = new SQLite3Select();
-        SQLite3BetweenOperation sQLite3Expression_BetweenOperation0 = new SQLite3BetweenOperation(
-                sQLite3Select0, true, sQLite3Select0, sQLite3Select0);
+        SQLite3BetweenOperation sQLite3Expression_BetweenOperation0 = new SQLite3BetweenOperation(sQLite3Select0, true,
+                sQLite3Select0, sQLite3Select0);
         // Undeclared exception!
         try {
             sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_BetweenOperation0);
@@ -184,8 +183,8 @@ public class SQLite3ExpectedValueVisitor_ESTest {
         SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
         SQLite3Constant sQLite3Constant0 = SQLite3Constant.createFalse();
         SQLite3BinaryOperation.BinaryOperator sQLite3Expression_SQLite3BinaryOperation_BinaryOperator0 = SQLite3BinaryOperation.BinaryOperator.ARITHMETIC_OR;
-        SQLite3BinaryOperation sQLite3Expression_SQLite3BinaryOperation0 = new SQLite3BinaryOperation(
-                sQLite3Constant0, sQLite3Constant0, sQLite3Expression_SQLite3BinaryOperation_BinaryOperator0);
+        SQLite3BinaryOperation sQLite3Expression_SQLite3BinaryOperation0 = new SQLite3BinaryOperation(sQLite3Constant0,
+                sQLite3Constant0, sQLite3Expression_SQLite3BinaryOperation_BinaryOperator0);
         SQLite3SetClause.SQLite3ClauseType sQLite3SetClause_SQLite3ClauseType0 = SQLite3SetClause.SQLite3ClauseType.UNION_ALL;
         SQLite3SetClause sQLite3SetClause0 = new SQLite3SetClause(sQLite3Expression_SQLite3BinaryOperation0,
                 sQLite3Expression_SQLite3BinaryOperation0, sQLite3SetClause_SQLite3ClauseType0);
@@ -200,8 +199,8 @@ public class SQLite3ExpectedValueVisitor_ESTest {
         SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
         SQLite3Constant.SQLite3IntConstant sQLite3Constant_SQLite3IntConstant0 = new SQLite3Constant.SQLite3IntConstant(
                 2016L, false);
-        SQLite3Text sQLite3Expression_SQLite3Text0 = new SQLite3Text(
-                "3m,MD\"O|\u0007W{K^X#", sQLite3Constant_SQLite3IntConstant0);
+        SQLite3Text sQLite3Expression_SQLite3Text0 = new SQLite3Text("3m,MD\"O|\u0007W{K^X#",
+                sQLite3Constant_SQLite3IntConstant0);
         sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_SQLite3Text0);
         assertEquals("3m,MD\"O|\u0007W{K^X# -- (INT) 2016 explicit collate: null implicit collate: null\n",
                 sQLite3ExpectedValueVisitor0.get());
@@ -225,8 +224,8 @@ public class SQLite3ExpectedValueVisitor_ESTest {
         SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
         SQLite3Constant sQLite3Constant0 = SQLite3Constant.createFalse();
         SQLite3OrderingTerm.Ordering sQLite3Expression_SQLite3OrderingTerm_Ordering0 = SQLite3OrderingTerm.Ordering.ASC;
-        SQLite3OrderingTerm sQLite3Expression_SQLite3OrderingTerm0 = new SQLite3OrderingTerm(
-                sQLite3Constant0, sQLite3Expression_SQLite3OrderingTerm_Ordering0);
+        SQLite3OrderingTerm sQLite3Expression_SQLite3OrderingTerm0 = new SQLite3OrderingTerm(sQLite3Constant0,
+                sQLite3Expression_SQLite3OrderingTerm_Ordering0);
         sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_SQLite3OrderingTerm0);
         assertEquals(
                 "(0 ASC -- null explicit collate: null implicit collate: null\n\t0 -- (INT) 0 explicit collate: null implicit collate: null\n)",
@@ -237,8 +236,7 @@ public class SQLite3ExpectedValueVisitor_ESTest {
     public void test012() throws Throwable {
         SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
         SQLite3Subquery sQLite3Expression_Subquery0 = new SQLite3Subquery("(");
-        SQLite3Exist sQLite3Expression_SQLite3Exist0 = new SQLite3Exist(
-                sQLite3Expression_Subquery0);
+        SQLite3Exist sQLite3Expression_SQLite3Exist0 = new SQLite3Exist(sQLite3Expression_Subquery0);
         sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_SQLite3Exist0);
         assertEquals(
                 " EXISTS ( -- null explicit collate: null implicit collate: null\n\t( -- null explicit collate: null implicit collate: null\n",
@@ -248,8 +246,7 @@ public class SQLite3ExpectedValueVisitor_ESTest {
     @Test
     public void test013() throws Throwable {
         SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
-        SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = SQLite3ColumnName
-                .createDummy("xDsH");
+        SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = SQLite3ColumnName.createDummy("xDsH");
         SQLite3MatchOperation sQLite3Expression_MatchOperation0 = new SQLite3MatchOperation(
                 sQLite3Expression_SQLite3ColumnName0, sQLite3Expression_SQLite3ColumnName0);
         sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_MatchOperation0);
@@ -271,22 +268,24 @@ public class SQLite3ExpectedValueVisitor_ESTest {
                 sQLite3ExpectedValueVisitor0.get());
     }
 
-//    @Test
-//    public void test015() throws Throwable {
-//        SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
-//        SQLite3TypeLiteral.Type sQLite3Expression_TypeLiteral_Type0 = SQLite3TypeLiteral.Type.TEXT;
-//        SQLite3TypeLiteral sQLite3Expression_TypeLiteral0 = new SQLite3TypeLiteral(
-//                sQLite3Expression_TypeLiteral_Type0);
-//        SQLite3Constant.SQLite3RealConstant sQLite3Constant_SQLite3RealConstant0 = new SQLite3Constant.SQLite3RealConstant(
-//                0.0);
-//        SQLite3Constant sQLite3Constant0 = sQLite3Constant_SQLite3RealConstant0.castToBoolean();
-//        SQLite3Cast sQLite3Expression_Cast0 = new SQLite3Cast(sQLite3Expression_TypeLiteral0,
-//                sQLite3Constant0);
-//        sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_Cast0);
-//        assertEquals(
-//                "CAST(0 AS TEXT) -- (TEXT) 0 explicit collate: null implicit collate: null\n\t0 -- (INT) 0 explicit collate: null implicit collate: null\n",
-//                sQLite3ExpectedValueVisitor0.get());
-//    }
+    // @Test
+    // public void test015() throws Throwable {
+    // SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
+    // SQLite3TypeLiteral.Type sQLite3Expression_TypeLiteral_Type0 = SQLite3TypeLiteral.Type.TEXT;
+    // SQLite3TypeLiteral sQLite3Expression_TypeLiteral0 = new SQLite3TypeLiteral(
+    // sQLite3Expression_TypeLiteral_Type0);
+    // SQLite3Constant.SQLite3RealConstant sQLite3Constant_SQLite3RealConstant0 = new
+    // SQLite3Constant.SQLite3RealConstant(
+    // 0.0);
+    // SQLite3Constant sQLite3Constant0 = sQLite3Constant_SQLite3RealConstant0.castToBoolean();
+    // SQLite3Cast sQLite3Expression_Cast0 = new SQLite3Cast(sQLite3Expression_TypeLiteral0,
+    // sQLite3Constant0);
+    // sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_Cast0);
+    // assertEquals(
+    // "CAST(0 AS TEXT) -- (TEXT) 0 explicit collate: null implicit collate: null\n\t0 -- (INT) 0 explicit collate: null
+    // implicit collate: null\n",
+    // sQLite3ExpectedValueVisitor0.get());
+    // }
 
     @Test
     public void test016() throws Throwable {
@@ -306,8 +305,7 @@ public class SQLite3ExpectedValueVisitor_ESTest {
     @Test
     public void test017() throws Throwable {
         SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
-        SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = SQLite3ColumnName
-                .createDummy("xDsH");
+        SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = SQLite3ColumnName.createDummy("xDsH");
         SQLite3Expression[] sQLite3ExpressionArray0 = new SQLite3Expression[3];
         sQLite3ExpressionArray0[0] = (SQLite3Expression) sQLite3Expression_SQLite3ColumnName0;
         List<SQLite3Expression> list0 = Randomly.nonEmptySubset(sQLite3ExpressionArray0);
@@ -325,23 +323,25 @@ public class SQLite3ExpectedValueVisitor_ESTest {
         }
     }
 
-//    @Test
-//    public void test018() throws Throwable {
-//        SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
-//        SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = SQLite3ColumnName
-//                .createDummy("xDsH");
-//        SQLite3Expression[] sQLite3ExpressionArray0 = new SQLite3Expression[3];
-//        sQLite3ExpressionArray0[0] = (SQLite3Expression) sQLite3Expression_SQLite3ColumnName0;
-//        sQLite3ExpressionArray0[1] = (SQLite3Expression) sQLite3Expression_SQLite3ColumnName0;
-//        sQLite3ExpressionArray0[2] = (SQLite3Expression) sQLite3Expression_SQLite3ColumnName0;
-//        SQLite3Function sQLite3Expression_Function0 = new SQLite3Function("xDsH",
-//                sQLite3ExpressionArray0);
-//        sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_Function0);
-//        sQLite3ExpectedValueVisitor0.get();
-//        assertEquals(
-//                "xDsH(xDsH, xDsH, xDsH) -- null explicit collate: null implicit collate: null\n\txDsH -- null explicit collate: null implicit collate: null\n\txDsH -- null explicit collate: null implicit collate: null\n\txDsH -- null explicit collate: null implicit collate: null\n",
-//                sQLite3ExpectedValueVisitor0.get());
-//    }
+    // @Test
+    // public void test018() throws Throwable {
+    // SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
+    // SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = SQLite3ColumnName
+    // .createDummy("xDsH");
+    // SQLite3Expression[] sQLite3ExpressionArray0 = new SQLite3Expression[3];
+    // sQLite3ExpressionArray0[0] = (SQLite3Expression) sQLite3Expression_SQLite3ColumnName0;
+    // sQLite3ExpressionArray0[1] = (SQLite3Expression) sQLite3Expression_SQLite3ColumnName0;
+    // sQLite3ExpressionArray0[2] = (SQLite3Expression) sQLite3Expression_SQLite3ColumnName0;
+    // SQLite3Function sQLite3Expression_Function0 = new SQLite3Function("xDsH",
+    // sQLite3ExpressionArray0);
+    // sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_Function0);
+    // sQLite3ExpectedValueVisitor0.get();
+    // assertEquals(
+    // "xDsH(xDsH, xDsH, xDsH) -- null explicit collate: null implicit collate: null\n\txDsH -- null explicit collate:
+    // null implicit collate: null\n\txDsH -- null explicit collate: null implicit collate: null\n\txDsH -- null
+    // explicit collate: null implicit collate: null\n",
+    // sQLite3ExpectedValueVisitor0.get());
+    // }
 
     @Test
     public void test019() throws Throwable {
@@ -702,8 +702,8 @@ public class SQLite3ExpectedValueVisitor_ESTest {
         SQLite3Constant sQLite3Constant0 = SQLite3Constant.getRandomBinaryConstant(randomly0);
         List<SQLite3Expression> list0 = Randomly.nonEmptySubset(sQLite3ExpressionArray0);
         sQLite3Select0.setFetchColumns(list0);
-        SQLite3PostfixText sQLite3Expression_SQLite3PostfixText0 = new SQLite3PostfixText(
-                sQLite3ExpressionArray0[4], "l>Y:g[vZzX", sQLite3Constant0);
+        SQLite3PostfixText sQLite3Expression_SQLite3PostfixText0 = new SQLite3PostfixText(sQLite3ExpressionArray0[4],
+                "l>Y:g[vZzX", sQLite3Constant0);
         // Undeclared exception!
         try {
             sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_SQLite3PostfixText0);
@@ -772,8 +772,7 @@ public class SQLite3ExpectedValueVisitor_ESTest {
         SQLite3Case.SQLite3CaseWithoutBaseExpression sQLite3Case_SQLite3CaseWithoutBaseExpression0 = new SQLite3Case.SQLite3CaseWithoutBaseExpression(
                 sQLite3Case_CasePairArray0, sQLite3Constant_SQLite3NullConstant0);
         SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
-        SQLite3Exist sQLite3Expression_SQLite3Exist0 = new SQLite3Exist(
-                sQLite3Case_SQLite3CaseWithoutBaseExpression0);
+        SQLite3Exist sQLite3Expression_SQLite3Exist0 = new SQLite3Exist(sQLite3Case_SQLite3CaseWithoutBaseExpression0);
         // Undeclared exception!
         try {
             sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_SQLite3Exist0);
@@ -794,8 +793,7 @@ public class SQLite3ExpectedValueVisitor_ESTest {
         SQLite3Function sQLite3Function0 = new SQLite3Function(sQLite3Function_ComputableFunction0,
                 sQLite3ExpressionArray0);
         SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
-        SQLite3Exist sQLite3Expression_SQLite3Exist0 = new SQLite3Exist(
-                sQLite3Function0);
+        SQLite3Exist sQLite3Expression_SQLite3Exist0 = new SQLite3Exist(sQLite3Function0);
         // Undeclared exception!
         try {
             sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_SQLite3Exist0);
@@ -813,8 +811,7 @@ public class SQLite3ExpectedValueVisitor_ESTest {
     public void test043() throws Throwable {
         SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
         SQLite3Constant sQLite3Constant0 = SQLite3Constant.createTextConstant((String) null);
-        SQLite3Distinct sQLite3Expression_SQLite3Distinct0 = new SQLite3Distinct(
-                sQLite3Constant0);
+        SQLite3Distinct sQLite3Expression_SQLite3Distinct0 = new SQLite3Distinct(sQLite3Constant0);
         // Undeclared exception!
         try {
             sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_SQLite3Distinct0);
@@ -882,8 +879,8 @@ public class SQLite3ExpectedValueVisitor_ESTest {
     @Test
     public void test047() throws Throwable {
         SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
-        SQLite3MatchOperation sQLite3Expression_MatchOperation0 = new SQLite3MatchOperation(
-                (SQLite3Expression) null, (SQLite3Expression) null);
+        SQLite3MatchOperation sQLite3Expression_MatchOperation0 = new SQLite3MatchOperation((SQLite3Expression) null,
+                (SQLite3Expression) null);
         // Undeclared exception!
         try {
             sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_MatchOperation0);
@@ -934,8 +931,7 @@ public class SQLite3ExpectedValueVisitor_ESTest {
     public void test050() throws Throwable {
         SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
         SQLite3Constant sQLite3Constant0 = SQLite3Constant.createBoolean(false);
-        SQLite3InOperation sQLite3Expression_InOperation0 = new SQLite3InOperation(
-                sQLite3Constant0, sQLite3Constant0);
+        SQLite3InOperation sQLite3Expression_InOperation0 = new SQLite3InOperation(sQLite3Constant0, sQLite3Constant0);
         // Undeclared exception!
         try {
             sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_InOperation0);
@@ -971,8 +967,7 @@ public class SQLite3ExpectedValueVisitor_ESTest {
         SQLite3Expression[] sQLite3ExpressionArray0 = new SQLite3Expression[0];
         SQLite3Function sQLite3Function0 = new SQLite3Function(sQLite3Function_ComputableFunction0,
                 sQLite3ExpressionArray0);
-        SQLite3InOperation sQLite3Expression_InOperation0 = new SQLite3InOperation(
-                sQLite3Function0, sQLite3Function0);
+        SQLite3InOperation sQLite3Expression_InOperation0 = new SQLite3InOperation(sQLite3Function0, sQLite3Function0);
         // Undeclared exception!
         try {
             sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_InOperation0);
@@ -986,29 +981,31 @@ public class SQLite3ExpectedValueVisitor_ESTest {
         }
     }
 
-//    @Test
-//    public void test053() throws Throwable {
-//        SQLite3Constant.SQLite3NullConstant sQLite3Constant_SQLite3NullConstant0 = new SQLite3Constant.SQLite3NullConstant();
-//        SQLite3Case.CasePair[] sQLite3Case_CasePairArray0 = new SQLite3Case.CasePair[1];
-//        SQLite3Case.SQLite3CaseWithBaseExpression sQLite3Case_SQLite3CaseWithBaseExpression0 = new SQLite3Case.SQLite3CaseWithBaseExpression(
-//                sQLite3Constant_SQLite3NullConstant0, sQLite3Case_CasePairArray0, sQLite3Constant_SQLite3NullConstant0);
-//        SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
-//        SQLite3Expression[] sQLite3ExpressionArray0 = new SQLite3Expression[1];
-//        sQLite3ExpressionArray0[0] = (SQLite3Expression) sQLite3Case_SQLite3CaseWithBaseExpression0;
-//        SQLite3Function sQLite3Expression_Function0 = new SQLite3Function((String) null,
-//                sQLite3ExpressionArray0);
-//        // Undeclared exception!
-//        try {
-//            sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_Function0);
-//            fail("Expecting exception: NullPointerException");
-//
-//        } catch (NullPointerException e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//            verifyException("sqlancer.sqlite3.SQLite3ToStringVisitor", e);
-//        }
-//    }
+    // @Test
+    // public void test053() throws Throwable {
+    // SQLite3Constant.SQLite3NullConstant sQLite3Constant_SQLite3NullConstant0 = new
+    // SQLite3Constant.SQLite3NullConstant();
+    // SQLite3Case.CasePair[] sQLite3Case_CasePairArray0 = new SQLite3Case.CasePair[1];
+    // SQLite3Case.SQLite3CaseWithBaseExpression sQLite3Case_SQLite3CaseWithBaseExpression0 = new
+    // SQLite3Case.SQLite3CaseWithBaseExpression(
+    // sQLite3Constant_SQLite3NullConstant0, sQLite3Case_CasePairArray0, sQLite3Constant_SQLite3NullConstant0);
+    // SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
+    // SQLite3Expression[] sQLite3ExpressionArray0 = new SQLite3Expression[1];
+    // sQLite3ExpressionArray0[0] = (SQLite3Expression) sQLite3Case_SQLite3CaseWithBaseExpression0;
+    // SQLite3Function sQLite3Expression_Function0 = new SQLite3Function((String) null,
+    // sQLite3ExpressionArray0);
+    // // Undeclared exception!
+    // try {
+    // sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_Function0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.sqlite3.SQLite3ToStringVisitor", e);
+    // }
+    // }
 
     @Test
     public void test054() throws Throwable {
@@ -1017,8 +1014,8 @@ public class SQLite3ExpectedValueVisitor_ESTest {
                 sQLite3ExpressionArray0);
         SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
         SQLite3Schema.SQLite3Column.SQLite3CollateSequence sQLite3Schema_SQLite3Column_SQLite3CollateSequence0 = SQLite3Schema.SQLite3Column.SQLite3CollateSequence.RTRIM;
-        SQLite3CollateOperation sQLite3Expression_CollateOperation0 = new SQLite3CollateOperation(
-                sQLite3Function0, sQLite3Schema_SQLite3Column_SQLite3CollateSequence0);
+        SQLite3CollateOperation sQLite3Expression_CollateOperation0 = new SQLite3CollateOperation(sQLite3Function0,
+                sQLite3Schema_SQLite3Column_SQLite3CollateSequence0);
         // Undeclared exception!
         try {
             sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_CollateOperation0);
@@ -1065,30 +1062,31 @@ public class SQLite3ExpectedValueVisitor_ESTest {
         }
     }
 
-//    @Test
-//    public void test057() throws Throwable {
-//        SQLite3Expression[] sQLite3ExpressionArray0 = new SQLite3Expression[0];
-//        SQLite3Function.ComputableFunction sQLite3Function_ComputableFunction0 = SQLite3Function.ComputableFunction.UPPER;
-//        SQLite3Function sQLite3Function0 = new SQLite3Function(sQLite3Function_ComputableFunction0,
-//                sQLite3ExpressionArray0);
-//        SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
-//        SQLite3TypeLiteral.Type sQLite3Expression_TypeLiteral_Type0 = SQLite3TypeLiteral.Type.INTEGER;
-//        SQLite3TypeLiteral sQLite3Expression_TypeLiteral0 = new SQLite3TypeLiteral(
-//                sQLite3Expression_TypeLiteral_Type0);
-//        SQLite3Cast sQLite3Expression_Cast0 = new SQLite3Cast(sQLite3Expression_TypeLiteral0,
-//                sQLite3Function0);
-//        // Undeclared exception!
-//        try {
-//            sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_Cast0);
-//            fail("Expecting exception: ArrayIndexOutOfBoundsException");
-//
-//        } catch (ArrayIndexOutOfBoundsException e) {
-//            //
-//            // Index 0 out of bounds for length 0
-//            //
-//            verifyException("sqlancer.sqlite3.ast.SQLite3Function$ComputableFunction$8", e);
-//        }
-//    }
+    // @Test
+    // public void test057() throws Throwable {
+    // SQLite3Expression[] sQLite3ExpressionArray0 = new SQLite3Expression[0];
+    // SQLite3Function.ComputableFunction sQLite3Function_ComputableFunction0 =
+    // SQLite3Function.ComputableFunction.UPPER;
+    // SQLite3Function sQLite3Function0 = new SQLite3Function(sQLite3Function_ComputableFunction0,
+    // sQLite3ExpressionArray0);
+    // SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
+    // SQLite3TypeLiteral.Type sQLite3Expression_TypeLiteral_Type0 = SQLite3TypeLiteral.Type.INTEGER;
+    // SQLite3TypeLiteral sQLite3Expression_TypeLiteral0 = new SQLite3TypeLiteral(
+    // sQLite3Expression_TypeLiteral_Type0);
+    // SQLite3Cast sQLite3Expression_Cast0 = new SQLite3Cast(sQLite3Expression_TypeLiteral0,
+    // sQLite3Function0);
+    // // Undeclared exception!
+    // try {
+    // sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_Cast0);
+    // fail("Expecting exception: ArrayIndexOutOfBoundsException");
+    //
+    // } catch (ArrayIndexOutOfBoundsException e) {
+    // //
+    // // Index 0 out of bounds for length 0
+    // //
+    // verifyException("sqlancer.sqlite3.ast.SQLite3Function$ComputableFunction$8", e);
+    // }
+    // }
 
     @Test
     public void test058() throws Throwable {
@@ -1144,8 +1142,8 @@ public class SQLite3ExpectedValueVisitor_ESTest {
         SQLite3UnaryOperation.UnaryOperator sQLite3UnaryOperation_UnaryOperator0 = SQLite3UnaryOperation.UnaryOperator.MINUS;
         SQLite3Constant.SQLite3IntConstant sQLite3Constant_SQLite3IntConstant0 = new SQLite3Constant.SQLite3IntConstant(
                 2519L, true);
-        SQLite3InOperation sQLite3Expression_InOperation0 = new SQLite3InOperation(
-                sQLite3Constant_SQLite3IntConstant0, sQLite3Constant_SQLite3IntConstant0);
+        SQLite3InOperation sQLite3Expression_InOperation0 = new SQLite3InOperation(sQLite3Constant_SQLite3IntConstant0,
+                sQLite3Constant_SQLite3IntConstant0);
         SQLite3UnaryOperation sQLite3UnaryOperation0 = new SQLite3UnaryOperation(sQLite3UnaryOperation_UnaryOperator0,
                 sQLite3Expression_InOperation0);
         SQLite3BetweenOperation sQLite3Expression_BetweenOperation0 = new SQLite3BetweenOperation(
@@ -1170,8 +1168,8 @@ public class SQLite3ExpectedValueVisitor_ESTest {
         SQLite3Function sQLite3Function0 = new SQLite3Function(sQLite3Function_ComputableFunction0,
                 sQLite3ExpressionArray0);
         SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
-        SQLite3BetweenOperation sQLite3Expression_BetweenOperation0 = new SQLite3BetweenOperation(
-                sQLite3Function0, true, sQLite3Function0, sQLite3Function0);
+        SQLite3BetweenOperation sQLite3Expression_BetweenOperation0 = new SQLite3BetweenOperation(sQLite3Function0,
+                true, sQLite3Function0, sQLite3Function0);
         // Undeclared exception!
         try {
             sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_BetweenOperation0);
@@ -1203,8 +1201,7 @@ public class SQLite3ExpectedValueVisitor_ESTest {
     @Test
     public void test063() throws Throwable {
         SQLite3Select sQLite3Select0 = new SQLite3Select();
-        SQLite3Exist sQLite3Expression_SQLite3Exist0 = new SQLite3Exist(
-                sQLite3Select0);
+        SQLite3Exist sQLite3Expression_SQLite3Exist0 = new SQLite3Exist(sQLite3Select0);
         sQLite3Select0.setWhereClause((SQLite3Expression) sQLite3Expression_SQLite3Exist0);
         SQLite3Constant.SQLite3NullConstant sQLite3Constant_SQLite3NullConstant0 = new SQLite3Constant.SQLite3NullConstant();
         SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
@@ -1278,8 +1275,7 @@ public class SQLite3ExpectedValueVisitor_ESTest {
         sQLite3Select0.setFetchColumns(list0);
         SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
         SQLite3Case.CasePair[] sQLite3Case_CasePairArray0 = new SQLite3Case.CasePair[7];
-        SQLite3InOperation sQLite3Expression_InOperation0 = new SQLite3InOperation(sQLite3Select0,
-                list0);
+        SQLite3InOperation sQLite3Expression_InOperation0 = new SQLite3InOperation(sQLite3Select0, list0);
         SQLite3Case.SQLite3CaseWithBaseExpression sQLite3Case_SQLite3CaseWithBaseExpression0 = new SQLite3Case.SQLite3CaseWithBaseExpression(
                 sQLite3Select0, sQLite3Case_CasePairArray0, sQLite3Expression_InOperation0);
         // Undeclared exception!
@@ -1453,8 +1449,7 @@ public class SQLite3ExpectedValueVisitor_ESTest {
     @Test
     public void test078() throws Throwable {
         SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
-        SQLite3Exist sQLite3Expression_SQLite3Exist0 = new SQLite3Exist(
-                (SQLite3Expression) null);
+        SQLite3Exist sQLite3Expression_SQLite3Exist0 = new SQLite3Exist((SQLite3Expression) null);
         // Undeclared exception!
         try {
             sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_SQLite3Exist0);
@@ -1489,8 +1484,8 @@ public class SQLite3ExpectedValueVisitor_ESTest {
         SQLite3Function sQLite3Function0 = new SQLite3Function(sQLite3Function_ComputableFunction0,
                 sQLite3ExpressionArray0);
         SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
-        SQLite3MatchOperation sQLite3Expression_MatchOperation0 = new SQLite3MatchOperation(
-                sQLite3Function0, sQLite3Function0);
+        SQLite3MatchOperation sQLite3Expression_MatchOperation0 = new SQLite3MatchOperation(sQLite3Function0,
+                sQLite3Function0);
         // Undeclared exception!
         try {
             sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_MatchOperation0);
@@ -1628,13 +1623,12 @@ public class SQLite3ExpectedValueVisitor_ESTest {
         SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
         SQLite3Constant.SQLite3IntConstant sQLite3Constant_SQLite3IntConstant0 = new SQLite3Constant.SQLite3IntConstant(
                 (-1L), true);
-        SQLite3Distinct sQLite3Expression_SQLite3Distinct0 = new SQLite3Distinct(
-                sQLite3Constant_SQLite3IntConstant0);
+        SQLite3Distinct sQLite3Expression_SQLite3Distinct0 = new SQLite3Distinct(sQLite3Constant_SQLite3IntConstant0);
         SQLite3Expression[] sQLite3ExpressionArray0 = new SQLite3Expression[1];
         sQLite3ExpressionArray0[0] = (SQLite3Expression) sQLite3Expression_SQLite3Distinct0;
         List<SQLite3Expression> list0 = Randomly.nonEmptySubset(sQLite3ExpressionArray0);
-        SQLite3InOperation sQLite3Expression_InOperation0 = new SQLite3InOperation(
-                sQLite3Expression_SQLite3Distinct0, list0);
+        SQLite3InOperation sQLite3Expression_InOperation0 = new SQLite3InOperation(sQLite3Expression_SQLite3Distinct0,
+                list0);
         sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_InOperation0);
         assertEquals(
                 "(DISTINCT 0Xffffffffffffffff IN (DISTINCT 0Xffffffffffffffff)) -- (INT) 1 explicit collate: null implicit collate: null\n\tDISTINCT 0Xffffffffffffffff -- (INT) -1 explicit collate: null implicit collate: null\n\t\t0Xffffffffffffffff -- (INT) -1 explicit collate: null implicit collate: null\n\tDISTINCT 0Xffffffffffffffff -- (INT) -1 explicit collate: null implicit collate: null\n\t\t0Xffffffffffffffff -- (INT) -1 explicit collate: null implicit collate: null\n",
@@ -1648,8 +1642,7 @@ public class SQLite3ExpectedValueVisitor_ESTest {
         SQLite3Function.ComputableFunction sQLite3Function_ComputableFunction0 = SQLite3Function.ComputableFunction.HEX;
         SQLite3Function sQLite3Function0 = new SQLite3Function(sQLite3Function_ComputableFunction0,
                 sQLite3ExpressionArray0);
-        SQLite3InOperation sQLite3Expression_InOperation0 = new SQLite3InOperation(
-                sQLite3Function0, sQLite3Function0);
+        SQLite3InOperation sQLite3Expression_InOperation0 = new SQLite3InOperation(sQLite3Function0, sQLite3Function0);
         sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_InOperation0);
         assertEquals(
                 "(HEX() IN (HEX())) -- null explicit collate: null implicit collate: null\n\tHEX() -- null explicit collate: null implicit collate: null\n\tHEX() -- null explicit collate: null implicit collate: null\n",
@@ -1673,8 +1666,8 @@ public class SQLite3ExpectedValueVisitor_ESTest {
     public void test091() throws Throwable {
         SQLite3Select sQLite3Select0 = new SQLite3Select();
         SQLite3Join.JoinType sQLite3Expression_Join_JoinType0 = SQLite3Join.JoinType.OUTER;
-        SQLite3Join sQLite3Expression_Join0 = new SQLite3Join((SQLite3Schema.SQLite3Table) null,
-                sQLite3Select0, sQLite3Expression_Join_JoinType0);
+        SQLite3Join sQLite3Expression_Join0 = new SQLite3Join((SQLite3Schema.SQLite3Table) null, sQLite3Select0,
+                sQLite3Expression_Join_JoinType0);
         List<JoinBase<SQLite3Expression>> list0 = List.of(sQLite3Expression_Join0);
         sQLite3Select0.setJoinClauses(list0);
         SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
@@ -1712,51 +1705,56 @@ public class SQLite3ExpectedValueVisitor_ESTest {
         }
     }
 
-//    @Test
-//    public void test093() throws Throwable {
-//        SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
-//        SQLite3Subquery sQLite3Expression_Subquery0 = new SQLite3Subquery("");
-//        SQLite3PostfixText sQLite3Expression_SQLite3PostfixText0 = new SQLite3PostfixText(
-//                sQLite3Expression_Subquery0, "", (SQLite3Constant) null);
-//        SQLite3Select sQLite3Select0 = new SQLite3Select();
-//        sQLite3Select0.setWhereClause((SQLite3Expression) sQLite3Expression_SQLite3PostfixText0);
-//        SQLite3Expression[] sQLite3ExpressionArray0 = new SQLite3Expression[4];
-//        sQLite3ExpressionArray0[0] = (SQLite3Expression) sQLite3Select0;
-//        SQLite3Constant sQLite3Constant0 = SQLite3Constant.createFalse();
-//        sQLite3ExpressionArray0[1] = (SQLite3Expression) sQLite3Constant0;
-//        sQLite3ExpressionArray0[2] = (SQLite3Expression) sQLite3Select0;
-//        sQLite3ExpressionArray0[3] = (SQLite3Expression) sQLite3Select0;
-//        SQLite3Function sQLite3Expression_Function0 = new SQLite3Function("",
-//                sQLite3ExpressionArray0);
-//        sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_Function0);
-//        assertEquals(
-//                "((SELECT ALL  FROM  WHERE ( )), 0, (SELECT  FROM  WHERE ( )), (SELECT ALL  FROM  WHERE ( ))) -- null explicit collate: null implicit collate: null\n\t\t  -- null explicit collate: null implicit collate: null\n\t\t\t -- null explicit collate: null implicit collate: null\n\t0 -- (INT) 0 explicit collate: null implicit collate: null\n\t\t  -- null explicit collate: null implicit collate: null\n\t\t\t -- null explicit collate: null implicit collate: null\n\t\t  -- null explicit collate: null implicit collate: null\n\t\t\t -- null explicit collate: null implicit collate: null\n",
-//                sQLite3ExpectedValueVisitor0.get());
-//    }
+    // @Test
+    // public void test093() throws Throwable {
+    // SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
+    // SQLite3Subquery sQLite3Expression_Subquery0 = new SQLite3Subquery("");
+    // SQLite3PostfixText sQLite3Expression_SQLite3PostfixText0 = new SQLite3PostfixText(
+    // sQLite3Expression_Subquery0, "", (SQLite3Constant) null);
+    // SQLite3Select sQLite3Select0 = new SQLite3Select();
+    // sQLite3Select0.setWhereClause((SQLite3Expression) sQLite3Expression_SQLite3PostfixText0);
+    // SQLite3Expression[] sQLite3ExpressionArray0 = new SQLite3Expression[4];
+    // sQLite3ExpressionArray0[0] = (SQLite3Expression) sQLite3Select0;
+    // SQLite3Constant sQLite3Constant0 = SQLite3Constant.createFalse();
+    // sQLite3ExpressionArray0[1] = (SQLite3Expression) sQLite3Constant0;
+    // sQLite3ExpressionArray0[2] = (SQLite3Expression) sQLite3Select0;
+    // sQLite3ExpressionArray0[3] = (SQLite3Expression) sQLite3Select0;
+    // SQLite3Function sQLite3Expression_Function0 = new SQLite3Function("",
+    // sQLite3ExpressionArray0);
+    // sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_Function0);
+    // assertEquals(
+    // "((SELECT ALL FROM WHERE ( )), 0, (SELECT FROM WHERE ( )), (SELECT ALL FROM WHERE ( ))) -- null explicit collate:
+    // null implicit collate: null\n\t\t -- null explicit collate: null implicit collate: null\n\t\t\t -- null explicit
+    // collate: null implicit collate: null\n\t0 -- (INT) 0 explicit collate: null implicit collate: null\n\t\t -- null
+    // explicit collate: null implicit collate: null\n\t\t\t -- null explicit collate: null implicit collate: null\n\t\t
+    // -- null explicit collate: null implicit collate: null\n\t\t\t -- null explicit collate: null implicit collate:
+    // null\n",
+    // sQLite3ExpectedValueVisitor0.get());
+    // }
 
-//    @Test
-//    public void test094() throws Throwable {
-//        SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
-//        SQLite3Select sQLite3Select0 = new SQLite3Select();
-//        SQLite3Expression[] sQLite3ExpressionArray0 = new SQLite3Expression[4];
-//        sQLite3ExpressionArray0[0] = (SQLite3Expression) sQLite3Select0;
-//        SQLite3Constant sQLite3Constant0 = SQLite3Constant.createFalse();
-//        sQLite3ExpressionArray0[1] = (SQLite3Expression) sQLite3Constant0;
-//        sQLite3ExpressionArray0[2] = (SQLite3Expression) sQLite3Select0;
-//        sQLite3ExpressionArray0[3] = (SQLite3Expression) sQLite3Select0;
-//        SQLite3Function sQLite3Expression_Function0 = new SQLite3Function("",
-//                sQLite3ExpressionArray0);
-//        // Undeclared exception!
-//        try {
-//            sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_Function0);
-//            fail("Expecting exception: AssertionError");
-//
-//        } catch (AssertionError e) {
-//            //
-//            // null
-//            //
-//        }
-//    }
+    // @Test
+    // public void test094() throws Throwable {
+    // SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
+    // SQLite3Select sQLite3Select0 = new SQLite3Select();
+    // SQLite3Expression[] sQLite3ExpressionArray0 = new SQLite3Expression[4];
+    // sQLite3ExpressionArray0[0] = (SQLite3Expression) sQLite3Select0;
+    // SQLite3Constant sQLite3Constant0 = SQLite3Constant.createFalse();
+    // sQLite3ExpressionArray0[1] = (SQLite3Expression) sQLite3Constant0;
+    // sQLite3ExpressionArray0[2] = (SQLite3Expression) sQLite3Select0;
+    // sQLite3ExpressionArray0[3] = (SQLite3Expression) sQLite3Select0;
+    // SQLite3Function sQLite3Expression_Function0 = new SQLite3Function("",
+    // sQLite3ExpressionArray0);
+    // // Undeclared exception!
+    // try {
+    // sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_Function0);
+    // fail("Expecting exception: AssertionError");
+    //
+    // } catch (AssertionError e) {
+    // //
+    // // null
+    // //
+    // }
+    // }
 
     @Test
     public void test095() throws Throwable {
@@ -1767,8 +1765,8 @@ public class SQLite3ExpectedValueVisitor_ESTest {
         SQLite3Schema.SQLite3Table sQLite3Schema_SQLite3Table0 = new SQLite3Schema.SQLite3Table("", linkedList0,
                 sQLite3Schema_SQLite3Table_TableKind0, false, false, false, false);
         SQLite3Join.JoinType sQLite3Expression_Join_JoinType0 = SQLite3Join.JoinType.INNER;
-        SQLite3Join sQLite3Expression_Join0 = new SQLite3Join(sQLite3Schema_SQLite3Table0,
-                sQLite3Constant0, sQLite3Expression_Join_JoinType0);
+        SQLite3Join sQLite3Expression_Join0 = new SQLite3Join(sQLite3Schema_SQLite3Table0, sQLite3Constant0,
+                sQLite3Expression_Join_JoinType0);
         sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_Join0);
         assertEquals(
                 " INNER JOIN  ON 1 -- null explicit collate: null implicit collate: null\n\t1 -- (INT) 1 explicit collate: null implicit collate: null\n",
@@ -1778,8 +1776,7 @@ public class SQLite3ExpectedValueVisitor_ESTest {
     @Test
     public void test096() throws Throwable {
         SQLite3Select sQLite3Select0 = new SQLite3Select();
-        SQLite3Exist sQLite3Expression_SQLite3Exist0 = new SQLite3Exist(
-                sQLite3Select0);
+        SQLite3Exist sQLite3Expression_SQLite3Exist0 = new SQLite3Exist(sQLite3Select0);
         sQLite3Select0.setWhereClause((SQLite3Expression) sQLite3Expression_SQLite3Exist0);
         SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
         // Undeclared exception!
@@ -1825,8 +1822,8 @@ public class SQLite3ExpectedValueVisitor_ESTest {
     @Test
     public void test099() throws Throwable {
         SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
-        SQLite3TableReference sQLite3Expression_SQLite3TableReference0 = new SQLite3TableReference(
-                "ub@!*&e'<^7o", (SQLite3Schema.SQLite3Table) null);
+        SQLite3TableReference sQLite3Expression_SQLite3TableReference0 = new SQLite3TableReference("ub@!*&e'<^7o",
+                (SQLite3Schema.SQLite3Table) null);
         sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_SQLite3TableReference0);
         assertEquals("", sQLite3ExpectedValueVisitor0.get());
     }
@@ -1838,8 +1835,8 @@ public class SQLite3ExpectedValueVisitor_ESTest {
         SQLite3Function sQLite3Function0 = new SQLite3Function(sQLite3Function_ComputableFunction0,
                 sQLite3ExpressionArray0);
         SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
-        SQLite3CollateOperation sQLite3Expression_CollateOperation0 = new SQLite3CollateOperation(
-                sQLite3Function0, (SQLite3Schema.SQLite3Column.SQLite3CollateSequence) null);
+        SQLite3CollateOperation sQLite3Expression_CollateOperation0 = new SQLite3CollateOperation(sQLite3Function0,
+                (SQLite3Schema.SQLite3Column.SQLite3CollateSequence) null);
         // Undeclared exception!
         try {
             sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_CollateOperation0);
@@ -1897,8 +1894,8 @@ public class SQLite3ExpectedValueVisitor_ESTest {
         SQLite3Function.ComputableFunction sQLite3Function_ComputableFunction0 = SQLite3Function.ComputableFunction.UPPER;
         SQLite3Function sQLite3Function0 = new SQLite3Function(sQLite3Function_ComputableFunction0,
                 sQLite3ExpressionArray0);
-        SQLite3MatchOperation sQLite3Expression_MatchOperation0 = new SQLite3MatchOperation(
-                sQLite3Function0, sQLite3Function0);
+        SQLite3MatchOperation sQLite3Expression_MatchOperation0 = new SQLite3MatchOperation(sQLite3Function0,
+                sQLite3Function0);
         SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
         SQLite3Constant sQLite3Constant0 = SQLite3Constant.createTextConstant("8f<:4L'!L T");
         SQLite3PostfixText sQLite3Expression_SQLite3PostfixText0 = new SQLite3PostfixText(
@@ -1923,8 +1920,7 @@ public class SQLite3ExpectedValueVisitor_ESTest {
         SQLite3Function sQLite3Function0 = new SQLite3Function(sQLite3Function_ComputableFunction0,
                 sQLite3ExpressionArray0);
         SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
-        SQLite3Distinct sQLite3Expression_SQLite3Distinct0 = new SQLite3Distinct(
-                sQLite3Function0);
+        SQLite3Distinct sQLite3Expression_SQLite3Distinct0 = new SQLite3Distinct(sQLite3Function0);
         // Undeclared exception!
         try {
             sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_SQLite3Distinct0);
@@ -1950,8 +1946,7 @@ public class SQLite3ExpectedValueVisitor_ESTest {
         SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
         SQLite3PostfixUnaryOperation.PostfixUnaryOperator sQLite3Expression_SQLite3PostfixUnaryOperation_PostfixUnaryOperator0 = SQLite3PostfixUnaryOperation.PostfixUnaryOperator.ISNULL;
         SQLite3Constant sQLite3Constant0 = SQLite3Constant.createFalse();
-        SQLite3InOperation sQLite3Expression_InOperation0 = new SQLite3InOperation(
-                sQLite3Constant0, sQLite3Constant0);
+        SQLite3InOperation sQLite3Expression_InOperation0 = new SQLite3InOperation(sQLite3Constant0, sQLite3Constant0);
         SQLite3PostfixUnaryOperation sQLite3Expression_SQLite3PostfixUnaryOperation0 = new SQLite3PostfixUnaryOperation(
                 sQLite3Expression_SQLite3PostfixUnaryOperation_PostfixUnaryOperator0, sQLite3Expression_InOperation0);
         // Undeclared exception!
@@ -1967,24 +1962,25 @@ public class SQLite3ExpectedValueVisitor_ESTest {
         }
     }
 
-//    @Test
-//    public void test107() throws Throwable {
-//        SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
-//        SQLite3Constant.SQLite3NullConstant sQLite3Constant_SQLite3NullConstant0 = new SQLite3Constant.SQLite3NullConstant();
-//        SQLite3Cast sQLite3Expression_Cast0 = new SQLite3Cast(
-//                (SQLite3TypeLiteral) null, sQLite3Constant_SQLite3NullConstant0);
-//        // Undeclared exception!
-//        try {
-//            sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_Cast0);
-//            fail("Expecting exception: NullPointerException");
-//
-//        } catch (NullPointerException e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//            verifyException("sqlancer.sqlite3.SQLite3ToStringVisitor", e);
-//        }
-//    }
+    // @Test
+    // public void test107() throws Throwable {
+    // SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
+    // SQLite3Constant.SQLite3NullConstant sQLite3Constant_SQLite3NullConstant0 = new
+    // SQLite3Constant.SQLite3NullConstant();
+    // SQLite3Cast sQLite3Expression_Cast0 = new SQLite3Cast(
+    // (SQLite3TypeLiteral) null, sQLite3Constant_SQLite3NullConstant0);
+    // // Undeclared exception!
+    // try {
+    // sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_Cast0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.sqlite3.SQLite3ToStringVisitor", e);
+    // }
+    // }
 
     @Test
     public void test108() throws Throwable {
@@ -1993,8 +1989,8 @@ public class SQLite3ExpectedValueVisitor_ESTest {
         byte[] byteArray0 = new byte[21];
         SQLite3Constant.SQLite3BinaryConstant sQLite3Constant_SQLite3BinaryConstant0 = new SQLite3Constant.SQLite3BinaryConstant(
                 byteArray0);
-        SQLite3BetweenOperation sQLite3Expression_BetweenOperation0 = new SQLite3BetweenOperation(
-                sQLite3Constant0, false, sQLite3Constant0, sQLite3Constant_SQLite3BinaryConstant0);
+        SQLite3BetweenOperation sQLite3Expression_BetweenOperation0 = new SQLite3BetweenOperation(sQLite3Constant0,
+                false, sQLite3Constant0, sQLite3Constant_SQLite3BinaryConstant0);
         SQLite3Select sQLite3Select0 = new SQLite3Select();
         sQLite3Select0.setWhereClause((SQLite3Expression) sQLite3Expression_BetweenOperation0);
         sQLite3ExpectedValueVisitor0.visit(sQLite3Select0, false);
@@ -2033,8 +2029,7 @@ public class SQLite3ExpectedValueVisitor_ESTest {
         SQLite3Function sQLite3Function0 = new SQLite3Function(sQLite3Function_ComputableFunction0,
                 sQLite3ExpressionArray0);
         SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
-        SQLite3InOperation sQLite3Expression_InOperation0 = new SQLite3InOperation(
-                sQLite3Function0, sQLite3Function0);
+        SQLite3InOperation sQLite3Expression_InOperation0 = new SQLite3InOperation(sQLite3Function0, sQLite3Function0);
         SQLite3OrderingTerm.Ordering sQLite3Expression_SQLite3OrderingTerm_Ordering0 = SQLite3OrderingTerm.Ordering.DESC;
         SQLite3OrderingTerm sQLite3Expression_SQLite3OrderingTerm0 = new SQLite3OrderingTerm(
                 sQLite3Expression_InOperation0, sQLite3Expression_SQLite3OrderingTerm_Ordering0);
@@ -2055,8 +2050,7 @@ public class SQLite3ExpectedValueVisitor_ESTest {
     public void test111() throws Throwable {
         SQLite3ExpectedValueVisitor sQLite3ExpectedValueVisitor0 = new SQLite3ExpectedValueVisitor();
         SQLite3TypeLiteral.Type sQLite3Expression_TypeLiteral_Type0 = SQLite3TypeLiteral.Type.BLOB;
-        SQLite3TypeLiteral sQLite3Expression_TypeLiteral0 = new SQLite3TypeLiteral(
-                sQLite3Expression_TypeLiteral_Type0);
+        SQLite3TypeLiteral sQLite3Expression_TypeLiteral0 = new SQLite3TypeLiteral(sQLite3Expression_TypeLiteral_Type0);
         sQLite3ExpectedValueVisitor0.visit(sQLite3Expression_TypeLiteral0);
         assertEquals(SQLite3TypeLiteral.Type.BLOB, sQLite3Expression_TypeLiteral0.getType());
     }

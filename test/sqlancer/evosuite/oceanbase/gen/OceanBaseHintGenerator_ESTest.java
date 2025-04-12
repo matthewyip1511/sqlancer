@@ -54,8 +54,8 @@ public class OceanBaseHintGenerator_ESTest {
  * OceanBaseSchema.OceanBaseTable oceanBaseSchema_OceanBaseTable0 = new OceanBaseSchema.OceanBaseTable("c", list0,
  * linkedList0); List<OceanBaseSchema.OceanBaseTable> list1 = List.of(oceanBaseSchema_OceanBaseTable0,
  * oceanBaseSchema_OceanBaseTable0, oceanBaseSchema_OceanBaseTable0, oceanBaseSchema_OceanBaseTable0,
- * oceanBaseSchema_OceanBaseTable0, oceanBaseSchema_OceanBaseTable0, oceanBaseSchema_OceanBaseTable0,
- * list1); assertEquals(OceanBaseSelect.SelectType.ALL, oceanBaseSelect0.getFromOptions()); }
+ * oceanBaseSchema_OceanBaseTable0, oceanBaseSchema_OceanBaseTable0, oceanBaseSchema_OceanBaseTable0, list1);
+ * assertEquals(OceanBaseSelect.SelectType.ALL, oceanBaseSelect0.getFromOptions()); }
  *
  * @Test public void test03() throws Throwable { OceanBaseSelect oceanBaseSelect0 = new OceanBaseSelect();
  * OceanBaseSchema.OceanBaseColumn oceanBaseSchema_OceanBaseColumn0 = mock(OceanBaseSchema.OceanBaseColumn.class, new
@@ -71,8 +71,8 @@ public class OceanBaseHintGenerator_ESTest {
  * oceanBaseSchema_OceanBaseTable0 = new OceanBaseSchema.OceanBaseTable(")", list0, list1);
  * List<OceanBaseSchema.OceanBaseTable> list2 = List.of(oceanBaseSchema_OceanBaseTable0,
  * oceanBaseSchema_OceanBaseTable0, oceanBaseSchema_OceanBaseTable0, oceanBaseSchema_OceanBaseTable0,
- * oceanBaseSchema_OceanBaseTable0, oceanBaseSchema_OceanBaseTable0, oceanBaseSchema_OceanBaseTable0,
- * list2); OceanBaseHintGenerator.generateHints(oceanBaseSelect0, list2); assertEquals(8, list2.size()); }
+ * oceanBaseSchema_OceanBaseTable0, oceanBaseSchema_OceanBaseTable0, oceanBaseSchema_OceanBaseTable0, list2);
+ * OceanBaseHintGenerator.generateHints(oceanBaseSelect0, list2); assertEquals(8, list2.size()); }
  *
  * @Test public void test04() throws Throwable { OceanBaseSelect oceanBaseSelect0 = new OceanBaseSelect();
  * LinkedList<OceanBaseSchema.OceanBaseColumn>(); LinkedList<OceanBaseSchema.OceanBaseIndex> linkedList1 = new

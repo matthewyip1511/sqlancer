@@ -26,8 +26,7 @@ public class CitusAlterTableGenerator_ESTest {
         LinkedList<PostgresSchema.PostgresIndex> linkedList1 = new LinkedList<PostgresSchema.PostgresIndex>();
         PostgresSchema.PostgresTable.TableType postgresSchema_PostgresTable_TableType0 = PostgresSchema.PostgresTable.TableType.STANDARD;
         PostgresSchema.PostgresTable postgresSchema_PostgresTable0 = new PostgresSchema.PostgresTable("~2", linkedList0,
-                linkedList1, postgresSchema_PostgresTable_TableType0,
-                 null, true, true);
+                linkedList1, postgresSchema_PostgresTable_TableType0, null, true, true);
         PostgresGlobalState postgresGlobalState0 = new PostgresGlobalState();
         // Undeclared exception!
         try {

@@ -137,24 +137,24 @@ public class OceanBaseCastOperation_ESTest {
         }
     }
 
-//    @Test
-//    public void test08() throws Throwable {
-//        OceanBaseCastOperation.CastType oceanBaseCastOperation_CastType0 = OceanBaseCastOperation.CastType.getRandom();
-//        OceanBaseJoin oceanBaseJoin0 = new OceanBaseJoin();
-//        OceanBaseCastOperation oceanBaseCastOperation0 = new OceanBaseCastOperation(oceanBaseJoin0,
-//                oceanBaseCastOperation_CastType0);
-//        // Undeclared exception!
-//        try {
-//            oceanBaseCastOperation0.getExpectedValue();
-//            fail("Expecting exception: UnsupportedOperationException");
-//
-//        } catch (UnsupportedOperationException e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//            verifyException("sqlancer.oceanbase.ast.OceanBaseJoin", e);
-//        }
-//    }
+    // @Test
+    // public void test08() throws Throwable {
+    // OceanBaseCastOperation.CastType oceanBaseCastOperation_CastType0 = OceanBaseCastOperation.CastType.getRandom();
+    // OceanBaseJoin oceanBaseJoin0 = new OceanBaseJoin();
+    // OceanBaseCastOperation oceanBaseCastOperation0 = new OceanBaseCastOperation(oceanBaseJoin0,
+    // oceanBaseCastOperation_CastType0);
+    // // Undeclared exception!
+    // try {
+    // oceanBaseCastOperation0.getExpectedValue();
+    // fail("Expecting exception: UnsupportedOperationException");
+    //
+    // } catch (UnsupportedOperationException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.oceanbase.ast.OceanBaseJoin", e);
+    // }
+    // }
 
     @Test
     public void test09() throws Throwable {

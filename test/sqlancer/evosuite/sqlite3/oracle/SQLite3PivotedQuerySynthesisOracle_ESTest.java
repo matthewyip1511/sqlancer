@@ -80,8 +80,8 @@ public class SQLite3PivotedQuerySynthesisOracle_ESTest {
         SQLite3UnaryOperation sQLite3UnaryOperation0 = new SQLite3UnaryOperation(sQLite3UnaryOperation_UnaryOperator0,
                 sQLite3Select0);
         sQLite3Select0.setLimitClause((SQLite3Expression) sQLite3UnaryOperation0);
-        SQLite3MatchOperation sQLite3Expression_MatchOperation0 = new SQLite3MatchOperation(
-                sQLite3UnaryOperation0, sQLite3Select0);
+        SQLite3MatchOperation sQLite3Expression_MatchOperation0 = new SQLite3MatchOperation(sQLite3UnaryOperation0,
+                sQLite3Select0);
         // Undeclared exception!
         try {
             sQLite3PivotedQuerySynthesisOracle0.getExpectedValues(sQLite3Expression_MatchOperation0);

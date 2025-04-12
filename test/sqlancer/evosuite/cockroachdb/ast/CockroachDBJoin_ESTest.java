@@ -125,8 +125,8 @@ public class CockroachDBJoin_ESTest {
         CockroachDBJoin.JoinType cockroachDBJoin_JoinType0 = CockroachDBJoin.JoinType.getRandom();
         CockroachDBJoin.JoinType[] cockroachDBJoin_JoinTypeArray0 = new CockroachDBJoin.JoinType[3];
         cockroachDBJoin_JoinTypeArray0[0] = cockroachDBJoin_JoinType0;
-        CockroachDBJoin.JoinType cockroachDBJoin_JoinType1 = CockroachDBJoin.JoinType
-                .getRandomExcept("COCKROACHDB", cockroachDBJoin_JoinTypeArray0);
+        CockroachDBJoin.JoinType cockroachDBJoin_JoinType1 = CockroachDBJoin.JoinType.getRandomExcept("COCKROACHDB",
+                cockroachDBJoin_JoinTypeArray0);
         assertEquals(CockroachDBJoin.JoinType.LEFT, cockroachDBJoin_JoinType1);
     }
 

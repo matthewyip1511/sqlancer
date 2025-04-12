@@ -104,8 +104,7 @@ public class ClickHouseColumnReference_ESTest {
 
     @Test
     public void test8() throws Throwable {
-        ClickHouseSubquery clickHouseExpression_ClickHouseSubquery0 = new ClickHouseSubquery(
-                "");
+        ClickHouseSubquery clickHouseExpression_ClickHouseSubquery0 = new ClickHouseSubquery("");
         ClickHouseAliasOperation clickHouseAliasOperation0 = new ClickHouseAliasOperation(
                 clickHouseExpression_ClickHouseSubquery0, "");
         ClickHouseColumnReference clickHouseColumnReference0 = new ClickHouseColumnReference(clickHouseAliasOperation0);

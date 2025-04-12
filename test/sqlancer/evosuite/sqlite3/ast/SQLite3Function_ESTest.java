@@ -128,8 +128,8 @@ public class SQLite3Function_ESTest {
                 sQLite3DataType0, true, true, sQLite3Schema_SQLite3Column_SQLite3CollateSequence0);
         SQLite3Constant.SQLite3IntConstant sQLite3Constant_SQLite3IntConstant0 = new SQLite3Constant.SQLite3IntConstant(
                 0L);
-        SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = new SQLite3ColumnName(
-                sQLite3Schema_SQLite3Column0, sQLite3Constant_SQLite3IntConstant0);
+        SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = new SQLite3ColumnName(sQLite3Schema_SQLite3Column0,
+                sQLite3Constant_SQLite3IntConstant0);
         sQLite3ExpressionArray0[0] = (SQLite3Expression) sQLite3Expression_SQLite3ColumnName0;
         SQLite3Constant sQLite3Constant0 = SQLite3Constant.createTextConstant(".9");
         sQLite3ExpressionArray0[1] = (SQLite3Expression) sQLite3Constant0;
@@ -236,7 +236,7 @@ public class SQLite3Function_ESTest {
         SQLite3Function.ComputableFunction sQLite3Function_ComputableFunction0 = SQLite3Function.ComputableFunction.TRIM;
         SQLite3Expression[] sQLite3ExpressionArray0 = new SQLite3Expression[1];
         SQLite3Subquery subquery0 = new SQLite3Subquery("X");
-        sQLite3ExpressionArray0[0] = (SQLite3Expression)subquery0;
+        sQLite3ExpressionArray0[0] = (SQLite3Expression) subquery0;
         SQLite3Function sQLite3Function0 = new SQLite3Function(sQLite3Function_ComputableFunction0,
                 sQLite3ExpressionArray0);
         SQLite3Constant sQLite3Constant0 = sQLite3Function0.getExpectedValue();
@@ -718,8 +718,8 @@ public class SQLite3Function_ESTest {
         SQLite3Schema.SQLite3Column.SQLite3CollateSequence sQLite3Schema_SQLite3Column_SQLite3CollateSequence0 = SQLite3Schema.SQLite3Column.SQLite3CollateSequence.NOCASE;
         SQLite3Schema.SQLite3Column sQLite3Schema_SQLite3Column0 = new SQLite3Schema.SQLite3Column("?}A&vp0)#=4o",
                 sQLite3DataType0, false, sQLite3Schema_SQLite3Column_SQLite3CollateSequence0, false);
-        SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = new SQLite3ColumnName(
-                sQLite3Schema_SQLite3Column0, sQLite3Constant_SQLite3RealConstant0);
+        SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = new SQLite3ColumnName(sQLite3Schema_SQLite3Column0,
+                sQLite3Constant_SQLite3RealConstant0);
         sQLite3ExpressionArray0[2] = (SQLite3Expression) sQLite3Expression_SQLite3ColumnName0;
         sQLite3ExpressionArray0[3] = (SQLite3Expression) sQLite3Constant_SQLite3RealConstant0;
         sQLite3ExpressionArray0[4] = (SQLite3Expression) sQLite3Constant_SQLite3RealConstant0;

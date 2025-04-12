@@ -511,34 +511,34 @@ public class OceanBaseExpressionGenerator_ESTest {
         assertFalse(oceanBaseColumnReference0.getRef());
     }
 
-//    @Test
-//    public void test25() throws Throwable {
-//        OceanBaseGlobalState oceanBaseGlobalState0 = new OceanBaseGlobalState();
-//        OceanBaseExpressionGenerator oceanBaseExpressionGenerator0 = new OceanBaseExpressionGenerator(
-//                oceanBaseGlobalState0);
-//        OceanBaseSchema.OceanBaseDataType oceanBaseSchema_OceanBaseDataType0 = OceanBaseSchema.OceanBaseDataType.INT;
-//        OceanBaseSchema.OceanBaseColumn oceanBaseSchema_OceanBaseColumn0 = new OceanBaseSchema.OceanBaseColumn("aC{",
-//                oceanBaseSchema_OceanBaseDataType0, true, 72655, true);
-//        List<OceanBaseSchema.OceanBaseColumn> list0 = List.of(oceanBaseSchema_OceanBaseColumn0,
-//                oceanBaseSchema_OceanBaseColumn0, oceanBaseSchema_OceanBaseColumn0);
-//        oceanBaseExpressionGenerator0.setColumns(list0);
-//        OceanBaseSchema.OceanBaseRowValue oceanBaseSchema_OceanBaseRowValue0 = mock(
-//                OceanBaseSchema.OceanBaseRowValue.class, new ViolatedAssumptionAnswer());
-//        doReturn((Map) null).when(oceanBaseSchema_OceanBaseRowValue0).getValues();
-//        OceanBaseExpressionGenerator oceanBaseExpressionGenerator1 = oceanBaseExpressionGenerator0
-//                .setRowVal(oceanBaseSchema_OceanBaseRowValue0);
-//        // Undeclared exception!
-//        try {
-//            oceanBaseExpressionGenerator1.generateColumn();
-//            fail("Expecting exception: NullPointerException");
-//
-//        } catch (NullPointerException e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//            verifyException("sqlancer.oceanbase.gen.OceanBaseExpressionGenerator", e);
-//        }
-//    }
+    // @Test
+    // public void test25() throws Throwable {
+    // OceanBaseGlobalState oceanBaseGlobalState0 = new OceanBaseGlobalState();
+    // OceanBaseExpressionGenerator oceanBaseExpressionGenerator0 = new OceanBaseExpressionGenerator(
+    // oceanBaseGlobalState0);
+    // OceanBaseSchema.OceanBaseDataType oceanBaseSchema_OceanBaseDataType0 = OceanBaseSchema.OceanBaseDataType.INT;
+    // OceanBaseSchema.OceanBaseColumn oceanBaseSchema_OceanBaseColumn0 = new OceanBaseSchema.OceanBaseColumn("aC{",
+    // oceanBaseSchema_OceanBaseDataType0, true, 72655, true);
+    // List<OceanBaseSchema.OceanBaseColumn> list0 = List.of(oceanBaseSchema_OceanBaseColumn0,
+    // oceanBaseSchema_OceanBaseColumn0, oceanBaseSchema_OceanBaseColumn0);
+    // oceanBaseExpressionGenerator0.setColumns(list0);
+    // OceanBaseSchema.OceanBaseRowValue oceanBaseSchema_OceanBaseRowValue0 = mock(
+    // OceanBaseSchema.OceanBaseRowValue.class, new ViolatedAssumptionAnswer());
+    // doReturn((Map) null).when(oceanBaseSchema_OceanBaseRowValue0).getValues();
+    // OceanBaseExpressionGenerator oceanBaseExpressionGenerator1 = oceanBaseExpressionGenerator0
+    // .setRowVal(oceanBaseSchema_OceanBaseRowValue0);
+    // // Undeclared exception!
+    // try {
+    // oceanBaseExpressionGenerator1.generateColumn();
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.oceanbase.gen.OceanBaseExpressionGenerator", e);
+    // }
+    // }
 
     @Test
     public void test26() throws Throwable {
@@ -630,15 +630,15 @@ public class OceanBaseExpressionGenerator_ESTest {
         assertFalse(oceanBaseUnaryPostfixOperation0.isNegated());
     }
 
-//    @Test
-//    public void test33() throws Throwable {
-//        OceanBaseGlobalState oceanBaseGlobalState0 = new OceanBaseGlobalState();
-//        OceanBaseExpressionGenerator oceanBaseExpressionGenerator0 = new OceanBaseExpressionGenerator(
-//                oceanBaseGlobalState0);
-//        Connection connection0 = mock(Connection.class, new ViolatedAssumptionAnswer());
-//        OceanBaseExpressionGenerator oceanBaseExpressionGenerator1 = oceanBaseExpressionGenerator0.setCon(connection0);
-//        assertSame(oceanBaseExpressionGenerator0, oceanBaseExpressionGenerator1);
-//    }
+    // @Test
+    // public void test33() throws Throwable {
+    // OceanBaseGlobalState oceanBaseGlobalState0 = new OceanBaseGlobalState();
+    // OceanBaseExpressionGenerator oceanBaseExpressionGenerator0 = new OceanBaseExpressionGenerator(
+    // oceanBaseGlobalState0);
+    // Connection connection0 = mock(Connection.class, new ViolatedAssumptionAnswer());
+    // OceanBaseExpressionGenerator oceanBaseExpressionGenerator1 = oceanBaseExpressionGenerator0.setCon(connection0);
+    // assertSame(oceanBaseExpressionGenerator0, oceanBaseExpressionGenerator1);
+    // }
 
     @Test
     public void test34() throws Throwable {

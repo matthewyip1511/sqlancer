@@ -271,25 +271,27 @@ public class OceanBaseBinaryComparisonOperation_ESTest {
         assertEquals(">", string0);
     }
 
-//    @Test
-//    public void test18() throws Throwable {
-//        OceanBaseBinaryComparisonOperation.BinaryComparisonOperator oceanBaseBinaryComparisonOperation_BinaryComparisonOperator0 = OceanBaseBinaryComparisonOperation.BinaryComparisonOperator
-//                .getRandom();
-//        OceanBaseJoin oceanBaseJoin0 = new OceanBaseJoin();
-//        OceanBaseBinaryComparisonOperation oceanBaseBinaryComparisonOperation0 = new OceanBaseBinaryComparisonOperation(
-//                oceanBaseJoin0, oceanBaseJoin0, oceanBaseBinaryComparisonOperation_BinaryComparisonOperator0);
-//        // Undeclared exception!
-//        try {
-//            oceanBaseBinaryComparisonOperation0.getExpectedValue();
-//            fail("Expecting exception: UnsupportedOperationException");
-//
-//        } catch (UnsupportedOperationException e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//            verifyException("sqlancer.oceanbase.ast.OceanBaseJoin", e);
-//        }
-//    }
+    // @Test
+    // public void test18() throws Throwable {
+    // OceanBaseBinaryComparisonOperation.BinaryComparisonOperator
+    // oceanBaseBinaryComparisonOperation_BinaryComparisonOperator0 =
+    // OceanBaseBinaryComparisonOperation.BinaryComparisonOperator
+    // .getRandom();
+    // OceanBaseJoin oceanBaseJoin0 = new OceanBaseJoin();
+    // OceanBaseBinaryComparisonOperation oceanBaseBinaryComparisonOperation0 = new OceanBaseBinaryComparisonOperation(
+    // oceanBaseJoin0, oceanBaseJoin0, oceanBaseBinaryComparisonOperation_BinaryComparisonOperator0);
+    // // Undeclared exception!
+    // try {
+    // oceanBaseBinaryComparisonOperation0.getExpectedValue();
+    // fail("Expecting exception: UnsupportedOperationException");
+    //
+    // } catch (UnsupportedOperationException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.oceanbase.ast.OceanBaseJoin", e);
+    // }
+    // }
 
     @Test
     public void test19() throws Throwable {

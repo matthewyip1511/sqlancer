@@ -160,8 +160,8 @@ public class PostgresJoin_ESTest {
         JoinBase.JoinType[] postgresJoin_PostgresJoinTypeArray0 = new JoinBase.JoinType[15];
         JoinBase.JoinType postgresJoin_PostgresJoinType0 = JoinBase.JoinType.LEFT;
         postgresJoin_PostgresJoinTypeArray0[1] = postgresJoin_PostgresJoinType0;
-        JoinBase.JoinType postgresJoin_PostgresJoinType1 = JoinBase.JoinType
-                .getRandomExcept("POSTGRES", postgresJoin_PostgresJoinTypeArray0);
+        JoinBase.JoinType postgresJoin_PostgresJoinType1 = JoinBase.JoinType.getRandomExcept("POSTGRES",
+                postgresJoin_PostgresJoinTypeArray0);
         assertEquals(JoinBase.JoinType.INNER, postgresJoin_PostgresJoinType1);
     }
 

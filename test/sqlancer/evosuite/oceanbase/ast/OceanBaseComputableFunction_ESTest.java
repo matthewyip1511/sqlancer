@@ -176,23 +176,23 @@ public class OceanBaseComputableFunction_ESTest {
         }
     }
 
-//    @Test
-//    public void test08() throws Throwable {
-//        OceanBaseExpression[] oceanBaseExpressionArray0 = new OceanBaseExpression[2];
-//        OceanBaseJoin oceanBaseJoin0 = new OceanBaseJoin();
-//        oceanBaseExpressionArray0[0] = (OceanBaseExpression) oceanBaseJoin0;
-//        // Undeclared exception!
-//        try {
-//            OceanBaseComputableFunction.getMostGeneralType(oceanBaseExpressionArray0);
-//            fail("Expecting exception: UnsupportedOperationException");
-//
-//        } catch (UnsupportedOperationException e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//            verifyException("sqlancer.oceanbase.ast.OceanBaseJoin", e);
-//        }
-//    }
+    // @Test
+    // public void test08() throws Throwable {
+    // OceanBaseExpression[] oceanBaseExpressionArray0 = new OceanBaseExpression[2];
+    // OceanBaseJoin oceanBaseJoin0 = new OceanBaseJoin();
+    // oceanBaseExpressionArray0[0] = (OceanBaseExpression) oceanBaseJoin0;
+    // // Undeclared exception!
+    // try {
+    // OceanBaseComputableFunction.getMostGeneralType(oceanBaseExpressionArray0);
+    // fail("Expecting exception: UnsupportedOperationException");
+    //
+    // } catch (UnsupportedOperationException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.oceanbase.ast.OceanBaseJoin", e);
+    // }
+    // }
 
     @Test
     public void test09() throws Throwable {
@@ -270,29 +270,31 @@ public class OceanBaseComputableFunction_ESTest {
         }
     }
 
-//    @Test
-//    public void test12() throws Throwable {
-//        OceanBaseConstant.OceanBaseNullConstant oceanBaseConstant_OceanBaseNullConstant0 = new OceanBaseConstant.OceanBaseNullConstant();
-//        OceanBaseComputableFunction.OceanBaseFunction oceanBaseComputableFunction_OceanBaseFunction0 = OceanBaseComputableFunction.OceanBaseFunction.BIT_COUNT;
-//        OceanBaseExpression[] oceanBaseExpressionArray0 = new OceanBaseExpression[4];
-//        oceanBaseExpressionArray0[0] = (OceanBaseExpression) oceanBaseConstant_OceanBaseNullConstant0;
-//        oceanBaseExpressionArray0[1] = (OceanBaseExpression) oceanBaseConstant_OceanBaseNullConstant0;
-//        OceanBaseJoin oceanBaseJoin0 = new OceanBaseJoin();
-//        oceanBaseExpressionArray0[2] = (OceanBaseExpression) oceanBaseJoin0;
-//        OceanBaseComputableFunction oceanBaseComputableFunction0 = new OceanBaseComputableFunction(
-//                oceanBaseComputableFunction_OceanBaseFunction0, oceanBaseExpressionArray0);
-//        // Undeclared exception!
-//        try {
-//            oceanBaseComputableFunction0.getExpectedValue();
-//            fail("Expecting exception: UnsupportedOperationException");
-//
-//        } catch (UnsupportedOperationException e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//            verifyException("sqlancer.oceanbase.ast.OceanBaseJoin", e);
-//        }
-//    }
+    // @Test
+    // public void test12() throws Throwable {
+    // OceanBaseConstant.OceanBaseNullConstant oceanBaseConstant_OceanBaseNullConstant0 = new
+    // OceanBaseConstant.OceanBaseNullConstant();
+    // OceanBaseComputableFunction.OceanBaseFunction oceanBaseComputableFunction_OceanBaseFunction0 =
+    // OceanBaseComputableFunction.OceanBaseFunction.BIT_COUNT;
+    // OceanBaseExpression[] oceanBaseExpressionArray0 = new OceanBaseExpression[4];
+    // oceanBaseExpressionArray0[0] = (OceanBaseExpression) oceanBaseConstant_OceanBaseNullConstant0;
+    // oceanBaseExpressionArray0[1] = (OceanBaseExpression) oceanBaseConstant_OceanBaseNullConstant0;
+    // OceanBaseJoin oceanBaseJoin0 = new OceanBaseJoin();
+    // oceanBaseExpressionArray0[2] = (OceanBaseExpression) oceanBaseJoin0;
+    // OceanBaseComputableFunction oceanBaseComputableFunction0 = new OceanBaseComputableFunction(
+    // oceanBaseComputableFunction_OceanBaseFunction0, oceanBaseExpressionArray0);
+    // // Undeclared exception!
+    // try {
+    // oceanBaseComputableFunction0.getExpectedValue();
+    // fail("Expecting exception: UnsupportedOperationException");
+    //
+    // } catch (UnsupportedOperationException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.oceanbase.ast.OceanBaseJoin", e);
+    // }
+    // }
 
     @Test
     public void test13() throws Throwable {
@@ -373,24 +375,24 @@ public class OceanBaseComputableFunction_ESTest {
         }
     }
 
-//    @Test
-//    public void test16() throws Throwable {
-//        OceanBaseExpression[] oceanBaseExpressionArray0 = new OceanBaseExpression[2];
-//        OceanBaseJoin oceanBaseJoin0 = new OceanBaseJoin();
-//        oceanBaseExpressionArray0[0] = (OceanBaseExpression) oceanBaseJoin0;
-//        OceanBaseConstant oceanBaseConstant0 = OceanBaseConstant.createTrue();
-//        // Undeclared exception!
-//        try {
-//            OceanBaseComputableFunction.castToMostGeneralType(oceanBaseConstant0, oceanBaseExpressionArray0);
-//            fail("Expecting exception: UnsupportedOperationException");
-//
-//        } catch (UnsupportedOperationException e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//            verifyException("sqlancer.oceanbase.ast.OceanBaseJoin", e);
-//        }
-//    }
+    // @Test
+    // public void test16() throws Throwable {
+    // OceanBaseExpression[] oceanBaseExpressionArray0 = new OceanBaseExpression[2];
+    // OceanBaseJoin oceanBaseJoin0 = new OceanBaseJoin();
+    // oceanBaseExpressionArray0[0] = (OceanBaseExpression) oceanBaseJoin0;
+    // OceanBaseConstant oceanBaseConstant0 = OceanBaseConstant.createTrue();
+    // // Undeclared exception!
+    // try {
+    // OceanBaseComputableFunction.castToMostGeneralType(oceanBaseConstant0, oceanBaseExpressionArray0);
+    // fail("Expecting exception: UnsupportedOperationException");
+    //
+    // } catch (UnsupportedOperationException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.oceanbase.ast.OceanBaseJoin", e);
+    // }
+    // }
 
     @Test
     public void test17() throws Throwable {

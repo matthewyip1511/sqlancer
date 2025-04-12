@@ -42,7 +42,7 @@ public enum CockroachDBFunction {
 
         @Override
         public List<CockroachDBExpression> getArgumentsForReturnType(CockroachDBExpressionGenerator gen, int depth,
-                                                                     CockroachDBDataType[] argumentTypes2, CockroachDBCompositeDataType returnType2) {
+                CockroachDBDataType[] argumentTypes2, CockroachDBCompositeDataType returnType2) {
             return getLastArgAsConstantString(gen, depth, argumentTypes2, returnType2);
         }
 
@@ -168,7 +168,7 @@ public enum CockroachDBFunction {
     }
 
     public List<CockroachDBExpression> getArgumentsForReturnType(CockroachDBExpressionGenerator gen, int depth,
-                                                                 CockroachDBDataType[] argumentTypes2, CockroachDBCompositeDataType returnType2) {
+            CockroachDBDataType[] argumentTypes2, CockroachDBCompositeDataType returnType2) {
         List<CockroachDBExpression> arguments = new ArrayList<>();
         /*
          * This is a workaround based on the assumption that array types should refer to the same element type.

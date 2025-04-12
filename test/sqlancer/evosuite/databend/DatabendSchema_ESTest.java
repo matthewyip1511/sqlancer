@@ -110,22 +110,22 @@ public class DatabendSchema_ESTest {
      * SQLConnection(connection0); DatabendSchema.DatabendDataType.getRandomWithoutNullAndVarchar(); Statement
      * statement0 = sQLConnection0.prepareStatement("%!]}rRHWJm-");
      */
-//    Connection connection1 = mock(Connection.class, new ViolatedAssumptionAnswer());
-//
-//    doReturn(statement0, (Statement) null).when(connection1).createStatement();
-//        SQLConnection sQLConnection1 = new SQLConnection(connection1);
-//        // Undeclared exception!
-//        try {
-//            DatabendSchema.fromConnection(sQLConnection1, "");
-//            fail("Expecting exception: NullPointerException");
-//
-//        } catch (NullPointerException e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//            verifyException("sqlancer.databend.DatabendSchema", e);
-//        }
-//    }
+    // Connection connection1 = mock(Connection.class, new ViolatedAssumptionAnswer());
+    //
+    // doReturn(statement0, (Statement) null).when(connection1).createStatement();
+    // SQLConnection sQLConnection1 = new SQLConnection(connection1);
+    // // Undeclared exception!
+    // try {
+    // DatabendSchema.fromConnection(sQLConnection1, "");
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.databend.DatabendSchema", e);
+    // }
+    // }
 
     @Test
     public void test06() throws Throwable {
@@ -174,22 +174,22 @@ public class DatabendSchema_ESTest {
      * SQLConnection sQLConnection0 = new SQLConnection(connection0); Statement statement0 =
      * sQLConnection0.prepareStatement("%!]}rRHWJm-");
      */
-//    Connection connection1 = mock(Connection.class, new ViolatedAssumptionAnswer());
-//
-//    doReturn(statement0, statement0, (Statement) null).when(connection1).createStatement();
-//        SQLConnection sQLConnection1 = new SQLConnection(connection1);
-//        // Undeclared exception!
-//        try {
-//            DatabendSchema.fromConnection(sQLConnection1, "");
-//            fail("Expecting exception: NullPointerException");
-//
-//        } catch (NullPointerException e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//            verifyException("sqlancer.databend.DatabendSchema", e);
-//        }
-//    }
+    // Connection connection1 = mock(Connection.class, new ViolatedAssumptionAnswer());
+    //
+    // doReturn(statement0, statement0, (Statement) null).when(connection1).createStatement();
+    // SQLConnection sQLConnection1 = new SQLConnection(connection1);
+    // // Undeclared exception!
+    // try {
+    // DatabendSchema.fromConnection(sQLConnection1, "");
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.databend.DatabendSchema", e);
+    // }
+    // }
 
     /*
      * Test disabled because it contains mock() function calls that are not implemented
@@ -259,7 +259,7 @@ public class DatabendSchema_ESTest {
      *
      * } catch (NullPointerException e) { // // no message in exception (getMessage() returned null) // }
      */
-//    }
+    // }
 
     /*
      * Test disabled because it contains mock() function calls that are not implemented
@@ -278,23 +278,23 @@ public class DatabendSchema_ESTest {
      * SQLConnection(connection0); DatabendSchema.DatabendDataType.getRandomWithoutNullAndVarchar(); String string0 =
      * "%!]}rRHWJ\\m-";
      */
-//    Statement statement0 = sQLConnection0.prepareStatement("%!]}rRHWJm-");
-//    Connection connection1 = mock(Connection.class, new ViolatedAssumptionAnswer());
-//
-//    doReturn(statement0, (Statement) null).when(connection1).createStatement();
-//        SQLConnection sQLConnection1 = new SQLConnection(connection1);
-//        // Undeclared exception!
-//        try {
-//            DatabendSchema.fromConnection(sQLConnection1, "");
-//            fail("Expecting exception: NullPointerException");
-//
-//        } catch (NullPointerException e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//            verifyException("sqlancer.databend.DatabendSchema", e);
-//        }
-//    }
+    // Statement statement0 = sQLConnection0.prepareStatement("%!]}rRHWJm-");
+    // Connection connection1 = mock(Connection.class, new ViolatedAssumptionAnswer());
+    //
+    // doReturn(statement0, (Statement) null).when(connection1).createStatement();
+    // SQLConnection sQLConnection1 = new SQLConnection(connection1);
+    // // Undeclared exception!
+    // try {
+    // DatabendSchema.fromConnection(sQLConnection1, "");
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.databend.DatabendSchema", e);
+    // }
+    // }
 
     /*
      * Test disabled because it contains mock() function calls that are not implemented
@@ -312,22 +312,22 @@ public class DatabendSchema_ESTest {
      * SQLConnection(connection0); DatabendSchema.DatabendDataType.getRandomWithoutNullAndVarchar(); Statement
      * statement0 = sQLConnection0.prepareStatement("%!]}rRHWJm-");
      */
-//    Connection connection1 = mock(Connection.class, new ViolatedAssumptionAnswer());
-//
-//    doReturn(statement0, (Statement) null).when(connection1).createStatement();
-//        SQLConnection sQLConnection1 = new SQLConnection(connection1);
-//        // Undeclared exception!
-//        try {
-//            DatabendSchema.fromConnection(sQLConnection1, "");
-//            fail("Expecting exception: NullPointerException");
-//
-//        } catch (NullPointerException e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//            verifyException("sqlancer.databend.DatabendSchema", e);
-//        }
-//    }
+    // Connection connection1 = mock(Connection.class, new ViolatedAssumptionAnswer());
+    //
+    // doReturn(statement0, (Statement) null).when(connection1).createStatement();
+    // SQLConnection sQLConnection1 = new SQLConnection(connection1);
+    // // Undeclared exception!
+    // try {
+    // DatabendSchema.fromConnection(sQLConnection1, "");
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.databend.DatabendSchema", e);
+    // }
+    // }
 
     @Test
     public void test16() throws Throwable {
@@ -673,20 +673,20 @@ public class DatabendSchema_ESTest {
      * SQLConnection(connection0); DatabendSchema.DatabendDataType.getRandomWithoutNullAndVarchar(); Statement
      * statement0 = sQLConnection0.prepareStatement("%!]}rRHWJm-");
      */
-//    Connection connection1 = mock(Connection.class, new ViolatedAssumptionAnswer());
-//
-//    doReturn(statement0, (Statement) null).when(connection1).createStatement();
-//        SQLConnection sQLConnection1 = new SQLConnection(connection1);
-//        // Undeclared exception!
-//        try {
-//            DatabendSchema.fromConnection(sQLConnection1, "");
-//            fail("Expecting exception: NullPointerException");
-//
-//        } catch (NullPointerException e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//            verifyException("sqlancer.databend.DatabendSchema", e);
-//        }
-//    }
+    // Connection connection1 = mock(Connection.class, new ViolatedAssumptionAnswer());
+    //
+    // doReturn(statement0, (Statement) null).when(connection1).createStatement();
+    // SQLConnection sQLConnection1 = new SQLConnection(connection1);
+    // // Undeclared exception!
+    // try {
+    // DatabendSchema.fromConnection(sQLConnection1, "");
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.databend.DatabendSchema", e);
+    // }
+    // }
 }

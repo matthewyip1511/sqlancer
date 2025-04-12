@@ -91,24 +91,26 @@ public class OceanBaseBinaryLogicalOperation_ESTest {
         }
     }
 
-//    @Test
-//    public void test05() throws Throwable {
-//        OceanBaseJoin oceanBaseJoin0 = new OceanBaseJoin();
-//        OceanBaseBinaryLogicalOperation.OceanBaseBinaryLogicalOperator oceanBaseBinaryLogicalOperation_OceanBaseBinaryLogicalOperator0 = OceanBaseBinaryLogicalOperation.OceanBaseBinaryLogicalOperator.OR;
-//        OceanBaseBinaryLogicalOperation oceanBaseBinaryLogicalOperation0 = new OceanBaseBinaryLogicalOperation(
-//                oceanBaseJoin0, oceanBaseJoin0, oceanBaseBinaryLogicalOperation_OceanBaseBinaryLogicalOperator0);
-//        // Undeclared exception!
-//        try {
-//            oceanBaseBinaryLogicalOperation0.getExpectedValue();
-//            fail("Expecting exception: UnsupportedOperationException");
-//
-//        } catch (UnsupportedOperationException e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//            verifyException("sqlancer.oceanbase.ast.OceanBaseJoin", e);
-//        }
-//    }
+    // @Test
+    // public void test05() throws Throwable {
+    // OceanBaseJoin oceanBaseJoin0 = new OceanBaseJoin();
+    // OceanBaseBinaryLogicalOperation.OceanBaseBinaryLogicalOperator
+    // oceanBaseBinaryLogicalOperation_OceanBaseBinaryLogicalOperator0 =
+    // OceanBaseBinaryLogicalOperation.OceanBaseBinaryLogicalOperator.OR;
+    // OceanBaseBinaryLogicalOperation oceanBaseBinaryLogicalOperation0 = new OceanBaseBinaryLogicalOperation(
+    // oceanBaseJoin0, oceanBaseJoin0, oceanBaseBinaryLogicalOperation_OceanBaseBinaryLogicalOperator0);
+    // // Undeclared exception!
+    // try {
+    // oceanBaseBinaryLogicalOperation0.getExpectedValue();
+    // fail("Expecting exception: UnsupportedOperationException");
+    //
+    // } catch (UnsupportedOperationException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.oceanbase.ast.OceanBaseJoin", e);
+    // }
+    // }
 
     @Test
     public void test06() throws Throwable {

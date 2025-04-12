@@ -50,8 +50,8 @@ public class SQLite3UnaryOperation_ESTest {
         byte[] byteArray0 = new byte[7];
         SQLite3Constant.SQLite3BinaryConstant sQLite3Constant_SQLite3BinaryConstant0 = new SQLite3Constant.SQLite3BinaryConstant(
                 byteArray0);
-        SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = new SQLite3ColumnName(
-                sQLite3Schema_SQLite3Column0, sQLite3Constant_SQLite3BinaryConstant0);
+        SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = new SQLite3ColumnName(sQLite3Schema_SQLite3Column0,
+                sQLite3Constant_SQLite3BinaryConstant0);
         SQLite3UnaryOperation sQLite3UnaryOperation0 = new SQLite3UnaryOperation(sQLite3UnaryOperation_UnaryOperator0,
                 sQLite3Expression_SQLite3ColumnName0);
         SQLite3Schema.SQLite3Column.SQLite3CollateSequence sQLite3Schema_SQLite3Column_SQLite3CollateSequence1 = sQLite3UnaryOperation0
@@ -77,8 +77,8 @@ public class SQLite3UnaryOperation_ESTest {
         SQLite3Function sQLite3Function0 = new SQLite3Function(sQLite3Function_ComputableFunction0,
                 sQLite3ExpressionArray0);
         SQLite3Schema.SQLite3Column.SQLite3CollateSequence sQLite3Schema_SQLite3Column_SQLite3CollateSequence0 = SQLite3Schema.SQLite3Column.SQLite3CollateSequence.BINARY;
-        SQLite3CollateOperation sQLite3Expression_CollateOperation0 = new SQLite3CollateOperation(
-                sQLite3Function0, sQLite3Schema_SQLite3Column_SQLite3CollateSequence0);
+        SQLite3CollateOperation sQLite3Expression_CollateOperation0 = new SQLite3CollateOperation(sQLite3Function0,
+                sQLite3Schema_SQLite3Column_SQLite3CollateSequence0);
         SQLite3UnaryOperation sQLite3UnaryOperation0 = new SQLite3UnaryOperation(sQLite3UnaryOperation_UnaryOperator0,
                 sQLite3Expression_CollateOperation0);
         SQLite3Schema.SQLite3Column.SQLite3CollateSequence sQLite3Schema_SQLite3Column_SQLite3CollateSequence1 = sQLite3UnaryOperation0
@@ -179,8 +179,8 @@ public class SQLite3UnaryOperation_ESTest {
                 sQLite3DataType0, true, sQLite3Schema_SQLite3Column_SQLite3CollateSequence0, true);
         SQLite3Constant.SQLite3IntConstant sQLite3Constant_SQLite3IntConstant0 = new SQLite3Constant.SQLite3IntConstant(
                 1000L);
-        SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = new SQLite3ColumnName(
-                sQLite3Schema_SQLite3Column0, sQLite3Constant_SQLite3IntConstant0);
+        SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = new SQLite3ColumnName(sQLite3Schema_SQLite3Column0,
+                sQLite3Constant_SQLite3IntConstant0);
         byte[] byteArray0 = new byte[6];
         SQLite3Constant.SQLite3BinaryConstant sQLite3Constant_SQLite3BinaryConstant0 = new SQLite3Constant.SQLite3BinaryConstant(
                 byteArray0);
@@ -234,10 +234,9 @@ public class SQLite3UnaryOperation_ESTest {
     @Test
     public void test11() throws Throwable {
         SQLite3Constant sQLite3Constant0 = SQLite3Constant.createNullConstant();
-        SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = SQLite3ColumnName
-                .createDummy("LD");
-        SQLite3BetweenOperation sQLite3Expression_BetweenOperation0 = new SQLite3BetweenOperation(
-                sQLite3Constant0, true, sQLite3Expression_SQLite3ColumnName0, sQLite3Constant0);
+        SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = SQLite3ColumnName.createDummy("LD");
+        SQLite3BetweenOperation sQLite3Expression_BetweenOperation0 = new SQLite3BetweenOperation(sQLite3Constant0,
+                true, sQLite3Expression_SQLite3ColumnName0, sQLite3Constant0);
         SQLite3UnaryOperation.UnaryOperator sQLite3UnaryOperation_UnaryOperator0 = SQLite3UnaryOperation.UnaryOperator.PLUS;
         SQLite3UnaryOperation sQLite3UnaryOperation0 = new SQLite3UnaryOperation(sQLite3UnaryOperation_UnaryOperator0,
                 sQLite3Expression_BetweenOperation0);
@@ -345,10 +344,9 @@ public class SQLite3UnaryOperation_ESTest {
     @Test
     public void test21() throws Throwable {
         SQLite3Constant sQLite3Constant0 = SQLite3Constant.createNullConstant();
-        SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = SQLite3ColumnName
-                .createDummy("LD");
-        SQLite3BetweenOperation sQLite3Expression_BetweenOperation0 = new SQLite3BetweenOperation(
-                sQLite3Constant0, true, sQLite3Expression_SQLite3ColumnName0, sQLite3Constant0);
+        SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = SQLite3ColumnName.createDummy("LD");
+        SQLite3BetweenOperation sQLite3Expression_BetweenOperation0 = new SQLite3BetweenOperation(sQLite3Constant0,
+                true, sQLite3Expression_SQLite3ColumnName0, sQLite3Constant0);
         SQLite3UnaryOperation.UnaryOperator sQLite3UnaryOperation_UnaryOperator0 = SQLite3UnaryOperation.UnaryOperator.PLUS;
         SQLite3UnaryOperation sQLite3UnaryOperation0 = new SQLite3UnaryOperation(sQLite3UnaryOperation_UnaryOperator0,
                 sQLite3Expression_BetweenOperation0);

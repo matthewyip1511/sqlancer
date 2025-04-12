@@ -78,25 +78,25 @@ public class ClickHouseTableReference_ESTest {
         assertFalse(clickHouseSchema_ClickHouseTable1.isView());
     }
 
-//    @Test
-//    public void test05() throws Throwable {
-//        ClickHouseSchema.ClickHouseTable clickHouseSchema_ClickHouseTable0 = mock(
-//                ClickHouseSchema.ClickHouseTable.class, new ViolatedAssumptionAnswer());
-//        ClickHouseSchema.ClickHouseColumn clickHouseSchema_ClickHouseColumn0 = new ClickHouseSchema.ClickHouseColumn(
-//                "nL g3\"rLf>QS4le`{", (ClickHouseSchema.ClickHouseLancerDataType) null, true, true,
-//                clickHouseSchema_ClickHouseTable0);
-//        List<ClickHouseSchema.ClickHouseColumn> list0 = List.of(clickHouseSchema_ClickHouseColumn0,
-//                clickHouseSchema_ClickHouseColumn0, clickHouseSchema_ClickHouseColumn0,
-//                clickHouseSchema_ClickHouseColumn0, clickHouseSchema_ClickHouseColumn0,
-//                clickHouseSchema_ClickHouseColumn0, clickHouseSchema_ClickHouseColumn0);
-//        LinkedList<TableIndex> linkedList0 = new LinkedList<TableIndex>();
-//        ClickHouseSchema.ClickHouseTable clickHouseSchema_ClickHouseTable1 = new ClickHouseSchema.ClickHouseTable(
-//                "nL g3\"rLf>QS4le`{", list0, linkedList0, true);
-//        ClickHouseTableReference clickHouseTableReference0 = new ClickHouseTableReference(
-//                clickHouseSchema_ClickHouseTable1, "nL g3\"rLf>QS4le`{");
-//        List<ClickHouseColumnReference> list1 = clickHouseTableReference0.getColumnReferences();
-//        assertFalse(list1.isEmpty());
-//    }
+    // @Test
+    // public void test05() throws Throwable {
+    // ClickHouseSchema.ClickHouseTable clickHouseSchema_ClickHouseTable0 = mock(
+    // ClickHouseSchema.ClickHouseTable.class, new ViolatedAssumptionAnswer());
+    // ClickHouseSchema.ClickHouseColumn clickHouseSchema_ClickHouseColumn0 = new ClickHouseSchema.ClickHouseColumn(
+    // "nL g3\"rLf>QS4le`{", (ClickHouseSchema.ClickHouseLancerDataType) null, true, true,
+    // clickHouseSchema_ClickHouseTable0);
+    // List<ClickHouseSchema.ClickHouseColumn> list0 = List.of(clickHouseSchema_ClickHouseColumn0,
+    // clickHouseSchema_ClickHouseColumn0, clickHouseSchema_ClickHouseColumn0,
+    // clickHouseSchema_ClickHouseColumn0, clickHouseSchema_ClickHouseColumn0,
+    // clickHouseSchema_ClickHouseColumn0, clickHouseSchema_ClickHouseColumn0);
+    // LinkedList<TableIndex> linkedList0 = new LinkedList<TableIndex>();
+    // ClickHouseSchema.ClickHouseTable clickHouseSchema_ClickHouseTable1 = new ClickHouseSchema.ClickHouseTable(
+    // "nL g3\"rLf>QS4le`{", list0, linkedList0, true);
+    // ClickHouseTableReference clickHouseTableReference0 = new ClickHouseTableReference(
+    // clickHouseSchema_ClickHouseTable1, "nL g3\"rLf>QS4le`{");
+    // List<ClickHouseColumnReference> list1 = clickHouseTableReference0.getColumnReferences();
+    // assertFalse(list1.isEmpty());
+    // }
 
     @Test
     public void test06() throws Throwable {

@@ -583,7 +583,8 @@ public class CockroachDBToStringVisitor_ESTest {
                 .createFloatConstant(0.0);
         CockroachDBJoin.JoinType cockroachDBJoin_JoinType0 = CockroachDBJoin.JoinType.LEFT;
         CockroachDBJoin cockroachDBJoin0 = new CockroachDBJoin(cockroachDBConstant_CockroachDBDoubleConstant0,
-                cockroachDBConstant_CockroachDBDoubleConstant0, cockroachDBConstant_CockroachDBDoubleConstant0, cockroachDBJoin_JoinType0);
+                cockroachDBConstant_CockroachDBDoubleConstant0, cockroachDBConstant_CockroachDBDoubleConstant0,
+                cockroachDBJoin_JoinType0);
         cockroachDBToStringVisitor0.visit(cockroachDBJoin0);
         assertEquals(CockroachDBJoin.JoinType.LEFT, cockroachDBJoin0.getJoinType());
     }

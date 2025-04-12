@@ -42,22 +42,22 @@ public class CnosDBLoggableFactory_ESTest {
         }
     }
 
-//    @Test
-//    public void test2() throws Throwable {
-//        CnosDBLoggableFactory cnosDBLoggableFactory0 = new CnosDBLoggableFactory();
-//        MockThrowable mockThrowable0 = new MockThrowable((Throwable) null);
-//        mockThrowable0.setOriginForDelegate((StackTraceElement) null);
-//        // Undeclared exception!
-//        try {
-//            cnosDBLoggableFactory0.convertStacktraceToLoggable(mockThrowable0);
-//            fail("Expecting exception: NullPointerException");
-//
-//        } catch (NullPointerException e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//        }
-//    }
+    // @Test
+    // public void test2() throws Throwable {
+    // CnosDBLoggableFactory cnosDBLoggableFactory0 = new CnosDBLoggableFactory();
+    // MockThrowable mockThrowable0 = new MockThrowable((Throwable) null);
+    // mockThrowable0.setOriginForDelegate((StackTraceElement) null);
+    // // Undeclared exception!
+    // try {
+    // cnosDBLoggableFactory0.convertStacktraceToLoggable(mockThrowable0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // }
+    // }
 
     @Test
     public void test3() throws Throwable {

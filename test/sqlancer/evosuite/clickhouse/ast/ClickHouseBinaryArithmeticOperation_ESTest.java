@@ -122,8 +122,7 @@ public class ClickHouseBinaryArithmeticOperation_ESTest {
     public void test9() throws Throwable {
         ClickHouseBinaryArithmeticOperation.ClickHouseBinaryArithmeticOperator clickHouseBinaryArithmeticOperation_ClickHouseBinaryArithmeticOperator0 = ClickHouseBinaryArithmeticOperation.ClickHouseBinaryArithmeticOperator.MINUS;
         ClickHouseInt32Constant clickHouseInt32Constant0 = new ClickHouseInt32Constant(0L);
-        ClickHouseExist clickHouseExpression_ClickHouseExist0 = new ClickHouseExist(
-                clickHouseInt32Constant0);
+        ClickHouseExist clickHouseExpression_ClickHouseExist0 = new ClickHouseExist(clickHouseInt32Constant0);
         ClickHouseSelect clickHouseSelect0 = new ClickHouseSelect();
         ClickHouseBinaryArithmeticOperation clickHouseBinaryArithmeticOperation0 = ClickHouseBinaryArithmeticOperation
                 .create(clickHouseExpression_ClickHouseExist0, clickHouseSelect0,

@@ -29,7 +29,7 @@ public class DataFusionBaseExpr implements Operator {
 
     // Primary constructor
     public DataFusionBaseExpr(String name, int nArgs, DataFusionBaseExprCategory exprCategory,
-                              List<DataFusionDataType> possibleReturnTypes, List<ArgumentType> argTypes, boolean isVariadic) {
+            List<DataFusionDataType> possibleReturnTypes, List<ArgumentType> argTypes, boolean isVariadic) {
         this.name = name;
         this.nArgs = nArgs;
         this.exprType = exprCategory;
@@ -40,7 +40,7 @@ public class DataFusionBaseExpr implements Operator {
 
     // Overloaded constructor assuming 'isVariadic' is false
     public DataFusionBaseExpr(String name, int nArgs, DataFusionBaseExprCategory exprCategory,
-                              List<DataFusionDataType> possibleReturnTypes, List<ArgumentType> argTypes) {
+            List<DataFusionDataType> possibleReturnTypes, List<ArgumentType> argTypes) {
         this(name, nArgs, exprCategory, possibleReturnTypes, argTypes, false);
     }
 

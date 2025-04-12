@@ -100,21 +100,22 @@ public class PostgresExpectedValueVisitor_ESTest {
                 postgresExpectedValueVisitor0.get());
     }
 
-//    @Test
-//    public void test05() throws Throwable {
-//        PostgresExpectedValueVisitor postgresExpectedValueVisitor0 = new PostgresExpectedValueVisitor();
-//        LinkedList<PostgresSchema.PostgresColumn> linkedList0 = new LinkedList<PostgresSchema.PostgresColumn>();
-//        PostgresSchema.PostgresIndex[] postgresSchema_PostgresIndexArray0 = new PostgresSchema.PostgresIndex[2];
-//        List<PostgresSchema.PostgresIndex> list0 = Randomly.subset(postgresSchema_PostgresIndexArray0);
-//        PostgresSchema.PostgresTable.TableType postgresSchema_PostgresTable_TableType0 = PostgresSchema.PostgresTable.TableType.TEMPORARY;
-//        List<PostgresSchema.PostgresStatisticsObject> list1 = List.of();
-//        PostgresSchema.PostgresTable postgresSchema_PostgresTable0 = new PostgresSchema.PostgresTable("MQ4[",
-//                linkedList0, list0, postgresSchema_PostgresTable_TableType0, list1, false, false);
-//        PostgresSelect.PostgresFromTable postgresSelect_PostgresFromTable0 = new PostgresSelect.PostgresFromTable(
-//                postgresSchema_PostgresTable0, true);
-//        postgresExpectedValueVisitor0.visit(postgresSelect_PostgresFromTable0);
-//        assertEquals("ONLY MQ4[ -- null\n", postgresExpectedValueVisitor0.get());
-//    }
+    // @Test
+    // public void test05() throws Throwable {
+    // PostgresExpectedValueVisitor postgresExpectedValueVisitor0 = new PostgresExpectedValueVisitor();
+    // LinkedList<PostgresSchema.PostgresColumn> linkedList0 = new LinkedList<PostgresSchema.PostgresColumn>();
+    // PostgresSchema.PostgresIndex[] postgresSchema_PostgresIndexArray0 = new PostgresSchema.PostgresIndex[2];
+    // List<PostgresSchema.PostgresIndex> list0 = Randomly.subset(postgresSchema_PostgresIndexArray0);
+    // PostgresSchema.PostgresTable.TableType postgresSchema_PostgresTable_TableType0 =
+    // PostgresSchema.PostgresTable.TableType.TEMPORARY;
+    // List<PostgresSchema.PostgresStatisticsObject> list1 = List.of();
+    // PostgresSchema.PostgresTable postgresSchema_PostgresTable0 = new PostgresSchema.PostgresTable("MQ4[",
+    // linkedList0, list0, postgresSchema_PostgresTable_TableType0, list1, false, false);
+    // PostgresSelect.PostgresFromTable postgresSelect_PostgresFromTable0 = new PostgresSelect.PostgresFromTable(
+    // postgresSchema_PostgresTable0, true);
+    // postgresExpectedValueVisitor0.visit(postgresSelect_PostgresFromTable0);
+    // assertEquals("ONLY MQ4[ -- null\n", postgresExpectedValueVisitor0.get());
+    // }
 
     @Test
     public void test06() throws Throwable {

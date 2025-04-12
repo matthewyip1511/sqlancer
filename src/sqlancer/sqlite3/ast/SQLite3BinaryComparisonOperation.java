@@ -58,7 +58,7 @@ public class SQLite3BinaryComparisonOperation implements SQLite3Expression, Bina
         SMALLER("<") {
             @Override
             public SQLite3Constant apply(SQLite3Constant left, SQLite3Constant right,
-                                         SQLite3Schema.SQLite3Column.SQLite3CollateSequence collate) {
+                    SQLite3Schema.SQLite3Column.SQLite3CollateSequence collate) {
                 return left.applyLess(right, collate);
             }
 
@@ -67,7 +67,7 @@ public class SQLite3BinaryComparisonOperation implements SQLite3Expression, Bina
 
             @Override
             public SQLite3Constant apply(SQLite3Constant left, SQLite3Constant right,
-                                         SQLite3Schema.SQLite3Column.SQLite3CollateSequence collate) {
+                    SQLite3Schema.SQLite3Column.SQLite3CollateSequence collate) {
                 SQLite3Constant lessThan = left.applyLess(right, collate);
                 if (lessThan == null) {
                     return null;
@@ -83,7 +83,7 @@ public class SQLite3BinaryComparisonOperation implements SQLite3Expression, Bina
         GREATER(">") {
             @Override
             public SQLite3Constant apply(SQLite3Constant left, SQLite3Constant right,
-                                         SQLite3Schema.SQLite3Column.SQLite3CollateSequence collate) {
+                    SQLite3Schema.SQLite3Column.SQLite3CollateSequence collate) {
                 SQLite3Constant equals = left.applyEquals(right, collate);
                 if (equals == null) {
                     return null;
@@ -104,7 +104,7 @@ public class SQLite3BinaryComparisonOperation implements SQLite3Expression, Bina
 
             @Override
             public SQLite3Constant apply(SQLite3Constant left, SQLite3Constant right,
-                                         SQLite3Schema.SQLite3Column.SQLite3CollateSequence collate) {
+                    SQLite3Schema.SQLite3Column.SQLite3CollateSequence collate) {
                 SQLite3Constant equals = left.applyEquals(right, collate);
                 if (equals == null) {
                     return null;
@@ -124,7 +124,7 @@ public class SQLite3BinaryComparisonOperation implements SQLite3Expression, Bina
         EQUALS("=", "==") {
             @Override
             public SQLite3Constant apply(SQLite3Constant left, SQLite3Constant right,
-                                         SQLite3Schema.SQLite3Column.SQLite3CollateSequence collate) {
+                    SQLite3Schema.SQLite3Column.SQLite3CollateSequence collate) {
                 return left.applyEquals(right, collate);
             }
 
@@ -132,7 +132,7 @@ public class SQLite3BinaryComparisonOperation implements SQLite3Expression, Bina
         NOT_EQUALS("!=", "<>") {
             @Override
             public SQLite3Constant apply(SQLite3Constant left, SQLite3Constant right,
-                                         SQLite3Schema.SQLite3Column.SQLite3CollateSequence collate) {
+                    SQLite3Schema.SQLite3Column.SQLite3CollateSequence collate) {
                 if (left == null || right == null) {
                     return null;
                 }
@@ -152,7 +152,7 @@ public class SQLite3BinaryComparisonOperation implements SQLite3Expression, Bina
         IS("IS") {
             @Override
             public SQLite3Constant apply(SQLite3Constant left, SQLite3Constant right,
-                                         SQLite3Schema.SQLite3Column.SQLite3CollateSequence collate) {
+                    SQLite3Schema.SQLite3Column.SQLite3CollateSequence collate) {
                 if (left == null || right == null) {
                     return null;
                 } else if (left.isNull()) {
@@ -168,7 +168,7 @@ public class SQLite3BinaryComparisonOperation implements SQLite3Expression, Bina
         IS_NOT("IS NOT") {
             @Override
             public SQLite3Constant apply(SQLite3Constant left, SQLite3Constant right,
-                                         SQLite3Schema.SQLite3Column.SQLite3CollateSequence collate) {
+                    SQLite3Schema.SQLite3Column.SQLite3CollateSequence collate) {
                 if (left == null || right == null) {
                     return null;
                 } else if (left.isNull()) {
@@ -194,7 +194,7 @@ public class SQLite3BinaryComparisonOperation implements SQLite3Expression, Bina
 
             @Override
             public SQLite3Constant apply(SQLite3Constant left, SQLite3Constant right,
-                                         SQLite3Schema.SQLite3Column.SQLite3CollateSequence collate) {
+                    SQLite3Schema.SQLite3Column.SQLite3CollateSequence collate) {
                 if (left == null || right == null) {
                     return null;
                 }
@@ -220,7 +220,7 @@ public class SQLite3BinaryComparisonOperation implements SQLite3Expression, Bina
 
             @Override
             public SQLite3Constant apply(SQLite3Constant left, SQLite3Constant right,
-                                         SQLite3Schema.SQLite3Column.SQLite3CollateSequence collate) {
+                    SQLite3Schema.SQLite3Column.SQLite3CollateSequence collate) {
                 if (left == null || right == null) {
                     return null;
                 }
@@ -328,7 +328,7 @@ public class SQLite3BinaryComparisonOperation implements SQLite3Expression, Bina
         private final String[] textRepresentation;
 
         public SQLite3Constant apply(SQLite3Constant left, SQLite3Constant right,
-                                     SQLite3Schema.SQLite3Column.SQLite3CollateSequence collate) {
+                SQLite3Schema.SQLite3Column.SQLite3CollateSequence collate) {
             return null;
         }
 

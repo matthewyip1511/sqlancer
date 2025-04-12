@@ -66,8 +66,7 @@ public class PostgresTLPBase_ESTest {
     public void test2() throws Throwable {
         // Undeclared exception!
         try {
-            createSubquery((PostgresGlobalState) null, "$:9ZF')[`0kUL",
-                    (PostgresSchema.PostgresTables) null);
+            createSubquery((PostgresGlobalState) null, "$:9ZF')[`0kUL", (PostgresSchema.PostgresTables) null);
             fail("Expecting exception: NullPointerException");
 
         } catch (NullPointerException e) {

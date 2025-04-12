@@ -392,13 +392,13 @@ public class MaterializeCommon_ESTest {
         MaterializeCommon.addCommonFetchErrors(expectedErrors0);
     }
 
-//    @Test
-//    public void test27() throws Throwable {
-//        List<String> list0 = MaterializeCommon.getCommonRangeExpressionErrors();
-//        LinkedList<Pattern> linkedList0 = new LinkedList<Pattern>();
-//        ExpectedErrors expectedErrors0 = new ExpectedErrors(list0, linkedList0);
-//        MaterializeCommon.addCommonExpressionErrors(expectedErrors0);
-//    }
+    // @Test
+    // public void test27() throws Throwable {
+    // List<String> list0 = MaterializeCommon.getCommonRangeExpressionErrors();
+    // LinkedList<Pattern> linkedList0 = new LinkedList<Pattern>();
+    // ExpectedErrors expectedErrors0 = new ExpectedErrors(list0, linkedList0);
+    // MaterializeCommon.addCommonExpressionErrors(expectedErrors0);
+    // }
 
     @Test
     public void test28() throws Throwable {

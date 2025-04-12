@@ -232,8 +232,8 @@ public class ToStringVisitor_ESTest {
         ClickHouseToStringVisitor clickHouseToStringVisitor0 = new ClickHouseToStringVisitor();
         BigInteger bigInteger0 = BigInteger.TEN;
         ClickHouseUInt256Constant clickHouseUInt256Constant0 = new ClickHouseUInt256Constant(bigInteger0);
-        ClickHousePostfixText clickHouseExpression_ClickHousePostfixText0 = new ClickHousePostfixText(
-                "varbit_ops", clickHouseUInt256Constant0);
+        ClickHousePostfixText clickHouseExpression_ClickHousePostfixText0 = new ClickHousePostfixText("varbit_ops",
+                clickHouseUInt256Constant0);
         ClickHouseBinaryLogicalOperation.ClickHouseBinaryLogicalOperator clickHouseBinaryLogicalOperation_ClickHouseBinaryLogicalOperator0 = ClickHouseBinaryLogicalOperation.ClickHouseBinaryLogicalOperator.OR;
         ClickHouseBinaryLogicalOperation clickHouseBinaryLogicalOperation0 = new ClickHouseBinaryLogicalOperation(
                 clickHouseExpression_ClickHousePostfixText0, clickHouseExpression_ClickHousePostfixText0,

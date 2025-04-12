@@ -70,22 +70,22 @@ public class SQLLoggableFactory_ESTest {
         }
     }
 
-//    @Test
-//    public void test05() throws Throwable {
-//        SQLLoggableFactory sQLLoggableFactory0 = new SQLLoggableFactory();
-//        MockThrowable mockThrowable0 = new MockThrowable();
-//        mockThrowable0.setOriginForDelegate((StackTraceElement) null);
-//        // Undeclared exception!
-//        try {
-//            sQLLoggableFactory0.convertStacktraceToLoggable(mockThrowable0);
-//            fail("Expecting exception: NullPointerException");
-//
-//        } catch (NullPointerException e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//        }
-//    }
+    // @Test
+    // public void test05() throws Throwable {
+    // SQLLoggableFactory sQLLoggableFactory0 = new SQLLoggableFactory();
+    // MockThrowable mockThrowable0 = new MockThrowable();
+    // mockThrowable0.setOriginForDelegate((StackTraceElement) null);
+    // // Undeclared exception!
+    // try {
+    // sQLLoggableFactory0.convertStacktraceToLoggable(mockThrowable0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // }
+    // }
 
     @Test
     public void test06() throws Throwable {
@@ -126,14 +126,15 @@ public class SQLLoggableFactory_ESTest {
                 sQLQueryAdapter1.getLogString());
     }
 
-//    @Test
-//    public void test11() throws Throwable {
-//        SQLLoggableFactory sQLLoggableFactory0 = new SQLLoggableFactory();
-//        MockException mockException0 = new MockException("sqlancer.common.log.SQLLoggableFactory");
-//        Loggable loggable0 = sQLLoggableFactory0.convertStacktraceToLoggable(mockException0);
-//        // // Unstable assertion:
-//        // assertEquals("--jdk.internal.reflect.GeneratedConstructorAccessor44.newInstance(Unknown
-//        // Source)\n--<evosuite>.<evosuite>(<evosuite>)\n--<evosuite>.<evosuite>(<evosuite>)\n--<evosuite>.<evosuite>(<evosuite>)\n--<evosuite>.<evosuite>(<evosuite>)\n--<evosuite>.<evosuite>(<evosuite>)\n--",
-//        // loggable0.getLogString());
-//    }
+    // @Test
+    // public void test11() throws Throwable {
+    // SQLLoggableFactory sQLLoggableFactory0 = new SQLLoggableFactory();
+    // MockException mockException0 = new MockException("sqlancer.common.log.SQLLoggableFactory");
+    // Loggable loggable0 = sQLLoggableFactory0.convertStacktraceToLoggable(mockException0);
+    // // // Unstable assertion:
+    // // assertEquals("--jdk.internal.reflect.GeneratedConstructorAccessor44.newInstance(Unknown
+    // //
+    // Source)\n--<evosuite>.<evosuite>(<evosuite>)\n--<evosuite>.<evosuite>(<evosuite>)\n--<evosuite>.<evosuite>(<evosuite>)\n--<evosuite>.<evosuite>(<evosuite>)\n--<evosuite>.<evosuite>(<evosuite>)\n--",
+    // // loggable0.getLogString());
+    // }
 }

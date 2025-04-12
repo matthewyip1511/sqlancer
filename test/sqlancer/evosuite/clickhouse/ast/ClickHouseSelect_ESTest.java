@@ -75,9 +75,9 @@ public class ClickHouseSelect_ESTest {
                 (ClickHouseSchema.ClickHouseTable) null, (String) null);
         ClickHouseJoinOnClause clickHouseExpression_ClickHouseJoinOnClause0 = new ClickHouseJoinOnClause(
                 clickHouseSelect0, clickHouseTableReference0);
-        ClickHouseJoin clickHouseExpression_ClickHouseJoin0 = new ClickHouseJoin(
-                (ClickHouseTableReference) null, (ClickHouseTableReference) null,
-                clickHouseExpression_ClickHouseJoin_JoinType0, clickHouseExpression_ClickHouseJoinOnClause0);
+        ClickHouseJoin clickHouseExpression_ClickHouseJoin0 = new ClickHouseJoin((ClickHouseTableReference) null,
+                (ClickHouseTableReference) null, clickHouseExpression_ClickHouseJoin_JoinType0,
+                clickHouseExpression_ClickHouseJoinOnClause0);
         linkedList0.add(clickHouseExpression_ClickHouseJoin0);
         clickHouseSelect0.setJoinClauses(linkedList0);
         List<JoinBase<ClickHouseExpression>> list0 = clickHouseSelect0.getJoinClauses();
@@ -88,8 +88,8 @@ public class ClickHouseSelect_ESTest {
     public void test05() throws Throwable {
         ClickHouseSelect clickHouseSelect0 = new ClickHouseSelect();
         ClickHouseInt32Constant clickHouseInt32Constant0 = new ClickHouseInt32Constant(0L);
-        ClickHousePostfixText clickHouseExpression_ClickHousePostfixText0 = new ClickHousePostfixText(
-                "Cng*')OvI9h,", clickHouseInt32Constant0);
+        ClickHousePostfixText clickHouseExpression_ClickHousePostfixText0 = new ClickHousePostfixText("Cng*')OvI9h,",
+                clickHouseInt32Constant0);
         clickHouseSelect0.setHavingClause((ClickHouseExpression) clickHouseExpression_ClickHousePostfixText0);
         clickHouseSelect0.getHavingClause();
     }

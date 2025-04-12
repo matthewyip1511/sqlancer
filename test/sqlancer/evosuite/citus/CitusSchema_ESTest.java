@@ -82,20 +82,18 @@ public class CitusSchema_ESTest {
      * ViolatedAssumptionAnswer()); doReturn(false).when(resultSet0).next(); ResultSet resultSet1 =
      * mock(ResultSet.class, new ViolatedAssumptionAnswer()); doReturn((-1982292595),
      * 34).when(resultSet1).getInt(anyString()); doReturn("i0", "3FG3!Z52Cb", "Q}8G^h?~g^qR",
-     * "i0").when(resultSet1).getString(anyString());
-     *  doReturn(true, true, false).when(resultSet1).next();
-     *  doReturn(true, true).when(resultSet1).wasNull();
-     *  PreparedStatement preparedStatement0 = mock(PreparedStatement.class, new ViolatedAssumptionAnswer());
-     *  doReturn(resultSet0, resultSet1).when(preparedStatement0).executeQuery(anyString());
-     *  Connection connection0 = mock(Connection.class, new ViolatedAssumptionAnswer());
-     *  doReturn(preparedStatement0).when(connection0).prepareStatement(anyString());
-     *  SQLConnection sQLConnection0 = new SQLConnection(connection0);
-     *  Statement statement0 = sQLConnection0.prepareStatement("i0");
-     *  Connection connection1 = mock(Connection.class, new ViolatedAssumptionAnswer());
-     *  doReturn(statement0, statement0).when(connection1).createStatement();
-     *  SQLConnection sQLConnection1 = new SQLConnection(connection1);
-     *  CitusSchema citusSchema0 = CitusSchema.fromConnection(sQLConnection1, "mpF8f%3lA}1>`)Co");
-     *  assertEquals("mpF8f%3lA}1>`)Co", citusSchema0.getDatabaseName()); }*/
+     * "i0").when(resultSet1).getString(anyString()); doReturn(true, true, false).when(resultSet1).next();
+     * doReturn(true, true).when(resultSet1).wasNull(); PreparedStatement preparedStatement0 =
+     * mock(PreparedStatement.class, new ViolatedAssumptionAnswer()); doReturn(resultSet0,
+     * resultSet1).when(preparedStatement0).executeQuery(anyString()); Connection connection0 = mock(Connection.class,
+     * new ViolatedAssumptionAnswer()); doReturn(preparedStatement0).when(connection0).prepareStatement(anyString());
+     * SQLConnection sQLConnection0 = new SQLConnection(connection0); Statement statement0 =
+     * sQLConnection0.prepareStatement("i0"); Connection connection1 = mock(Connection.class, new
+     * ViolatedAssumptionAnswer()); doReturn(statement0, statement0).when(connection1).createStatement(); SQLConnection
+     * sQLConnection1 = new SQLConnection(connection1); CitusSchema citusSchema0 =
+     * CitusSchema.fromConnection(sQLConnection1, "mpF8f%3lA}1>`)Co"); assertEquals("mpF8f%3lA}1>`)Co",
+     * citusSchema0.getDatabaseName()); }
+     */
 
     @Test
     public void test4() throws Throwable {
@@ -104,9 +102,8 @@ public class CitusSchema_ESTest {
         PostgresSchema.PostgresTable.TableType postgresSchema_PostgresTable_TableType0 = PostgresSchema.PostgresTable.TableType.STANDARD;
         Integer integer0 = 19;
         CitusSchema.CitusTable citusSchema_CitusTable0 = new CitusSchema.CitusTable("", linkedList0,
-                (List<PostgresSchema.PostgresIndex>) null, postgresSchema_PostgresTable_TableType0,
-                null, true, true, postgresSchema_PostgresColumn0,
-                integer0);
+                (List<PostgresSchema.PostgresIndex>) null, postgresSchema_PostgresTable_TableType0, null, true, true,
+                postgresSchema_PostgresColumn0, integer0);
         citusSchema_CitusTable0.setDistributionColumn(postgresSchema_PostgresColumn0);
         assertTrue(citusSchema_CitusTable0.isView());
     }
@@ -118,9 +115,8 @@ public class CitusSchema_ESTest {
         PostgresSchema.PostgresTable.TableType postgresSchema_PostgresTable_TableType0 = PostgresSchema.PostgresTable.TableType.STANDARD;
         Integer integer0 = 19;
         CitusSchema.CitusTable citusSchema_CitusTable0 = new CitusSchema.CitusTable("", linkedList0,
-                (List<PostgresSchema.PostgresIndex>) null, postgresSchema_PostgresTable_TableType0,
-                null, true, true, postgresSchema_PostgresColumn0,
-                integer0);
+                (List<PostgresSchema.PostgresIndex>) null, postgresSchema_PostgresTable_TableType0, null, true, true,
+                postgresSchema_PostgresColumn0, integer0);
         Integer integer1 = citusSchema_CitusTable0.getColocationId();
         assertEquals(19, (int) integer1);
     }
@@ -150,9 +146,8 @@ public class CitusSchema_ESTest {
         PostgresSchema.PostgresTable.TableType postgresSchema_PostgresTable_TableType0 = PostgresSchema.PostgresTable.TableType.STANDARD;
         Integer integer0 = 19;
         CitusSchema.CitusTable citusSchema_CitusTable0 = new CitusSchema.CitusTable("", linkedList0,
-                (List<PostgresSchema.PostgresIndex>) null, postgresSchema_PostgresTable_TableType0,
-                 null, true, true, postgresSchema_PostgresColumn0,
-                integer0);
+                (List<PostgresSchema.PostgresIndex>) null, postgresSchema_PostgresTable_TableType0, null, true, true,
+                postgresSchema_PostgresColumn0, integer0);
         citusSchema_CitusTable0.setColocationId(integer0);
         assertEquals(PostgresSchema.PostgresTable.TableType.STANDARD, citusSchema_CitusTable0.getTableType());
     }
@@ -172,21 +167,13 @@ public class CitusSchema_ESTest {
      * sQLConnection0.prepareStatement("i0"); Connection connection1 = mock(Connection.class, new
      * ViolatedAssumptionAnswer()); doReturn(statement0, statement0, statement0).when(connection1).createStatement();
      * SQLConnection sQLConnection1 = new SQLConnection(connection1); CitusSchema.fromConnection(sQLConnection1,
-     * "mpF8f%3lA}1>`)Co");
-    // Undeclared exception!
-        try
-        {
-            CitusSchema.fromConnection(sQLConnection1, (String) null);
-            fail("Expecting exception: NullPointerException");
-
-        }catch(NullPointerException e)
-
-        {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.postgres.PostgresSchema", e);
-        }
-    }*/
+     * "mpF8f%3lA}1>`)Co"); // Undeclared exception! try { CitusSchema.fromConnection(sQLConnection1, (String) null);
+     * fail("Expecting exception: NullPointerException");
+     *
+     * }catch(NullPointerException e)
+     *
+     * { // // no message in exception (getMessage() returned null) //
+     * verifyException("sqlancer.postgres.PostgresSchema", e); } }
+     */
 
 }

@@ -54,7 +54,7 @@ public class PostgresTLPBase extends TernaryLogicPartitioningOracleBase<Postgres
     }
 
     public List<PostgresJoin> getJoinStatements(PostgresGlobalState globalState, List<PostgresColumn> columns,
-                                                List<PostgresTable> tables) {
+            List<PostgresTable> tables) {
         List<PostgresJoin> joinStatements = new ArrayList<>();
         PostgresExpressionGenerator gen = new PostgresExpressionGenerator(globalState).setColumns(columns);
         for (int i = 1; i < tables.size(); i++) {
