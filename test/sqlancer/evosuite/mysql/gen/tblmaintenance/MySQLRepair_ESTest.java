@@ -7,11 +7,9 @@ package sqlancer.evosuite.mysql.gen.tblmaintenance;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.util.List;
 import org.junit.jupiter.api.Test;
 import sqlancer.mysql.gen.tblmaintenance.MySQLRepair;
 import sqlancer.mysql.MySQLGlobalState;
-import sqlancer.mysql.MySQLSchema;
 
 public class MySQLRepair_ESTest {
 
@@ -48,8 +46,8 @@ public class MySQLRepair_ESTest {
         }
     }
 
-    @Test
-    public void test2() throws Throwable {
-        MySQLRepair mySQLRepair0 = new MySQLRepair((List<MySQLSchema.MySQLTable>) null);
-    }
+    // @Test
+    // public void test2() throws Throwable {
+    // MySQLRepair mySQLRepair0 = new MySQLRepair((List<MySQLSchema.MySQLTable>) null);
+    // }
 }

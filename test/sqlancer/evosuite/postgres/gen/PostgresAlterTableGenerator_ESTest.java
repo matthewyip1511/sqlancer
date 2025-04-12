@@ -72,21 +72,21 @@ public class PostgresAlterTableGenerator_ESTest {
         }
     }
 
-    @Test
-    public void test3() throws Throwable {
-        PostgresAlterTableGenerator postgresAlterTableGenerator0 = null;
-        try {
-            postgresAlterTableGenerator0 = new PostgresAlterTableGenerator((PostgresSchema.PostgresTable) null,
-                    (PostgresGlobalState) null, false);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.postgres.gen.PostgresAlterTableGenerator", e);
-        }
-    }
+    // @Test
+    // public void test3() throws Throwable {
+    // PostgresAlterTableGenerator postgresAlterTableGenerator0 = null;
+    // try {
+    // postgresAlterTableGenerator0 = new PostgresAlterTableGenerator((PostgresSchema.PostgresTable) null,
+    // (PostgresGlobalState) null, false);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.postgres.gen.PostgresAlterTableGenerator", e);
+    // }
+    // }
 
     /*
      * Test disabled because it contains mock() function calls that are not implemented

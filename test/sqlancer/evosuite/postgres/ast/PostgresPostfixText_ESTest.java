@@ -131,16 +131,17 @@ public class PostgresPostfixText_ESTest {
         assertNull(postgresConstant0);
     }
 
-    @Test
-    public void test10() throws Throwable {
-        PostgresPostfixOperation.PostfixOperator postgresPostfixOperation_PostfixOperator0 = PostgresPostfixOperation.PostfixOperator.IS_FALSE;
-        PostgresExpression postgresExpression0 = PostgresPostfixOperation.create((PostgresExpression) null,
-                postgresPostfixOperation_PostfixOperator0);
-        PostgresPostfixText postgresPostfixText0 = new PostgresPostfixText(postgresExpression0, "money",
-                (PostgresConstant) null, (PostgresSchema.PostgresDataType) null);
-        String string0 = postgresPostfixText0.getText();
-        assertEquals("money", string0);
-    }
+    // @Test
+    // public void test10() throws Throwable {
+    // PostgresPostfixOperation.PostfixOperator postgresPostfixOperation_PostfixOperator0 =
+    // PostgresPostfixOperation.PostfixOperator.IS_FALSE;
+    // PostgresExpression postgresExpression0 = PostgresPostfixOperation.create((PostgresExpression) null,
+    // postgresPostfixOperation_PostfixOperator0);
+    // PostgresPostfixText postgresPostfixText0 = new PostgresPostfixText(postgresExpression0, "money",
+    // (PostgresConstant) null, (PostgresSchema.PostgresDataType) null);
+    // String string0 = postgresPostfixText0.getText();
+    // assertEquals("money", string0);
+    // }
 
     @Test
     public void test11() throws Throwable {

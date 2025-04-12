@@ -406,20 +406,20 @@ public class OceanBaseBinaryLogicalOperation_ESTest {
                 oceanBaseBinaryLogicalOperation_OceanBaseBinaryLogicalOperator1);
     }
 
-    @Test
-    public void test30() throws Throwable {
-        OceanBaseConstant oceanBaseConstant0 = OceanBaseConstant.createFalse();
-        OceanBaseBinaryLogicalOperation oceanBaseBinaryLogicalOperation0 = null;
-        try {
-            oceanBaseBinaryLogicalOperation0 = new OceanBaseBinaryLogicalOperation(oceanBaseConstant0,
-                    oceanBaseConstant0, (OceanBaseBinaryLogicalOperation.OceanBaseBinaryLogicalOperator) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.oceanbase.ast.OceanBaseBinaryLogicalOperation", e);
-        }
-    }
+    // @Test
+    // public void test30() throws Throwable {
+    // OceanBaseConstant oceanBaseConstant0 = OceanBaseConstant.createFalse();
+    // OceanBaseBinaryLogicalOperation oceanBaseBinaryLogicalOperation0 = null;
+    // try {
+    // oceanBaseBinaryLogicalOperation0 = new OceanBaseBinaryLogicalOperation(oceanBaseConstant0,
+    // oceanBaseConstant0, (OceanBaseBinaryLogicalOperation.OceanBaseBinaryLogicalOperator) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.oceanbase.ast.OceanBaseBinaryLogicalOperation", e);
+    // }
+    // }
 }

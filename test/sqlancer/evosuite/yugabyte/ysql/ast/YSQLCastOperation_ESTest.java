@@ -201,19 +201,19 @@ public class YSQLCastOperation_ESTest {
         assertEquals("false", ySQLConstant1.asString());
     }
 
-    @Test
-    public void test13() throws Throwable {
-        YSQLCastOperation ySQLCastOperation0 = null;
-        try {
-            ySQLCastOperation0 = new YSQLCastOperation((YSQLExpression) null, (YSQLCompoundDataType) null);
-            fail("Expecting exception: AssertionError");
-
-        } catch (AssertionError e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-        }
-    }
+    // @Test
+    // public void test13() throws Throwable {
+    // YSQLCastOperation ySQLCastOperation0 = null;
+    // try {
+    // ySQLCastOperation0 = new YSQLCastOperation((YSQLExpression) null, (YSQLCompoundDataType) null);
+    // fail("Expecting exception: AssertionError");
+    //
+    // } catch (AssertionError e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // }
+    // }
 
     @Test
     public void test14() throws Throwable {

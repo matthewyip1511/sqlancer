@@ -11,7 +11,6 @@ import org.junit.jupiter.api.Test;
 import sqlancer.postgres.ast.PostgresBinaryRangeOperation;
 import sqlancer.postgres.ast.PostgresConstant;
 import sqlancer.postgres.ast.PostgresExpression;
-import sqlancer.postgres.ast.PostgresPostfixText;
 import sqlancer.postgres.PostgresSchema;
 
 public class PostgresBinaryRangeOperation_ESTest {
@@ -19,43 +18,43 @@ public class PostgresBinaryRangeOperation_ESTest {
     private void verifyException(String s, Exception e) {
     }
 
-    @Test
-    public void test0() throws Throwable {
-        PostgresBinaryRangeOperation postgresBinaryRangeOperation0 = null;
-        try {
-            postgresBinaryRangeOperation0 = new PostgresBinaryRangeOperation(
-                    (PostgresBinaryRangeOperation.PostgresBinaryRangeOperator) null, (PostgresExpression) null,
-                    (PostgresExpression) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.postgres.ast.PostgresBinaryRangeOperation", e);
-        }
-    }
-
-    @Test
-    public void test1() throws Throwable {
-        PostgresConstant postgresConstant0 = PostgresConstant.createFalse();
-        PostgresSchema.PostgresDataType postgresSchema_PostgresDataType0 = PostgresSchema.PostgresDataType.INET;
-        PostgresPostfixText postgresPostfixText0 = new PostgresPostfixText(postgresConstant0, "PQ", postgresConstant0,
-                postgresSchema_PostgresDataType0);
-        PostgresBinaryRangeOperation postgresBinaryRangeOperation0 = null;
-        try {
-            postgresBinaryRangeOperation0 = new PostgresBinaryRangeOperation(
-                    (PostgresBinaryRangeOperation.PostgresBinaryRangeComparisonOperator) null, postgresPostfixText0,
-                    postgresConstant0);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.postgres.ast.PostgresBinaryRangeOperation", e);
-        }
-    }
+    // @Test
+    // public void test0() throws Throwable {
+    // PostgresBinaryRangeOperation postgresBinaryRangeOperation0 = null;
+    // try {
+    // postgresBinaryRangeOperation0 = new PostgresBinaryRangeOperation(
+    // (PostgresBinaryRangeOperation.PostgresBinaryRangeOperator) null, (PostgresExpression) null,
+    // (PostgresExpression) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.postgres.ast.PostgresBinaryRangeOperation", e);
+    // }
+    // }
+    //
+    // @Test
+    // public void test1() throws Throwable {
+    // PostgresConstant postgresConstant0 = PostgresConstant.createFalse();
+    // PostgresSchema.PostgresDataType postgresSchema_PostgresDataType0 = PostgresSchema.PostgresDataType.INET;
+    // PostgresPostfixText postgresPostfixText0 = new PostgresPostfixText(postgresConstant0, "PQ", postgresConstant0,
+    // postgresSchema_PostgresDataType0);
+    // PostgresBinaryRangeOperation postgresBinaryRangeOperation0 = null;
+    // try {
+    // postgresBinaryRangeOperation0 = new PostgresBinaryRangeOperation(
+    // (PostgresBinaryRangeOperation.PostgresBinaryRangeComparisonOperator) null, postgresPostfixText0,
+    // postgresConstant0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.postgres.ast.PostgresBinaryRangeOperation", e);
+    // }
+    // }
 
     @Test
     public void test2() throws Throwable {

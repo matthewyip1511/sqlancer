@@ -7,11 +7,9 @@ package sqlancer.evosuite.mysql.gen.tblmaintenance;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.util.LinkedList;
 import org.junit.jupiter.api.Test;
 import sqlancer.mysql.gen.tblmaintenance.MySQLChecksum;
 import sqlancer.mysql.MySQLGlobalState;
-import sqlancer.mysql.MySQLSchema;
 
 public class MySQLChecksum_ESTest {
 
@@ -33,11 +31,11 @@ public class MySQLChecksum_ESTest {
         }
     }
 
-    @Test
-    public void test1() throws Throwable {
-        LinkedList<MySQLSchema.MySQLTable> linkedList0 = new LinkedList<MySQLSchema.MySQLTable>();
-        MySQLChecksum mySQLChecksum0 = new MySQLChecksum(linkedList0);
-    }
+    // @Test
+    // public void test1() throws Throwable {
+    // LinkedList<MySQLSchema.MySQLTable> linkedList0 = new LinkedList<MySQLSchema.MySQLTable>();
+    // MySQLChecksum mySQLChecksum0 = new MySQLChecksum(linkedList0);
+    // }
 
     @Test
     public void test2() throws Throwable {

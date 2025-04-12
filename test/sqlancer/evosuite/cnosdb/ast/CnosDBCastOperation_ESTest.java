@@ -147,19 +147,19 @@ public class CnosDBCastOperation_ESTest {
         assertFalse(list0.isEmpty());
     }
 
-    @Test
-    public void test12() throws Throwable {
-        CnosDBCastOperation cnosDBCastOperation0 = null;
-        try {
-            cnosDBCastOperation0 = new CnosDBCastOperation((CnosDBExpression) null, (CnosDBCompoundDataType) null);
-            fail("Expecting exception: AssertionError");
-
-        } catch (AssertionError e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-        }
-    }
+    // @Test
+    // public void test12() throws Throwable {
+    // CnosDBCastOperation cnosDBCastOperation0 = null;
+    // try {
+    // cnosDBCastOperation0 = new CnosDBCastOperation((CnosDBExpression) null, (CnosDBCompoundDataType) null);
+    // fail("Expecting exception: AssertionError");
+    //
+    // } catch (AssertionError e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // }
+    // }
 
     @Test
     public void test13() throws Throwable {

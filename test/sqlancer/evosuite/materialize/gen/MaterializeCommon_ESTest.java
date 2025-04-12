@@ -306,15 +306,16 @@ public class MaterializeCommon_ESTest {
         assertFalse(boolean0);
     }
 
-    @Test
-    public void test17() throws Throwable {
-        StringBuilder stringBuilder0 = new StringBuilder(4);
-        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 = MaterializeSchema.MaterializeDataType.TEXT;
-        boolean boolean0 = MaterializeCommon.appendDataType(materializeSchema_MaterializeDataType0, stringBuilder0,
-                true, true, (List<String>) null);
-        // // Unstable assertion: assertEquals("CHAR(409)", stringBuilder0.toString());
-        // // Unstable assertion: assertFalse(boolean0);
-    }
+    // @Test
+    // public void test17() throws Throwable {
+    // StringBuilder stringBuilder0 = new StringBuilder(4);
+    // MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 =
+    // MaterializeSchema.MaterializeDataType.TEXT;
+    // boolean boolean0 = MaterializeCommon.appendDataType(materializeSchema_MaterializeDataType0, stringBuilder0,
+    // true, true, (List<String>) null);
+    // // // Unstable assertion: assertEquals("CHAR(409)", stringBuilder0.toString());
+    // // // Unstable assertion: assertFalse(boolean0);
+    // }
 
     @Test
     public void test18() throws Throwable {

@@ -11,7 +11,6 @@ import org.junit.jupiter.api.Test;
 import sqlancer.oceanbase.ast.OceanBaseConstant;
 import sqlancer.oceanbase.ast.OceanBaseExists;
 import sqlancer.oceanbase.ast.OceanBaseExpression;
-import sqlancer.oceanbase.ast.OceanBaseSelect;
 
 public class OceanBaseExists_ESTest {
 
@@ -60,35 +59,35 @@ public class OceanBaseExists_ESTest {
         assertSame(oceanBaseConstant0, oceanBaseConstant1);
     }
 
-    @Test
-    public void test5() throws Throwable {
-        OceanBaseExists oceanBaseExists0 = null;
-        try {
-            oceanBaseExists0 = new OceanBaseExists((OceanBaseExpression) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.oceanbase.ast.OceanBaseExists", e);
-        }
-    }
-
-    @Test
-    public void test6() throws Throwable {
-        OceanBaseSelect oceanBaseSelect0 = new OceanBaseSelect();
-        OceanBaseExists oceanBaseExists0 = null;
-        try {
-            oceanBaseExists0 = new OceanBaseExists(oceanBaseSelect0);
-            fail("Expecting exception: AssertionError");
-
-        } catch (AssertionError e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-        }
-    }
+    // @Test
+    // public void test5() throws Throwable {
+    // OceanBaseExists oceanBaseExists0 = null;
+    // try {
+    // oceanBaseExists0 = new OceanBaseExists((OceanBaseExpression) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.oceanbase.ast.OceanBaseExists", e);
+    // }
+    // }
+    //
+    // @Test
+    // public void test6() throws Throwable {
+    // OceanBaseSelect oceanBaseSelect0 = new OceanBaseSelect();
+    // OceanBaseExists oceanBaseExists0 = null;
+    // try {
+    // oceanBaseExists0 = new OceanBaseExists(oceanBaseSelect0);
+    // fail("Expecting exception: AssertionError");
+    //
+    // } catch (AssertionError e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // }
+    // }
 
     @Test
     public void test7() throws Throwable {

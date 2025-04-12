@@ -63,21 +63,21 @@ public class CnosDBFunction_ESTest {
         assertEquals("upper", string0);
     }
 
-//    @Test
-//    public void test4() throws Throwable {
-//        CnosDBFunctionWithUnknownResult cnosDBFunctionWithUnknownResult0 = CnosDBFunctionWithUnknownResult.COS;
-//        CnosDBSchema.CnosDBDataType cnosDBSchema_CnosDBDataType0 = CnosDBSchema.CnosDBDataType.UINT;
-//        CnosDBFunction cnosDBFunction0 = null;
-//        try {
-//            cnosDBFunction0 = new CnosDBFunction(cnosDBFunctionWithUnknownResult0, cnosDBSchema_CnosDBDataType0,
-//                    (CnosDBExpression[]) null);
-//            fail("Expecting exception: NullPointerException");
-//
-//        } catch (NullPointerException e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//            verifyException("sqlancer.cnosdb.ast.CnosDBFunction", e);
-//        }
-//    }
+    // @Test
+    // public void test4() throws Throwable {
+    // CnosDBFunctionWithUnknownResult cnosDBFunctionWithUnknownResult0 = CnosDBFunctionWithUnknownResult.COS;
+    // CnosDBSchema.CnosDBDataType cnosDBSchema_CnosDBDataType0 = CnosDBSchema.CnosDBDataType.UINT;
+    // CnosDBFunction cnosDBFunction0 = null;
+    // try {
+    // cnosDBFunction0 = new CnosDBFunction(cnosDBFunctionWithUnknownResult0, cnosDBSchema_CnosDBDataType0,
+    // (CnosDBExpression[]) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.cnosdb.ast.CnosDBFunction", e);
+    // }
+    // }
 }

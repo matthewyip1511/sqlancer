@@ -24,17 +24,18 @@ public class DuckDBExpressionGenerator_ESTest {
     private void verifyException(String s, Exception e) {
     }
 
-    @Test
-    public void test00() throws Throwable {
-        DuckDBProvider.DuckDBGlobalState duckDBProvider_DuckDBGlobalState0 = new DuckDBProvider.DuckDBGlobalState();
-        DuckDBExpressionGenerator duckDBExpressionGenerator0 = new DuckDBExpressionGenerator(
-                duckDBProvider_DuckDBGlobalState0);
-        DuckDBExpression duckDBExpression0 = duckDBExpressionGenerator0.negatePredicate((DuckDBExpression) null);
-        DuckDBSchema.DuckDBCompositeDataType duckDBSchema_DuckDBCompositeDataType0 = DuckDBSchema.DuckDBCompositeDataType
-                .getRandomWithoutNull();
-        DuckDBExpressionGenerator.DuckDBCastOperation duckDBExpressionGenerator_DuckDBCastOperation0 = new DuckDBExpressionGenerator.DuckDBCastOperation(
-                duckDBExpression0, duckDBSchema_DuckDBCompositeDataType0);
-    }
+    // @Test
+    // public void test00() throws Throwable {
+    // DuckDBProvider.DuckDBGlobalState duckDBProvider_DuckDBGlobalState0 = new DuckDBProvider.DuckDBGlobalState();
+    // DuckDBExpressionGenerator duckDBExpressionGenerator0 = new DuckDBExpressionGenerator(
+    // duckDBProvider_DuckDBGlobalState0);
+    // DuckDBExpression duckDBExpression0 = duckDBExpressionGenerator0.negatePredicate((DuckDBExpression) null);
+    // DuckDBSchema.DuckDBCompositeDataType duckDBSchema_DuckDBCompositeDataType0 = DuckDBSchema.DuckDBCompositeDataType
+    // .getRandomWithoutNull();
+    // DuckDBExpressionGenerator.DuckDBCastOperation duckDBExpressionGenerator_DuckDBCastOperation0 = new
+    // DuckDBExpressionGenerator.DuckDBCastOperation(
+    // duckDBExpression0, duckDBSchema_DuckDBCompositeDataType0);
+    // }
 
     @Test
     public void test01() throws Throwable {

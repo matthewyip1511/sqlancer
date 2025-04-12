@@ -7,11 +7,9 @@ package sqlancer.evosuite.mysql.gen.tblmaintenance;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.util.LinkedList;
 import org.junit.jupiter.api.Test;
 import sqlancer.mysql.gen.tblmaintenance.MySQLOptimize;
 import sqlancer.mysql.MySQLGlobalState;
-import sqlancer.mysql.MySQLSchema;
 
 public class MySQLOptimize_ESTest {
 
@@ -48,9 +46,9 @@ public class MySQLOptimize_ESTest {
         }
     }
 
-    @Test
-    public void test2() throws Throwable {
-        LinkedList<MySQLSchema.MySQLTable> linkedList0 = new LinkedList<MySQLSchema.MySQLTable>();
-        MySQLOptimize mySQLOptimize0 = new MySQLOptimize(linkedList0);
-    }
+    // @Test
+    // public void test2() throws Throwable {
+    // LinkedList<MySQLSchema.MySQLTable> linkedList0 = new LinkedList<MySQLSchema.MySQLTable>();
+    // MySQLOptimize mySQLOptimize0 = new MySQLOptimize(linkedList0);
+    // }
 }

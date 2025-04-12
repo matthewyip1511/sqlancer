@@ -63,10 +63,11 @@ public class CockroachDBGenerator_ESTest {
         assertEquals("(EM4Q8s>.P, EM4Q8s>.P, EM4Q8s>.P)", stringBuilder0.toString());
     }
 
-//    @Test
-//    public void test3() throws Throwable {
-//        CockroachDBProvider.CockroachDBGlobalState cockroachDBProvider_CockroachDBGlobalState0 = new CockroachDBProvider.CockroachDBGlobalState();
-//        CockroachDBTableGenerator cockroachDBTableGenerator0 = new CockroachDBTableGenerator(
-//                cockroachDBProvider_CockroachDBGlobalState0);
-//    }
+    // @Test
+    // public void test3() throws Throwable {
+    // CockroachDBProvider.CockroachDBGlobalState cockroachDBProvider_CockroachDBGlobalState0 = new
+    // CockroachDBProvider.CockroachDBGlobalState();
+    // CockroachDBTableGenerator cockroachDBTableGenerator0 = new CockroachDBTableGenerator(
+    // cockroachDBProvider_CockroachDBGlobalState0);
+    // }
 }

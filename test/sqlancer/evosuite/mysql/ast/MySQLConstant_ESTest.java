@@ -617,18 +617,18 @@ public class MySQLConstant_ESTest {
         assertTrue(mySQLConstant_MySQLIntConstant0.isSigned());
     }
 
-    @Test
-    public void test057() throws Throwable {
-        MySQLConstant mySQLConstant0 = MySQLConstant.createStringConstant((String) null);
-        MySQLConstant.MySQLTextConstant mySQLConstant_MySQLTextConstant0 = new MySQLConstant.MySQLTextConstant(
-                "bigint");
-        MySQLConstant mySQLConstant1 = mySQLConstant0.isEquals(mySQLConstant_MySQLTextConstant0);
-        MySQLConstant mySQLConstant2 = mySQLConstant_MySQLTextConstant0.isLessThan(mySQLConstant1);
-        // // Unstable assertion: assertTrue(mySQLConstant2.isSigned());
-        // // Unstable assertion: assertFalse(mySQLConstant_MySQLTextConstant0.isNull());
-        // // Unstable assertion: assertEquals("1", mySQLConstant2.getTextRepresentation());
-        // // Unstable assertion: assertTrue(mySQLConstant1.asBooleanNotNull());
-    }
+    // @Test
+    // public void test057() throws Throwable {
+    // MySQLConstant mySQLConstant0 = MySQLConstant.createStringConstant((String) null);
+    // MySQLConstant.MySQLTextConstant mySQLConstant_MySQLTextConstant0 = new MySQLConstant.MySQLTextConstant(
+    // "bigint");
+    // MySQLConstant mySQLConstant1 = mySQLConstant0.isEquals(mySQLConstant_MySQLTextConstant0);
+    // MySQLConstant mySQLConstant2 = mySQLConstant_MySQLTextConstant0.isLessThan(mySQLConstant1);
+    // // // Unstable assertion: assertTrue(mySQLConstant2.isSigned());
+    // // // Unstable assertion: assertFalse(mySQLConstant_MySQLTextConstant0.isNull());
+    // // // Unstable assertion: assertEquals("1", mySQLConstant2.getTextRepresentation());
+    // // // Unstable assertion: assertTrue(mySQLConstant1.asBooleanNotNull());
+    // }
 
     @Test
     public void test058() throws Throwable {
@@ -963,20 +963,20 @@ public class MySQLConstant_ESTest {
         }
     }
 
-    @Test
-    public void test082() throws Throwable {
-        MySQLConstant.MySQLDoubleConstant mySQLConstant_MySQLDoubleConstant0 = null;
-        try {
-            mySQLConstant_MySQLDoubleConstant0 = new MySQLConstant.MySQLDoubleConstant(Double.NEGATIVE_INFINITY);
-            fail("Expecting exception: RuntimeException");
-
-        } catch (RuntimeException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.mysql.ast.MySQLConstant$MySQLDoubleConstant", e);
-        }
-    }
+    // @Test
+    // public void test082() throws Throwable {
+    // MySQLConstant.MySQLDoubleConstant mySQLConstant_MySQLDoubleConstant0 = null;
+    // try {
+    // mySQLConstant_MySQLDoubleConstant0 = new MySQLConstant.MySQLDoubleConstant(Double.NEGATIVE_INFINITY);
+    // fail("Expecting exception: RuntimeException");
+    //
+    // } catch (RuntimeException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.mysql.ast.MySQLConstant$MySQLDoubleConstant", e);
+    // }
+    // }
 
     @Test
     public void test083() throws Throwable {

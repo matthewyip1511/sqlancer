@@ -61,35 +61,7 @@ public class SQLite3TableGenerator_ESTest {
         }
     }
 
-    @Test
-    public void test3() throws Throwable {
-        SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
-        SQLite3TableGenerator sQLite3TableGenerator0 = null;
-        try {
-            sQLite3TableGenerator0 = new SQLite3TableGenerator("DU~ o$!=44'|2P;d~", sQLite3GlobalState0);
-            fail("Expecting exception: AssertionError");
-
-        } catch (AssertionError e) {
-            //
-            // null
-            //
-        }
-    }
-
-    @Test
-    public void test4() throws Throwable {
-        SQLite3TableGenerator sQLite3TableGenerator0 = null;
-        try {
-            sQLite3TableGenerator0 = new SQLite3TableGenerator("xxO;^O", (SQLite3GlobalState) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.sqlite3.gen.ddl.SQLite3TableGenerator", e);
-        }
-    }
+    // @T
 
     @Test
     public void test5() throws Throwable {

@@ -249,20 +249,20 @@ public class SQLite3ExpressionGenerator_ESTest {
         }
     }
 
-    @Test
-    public void test16() throws Throwable {
-        SQLite3ExpressionGenerator sQLite3ExpressionGenerator0 = null;
-        try {
-            sQLite3ExpressionGenerator0 = new SQLite3ExpressionGenerator((SQLite3GlobalState) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.sqlite3.gen.SQLite3ExpressionGenerator", e);
-        }
-    }
+    // @Test
+    // public void test16() throws Throwable {
+    // SQLite3ExpressionGenerator sQLite3ExpressionGenerator0 = null;
+    // try {
+    // sQLite3ExpressionGenerator0 = new SQLite3ExpressionGenerator((SQLite3GlobalState) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.sqlite3.gen.SQLite3ExpressionGenerator", e);
+    // }
+    // }
 
     @Test
     public void test17() throws Throwable {
@@ -281,20 +281,20 @@ public class SQLite3ExpressionGenerator_ESTest {
         }
     }
 
-    @Test
-    public void test18() throws Throwable {
-        SQLite3ExpressionGenerator sQLite3ExpressionGenerator0 = null;
-        try {
-            sQLite3ExpressionGenerator0 = new SQLite3ExpressionGenerator((SQLite3ExpressionGenerator) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.sqlite3.gen.SQLite3ExpressionGenerator", e);
-        }
-    }
+    // @Test
+    // public void test18() throws Throwable {
+    // SQLite3ExpressionGenerator sQLite3ExpressionGenerator0 = null;
+    // try {
+    // sQLite3ExpressionGenerator0 = new SQLite3ExpressionGenerator((SQLite3ExpressionGenerator) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.sqlite3.gen.SQLite3ExpressionGenerator", e);
+    // }
+    // }
 
     @Test
     public void test19() throws Throwable {

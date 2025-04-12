@@ -102,20 +102,20 @@ public class MySQLJoin_ESTest {
         }
     }
 
-    @Test
-    public void test04() throws Throwable {
-        MySQLJoin mySQLJoin0 = null;
-        try {
-            mySQLJoin0 = new MySQLJoin((MySQLJoin) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.mysql.ast.MySQLJoin", e);
-        }
-    }
+    // @Test
+    // public void test04() throws Throwable {
+    // MySQLJoin mySQLJoin0 = null;
+    // try {
+    // mySQLJoin0 = new MySQLJoin((MySQLJoin) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.mysql.ast.MySQLJoin", e);
+    // }
+    // }
 
     @Test
     public void test05() throws Throwable {

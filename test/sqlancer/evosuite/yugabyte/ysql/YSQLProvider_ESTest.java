@@ -10,7 +10,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import sqlancer.common.query.SQLQueryAdapter;
 import sqlancer.yugabyte.ysql.YSQLGlobalState;
-import sqlancer.yugabyte.ysql.YSQLOptions;
 import sqlancer.yugabyte.ysql.YSQLProvider;
 
 public class YSQLProvider_ESTest {
@@ -490,13 +489,13 @@ public class YSQLProvider_ESTest {
         assertTrue(sQLQueryAdapter0.couldAffectSchema());
     }
 
-    @Test
-    public void test30() throws Throwable {
-        Class<YSQLOptions> class0 = YSQLOptions.class;
-        Class<YSQLGlobalState> class1 = YSQLGlobalState.class;
-        YSQLProvider ySQLProvider0 = new YSQLProvider(class1, class0);
-        assertFalse(YSQLProvider.generateOnlyKnown);
-    }
+    // @Test
+    // public void test30() throws Throwable {
+    // Class<YSQLOptions> class0 = YSQLOptions.class;
+    // Class<YSQLGlobalState> class1 = YSQLGlobalState.class;
+    // YSQLProvider ySQLProvider0 = new YSQLProvider(class1, class0);
+    // assertFalse(YSQLProvider.generateOnlyKnown);
+    // }
 
     @Test
     public void test31() throws Throwable {

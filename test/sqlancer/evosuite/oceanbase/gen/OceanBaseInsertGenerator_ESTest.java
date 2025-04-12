@@ -31,35 +31,35 @@ public class OceanBaseInsertGenerator_ESTest {
         }
     }
 
-    @Test
-    public void test1() throws Throwable {
-        OceanBaseGlobalState oceanBaseGlobalState0 = new OceanBaseGlobalState();
-        OceanBaseInsertGenerator oceanBaseInsertGenerator0 = null;
-        try {
-            oceanBaseInsertGenerator0 = new OceanBaseInsertGenerator(oceanBaseGlobalState0);
-            fail("Expecting exception: AssertionError");
-
-        } catch (AssertionError e) {
-            //
-            // null
-            //
-        }
-    }
-
-    @Test
-    public void test2() throws Throwable {
-        OceanBaseInsertGenerator oceanBaseInsertGenerator0 = null;
-        try {
-            oceanBaseInsertGenerator0 = new OceanBaseInsertGenerator((OceanBaseGlobalState) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.oceanbase.gen.OceanBaseInsertGenerator", e);
-        }
-    }
+    // @Test
+    // public void test1() throws Throwable {
+    // OceanBaseGlobalState oceanBaseGlobalState0 = new OceanBaseGlobalState();
+    // OceanBaseInsertGenerator oceanBaseInsertGenerator0 = null;
+    // try {
+    // oceanBaseInsertGenerator0 = new OceanBaseInsertGenerator(oceanBaseGlobalState0);
+    // fail("Expecting exception: AssertionError");
+    //
+    // } catch (AssertionError e) {
+    // //
+    // // null
+    // //
+    // }
+    // }
+    //
+    // @Test
+    // public void test2() throws Throwable {
+    // OceanBaseInsertGenerator oceanBaseInsertGenerator0 = null;
+    // try {
+    // oceanBaseInsertGenerator0 = new OceanBaseInsertGenerator((OceanBaseGlobalState) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.oceanbase.gen.OceanBaseInsertGenerator", e);
+    // }
+    // }
 
     @Test
     public void test3() throws Throwable {

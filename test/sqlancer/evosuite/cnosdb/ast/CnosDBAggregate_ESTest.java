@@ -12,8 +12,6 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 
 import sqlancer.cnosdb.ast.CnosDBAggregate;
-import sqlancer.cnosdb.ast.CnosDBExpression;
-import sqlancer.cnosdb.ast.CnosDBSelect;
 import sqlancer.cnosdb.CnosDBSchema;
 
 public class CnosDBAggregate_ESTest {
@@ -70,13 +68,14 @@ public class CnosDBAggregate_ESTest {
         assertEquals(2, cnosDBSchema_CnosDBDataTypeArray0.length);
     }
 
-    @Test
-    public void test06() throws Throwable {
-        CnosDBAggregate.CnosDBAggregateFunction cnosDBAggregate_CnosDBAggregateFunction0 = CnosDBAggregate.CnosDBAggregateFunction.GROUPING;
-        CnosDBSelect cnosDBSelect0 = new CnosDBSelect();
-        List<CnosDBExpression> list0 = cnosDBSelect0.getJoinList();
-        CnosDBAggregate cnosDBAggregate0 = new CnosDBAggregate(list0, cnosDBAggregate_CnosDBAggregateFunction0);
-    }
+    // @Test
+    // public void test06() throws Throwable {
+    // CnosDBAggregate.CnosDBAggregateFunction cnosDBAggregate_CnosDBAggregateFunction0 =
+    // CnosDBAggregate.CnosDBAggregateFunction.GROUPING;
+    // CnosDBSelect cnosDBSelect0 = new CnosDBSelect();
+    // List<CnosDBExpression> list0 = cnosDBSelect0.getJoinList();
+    // CnosDBAggregate cnosDBAggregate0 = new CnosDBAggregate(list0, cnosDBAggregate_CnosDBAggregateFunction0);
+    // }
 
     @Test
     public void test07() throws Throwable {

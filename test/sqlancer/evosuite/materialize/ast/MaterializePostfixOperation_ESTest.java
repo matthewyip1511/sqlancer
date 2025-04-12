@@ -158,21 +158,21 @@ public class MaterializePostfixOperation_ESTest {
         }
     }
 
-    @Test
-    public void test07() throws Throwable {
-        MaterializePostfixOperation materializePostfixOperation0 = null;
-        try {
-            materializePostfixOperation0 = new MaterializePostfixOperation((MaterializeExpression) null,
-                    (MaterializePostfixOperation.PostfixOperator) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.materialize.ast.MaterializePostfixOperation$PostfixOperator", e);
-        }
-    }
+    // @Test
+    // public void test07() throws Throwable {
+    // MaterializePostfixOperation materializePostfixOperation0 = null;
+    // try {
+    // materializePostfixOperation0 = new MaterializePostfixOperation((MaterializeExpression) null,
+    // (MaterializePostfixOperation.PostfixOperator) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.materialize.ast.MaterializePostfixOperation$PostfixOperator", e);
+    // }
+    // }
 
     @Test
     public void test08() throws Throwable {

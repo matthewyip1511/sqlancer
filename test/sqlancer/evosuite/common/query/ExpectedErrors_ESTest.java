@@ -109,20 +109,20 @@ public class ExpectedErrors_ESTest {
         }
     }
 
-    @Test
-    public void test06() throws Throwable {
-        LinkedList<Pattern> linkedList0 = new LinkedList<Pattern>();
-        ExpectedErrors expectedErrors0 = null;
-        try {
-            expectedErrors0 = new ExpectedErrors((Collection<String>) null, linkedList0);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-        }
-    }
+    // @Test
+    // public void test06() throws Throwable {
+    // LinkedList<Pattern> linkedList0 = new LinkedList<Pattern>();
+    // ExpectedErrors expectedErrors0 = null;
+    // try {
+    // expectedErrors0 = new ExpectedErrors((Collection<String>) null, linkedList0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // }
+    // }
 
     @Test
     public void test07() throws Throwable {

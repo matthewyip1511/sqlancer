@@ -257,21 +257,21 @@ public class PrestoTypedExpressionGenerator_ESTest {
         assertEquals(PrestoTypedExpressionGenerator.PrestoBinaryLogicalOperator.AND, binaryOperatorNode_Operator0);
     }
 
-//    @Test
-//    public void test27() throws Throwable {
-//        PrestoGlobalState prestoGlobalState0 = new PrestoGlobalState();
-//        PrestoTypedExpressionGenerator prestoTypedExpressionGenerator0 = null;
-//        try {
-//            prestoTypedExpressionGenerator0 = new PrestoTypedExpressionGenerator(prestoGlobalState0);
-//            fail("Expecting exception: NullPointerException");
-//
-//        } catch (NullPointerException e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//            verifyException("sqlancer.presto.gen.PrestoTypedExpressionGenerator", e);
-//        }
-//    }
+    // @Test
+    // public void test27() throws Throwable {
+    // PrestoGlobalState prestoGlobalState0 = new PrestoGlobalState();
+    // PrestoTypedExpressionGenerator prestoTypedExpressionGenerator0 = null;
+    // try {
+    // prestoTypedExpressionGenerator0 = new PrestoTypedExpressionGenerator(prestoGlobalState0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.presto.gen.PrestoTypedExpressionGenerator", e);
+    // }
+    // }
 
     @Test
     public void test28() throws Throwable {

@@ -14,24 +14,24 @@ import sqlancer.common.ast.newast.NewCaseOperatorNode;
 
 public class NewCaseOperatorNode_ESTest {
 
-//    @Test
-//    public void test00() throws Throwable {
-//        LinkedList<Integer> linkedList0 = new LinkedList<Integer>();
-//        LinkedList<Integer> linkedList1 = new LinkedList<Integer>();
-//        Integer integer0 = (-532);
-//        linkedList1.add(integer0);
-//        NewCaseOperatorNode<Integer> newCaseOperatorNode0 = null;
-//        try {
-//            newCaseOperatorNode0 = new NewCaseOperatorNode<Integer>((Integer) null, linkedList0, linkedList1, integer0);
-//            fail("Expecting exception: IllegalArgumentException");
-//
-//        } catch (IllegalArgumentException e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//            verifyException("sqlancer.common.ast.newast.NewCaseOperatorNode", e);
-//        }
-//    }
+    // @Test
+    // public void test00() throws Throwable {
+    // LinkedList<Integer> linkedList0 = new LinkedList<Integer>();
+    // LinkedList<Integer> linkedList1 = new LinkedList<Integer>();
+    // Integer integer0 = (-532);
+    // linkedList1.add(integer0);
+    // NewCaseOperatorNode<Integer> newCaseOperatorNode0 = null;
+    // try {
+    // newCaseOperatorNode0 = new NewCaseOperatorNode<Integer>((Integer) null, linkedList0, linkedList1, integer0);
+    // fail("Expecting exception: IllegalArgumentException");
+    //
+    // } catch (IllegalArgumentException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.common.ast.newast.NewCaseOperatorNode", e);
+    // }
+    // }
 
     @Test
     public void test01() throws Throwable {
@@ -76,57 +76,57 @@ public class NewCaseOperatorNode_ESTest {
         assertFalse(list0.isEmpty());
     }
 
-//    @Test
-//    public void test05() throws Throwable {
-//        LinkedList<Object> linkedList0 = new LinkedList<Object>();
-//        List<Object> list0 = linkedList0.subList(0, 0);
-//        Integer integer0 = 0;
-//        linkedList0.add((Object) null);
-//        NewCaseOperatorNode<Object> newCaseOperatorNode0 = null;
-//        try {
-//            newCaseOperatorNode0 = new NewCaseOperatorNode<Object>(integer0, list0, list0, list0);
-//            fail("Expecting exception: ConcurrentModificationException");
-//
-//        } catch (ConcurrentModificationException e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//            verifyException("java.util.AbstractList$SubList", e);
-//        }
-//    }
+    // @Test
+    // public void test05() throws Throwable {
+    // LinkedList<Object> linkedList0 = new LinkedList<Object>();
+    // List<Object> list0 = linkedList0.subList(0, 0);
+    // Integer integer0 = 0;
+    // linkedList0.add((Object) null);
+    // NewCaseOperatorNode<Object> newCaseOperatorNode0 = null;
+    // try {
+    // newCaseOperatorNode0 = new NewCaseOperatorNode<Object>(integer0, list0, list0, list0);
+    // fail("Expecting exception: ConcurrentModificationException");
+    //
+    // } catch (ConcurrentModificationException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("java.util.AbstractList$SubList", e);
+    // }
+    // }
 
-//    @Test
-//    public void test06() throws Throwable {
-//        NewCaseOperatorNode<Object> newCaseOperatorNode0 = null;
-//        try {
-//            newCaseOperatorNode0 = new NewCaseOperatorNode<Object>((Object) null, (List<Object>) null,
-//                    (List<Object>) null, (Object) null);
-//            fail("Expecting exception: NullPointerException");
-//
-//        } catch (NullPointerException e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//            verifyException("sqlancer.common.ast.newast.NewCaseOperatorNode", e);
-//        }
-//    }
-//
-//    @Test
-//    public void test07() throws Throwable {
-//        LinkedList<Object> linkedList0 = new LinkedList<Object>();
-//        List<Object> list0 = List.of((Object) linkedList0, (Object) linkedList0);
-//        NewCaseOperatorNode<Object> newCaseOperatorNode0 = null;
-//        try {
-//            newCaseOperatorNode0 = new NewCaseOperatorNode<Object>(linkedList0, list0, linkedList0, linkedList0);
-//            fail("Expecting exception: IllegalArgumentException");
-//
-//        } catch (IllegalArgumentException e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//            verifyException("sqlancer.common.ast.newast.NewCaseOperatorNode", e);
-//        }
-//    }
+    // @Test
+    // public void test06() throws Throwable {
+    // NewCaseOperatorNode<Object> newCaseOperatorNode0 = null;
+    // try {
+    // newCaseOperatorNode0 = new NewCaseOperatorNode<Object>((Object) null, (List<Object>) null,
+    // (List<Object>) null, (Object) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.common.ast.newast.NewCaseOperatorNode", e);
+    // }
+    // }
+    //
+    // @Test
+    // public void test07() throws Throwable {
+    // LinkedList<Object> linkedList0 = new LinkedList<Object>();
+    // List<Object> list0 = List.of((Object) linkedList0, (Object) linkedList0);
+    // NewCaseOperatorNode<Object> newCaseOperatorNode0 = null;
+    // try {
+    // newCaseOperatorNode0 = new NewCaseOperatorNode<Object>(linkedList0, list0, linkedList0, linkedList0);
+    // fail("Expecting exception: IllegalArgumentException");
+    //
+    // } catch (IllegalArgumentException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.common.ast.newast.NewCaseOperatorNode", e);
+    // }
+    // }
 
     @Test
     public void test08() throws Throwable {
@@ -138,21 +138,21 @@ public class NewCaseOperatorNode_ESTest {
         assertEquals(0, list0.size());
     }
 
-//    @Test
-//    public void test09() throws Throwable {
-//        LinkedList<Object> linkedList0 = new LinkedList<Object>();
-//        NewCaseOperatorNode<Object> newCaseOperatorNode0 = new NewCaseOperatorNode<Object>(linkedList0, linkedList0,
-//                linkedList0, linkedList0);
-//        LinkedList linkedList1 = (LinkedList) newCaseOperatorNode0.getElseExpr();
-//        assertEquals(0, linkedList1.size());
-//    }
-//
-//    @Test
-//    public void test10() throws Throwable {
-//        LinkedList<Object> linkedList0 = new LinkedList<Object>();
-//        NewCaseOperatorNode<Object> newCaseOperatorNode0 = new NewCaseOperatorNode<Object>(linkedList0, linkedList0,
-//                linkedList0, linkedList0);
-//        List<Object> list0 = newCaseOperatorNode0.getConditions();
-//        assertEquals(0, list0.size());
-//    }
+    // @Test
+    // public void test09() throws Throwable {
+    // LinkedList<Object> linkedList0 = new LinkedList<Object>();
+    // NewCaseOperatorNode<Object> newCaseOperatorNode0 = new NewCaseOperatorNode<Object>(linkedList0, linkedList0,
+    // linkedList0, linkedList0);
+    // LinkedList linkedList1 = (LinkedList) newCaseOperatorNode0.getElseExpr();
+    // assertEquals(0, linkedList1.size());
+    // }
+    //
+    // @Test
+    // public void test10() throws Throwable {
+    // LinkedList<Object> linkedList0 = new LinkedList<Object>();
+    // NewCaseOperatorNode<Object> newCaseOperatorNode0 = new NewCaseOperatorNode<Object>(linkedList0, linkedList0,
+    // linkedList0, linkedList0);
+    // List<Object> list0 = newCaseOperatorNode0.getConditions();
+    // assertEquals(0, list0.size());
+    // }
 }

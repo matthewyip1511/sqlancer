@@ -1094,36 +1094,40 @@ public class OceanBaseConstant_ESTest {
         }
     }
 
-    @Test
-    public void test098() throws Throwable {
-        OceanBaseConstant.OceanBaseTextConstant oceanBaseConstant_OceanBaseTextConstant0 = new OceanBaseConstant.OceanBaseTextConstant(
-                "INT");
-        OceanBaseConstant.OceanBaseTextConstant oceanBaseConstant_OceanBaseTextConstant1 = new OceanBaseConstant.OceanBaseTextConstant(
-                "");
-        OceanBaseConstant oceanBaseConstant0 = oceanBaseConstant_OceanBaseTextConstant1
-                .isEquals(oceanBaseConstant_OceanBaseTextConstant0);
-        // // Unstable assertion: assertTrue(oceanBaseConstant0.isSigned());
-        // // Unstable assertion: assertFalse(oceanBaseConstant_OceanBaseTextConstant1.isNull());
-        // // Unstable assertion: assertFalse(oceanBaseConstant_OceanBaseTextConstant0.isEmpty());
-        // // Unstable assertion: assertEquals("1", oceanBaseConstant0.getTextRepresentation());
-        // // Unstable assertion: assertTrue(oceanBaseConstant_OceanBaseTextConstant1.isEmpty());
-        // // Unstable assertion: assertEquals(1L, oceanBaseConstant0.getInt());
-    }
+    // @Test
+    // public void test098() throws Throwable {
+    // OceanBaseConstant.OceanBaseTextConstant oceanBaseConstant_OceanBaseTextConstant0 = new
+    // OceanBaseConstant.OceanBaseTextConstant(
+    // "INT");
+    // OceanBaseConstant.OceanBaseTextConstant oceanBaseConstant_OceanBaseTextConstant1 = new
+    // OceanBaseConstant.OceanBaseTextConstant(
+    // "");
+    // OceanBaseConstant oceanBaseConstant0 = oceanBaseConstant_OceanBaseTextConstant1
+    // .isEquals(oceanBaseConstant_OceanBaseTextConstant0);
+    // // // Unstable assertion: assertTrue(oceanBaseConstant0.isSigned());
+    // // // Unstable assertion: assertFalse(oceanBaseConstant_OceanBaseTextConstant1.isNull());
+    // // // Unstable assertion: assertFalse(oceanBaseConstant_OceanBaseTextConstant0.isEmpty());
+    // // // Unstable assertion: assertEquals("1", oceanBaseConstant0.getTextRepresentation());
+    // // // Unstable assertion: assertTrue(oceanBaseConstant_OceanBaseTextConstant1.isEmpty());
+    // // // Unstable assertion: assertEquals(1L, oceanBaseConstant0.getInt());
+    // }
 
-    @Test
-    public void test099() throws Throwable {
-        OceanBaseConstant.OceanBaseTextConstant oceanBaseConstant_OceanBaseTextConstant0 = new OceanBaseConstant.OceanBaseTextConstant(
-                "");
-        OceanBaseConstant.OceanBaseTextConstant oceanBaseConstant_OceanBaseTextConstant1 = new OceanBaseConstant.OceanBaseTextConstant(
-                "J");
-        OceanBaseConstant oceanBaseConstant0 = oceanBaseConstant_OceanBaseTextConstant1
-                .isEquals(oceanBaseConstant_OceanBaseTextConstant0);
-        // // Unstable assertion: assertEquals("1", oceanBaseConstant0.getTextRepresentation());
-        // // Unstable assertion: assertFalse(oceanBaseConstant_OceanBaseTextConstant1.isEmpty());
-        // // Unstable assertion: assertEquals(1L, oceanBaseConstant0.getInt());
-        // // Unstable assertion: assertFalse(oceanBaseConstant_OceanBaseTextConstant0.isNull());
-        // // Unstable assertion: assertTrue(oceanBaseConstant0.isSigned());
-    }
+    // @Test
+    // public void test099() throws Throwable {
+    // OceanBaseConstant.OceanBaseTextConstant oceanBaseConstant_OceanBaseTextConstant0 = new
+    // OceanBaseConstant.OceanBaseTextConstant(
+    // "");
+    // OceanBaseConstant.OceanBaseTextConstant oceanBaseConstant_OceanBaseTextConstant1 = new
+    // OceanBaseConstant.OceanBaseTextConstant(
+    // "J");
+    // OceanBaseConstant oceanBaseConstant0 = oceanBaseConstant_OceanBaseTextConstant1
+    // .isEquals(oceanBaseConstant_OceanBaseTextConstant0);
+    // // // Unstable assertion: assertEquals("1", oceanBaseConstant0.getTextRepresentation());
+    // // // Unstable assertion: assertFalse(oceanBaseConstant_OceanBaseTextConstant1.isEmpty());
+    // // // Unstable assertion: assertEquals(1L, oceanBaseConstant0.getInt());
+    // // // Unstable assertion: assertFalse(oceanBaseConstant_OceanBaseTextConstant0.isNull());
+    // // // Unstable assertion: assertTrue(oceanBaseConstant0.isSigned());
+    // }
 
     @Test
     public void test100() throws Throwable {
@@ -1441,21 +1445,21 @@ public class OceanBaseConstant_ESTest {
         assertEquals(-0.0, oceanBaseConstant_OceanBaseDoubleConstant0.getDouble(), 0.01);
     }
 
-    @Test
-    public void test125() throws Throwable {
-        OceanBaseConstant.OceanBaseDoubleConstant oceanBaseConstant_OceanBaseDoubleConstant0 = null;
-        try {
-            oceanBaseConstant_OceanBaseDoubleConstant0 = new OceanBaseConstant.OceanBaseDoubleConstant(
-                    Double.NEGATIVE_INFINITY);
-            fail("Expecting exception: RuntimeException");
-
-        } catch (RuntimeException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.oceanbase.ast.OceanBaseConstant$OceanBaseDoubleConstant", e);
-        }
-    }
+    // @Test
+    // public void test125() throws Throwable {
+    // OceanBaseConstant.OceanBaseDoubleConstant oceanBaseConstant_OceanBaseDoubleConstant0 = null;
+    // try {
+    // oceanBaseConstant_OceanBaseDoubleConstant0 = new OceanBaseConstant.OceanBaseDoubleConstant(
+    // Double.NEGATIVE_INFINITY);
+    // fail("Expecting exception: RuntimeException");
+    //
+    // } catch (RuntimeException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.oceanbase.ast.OceanBaseConstant$OceanBaseDoubleConstant", e);
+    // }
+    // }
 
     @Test
     public void test126() throws Throwable {

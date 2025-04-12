@@ -21,34 +21,35 @@ import sqlancer.tidb.TiDBProvider;
 
 public class TiDBCase_ESTest {
 
-//    @Test
-//    public void test00() throws Throwable {
-//        TiDBConstant.TiDBBooleanConstant tiDBConstant_TiDBBooleanConstant0 = new TiDBConstant.TiDBBooleanConstant(
-//                false);
-//        TiDBBinaryLogicalOperation.TiDBBinaryLogicalOperator tiDBBinaryLogicalOperation_TiDBBinaryLogicalOperator0 = TiDBBinaryLogicalOperation.TiDBBinaryLogicalOperator.OR;
-//        TiDBBinaryLogicalOperation tiDBBinaryLogicalOperation0 = new TiDBBinaryLogicalOperation(
-//                tiDBConstant_TiDBBooleanConstant0, tiDBConstant_TiDBBooleanConstant0,
-//                tiDBBinaryLogicalOperation_TiDBBinaryLogicalOperator0);
-//        TiDBSelect tiDBSelect0 = new TiDBSelect();
-//        List<TiDBExpression> list0 = tiDBSelect0.getGroupByClause();
-//        TiDBCase tiDBCase0 = new TiDBCase(tiDBBinaryLogicalOperation0, list0, list0, (TiDBExpression) null);
-//        List<TiDBExpression> list1 = List.of((TiDBExpression) tiDBConstant_TiDBBooleanConstant0,
-//                (TiDBExpression) tiDBConstant_TiDBBooleanConstant0, (TiDBExpression) tiDBBinaryLogicalOperation0,
-//                (TiDBExpression) tiDBConstant_TiDBBooleanConstant0, (TiDBExpression) tiDBBinaryLogicalOperation0,
-//                (TiDBExpression) tiDBConstant_TiDBBooleanConstant0, (TiDBExpression) tiDBBinaryLogicalOperation0,
-//                (TiDBExpression) tiDBCase0, (TiDBExpression) tiDBBinaryLogicalOperation0);
-//        TiDBCase tiDBCase1 = null;
-//        try {
-//            tiDBCase1 = new TiDBCase(tiDBConstant_TiDBBooleanConstant0, list1, list0, tiDBSelect0);
-//            fail("Expecting exception: IllegalArgumentException");
-//
-//        } catch (IllegalArgumentException e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//            verifyException("sqlancer.tidb.ast.TiDBCase", e);
-//        }
-//    }
+    // @Test
+    // public void test00() throws Throwable {
+    // TiDBConstant.TiDBBooleanConstant tiDBConstant_TiDBBooleanConstant0 = new TiDBConstant.TiDBBooleanConstant(
+    // false);
+    // TiDBBinaryLogicalOperation.TiDBBinaryLogicalOperator tiDBBinaryLogicalOperation_TiDBBinaryLogicalOperator0 =
+    // TiDBBinaryLogicalOperation.TiDBBinaryLogicalOperator.OR;
+    // TiDBBinaryLogicalOperation tiDBBinaryLogicalOperation0 = new TiDBBinaryLogicalOperation(
+    // tiDBConstant_TiDBBooleanConstant0, tiDBConstant_TiDBBooleanConstant0,
+    // tiDBBinaryLogicalOperation_TiDBBinaryLogicalOperator0);
+    // TiDBSelect tiDBSelect0 = new TiDBSelect();
+    // List<TiDBExpression> list0 = tiDBSelect0.getGroupByClause();
+    // TiDBCase tiDBCase0 = new TiDBCase(tiDBBinaryLogicalOperation0, list0, list0, (TiDBExpression) null);
+    // List<TiDBExpression> list1 = List.of((TiDBExpression) tiDBConstant_TiDBBooleanConstant0,
+    // (TiDBExpression) tiDBConstant_TiDBBooleanConstant0, (TiDBExpression) tiDBBinaryLogicalOperation0,
+    // (TiDBExpression) tiDBConstant_TiDBBooleanConstant0, (TiDBExpression) tiDBBinaryLogicalOperation0,
+    // (TiDBExpression) tiDBConstant_TiDBBooleanConstant0, (TiDBExpression) tiDBBinaryLogicalOperation0,
+    // (TiDBExpression) tiDBCase0, (TiDBExpression) tiDBBinaryLogicalOperation0);
+    // TiDBCase tiDBCase1 = null;
+    // try {
+    // tiDBCase1 = new TiDBCase(tiDBConstant_TiDBBooleanConstant0, list1, list0, tiDBSelect0);
+    // fail("Expecting exception: IllegalArgumentException");
+    //
+    // } catch (IllegalArgumentException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.tidb.ast.TiDBCase", e);
+    // }
+    // }
 
     @Test
     public void test01() throws Throwable {
@@ -125,40 +126,40 @@ public class TiDBCase_ESTest {
         assertSame(list1, list2);
     }
 
-//    @Test
-//    public void test07() throws Throwable {
-//        TiDBSelect tiDBSelect0 = new TiDBSelect();
-//        TiDBCase tiDBCase0 = null;
-//        try {
-//            tiDBCase0 = new TiDBCase(tiDBSelect0, (List<TiDBExpression>) null, (List<TiDBExpression>) null,
-//                    tiDBSelect0);
-//            fail("Expecting exception: NullPointerException");
-//
-//        } catch (NullPointerException e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//            verifyException("sqlancer.tidb.ast.TiDBCase", e);
-//        }
-//    }
+    // @Test
+    // public void test07() throws Throwable {
+    // TiDBSelect tiDBSelect0 = new TiDBSelect();
+    // TiDBCase tiDBCase0 = null;
+    // try {
+    // tiDBCase0 = new TiDBCase(tiDBSelect0, (List<TiDBExpression>) null, (List<TiDBExpression>) null,
+    // tiDBSelect0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.tidb.ast.TiDBCase", e);
+    // }
+    // }
 
-//    @Test
-//    public void test08() throws Throwable {
-//        TiDBSelect tiDBSelect0 = new TiDBSelect();
-//        LinkedList<TiDBExpression> linkedList0 = new LinkedList<TiDBExpression>();
-//        List<TiDBExpression> list0 = List.of((TiDBExpression) tiDBSelect0, (TiDBExpression) tiDBSelect0);
-//        TiDBCase tiDBCase0 = null;
-//        try {
-//            tiDBCase0 = new TiDBCase(tiDBSelect0, linkedList0, list0, tiDBSelect0);
-//            fail("Expecting exception: IllegalArgumentException");
-//
-//        } catch (IllegalArgumentException e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//            verifyException("sqlancer.tidb.ast.TiDBCase", e);
-//        }
-//    }
+    // @Test
+    // public void test08() throws Throwable {
+    // TiDBSelect tiDBSelect0 = new TiDBSelect();
+    // LinkedList<TiDBExpression> linkedList0 = new LinkedList<TiDBExpression>();
+    // List<TiDBExpression> list0 = List.of((TiDBExpression) tiDBSelect0, (TiDBExpression) tiDBSelect0);
+    // TiDBCase tiDBCase0 = null;
+    // try {
+    // tiDBCase0 = new TiDBCase(tiDBSelect0, linkedList0, list0, tiDBSelect0);
+    // fail("Expecting exception: IllegalArgumentException");
+    //
+    // } catch (IllegalArgumentException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.tidb.ast.TiDBCase", e);
+    // }
+    // }
 
     @Test
     public void test09() throws Throwable {

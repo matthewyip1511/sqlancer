@@ -14,9 +14,6 @@ import sqlancer.mysql.ast.MySQLExpression;
 
 public class MySQLExists_ESTest {
 
-    private void verifyException(String s, Exception e) {
-    }
-
     @Test
     public void test0() throws Throwable {
         MySQLConstant mySQLConstant0 = MySQLConstant.createIntConstantNotAsBoolean(0L);
