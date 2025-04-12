@@ -17,3 +17,8 @@ database*.properties
 database*.script
 databases/
 .scannerwork/
+Clean-evosuite-1.ps1
+Clean-evosuite-2.ps1
+Clean-evosuite-3.ps1
+Clean-evosuite-4.ps1
+Clean-evosuite-5.ps1
