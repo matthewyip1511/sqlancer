@@ -6,6 +6,7 @@
 package sqlancer.evosuite.questdb.test;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.questdb.QuestDBProvider;
 import sqlancer.questdb.test.QuestDBQueryPartitioningWhereTester;
