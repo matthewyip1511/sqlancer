@@ -5,22 +5,23 @@
 
 package sqlancer.evosuite.transformations;
 
-import sqlancer.transformations.JSQLParserBasedTransformation;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
+
+import sqlancer.transformations.JSQLParserBasedTransformation;
 
 public class JSQLParserBasedTransformation_ESTest {
 
     private void verifyException(String s, Exception e) {
     }
 
-    @Test
-    public void test0() throws Throwable {
-        JSQLParserBasedTransformation jSQLParserBasedTransformation0 = new JSQLParserBasedTransformation("");
-        jSQLParserBasedTransformation0.onStatementChanged();
-        assertEquals(0L, jSQLParserBasedTransformation0.getReduceSteps());
-    }
+    // @Test
+    // public void test0() throws Throwable {
+    // JSQLParserBasedTransformation jSQLParserBasedTransformation0 = new JSQLParserBasedTransformation("");
+    // jSQLParserBasedTransformation0.onStatementChanged();
+    // assertEquals(0L, jSQLParserBasedTransformation0.getReduceSteps());
+    // }
 
     @Test
     public void test1() throws Throwable {

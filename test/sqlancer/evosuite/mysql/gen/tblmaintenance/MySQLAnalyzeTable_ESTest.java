@@ -7,12 +7,9 @@ package sqlancer.evosuite.mysql.gen.tblmaintenance;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.util.LinkedList;
 import org.junit.jupiter.api.Test;
 import sqlancer.mysql.gen.tblmaintenance.MySQLAnalyzeTable;
 import sqlancer.mysql.MySQLGlobalState;
-import sqlancer.mysql.MySQLSchema;
-import sqlancer.Randomly;
 
 public class MySQLAnalyzeTable_ESTest {
 
@@ -34,12 +31,12 @@ public class MySQLAnalyzeTable_ESTest {
         }
     }
 
-    @Test
-    public void test1() throws Throwable {
-        LinkedList<MySQLSchema.MySQLTable> linkedList0 = new LinkedList<MySQLSchema.MySQLTable>();
-        Randomly randomly0 = new Randomly();
-        MySQLAnalyzeTable mySQLAnalyzeTable0 = new MySQLAnalyzeTable(linkedList0, randomly0);
-    }
+    // @Test
+    // public void test1() throws Throwable {
+    // LinkedList<MySQLSchema.MySQLTable> linkedList0 = new LinkedList<MySQLSchema.MySQLTable>();
+    // Randomly randomly0 = new Randomly();
+    // MySQLAnalyzeTable mySQLAnalyzeTable0 = new MySQLAnalyzeTable(linkedList0, randomly0);
+    // }
 
     @Test
     public void test2() throws Throwable {

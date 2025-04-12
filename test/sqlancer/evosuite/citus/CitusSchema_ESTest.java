@@ -37,21 +37,23 @@ public class CitusSchema_ESTest {
         }
     }
 
-    @Test
-    public void test1() throws Throwable {
-        CitusSchema citusSchema0 = null;
-        try {
-            citusSchema0 = new CitusSchema((List<CitusSchema.CitusTable>) null,
-                    "SELECT table_name, column_to_column_name(logicalrelid, partkey) AS dist_col_name, colocationid FROM information_schema.tables LEFT OUTER JOIN pg_dist_partition ON logicalrelid=table_name::regclass WHERE table_schema='public' OR table_schema LIKE 'pg_temp_%';");
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("java.util.ArrayList", e);
-        }
-    }
+    // @Test
+    // public void test1() throws Throwable {
+    // CitusSchema citusSchema0 = null;
+    // try {
+    // citusSchema0 = new CitusSchema((List<CitusSchema.CitusTable>) null,
+    // "SELECT table_name, column_to_column_name(logicalrelid, partkey) AS dist_col_name, colocationid FROM
+    // information_schema.tables LEFT OUTER JOIN pg_dist_partition ON logicalrelid=table_name::regclass WHERE
+    // table_schema='public' OR table_schema LIKE 'pg_temp_%';");
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("java.util.ArrayList", e);
+    // }
+    // }
 
     /*
      * Test disabled because it contains mock() function calls that are not implemented

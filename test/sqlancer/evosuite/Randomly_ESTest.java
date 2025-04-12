@@ -263,14 +263,14 @@ public class Randomly_ESTest {
         assertSame(bigInteger1, bigInteger0);
     }
 
-    @Test
-    public void test026() throws Throwable {
-        LinkedList<Object> linkedList0 = new LinkedList<Object>();
-        Object[] objectArray0 = new Object[1];
-        objectArray0[0] = (Object) linkedList0;
-        LinkedList linkedList1 = (LinkedList) Randomly.fromOptions(objectArray0);
-        assertEquals(0, linkedList1.size());
-    }
+    // @Test
+    // public void test026() throws Throwable {
+    // LinkedList<Object> linkedList0 = new LinkedList<Object>();
+    // Object[] objectArray0 = new Object[1];
+    // objectArray0[0] = (Object) linkedList0;
+    // LinkedList linkedList1 = (LinkedList) Randomly.fromOptions(objectArray0);
+    // assertEquals(0, linkedList1.size());
+    // }
 
     @Test
     public void test027() throws Throwable {

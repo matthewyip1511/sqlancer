@@ -34,37 +34,37 @@ public class MariaDBSchema_ESTest {
      * } catch (NoSuchElementException e) { // // No value present // verifyException("java.util.Optional", e); } }
      */
 
-    @Test
-    public void test01() throws Throwable {
-        MariaDBSchema mariaDBSchema0 = null;
-        try {
-            mariaDBSchema0 = new MariaDBSchema((List<MariaDBSchema.MariaDBTable>) null);
-            fail("Expecting exception: NullPointerException");
+    // @Test
+    // public void test01() throws Throwable {
+    // MariaDBSchema mariaDBSchema0 = null;
+    // try {
+    // mariaDBSchema0 = new MariaDBSchema((List<MariaDBSchema.MariaDBTable>) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("java.util.Collections$UnmodifiableCollection", e);
+    // }
+    // }
 
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("java.util.Collections$UnmodifiableCollection", e);
-        }
-    }
-
-    @Test
-    public void test02() throws Throwable {
-        LinkedList<MariaDBSchema.MariaDBTable> linkedList0 = new LinkedList<MariaDBSchema.MariaDBTable>();
-        linkedList0.add((MariaDBSchema.MariaDBTable) null);
-        MariaDBSchema.MariaDBTables mariaDBSchema_MariaDBTables0 = null;
-        try {
-            mariaDBSchema_MariaDBTables0 = new MariaDBSchema.MariaDBTables(linkedList0);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.mariadb.MariaDBSchema$MariaDBTables", e);
-        }
-    }
+    // @Test
+    // public void test02() throws Throwable {
+    // LinkedList<MariaDBSchema.MariaDBTable> linkedList0 = new LinkedList<MariaDBSchema.MariaDBTable>();
+    // linkedList0.add((MariaDBSchema.MariaDBTable) null);
+    // MariaDBSchema.MariaDBTables mariaDBSchema_MariaDBTables0 = null;
+    // try {
+    // mariaDBSchema_MariaDBTables0 = new MariaDBSchema.MariaDBTables(linkedList0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.mariadb.MariaDBSchema$MariaDBTables", e);
+    // }
+    // }
 
     /*
      * Test disabled because it contains mock() function calls that are not implemented

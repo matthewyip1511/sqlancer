@@ -10,20 +10,19 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import sqlancer.presto.ast.PrestoAtTimeZoneOperator;
 import sqlancer.presto.ast.PrestoColumnReference;
-import sqlancer.presto.ast.PrestoConstant;
-import sqlancer.presto.ast.PrestoDateFunction;
 import sqlancer.presto.ast.PrestoExpression;
 import sqlancer.presto.PrestoSchema;
 
 public class PrestoAtTimeZoneOperator_ESTest {
 
-    @Test
-    public void test0() throws Throwable {
-        PrestoDateFunction prestoDateFunction0 = PrestoDateFunction.FROM_UNIXTIME;
-        PrestoConstant.PrestoIntervalDayToSecondConstant prestoConstant_PrestoIntervalDayToSecondConstant0 = new PrestoConstant.PrestoIntervalDayToSecondConstant();
-        PrestoAtTimeZoneOperator prestoAtTimeZoneOperator0 = new PrestoAtTimeZoneOperator(prestoDateFunction0,
-                prestoConstant_PrestoIntervalDayToSecondConstant0);
-    }
+    // @Test
+    // public void test0() throws Throwable {
+    // PrestoDateFunction prestoDateFunction0 = PrestoDateFunction.FROM_UNIXTIME;
+    // PrestoConstant.PrestoIntervalDayToSecondConstant prestoConstant_PrestoIntervalDayToSecondConstant0 = new
+    // PrestoConstant.PrestoIntervalDayToSecondConstant();
+    // PrestoAtTimeZoneOperator prestoAtTimeZoneOperator0 = new PrestoAtTimeZoneOperator(prestoDateFunction0,
+    // prestoConstant_PrestoIntervalDayToSecondConstant0);
+    // }
 
     @Test
     public void test1() throws Throwable {

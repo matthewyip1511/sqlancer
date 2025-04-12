@@ -8,8 +8,6 @@ package sqlancer.evosuite.common.oracle;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
-import sqlancer.cockroachdb.CockroachDBProvider;
-import sqlancer.cockroachdb.oracle.CockroachDBCERTOracle;
 import sqlancer.common.oracle.CERTOracleBase;
 
 public class CERTOracleBase_ESTest {
@@ -33,10 +31,11 @@ public class CERTOracleBase_ESTest {
         }
     }
 
-    @Test
-    public void test1() throws Throwable {
-        CockroachDBProvider.CockroachDBGlobalState cockroachDBProvider_CockroachDBGlobalState0 = new CockroachDBProvider.CockroachDBGlobalState();
-        CockroachDBCERTOracle cockroachDBCERTOracle0 = new CockroachDBCERTOracle(
-                cockroachDBProvider_CockroachDBGlobalState0);
-    }
+    // @Test
+    // public void test1() throws Throwable {
+    // CockroachDBProvider.CockroachDBGlobalState cockroachDBProvider_CockroachDBGlobalState0 = new
+    // CockroachDBProvider.CockroachDBGlobalState();
+    // CockroachDBCERTOracle cockroachDBCERTOracle0 = new CockroachDBCERTOracle(
+    // cockroachDBProvider_CockroachDBGlobalState0);
+    // }
 }

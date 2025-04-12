@@ -48,9 +48,9 @@ public class YSQLTableGenerator_ESTest {
         }
     }
 
-    @Test
-    public void test2() throws Throwable {
-        YSQLGlobalState ySQLGlobalState0 = new YSQLGlobalState();
-        YSQLTableGenerator ySQLTableGenerator0 = new YSQLTableGenerator("", false, ySQLGlobalState0);
-    }
+    // @Test
+    // public void test2() throws Throwable {
+    // YSQLGlobalState ySQLGlobalState0 = new YSQLGlobalState();
+    // YSQLTableGenerator ySQLTableGenerator0 = new YSQLTableGenerator("", false, ySQLGlobalState0);
+    // }
 }

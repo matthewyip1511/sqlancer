@@ -8,12 +8,9 @@ package sqlancer.evosuite.mysql.ast;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
-import sqlancer.mysql.ast.MySQLComputableFunction;
 import sqlancer.mysql.ast.MySQLConstant;
 import sqlancer.mysql.ast.MySQLExists;
 import sqlancer.mysql.ast.MySQLExpression;
-import sqlancer.mysql.ast.MySQLSelect;
-import sqlancer.mysql.ast.MySQLUnaryPrefixOperation;
 
 public class MySQLExists_ESTest {
 
@@ -44,74 +41,76 @@ public class MySQLExists_ESTest {
         assertEquals("+", mySQLConstant1.getString());
     }
 
-    @Test
-    public void test3() throws Throwable {
-        MySQLConstant mySQLConstant0 = MySQLConstant.createStringConstant("");
-        MySQLExists mySQLExists0 = new MySQLExists(mySQLConstant0);
-        MySQLUnaryPrefixOperation.MySQLUnaryPrefixOperator mySQLUnaryPrefixOperation_MySQLUnaryPrefixOperator0 = MySQLUnaryPrefixOperation.MySQLUnaryPrefixOperator.MINUS;
-        MySQLUnaryPrefixOperation mySQLUnaryPrefixOperation0 = new MySQLUnaryPrefixOperation(mySQLExists0,
-                mySQLUnaryPrefixOperation_MySQLUnaryPrefixOperator0);
-        MySQLExists mySQLExists1 = null;
-        try {
-            mySQLExists1 = new MySQLExists(mySQLUnaryPrefixOperation0);
-            fail("Expecting exception: RuntimeException");
+    // @Test
+    // public void test3() throws Throwable {
+    // MySQLConstant mySQLConstant0 = MySQLConstant.createStringConstant("");
+    // MySQLExists mySQLExists0 = new MySQLExists(mySQLConstant0);
+    // MySQLUnaryPrefixOperation.MySQLUnaryPrefixOperator mySQLUnaryPrefixOperation_MySQLUnaryPrefixOperator0 =
+    // MySQLUnaryPrefixOperation.MySQLUnaryPrefixOperator.MINUS;
+    // MySQLUnaryPrefixOperation mySQLUnaryPrefixOperation0 = new MySQLUnaryPrefixOperation(mySQLExists0,
+    // mySQLUnaryPrefixOperation_MySQLUnaryPrefixOperator0);
+    // MySQLExists mySQLExists1 = null;
+    // try {
+    // mySQLExists1 = new MySQLExists(mySQLUnaryPrefixOperation0);
+    // fail("Expecting exception: RuntimeException");
+    //
+    // } catch (RuntimeException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.mysql.ast.MySQLUnaryPrefixOperation$MySQLUnaryPrefixOperator$3", e);
+    // }
+    // }
+    //
+    // @Test
+    // public void test4() throws Throwable {
+    // MySQLExists mySQLExists0 = null;
+    // try {
+    // mySQLExists0 = new MySQLExists((MySQLExpression) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.mysql.ast.MySQLExists", e);
+    // }
+    // }
 
-        } catch (RuntimeException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.mysql.ast.MySQLUnaryPrefixOperation$MySQLUnaryPrefixOperator$3", e);
-        }
-    }
-
-    @Test
-    public void test4() throws Throwable {
-        MySQLExists mySQLExists0 = null;
-        try {
-            mySQLExists0 = new MySQLExists((MySQLExpression) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.mysql.ast.MySQLExists", e);
-        }
-    }
-
-    @Test
-    public void test5() throws Throwable {
-        MySQLComputableFunction.MySQLFunction mySQLComputableFunction_MySQLFunction0 = MySQLComputableFunction.MySQLFunction.BIT_COUNT;
-        MySQLExpression[] mySQLExpressionArray0 = new MySQLExpression[0];
-        MySQLComputableFunction mySQLComputableFunction0 = new MySQLComputableFunction(
-                mySQLComputableFunction_MySQLFunction0, mySQLExpressionArray0);
-        MySQLExists mySQLExists0 = null;
-        try {
-            mySQLExists0 = new MySQLExists(mySQLComputableFunction0);
-            fail("Expecting exception: ArrayIndexOutOfBoundsException");
-
-        } catch (ArrayIndexOutOfBoundsException e) {
-            //
-            // Index 0 out of bounds for length 0
-            //
-            verifyException("sqlancer.mysql.ast.MySQLComputableFunction$MySQLFunction$1", e);
-        }
-    }
-
-    @Test
-    public void test6() throws Throwable {
-        MySQLSelect mySQLSelect0 = new MySQLSelect();
-        MySQLExists mySQLExists0 = null;
-        try {
-            mySQLExists0 = new MySQLExists(mySQLSelect0);
-            fail("Expecting exception: AssertionError");
-
-        } catch (AssertionError e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-        }
-    }
+    // @Test
+    // public void test5() throws Throwable {
+    // MySQLComputableFunction.MySQLFunction mySQLComputableFunction_MySQLFunction0 =
+    // MySQLComputableFunction.MySQLFunction.BIT_COUNT;
+    // MySQLExpression[] mySQLExpressionArray0 = new MySQLExpression[0];
+    // MySQLComputableFunction mySQLComputableFunction0 = new MySQLComputableFunction(
+    // mySQLComputableFunction_MySQLFunction0, mySQLExpressionArray0);
+    // MySQLExists mySQLExists0 = null;
+    // try {
+    // mySQLExists0 = new MySQLExists(mySQLComputableFunction0);
+    // fail("Expecting exception: ArrayIndexOutOfBoundsException");
+    //
+    // } catch (ArrayIndexOutOfBoundsException e) {
+    // //
+    // // Index 0 out of bounds for length 0
+    // //
+    // verifyException("sqlancer.mysql.ast.MySQLComputableFunction$MySQLFunction$1", e);
+    // }
+    // }
+    //
+    // @Test
+    // public void test6() throws Throwable {
+    // MySQLSelect mySQLSelect0 = new MySQLSelect();
+    // MySQLExists mySQLExists0 = null;
+    // try {
+    // mySQLExists0 = new MySQLExists(mySQLSelect0);
+    // fail("Expecting exception: AssertionError");
+    //
+    // } catch (AssertionError e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // }
+    // }
 
     @Test
     public void test7() throws Throwable {

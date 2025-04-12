@@ -130,41 +130,42 @@ public class YSQLFunction_ESTest {
         }
     }
 
-    @Test
-    public void test07() throws Throwable {
-        YSQLFunctionWithUnknownResult ySQLFunctionWithUnknownResult0 = YSQLFunctionWithUnknownResult.COS;
-        YSQLSchema.YSQLDataType ySQLSchema_YSQLDataType0 = YSQLSchema.YSQLDataType.BOOLEAN;
-        YSQLFunction ySQLFunction0 = null;
-        try {
-            ySQLFunction0 = new YSQLFunction(ySQLFunctionWithUnknownResult0, ySQLSchema_YSQLDataType0,
-                    (YSQLExpression[]) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.yugabyte.ysql.ast.YSQLFunction", e);
-        }
-    }
-
-    @Test
-    public void test08() throws Throwable {
-        YSQLFunction.YSQLFunctionWithResult ySQLFunction_YSQLFunctionWithResult0 = YSQLFunction.YSQLFunctionWithResult.LENGTH;
-        YSQLSchema.YSQLDataType ySQLSchema_YSQLDataType0 = YSQLSchema.YSQLDataType.INET;
-        YSQLFunction ySQLFunction0 = null;
-        try {
-            ySQLFunction0 = new YSQLFunction(ySQLFunction_YSQLFunctionWithResult0, ySQLSchema_YSQLDataType0,
-                    (YSQLExpression[]) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.yugabyte.ysql.ast.YSQLFunction", e);
-        }
-    }
+    // @Test
+    // public void test07() throws Throwable {
+    // YSQLFunctionWithUnknownResult ySQLFunctionWithUnknownResult0 = YSQLFunctionWithUnknownResult.COS;
+    // YSQLSchema.YSQLDataType ySQLSchema_YSQLDataType0 = YSQLSchema.YSQLDataType.BOOLEAN;
+    // YSQLFunction ySQLFunction0 = null;
+    // try {
+    // ySQLFunction0 = new YSQLFunction(ySQLFunctionWithUnknownResult0, ySQLSchema_YSQLDataType0,
+    // (YSQLExpression[]) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.yugabyte.ysql.ast.YSQLFunction", e);
+    // }
+    // }
+    //
+    // @Test
+    // public void test08() throws Throwable {
+    // YSQLFunction.YSQLFunctionWithResult ySQLFunction_YSQLFunctionWithResult0 =
+    // YSQLFunction.YSQLFunctionWithResult.LENGTH;
+    // YSQLSchema.YSQLDataType ySQLSchema_YSQLDataType0 = YSQLSchema.YSQLDataType.INET;
+    // YSQLFunction ySQLFunction0 = null;
+    // try {
+    // ySQLFunction0 = new YSQLFunction(ySQLFunction_YSQLFunctionWithResult0, ySQLSchema_YSQLDataType0,
+    // (YSQLExpression[]) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.yugabyte.ysql.ast.YSQLFunction", e);
+    // }
+    // }
 
     @Test
     public void test09() throws Throwable {

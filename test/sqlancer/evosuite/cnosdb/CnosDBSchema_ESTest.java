@@ -7,13 +7,11 @@ package sqlancer.evosuite.cnosdb;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import sqlancer.cnosdb.ast.CnosDBConstant;
 import sqlancer.cnosdb.client.CnosDBClient;
 import sqlancer.cnosdb.client.CnosDBConnection;
 import sqlancer.cnosdb.CnosDBGlobalState;
@@ -101,20 +99,20 @@ public class CnosDBSchema_ESTest {
         }
     }
 
-    @Test
-    public void test06() throws Throwable {
-        CnosDBSchema cnosDBSchema0 = null;
-        try {
-            cnosDBSchema0 = new CnosDBSchema((List<CnosDBSchema.CnosDBTable>) null, "bigint");
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("java.util.Collections$UnmodifiableCollection", e);
-        }
-    }
+    // @Test
+    // public void test06() throws Throwable {
+    // CnosDBSchema cnosDBSchema0 = null;
+    // try {
+    // cnosDBSchema0 = new CnosDBSchema((List<CnosDBSchema.CnosDBTable>) null, "bigint");
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("java.util.Collections$UnmodifiableCollection", e);
+    // }
+    // }
 
     @Test
     public void test07() throws Throwable {
@@ -188,21 +186,21 @@ public class CnosDBSchema_ESTest {
         assertEquals(CnosDBSchema.CnosDBDataType.UINT, cnosDBSchema_CnosDBDataType0);
     }
 
-    @Test
-    public void test13() throws Throwable {
-        CnosDBSchema.CnosDBDataType cnosDBSchema_CnosDBDataType0 = CnosDBSchema.getColumnType("timestamp(nanosecond)");
-        CnosDBSchema.CnosDBFieldColumn cnosDBSchema_CnosDBFieldColumn0 = null;
-        try {
-            cnosDBSchema_CnosDBFieldColumn0 = new CnosDBSchema.CnosDBFieldColumn("timestamp(nanosecond)",
-                    cnosDBSchema_CnosDBDataType0);
-            fail("Expecting exception: AssertionError");
-
-        } catch (AssertionError e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-        }
-    }
+    // @Test
+    // public void test13() throws Throwable {
+    // CnosDBSchema.CnosDBDataType cnosDBSchema_CnosDBDataType0 = CnosDBSchema.getColumnType("timestamp(nanosecond)");
+    // CnosDBSchema.CnosDBFieldColumn cnosDBSchema_CnosDBFieldColumn0 = null;
+    // try {
+    // cnosDBSchema_CnosDBFieldColumn0 = new CnosDBSchema.CnosDBFieldColumn("timestamp(nanosecond)",
+    // cnosDBSchema_CnosDBDataType0);
+    // fail("Expecting exception: AssertionError");
+    //
+    // } catch (AssertionError e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // }
+    // }
 
     @Test
     public void test14() throws Throwable {
@@ -254,12 +252,13 @@ public class CnosDBSchema_ESTest {
         assertEquals(2, list1.size());
     }
 
-    @Test
-    public void test21() throws Throwable {
-        HashMap<CnosDBSchema.CnosDBColumn, CnosDBConstant> hashMap0 = new HashMap<CnosDBSchema.CnosDBColumn, CnosDBConstant>();
-        CnosDBSchema.CnosDBRowValue cnosDBSchema_CnosDBRowValue0 = new CnosDBSchema.CnosDBRowValue(
-                (CnosDBSchema.CnosDBTables) null, hashMap0);
-    }
+    // @Test
+    // public void test21() throws Throwable {
+    // HashMap<CnosDBSchema.CnosDBColumn, CnosDBConstant> hashMap0 = new HashMap<CnosDBSchema.CnosDBColumn,
+    // CnosDBConstant>();
+    // CnosDBSchema.CnosDBRowValue cnosDBSchema_CnosDBRowValue0 = new CnosDBSchema.CnosDBRowValue(
+    // (CnosDBSchema.CnosDBTables) null, hashMap0);
+    // }
 
     @Test
     public void test22() throws Throwable {

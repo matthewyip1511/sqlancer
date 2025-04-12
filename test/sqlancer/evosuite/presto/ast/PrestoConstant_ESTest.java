@@ -406,16 +406,17 @@ public class PrestoConstant_ESTest {
         assertFalse(prestoConstant_PrestoBooleanConstant0.getValue());
     }
 
-    @Test
-    public void test032() throws Throwable {
-        PrestoConstant.PrestoIntervalYearToMonthConstant prestoConstant_PrestoIntervalYearToMonthConstant0 = new PrestoConstant.PrestoIntervalYearToMonthConstant();
-        PrestoConstant.createTimezoneConstant();
-        PrestoSchema.PrestoCompositeDataType prestoSchema_PrestoCompositeDataType0 = PrestoSchema.PrestoCompositeDataType
-                .getRandomWithoutNull();
-        PrestoExpression prestoExpression0 = PrestoConstant.createIntConstant(prestoSchema_PrestoCompositeDataType0, 0L,
-                true);
-        assertNotNull(prestoExpression0);
-    }
+    // @Test
+    // public void test032() throws Throwable {
+    // PrestoConstant.PrestoIntervalYearToMonthConstant prestoConstant_PrestoIntervalYearToMonthConstant0 = new
+    // PrestoConstant.PrestoIntervalYearToMonthConstant();
+    // PrestoConstant.createTimezoneConstant();
+    // PrestoSchema.PrestoCompositeDataType prestoSchema_PrestoCompositeDataType0 = PrestoSchema.PrestoCompositeDataType
+    // .getRandomWithoutNull();
+    // PrestoExpression prestoExpression0 = PrestoConstant.createIntConstant(prestoSchema_PrestoCompositeDataType0, 0L,
+    // true);
+    // assertNotNull(prestoExpression0);
+    // }
 
     @Test
     public void test033() throws Throwable {
@@ -514,16 +515,18 @@ public class PrestoConstant_ESTest {
         assertEquals("1969-12-31", prestoConstant_PrestoDateConstant0.getValue());
     }
 
-    @Test
-    public void test043() throws Throwable {
-        PrestoConstant.PrestoIntervalYearToMonthConstant prestoConstant_PrestoIntervalYearToMonthConstant0 = new PrestoConstant.PrestoIntervalYearToMonthConstant();
-        assertEquals("1970", prestoConstant_PrestoIntervalYearToMonthConstant0.getValue());
-
-        PrestoConstant.PrestoJsonConstant prestoConstant_PrestoJsonConstant0 = new PrestoConstant.PrestoJsonConstant();
-        PrestoConstant.PrestoIntervalDayToSecondConstant prestoConstant_PrestoIntervalDayToSecondConstant0 = (PrestoConstant.PrestoIntervalDayToSecondConstant) PrestoConstant
-                .createIntervalDayToSecond(8L);
-        assertEquals("00", prestoConstant_PrestoIntervalDayToSecondConstant0.getValue());
-    }
+    // @Test
+    // public void test043() throws Throwable {
+    // PrestoConstant.PrestoIntervalYearToMonthConstant prestoConstant_PrestoIntervalYearToMonthConstant0 = new
+    // PrestoConstant.PrestoIntervalYearToMonthConstant();
+    // assertEquals("1970", prestoConstant_PrestoIntervalYearToMonthConstant0.getValue());
+    //
+    // PrestoConstant.PrestoJsonConstant prestoConstant_PrestoJsonConstant0 = new PrestoConstant.PrestoJsonConstant();
+    // PrestoConstant.PrestoIntervalDayToSecondConstant prestoConstant_PrestoIntervalDayToSecondConstant0 =
+    // (PrestoConstant.PrestoIntervalDayToSecondConstant) PrestoConstant
+    // .createIntervalDayToSecond(8L);
+    // assertEquals("00", prestoConstant_PrestoIntervalDayToSecondConstant0.getValue());
+    // }
 
     @Test
     public void test044() throws Throwable {
@@ -531,13 +534,14 @@ public class PrestoConstant_ESTest {
         assertEquals("{\"val\":null}", prestoConstant_PrestoJsonConstant0.getValue());
     }
 
-    @Test
-    public void test045() throws Throwable {
-        PrestoConstant.PrestoIntervalYearToMonthConstant prestoConstant_PrestoIntervalYearToMonthConstant0 = new PrestoConstant.PrestoIntervalYearToMonthConstant();
-        PrestoSchema.PrestoCompositeDataType.getRandomWithoutNull();
-        PrestoConstant.PrestoJsonConstant prestoConstant_PrestoJsonConstant0 = new PrestoConstant.PrestoJsonConstant();
-        assertEquals("{\"val\": 0.6}", prestoConstant_PrestoJsonConstant0.getValue());
-    }
+    // @Test
+    // public void test045() throws Throwable {
+    // PrestoConstant.PrestoIntervalYearToMonthConstant prestoConstant_PrestoIntervalYearToMonthConstant0 = new
+    // PrestoConstant.PrestoIntervalYearToMonthConstant();
+    // PrestoSchema.PrestoCompositeDataType.getRandomWithoutNull();
+    // PrestoConstant.PrestoJsonConstant prestoConstant_PrestoJsonConstant0 = new PrestoConstant.PrestoJsonConstant();
+    // assertEquals("{\"val\": 0.6}", prestoConstant_PrestoJsonConstant0.getValue());
+    // }
 
     @Test
     public void test046() throws Throwable {

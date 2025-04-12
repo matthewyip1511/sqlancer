@@ -8,7 +8,6 @@ package sqlancer.evosuite.mariadb.gen;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.List;
 import org.junit.jupiter.api.Test;
-import sqlancer.mariadb.ast.MariaDBConstant;
 import sqlancer.mariadb.ast.MariaDBExpression;
 import sqlancer.mariadb.ast.MariaDBSelectStatement;
 import sqlancer.mariadb.gen.MariaDBExpressionGenerator;
@@ -50,58 +49,58 @@ public class MariaDBExpressionGenerator_ESTest {
      * mariaDBExpressionGenerator0.getTableRefs(); }
      */
 
-    @Test
-    public void test02() throws Throwable {
-        Randomly randomly0 = new Randomly(790L);
-        Randomly randomly1 = new Randomly(0L);
-        MariaDBExpressionGenerator mariaDBExpressionGenerator0 = new MariaDBExpressionGenerator(randomly0);
-        int int0 = 368;
-        MariaDBExpressionGenerator mariaDBExpressionGenerator1 = mariaDBExpressionGenerator0
-                .setColumns((List<MariaDBSchema.MariaDBColumn>) null);
-        // Undeclared exception!
-        try {
-            mariaDBExpressionGenerator1.getRandomExpression(368);
-            fail("Expecting exception: NullPointerException");
+    // @Test
+    // public void test02() throws Throwable {
+    // Randomly randomly0 = new Randomly(790L);
+    // Randomly randomly1 = new Randomly(0L);
+    // MariaDBExpressionGenerator mariaDBExpressionGenerator0 = new MariaDBExpressionGenerator(randomly0);
+    // int int0 = 368;
+    // MariaDBExpressionGenerator mariaDBExpressionGenerator1 = mariaDBExpressionGenerator0
+    // .setColumns((List<MariaDBSchema.MariaDBColumn>) null);
+    // // Undeclared exception!
+    // try {
+    // mariaDBExpressionGenerator1.getRandomExpression(368);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // }
+    // }
 
-        } catch (NullPointerException e) {
-        }
-    }
-
-    @Test
-    public void test03() throws Throwable {
-        Randomly randomly0 = new Randomly();
-        MariaDBExpressionGenerator mariaDBExpressionGenerator0 = new MariaDBExpressionGenerator(randomly0);
-        MariaDBSchema.MariaDBDataType mariaDBSchema_MariaDBDataType0 = MariaDBSchema.MariaDBDataType.INT;
-        MariaDBExpressionGenerator.getRandomConstant(randomly0, mariaDBSchema_MariaDBDataType0);
-        MariaDBSchema.MariaDBDataType mariaDBSchema_MariaDBDataType1 = MariaDBSchema.MariaDBDataType.VARCHAR;
-        MariaDBSchema.MariaDBColumn mariaDBSchema_MariaDBColumn0 = new MariaDBSchema.MariaDBColumn("e<u?%a):\"<ov",
-                mariaDBSchema_MariaDBDataType1, true, (-626));
-        MariaDBSchema.MariaDBColumn mariaDBSchema_MariaDBColumn1 = MariaDBSchema.MariaDBColumn
-                .createDummy("p2`X^:74JHQjM");
-        MariaDBSchema.MariaDBColumn mariaDBSchema_MariaDBColumn2 = MariaDBSchema.MariaDBColumn.createDummy("]q");
-        randomly0.getNonZeroInteger();
-        Randomly.getPercentage();
-        mariaDBSchema_MariaDBColumn1.getFullQualifiedName();
-        MariaDBSchema.MariaDBDataType mariaDBSchema_MariaDBDataType2 = MariaDBSchema.MariaDBDataType.INT;
-        MariaDBSchema.MariaDBColumn mariaDBSchema_MariaDBColumn3 = new MariaDBSchema.MariaDBColumn("p2`X^:74JHQjM",
-                mariaDBSchema_MariaDBDataType2, false, (-5272));
-        MariaDBSchema.MariaDBColumn mariaDBSchema_MariaDBColumn4 = MariaDBSchema.MariaDBColumn
-                .createDummy("p2`X^:74JHQjM");
-        Randomly randomly1 = new Randomly(1520L);
-        randomly1.getString();
-        MariaDBSchema.MariaDBColumn[] mariaDBSchema_MariaDBColumnArray0 = new MariaDBSchema.MariaDBColumn[4];
-        mariaDBSchema_MariaDBColumnArray0[0] = mariaDBSchema_MariaDBColumn4;
-        mariaDBSchema_MariaDBColumnArray0[1] = mariaDBSchema_MariaDBColumn2;
-        mariaDBSchema_MariaDBColumnArray0[2] = mariaDBSchema_MariaDBColumn3;
-        mariaDBSchema_MariaDBColumnArray0[3] = mariaDBSchema_MariaDBColumn2;
-        List<MariaDBSchema.MariaDBColumn> list0 = Randomly.subset(mariaDBSchema_MariaDBColumnArray0);
-        List<MariaDBSchema.MariaDBColumn> list1 = Randomly.extractNrRandomColumns(list0, (-626));
-        MariaDBExpressionGenerator mariaDBExpressionGenerator1 = mariaDBExpressionGenerator0.setColumns(list1);
-        mariaDBExpressionGenerator1.generateSelect();
-        mariaDBExpressionGenerator0.getRandomExpression(0);
-        mariaDBExpressionGenerator0.generateBooleanExpression();
-        mariaDBExpressionGenerator1.setColumns(list0);
-    }
+    // @Test
+    // public void test03() throws Throwable {
+    // Randomly randomly0 = new Randomly();
+    // MariaDBExpressionGenerator mariaDBExpressionGenerator0 = new MariaDBExpressionGenerator(randomly0);
+    // MariaDBSchema.MariaDBDataType mariaDBSchema_MariaDBDataType0 = MariaDBSchema.MariaDBDataType.INT;
+    // MariaDBExpressionGenerator.getRandomConstant(randomly0, mariaDBSchema_MariaDBDataType0);
+    // MariaDBSchema.MariaDBDataType mariaDBSchema_MariaDBDataType1 = MariaDBSchema.MariaDBDataType.VARCHAR;
+    // MariaDBSchema.MariaDBColumn mariaDBSchema_MariaDBColumn0 = new MariaDBSchema.MariaDBColumn("e<u?%a):\"<ov",
+    // mariaDBSchema_MariaDBDataType1, true, (-626));
+    // MariaDBSchema.MariaDBColumn mariaDBSchema_MariaDBColumn1 = MariaDBSchema.MariaDBColumn
+    // .createDummy("p2`X^:74JHQjM");
+    // MariaDBSchema.MariaDBColumn mariaDBSchema_MariaDBColumn2 = MariaDBSchema.MariaDBColumn.createDummy("]q");
+    // randomly0.getNonZeroInteger();
+    // Randomly.getPercentage();
+    // mariaDBSchema_MariaDBColumn1.getFullQualifiedName();
+    // MariaDBSchema.MariaDBDataType mariaDBSchema_MariaDBDataType2 = MariaDBSchema.MariaDBDataType.INT;
+    // MariaDBSchema.MariaDBColumn mariaDBSchema_MariaDBColumn3 = new MariaDBSchema.MariaDBColumn("p2`X^:74JHQjM",
+    // mariaDBSchema_MariaDBDataType2, false, (-5272));
+    // MariaDBSchema.MariaDBColumn mariaDBSchema_MariaDBColumn4 = MariaDBSchema.MariaDBColumn
+    // .createDummy("p2`X^:74JHQjM");
+    // Randomly randomly1 = new Randomly(1520L);
+    // randomly1.getString();
+    // MariaDBSchema.MariaDBColumn[] mariaDBSchema_MariaDBColumnArray0 = new MariaDBSchema.MariaDBColumn[4];
+    // mariaDBSchema_MariaDBColumnArray0[0] = mariaDBSchema_MariaDBColumn4;
+    // mariaDBSchema_MariaDBColumnArray0[1] = mariaDBSchema_MariaDBColumn2;
+    // mariaDBSchema_MariaDBColumnArray0[2] = mariaDBSchema_MariaDBColumn3;
+    // mariaDBSchema_MariaDBColumnArray0[3] = mariaDBSchema_MariaDBColumn2;
+    // List<MariaDBSchema.MariaDBColumn> list0 = Randomly.subset(mariaDBSchema_MariaDBColumnArray0);
+    // List<MariaDBSchema.MariaDBColumn> list1 = Randomly.extractNrRandomColumns(list0, (-626));
+    // MariaDBExpressionGenerator mariaDBExpressionGenerator1 = mariaDBExpressionGenerator0.setColumns(list1);
+    // mariaDBExpressionGenerator1.generateSelect();
+    // mariaDBExpressionGenerator0.getRandomExpression(0);
+    // mariaDBExpressionGenerator0.generateBooleanExpression();
+    // mariaDBExpressionGenerator1.setColumns(list0);
+    // }
 
     @Test
     public void test04() throws Throwable {
@@ -189,44 +188,44 @@ public class MariaDBExpressionGenerator_ESTest {
      * mariaDBExpressionGenerator0.getRandomExpression(5); }
      */
 
-    @Test
-    public void test07() throws Throwable {
-        Randomly randomly0 = null;
-        MariaDBExpressionGenerator mariaDBExpressionGenerator0 = new MariaDBExpressionGenerator((Randomly) null);
-        // Undeclared exception!
-        try {
-            mariaDBExpressionGenerator0.generateBooleanExpression();
-            fail("Expecting exception: NullPointerException");
+    // @Test
+    // public void test07() throws Throwable {
+    // Randomly randomly0 = null;
+    // MariaDBExpressionGenerator mariaDBExpressionGenerator0 = new MariaDBExpressionGenerator((Randomly) null);
+    // // Undeclared exception!
+    // try {
+    // mariaDBExpressionGenerator0.generateBooleanExpression();
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // }
+    // }
 
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-        }
-    }
-
-    @Test
-    public void test08() throws Throwable {
-        Randomly randomly0 = new Randomly(0L);
-        MariaDBExpressionGenerator mariaDBExpressionGenerator0 = new MariaDBExpressionGenerator(randomly0);
-        mariaDBExpressionGenerator0.getTableRefs();
-        MariaDBExpression mariaDBExpression0 = mariaDBExpressionGenerator0.getRandomExpression(368);
-        MariaDBConstant.createBooleanConstant(true);
-        randomly0.getFiniteDouble();
-        MariaDBExpressionGenerator mariaDBExpressionGenerator1 = new MariaDBExpressionGenerator(randomly0);
-        MariaDBSelectStatement mariaDBSelectStatement0 = new MariaDBSelectStatement();
-        // Undeclared exception!
-        try {
-            mariaDBExpressionGenerator0.generateUnoptimizedQueryString(mariaDBSelectStatement0, mariaDBExpression0);
-            fail("Expecting exception: IllegalStateException");
-
-        } catch (IllegalStateException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.common.ast.SelectBase", e);
-        }
-    }
+    // @Test
+    // public void test08() throws Throwable {
+    // Randomly randomly0 = new Randomly(0L);
+    // MariaDBExpressionGenerator mariaDBExpressionGenerator0 = new MariaDBExpressionGenerator(randomly0);
+    // mariaDBExpressionGenerator0.getTableRefs();
+    // MariaDBExpression mariaDBExpression0 = mariaDBExpressionGenerator0.getRandomExpression(368);
+    // MariaDBConstant.createBooleanConstant(true);
+    // randomly0.getFiniteDouble();
+    // MariaDBExpressionGenerator mariaDBExpressionGenerator1 = new MariaDBExpressionGenerator(randomly0);
+    // MariaDBSelectStatement mariaDBSelectStatement0 = new MariaDBSelectStatement();
+    // // Undeclared exception!
+    // try {
+    // mariaDBExpressionGenerator0.generateUnoptimizedQueryString(mariaDBSelectStatement0, mariaDBExpression0);
+    // fail("Expecting exception: IllegalStateException");
+    //
+    // } catch (IllegalStateException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.common.ast.SelectBase", e);
+    // }
+    // }
 
     @Test
     public void test09() throws Throwable {

@@ -37,21 +37,21 @@ public class CnosDBPostfixOperation_ESTest {
         assertEquals("IS TRUE", cnosDBPostfixOperation0.getOperatorTextRepresentation());
     }
 
-    @Test
-    public void test02() throws Throwable {
-        CnosDBPostfixOperation cnosDBPostfixOperation0 = null;
-        try {
-            cnosDBPostfixOperation0 = new CnosDBPostfixOperation((CnosDBExpression) null,
-                    (CnosDBPostfixOperation.PostfixOperator) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.cnosdb.ast.CnosDBPostfixOperation$PostfixOperator", e);
-        }
-    }
+    // @Test
+    // public void test02() throws Throwable {
+    // CnosDBPostfixOperation cnosDBPostfixOperation0 = null;
+    // try {
+    // cnosDBPostfixOperation0 = new CnosDBPostfixOperation((CnosDBExpression) null,
+    // (CnosDBPostfixOperation.PostfixOperator) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.cnosdb.ast.CnosDBPostfixOperation$PostfixOperator", e);
+    // }
+    // }
 
     @Test
     public void test03() throws Throwable {

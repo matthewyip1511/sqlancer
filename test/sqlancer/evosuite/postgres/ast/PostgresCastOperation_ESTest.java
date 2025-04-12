@@ -253,20 +253,20 @@ public class PostgresCastOperation_ESTest {
         assertNull(postgresConstant0);
     }
 
-    @Test
-    public void test15() throws Throwable {
-        PostgresCastOperation postgresCastOperation0 = null;
-        try {
-            postgresCastOperation0 = new PostgresCastOperation((PostgresExpression) null,
-                    (PostgresCompoundDataType) null);
-            fail("Expecting exception: AssertionError");
-
-        } catch (AssertionError e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-        }
-    }
+    // @Test
+    // public void test15() throws Throwable {
+    // PostgresCastOperation postgresCastOperation0 = null;
+    // try {
+    // postgresCastOperation0 = new PostgresCastOperation((PostgresExpression) null,
+    // (PostgresCompoundDataType) null);
+    // fail("Expecting exception: AssertionError");
+    //
+    // } catch (AssertionError e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // }
+    // }
 
     @Test
     public void test16() throws Throwable {

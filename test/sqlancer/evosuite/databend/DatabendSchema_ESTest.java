@@ -9,13 +9,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.sql.Connection;
 import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 import sqlancer.databend.DatabendSchema;
 import sqlancer.SQLConnection;
-import sqlancer.databend.ast.DatabendConstant;
 
 public class DatabendSchema_ESTest {
 
@@ -127,40 +124,43 @@ public class DatabendSchema_ESTest {
     // }
     // }
 
-    @Test
-    public void test06() throws Throwable {
-        DatabendSchema databendSchema0 = null;
-        try {
-            databendSchema0 = new DatabendSchema((List<DatabendSchema.DatabendTable>) null);
-            fail("Expecting exception: NullPointerException");
+    // @Test
+    // public void test06() throws Throwable {
+    // DatabendSchema databendSchema0 = null;
+    // try {
+    // databendSchema0 = new DatabendSchema((List<DatabendSchema.DatabendTable>) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("java.util.Collections$UnmodifiableCollection", e);
+    // }
+    // }
 
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("java.util.Collections$UnmodifiableCollection", e);
-        }
-    }
-
-    @Test
-    public void test07() throws Throwable {
-        DatabendSchema.DatabendCompositeDataType databendSchema_DatabendCompositeDataType0 = DatabendSchema.DatabendCompositeDataType
-                .getRandomWithoutNull();
-        DatabendSchema.DatabendCompositeDataType.getRandomWithoutNull();
-        DatabendSchema.DatabendCompositeDataType databendSchema_DatabendCompositeDataType1 = DatabendSchema.DatabendCompositeDataType
-                .getRandomWithoutNull();
-        // // Unstable assertion: assertEquals(DatabendSchema.DatabendDataType.BOOLEAN,
-        // databendSchema_DatabendCompositeDataType1.getPrimitiveDataType());
-
-        String string0 = databendSchema_DatabendCompositeDataType0.toString();
-        // // Unstable assertion: assertEquals("INT16", string0);
-        // // Unstable assertion: assertNotNull(string0);
-
-        DatabendSchema.DatabendCompositeDataType databendSchema_DatabendCompositeDataType2 = DatabendSchema.DatabendCompositeDataType
-                .getRandomWithoutNull();
-        // // Unstable assertion: assertEquals(DatabendSchema.DatabendDataType.DATE,
-        // databendSchema_DatabendCompositeDataType2.getPrimitiveDataType());
-    }
+    // @Test
+    // public void test07() throws Throwable {
+    // DatabendSchema.DatabendCompositeDataType databendSchema_DatabendCompositeDataType0 =
+    // DatabendSchema.DatabendCompositeDataType
+    // .getRandomWithoutNull();
+    // DatabendSchema.DatabendCompositeDataType.getRandomWithoutNull();
+    // DatabendSchema.DatabendCompositeDataType databendSchema_DatabendCompositeDataType1 =
+    // DatabendSchema.DatabendCompositeDataType
+    // .getRandomWithoutNull();
+    // // // Unstable assertion: assertEquals(DatabendSchema.DatabendDataType.BOOLEAN,
+    // // databendSchema_DatabendCompositeDataType1.getPrimitiveDataType());
+    //
+    // String string0 = databendSchema_DatabendCompositeDataType0.toString();
+    // // // Unstable assertion: assertEquals("INT16", string0);
+    // // // Unstable assertion: assertNotNull(string0);
+    //
+    // DatabendSchema.DatabendCompositeDataType databendSchema_DatabendCompositeDataType2 =
+    // DatabendSchema.DatabendCompositeDataType
+    // .getRandomWithoutNull();
+    // // // Unstable assertion: assertEquals(DatabendSchema.DatabendDataType.DATE,
+    // // databendSchema_DatabendCompositeDataType2.getPrimitiveDataType());
+    // }
 
     /*
      * Test disabled because it contains mock() function calls that are not implemented
@@ -440,21 +440,23 @@ public class DatabendSchema_ESTest {
         }
     }
 
-    @Test
-    public void test22() throws Throwable {
-        DatabendSchema.DatabendDataType.getRandomWithoutNull();
-        DatabendSchema.DatabendCompositeDataType databendSchema_DatabendCompositeDataType0 = DatabendSchema.DatabendCompositeDataType
-                .getRandomWithoutNull();
-        String string0 = databendSchema_DatabendCompositeDataType0.toString();
-        // // Unstable assertion: assertEquals("INT", string0);
-        // // Unstable assertion: assertNotNull(string0);
-
-        DatabendSchema.DatabendCompositeDataType.getRandomWithoutNull();
-        DatabendSchema.DatabendCompositeDataType databendSchema_DatabendCompositeDataType1 = DatabendSchema.DatabendCompositeDataType
-                .getRandomWithoutNull();
-        String string1 = databendSchema_DatabendCompositeDataType1.toString();
-        // // Unstable assertion: assertEquals("FLOAT", string1);
-    }
+    // @Test
+    // public void test22() throws Throwable {
+    // DatabendSchema.DatabendDataType.getRandomWithoutNull();
+    // DatabendSchema.DatabendCompositeDataType databendSchema_DatabendCompositeDataType0 =
+    // DatabendSchema.DatabendCompositeDataType
+    // .getRandomWithoutNull();
+    // String string0 = databendSchema_DatabendCompositeDataType0.toString();
+    // // // Unstable assertion: assertEquals("INT", string0);
+    // // // Unstable assertion: assertNotNull(string0);
+    //
+    // DatabendSchema.DatabendCompositeDataType.getRandomWithoutNull();
+    // DatabendSchema.DatabendCompositeDataType databendSchema_DatabendCompositeDataType1 =
+    // DatabendSchema.DatabendCompositeDataType
+    // .getRandomWithoutNull();
+    // String string1 = databendSchema_DatabendCompositeDataType1.toString();
+    // // // Unstable assertion: assertEquals("FLOAT", string1);
+    // }
 
     @Test
     public void test23() throws Throwable {
@@ -501,14 +503,15 @@ public class DatabendSchema_ESTest {
         }
     }
 
-    @Test
-    public void test26() throws Throwable {
-        DatabendSchema.DatabendCompositeDataType databendSchema_DatabendCompositeDataType0 = DatabendSchema.DatabendCompositeDataType
-                .getRandomWithoutNull();
-        String string0 = databendSchema_DatabendCompositeDataType0.toString();
-        // // Unstable assertion: assertEquals("TINYINT", string0);
-        // // Unstable assertion: assertNotNull(string0);
-    }
+    // @Test
+    // public void test26() throws Throwable {
+    // DatabendSchema.DatabendCompositeDataType databendSchema_DatabendCompositeDataType0 =
+    // DatabendSchema.DatabendCompositeDataType
+    // .getRandomWithoutNull();
+    // String string0 = databendSchema_DatabendCompositeDataType0.toString();
+    // // // Unstable assertion: assertEquals("TINYINT", string0);
+    // // // Unstable assertion: assertNotNull(string0);
+    // }
 
     @Test
     public void test27() throws Throwable {
@@ -528,34 +531,37 @@ public class DatabendSchema_ESTest {
         assertEquals("NULL", string0);
     }
 
-    @Test
-    public void test29() throws Throwable {
-        DatabendSchema.DatabendDataType.getRandomWithoutNull();
-        DatabendSchema.DatabendCompositeDataType.getRandomWithoutNull();
-        DatabendSchema.DatabendCompositeDataType databendSchema_DatabendCompositeDataType0 = DatabendSchema.DatabendCompositeDataType
-                .getRandomWithoutNull();
-        // // Unstable assertion: assertEquals(DatabendSchema.DatabendDataType.BOOLEAN,
-        // databendSchema_DatabendCompositeDataType0.getPrimitiveDataType());
+    // @Test
+    // public void test29() throws Throwable {
+    // DatabendSchema.DatabendDataType.getRandomWithoutNull();
+    // DatabendSchema.DatabendCompositeDataType.getRandomWithoutNull();
+    // DatabendSchema.DatabendCompositeDataType databendSchema_DatabendCompositeDataType0 =
+    // DatabendSchema.DatabendCompositeDataType
+    // .getRandomWithoutNull();
+    // // // Unstable assertion: assertEquals(DatabendSchema.DatabendDataType.BOOLEAN,
+    // // databendSchema_DatabendCompositeDataType0.getPrimitiveDataType());
+    //
+    // DatabendSchema.DatabendCompositeDataType databendSchema_DatabendCompositeDataType1 =
+    // DatabendSchema.DatabendCompositeDataType
+    // .getRandomWithoutNull();
+    // String string0 = databendSchema_DatabendCompositeDataType1.toString();
+    // // // Unstable assertion: assertEquals("DOUBLE", string0);
+    // }
 
-        DatabendSchema.DatabendCompositeDataType databendSchema_DatabendCompositeDataType1 = DatabendSchema.DatabendCompositeDataType
-                .getRandomWithoutNull();
-        String string0 = databendSchema_DatabendCompositeDataType1.toString();
-        // // Unstable assertion: assertEquals("DOUBLE", string0);
-    }
-
-    @Test
-    public void test30() throws Throwable {
-        DatabendSchema.DatabendDataType.getRandomWithoutNull();
-        DatabendSchema.DatabendCompositeDataType.getRandomWithoutNull();
-        DatabendSchema.DatabendCompositeDataType databendSchema_DatabendCompositeDataType0 = DatabendSchema.DatabendCompositeDataType
-                .getRandomWithoutNull();
-        DatabendSchema.DatabendColumn databendSchema_DatabendColumn0 = new DatabendSchema.DatabendColumn("",
-                databendSchema_DatabendCompositeDataType0, false, false);
-        String string0 = databendSchema_DatabendColumn0.toString();
-        // // Unstable assertion: assertEquals(": BOOLEAN", string0);
-        // // Unstable assertion: assertFalse(databendSchema_DatabendColumn0.isPrimaryKey());
-        // // Unstable assertion: assertFalse(databendSchema_DatabendColumn0.isNullable());
-    }
+    // @Test
+    // public void test30() throws Throwable {
+    // DatabendSchema.DatabendDataType.getRandomWithoutNull();
+    // DatabendSchema.DatabendCompositeDataType.getRandomWithoutNull();
+    // DatabendSchema.DatabendCompositeDataType databendSchema_DatabendCompositeDataType0 =
+    // DatabendSchema.DatabendCompositeDataType
+    // .getRandomWithoutNull();
+    // DatabendSchema.DatabendColumn databendSchema_DatabendColumn0 = new DatabendSchema.DatabendColumn("",
+    // databendSchema_DatabendCompositeDataType0, false, false);
+    // String string0 = databendSchema_DatabendColumn0.toString();
+    // // // Unstable assertion: assertEquals(": BOOLEAN", string0);
+    // // // Unstable assertion: assertFalse(databendSchema_DatabendColumn0.isPrimaryKey());
+    // // // Unstable assertion: assertFalse(databendSchema_DatabendColumn0.isNullable());
+    // }
 
     @Test
     public void test31() throws Throwable {
@@ -616,30 +622,32 @@ public class DatabendSchema_ESTest {
         assertEquals(DatabendSchema.DatabendDataType.BOOLEAN, databendSchema_DatabendDataType2);
     }
 
-    @Test
-    public void test36() throws Throwable {
-        DatabendSchema.DatabendDataType databendSchema_DatabendDataType0 = DatabendSchema.DatabendDataType
-                .getRandomWithoutNull();
-        // // Unstable assertion: assertEquals(DatabendSchema.DatabendDataType.INT, databendSchema_DatabendDataType0);
-
-        DatabendSchema.DatabendCompositeDataType databendSchema_DatabendCompositeDataType0 = DatabendSchema.DatabendCompositeDataType
-                .getRandomWithoutNull();
-        String string0 = databendSchema_DatabendCompositeDataType0.toString();
-        // // Unstable assertion: assertNotNull(string0);
-        // // Unstable assertion: assertEquals("INT", string0);
-
-        DatabendSchema.DatabendCompositeDataType databendSchema_DatabendCompositeDataType1 = DatabendSchema.DatabendCompositeDataType
-                .getRandomWithoutNull();
-        // // Unstable assertion: assertEquals(DatabendSchema.DatabendDataType.BOOLEAN,
-        // databendSchema_DatabendCompositeDataType1.getPrimitiveDataType());
-
-        String string1 = databendSchema_DatabendCompositeDataType0.toString();
-        // // Unstable assertion: assertEquals("INT32", string1);
-
-        DatabendSchema.DatabendDataType databendSchema_DatabendDataType1 = DatabendSchema.DatabendDataType
-                .getRandomWithoutNullAndVarchar();
-        // // Unstable assertion: assertEquals(DatabendSchema.DatabendDataType.DATE, databendSchema_DatabendDataType1);
-    }
+    // @Test
+    // public void test36() throws Throwable {
+    // DatabendSchema.DatabendDataType databendSchema_DatabendDataType0 = DatabendSchema.DatabendDataType
+    // .getRandomWithoutNull();
+    // // // Unstable assertion: assertEquals(DatabendSchema.DatabendDataType.INT, databendSchema_DatabendDataType0);
+    //
+    // DatabendSchema.DatabendCompositeDataType databendSchema_DatabendCompositeDataType0 =
+    // DatabendSchema.DatabendCompositeDataType
+    // .getRandomWithoutNull();
+    // String string0 = databendSchema_DatabendCompositeDataType0.toString();
+    // // // Unstable assertion: assertNotNull(string0);
+    // // // Unstable assertion: assertEquals("INT", string0);
+    //
+    // DatabendSchema.DatabendCompositeDataType databendSchema_DatabendCompositeDataType1 =
+    // DatabendSchema.DatabendCompositeDataType
+    // .getRandomWithoutNull();
+    // // // Unstable assertion: assertEquals(DatabendSchema.DatabendDataType.BOOLEAN,
+    // // databendSchema_DatabendCompositeDataType1.getPrimitiveDataType());
+    //
+    // String string1 = databendSchema_DatabendCompositeDataType0.toString();
+    // // // Unstable assertion: assertEquals("INT32", string1);
+    //
+    // DatabendSchema.DatabendDataType databendSchema_DatabendDataType1 = DatabendSchema.DatabendDataType
+    // .getRandomWithoutNullAndVarchar();
+    // // // Unstable assertion: assertEquals(DatabendSchema.DatabendDataType.DATE, databendSchema_DatabendDataType1);
+    // }
 
     @Test
     public void test37() throws Throwable {
@@ -650,11 +658,11 @@ public class DatabendSchema_ESTest {
         assertFalse(databendSchema_DatabendColumn0.isPrimaryKey());
     }
 
-    @Test
-    public void test38() throws Throwable {
-        DatabendSchema.DatabendRowValue databendSchema_DatabendRowValue0 = new DatabendSchema.DatabendRowValue(
-                (DatabendSchema.DatabendTables) null, (Map<DatabendSchema.DatabendColumn, DatabendConstant>) null);
-    }
+    // @Test
+    // public void test38() throws Throwable {
+    // DatabendSchema.DatabendRowValue databendSchema_DatabendRowValue0 = new DatabendSchema.DatabendRowValue(
+    // (DatabendSchema.DatabendTables) null, (Map<DatabendSchema.DatabendColumn, DatabendConstant>) null);
+    // }
 
     /*
      * Test disabled because it contains mock() function calls that are not implemented

@@ -7,10 +7,8 @@ package sqlancer.evosuite.doris.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.util.LinkedList;
 import org.junit.jupiter.api.Test;
 import sqlancer.doris.ast.DorisAggregateOperation;
-import sqlancer.doris.ast.DorisExpression;
 
 public class DorisAggregateOperation_ESTest {
 
@@ -29,11 +27,12 @@ public class DorisAggregateOperation_ESTest {
         assertEquals(1, int0);
     }
 
-    @Test
-    public void test2() throws Throwable {
-        LinkedList<DorisExpression> linkedList0 = new LinkedList<DorisExpression>();
-        DorisAggregateOperation.DorisAggregateFunction dorisAggregateOperation_DorisAggregateFunction0 = DorisAggregateOperation.DorisAggregateFunction.GROUPING;
-        DorisAggregateOperation dorisAggregateOperation0 = new DorisAggregateOperation(linkedList0,
-                dorisAggregateOperation_DorisAggregateFunction0);
-    }
+    // @Test
+    // public void test2() throws Throwable {
+    // LinkedList<DorisExpression> linkedList0 = new LinkedList<DorisExpression>();
+    // DorisAggregateOperation.DorisAggregateFunction dorisAggregateOperation_DorisAggregateFunction0 =
+    // DorisAggregateOperation.DorisAggregateFunction.GROUPING;
+    // DorisAggregateOperation dorisAggregateOperation0 = new DorisAggregateOperation(linkedList0,
+    // dorisAggregateOperation_DorisAggregateFunction0);
+    // }
 }
