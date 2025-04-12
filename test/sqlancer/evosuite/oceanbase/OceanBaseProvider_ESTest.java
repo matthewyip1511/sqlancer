@@ -6,6 +6,7 @@
 package sqlancer.evosuite.oceanbase;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.common.query.SQLQueryAdapter;
 import sqlancer.oceanbase.OceanBaseGlobalState;

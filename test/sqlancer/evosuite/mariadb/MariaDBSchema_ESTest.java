@@ -6,13 +6,10 @@
 package sqlancer.evosuite.mariadb;
 
 import static org.junit.jupiter.api.Assertions.*;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
+
 import java.util.function.Function;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.NoSuchElementException;
 import org.junit.jupiter.api.Test;
 import sqlancer.mariadb.MariaDBSchema;
 import sqlancer.SQLConnection;

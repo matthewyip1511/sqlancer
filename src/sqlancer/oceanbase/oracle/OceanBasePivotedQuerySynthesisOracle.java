@@ -127,7 +127,7 @@ public class OceanBasePivotedQuerySynthesisOracle
     }
 
     @Override
-    protected Query<SQLConnection> getContainmentCheckQuery(Query<?> query) throws SQLException {
+    public Query<SQLConnection> getContainmentCheckQuery(Query<?> query) throws SQLException {
         StringBuilder sb = new StringBuilder();
         sb.append("SELECT * FROM ("); // ANOTHER SELECT TO USE ORDER BY without restrictions
         sb.append(query.getUnterminatedQueryString());
@@ -157,7 +157,7 @@ public class OceanBasePivotedQuerySynthesisOracle
     }
 
     @Override
-    protected String getExpectedValues(OceanBaseExpression expr) {
+    public String getExpectedValues(OceanBaseExpression expr) {
         return OceanBaseVisitor.asExpectedValues(expr);
     }
 }

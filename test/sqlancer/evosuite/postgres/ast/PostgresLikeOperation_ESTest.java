@@ -6,7 +6,10 @@
 package sqlancer.evosuite.postgres.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+
+import sqlancer.common.ast.JoinBase;
 import sqlancer.postgres.ast.PostgresConstant;
 import sqlancer.postgres.ast.PostgresExpression;
 import sqlancer.postgres.ast.PostgresJoin;
@@ -104,7 +107,7 @@ public class PostgresLikeOperation_ESTest {
     @Test
     public void test04() throws Throwable {
         PostgresConstant postgresConstant0 = PostgresConstant.createFalse();
-        PostgresJoin.PostgresJoinType postgresJoin_PostgresJoinType0 = PostgresJoin.PostgresJoinType.RIGHT;
+        JoinBase.JoinType postgresJoin_PostgresJoinType0 = JoinBase.JoinType.RIGHT;
         PostgresJoin postgresJoin0 = new PostgresJoin(postgresConstant0, postgresConstant0,
                 postgresJoin_PostgresJoinType0, postgresConstant0);
         PostgresLikeOperation postgresLikeOperation0 = new PostgresLikeOperation(postgresConstant0, postgresJoin0);

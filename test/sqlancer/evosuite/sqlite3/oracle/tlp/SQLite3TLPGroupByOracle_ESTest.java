@@ -6,6 +6,7 @@
 package sqlancer.evosuite.sqlite3.oracle.tlp;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.LinkedList;
 import org.junit.jupiter.api.Test;
 import sqlancer.sqlite3.oracle.tlp.SQLite3TLPGroupByOracle;

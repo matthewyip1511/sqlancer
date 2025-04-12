@@ -5,7 +5,6 @@
 
 package sqlancer.evosuite.presto.ast;
 
-import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import sqlancer.presto.ast.PrestoTableReference;
 import sqlancer.presto.PrestoSchema;

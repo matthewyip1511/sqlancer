@@ -5,9 +5,10 @@
 
 package sqlancer.evosuite.sqlite3;
 
-import sqlancer.sqlite3.SQLite3Options;
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+import sqlancer.sqlite3.SQLite3Options;
 
 public class SQLite3Options_ESTest {
 

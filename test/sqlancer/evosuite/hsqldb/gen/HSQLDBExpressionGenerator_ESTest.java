@@ -6,9 +6,9 @@
 package sqlancer.evosuite.hsqldb.gen;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.LinkedList;
 import java.util.List;
-import org.evosuite.runtime.Random;
 import org.junit.jupiter.api.Test;
 import sqlancer.common.ast.BinaryOperatorNode;
 import sqlancer.common.schema.AbstractTables;

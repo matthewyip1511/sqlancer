@@ -6,8 +6,11 @@
 package sqlancer.evosuite.materialize.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.math.BigDecimal;
 import org.junit.jupiter.api.Test;
+
+import sqlancer.common.ast.JoinBase;
 import sqlancer.materialize.ast.MaterializeBinaryLogicalOperation;
 import sqlancer.materialize.ast.MaterializeConcatOperation;
 import sqlancer.materialize.ast.MaterializeConstant;
@@ -105,7 +108,7 @@ public class MaterializeConcatOperation_ESTest {
     @Test
     public void test04() throws Throwable {
         MaterializeSelect materializeSelect0 = new MaterializeSelect();
-        MaterializeJoin.MaterializeJoinType materializeJoin_MaterializeJoinType0 = MaterializeJoin.MaterializeJoinType.CROSS;
+        JoinBase.JoinType materializeJoin_MaterializeJoinType0 = JoinBase.JoinType.CROSS;
         MaterializeJoin materializeJoin0 = new MaterializeJoin(materializeSelect0, materializeSelect0,
                 materializeJoin_MaterializeJoinType0);
         MaterializeConcatOperation materializeConcatOperation0 = new MaterializeConcatOperation(materializeJoin0,

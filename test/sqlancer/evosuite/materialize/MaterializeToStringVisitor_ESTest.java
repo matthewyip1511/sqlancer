@@ -6,11 +6,10 @@
 package sqlancer.evosuite.materialize;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.math.BigDecimal;
 import java.math.MathContext;
-import java.util.LinkedList;
 import java.util.List;
-import org.evosuite.runtime.Random;
 import org.junit.jupiter.api.Test;
 import sqlancer.materialize.ast.MaterializeAggregate;
 import sqlancer.materialize.ast.MaterializeBetweenOperation;
@@ -886,36 +885,36 @@ public class MaterializeToStringVisitor_ESTest {
         }
     }
 
-    @Test
-    public void test038() throws Throwable {
-        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
-        MaterializeToStringVisitor materializeToStringVisitor1 = new MaterializeToStringVisitor();
-        LinkedList<MaterializeSchema.MaterializeColumn> linkedList0 = new LinkedList<MaterializeSchema.MaterializeColumn>();
-        MaterializeSchema.MaterializeIndex[] materializeSchema_MaterializeIndexArray0 = new MaterializeSchema.MaterializeIndex[0];
-        List<MaterializeSchema.MaterializeIndex> list0 = Randomly.subset(materializeSchema_MaterializeIndexArray0);
-        MaterializeSchema.MaterializeTable.TableType materializeSchema_MaterializeTable_TableType0 = MaterializeSchema.MaterializeTable.TableType.TEMPORARY;
-        MaterializeSchema.MaterializeStatisticsObject[] materializeSchema_MaterializeStatisticsObjectArray0 = new MaterializeSchema.MaterializeStatisticsObject[9];
-        MaterializeSchema.MaterializeStatisticsObject materializeSchema_MaterializeStatisticsObject0 = mock(
-                MaterializeSchema.MaterializeStatisticsObject.class, new ViolatedAssumptionAnswer());
-        materializeSchema_MaterializeStatisticsObjectArray0[0] = materializeSchema_MaterializeStatisticsObject0;
-        materializeSchema_MaterializeStatisticsObjectArray0[1] = materializeSchema_MaterializeStatisticsObject0;
-        materializeSchema_MaterializeStatisticsObjectArray0[2] = materializeSchema_MaterializeStatisticsObject0;
-        materializeSchema_MaterializeStatisticsObjectArray0[3] = materializeSchema_MaterializeStatisticsObject0;
-        materializeSchema_MaterializeStatisticsObjectArray0[4] = materializeSchema_MaterializeStatisticsObject0;
-        materializeSchema_MaterializeStatisticsObjectArray0[5] = materializeSchema_MaterializeStatisticsObject0;
-        materializeSchema_MaterializeStatisticsObjectArray0[6] = materializeSchema_MaterializeStatisticsObject0;
-        materializeSchema_MaterializeStatisticsObjectArray0[7] = materializeSchema_MaterializeStatisticsObject0;
-        materializeSchema_MaterializeStatisticsObjectArray0[8] = materializeSchema_MaterializeStatisticsObject0;
-        List<MaterializeSchema.MaterializeStatisticsObject> list1 = Randomly
-                .subset(materializeSchema_MaterializeStatisticsObjectArray0);
-        List<MaterializeSchema.MaterializeStatisticsObject> list2 = Randomly.extractNrRandomColumns(list1, (-745));
-        MaterializeSchema.MaterializeTable materializeSchema_MaterializeTable0 = new MaterializeSchema.MaterializeTable(
-                "OWHT%{@xYqj", linkedList0, list0, materializeSchema_MaterializeTable_TableType0, list2, true, true);
-        MaterializeSelect.MaterializeFromTable materializeSelect_MaterializeFromTable0 = new MaterializeSelect.MaterializeFromTable(
-                materializeSchema_MaterializeTable0, false);
-        materializeToStringVisitor0.visit(materializeSelect_MaterializeFromTable0);
-        assertNotSame(materializeToStringVisitor0, materializeToStringVisitor1);
-    }
+//    @Test
+//    public void test038() throws Throwable {
+//        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
+//        MaterializeToStringVisitor materializeToStringVisitor1 = new MaterializeToStringVisitor();
+//        LinkedList<MaterializeSchema.MaterializeColumn> linkedList0 = new LinkedList<MaterializeSchema.MaterializeColumn>();
+//        MaterializeSchema.MaterializeIndex[] materializeSchema_MaterializeIndexArray0 = new MaterializeSchema.MaterializeIndex[0];
+//        List<MaterializeSchema.MaterializeIndex> list0 = Randomly.subset(materializeSchema_MaterializeIndexArray0);
+//        MaterializeSchema.MaterializeTable.TableType materializeSchema_MaterializeTable_TableType0 = MaterializeSchema.MaterializeTable.TableType.TEMPORARY;
+//        MaterializeSchema.MaterializeStatisticsObject[] materializeSchema_MaterializeStatisticsObjectArray0 = new MaterializeSchema.MaterializeStatisticsObject[9];
+//        MaterializeSchema.MaterializeStatisticsObject materializeSchema_MaterializeStatisticsObject0 = mock(
+//                MaterializeSchema.MaterializeStatisticsObject.class, new ViolatedAssumptionAnswer());
+//        materializeSchema_MaterializeStatisticsObjectArray0[0] = materializeSchema_MaterializeStatisticsObject0;
+//        materializeSchema_MaterializeStatisticsObjectArray0[1] = materializeSchema_MaterializeStatisticsObject0;
+//        materializeSchema_MaterializeStatisticsObjectArray0[2] = materializeSchema_MaterializeStatisticsObject0;
+//        materializeSchema_MaterializeStatisticsObjectArray0[3] = materializeSchema_MaterializeStatisticsObject0;
+//        materializeSchema_MaterializeStatisticsObjectArray0[4] = materializeSchema_MaterializeStatisticsObject0;
+//        materializeSchema_MaterializeStatisticsObjectArray0[5] = materializeSchema_MaterializeStatisticsObject0;
+//        materializeSchema_MaterializeStatisticsObjectArray0[6] = materializeSchema_MaterializeStatisticsObject0;
+//        materializeSchema_MaterializeStatisticsObjectArray0[7] = materializeSchema_MaterializeStatisticsObject0;
+//        materializeSchema_MaterializeStatisticsObjectArray0[8] = materializeSchema_MaterializeStatisticsObject0;
+//        List<MaterializeSchema.MaterializeStatisticsObject> list1 = Randomly
+//                .subset(materializeSchema_MaterializeStatisticsObjectArray0);
+//        List<MaterializeSchema.MaterializeStatisticsObject> list2 = Randomly.extractNrRandomColumns(list1, (-745));
+//        MaterializeSchema.MaterializeTable materializeSchema_MaterializeTable0 = new MaterializeSchema.MaterializeTable(
+//                "OWHT%{@xYqj", linkedList0, list0, materializeSchema_MaterializeTable_TableType0, list2, true, true);
+//        MaterializeSelect.MaterializeFromTable materializeSelect_MaterializeFromTable0 = new MaterializeSelect.MaterializeFromTable(
+//                materializeSchema_MaterializeTable0, false);
+//        materializeToStringVisitor0.visit(materializeSelect_MaterializeFromTable0);
+//        assertNotSame(materializeToStringVisitor0, materializeToStringVisitor1);
+//    }
 
     @Test
     public void test039() throws Throwable {

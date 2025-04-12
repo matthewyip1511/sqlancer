@@ -43,7 +43,7 @@ public class PrestoQueryPartitioningGroupByTester extends PrestoQueryPartitionin
     }
 
     @Override
-    List<PrestoExpression> generateFetchColumns() {
+    public List<PrestoExpression> generateFetchColumns() {
         return Randomly.nonEmptySubset(targetTables.getColumns()).stream().map(c -> new PrestoColumnReference(c))
                 .collect(Collectors.toList());
     }

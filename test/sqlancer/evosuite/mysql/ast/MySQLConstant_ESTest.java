@@ -6,6 +6,7 @@
 package sqlancer.evosuite.mysql.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.mysql.ast.MySQLCastOperation;
 import sqlancer.mysql.ast.MySQLConstant;
@@ -621,7 +622,7 @@ public class MySQLConstant_ESTest {
         MySQLConstant mySQLConstant0 = MySQLConstant.createStringConstant((String) null);
         MySQLConstant.MySQLTextConstant mySQLConstant_MySQLTextConstant0 = new MySQLConstant.MySQLTextConstant(
                 "bigint");
-        MySQLConstant mySQLConstant1 = mySQLConstant_MySQLTextConstant0.isEquals(mySQLConstant0);
+        MySQLConstant mySQLConstant1 = mySQLConstant0.isEquals(mySQLConstant_MySQLTextConstant0);
         MySQLConstant mySQLConstant2 = mySQLConstant_MySQLTextConstant0.isLessThan(mySQLConstant1);
         // // Unstable assertion: assertTrue(mySQLConstant2.isSigned());
         // // Unstable assertion: assertFalse(mySQLConstant_MySQLTextConstant0.isNull());

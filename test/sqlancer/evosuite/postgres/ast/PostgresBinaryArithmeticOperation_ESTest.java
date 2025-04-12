@@ -6,20 +6,9 @@
 package sqlancer.evosuite.postgres.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
-import java.util.function.Supplier;
 import org.junit.jupiter.api.Test;
-import sqlancer.postgres.ast.PostgresAlias;
 import sqlancer.postgres.ast.PostgresBinaryArithmeticOperation;
 import sqlancer.postgres.ast.PostgresConstant;
-import sqlancer.postgres.ast.PostgresExpression;
-import sqlancer.postgres.ast.PostgresFunction;
-import sqlancer.postgres.ast.PostgresJoin;
-import sqlancer.postgres.ast.PostgresLikeOperation;
-import sqlancer.postgres.ast.PostgresPostfixOperation;
-import sqlancer.postgres.ast.PostgresSelect;
-import sqlancer.postgres.gen.PostgresExpressionGenerator;
-import sqlancer.postgres.PostgresSchema;
-import sqlancer.Randomly;
 
 public class PostgresBinaryArithmeticOperation_ESTest {
 
@@ -75,6 +64,7 @@ public class PostgresBinaryArithmeticOperation_ESTest {
         PostgresConstant postgresConstant0 = postgresBinaryArithmeticOperation0.getExpectedValue();
         assertEquals("1", postgresConstant0.getUnquotedTextRepresentation());
     }
+}
 
 /*
  * Test disabled because it contains mock() function calls that are not implemented

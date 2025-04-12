@@ -6,21 +6,11 @@
 package sqlancer.evosuite.presto;
 
 import static org.junit.jupiter.api.Assertions.*;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.LinkedList;
 import java.util.List;
-import org.evosuite.runtime.Random;
 import org.junit.jupiter.api.Test;
 import sqlancer.presto.PrestoSchema;
-import sqlancer.SQLConnection;
 
 public class PrestoSchema_ESTest {
-
-    private void verifyException(String s, Exception e) {
-    }
 
     @Test
     public void test00() throws Throwable {
@@ -52,7 +42,7 @@ public class PrestoSchema_ESTest {
         List<PrestoSchema.PrestoDataType> list0 = PrestoSchema.PrestoDataType.getOrderableTypes();
         assertEquals(15, list0.size());
     }
-
+}
 /*
  * Test disabled because it contains mock() function calls that are not implemented
  *

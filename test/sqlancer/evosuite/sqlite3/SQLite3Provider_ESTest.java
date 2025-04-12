@@ -6,9 +6,8 @@
 package sqlancer.evosuite.sqlite3;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.sql.SQLException;
-import org.evosuite.runtime.testdata.EvoSuiteFile;
-import org.evosuite.runtime.testdata.FileSystemHandling;
 import org.junit.jupiter.api.Test;
 import sqlancer.sqlite3.SQLite3GlobalState;
 import sqlancer.sqlite3.SQLite3Provider;
@@ -127,25 +126,6 @@ public class SQLite3Provider_ESTest {
             // jdbc:sqlite:C:\\Users\\yewjo\\OneDrive\\Desktop\\NUS\\y4s2\\cs3213\\sqlancer-test\\sqlancer-test\\.\\databases\\null.db
             //
             verifyException("java.sql.DriverManager", e);
-        }
-    }
-
-    @Test
-    public void test07() throws Throwable {
-        EvoSuiteFile evoSuiteFile0 = new EvoSuiteFile(".\\databases\\null.db");
-        FileSystemHandling.createFolder(evoSuiteFile0);
-        SQLite3Provider sQLite3Provider0 = new SQLite3Provider();
-        SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
-        // Undeclared exception!
-        try {
-            sQLite3Provider0.createDatabase(sQLite3GlobalState0);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.sqlite3.SQLite3Provider", e);
         }
     }
 

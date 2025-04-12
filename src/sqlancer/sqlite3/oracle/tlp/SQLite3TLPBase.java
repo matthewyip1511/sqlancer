@@ -26,8 +26,8 @@ public class SQLite3TLPBase extends TernaryLogicPartitioningOracleBase<SQLite3Ex
         implements TestOracle<SQLite3GlobalState> {
 
     SQLite3Schema s;
-    SQLite3Tables targetTables;
-    SQLite3ExpressionGenerator gen;
+    public SQLite3Tables targetTables;
+    public SQLite3ExpressionGenerator gen;
     SQLite3Select select;
 
     public SQLite3TLPBase(SQLite3GlobalState state) {
@@ -52,7 +52,7 @@ public class SQLite3TLPBase extends TernaryLogicPartitioningOracleBase<SQLite3Ex
         select.setWhereClause(null);
     }
 
-    List<SQLite3Expression> generateFetchColumns() {
+    public List<SQLite3Expression> generateFetchColumns() {
         List<SQLite3Expression> columns = new ArrayList<>();
         if (Randomly.getBoolean()) {
             columns.add(new SQLite3ColumnName(SQLite3Column.createDummy("*"), null));
@@ -64,7 +64,7 @@ public class SQLite3TLPBase extends TernaryLogicPartitioningOracleBase<SQLite3Ex
     }
 
     @Override
-    protected ExpressionGenerator<SQLite3Expression> getGen() {
+    public ExpressionGenerator<SQLite3Expression> getGen() {
         return gen;
     }
 

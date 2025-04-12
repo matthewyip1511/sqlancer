@@ -6,7 +6,10 @@
 package sqlancer.evosuite.materialize.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+
+import sqlancer.common.ast.JoinBase;
 import sqlancer.materialize.ast.MaterializeConstant;
 import sqlancer.materialize.ast.MaterializeExpression;
 import sqlancer.materialize.ast.MaterializeFunction;
@@ -97,7 +100,7 @@ public class MaterializePostfixOperation_ESTest {
 
     @Test
     public void test04() throws Throwable {
-        MaterializeJoin.MaterializeJoinType materializeJoin_MaterializeJoinType0 = MaterializeJoin.MaterializeJoinType.CROSS;
+        JoinBase.JoinType materializeJoin_MaterializeJoinType0 = JoinBase.JoinType.CROSS;
         MaterializeJoin materializeJoin0 = new MaterializeJoin((MaterializeExpression) null,
                 (MaterializeExpression) null, materializeJoin_MaterializeJoinType0);
         MaterializePostfixOperation.PostfixOperator materializePostfixOperation_PostfixOperator0 = MaterializePostfixOperation.PostfixOperator.IS_NULL;

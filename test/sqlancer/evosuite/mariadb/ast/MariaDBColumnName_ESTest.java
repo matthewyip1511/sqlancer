@@ -6,6 +6,7 @@
 package sqlancer.evosuite.mariadb.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.mariadb.ast.MariaDBColumnName;
 import sqlancer.mariadb.MariaDBSchema;

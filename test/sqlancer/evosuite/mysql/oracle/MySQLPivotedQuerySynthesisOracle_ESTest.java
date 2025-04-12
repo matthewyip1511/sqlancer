@@ -6,6 +6,7 @@
 package sqlancer.evosuite.mysql.oracle;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.sql.ResultSet;
 import java.util.function.Consumer;
 import org.junit.jupiter.api.Test;

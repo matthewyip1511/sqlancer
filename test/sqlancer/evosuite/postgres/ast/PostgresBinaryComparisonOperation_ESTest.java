@@ -6,7 +6,10 @@
 package sqlancer.evosuite.postgres.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+
+import sqlancer.common.ast.JoinBase;
 import sqlancer.postgres.ast.PostgresBetweenOperation;
 import sqlancer.postgres.ast.PostgresBinaryArithmeticOperation;
 import sqlancer.postgres.ast.PostgresBinaryComparisonOperation;
@@ -92,7 +95,7 @@ public class PostgresBinaryComparisonOperation_ESTest {
 
     @Test
     public void test04() throws Throwable {
-        PostgresJoin.PostgresJoinType postgresJoin_PostgresJoinType0 = PostgresJoin.PostgresJoinType.CROSS;
+        JoinBase.JoinType postgresJoin_PostgresJoinType0 = JoinBase.JoinType.CROSS;
         PostgresJoin postgresJoin0 = new PostgresJoin((PostgresExpression) null, (PostgresExpression) null,
                 postgresJoin_PostgresJoinType0, (PostgresExpression) null);
         PostgresBinaryComparisonOperation.PostgresBinaryComparisonOperator postgresBinaryComparisonOperation_PostgresBinaryComparisonOperator0 = PostgresBinaryComparisonOperation.PostgresBinaryComparisonOperator.IS_DISTINCT;

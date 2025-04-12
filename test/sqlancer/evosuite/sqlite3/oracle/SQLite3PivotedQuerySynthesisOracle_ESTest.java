@@ -6,6 +6,7 @@
 package sqlancer.evosuite.sqlite3.oracle;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.sql.ResultSet;
 import java.util.function.Consumer;
 import org.junit.jupiter.api.Test;
@@ -13,6 +14,7 @@ import sqlancer.common.query.SQLQueryResultCheckAdapter;
 import sqlancer.sqlite3.ast.SQLite3Constant;
 import sqlancer.sqlite3.ast.SQLite3Expression;
 import sqlancer.sqlite3.ast.SQLite3Function;
+import sqlancer.sqlite3.ast.SQLite3MatchOperation;
 import sqlancer.sqlite3.ast.SQLite3Select;
 import sqlancer.sqlite3.ast.SQLite3UnaryOperation;
 import sqlancer.sqlite3.ast.SQLite3WindowFunctionExpression;
@@ -78,7 +80,7 @@ public class SQLite3PivotedQuerySynthesisOracle_ESTest {
         SQLite3UnaryOperation sQLite3UnaryOperation0 = new SQLite3UnaryOperation(sQLite3UnaryOperation_UnaryOperator0,
                 sQLite3Select0);
         sQLite3Select0.setLimitClause((SQLite3Expression) sQLite3UnaryOperation0);
-        SQLite3Expression.MatchOperation sQLite3Expression_MatchOperation0 = new SQLite3Expression.MatchOperation(
+        SQLite3MatchOperation sQLite3Expression_MatchOperation0 = new SQLite3MatchOperation(
                 sQLite3UnaryOperation0, sQLite3Select0);
         // Undeclared exception!
         try {

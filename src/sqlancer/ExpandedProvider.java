@@ -26,7 +26,7 @@ public abstract class ExpandedProvider<G extends SQLGlobalState<O, ? extends Abs
         super(globalClass, optionClass);
     }
 
-    protected static <G extends SQLGlobalState<?, ?>, A extends Enum<A>> int mapActions(G globalState, A action) {
+    public static <G extends SQLGlobalState<?, ?>, A extends Enum<A>> int mapActions(G globalState, A action) {
         Randomly r = globalState.getRandomly();
         int nrPerformed;
         switch (action.name()) { // Use action.name() to handle both enums

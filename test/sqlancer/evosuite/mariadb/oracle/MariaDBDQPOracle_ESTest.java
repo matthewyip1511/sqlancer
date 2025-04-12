@@ -6,6 +6,7 @@
 package sqlancer.evosuite.mariadb.oracle;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.mariadb.MariaDBProvider;
 import sqlancer.mariadb.oracle.MariaDBDQPOracle;

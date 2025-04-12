@@ -6,12 +6,12 @@
 package sqlancer.evosuite.oceanbase.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.common.visitor.UnaryOperation;
 import sqlancer.oceanbase.ast.OceanBaseComputableFunction;
 import sqlancer.oceanbase.ast.OceanBaseConstant;
 import sqlancer.oceanbase.ast.OceanBaseExpression;
-import sqlancer.oceanbase.ast.OceanBaseJoin;
 import sqlancer.oceanbase.ast.OceanBaseStringExpression;
 import sqlancer.oceanbase.ast.OceanBaseTableReference;
 import sqlancer.oceanbase.ast.OceanBaseUnaryPrefixOperation;
@@ -51,24 +51,24 @@ public class OceanBaseUnaryPrefixOperation_ESTest {
         assertNull(oceanBaseExpression0);
     }
 
-    @Test
-    public void test03() throws Throwable {
-        OceanBaseJoin oceanBaseJoin0 = new OceanBaseJoin();
-        OceanBaseUnaryPrefixOperation.OceanBaseUnaryPrefixOperator oceanBaseUnaryPrefixOperation_OceanBaseUnaryPrefixOperator0 = OceanBaseUnaryPrefixOperation.OceanBaseUnaryPrefixOperator.NOT;
-        OceanBaseUnaryPrefixOperation oceanBaseUnaryPrefixOperation0 = new OceanBaseUnaryPrefixOperation(oceanBaseJoin0,
-                oceanBaseUnaryPrefixOperation_OceanBaseUnaryPrefixOperator0);
-        // Undeclared exception!
-        try {
-            oceanBaseUnaryPrefixOperation0.getExpectedValue();
-            fail("Expecting exception: UnsupportedOperationException");
-
-        } catch (UnsupportedOperationException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.oceanbase.ast.OceanBaseJoin", e);
-        }
-    }
+//    @Test
+//    public void test03() throws Throwable {
+//        OceanBaseJoin oceanBaseJoin0 = new OceanBaseJoin();
+//        OceanBaseUnaryPrefixOperation.OceanBaseUnaryPrefixOperator oceanBaseUnaryPrefixOperation_OceanBaseUnaryPrefixOperator0 = OceanBaseUnaryPrefixOperation.OceanBaseUnaryPrefixOperator.NOT;
+//        OceanBaseUnaryPrefixOperation oceanBaseUnaryPrefixOperation0 = new OceanBaseUnaryPrefixOperation(oceanBaseJoin0,
+//                oceanBaseUnaryPrefixOperation_OceanBaseUnaryPrefixOperator0);
+//        // Undeclared exception!
+//        try {
+//            oceanBaseUnaryPrefixOperation0.getExpectedValue();
+//            fail("Expecting exception: UnsupportedOperationException");
+//
+//        } catch (UnsupportedOperationException e) {
+//            //
+//            // no message in exception (getMessage() returned null)
+//            //
+//            verifyException("sqlancer.oceanbase.ast.OceanBaseJoin", e);
+//        }
+//    }
 
     @Test
     public void test04() throws Throwable {

@@ -6,11 +6,13 @@
 package sqlancer.evosuite.sqlite3.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import sqlancer.Randomly;
 import sqlancer.sqlite3.ast.SQLite3Constant;
 import sqlancer.sqlite3.ast.SQLite3Expression;
+import sqlancer.sqlite3.ast.SQLite3InOperation;
 import sqlancer.sqlite3.ast.SQLite3WindowFunctionExpression;
 
 public class SQLite3WindowFunctionExpression_ESTest {
@@ -122,7 +124,7 @@ public class SQLite3WindowFunctionExpression_ESTest {
         SQLite3WindowFunctionExpression sQLite3WindowFunctionExpression0 = new SQLite3WindowFunctionExpression(
                 sQLite3WindowFunctionExpression_SQLite3WindowFunctionFrameSpecTerm0);
         List<SQLite3Expression> list0 = sQLite3WindowFunctionExpression0.getOrderBy();
-        SQLite3Expression.InOperation sQLite3Expression_InOperation0 = new SQLite3Expression.InOperation(
+        SQLite3InOperation sQLite3Expression_InOperation0 = new SQLite3InOperation(
                 sQLite3WindowFunctionExpression_SQLite3WindowFunctionFrameSpecTerm0, list0);
         sQLite3Expression_InOperation0.getExplicitCollateSequence();
     }

@@ -6,11 +6,19 @@
 package sqlancer.evosuite.sqlite3.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.Randomly;
+import sqlancer.sqlite3.ast.SQLite3BinaryComparisonOperation;
+import sqlancer.sqlite3.ast.SQLite3BinaryOperation;
+import sqlancer.sqlite3.ast.SQLite3CollateOperation;
+import sqlancer.sqlite3.ast.SQLite3ColumnName;
 import sqlancer.sqlite3.ast.SQLite3Constant;
 import sqlancer.sqlite3.ast.SQLite3Expression;
 import sqlancer.sqlite3.ast.SQLite3Function;
+import sqlancer.sqlite3.ast.SQLite3Subquery;
+import sqlancer.sqlite3.ast.SQLite3TypeAffinity;
+import sqlancer.sqlite3.ast.SQLite3TypeLiteral;
 import sqlancer.sqlite3.ast.SQLite3UnaryOperation;
 import sqlancer.sqlite3.ast.SQLite3WindowFunction;
 import sqlancer.sqlite3.schema.SQLite3DataType;
@@ -67,8 +75,8 @@ public class SQLite3Function_ESTest {
         SQLite3Function.ComputableFunction sQLite3Function_ComputableFunction0 = SQLite3Function.ComputableFunction.LIKELY;
         SQLite3Function sQLite3Function0 = new SQLite3Function(sQLite3Function_ComputableFunction0,
                 sQLite3ExpressionArray0);
-        SQLite3Expression.TypeAffinity sQLite3Expression_TypeAffinity0 = sQLite3Function0.getAffinity();
-        assertEquals(SQLite3Expression.TypeAffinity.NONE, sQLite3Expression_TypeAffinity0);
+        SQLite3TypeAffinity sQLite3Expression_TypeAffinity0 = sQLite3Function0.getAffinity();
+        assertEquals(SQLite3TypeAffinity.NONE, sQLite3Expression_TypeAffinity0);
     }
 
     @Test
@@ -120,15 +128,15 @@ public class SQLite3Function_ESTest {
                 sQLite3DataType0, true, true, sQLite3Schema_SQLite3Column_SQLite3CollateSequence0);
         SQLite3Constant.SQLite3IntConstant sQLite3Constant_SQLite3IntConstant0 = new SQLite3Constant.SQLite3IntConstant(
                 0L);
-        SQLite3Expression.SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = new SQLite3Expression.SQLite3ColumnName(
+        SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = new SQLite3ColumnName(
                 sQLite3Schema_SQLite3Column0, sQLite3Constant_SQLite3IntConstant0);
         sQLite3ExpressionArray0[0] = (SQLite3Expression) sQLite3Expression_SQLite3ColumnName0;
         SQLite3Constant sQLite3Constant0 = SQLite3Constant.createTextConstant(".9");
         sQLite3ExpressionArray0[1] = (SQLite3Expression) sQLite3Constant0;
-        SQLite3Expression.Sqlite3BinaryOperation.BinaryOperator sQLite3Expression_Sqlite3BinaryOperation_BinaryOperator0 = SQLite3Expression.Sqlite3BinaryOperation.BinaryOperator.OR;
-        SQLite3Expression.Sqlite3BinaryOperation sQLite3Expression_Sqlite3BinaryOperation0 = new SQLite3Expression.Sqlite3BinaryOperation(
-                sQLite3ExpressionArray0[0], sQLite3Constant0, sQLite3Expression_Sqlite3BinaryOperation_BinaryOperator0);
-        sQLite3ExpressionArray0[2] = (SQLite3Expression) sQLite3Expression_Sqlite3BinaryOperation0;
+        SQLite3BinaryOperation.BinaryOperator sQLite3Expression_SQLite3BinaryOperation_BinaryOperator0 = SQLite3BinaryOperation.BinaryOperator.OR;
+        SQLite3BinaryOperation sQLite3Expression_SQLite3BinaryOperation0 = new SQLite3BinaryOperation(
+                sQLite3ExpressionArray0[0], sQLite3Constant0, sQLite3Expression_SQLite3BinaryOperation_BinaryOperator0);
+        sQLite3ExpressionArray0[2] = (SQLite3Expression) sQLite3Expression_SQLite3BinaryOperation0;
         SQLite3Function sQLite3Function0 = new SQLite3Function(sQLite3Function_ComputableFunction0,
                 sQLite3ExpressionArray0);
         // Undeclared exception!
@@ -167,14 +175,14 @@ public class SQLite3Function_ESTest {
         SQLite3WindowFunction sQLite3WindowFunction0 = new SQLite3WindowFunction(sQLite3WindowFunction_WindowFunction0,
                 sQLite3ExpressionArray0);
         sQLite3ExpressionArray0[0] = (SQLite3Expression) sQLite3WindowFunction0;
-        SQLite3Expression.TypeLiteral.Type sQLite3Expression_TypeLiteral_Type0 = SQLite3Expression.TypeLiteral.Type.INTEGER;
+        SQLite3TypeLiteral.Type sQLite3Expression_SQLite3TypeLiteral_Type0 = SQLite3TypeLiteral.Type.INTEGER;
         SQLite3Constant sQLite3Constant0 = SQLite3Constant.createTextConstant("");
         SQLite3Schema.SQLite3Column.SQLite3CollateSequence sQLite3Schema_SQLite3Column_SQLite3CollateSequence0 = SQLite3Schema.SQLite3Column.SQLite3CollateSequence.BINARY;
-        SQLite3Constant sQLite3Constant1 = sQLite3Expression_TypeLiteral_Type0.apply(sQLite3Constant0);
+        SQLite3Constant sQLite3Constant1 = sQLite3Expression_SQLite3TypeLiteral_Type0.apply(sQLite3Constant0);
         sQLite3ExpressionArray0[1] = (SQLite3Expression) sQLite3Constant1;
-        SQLite3Expression.CollateOperation sQLite3Expression_CollateOperation0 = new SQLite3Expression.CollateOperation(
+        SQLite3CollateOperation sQLite3Expression_SQLite3CollateOperation0 = new SQLite3CollateOperation(
                 sQLite3Constant0, sQLite3Schema_SQLite3Column_SQLite3CollateSequence0);
-        sQLite3ExpressionArray0[2] = (SQLite3Expression) sQLite3Expression_CollateOperation0;
+        sQLite3ExpressionArray0[2] = (SQLite3Expression) sQLite3Expression_SQLite3CollateOperation0;
         SQLite3Function sQLite3Function0 = new SQLite3Function(sQLite3Function_ComputableFunction0,
                 sQLite3ExpressionArray0);
         SQLite3Schema.SQLite3Column.SQLite3CollateSequence sQLite3Schema_SQLite3Column_SQLite3CollateSequence1 = sQLite3Function0
@@ -199,7 +207,7 @@ public class SQLite3Function_ESTest {
         SQLite3Function.ComputableFunction sQLite3Function_ComputableFunction0 = SQLite3Function.ComputableFunction
                 .getRandomFunction();
         SQLite3Constant[] sQLite3ConstantArray0 = new SQLite3Constant[2];
-        SQLite3Expression.TypeAffinity sQLite3Expression_TypeAffinity0 = sQLite3Function_ComputableFunction0
+        SQLite3TypeAffinity sQLite3Expression_TypeAffinity0 = sQLite3Function_ComputableFunction0
                 .getAffinity(sQLite3ConstantArray0);
         assertFalse(sQLite3Expression_TypeAffinity0.isNumeric());
     }
@@ -227,8 +235,8 @@ public class SQLite3Function_ESTest {
     public void test12() throws Throwable {
         SQLite3Function.ComputableFunction sQLite3Function_ComputableFunction0 = SQLite3Function.ComputableFunction.TRIM;
         SQLite3Expression[] sQLite3ExpressionArray0 = new SQLite3Expression[1];
-        SQLite3Expression.Subquery sQLite3Expression_Subquery0 = new SQLite3Expression.Subquery("X");
-        sQLite3ExpressionArray0[0] = (SQLite3Expression) sQLite3Expression_Subquery0;
+        SQLite3Subquery subquery0 = new SQLite3Subquery("X");
+        sQLite3ExpressionArray0[0] = (SQLite3Expression)subquery0;
         SQLite3Function sQLite3Function0 = new SQLite3Function(sQLite3Function_ComputableFunction0,
                 sQLite3ExpressionArray0);
         SQLite3Constant sQLite3Constant0 = sQLite3Function0.getExpectedValue();
@@ -252,8 +260,8 @@ public class SQLite3Function_ESTest {
     public void test14() throws Throwable {
         SQLite3Constant.SQLite3TextConstant sQLite3Constant_SQLite3TextConstant0 = new SQLite3Constant.SQLite3TextConstant(
                 "<`yUeA");
-        SQLite3Expression.TypeAffinity sQLite3Expression_TypeAffinity0 = SQLite3Expression.TypeAffinity.NONE;
-        SQLite3Expression.BinaryComparisonOperation.BinaryComparisonOperator sQLite3Expression_BinaryComparisonOperation_BinaryComparisonOperator0 = SQLite3Expression.BinaryComparisonOperation.BinaryComparisonOperator.SMALLER_EQUALS;
+        SQLite3TypeAffinity sQLite3Expression_TypeAffinity0 = SQLite3TypeAffinity.NONE;
+        SQLite3BinaryComparisonOperation.BinaryComparisonOperator sQLite3Expression_BinaryComparisonOperation_BinaryComparisonOperator0 = SQLite3BinaryComparisonOperation.BinaryComparisonOperator.SMALLER_EQUALS;
         SQLite3Constant sQLite3Constant0 = sQLite3Expression_BinaryComparisonOperation_BinaryComparisonOperator0
                 .applyOperand(sQLite3Constant_SQLite3TextConstant0, sQLite3Expression_TypeAffinity0,
                         sQLite3Constant_SQLite3TextConstant0, sQLite3Expression_TypeAffinity0,
@@ -542,10 +550,10 @@ public class SQLite3Function_ESTest {
         SQLite3Function sQLite3Function0 = new SQLite3Function(sQLite3Function_ComputableFunction0,
                 sQLite3ExpressionArray0);
         SQLite3Constant[] sQLite3ConstantArray0 = new SQLite3Constant[2];
-        SQLite3Expression.Sqlite3BinaryOperation.BinaryOperator sQLite3Expression_Sqlite3BinaryOperation_BinaryOperator0 = SQLite3Expression.Sqlite3BinaryOperation.BinaryOperator.ARITHMETIC_AND;
-        SQLite3Expression.Sqlite3BinaryOperation sQLite3Expression_Sqlite3BinaryOperation0 = SQLite3Expression.Sqlite3BinaryOperation
-                .create(sQLite3Function0, sQLite3Function0, sQLite3Expression_Sqlite3BinaryOperation_BinaryOperator0);
-        SQLite3Constant sQLite3Constant0 = sQLite3Expression_Sqlite3BinaryOperation0.getExpectedValue();
+        SQLite3BinaryOperation.BinaryOperator sQLite3Expression_SQLite3BinaryOperation_BinaryOperator0 = SQLite3BinaryOperation.BinaryOperator.ARITHMETIC_AND;
+        SQLite3BinaryOperation sQLite3Expression_SQLite3BinaryOperation0 = SQLite3BinaryOperation
+                .create(sQLite3Function0, sQLite3Function0, sQLite3Expression_SQLite3BinaryOperation_BinaryOperator0);
+        SQLite3Constant sQLite3Constant0 = sQLite3Expression_SQLite3BinaryOperation0.getExpectedValue();
         sQLite3ConstantArray0[0] = sQLite3Constant0;
         SQLite3Function.ComputableFunction sQLite3Function_ComputableFunction1 = SQLite3Function.ComputableFunction.UPPER;
         SQLite3Constant sQLite3Constant1 = sQLite3Function_ComputableFunction1.apply(sQLite3ConstantArray0);
@@ -632,9 +640,9 @@ public class SQLite3Function_ESTest {
         SQLite3Constant sQLite3Constant0 = SQLite3Constant.createRealConstant((-2112.90254676305));
         sQLite3ExpressionArray0[0] = (SQLite3Expression) sQLite3Constant0;
         SQLite3Schema.SQLite3Column.SQLite3CollateSequence sQLite3Schema_SQLite3Column_SQLite3CollateSequence0 = SQLite3Schema.SQLite3Column.SQLite3CollateSequence.NOCASE;
-        SQLite3Expression.CollateOperation sQLite3Expression_CollateOperation0 = new SQLite3Expression.CollateOperation(
+        SQLite3CollateOperation sQLite3Expression_SQLite3CollateOperation0 = new SQLite3CollateOperation(
                 sQLite3Constant0, sQLite3Schema_SQLite3Column_SQLite3CollateSequence0);
-        sQLite3ExpressionArray0[1] = (SQLite3Expression) sQLite3Expression_CollateOperation0;
+        sQLite3ExpressionArray0[1] = (SQLite3Expression) sQLite3Expression_SQLite3CollateOperation0;
         SQLite3Function sQLite3Function0 = new SQLite3Function(sQLite3Function_ComputableFunction0,
                 sQLite3ExpressionArray0);
         SQLite3Constant sQLite3Constant1 = sQLite3Function0.getExpectedValue();
@@ -710,7 +718,7 @@ public class SQLite3Function_ESTest {
         SQLite3Schema.SQLite3Column.SQLite3CollateSequence sQLite3Schema_SQLite3Column_SQLite3CollateSequence0 = SQLite3Schema.SQLite3Column.SQLite3CollateSequence.NOCASE;
         SQLite3Schema.SQLite3Column sQLite3Schema_SQLite3Column0 = new SQLite3Schema.SQLite3Column("?}A&vp0)#=4o",
                 sQLite3DataType0, false, sQLite3Schema_SQLite3Column_SQLite3CollateSequence0, false);
-        SQLite3Expression.SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = new SQLite3Expression.SQLite3ColumnName(
+        SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = new SQLite3ColumnName(
                 sQLite3Schema_SQLite3Column0, sQLite3Constant_SQLite3RealConstant0);
         sQLite3ExpressionArray0[2] = (SQLite3Expression) sQLite3Expression_SQLite3ColumnName0;
         sQLite3ExpressionArray0[3] = (SQLite3Expression) sQLite3Constant_SQLite3RealConstant0;

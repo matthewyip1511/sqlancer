@@ -6,6 +6,7 @@
 package sqlancer.evosuite.sqlite3.gen.dml;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.sqlite3.gen.dml.SQLite3StatTableGenerator;
 import sqlancer.sqlite3.SQLite3GlobalState;

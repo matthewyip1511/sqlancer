@@ -6,6 +6,7 @@
 package sqlancer.evosuite.materialize.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.materialize.ast.MaterializeExpression;
 import sqlancer.materialize.ast.MaterializeOrderByTerm;

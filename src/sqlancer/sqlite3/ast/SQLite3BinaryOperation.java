@@ -35,7 +35,7 @@ public class SQLite3BinaryOperation implements SQLite3Expression, BinaryOperatio
         },
         MULTIPLY("*") {
             @Override
-            SQLite3Constant apply(SQLite3Constant left, SQLite3Constant right) {
+            public SQLite3Constant apply(SQLite3Constant left, SQLite3Constant right) {
                 return null;
             }
 
@@ -43,14 +43,14 @@ public class SQLite3BinaryOperation implements SQLite3Expression, BinaryOperatio
         DIVIDE("/") {
 
             @Override
-            SQLite3Constant apply(SQLite3Constant left, SQLite3Constant right) {
+            public SQLite3Constant apply(SQLite3Constant left, SQLite3Constant right) {
                 return null;
             }
 
         }, // division by zero results in zero
         REMAINDER("%") {
             @Override
-            SQLite3Constant apply(SQLite3Constant left, SQLite3Constant right) {
+            public SQLite3Constant apply(SQLite3Constant left, SQLite3Constant right) {
                 return null;
             }
 
@@ -59,7 +59,7 @@ public class SQLite3BinaryOperation implements SQLite3Expression, BinaryOperatio
         PLUS("+") {
 
             @Override
-            SQLite3Constant apply(SQLite3Constant left, SQLite3Constant right) {
+            public SQLite3Constant apply(SQLite3Constant left, SQLite3Constant right) {
                 return null;
             }
         },
@@ -67,7 +67,7 @@ public class SQLite3BinaryOperation implements SQLite3Expression, BinaryOperatio
         MINUS("-") {
 
             @Override
-            SQLite3Constant apply(SQLite3Constant left, SQLite3Constant right) {
+            public SQLite3Constant apply(SQLite3Constant left, SQLite3Constant right) {
                 return null;
             }
 
@@ -75,7 +75,7 @@ public class SQLite3BinaryOperation implements SQLite3Expression, BinaryOperatio
         SHIFT_LEFT("<<") {
 
             @Override
-            SQLite3Constant apply(SQLite3Constant left, SQLite3Constant right) {
+            public SQLite3Constant apply(SQLite3Constant left, SQLite3Constant right) {
                 return applyIntOperation(left, right, (leftResult, rightResult) -> {
                     if (rightResult >= 0) {
                         if (rightResult >= Long.SIZE) {
@@ -96,7 +96,7 @@ public class SQLite3BinaryOperation implements SQLite3Expression, BinaryOperatio
         SHIFT_RIGHT(">>") {
 
             @Override
-            SQLite3Constant apply(SQLite3Constant left, SQLite3Constant right) {
+            public SQLite3Constant apply(SQLite3Constant left, SQLite3Constant right) {
                 return applyIntOperation(left, right, (leftResult, rightResult) -> {
                     if (rightResult >= 0) {
                         if (rightResult >= Long.SIZE) {
@@ -117,7 +117,7 @@ public class SQLite3BinaryOperation implements SQLite3Expression, BinaryOperatio
         ARITHMETIC_AND("&") {
 
             @Override
-            SQLite3Constant apply(SQLite3Constant left, SQLite3Constant right) {
+            public SQLite3Constant apply(SQLite3Constant left, SQLite3Constant right) {
                 return applyIntOperation(left, right, (a, b) -> a & b);
             }
 
@@ -125,7 +125,7 @@ public class SQLite3BinaryOperation implements SQLite3Expression, BinaryOperatio
         ARITHMETIC_OR("|") {
 
             @Override
-            SQLite3Constant apply(SQLite3Constant left, SQLite3Constant right) {
+            public SQLite3Constant apply(SQLite3Constant left, SQLite3Constant right) {
                 return applyIntOperation(left, right, (a, b) -> a | b);
             }
 
@@ -205,7 +205,7 @@ public class SQLite3BinaryOperation implements SQLite3Expression, BinaryOperatio
             return SQLite3Constant.createIntConstant(result);
         }
 
-        SQLite3Constant apply(SQLite3Constant left, SQLite3Constant right) {
+        public SQLite3Constant apply(SQLite3Constant left, SQLite3Constant right) {
             return null;
         }
 

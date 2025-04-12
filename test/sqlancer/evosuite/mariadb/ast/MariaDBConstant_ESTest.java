@@ -6,6 +6,7 @@
 package sqlancer.evosuite.mariadb.ast;
 
 import sqlancer.mariadb.ast.MariaDBConstant;
+
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 

@@ -6,7 +6,10 @@
 package sqlancer.evosuite.postgres.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+
+import sqlancer.common.ast.JoinBase;
 import sqlancer.postgres.ast.PostgresBetweenOperation;
 import sqlancer.postgres.ast.PostgresConstant;
 import sqlancer.postgres.ast.PostgresExpression;
@@ -127,7 +130,7 @@ public class PostgresBetweenOperation_ESTest {
 
     @Test
     public void test09() throws Throwable {
-        PostgresJoin.PostgresJoinType postgresJoin_PostgresJoinType0 = PostgresJoin.PostgresJoinType.INNER;
+        JoinBase.JoinType postgresJoin_PostgresJoinType0 = JoinBase.JoinType.INNER;
         PostgresJoin postgresJoin0 = PostgresJoin.createJoin((PostgresExpression) null, (PostgresExpression) null,
                 postgresJoin_PostgresJoinType0, (PostgresExpression) null);
         PostgresBetweenOperation postgresBetweenOperation0 = new PostgresBetweenOperation((PostgresExpression) null,

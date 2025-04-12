@@ -41,7 +41,7 @@ public class MaterializeProvider extends ExpandedProvider<MaterializeGlobalState
         super(MaterializeGlobalState.class, MaterializeOptions.class);
     }
 
-    protected MaterializeProvider(Class<MaterializeGlobalState> globalClass, Class<MaterializeOptions> optionClass) {
+    public MaterializeProvider(Class<MaterializeGlobalState> globalClass, Class<MaterializeOptions> optionClass) {
         super(globalClass, optionClass);
     }
 
@@ -187,7 +187,7 @@ public class MaterializeProvider extends ExpandedProvider<MaterializeGlobalState
         return new SQLConnection(con);
     }
 
-    protected void readFunctions(MaterializeGlobalState globalState) throws SQLException {
+    public void readFunctions(MaterializeGlobalState globalState) throws SQLException {
         // ERROR: column "provolatile" does not exist
         SQLQueryAdapter query = new SQLQueryAdapter("SELECT proname, 1 FROM pg_proc;");
         SQLancerResultSet rs = query.executeAndGet(globalState);
@@ -198,7 +198,7 @@ public class MaterializeProvider extends ExpandedProvider<MaterializeGlobalState
         }
     }
 
-    protected void createTables(MaterializeGlobalState globalState, int numTables) throws Exception {
+    public void createTables(MaterializeGlobalState globalState, int numTables) throws Exception {
         while (globalState.getSchema().getDatabaseTables().size() < numTables) {
             try {
                 String tableName = DBMSCommon.createTableName(globalState.getSchema().getDatabaseTables().size());
@@ -211,7 +211,7 @@ public class MaterializeProvider extends ExpandedProvider<MaterializeGlobalState
         }
     }
 
-    protected void prepareTables(MaterializeGlobalState globalState) throws Exception {
+    public void prepareTables(MaterializeGlobalState globalState) throws Exception {
         StatementExecutor<MaterializeGlobalState, Action> se = new StatementExecutor<>(globalState, Action.values(),
                 MaterializeProvider::mapActions, (q) -> {
                     if (globalState.getSchema().getDatabaseTables().isEmpty()) {
@@ -276,12 +276,12 @@ public class MaterializeProvider extends ExpandedProvider<MaterializeGlobalState
     }
 
     @Override
-    protected double[] initializeWeightedAverageReward() {
+    public double[] initializeWeightedAverageReward() {
         return new double[Action.values().length];
     }
 
     @Override
-    protected void executeMutator(int index, MaterializeGlobalState globalState) throws Exception {
+    public void executeMutator(int index, MaterializeGlobalState globalState) throws Exception {
         SQLQueryAdapter queryMutateTable = Action.values()[index].getQuery(globalState);
         globalState.executeStatement(queryMutateTable);
     }

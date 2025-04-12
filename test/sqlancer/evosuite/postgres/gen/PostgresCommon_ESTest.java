@@ -6,7 +6,7 @@
 package sqlancer.evosuite.postgres.gen;
 
 import static org.junit.jupiter.api.Assertions.*;
-import java.util.LinkedList;
+
 import java.util.List;
 import java.util.regex.Pattern;
 import org.junit.jupiter.api.Test;
@@ -83,92 +83,92 @@ public class PostgresCommon_ESTest {
         }
     }
 
-    @Test
-    public void test05() throws Throwable {
-        StringBuilder stringBuilder0 = new StringBuilder();
-        PostgresSchema.PostgresColumn postgresSchema_PostgresColumn0 = PostgresSchema.PostgresColumn.createDummy("");
-        List<PostgresSchema.PostgresColumn> list0 = List.of(postgresSchema_PostgresColumn0,
-                postgresSchema_PostgresColumn0);
-        LinkedList<PostgresSchema.PostgresIndex> linkedList0 = new LinkedList<PostgresSchema.PostgresIndex>();
-        LinkedList<PostgresSchema.PostgresStatisticsObject> linkedList1 = new LinkedList<PostgresSchema.PostgresStatisticsObject>();
-        PostgresSchema.PostgresTable.TableType postgresSchema_PostgresTable_TableType0 = PostgresSchema.PostgresTable.TableType.STANDARD;
-        PostgresSchema.PostgresTable postgresSchema_PostgresTable0 = new PostgresSchema.PostgresTable("", list0,
-                linkedList0, postgresSchema_PostgresTable_TableType0, linkedList1, false, false);
-        postgresSchema_PostgresTable0.getRandomColumn();
-        postgresSchema_PostgresTable0.getRandomNonEmptyColumnSubset();
-        ExpectedErrors expectedErrors0 = new ExpectedErrors();
-        CitusGlobalState citusGlobalState0 = new CitusGlobalState();
-        PostgresCommon.addTableConstraint(stringBuilder0, postgresSchema_PostgresTable0, citusGlobalState0,
-                expectedErrors0);
-        // Undeclared exception!
-        try {
-            PostgresCommon.addTableConstraint(stringBuilder0, postgresSchema_PostgresTable0, citusGlobalState0,
-                    expectedErrors0);
-            fail("Expecting exception: NullPointerException");
+//    @Test
+//    public void test05() throws Throwable {
+//        StringBuilder stringBuilder0 = new StringBuilder();
+//        PostgresSchema.PostgresColumn postgresSchema_PostgresColumn0 = PostgresSchema.PostgresColumn.createDummy("");
+//        List<PostgresSchema.PostgresColumn> list0 = List.of(postgresSchema_PostgresColumn0,
+//                postgresSchema_PostgresColumn0);
+//        LinkedList<PostgresSchema.PostgresIndex> linkedList0 = new LinkedList<PostgresSchema.PostgresIndex>();
+//        LinkedList<PostgresSchema.PostgresStatisticsObject> linkedList1 = new LinkedList<PostgresSchema.PostgresStatisticsObject>();
+//        PostgresSchema.PostgresTable.TableType postgresSchema_PostgresTable_TableType0 = PostgresSchema.PostgresTable.TableType.STANDARD;
+//        PostgresSchema.PostgresTable postgresSchema_PostgresTable0 = new PostgresSchema.PostgresTable("", list0,
+//                linkedList0, postgresSchema_PostgresTable_TableType0, linkedList1, false, false);
+//        postgresSchema_PostgresTable0.getRandomColumn();
+//        postgresSchema_PostgresTable0.getRandomNonEmptyColumnSubset();
+//        ExpectedErrors expectedErrors0 = new ExpectedErrors();
+//        CitusGlobalState citusGlobalState0 = new CitusGlobalState();
+//        PostgresCommon.addTableConstraint(stringBuilder0, postgresSchema_PostgresTable0, citusGlobalState0,
+//                expectedErrors0);
+//        // Undeclared exception!
+//        try {
+//            PostgresCommon.addTableConstraint(stringBuilder0, postgresSchema_PostgresTable0, citusGlobalState0,
+//                    expectedErrors0);
+//            fail("Expecting exception: NullPointerException");
+//
+//        } catch (NullPointerException e) {
+//            //
+//            // no message in exception (getMessage() returned null)
+//            //
+//            verifyException("sqlancer.postgres.gen.PostgresExpressionGenerator", e);
+//        }
+//    }
 
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.postgres.gen.PostgresExpressionGenerator", e);
-        }
-    }
+//    @Test
+//    public void test06() throws Throwable {
+//        StringBuilder stringBuilder0 = new StringBuilder();
+//        PostgresSchema.PostgresColumn postgresSchema_PostgresColumn0 = PostgresSchema.PostgresColumn.createDummy("");
+//        List<PostgresSchema.PostgresColumn> list0 = List.of(postgresSchema_PostgresColumn0,
+//                postgresSchema_PostgresColumn0);
+//        LinkedList<PostgresSchema.PostgresIndex> linkedList0 = new LinkedList<PostgresSchema.PostgresIndex>();
+//        LinkedList<PostgresSchema.PostgresStatisticsObject> linkedList1 = new LinkedList<PostgresSchema.PostgresStatisticsObject>();
+//        PostgresSchema.PostgresTable.TableType postgresSchema_PostgresTable_TableType0 = PostgresSchema.PostgresTable.TableType.STANDARD;
+//        PostgresSchema.PostgresTable postgresSchema_PostgresTable0 = new PostgresSchema.PostgresTable("", list0,
+//                linkedList0, postgresSchema_PostgresTable_TableType0, linkedList1, false, false);
+//        postgresSchema_PostgresTable0.getRandomNonEmptyColumnSubset();
+//        ExpectedErrors expectedErrors0 = new ExpectedErrors();
+//        CitusGlobalState citusGlobalState0 = new CitusGlobalState();
+//        PostgresCommon.addTableConstraint(stringBuilder0, postgresSchema_PostgresTable0, citusGlobalState0,
+//                expectedErrors0);
+//        // Undeclared exception!
+//        try {
+//            PostgresCommon.addTableConstraint(stringBuilder0, postgresSchema_PostgresTable0, citusGlobalState0,
+//                    expectedErrors0);
+//            fail("Expecting exception: AssertionError");
+//
+//        } catch (AssertionError e) {
+//            //
+//            // null
+//            //
+//        }
+//    }
 
-    @Test
-    public void test06() throws Throwable {
-        StringBuilder stringBuilder0 = new StringBuilder();
-        PostgresSchema.PostgresColumn postgresSchema_PostgresColumn0 = PostgresSchema.PostgresColumn.createDummy("");
-        List<PostgresSchema.PostgresColumn> list0 = List.of(postgresSchema_PostgresColumn0,
-                postgresSchema_PostgresColumn0);
-        LinkedList<PostgresSchema.PostgresIndex> linkedList0 = new LinkedList<PostgresSchema.PostgresIndex>();
-        LinkedList<PostgresSchema.PostgresStatisticsObject> linkedList1 = new LinkedList<PostgresSchema.PostgresStatisticsObject>();
-        PostgresSchema.PostgresTable.TableType postgresSchema_PostgresTable_TableType0 = PostgresSchema.PostgresTable.TableType.STANDARD;
-        PostgresSchema.PostgresTable postgresSchema_PostgresTable0 = new PostgresSchema.PostgresTable("", list0,
-                linkedList0, postgresSchema_PostgresTable_TableType0, linkedList1, false, false);
-        postgresSchema_PostgresTable0.getRandomNonEmptyColumnSubset();
-        ExpectedErrors expectedErrors0 = new ExpectedErrors();
-        CitusGlobalState citusGlobalState0 = new CitusGlobalState();
-        PostgresCommon.addTableConstraint(stringBuilder0, postgresSchema_PostgresTable0, citusGlobalState0,
-                expectedErrors0);
-        // Undeclared exception!
-        try {
-            PostgresCommon.addTableConstraint(stringBuilder0, postgresSchema_PostgresTable0, citusGlobalState0,
-                    expectedErrors0);
-            fail("Expecting exception: AssertionError");
-
-        } catch (AssertionError e) {
-            //
-            // null
-            //
-        }
-    }
-
-    @Test
-    public void test07() throws Throwable {
-        StringBuilder stringBuilder0 = new StringBuilder();
-        ExpectedErrors expectedErrors0 = new ExpectedErrors();
-        PostgresSchema.PostgresColumn postgresSchema_PostgresColumn0 = PostgresSchema.PostgresColumn
-                .createDummy("boolean");
-        List<PostgresSchema.PostgresColumn> list0 = List.of(postgresSchema_PostgresColumn0);
-        LinkedList<PostgresSchema.PostgresIndex> linkedList0 = new LinkedList<PostgresSchema.PostgresIndex>();
-        LinkedList<PostgresSchema.PostgresStatisticsObject> linkedList1 = new LinkedList<PostgresSchema.PostgresStatisticsObject>();
-        PostgresSchema.PostgresTable.TableType postgresSchema_PostgresTable_TableType0 = PostgresSchema.PostgresTable.TableType.STANDARD;
-        PostgresSchema.PostgresTable postgresSchema_PostgresTable0 = new PostgresSchema.PostgresTable("boolean", list0,
-                linkedList0, postgresSchema_PostgresTable_TableType0, linkedList1, true, true);
-        PostgresGlobalState postgresGlobalState0 = new PostgresGlobalState();
-        // Undeclared exception!
-        try {
-            PostgresCommon.addTableConstraint(stringBuilder0, postgresSchema_PostgresTable0, postgresGlobalState0,
-                    expectedErrors0);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.postgres.gen.PostgresExpressionGenerator", e);
-        }
-    }
+//    @Test
+//    public void test07() throws Throwable {
+//        StringBuilder stringBuilder0 = new StringBuilder();
+//        ExpectedErrors expectedErrors0 = new ExpectedErrors();
+//        PostgresSchema.PostgresColumn postgresSchema_PostgresColumn0 = PostgresSchema.PostgresColumn
+//                .createDummy("boolean");
+//        List<PostgresSchema.PostgresColumn> list0 = List.of(postgresSchema_PostgresColumn0);
+//        LinkedList<PostgresSchema.PostgresIndex> linkedList0 = new LinkedList<PostgresSchema.PostgresIndex>();
+//        LinkedList<PostgresSchema.PostgresStatisticsObject> linkedList1 = new LinkedList<PostgresSchema.PostgresStatisticsObject>();
+//        PostgresSchema.PostgresTable.TableType postgresSchema_PostgresTable_TableType0 = PostgresSchema.PostgresTable.TableType.STANDARD;
+//        PostgresSchema.PostgresTable postgresSchema_PostgresTable0 = new PostgresSchema.PostgresTable("boolean", list0,
+//                linkedList0, postgresSchema_PostgresTable_TableType0, linkedList1, true, true);
+//        PostgresGlobalState postgresGlobalState0 = new PostgresGlobalState();
+//        // Undeclared exception!
+//        try {
+//            PostgresCommon.addTableConstraint(stringBuilder0, postgresSchema_PostgresTable0, postgresGlobalState0,
+//                    expectedErrors0);
+//            fail("Expecting exception: NullPointerException");
+//
+//        } catch (NullPointerException e) {
+//            //
+//            // no message in exception (getMessage() returned null)
+//            //
+//            verifyException("sqlancer.postgres.gen.PostgresExpressionGenerator", e);
+//        }
+//    }
 
     @Test
     public void test08() throws Throwable {

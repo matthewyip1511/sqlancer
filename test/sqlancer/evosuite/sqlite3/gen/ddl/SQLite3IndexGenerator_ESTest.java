@@ -6,6 +6,7 @@
 package sqlancer.evosuite.sqlite3.gen.ddl;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.sqlite3.gen.ddl.SQLite3IndexGenerator;
 import sqlancer.sqlite3.SQLite3GlobalState;

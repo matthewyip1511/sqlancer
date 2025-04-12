@@ -6,31 +6,15 @@
 package sqlancer.evosuite.oceanbase;
 
 import static org.junit.jupiter.api.Assertions.*;
-import java.util.LinkedList;
-import java.util.List;
 import org.junit.jupiter.api.Test;
-import sqlancer.oceanbase.ast.OceanBaseAggregate;
-import sqlancer.oceanbase.ast.OceanBaseBinaryComparisonOperation;
-import sqlancer.oceanbase.ast.OceanBaseBinaryLogicalOperation;
 import sqlancer.oceanbase.ast.OceanBaseCastOperation;
-import sqlancer.oceanbase.ast.OceanBaseColumnName;
 import sqlancer.oceanbase.ast.OceanBaseColumnReference;
-import sqlancer.oceanbase.ast.OceanBaseComputableFunction;
 import sqlancer.oceanbase.ast.OceanBaseConstant;
-import sqlancer.oceanbase.ast.OceanBaseExists;
 import sqlancer.oceanbase.ast.OceanBaseExpression;
-import sqlancer.oceanbase.ast.OceanBaseInOperation;
-import sqlancer.oceanbase.ast.OceanBaseJoin;
 import sqlancer.oceanbase.ast.OceanBaseOrderByTerm;
-import sqlancer.oceanbase.ast.OceanBaseSelect;
-import sqlancer.oceanbase.ast.OceanBaseStringExpression;
-import sqlancer.oceanbase.ast.OceanBaseTableReference;
-import sqlancer.oceanbase.ast.OceanBaseText;
-import sqlancer.oceanbase.ast.OceanBaseUnaryPostfixOperation;
 import sqlancer.oceanbase.ast.OceanBaseUnaryPrefixOperation;
 import sqlancer.oceanbase.OceanBaseSchema;
 import sqlancer.oceanbase.OceanBaseToStringVisitor;
-import sqlancer.Randomly;
 
 public class OceanBaseToStringVisitor_ESTest {
 
@@ -82,6 +66,7 @@ public class OceanBaseToStringVisitor_ESTest {
         oceanBaseToStringVisitor0.visit(oceanBaseUnaryPrefixOperation0);
         assertEquals("(!  DESC)", oceanBaseToStringVisitor0.get());
     }
+}
 
 /*
  * Test disabled because it contains mock() function calls that are not implemented

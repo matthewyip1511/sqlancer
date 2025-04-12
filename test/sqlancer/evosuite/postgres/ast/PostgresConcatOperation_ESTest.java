@@ -6,7 +6,10 @@
 package sqlancer.evosuite.postgres.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+
+import sqlancer.common.ast.JoinBase;
 import sqlancer.postgres.ast.PostgresConcatOperation;
 import sqlancer.postgres.ast.PostgresConstant;
 import sqlancer.postgres.ast.PostgresExpression;
@@ -71,7 +74,7 @@ public class PostgresConcatOperation_ESTest {
     @Test
     public void test03() throws Throwable {
         PostgresSelect postgresSelect0 = new PostgresSelect();
-        PostgresJoin.PostgresJoinType postgresJoin_PostgresJoinType0 = PostgresJoin.PostgresJoinType.FULL;
+        JoinBase.JoinType postgresJoin_PostgresJoinType0 = JoinBase.JoinType.FULL;
         PostgresJoin postgresJoin0 = new PostgresJoin(postgresSelect0, postgresSelect0, postgresJoin_PostgresJoinType0,
                 postgresSelect0);
         PostgresConcatOperation postgresConcatOperation0 = new PostgresConcatOperation(postgresSelect0, postgresJoin0);

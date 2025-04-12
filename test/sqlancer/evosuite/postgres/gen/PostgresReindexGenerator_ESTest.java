@@ -6,7 +6,7 @@
 package sqlancer.evosuite.postgres.gen;
 
 import static org.junit.jupiter.api.Assertions.*;
-import org.evosuite.runtime.Random;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.citus.CitusGlobalState;
 import sqlancer.postgres.gen.PostgresReindexGenerator;

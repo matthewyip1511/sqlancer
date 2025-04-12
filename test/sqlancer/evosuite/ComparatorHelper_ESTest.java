@@ -6,6 +6,7 @@
 package sqlancer.evosuite;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.Collection;
 import java.util.function.UnaryOperator;
 import java.util.LinkedList;

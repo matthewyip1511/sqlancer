@@ -6,9 +6,12 @@
 package sqlancer.evosuite.mysql.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.LinkedList;
 import java.util.List;
 import org.junit.jupiter.api.Test;
+
+import sqlancer.common.ast.JoinBase;
 import sqlancer.mysql.ast.MySQLAggregate;
 import sqlancer.mysql.ast.MySQLConstant;
 import sqlancer.mysql.ast.MySQLExpression;
@@ -64,7 +67,7 @@ public class MySQLAggregate_ESTest {
         MySQLAggregate.MySQLAggregateFunction mySQLAggregate_MySQLAggregateFunction0 = MySQLAggregate.MySQLAggregateFunction.SUM;
         MySQLSelect mySQLSelect0 = new MySQLSelect();
         LinkedList<MySQLSchema.MySQLTable> linkedList0 = new LinkedList<MySQLSchema.MySQLTable>();
-        List<MySQLJoin> list0 = MySQLJoin.getRandomJoinClauses(linkedList0, (MySQLGlobalState) null);
+        List<JoinBase<MySQLExpression>> list0 = MySQLJoin.getRandomJoinClauses(linkedList0, (MySQLGlobalState) null);
         mySQLSelect0.setJoinClauses(list0);
         List<MySQLExpression> list1 = mySQLSelect0.getJoinList();
         MySQLAggregate mySQLAggregate0 = new MySQLAggregate(list1, mySQLAggregate_MySQLAggregateFunction0);

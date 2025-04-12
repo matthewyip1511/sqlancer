@@ -115,7 +115,7 @@ public class MySQLPivotedQuerySynthesisOracle
     }
 
     @Override
-    protected Query<SQLConnection> getContainmentCheckQuery(Query<?> query) throws SQLException {
+    public Query<SQLConnection> getContainmentCheckQuery(Query<?> query) throws SQLException {
         StringBuilder sb = new StringBuilder();
         sb.append("SELECT * FROM ("); // ANOTHER SELECT TO USE ORDER BY without restrictions
         sb.append(query.getUnterminatedQueryString());
@@ -141,7 +141,7 @@ public class MySQLPivotedQuerySynthesisOracle
     }
 
     @Override
-    protected String getExpectedValues(MySQLExpression expr) {
+    public String getExpectedValues(MySQLExpression expr) {
         return MySQLVisitor.asExpectedValues(expr);
     }
 }

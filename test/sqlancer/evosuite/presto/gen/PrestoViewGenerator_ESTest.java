@@ -6,6 +6,7 @@
 package sqlancer.evosuite.presto.gen;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.presto.gen.PrestoViewGenerator;
 import sqlancer.presto.PrestoGlobalState;

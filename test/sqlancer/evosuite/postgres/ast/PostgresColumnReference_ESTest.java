@@ -6,6 +6,7 @@
 package sqlancer.evosuite.postgres.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.postgres.ast.PostgresColumnReference;
 import sqlancer.postgres.PostgresSchema;

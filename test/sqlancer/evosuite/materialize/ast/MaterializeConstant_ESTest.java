@@ -6,6 +6,7 @@
 package sqlancer.evosuite.materialize.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import org.junit.jupiter.api.Test;

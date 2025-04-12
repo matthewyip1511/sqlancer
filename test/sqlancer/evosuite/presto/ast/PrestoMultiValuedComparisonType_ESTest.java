@@ -6,6 +6,7 @@
 package sqlancer.evosuite.presto.ast;
 
 import sqlancer.presto.ast.PrestoMultiValuedComparisonType;
+
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 

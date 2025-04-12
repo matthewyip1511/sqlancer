@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 
 import sqlancer.ComparatorHelper;
 import sqlancer.Randomly;
+import sqlancer.common.ast.JoinBase;
 import sqlancer.common.oracle.TestOracle;
 import sqlancer.common.query.ExpectedErrors;
 import sqlancer.common.query.SQLQueryAdapter;
@@ -58,7 +59,7 @@ public class MySQLDQPOracle implements TestOracle<MySQLGlobalState> {
         }
 
         // Set the join.
-        List<MySQLJoin> joinExpressions = MySQLJoin.getRandomJoinClauses(tables.getTables(), state);
+        List<JoinBase<MySQLExpression>> joinExpressions = MySQLJoin.getRandomJoinClauses(tables.getTables(), state);
         select.setJoinList(joinExpressions.stream().map(j -> (MySQLExpression) j).collect(Collectors.toList()));
 
         // Set the from clause from the tables that are not used in the join.

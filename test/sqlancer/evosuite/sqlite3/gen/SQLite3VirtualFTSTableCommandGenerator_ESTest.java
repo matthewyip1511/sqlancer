@@ -6,11 +6,9 @@
 package sqlancer.evosuite.sqlite3.gen;
 
 import static org.junit.jupiter.api.Assertions.*;
-import java.util.function.Supplier;
+
 import org.junit.jupiter.api.Test;
-import sqlancer.Randomly;
 import sqlancer.sqlite3.gen.SQLite3VirtualFTSTableCommandGenerator;
-import sqlancer.sqlite3.schema.SQLite3Schema;
 import sqlancer.sqlite3.SQLite3GlobalState;
 
 public class SQLite3VirtualFTSTableCommandGenerator_ESTest {

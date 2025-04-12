@@ -6,12 +6,14 @@
 package sqlancer.evosuite.oceanbase.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.LinkedList;
 import java.util.List;
 import org.junit.jupiter.api.Test;
+
+import sqlancer.common.ast.JoinBase;
 import sqlancer.oceanbase.ast.OceanBaseConstant;
 import sqlancer.oceanbase.ast.OceanBaseExpression;
-import sqlancer.oceanbase.ast.OceanBaseJoin;
 import sqlancer.oceanbase.ast.OceanBaseSelect;
 import sqlancer.oceanbase.ast.OceanBaseStringExpression;
 import sqlancer.Randomly;
@@ -128,7 +130,7 @@ public class OceanBaseSelect_ESTest {
     @Test
     public void test09() throws Throwable {
         OceanBaseSelect oceanBaseSelect0 = new OceanBaseSelect();
-        List<OceanBaseJoin> list0 = oceanBaseSelect0.getJoinClauses();
+        List<JoinBase<OceanBaseExpression>> list0 = oceanBaseSelect0.getJoinClauses();
         assertTrue(list0.isEmpty());
     }
 
@@ -155,7 +157,7 @@ public class OceanBaseSelect_ESTest {
     @Test
     public void test12() throws Throwable {
         OceanBaseSelect oceanBaseSelect0 = new OceanBaseSelect();
-        LinkedList<OceanBaseJoin> linkedList0 = new LinkedList<OceanBaseJoin>();
+        List<JoinBase<OceanBaseExpression>> linkedList0 = new LinkedList<>();
         oceanBaseSelect0.setJoinClauses(linkedList0);
         assertEquals(0, linkedList0.size());
     }

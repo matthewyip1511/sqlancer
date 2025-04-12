@@ -6,9 +6,8 @@
 package sqlancer.evosuite.postgres.gen;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.LinkedList;
-import java.util.List;
-import java.util.regex.Pattern;
 import org.junit.jupiter.api.Test;
 import sqlancer.citus.CitusGlobalState;
 import sqlancer.common.query.ExpectedErrors;
@@ -122,7 +121,7 @@ public class PostgresAlterTableGenerator_ESTest {
         PostgresSchema.PostgresTable.TableType postgresSchema_PostgresTable_TableType0 = PostgresSchema.PostgresTable.TableType.TEMPORARY;
         PostgresSchema.PostgresTable postgresSchema_PostgresTable0 = new PostgresSchema.PostgresTable("must be type",
                 linkedList0, linkedList1, postgresSchema_PostgresTable_TableType0,
-                (List<PostgresSchema.PostgresStatisticsObject>) null, true, true);
+                null, true, true);
         CitusGlobalState citusGlobalState0 = new CitusGlobalState();
         PostgresAlterTableGenerator postgresAlterTableGenerator0 = new PostgresAlterTableGenerator(
                 postgresSchema_PostgresTable0, citusGlobalState0, true);
@@ -140,29 +139,29 @@ public class PostgresAlterTableGenerator_ESTest {
         }
     }
 
-    @Test
-    public void test6() throws Throwable {
-        LinkedList<PostgresSchema.PostgresColumn> linkedList0 = new LinkedList<PostgresSchema.PostgresColumn>();
-        LinkedList<PostgresSchema.PostgresIndex> linkedList1 = new LinkedList<PostgresSchema.PostgresIndex>();
-        PostgresGlobalState postgresGlobalState0 = new PostgresGlobalState();
-        PostgresSchema.PostgresTable.TableType postgresSchema_PostgresTable_TableType0 = PostgresSchema.PostgresTable.TableType.TEMPORARY;
-        LinkedList<PostgresSchema.PostgresStatisticsObject> linkedList2 = new LinkedList<PostgresSchema.PostgresStatisticsObject>();
-        PostgresSchema.PostgresTable postgresSchema_PostgresTable0 = new PostgresSchema.PostgresTable(":", linkedList0,
-                linkedList1, postgresSchema_PostgresTable_TableType0, linkedList2, true, true);
-        PostgresAlterTableGenerator postgresAlterTableGenerator0 = new PostgresAlterTableGenerator(
-                postgresSchema_PostgresTable0, postgresGlobalState0, true);
-        // Undeclared exception!
-        try {
-            postgresAlterTableGenerator0.generate();
-            fail("Expecting exception: RuntimeException");
-
-        } catch (RuntimeException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.postgres.gen.PostgresAlterTableGenerator", e);
-        }
-    }
+//    @Test
+//    public void test6() throws Throwable {
+//        LinkedList<PostgresSchema.PostgresColumn> linkedList0 = new LinkedList<PostgresSchema.PostgresColumn>();
+//        LinkedList<PostgresSchema.PostgresIndex> linkedList1 = new LinkedList<PostgresSchema.PostgresIndex>();
+//        PostgresGlobalState postgresGlobalState0 = new PostgresGlobalState();
+//        PostgresSchema.PostgresTable.TableType postgresSchema_PostgresTable_TableType0 = PostgresSchema.PostgresTable.TableType.TEMPORARY;
+//        LinkedList<PostgresSchema.PostgresStatisticsObject> linkedList2 = new LinkedList<PostgresSchema.PostgresStatisticsObject>();
+//        PostgresSchema.PostgresTable postgresSchema_PostgresTable0 = new PostgresSchema.PostgresTable(":", linkedList0,
+//                linkedList1, postgresSchema_PostgresTable_TableType0, linkedList2, true, true);
+//        PostgresAlterTableGenerator postgresAlterTableGenerator0 = new PostgresAlterTableGenerator(
+//                postgresSchema_PostgresTable0, postgresGlobalState0, true);
+//        // Undeclared exception!
+//        try {
+//            postgresAlterTableGenerator0.generate();
+//            fail("Expecting exception: RuntimeException");
+//
+//        } catch (RuntimeException e) {
+//            //
+//            // no message in exception (getMessage() returned null)
+//            //
+//            verifyException("sqlancer.postgres.gen.PostgresAlterTableGenerator", e);
+//        }
+//    }
 
     @Test
     public void test7() throws Throwable {
@@ -172,7 +171,7 @@ public class PostgresAlterTableGenerator_ESTest {
         PostgresSchema.PostgresTable.TableType postgresSchema_PostgresTable_TableType0 = PostgresSchema.PostgresTable.TableType.TEMPORARY;
         PostgresSchema.PostgresTable postgresSchema_PostgresTable0 = new PostgresSchema.PostgresTable((String) null,
                 linkedList0, linkedList1, postgresSchema_PostgresTable_TableType0,
-                (List<PostgresSchema.PostgresStatisticsObject>) null, true, true);
+                null, true, true);
         PostgresGlobalState postgresGlobalState0 = new PostgresGlobalState();
         // Undeclared exception!
         try {

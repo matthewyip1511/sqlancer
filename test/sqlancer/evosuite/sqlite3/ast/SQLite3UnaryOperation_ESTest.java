@@ -6,11 +6,17 @@
 package sqlancer.evosuite.sqlite3.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.common.visitor.UnaryOperation;
+import sqlancer.sqlite3.ast.SQLite3BetweenOperation;
+import sqlancer.sqlite3.ast.SQLite3BinaryComparisonOperation;
+import sqlancer.sqlite3.ast.SQLite3CollateOperation;
+import sqlancer.sqlite3.ast.SQLite3ColumnName;
 import sqlancer.sqlite3.ast.SQLite3Constant;
 import sqlancer.sqlite3.ast.SQLite3Expression;
 import sqlancer.sqlite3.ast.SQLite3Function;
+import sqlancer.sqlite3.ast.SQLite3TypeAffinity;
 import sqlancer.sqlite3.ast.SQLite3UnaryOperation;
 import sqlancer.sqlite3.schema.SQLite3DataType;
 import sqlancer.sqlite3.schema.SQLite3Schema;
@@ -44,7 +50,7 @@ public class SQLite3UnaryOperation_ESTest {
         byte[] byteArray0 = new byte[7];
         SQLite3Constant.SQLite3BinaryConstant sQLite3Constant_SQLite3BinaryConstant0 = new SQLite3Constant.SQLite3BinaryConstant(
                 byteArray0);
-        SQLite3Expression.SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = new SQLite3Expression.SQLite3ColumnName(
+        SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = new SQLite3ColumnName(
                 sQLite3Schema_SQLite3Column0, sQLite3Constant_SQLite3BinaryConstant0);
         SQLite3UnaryOperation sQLite3UnaryOperation0 = new SQLite3UnaryOperation(sQLite3UnaryOperation_UnaryOperator0,
                 sQLite3Expression_SQLite3ColumnName0);
@@ -71,7 +77,7 @@ public class SQLite3UnaryOperation_ESTest {
         SQLite3Function sQLite3Function0 = new SQLite3Function(sQLite3Function_ComputableFunction0,
                 sQLite3ExpressionArray0);
         SQLite3Schema.SQLite3Column.SQLite3CollateSequence sQLite3Schema_SQLite3Column_SQLite3CollateSequence0 = SQLite3Schema.SQLite3Column.SQLite3CollateSequence.BINARY;
-        SQLite3Expression.CollateOperation sQLite3Expression_CollateOperation0 = new SQLite3Expression.CollateOperation(
+        SQLite3CollateOperation sQLite3Expression_CollateOperation0 = new SQLite3CollateOperation(
                 sQLite3Function0, sQLite3Schema_SQLite3Column_SQLite3CollateSequence0);
         SQLite3UnaryOperation sQLite3UnaryOperation0 = new SQLite3UnaryOperation(sQLite3UnaryOperation_UnaryOperator0,
                 sQLite3Expression_CollateOperation0);
@@ -84,15 +90,15 @@ public class SQLite3UnaryOperation_ESTest {
     @Test
     public void test04() throws Throwable {
         SQLite3UnaryOperation.UnaryOperator sQLite3UnaryOperation_UnaryOperator0 = SQLite3UnaryOperation.UnaryOperator.PLUS;
-        SQLite3Expression.BinaryComparisonOperation.BinaryComparisonOperator sQLite3Expression_BinaryComparisonOperation_BinaryComparisonOperator0 = SQLite3Expression.BinaryComparisonOperation.BinaryComparisonOperator.SMALLER_EQUALS;
+        SQLite3BinaryComparisonOperation.BinaryComparisonOperator sQLite3Expression_BinaryComparisonOperation_BinaryComparisonOperator0 = SQLite3BinaryComparisonOperation.BinaryComparisonOperator.SMALLER_EQUALS;
         SQLite3Constant.SQLite3RealConstant sQLite3Constant_SQLite3RealConstant0 = new SQLite3Constant.SQLite3RealConstant(
                 0.0);
-        SQLite3Expression.TypeAffinity sQLite3Expression_TypeAffinity0 = SQLite3Expression.TypeAffinity.INTEGER;
+        SQLite3TypeAffinity sQLite3Expression_TypeAffinity0 = SQLite3TypeAffinity.INTEGER;
         SQLite3Constant sQLite3Constant0 = sQLite3Expression_BinaryComparisonOperation_BinaryComparisonOperator0
                 .applyOperand(sQLite3Constant_SQLite3RealConstant0, sQLite3Expression_TypeAffinity0,
                         sQLite3Constant_SQLite3RealConstant0, sQLite3Expression_TypeAffinity0,
                         sQLite3Constant_SQLite3RealConstant0, sQLite3Constant_SQLite3RealConstant0, false);
-        SQLite3Expression.SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = new SQLite3Expression.SQLite3ColumnName(
+        SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = new SQLite3ColumnName(
                 (SQLite3Schema.SQLite3Column) null, sQLite3Constant0);
         SQLite3UnaryOperation sQLite3UnaryOperation0 = new SQLite3UnaryOperation(sQLite3UnaryOperation_UnaryOperator0,
                 sQLite3Expression_SQLite3ColumnName0);
@@ -173,13 +179,13 @@ public class SQLite3UnaryOperation_ESTest {
                 sQLite3DataType0, true, sQLite3Schema_SQLite3Column_SQLite3CollateSequence0, true);
         SQLite3Constant.SQLite3IntConstant sQLite3Constant_SQLite3IntConstant0 = new SQLite3Constant.SQLite3IntConstant(
                 1000L);
-        SQLite3Expression.SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = new SQLite3Expression.SQLite3ColumnName(
+        SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = new SQLite3ColumnName(
                 sQLite3Schema_SQLite3Column0, sQLite3Constant_SQLite3IntConstant0);
         byte[] byteArray0 = new byte[6];
         SQLite3Constant.SQLite3BinaryConstant sQLite3Constant_SQLite3BinaryConstant0 = new SQLite3Constant.SQLite3BinaryConstant(
                 byteArray0);
-        SQLite3Expression.BinaryComparisonOperation.BinaryComparisonOperator sQLite3Expression_BinaryComparisonOperation_BinaryComparisonOperator0 = SQLite3Expression.BinaryComparisonOperation.BinaryComparisonOperator.IS_NOT;
-        SQLite3Expression.BinaryComparisonOperation sQLite3Expression_BinaryComparisonOperation0 = new SQLite3Expression.BinaryComparisonOperation(
+        SQLite3BinaryComparisonOperation.BinaryComparisonOperator sQLite3Expression_BinaryComparisonOperation_BinaryComparisonOperator0 = SQLite3BinaryComparisonOperation.BinaryComparisonOperator.IS_NOT;
+        SQLite3BinaryComparisonOperation sQLite3Expression_BinaryComparisonOperation0 = new SQLite3BinaryComparisonOperation(
                 sQLite3Expression_SQLite3ColumnName0, sQLite3Constant_SQLite3BinaryConstant0,
                 sQLite3Expression_BinaryComparisonOperation_BinaryComparisonOperator0);
         SQLite3UnaryOperation sQLite3UnaryOperation0 = new SQLite3UnaryOperation(sQLite3UnaryOperation_UnaryOperator0,
@@ -228,9 +234,9 @@ public class SQLite3UnaryOperation_ESTest {
     @Test
     public void test11() throws Throwable {
         SQLite3Constant sQLite3Constant0 = SQLite3Constant.createNullConstant();
-        SQLite3Expression.SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = SQLite3Expression.SQLite3ColumnName
+        SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = SQLite3ColumnName
                 .createDummy("LD");
-        SQLite3Expression.BetweenOperation sQLite3Expression_BetweenOperation0 = new SQLite3Expression.BetweenOperation(
+        SQLite3BetweenOperation sQLite3Expression_BetweenOperation0 = new SQLite3BetweenOperation(
                 sQLite3Constant0, true, sQLite3Expression_SQLite3ColumnName0, sQLite3Constant0);
         SQLite3UnaryOperation.UnaryOperator sQLite3UnaryOperation_UnaryOperator0 = SQLite3UnaryOperation.UnaryOperator.PLUS;
         SQLite3UnaryOperation sQLite3UnaryOperation0 = new SQLite3UnaryOperation(sQLite3UnaryOperation_UnaryOperator0,
@@ -339,9 +345,9 @@ public class SQLite3UnaryOperation_ESTest {
     @Test
     public void test21() throws Throwable {
         SQLite3Constant sQLite3Constant0 = SQLite3Constant.createNullConstant();
-        SQLite3Expression.SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = SQLite3Expression.SQLite3ColumnName
+        SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = SQLite3ColumnName
                 .createDummy("LD");
-        SQLite3Expression.BetweenOperation sQLite3Expression_BetweenOperation0 = new SQLite3Expression.BetweenOperation(
+        SQLite3BetweenOperation sQLite3Expression_BetweenOperation0 = new SQLite3BetweenOperation(
                 sQLite3Constant0, true, sQLite3Expression_SQLite3ColumnName0, sQLite3Constant0);
         SQLite3UnaryOperation.UnaryOperator sQLite3UnaryOperation_UnaryOperator0 = SQLite3UnaryOperation.UnaryOperator.PLUS;
         SQLite3UnaryOperation sQLite3UnaryOperation0 = new SQLite3UnaryOperation(sQLite3UnaryOperation_UnaryOperator0,
@@ -354,7 +360,7 @@ public class SQLite3UnaryOperation_ESTest {
         SQLite3UnaryOperation.UnaryOperator sQLite3UnaryOperation_UnaryOperator0 = SQLite3UnaryOperation.UnaryOperator.MINUS;
         SQLite3Constant.SQLite3RealConstant sQLite3Constant_SQLite3RealConstant0 = new SQLite3Constant.SQLite3RealConstant(
                 0.0);
-        SQLite3Expression.BetweenOperation sQLite3Expression_BetweenOperation0 = new SQLite3Expression.BetweenOperation(
+        SQLite3BetweenOperation sQLite3Expression_BetweenOperation0 = new SQLite3BetweenOperation(
                 sQLite3Constant_SQLite3RealConstant0, true, sQLite3Constant_SQLite3RealConstant0,
                 sQLite3Constant_SQLite3RealConstant0);
         SQLite3Constant sQLite3Constant0 = sQLite3Expression_BetweenOperation0.getExpectedValue();

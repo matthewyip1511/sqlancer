@@ -6,6 +6,7 @@
 package sqlancer.evosuite.oceanbase.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.oceanbase.ast.OceanBaseColumnName;
 import sqlancer.oceanbase.OceanBaseSchema;

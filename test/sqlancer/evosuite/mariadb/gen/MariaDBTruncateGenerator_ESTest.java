@@ -6,10 +6,10 @@
 package sqlancer.evosuite.mariadb.gen;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.LinkedList;
 import java.util.List;
 import org.junit.jupiter.api.Test;
-import sqlancer.common.query.SQLQueryAdapter;
 import sqlancer.mariadb.gen.MariaDBTruncateGenerator;
 import sqlancer.mariadb.MariaDBSchema;
 

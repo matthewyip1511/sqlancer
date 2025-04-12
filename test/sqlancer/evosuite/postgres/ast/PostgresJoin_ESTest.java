@@ -6,9 +6,11 @@
 package sqlancer.evosuite.postgres.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import sqlancer.citus.CitusGlobalState;
+import sqlancer.common.ast.JoinBase;
 import sqlancer.postgres.ast.PostgresAggregate;
 import sqlancer.postgres.ast.PostgresBinaryLogicalOperation;
 import sqlancer.postgres.ast.PostgresConstant;
@@ -28,19 +30,19 @@ public class PostgresJoin_ESTest {
     public void test00() throws Throwable {
         PostgresConstant.IntConstant postgresConstant_IntConstant0 = new PostgresConstant.IntConstant((-2089L));
         PostgresConstant.PostgresNullConstant postgresConstant_PostgresNullConstant0 = new PostgresConstant.PostgresNullConstant();
-        PostgresJoin.PostgresJoinType postgresJoin_PostgresJoinType0 = PostgresJoin.PostgresJoinType.CROSS;
+        JoinBase.JoinType postgresJoin_PostgresJoinType0 = JoinBase.JoinType.CROSS;
         PostgresJoin postgresJoin0 = PostgresJoin.createJoin(postgresConstant_PostgresNullConstant0,
                 postgresConstant_IntConstant0, postgresJoin_PostgresJoinType0, postgresConstant_IntConstant0);
-        assertEquals(PostgresJoin.PostgresJoinType.CROSS, postgresJoin0.getType());
+        assertEquals(JoinBase.JoinType.CROSS, postgresJoin0.getType());
     }
 
     @Test
     public void test01() throws Throwable {
-        PostgresJoin.PostgresJoinType postgresJoin_PostgresJoinType0 = PostgresJoin.PostgresJoinType.CROSS;
+        JoinBase.JoinType postgresJoin_PostgresJoinType0 = JoinBase.JoinType.CROSS;
         PostgresConstant postgresConstant0 = PostgresConstant.createBooleanConstant(false);
         PostgresJoin postgresJoin0 = PostgresJoin.createJoin((PostgresExpression) null, (PostgresExpression) null,
                 postgresJoin_PostgresJoinType0, postgresConstant0);
-        assertEquals(PostgresJoin.PostgresJoinType.CROSS, postgresJoin0.getType());
+        assertEquals(JoinBase.JoinType.CROSS, postgresJoin0.getType());
     }
 
     @Test
@@ -52,24 +54,24 @@ public class PostgresJoin_ESTest {
         PostgresAggregate.PostgresAggregateFunction postgresAggregate_PostgresAggregateFunction0 = PostgresAggregate.PostgresAggregateFunction.BIT_OR;
         PostgresAggregate postgresAggregate0 = new PostgresAggregate(list0,
                 postgresAggregate_PostgresAggregateFunction0);
-        PostgresJoin.PostgresJoinType postgresJoin_PostgresJoinType0 = PostgresJoin.PostgresJoinType.FULL;
+        JoinBase.JoinType postgresJoin_PostgresJoinType0 = JoinBase.JoinType.FULL;
         PostgresJoin postgresJoin0 = new PostgresJoin(postgresExpression0, postgresAggregate0,
                 postgresJoin_PostgresJoinType0);
-        assertEquals(PostgresJoin.PostgresJoinType.FULL, postgresJoin0.getType());
+        assertEquals(JoinBase.JoinType.FULL, postgresJoin0.getType());
     }
 
     @Test
     public void test03() throws Throwable {
-        PostgresJoin.PostgresJoinType postgresJoin_PostgresJoinType0 = PostgresJoin.PostgresJoinType.RIGHT;
+        JoinBase.JoinType postgresJoin_PostgresJoinType0 = JoinBase.JoinType.RIGHT;
         PostgresJoin postgresJoin0 = new PostgresJoin((PostgresExpression) null, (PostgresExpression) null,
                 postgresJoin_PostgresJoinType0, (PostgresExpression) null);
-        PostgresJoin.PostgresJoinType postgresJoin_PostgresJoinType1 = postgresJoin0.getType();
+        JoinBase.JoinType postgresJoin_PostgresJoinType1 = postgresJoin0.getType();
         assertSame(postgresJoin_PostgresJoinType0, postgresJoin_PostgresJoinType1);
     }
 
     @Test
     public void test04() throws Throwable {
-        PostgresJoin.PostgresJoinType postgresJoin_PostgresJoinType0 = PostgresJoin.PostgresJoinType.getRandom();
+        JoinBase.JoinType postgresJoin_PostgresJoinType0 = JoinBase.JoinType.getRandom();
         PostgresConstant postgresConstant0 = PostgresConstant.createIntConstant(96L);
         PostgresJoin postgresJoin0 = PostgresJoin.createJoin(postgresConstant0, postgresConstant0,
                 postgresJoin_PostgresJoinType0, postgresConstant0);
@@ -83,7 +85,7 @@ public class PostgresJoin_ESTest {
         PostgresSchema.PostgresDataType postgresSchema_PostgresDataType0 = PostgresSchema.PostgresDataType.TEXT;
         PostgresPostfixText postgresPostfixText0 = new PostgresPostfixText((PostgresExpression) null, (String) null,
                 postgresConstant0, postgresSchema_PostgresDataType0);
-        PostgresJoin.PostgresJoinType postgresJoin_PostgresJoinType0 = PostgresJoin.PostgresJoinType.CROSS;
+        JoinBase.JoinType postgresJoin_PostgresJoinType0 = JoinBase.JoinType.CROSS;
         PostgresConstant postgresConstant1 = PostgresConstant.createNullConstant();
         PostgresJoin postgresJoin0 = new PostgresJoin(postgresPostfixText0, (PostgresExpression) null,
                 postgresJoin_PostgresJoinType0, postgresConstant1);
@@ -100,7 +102,7 @@ public class PostgresJoin_ESTest {
         PostgresAggregate.PostgresAggregateFunction postgresAggregate_PostgresAggregateFunction0 = PostgresAggregate.PostgresAggregateFunction.BIT_OR;
         PostgresAggregate postgresAggregate0 = new PostgresAggregate(list0,
                 postgresAggregate_PostgresAggregateFunction0);
-        PostgresJoin.PostgresJoinType postgresJoin_PostgresJoinType0 = PostgresJoin.PostgresJoinType.FULL;
+        JoinBase.JoinType postgresJoin_PostgresJoinType0 = JoinBase.JoinType.FULL;
         PostgresJoin postgresJoin0 = new PostgresJoin(postgresAggregate0, postgresAggregate0,
                 postgresJoin_PostgresJoinType0, postgresExpression0);
         PostgresJoin postgresJoin1 = PostgresJoin.createJoin(postgresJoin0, postgresJoin0,
@@ -118,7 +120,7 @@ public class PostgresJoin_ESTest {
         PostgresBinaryLogicalOperation postgresBinaryLogicalOperation0 = new PostgresBinaryLogicalOperation(
                 postgresSelect_PostgresSubquery0, postgresSelect_PostgresSubquery0,
                 postgresBinaryLogicalOperation_BinaryLogicalOperator0);
-        PostgresJoin.PostgresJoinType postgresJoin_PostgresJoinType0 = PostgresJoin.PostgresJoinType.INNER;
+        JoinBase.JoinType postgresJoin_PostgresJoinType0 = JoinBase.JoinType.INNER;
         PostgresJoin postgresJoin0 = PostgresJoin.createJoin((PostgresExpression) null, postgresBinaryLogicalOperation0,
                 postgresJoin_PostgresJoinType0, postgresSelect_PostgresSubquery0);
         PostgresExpression postgresExpression0 = postgresJoin0.getLeftTable();
@@ -155,18 +157,18 @@ public class PostgresJoin_ESTest {
 
     @Test
     public void test10() throws Throwable {
-        PostgresJoin.PostgresJoinType[] postgresJoin_PostgresJoinTypeArray0 = new PostgresJoin.PostgresJoinType[15];
-        PostgresJoin.PostgresJoinType postgresJoin_PostgresJoinType0 = PostgresJoin.PostgresJoinType.LEFT;
+        JoinBase.JoinType[] postgresJoin_PostgresJoinTypeArray0 = new JoinBase.JoinType[15];
+        JoinBase.JoinType postgresJoin_PostgresJoinType0 = JoinBase.JoinType.LEFT;
         postgresJoin_PostgresJoinTypeArray0[1] = postgresJoin_PostgresJoinType0;
-        PostgresJoin.PostgresJoinType postgresJoin_PostgresJoinType1 = PostgresJoin.PostgresJoinType
-                .getRandomExcept(postgresJoin_PostgresJoinTypeArray0);
-        assertEquals(PostgresJoin.PostgresJoinType.INNER, postgresJoin_PostgresJoinType1);
+        JoinBase.JoinType postgresJoin_PostgresJoinType1 = JoinBase.JoinType
+                .getRandomExcept("POSTGRES", postgresJoin_PostgresJoinTypeArray0);
+        assertEquals(JoinBase.JoinType.INNER, postgresJoin_PostgresJoinType1);
     }
 
     @Test
     public void test11() throws Throwable {
         PostgresExpression postgresExpression0 = PostgresConstant.createBitConstant((-1824L));
-        PostgresJoin.PostgresJoinType[] postgresJoin_PostgresJoinTypeArray0 = new PostgresJoin.PostgresJoinType[15];
+        JoinBase.JoinType[] postgresJoin_PostgresJoinTypeArray0 = new JoinBase.JoinType[15];
         PostgresJoin postgresJoin0 = new PostgresJoin(postgresExpression0, postgresExpression0,
                 postgresJoin_PostgresJoinTypeArray0[0]);
         postgresJoin0.getType();
@@ -174,7 +176,7 @@ public class PostgresJoin_ESTest {
 
     @Test
     public void test12() throws Throwable {
-        PostgresJoin.PostgresJoinType postgresJoin_PostgresJoinType0 = PostgresJoin.PostgresJoinType.getRandom();
+        JoinBase.JoinType postgresJoin_PostgresJoinType0 = JoinBase.JoinType.getRandom();
         PostgresJoin postgresJoin0 = new PostgresJoin((PostgresExpression) null, (PostgresExpression) null,
                 postgresJoin_PostgresJoinType0);
         // Undeclared exception!
@@ -198,17 +200,17 @@ public class PostgresJoin_ESTest {
         PostgresAggregate.PostgresAggregateFunction postgresAggregate_PostgresAggregateFunction0 = PostgresAggregate.PostgresAggregateFunction.BIT_OR;
         PostgresAggregate postgresAggregate0 = new PostgresAggregate(list0,
                 postgresAggregate_PostgresAggregateFunction0);
-        PostgresJoin.PostgresJoinType postgresJoin_PostgresJoinType0 = PostgresJoin.PostgresJoinType.FULL;
+        JoinBase.JoinType postgresJoin_PostgresJoinType0 = JoinBase.JoinType.FULL;
         PostgresJoin postgresJoin0 = new PostgresJoin(postgresAggregate0, postgresAggregate0,
                 postgresJoin_PostgresJoinType0, postgresExpression0);
         postgresJoin0.setType(postgresJoin_PostgresJoinType0);
-        assertEquals(PostgresJoin.PostgresJoinType.FULL, postgresJoin0.getType());
+        assertEquals(JoinBase.JoinType.FULL, postgresJoin0.getType());
     }
 
     @Test
     public void test14() throws Throwable {
         PostgresConstant.IntConstant postgresConstant_IntConstant0 = new PostgresConstant.IntConstant(5L);
-        PostgresJoin.PostgresJoinType postgresJoin_PostgresJoinType0 = PostgresJoin.PostgresJoinType.FULL;
+        JoinBase.JoinType postgresJoin_PostgresJoinType0 = JoinBase.JoinType.FULL;
         PostgresJoin postgresJoin0 = new PostgresJoin(postgresConstant_IntConstant0, postgresConstant_IntConstant0,
                 postgresJoin_PostgresJoinType0, postgresConstant_IntConstant0);
         postgresJoin0.setOnClause((PostgresExpression) postgresConstant_IntConstant0);
@@ -217,7 +219,7 @@ public class PostgresJoin_ESTest {
 
     @Test
     public void test15() throws Throwable {
-        PostgresJoin.PostgresJoinType postgresJoin_PostgresJoinType0 = PostgresJoin.PostgresJoinType.getRandom();
+        JoinBase.JoinType postgresJoin_PostgresJoinType0 = JoinBase.JoinType.getRandom();
         PostgresSelect postgresSelect0 = new PostgresSelect();
         List<PostgresExpression> list0 = postgresSelect0.getGroupByExpressions();
         PostgresAggregate.PostgresAggregateFunction postgresAggregate_PostgresAggregateFunction0 = PostgresAggregate.PostgresAggregateFunction.SUM;
@@ -234,7 +236,7 @@ public class PostgresJoin_ESTest {
     @Test
     public void test16() throws Throwable {
         PostgresConstant.IntConstant postgresConstant_IntConstant0 = new PostgresConstant.IntConstant(5L);
-        PostgresJoin.PostgresJoinType postgresJoin_PostgresJoinType0 = PostgresJoin.PostgresJoinType.FULL;
+        JoinBase.JoinType postgresJoin_PostgresJoinType0 = JoinBase.JoinType.FULL;
         PostgresJoin postgresJoin0 = new PostgresJoin(postgresConstant_IntConstant0, postgresConstant_IntConstant0,
                 postgresJoin_PostgresJoinType0, postgresConstant_IntConstant0);
         // Undeclared exception!
@@ -252,7 +254,7 @@ public class PostgresJoin_ESTest {
     @Test
     public void test17() throws Throwable {
         PostgresExpression postgresExpression0 = PostgresConstant.createBitConstant((-1824L));
-        PostgresJoin.PostgresJoinType[] postgresJoin_PostgresJoinTypeArray0 = new PostgresJoin.PostgresJoinType[15];
+        JoinBase.JoinType[] postgresJoin_PostgresJoinTypeArray0 = new JoinBase.JoinType[15];
         PostgresJoin postgresJoin0 = new PostgresJoin(postgresExpression0, postgresExpression0,
                 postgresJoin_PostgresJoinTypeArray0[0]);
         PostgresConstant.BitConstant postgresConstant_BitConstant0 = (PostgresConstant.BitConstant) postgresJoin0
@@ -263,7 +265,7 @@ public class PostgresJoin_ESTest {
     @Test
     public void test18() throws Throwable {
         PostgresConstant.FloatConstant postgresConstant_FloatConstant0 = new PostgresConstant.FloatConstant(1.0F);
-        PostgresJoin.PostgresJoinType postgresJoin_PostgresJoinType0 = PostgresJoin.PostgresJoinType.LEFT;
+        JoinBase.JoinType postgresJoin_PostgresJoinType0 = JoinBase.JoinType.LEFT;
         PostgresJoin postgresJoin0 = new PostgresJoin(postgresConstant_FloatConstant0, postgresConstant_FloatConstant0,
                 postgresJoin_PostgresJoinType0);
         PostgresConstant.FloatConstant postgresConstant_FloatConstant1 = (PostgresConstant.FloatConstant) postgresJoin0
@@ -273,7 +275,7 @@ public class PostgresJoin_ESTest {
 
     @Test
     public void test19() throws Throwable {
-        PostgresJoin.PostgresJoinType postgresJoin_PostgresJoinType0 = PostgresJoin.PostgresJoinType.getRandom();
+        JoinBase.JoinType postgresJoin_PostgresJoinType0 = JoinBase.JoinType.getRandom();
         PostgresConstant postgresConstant0 = PostgresConstant.createNullConstant();
         PostgresJoin postgresJoin0 = PostgresJoin.createJoin(postgresConstant0, postgresConstant0,
                 postgresJoin_PostgresJoinType0, postgresConstant0);

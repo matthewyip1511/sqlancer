@@ -6,9 +6,12 @@
 package sqlancer.evosuite.mysql;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.LinkedList;
 import java.util.List;
 import org.junit.jupiter.api.Test;
+
+import sqlancer.common.ast.JoinBase;
 import sqlancer.mysql.ast.MySQLAggregate;
 import sqlancer.mysql.ast.MySQLBetweenOperation;
 import sqlancer.mysql.ast.MySQLBinaryComparisonOperation;
@@ -1290,7 +1293,7 @@ public class MySQLExpectedValueVisitor_ESTest {
     public void test69() throws Throwable {
         MySQLExpectedValueVisitor mySQLExpectedValueVisitor0 = new MySQLExpectedValueVisitor();
         MySQLSelect mySQLSelect0 = new MySQLSelect();
-        LinkedList<MySQLJoin> linkedList0 = new LinkedList<MySQLJoin>();
+        List<JoinBase<MySQLExpression>> linkedList0 = new LinkedList<>();
         LinkedList<MySQLSchema.MySQLColumn> linkedList1 = new LinkedList<MySQLSchema.MySQLColumn>();
         LinkedList<MySQLSchema.MySQLIndex> linkedList2 = new LinkedList<MySQLSchema.MySQLIndex>();
         MySQLSchema.MySQLTable.MySQLEngine mySQLSchema_MySQLTable_MySQLEngine0 = MySQLSchema.MySQLTable.MySQLEngine.INNO_DB;

@@ -132,7 +132,7 @@ public abstract class OceanBaseConstant implements OceanBaseExpression {
         }
 
         @Override
-        protected OceanBaseConstant isLessThan(OceanBaseConstant rightVal) {
+        public OceanBaseConstant isLessThan(OceanBaseConstant rightVal) {
             if (rightVal.isNull()) {
                 return OceanBaseConstant.createNullConstant();
             } else if (rightVal instanceof OceanBaseIntConstant) {
@@ -290,7 +290,7 @@ public abstract class OceanBaseConstant implements OceanBaseExpression {
         }
 
         @Override
-        protected OceanBaseConstant isLessThan(OceanBaseConstant rightVal) {
+        public OceanBaseConstant isLessThan(OceanBaseConstant rightVal) {
             if (isNull() || rightVal.isNull()) {
                 return OceanBaseConstant.createNullConstant();
             } else if (rightVal.isInt()) {
@@ -420,7 +420,7 @@ public abstract class OceanBaseConstant implements OceanBaseExpression {
         }
 
         @Override
-        protected OceanBaseConstant isLessThan(OceanBaseConstant rightVal) {
+        public OceanBaseConstant isLessThan(OceanBaseConstant rightVal) {
             if (rightVal.isInt()) {
                 long intVal = rightVal.getInt();
                 if (isSigned && rightVal.isSigned()) {
@@ -488,7 +488,7 @@ public abstract class OceanBaseConstant implements OceanBaseExpression {
         }
 
         @Override
-        protected OceanBaseConstant isLessThan(OceanBaseConstant rightVal) {
+        public OceanBaseConstant isLessThan(OceanBaseConstant rightVal) {
             return this;
         }
 

@@ -6,16 +6,11 @@
 package sqlancer.evosuite.oceanbase;
 
 import static org.junit.jupiter.api.Assertions.*;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.LinkedList;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import sqlancer.oceanbase.OceanBaseGlobalState;
 import sqlancer.oceanbase.OceanBaseSchema;
-import sqlancer.SQLConnection;
 
 public class OceanBaseSchema_ESTest {
 
@@ -95,6 +90,7 @@ public class OceanBaseSchema_ESTest {
             verifyException("java.util.Collections$UnmodifiableCollection", e);
         }
     }
+}
 
 /*
  * Test disabled because it contains mock() function calls that are not implemented

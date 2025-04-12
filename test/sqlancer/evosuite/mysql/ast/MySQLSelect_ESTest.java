@@ -6,8 +6,11 @@
 package sqlancer.evosuite.mysql.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.List;
 import org.junit.jupiter.api.Test;
+
+import sqlancer.common.ast.JoinBase;
 import sqlancer.mysql.ast.MySQLConstant;
 import sqlancer.mysql.ast.MySQLExpression;
 import sqlancer.mysql.ast.MySQLJoin;
@@ -52,7 +55,7 @@ public class MySQLSelect_ESTest {
         MySQLSelect mySQLSelect0 = new MySQLSelect();
         // Undeclared exception!
         try {
-            mySQLSelect0.setJoinClauses((List<MySQLJoin>) null);
+            mySQLSelect0.setJoinClauses((List<JoinBase<MySQLExpression>>) null);
             fail("Expecting exception: NullPointerException");
 
         } catch (NullPointerException e) {
@@ -179,7 +182,7 @@ public class MySQLSelect_ESTest {
     @Test
     public void test12() throws Throwable {
         MySQLSelect mySQLSelect0 = new MySQLSelect();
-        List<MySQLJoin> list0 = mySQLSelect0.getJoinClauses();
+        List<JoinBase<MySQLExpression>> list0 = mySQLSelect0.getJoinClauses();
         assertEquals(0, list0.size());
     }
 
@@ -210,9 +213,9 @@ public class MySQLSelect_ESTest {
     public void test16() throws Throwable {
         MySQLSelect mySQLSelect0 = new MySQLSelect();
         MySQLJoin[] mySQLJoinArray0 = new MySQLJoin[2];
-        List<MySQLJoin> list0 = Randomly.nonEmptySubset(mySQLJoinArray0);
+        List<JoinBase<MySQLExpression>> list0 = Randomly.nonEmptySubset(mySQLJoinArray0);
         mySQLSelect0.setJoinClauses(list0);
-        List<MySQLJoin> list1 = mySQLSelect0.getJoinClauses();
+        List<JoinBase<MySQLExpression>> list1 = mySQLSelect0.getJoinClauses();
         assertTrue(list1.equals((Object) list0));
     }
 

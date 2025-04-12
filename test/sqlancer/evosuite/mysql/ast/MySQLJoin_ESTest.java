@@ -6,11 +6,12 @@
 package sqlancer.evosuite.mysql.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.LinkedList;
 import java.util.List;
-import org.evosuite.runtime.Random;
 import org.junit.jupiter.api.Test;
-import sqlancer.mysql.ast.MySQLColumnReference;
+
+import sqlancer.common.ast.JoinBase;
 import sqlancer.mysql.ast.MySQLComputableFunction;
 import sqlancer.mysql.ast.MySQLConstant;
 import sqlancer.mysql.ast.MySQLExpression;
@@ -163,7 +164,7 @@ public class MySQLJoin_ESTest {
     @Test
     public void test07() throws Throwable {
         LinkedList<MySQLSchema.MySQLTable> linkedList0 = new LinkedList<MySQLSchema.MySQLTable>();
-        List<MySQLJoin> list0 = MySQLJoin.getRandomJoinClauses(linkedList0, (MySQLGlobalState) null);
+        List<JoinBase<MySQLExpression>> list0 = MySQLJoin.getRandomJoinClauses(linkedList0, (MySQLGlobalState) null);
         assertEquals(0, list0.size());
     }
 

@@ -5,9 +5,8 @@
 
 package sqlancer.evosuite;
 
-import sqlancer.IgnoreMeException;
-import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
+import sqlancer.IgnoreMeException;
 
 public class IgnoreMeException_ESTest {
 

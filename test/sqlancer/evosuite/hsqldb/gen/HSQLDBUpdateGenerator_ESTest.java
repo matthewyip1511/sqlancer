@@ -6,6 +6,7 @@
 package sqlancer.evosuite.hsqldb.gen;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.hsqldb.gen.HSQLDBUpdateGenerator;
 import sqlancer.hsqldb.HSQLDBProvider;

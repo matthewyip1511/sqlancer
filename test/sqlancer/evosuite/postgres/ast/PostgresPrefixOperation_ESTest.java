@@ -6,7 +6,10 @@
 package sqlancer.evosuite.postgres.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+
+import sqlancer.common.ast.JoinBase;
 import sqlancer.postgres.ast.PostgresConstant;
 import sqlancer.postgres.ast.PostgresExpression;
 import sqlancer.postgres.ast.PostgresFunction;
@@ -111,7 +114,7 @@ public class PostgresPrefixOperation_ESTest {
     @Test
     public void test06() throws Throwable {
         PostgresPrefixOperation.PrefixOperator postgresPrefixOperation_PrefixOperator0 = PostgresPrefixOperation.PrefixOperator.NOT;
-        PostgresJoin.PostgresJoinType postgresJoin_PostgresJoinType0 = PostgresJoin.PostgresJoinType.FULL;
+        JoinBase.JoinType postgresJoin_PostgresJoinType0 = JoinBase.JoinType.FULL;
         PostgresJoin postgresJoin0 = PostgresJoin.createJoin((PostgresExpression) null, (PostgresExpression) null,
                 postgresJoin_PostgresJoinType0, (PostgresExpression) null);
         PostgresPrefixOperation postgresPrefixOperation0 = new PostgresPrefixOperation(postgresJoin0,

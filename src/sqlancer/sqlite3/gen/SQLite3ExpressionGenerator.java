@@ -577,7 +577,7 @@ public class SQLite3ExpressionGenerator implements ExpressionGenerator<SQLite3Ex
 
     }
 
-    protected SQLite3Expression getRandomSingleCharString() {
+    public SQLite3Expression getRandomSingleCharString() {
         String s;
         do {
             s = r.getString();

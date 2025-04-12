@@ -6,11 +6,9 @@
 package sqlancer.evosuite.mysql.gen;
 
 import static org.junit.jupiter.api.Assertions.*;
-import java.util.HashMap;
+
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
-import org.evosuite.runtime.Random;
 import org.junit.jupiter.api.Test;
 import sqlancer.common.schema.AbstractTables;
 import sqlancer.mysql.ast.MySQLConstant;

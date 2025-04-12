@@ -6,6 +6,7 @@
 package sqlancer.evosuite.postgres.oracle;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.postgres.oracle.PostgresFuzzer;
 import sqlancer.postgres.PostgresGlobalState;

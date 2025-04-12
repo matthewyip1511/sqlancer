@@ -6,7 +6,10 @@
 package sqlancer.evosuite.postgres.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+
+import sqlancer.common.ast.JoinBase;
 import sqlancer.postgres.ast.PostgresCastOperation;
 import sqlancer.postgres.ast.PostgresColumnReference;
 import sqlancer.postgres.ast.PostgresConstant;
@@ -195,7 +198,7 @@ public class PostgresCastOperation_ESTest {
 
     @Test
     public void test12() throws Throwable {
-        PostgresJoin.PostgresJoinType postgresJoin_PostgresJoinType0 = PostgresJoin.PostgresJoinType.RIGHT;
+        JoinBase.JoinType postgresJoin_PostgresJoinType0 = JoinBase.JoinType.RIGHT;
         PostgresJoin postgresJoin0 = new PostgresJoin((PostgresExpression) null, (PostgresExpression) null,
                 postgresJoin_PostgresJoinType0, (PostgresExpression) null);
         PostgresCastOperation postgresCastOperation0 = new PostgresCastOperation(postgresJoin0,

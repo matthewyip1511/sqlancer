@@ -34,7 +34,7 @@ public class OceanBaseProvider extends SQLProviderAdapter<OceanBaseGlobalState, 
         super(OceanBaseGlobalState.class, OceanBaseOptions.class);
     }
 
-    enum Action implements AbstractAction<OceanBaseGlobalState> {
+    public enum Action implements AbstractAction<OceanBaseGlobalState> {
         SHOW_TABLES((g) -> new SQLQueryAdapter("SHOW TABLES")), INSERT(OceanBaseInsertGenerator::insertRow),
         CREATE_INDEX(OceanBaseIndexGenerator::create), ALTER_TABLE(OceanBaseAlterTable::create),
         TRUNCATE_TABLE(OceanBaseTruncateTableGenerator::generate),

@@ -17,9 +17,9 @@ public class StateToReproduce {
 
     public String databaseVersion;
 
-    protected long seedValue;
+    public long seedValue;
 
-    String exception;
+    public String exception;
 
     public OracleRunReproductionState localState;
 

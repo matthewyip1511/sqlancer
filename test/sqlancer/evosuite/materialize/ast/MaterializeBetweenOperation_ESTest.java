@@ -6,7 +6,10 @@
 package sqlancer.evosuite.materialize.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+
+import sqlancer.common.ast.JoinBase;
 import sqlancer.materialize.ast.MaterializeBetweenOperation;
 import sqlancer.materialize.ast.MaterializeColumnValue;
 import sqlancer.materialize.ast.MaterializeConstant;
@@ -127,7 +130,7 @@ public class MaterializeBetweenOperation_ESTest {
     @Test
     public void test08() throws Throwable {
         MaterializeConstant.MaterializeNullConstant materializeConstant_MaterializeNullConstant0 = new MaterializeConstant.MaterializeNullConstant();
-        MaterializeJoin.MaterializeJoinType materializeJoin_MaterializeJoinType0 = MaterializeJoin.MaterializeJoinType.LEFT;
+        JoinBase.JoinType materializeJoin_MaterializeJoinType0 = JoinBase.JoinType.LEFT;
         MaterializeJoin materializeJoin0 = new MaterializeJoin(materializeConstant_MaterializeNullConstant0,
                 materializeConstant_MaterializeNullConstant0, materializeJoin_MaterializeJoinType0);
         MaterializeBetweenOperation materializeBetweenOperation0 = new MaterializeBetweenOperation(

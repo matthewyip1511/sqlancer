@@ -6,10 +6,12 @@
 package sqlancer.evosuite.sqlite3.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.LinkedList;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import sqlancer.Randomly;
+import sqlancer.sqlite3.ast.SQLite3CollateOperation;
 import sqlancer.sqlite3.ast.SQLite3Constant;
 import sqlancer.sqlite3.ast.SQLite3Expression;
 import sqlancer.sqlite3.ast.SQLite3RowValueExpression;
@@ -64,7 +66,7 @@ public class SQLite3RowValueExpression_ESTest {
         SQLite3Constant.SQLite3BinaryConstant sQLite3Constant_SQLite3BinaryConstant0 = new SQLite3Constant.SQLite3BinaryConstant(
                 byteArray0);
         SQLite3Schema.SQLite3Column.SQLite3CollateSequence sQLite3Schema_SQLite3Column_SQLite3CollateSequence0 = SQLite3Schema.SQLite3Column.SQLite3CollateSequence.BINARY;
-        SQLite3Expression.CollateOperation sQLite3Expression_CollateOperation0 = new SQLite3Expression.CollateOperation(
+        SQLite3CollateOperation sQLite3Expression_CollateOperation0 = new SQLite3CollateOperation(
                 sQLite3Constant_SQLite3BinaryConstant0, sQLite3Schema_SQLite3Column_SQLite3CollateSequence0);
         List<SQLite3Expression> list0 = List.of((SQLite3Expression) sQLite3Constant_SQLite3NullConstant0,
                 (SQLite3Expression) sQLite3Constant_SQLite3NullConstant0,

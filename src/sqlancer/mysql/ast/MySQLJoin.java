@@ -50,8 +50,8 @@ public class MySQLJoin extends JoinBase<MySQLExpression>
         this.type = type;
     }
 
-    public static List<MySQLJoin> getRandomJoinClauses(List<MySQLTable> tables, MySQLGlobalState globalState) {
-        List<MySQLJoin> joinStatements = new ArrayList<>();
+    public static List<JoinBase<MySQLExpression>> getRandomJoinClauses(List<MySQLTable> tables, MySQLGlobalState globalState) {
+        List<JoinBase<MySQLExpression>> joinStatements = new ArrayList<>();
         List<JoinType> options = new ArrayList<>(Arrays.asList(JoinType.values()));
         List<MySQLColumn> columns = new ArrayList<>();
         if (tables.size() > 1) {

@@ -6,8 +6,11 @@
 package sqlancer.evosuite.postgres.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.math.BigDecimal;
 import org.junit.jupiter.api.Test;
+
+import sqlancer.common.ast.JoinBase;
 import sqlancer.postgres.ast.PostgresCollate;
 import sqlancer.postgres.ast.PostgresConstant;
 import sqlancer.postgres.ast.PostgresExpression;
@@ -72,7 +75,7 @@ public class PostgresCollate_ESTest {
     @Test
     public void test5() throws Throwable {
         PostgresConstant.PostgresNullConstant postgresConstant_PostgresNullConstant0 = new PostgresConstant.PostgresNullConstant();
-        PostgresJoin.PostgresJoinType postgresJoin_PostgresJoinType0 = PostgresJoin.PostgresJoinType.CROSS;
+        JoinBase.JoinType postgresJoin_PostgresJoinType0 = JoinBase.JoinType.CROSS;
         PostgresJoin postgresJoin0 = new PostgresJoin(postgresConstant_PostgresNullConstant0,
                 postgresConstant_PostgresNullConstant0, postgresJoin_PostgresJoinType0);
         PostgresCollate postgresCollate0 = new PostgresCollate(postgresJoin0, "");

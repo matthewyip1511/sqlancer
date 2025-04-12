@@ -5,9 +5,8 @@
 
 package sqlancer.evosuite.oceanbase;
 
-import sqlancer.oceanbase.OceanBaseUserCheckException;
-import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
+import sqlancer.oceanbase.OceanBaseUserCheckException;
 
 public class OceanBaseUserCheckException_ESTest {
 

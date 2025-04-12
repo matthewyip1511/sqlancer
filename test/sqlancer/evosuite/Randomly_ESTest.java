@@ -6,6 +6,7 @@
 package sqlancer.evosuite;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.math.BigInteger;
 import java.util.function.Supplier;
 import java.util.LinkedList;
@@ -1171,3 +1172,4 @@ public class Randomly_ESTest {
         } catch (IndexOutOfBoundsException e) {
         }
     }
+}

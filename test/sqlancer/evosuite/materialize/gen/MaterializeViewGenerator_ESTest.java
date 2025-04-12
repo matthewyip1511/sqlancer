@@ -6,6 +6,7 @@
 package sqlancer.evosuite.materialize.gen;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.materialize.gen.MaterializeViewGenerator;
 import sqlancer.materialize.MaterializeGlobalState;

@@ -6,9 +6,12 @@
 package sqlancer.evosuite.postgres.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import org.junit.jupiter.api.Test;
+
+import sqlancer.common.ast.JoinBase;
 import sqlancer.postgres.ast.PostgresConstant;
 import sqlancer.postgres.ast.PostgresExpression;
 import sqlancer.postgres.ast.PostgresFunction;
@@ -73,7 +76,7 @@ public class PostgresPostfixOperation_ESTest {
     @Test
     public void test03() throws Throwable {
         PostgresPostfixOperation.PostfixOperator postgresPostfixOperation_PostfixOperator0 = PostgresPostfixOperation.PostfixOperator.IS_FALSE;
-        PostgresJoin.PostgresJoinType postgresJoin_PostgresJoinType0 = PostgresJoin.PostgresJoinType.INNER;
+        JoinBase.JoinType postgresJoin_PostgresJoinType0 = JoinBase.JoinType.INNER;
         PostgresJoin postgresJoin0 = new PostgresJoin((PostgresExpression) null, (PostgresExpression) null,
                 postgresJoin_PostgresJoinType0, (PostgresExpression) null);
         PostgresPostfixOperation postgresPostfixOperation0 = new PostgresPostfixOperation(postgresJoin0,

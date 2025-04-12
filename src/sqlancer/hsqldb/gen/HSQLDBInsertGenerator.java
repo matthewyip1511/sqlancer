@@ -39,7 +39,7 @@ public class HSQLDBInsertGenerator extends AbstractInsertGenerator<HSQLDBSchema.
     }
 
     @Override
-    protected void insertValue(HSQLDBSchema.HSQLDBColumn column) {
+    public void insertValue(HSQLDBSchema.HSQLDBColumn column) {
         HSQLDBExpression expression = new HSQLDBExpressionGenerator(globalState).generateConstant(column.getType());
         String s = HSQLDBToStringVisitor.asString(expression);
         sb.append(s);

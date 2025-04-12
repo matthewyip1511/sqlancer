@@ -6,10 +6,9 @@
 package sqlancer.evosuite.sqlite3.gen.dml;
 
 import static org.junit.jupiter.api.Assertions.*;
-import java.util.function.Supplier;
+
 import java.util.LinkedList;
 import java.util.List;
-import org.evosuite.runtime.Random;
 import org.junit.jupiter.api.Test;
 import sqlancer.common.query.SQLQueryAdapter;
 import sqlancer.Randomly;

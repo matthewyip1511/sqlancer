@@ -5,9 +5,10 @@
 
 package sqlancer.evosuite;
 
-import sqlancer.LikeImplementationHelper;
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+import sqlancer.LikeImplementationHelper;
 
 public class LikeImplementationHelper_ESTest {
 

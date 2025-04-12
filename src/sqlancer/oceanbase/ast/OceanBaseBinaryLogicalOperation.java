@@ -65,7 +65,7 @@ public class OceanBaseBinaryLogicalOperation
             this.textRepresentations = textRepresentations.clone();
         }
 
-        String getTextRepresentation() {
+        public String getTextRepresentation() {
             return Randomly.fromOptions(textRepresentations);
         }
 

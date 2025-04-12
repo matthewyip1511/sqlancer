@@ -6,6 +6,7 @@
 package sqlancer.evosuite.oceanbase.gen.datadef;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.oceanbase.gen.datadef.OceanBaseIndexGenerator;
 import sqlancer.oceanbase.OceanBaseGlobalState;

@@ -6,6 +6,7 @@
 package sqlancer.evosuite.mysql.oracle;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.mysql.MySQLGlobalState;
 import sqlancer.mysql.oracle.MySQLFuzzer;

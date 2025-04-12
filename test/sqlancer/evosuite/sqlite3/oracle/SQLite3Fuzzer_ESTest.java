@@ -6,6 +6,7 @@
 package sqlancer.evosuite.sqlite3.oracle;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.sqlite3.oracle.SQLite3Fuzzer;
 import sqlancer.sqlite3.SQLite3GlobalState;

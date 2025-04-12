@@ -6,14 +6,15 @@
 package sqlancer.evosuite.sqlite3.gen;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.LinkedList;
 import java.util.List;
-import org.evosuite.runtime.Random;
 import org.junit.jupiter.api.Test;
 import sqlancer.common.schema.AbstractTables;
 import sqlancer.common.visitor.UnaryOperation;
 import sqlancer.sqlite3.ast.SQLite3Constant;
 import sqlancer.sqlite3.ast.SQLite3Expression;
+import sqlancer.sqlite3.ast.SQLite3PostfixUnaryOperation;
 import sqlancer.sqlite3.ast.SQLite3Select;
 import sqlancer.sqlite3.ast.SQLite3UnaryOperation;
 import sqlancer.sqlite3.gen.SQLite3ExpressionGenerator;
@@ -540,7 +541,7 @@ public class SQLite3ExpressionGenerator_ESTest {
     public void test35() throws Throwable {
         SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
         SQLite3ExpressionGenerator sQLite3ExpressionGenerator0 = new SQLite3ExpressionGenerator(sQLite3GlobalState0);
-        SQLite3Expression.SQLite3PostfixUnaryOperation sQLite3Expression_SQLite3PostfixUnaryOperation0 = (SQLite3Expression.SQLite3PostfixUnaryOperation) sQLite3ExpressionGenerator0
+        SQLite3PostfixUnaryOperation sQLite3Expression_SQLite3PostfixUnaryOperation0 = (SQLite3PostfixUnaryOperation) sQLite3ExpressionGenerator0
                 .isNull((SQLite3Expression) null);
         assertEquals(UnaryOperation.OperatorKind.POSTFIX,
                 sQLite3Expression_SQLite3PostfixUnaryOperation0.getOperatorKind());

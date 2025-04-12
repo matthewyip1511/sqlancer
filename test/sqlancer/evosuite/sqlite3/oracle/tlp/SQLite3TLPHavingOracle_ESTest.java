@@ -6,6 +6,7 @@
 package sqlancer.evosuite.sqlite3.oracle.tlp;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import sqlancer.sqlite3.oracle.tlp.SQLite3TLPHavingOracle;
 import sqlancer.sqlite3.SQLite3GlobalState;

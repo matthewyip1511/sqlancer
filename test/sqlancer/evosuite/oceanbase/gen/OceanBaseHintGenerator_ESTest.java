@@ -8,7 +8,6 @@ package sqlancer.evosuite.oceanbase.gen;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.LinkedList;
 import java.util.List;
-import org.evosuite.runtime.Random;
 import org.junit.jupiter.api.Test;
 import sqlancer.oceanbase.ast.OceanBaseSelect;
 import sqlancer.oceanbase.gen.OceanBaseHintGenerator;
@@ -31,6 +30,7 @@ public class OceanBaseHintGenerator_ESTest {
         OceanBaseHintGenerator.generateHints(oceanBaseSelect0, list0);
         assertEquals(3, list0.size());
     }
+}
 
 /*
  * Test disabled because it contains mock() function calls that are not implemented

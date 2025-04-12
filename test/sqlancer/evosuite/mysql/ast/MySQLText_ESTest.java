@@ -6,6 +6,7 @@
 package sqlancer.evosuite.mysql.ast;
 
 import sqlancer.mysql.ast.MySQLText;
+
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 

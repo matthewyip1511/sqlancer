@@ -6,6 +6,7 @@
 package sqlancer.evosuite.oceanbase;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.List;
 import java.util.regex.Pattern;
 import org.junit.jupiter.api.Test;

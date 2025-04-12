@@ -6,6 +6,7 @@
 package sqlancer.evosuite.mysql.gen.tblmaintenance;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.LinkedList;
 import org.junit.jupiter.api.Test;
 import sqlancer.mysql.gen.tblmaintenance.MySQLChecksum;

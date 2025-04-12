@@ -8,6 +8,8 @@ package sqlancer.evosuite.materialize.ast;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.List;
 import org.junit.jupiter.api.Test;
+
+import sqlancer.common.ast.JoinBase;
 import sqlancer.materialize.ast.MaterializeConstant;
 import sqlancer.materialize.ast.MaterializeExpression;
 import sqlancer.materialize.ast.MaterializeJoin;
@@ -23,8 +25,8 @@ public class MaterializeSelect_ESTest {
     @Test
     public void test00() throws Throwable {
         MaterializeSelect materializeSelect0 = new MaterializeSelect();
-        materializeSelect0.setJoinClauses((List<MaterializeJoin>) null);
-        List<MaterializeJoin> list0 = materializeSelect0.getJoinClauses();
+        materializeSelect0.setJoinClauses((List<JoinBase<MaterializeExpression>>) null);
+        List<JoinBase<MaterializeExpression>> list0 = materializeSelect0.getJoinClauses();
         assertNull(list0);
     }
 
@@ -175,9 +177,9 @@ public class MaterializeSelect_ESTest {
     public void test14() throws Throwable {
         MaterializeSelect materializeSelect0 = new MaterializeSelect();
         MaterializeJoin[] materializeJoinArray0 = new MaterializeJoin[4];
-        List<MaterializeJoin> list0 = Randomly.nonEmptySubset(materializeJoinArray0);
+        List<JoinBase<MaterializeExpression>> list0 = Randomly.nonEmptySubset(materializeJoinArray0);
         materializeSelect0.setJoinClauses(list0);
-        List<MaterializeJoin> list1 = materializeSelect0.getJoinClauses();
+        List<JoinBase<MaterializeExpression>> list1 = materializeSelect0.getJoinClauses();
         assertEquals(1, list1.size());
     }
 
@@ -197,10 +199,10 @@ public class MaterializeSelect_ESTest {
     @Test
     public void test17() throws Throwable {
         MaterializeSelect materializeSelect0 = new MaterializeSelect();
-        List<MaterializeJoin> list0 = materializeSelect0.getJoinClauses();
-        List<MaterializeJoin> list1 = Randomly.nonEmptySubsetLeast(list0, (-1368));
+        List<JoinBase<MaterializeExpression>> list0 = materializeSelect0.getJoinClauses();
+        List<JoinBase<MaterializeExpression>> list1 = Randomly.nonEmptySubsetLeast(list0, (-1368));
         materializeSelect0.setJoinClauses(list1);
-        List<MaterializeJoin> list2 = materializeSelect0.getJoinClauses();
+        List<JoinBase<MaterializeExpression>> list2 = materializeSelect0.getJoinClauses();
         assertTrue(list2.equals((Object) list0));
     }
 

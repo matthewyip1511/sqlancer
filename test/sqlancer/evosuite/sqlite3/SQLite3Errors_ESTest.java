@@ -6,6 +6,7 @@
 package sqlancer.evosuite.sqlite3;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.LinkedList;
 import java.util.List;
 import java.util.regex.Pattern;

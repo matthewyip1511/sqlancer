@@ -6,10 +6,12 @@
 package sqlancer.evosuite.hsqldb.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.List;
 import org.junit.jupiter.api.Test;
+
+import sqlancer.common.ast.JoinBase;
 import sqlancer.hsqldb.ast.HSQLDBExpression;
-import sqlancer.hsqldb.ast.HSQLDBJoin;
 import sqlancer.hsqldb.ast.HSQLDBSelect;
 import sqlancer.Randomly;
 
@@ -32,7 +34,7 @@ public class HSQLDBSelect_ESTest {
         HSQLDBExpression[] hSQLDBExpressionArray0 = new HSQLDBExpression[5];
         List<HSQLDBExpression> list0 = Randomly.nonEmptySubset(hSQLDBExpressionArray0);
         hSQLDBSelect0.setJoinList(list0);
-        List<HSQLDBJoin> list1 = hSQLDBSelect0.getJoinClauses();
+        List<JoinBase<HSQLDBExpression>> list1 = hSQLDBSelect0.getJoinClauses();
         assertEquals(1, list1.size());
     }
 
@@ -104,7 +106,7 @@ public class HSQLDBSelect_ESTest {
         HSQLDBSelect hSQLDBSelect0 = new HSQLDBSelect();
         // Undeclared exception!
         try {
-            hSQLDBSelect0.setJoinClauses((List<HSQLDBJoin>) null);
+            hSQLDBSelect0.setJoinClauses((List<JoinBase<HSQLDBExpression>>) null);
             fail("Expecting exception: NullPointerException");
 
         } catch (NullPointerException e) {
@@ -134,7 +136,7 @@ public class HSQLDBSelect_ESTest {
     @Test
     public void test8() throws Throwable {
         HSQLDBSelect hSQLDBSelect0 = new HSQLDBSelect();
-        List<HSQLDBJoin> list0 = hSQLDBSelect0.getJoinClauses();
+        List<JoinBase<HSQLDBExpression>> list0 = hSQLDBSelect0.getJoinClauses();
         hSQLDBSelect0.setJoinClauses(list0);
         assertTrue(list0.isEmpty());
     }

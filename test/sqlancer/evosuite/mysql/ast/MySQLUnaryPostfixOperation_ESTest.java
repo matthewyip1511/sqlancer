@@ -6,6 +6,7 @@
 package sqlancer.evosuite.mysql.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import sqlancer.mysql.ast.MySQLBinaryOperation;

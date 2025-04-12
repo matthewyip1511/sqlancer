@@ -6,9 +6,9 @@
 package sqlancer.evosuite.presto.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.LinkedList;
 import java.util.List;
-import org.evosuite.runtime.Random;
 import org.junit.jupiter.api.Test;
 import sqlancer.presto.ast.PrestoConstant;
 import sqlancer.presto.ast.PrestoExpression;
@@ -151,7 +151,6 @@ public class PrestoConstant_ESTest {
 
     @Test
     public void test013() throws Throwable {
-        System.setCurrentTimeMillis((-1L));
         PrestoSchema.PrestoDataType prestoSchema_PrestoDataType0 = PrestoSchema.PrestoDataType.INTERVAL_DAY_TO_SECOND;
         PrestoSchema.PrestoCompositeDataType prestoSchema_PrestoCompositeDataType0 = new PrestoSchema.PrestoCompositeDataType(
                 prestoSchema_PrestoDataType0, (-1027), 16);
@@ -211,7 +210,6 @@ public class PrestoConstant_ESTest {
 
     @Test
     public void test017() throws Throwable {
-        System.setCurrentTimeMillis((-1131L));
         // Undeclared exception!
         try {
             PrestoConstant.createIntervalYearToMonth(2L);
@@ -227,7 +225,6 @@ public class PrestoConstant_ESTest {
 
     @Test
     public void test018() throws Throwable {
-        System.setCurrentTimeMillis((-638L));
         // Undeclared exception!
         try {
             PrestoConstant.createIntervalDayToSecond(8L);

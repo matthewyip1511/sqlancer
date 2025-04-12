@@ -25,7 +25,7 @@ public class PostgresTLPHavingOracle extends PostgresTLPBase {
         havingCheck();
     }
 
-    protected void havingCheck() throws SQLException {
+    public void havingCheck() throws SQLException {
         if (Randomly.getBoolean()) {
             select.setWhereClause(gen.generateExpression(PostgresDataType.BOOLEAN));
         }
@@ -52,12 +52,12 @@ public class PostgresTLPHavingOracle extends PostgresTLPBase {
     }
 
     @Override
-    protected PostgresExpression generatePredicate() {
+    public PostgresExpression generatePredicate() {
         return gen.generateHavingClause();
     }
 
     @Override
-    List<PostgresExpression> generateFetchColumns() {
+    public List<PostgresExpression> generateFetchColumns() {
         List<PostgresExpression> expressions = gen.allowAggregates(true)
                 .generateExpressions(Randomly.smallNumber() + 1);
         gen.allowAggregates(false);

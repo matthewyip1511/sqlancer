@@ -6,16 +6,10 @@
 package sqlancer.evosuite.mariadb.gen;
 
 import static org.junit.jupiter.api.Assertions.*;
-import java.util.function.Supplier;
-import java.util.LinkedList;
 import java.util.List;
-import org.evosuite.runtime.Random;
 import org.junit.jupiter.api.Test;
-import sqlancer.common.schema.AbstractTables;
 import sqlancer.mariadb.ast.MariaDBConstant;
 import sqlancer.mariadb.ast.MariaDBExpression;
-import sqlancer.mariadb.ast.MariaDBJoin;
-import sqlancer.mariadb.ast.MariaDBPostfixUnaryOperation;
 import sqlancer.mariadb.ast.MariaDBSelectStatement;
 import sqlancer.mariadb.gen.MariaDBExpressionGenerator;
 import sqlancer.mariadb.MariaDBSchema;
@@ -264,6 +258,7 @@ public class MariaDBExpressionGenerator_ESTest {
             verifyException("sqlancer.mariadb.gen.MariaDBExpressionGenerator", e);
         }
     }
+}
 
 /*
  * Test disabled because it contains mock() function calls that are not implemented

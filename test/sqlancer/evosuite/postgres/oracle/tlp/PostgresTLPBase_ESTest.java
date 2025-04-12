@@ -6,6 +6,8 @@
 package sqlancer.evosuite.postgres.oracle.tlp;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static sqlancer.postgres.PostgresUtils.createSubquery;
+
 import java.util.LinkedList;
 import java.util.List;
 import org.junit.jupiter.api.Test;
@@ -64,7 +66,7 @@ public class PostgresTLPBase_ESTest {
     public void test2() throws Throwable {
         // Undeclared exception!
         try {
-            PostgresTLPBase.createSubquery((PostgresGlobalState) null, "$:9ZF')[`0kUL",
+            createSubquery((PostgresGlobalState) null, "$:9ZF')[`0kUL",
                     (PostgresSchema.PostgresTables) null);
             fail("Expecting exception: NullPointerException");
 

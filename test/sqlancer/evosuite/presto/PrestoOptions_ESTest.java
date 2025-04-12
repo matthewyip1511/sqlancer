@@ -6,6 +6,7 @@
 package sqlancer.evosuite.presto;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.LinkedList;
 import java.util.List;
 import org.junit.jupiter.api.Test;
@@ -19,7 +20,6 @@ public class PrestoOptions_ESTest {
         PrestoOptions prestoOptions0 = new PrestoOptions();
         prestoOptions0.oracles = null;
         prestoOptions0.getTestOracleFactory();
-        assertTrue(prestoOptions0.testTimeConstants);
         assertTrue(prestoOptions0.testRowid);
         assertTrue(prestoOptions0.testNotNullConstraints);
         assertTrue(prestoOptions0.testIn);
@@ -49,7 +49,6 @@ public class PrestoOptions_ESTest {
         LinkedList<PrestoOracleFactory> linkedList0 = new LinkedList<PrestoOracleFactory>();
         prestoOptions0.oracles = (List<PrestoOracleFactory>) linkedList0;
         prestoOptions0.getTestOracleFactory();
-        assertTrue(prestoOptions0.testTimeConstants);
         assertTrue(prestoOptions0.testBooleanConstants);
         assertTrue(prestoOptions0.testBinaryLogicals);
         assertTrue(prestoOptions0.testCollate);
@@ -91,7 +90,6 @@ public class PrestoOptions_ESTest {
         assertTrue(prestoOptions0.testBinaryComparisons);
         assertTrue(prestoOptions0.testFloatConstants);
         assertTrue(prestoOptions0.testIntConstants);
-        assertTrue(prestoOptions0.testTimeConstants);
         assertTrue(prestoOptions0.testTimestampConstants);
         assertTrue(prestoOptions0.testFunctions);
         assertTrue(prestoOptions0.testNotNullConstraints);

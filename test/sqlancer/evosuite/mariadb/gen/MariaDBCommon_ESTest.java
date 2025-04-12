@@ -5,9 +5,10 @@
 
 package sqlancer.evosuite.mariadb.gen;
 
-import sqlancer.mariadb.gen.MariaDBCommon;
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+import sqlancer.mariadb.gen.MariaDBCommon;
 
 public class MariaDBCommon_ESTest {
 

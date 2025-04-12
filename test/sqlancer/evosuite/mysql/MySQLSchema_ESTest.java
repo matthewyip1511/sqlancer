@@ -6,16 +6,13 @@
 package sqlancer.evosuite.mysql;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.NoSuchElementException;
 import org.junit.jupiter.api.Test;
-import sqlancer.common.schema.TableIndex;
 import sqlancer.mysql.ast.MySQLConstant;
 import sqlancer.mysql.MySQLGlobalState;
 import sqlancer.mysql.MySQLSchema;

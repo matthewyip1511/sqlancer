@@ -6,9 +6,9 @@
 package sqlancer.evosuite.mysql;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.LinkedList;
 import java.util.List;
-import org.evosuite.runtime.Random;
 import org.junit.jupiter.api.Test;
 import sqlancer.mysql.ast.MySQLAggregate;
 import sqlancer.mysql.ast.MySQLBetweenOperation;

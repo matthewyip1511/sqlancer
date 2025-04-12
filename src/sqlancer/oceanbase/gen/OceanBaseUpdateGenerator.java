@@ -50,7 +50,7 @@ public class OceanBaseUpdateGenerator extends AbstractUpdateGenerator<OceanBaseC
     }
 
     @Override
-    protected void updateValue(OceanBaseColumn column) {
+    public void updateValue(OceanBaseColumn column) {
         if (Randomly.getBoolean()) {
             sb.append(gen.generateConstant(column));
         } else {

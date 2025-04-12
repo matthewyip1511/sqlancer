@@ -5,9 +5,10 @@
 
 package sqlancer.evosuite.hsqldb.ast;
 
-import sqlancer.hsqldb.ast.HSQLDBConstant;
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+import sqlancer.hsqldb.ast.HSQLDBConstant;
 
 public class HSQLDBConstant_ESTest {
 

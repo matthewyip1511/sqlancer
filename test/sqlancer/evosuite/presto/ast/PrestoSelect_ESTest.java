@@ -6,9 +6,12 @@
 package sqlancer.evosuite.presto.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.LinkedList;
 import java.util.List;
 import org.junit.jupiter.api.Test;
+
+import sqlancer.common.ast.JoinBase;
 import sqlancer.presto.ast.PrestoAggregateFunction;
 import sqlancer.presto.ast.PrestoDateFunction;
 import sqlancer.presto.ast.PrestoExpression;
@@ -34,7 +37,7 @@ public class PrestoSelect_ESTest {
     @Test
     public void test1() throws Throwable {
         PrestoSelect prestoSelect0 = new PrestoSelect();
-        LinkedList<PrestoJoin> linkedList0 = new LinkedList<PrestoJoin>();
+        LinkedList<JoinBase<PrestoExpression>> linkedList0 = new LinkedList<JoinBase<PrestoExpression>>();
         PrestoSchema.PrestoColumn[] prestoSchema_PrestoColumnArray0 = new PrestoSchema.PrestoColumn[0];
         List<PrestoSchema.PrestoColumn> list0 = Randomly.subset((-1770128238), prestoSchema_PrestoColumnArray0);
         PrestoSchema.PrestoTable prestoSchema_PrestoTable0 = new PrestoSchema.PrestoTable("'+Inf'", list0, true);
@@ -45,7 +48,7 @@ public class PrestoSelect_ESTest {
                 prestoDateFunction0);
         linkedList0.add(prestoJoin0);
         prestoSelect0.setJoinClauses(linkedList0);
-        List<PrestoJoin> list1 = prestoSelect0.getJoinClauses();
+        List<JoinBase<PrestoExpression>> list1 = prestoSelect0.getJoinClauses();
         assertEquals(1, list1.size());
     }
 
@@ -130,7 +133,7 @@ public class PrestoSelect_ESTest {
     @Test
     public void test6() throws Throwable {
         PrestoSelect prestoSelect0 = new PrestoSelect();
-        List<PrestoJoin> list0 = prestoSelect0.getJoinClauses();
+        List<JoinBase<PrestoExpression>> list0 = prestoSelect0.getJoinClauses();
         assertTrue(list0.isEmpty());
     }
 
@@ -162,7 +165,7 @@ public class PrestoSelect_ESTest {
         PrestoSelect prestoSelect0 = new PrestoSelect();
         // Undeclared exception!
         try {
-            prestoSelect0.setJoinClauses((List<PrestoJoin>) null);
+            prestoSelect0.setJoinClauses((List<JoinBase<PrestoExpression>>) null);
             fail("Expecting exception: NullPointerException");
 
         } catch (NullPointerException e) {

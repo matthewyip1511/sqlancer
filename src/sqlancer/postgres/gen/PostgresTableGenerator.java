@@ -64,7 +64,7 @@ public class PostgresTableGenerator {
         return new PostgresTableGenerator(tableName, newSchema, generateOnlyKnown, globalState).generate();
     }
 
-    protected SQLQueryAdapter generate() {
+    public SQLQueryAdapter generate() {
         columnCanHavePrimaryKey = true;
         sb.append("CREATE");
         if (Randomly.getBoolean()) {

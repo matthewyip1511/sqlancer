@@ -6,7 +6,10 @@
 package sqlancer.evosuite.materialize.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+
+import sqlancer.common.ast.JoinBase;
 import sqlancer.materialize.ast.MaterializeConstant;
 import sqlancer.materialize.ast.MaterializeExpression;
 import sqlancer.materialize.ast.MaterializeFunction;
@@ -86,7 +89,7 @@ public class MaterializeFunction_ESTest {
         MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 = MaterializeSchema.MaterializeDataType.DECIMAL;
         MaterializeExpression[] materializeExpressionArray0 = new MaterializeExpression[3];
         materializeExpressionArray0[0] = (MaterializeExpression) materializeConstant_DoubleConstant0;
-        MaterializeJoin.MaterializeJoinType materializeJoin_MaterializeJoinType0 = MaterializeJoin.MaterializeJoinType.FULL;
+        JoinBase.JoinType materializeJoin_MaterializeJoinType0 = JoinBase.JoinType.FULL;
         MaterializeJoin materializeJoin0 = new MaterializeJoin(materializeConstant_DoubleConstant0,
                 materializeExpressionArray0[0], materializeJoin_MaterializeJoinType0);
         materializeExpressionArray0[1] = (MaterializeExpression) materializeJoin0;

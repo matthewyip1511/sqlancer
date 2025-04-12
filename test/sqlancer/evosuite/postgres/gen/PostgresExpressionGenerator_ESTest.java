@@ -6,16 +6,8 @@
 package sqlancer.evosuite.postgres.gen;
 
 import static org.junit.jupiter.api.Assertions.*;
-import java.util.function.Supplier;
-import java.util.LinkedList;
-import java.util.List;
 import org.junit.jupiter.api.Test;
-import sqlancer.citus.CitusGlobalState;
-import sqlancer.postgres.ast.PostgresCastOperation;
-import sqlancer.postgres.ast.PostgresConstant;
-import sqlancer.postgres.ast.PostgresExpression;
 import sqlancer.postgres.gen.PostgresExpressionGenerator;
-import sqlancer.postgres.PostgresGlobalState;
 import sqlancer.postgres.PostgresSchema;
 import sqlancer.Randomly;
 
@@ -39,6 +31,7 @@ public class PostgresExpressionGenerator_ESTest {
             verifyException("sqlancer.postgres.gen.PostgresExpressionGenerator", e);
         }
     }
+}
 
 /*
  * Test disabled because it contains mock() function calls that are not implemented

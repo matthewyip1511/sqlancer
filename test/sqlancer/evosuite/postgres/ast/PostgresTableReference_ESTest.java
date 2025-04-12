@@ -6,9 +6,6 @@
 package sqlancer.evosuite.postgres.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
-import java.util.Collection;
-import java.util.LinkedList;
-import java.util.List;
 import org.junit.jupiter.api.Test;
 import sqlancer.postgres.ast.PostgresTableReference;
 import sqlancer.postgres.PostgresSchema;
@@ -22,6 +19,7 @@ public class PostgresTableReference_ESTest {
         PostgresSchema.PostgresTable postgresSchema_PostgresTable0 = postgresTableReference0.getTable();
         assertNull(postgresSchema_PostgresTable0);
     }
+}
 
 /*
  * Test disabled because it contains mock() function calls that are not implemented

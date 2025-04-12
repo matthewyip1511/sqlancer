@@ -26,7 +26,7 @@ public class PrestoQueryPartitioningBase extends TernaryLogicPartitioningOracleB
         implements TestOracle<PrestoGlobalState> {
 
     PrestoSchema s;
-    PrestoTables targetTables;
+    public PrestoTables targetTables;
     PrestoTypedExpressionGenerator gen;
     PrestoSelect select;
 
@@ -69,7 +69,7 @@ public class PrestoQueryPartitioningBase extends TernaryLogicPartitioningOracleB
         select.setWhereClause(null);
     }
 
-    List<PrestoExpression> generateFetchColumns() {
+    public List<PrestoExpression> generateFetchColumns() {
         List<PrestoExpression> columns = new ArrayList<>();
         if (Randomly.getBoolean()) {
             columns.add(new PrestoColumnReference(new PrestoColumn("*", null, false, false)));
@@ -81,7 +81,7 @@ public class PrestoQueryPartitioningBase extends TernaryLogicPartitioningOracleB
     }
 
     @Override
-    protected ExpressionGenerator<PrestoExpression> getGen() {
+    public ExpressionGenerator<PrestoExpression> getGen() {
         return gen;
     }
 

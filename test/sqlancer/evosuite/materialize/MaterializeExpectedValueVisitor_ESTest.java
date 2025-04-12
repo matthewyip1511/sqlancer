@@ -6,6 +6,7 @@
 package sqlancer.evosuite.materialize;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.math.BigDecimal;
 import java.util.LinkedList;
 import java.util.List;
