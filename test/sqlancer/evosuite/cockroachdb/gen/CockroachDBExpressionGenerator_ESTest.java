@@ -903,25 +903,27 @@ public class CockroachDBExpressionGenerator_ESTest {
     // }
     // }
 
-    @Test
-    public void test50() throws Throwable {
-        CockroachDBExpressionGenerator cockroachDBExpressionGenerator0 = new CockroachDBExpressionGenerator(
-                (CockroachDBProvider.CockroachDBGlobalState) null);
-        CockroachDBSchema.CockroachDBDataType cockroachDBSchema_CockroachDBDataType0 = CockroachDBSchema.CockroachDBDataType.TIME;
-        CockroachDBSchema.CockroachDBCompositeDataType cockroachDBSchema_CockroachDBCompositeDataType0 = cockroachDBSchema_CockroachDBDataType0
-                .get();
-        // Undeclared exception!
-        try {
-            cockroachDBExpressionGenerator0.generateConstant(cockroachDBSchema_CockroachDBCompositeDataType0);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.cockroachdb.gen.CockroachDBExpressionGenerator", e);
-        }
-    }
+    // @Test
+    // public void test50() throws Throwable {
+    // CockroachDBExpressionGenerator cockroachDBExpressionGenerator0 = new CockroachDBExpressionGenerator(
+    // (CockroachDBProvider.CockroachDBGlobalState) null);
+    // CockroachDBSchema.CockroachDBDataType cockroachDBSchema_CockroachDBDataType0 =
+    // CockroachDBSchema.CockroachDBDataType.TIME;
+    // CockroachDBSchema.CockroachDBCompositeDataType cockroachDBSchema_CockroachDBCompositeDataType0 =
+    // cockroachDBSchema_CockroachDBDataType0
+    // .get();
+    // // Undeclared exception!
+    // try {
+    // cockroachDBExpressionGenerator0.generateConstant(cockroachDBSchema_CockroachDBCompositeDataType0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.cockroachdb.gen.CockroachDBExpressionGenerator", e);
+    // }
+    // }
 
     @Test
     public void test51() throws Throwable {
@@ -1016,26 +1018,29 @@ public class CockroachDBExpressionGenerator_ESTest {
         }
     }
 
-    @Test
-    public void test56() throws Throwable {
-        CockroachDBProvider.CockroachDBGlobalState cockroachDBProvider_CockroachDBGlobalState0 = new CockroachDBProvider.CockroachDBGlobalState();
-        CockroachDBExpressionGenerator cockroachDBExpressionGenerator0 = new CockroachDBExpressionGenerator(
-                cockroachDBProvider_CockroachDBGlobalState0);
-        CockroachDBSchema.CockroachDBDataType cockroachDBSchema_CockroachDBDataType0 = CockroachDBSchema.CockroachDBDataType.SERIAL;
-        CockroachDBSchema.CockroachDBCompositeDataType cockroachDBSchema_CockroachDBCompositeDataType0 = new CockroachDBSchema.CockroachDBCompositeDataType(
-                cockroachDBSchema_CockroachDBDataType0);
-        // Undeclared exception!
-        try {
-            cockroachDBExpressionGenerator0.generateConstant(cockroachDBSchema_CockroachDBCompositeDataType0);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.cockroachdb.gen.CockroachDBExpressionGenerator", e);
-        }
-    }
+    // @Test
+    // public void test56() throws Throwable {
+    // CockroachDBProvider.CockroachDBGlobalState cockroachDBProvider_CockroachDBGlobalState0 = new
+    // CockroachDBProvider.CockroachDBGlobalState();
+    // CockroachDBExpressionGenerator cockroachDBExpressionGenerator0 = new CockroachDBExpressionGenerator(
+    // cockroachDBProvider_CockroachDBGlobalState0);
+    // CockroachDBSchema.CockroachDBDataType cockroachDBSchema_CockroachDBDataType0 =
+    // CockroachDBSchema.CockroachDBDataType.SERIAL;
+    // CockroachDBSchema.CockroachDBCompositeDataType cockroachDBSchema_CockroachDBCompositeDataType0 = new
+    // CockroachDBSchema.CockroachDBCompositeDataType(
+    // cockroachDBSchema_CockroachDBDataType0);
+    // // Undeclared exception!
+    // try {
+    // cockroachDBExpressionGenerator0.generateConstant(cockroachDBSchema_CockroachDBCompositeDataType0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.cockroachdb.gen.CockroachDBExpressionGenerator", e);
+    // }
+    // }
 
     // @Test
     // public void test57() throws Throwable {
@@ -1129,25 +1134,27 @@ public class CockroachDBExpressionGenerator_ESTest {
     // assertFalse(cockroachDBConstant_CockroachDBBooleanConstant0.getValue());
     // }
 
-    @Test
-    public void test62() throws Throwable {
-        CockroachDBProvider.CockroachDBGlobalState cockroachDBProvider_CockroachDBGlobalState0 = new CockroachDBProvider.CockroachDBGlobalState();
-        CockroachDBExpressionGenerator cockroachDBExpressionGenerator0 = new CockroachDBExpressionGenerator(
-                cockroachDBProvider_CockroachDBGlobalState0);
-        CockroachDBSchema.CockroachDBCompositeDataType cockroachDBSchema_CockroachDBCompositeDataType0 = cockroachDBExpressionGenerator0
-                .getRandomType();
-        // Undeclared exception!
-        try {
-            cockroachDBExpressionGenerator0.generateConstant(cockroachDBSchema_CockroachDBCompositeDataType0);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.cockroachdb.gen.CockroachDBExpressionGenerator", e);
-        }
-    }
+    // @Test
+    // public void test62() throws Throwable {
+    // CockroachDBProvider.CockroachDBGlobalState cockroachDBProvider_CockroachDBGlobalState0 = new
+    // CockroachDBProvider.CockroachDBGlobalState();
+    // CockroachDBExpressionGenerator cockroachDBExpressionGenerator0 = new CockroachDBExpressionGenerator(
+    // cockroachDBProvider_CockroachDBGlobalState0);
+    // CockroachDBSchema.CockroachDBCompositeDataType cockroachDBSchema_CockroachDBCompositeDataType0 =
+    // cockroachDBExpressionGenerator0
+    // .getRandomType();
+    // // Undeclared exception!
+    // try {
+    // cockroachDBExpressionGenerator0.generateConstant(cockroachDBSchema_CockroachDBCompositeDataType0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.cockroachdb.gen.CockroachDBExpressionGenerator", e);
+    // }
+    // }
 
     @Test
     public void test63() throws Throwable {

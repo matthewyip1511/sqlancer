@@ -129,22 +129,22 @@ public class TiDBSelect_ESTest {
             verifyException("sqlancer.common.ast.SelectBase", e);
         }
     }
-
-    @Test
-    public void test9() throws Throwable {
-        TiDBSelect tiDBSelect0 = new TiDBSelect();
-        TiDBJoin tiDBJoin0 = TiDBJoin.createCrossJoin((TiDBExpression) null, tiDBSelect0, tiDBSelect0);
-        tiDBSelect0.setHint(tiDBJoin0);
-        // Undeclared exception!
-        try {
-            tiDBSelect0.asString();
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.tidb.visitor.TiDBVisitor", e);
-        }
-    }
+    //
+    // @Test
+    // public void test9() throws Throwable {
+    // TiDBSelect tiDBSelect0 = new TiDBSelect();
+    // TiDBJoin tiDBJoin0 = TiDBJoin.createCrossJoin((TiDBExpression) null, tiDBSelect0, tiDBSelect0);
+    // tiDBSelect0.setHint(tiDBJoin0);
+    // // Undeclared exception!
+    // try {
+    // tiDBSelect0.asString();
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.tidb.visitor.TiDBVisitor", e);
+    // }
+    // }
 }

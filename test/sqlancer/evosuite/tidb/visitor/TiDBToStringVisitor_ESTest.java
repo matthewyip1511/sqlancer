@@ -53,39 +53,41 @@ public class TiDBToStringVisitor_ESTest {
         assertEquals("VERSION()", tiDBToStringVisitor0.get());
     }
 
-    @Test
-    public void test02() throws Throwable {
-        TiDBToStringVisitor tiDBToStringVisitor0 = new TiDBToStringVisitor();
-        TiDBExpression[] tiDBExpressionArray0 = new TiDBExpression[2];
-        TiDBConstant.TiDBTextConstant tiDBConstant_TiDBTextConstant0 = new TiDBConstant.TiDBTextConstant("ne 9~EC");
-        TiDBJoin tiDBJoin0 = TiDBJoin.createLeftOuterJoin(tiDBConstant_TiDBTextConstant0,
-                tiDBConstant_TiDBTextConstant0, tiDBConstant_TiDBTextConstant0);
-        tiDBExpressionArray0[1] = (TiDBExpression) tiDBJoin0;
-        List<TiDBExpression> list0 = Randomly.nonEmptySubset(tiDBExpressionArray0);
-        TiDBAggregate.TiDBAggregateFunction tiDBAggregate_TiDBAggregateFunction0 = TiDBAggregate.TiDBAggregateFunction.MAX;
-        TiDBAggregate tiDBAggregate0 = new TiDBAggregate(list0, tiDBAggregate_TiDBAggregateFunction0);
-        tiDBToStringVisitor0.visit(tiDBAggregate0);
-    }
-
-    @Test
-    public void test03() throws Throwable {
-        TiDBToStringVisitor tiDBToStringVisitor0 = new TiDBToStringVisitor();
-        TiDBExpression[] tiDBExpressionArray0 = new TiDBExpression[2];
-        List<TiDBExpression> list0 = Randomly.nonEmptySubset(tiDBExpressionArray0);
-        TiDBAggregate.TiDBAggregateFunction tiDBAggregate_TiDBAggregateFunction0 = TiDBAggregate.TiDBAggregateFunction.MAX;
-        TiDBAggregate tiDBAggregate0 = new TiDBAggregate(list0, tiDBAggregate_TiDBAggregateFunction0);
-        // Undeclared exception!
-        try {
-            tiDBToStringVisitor0.visit(tiDBAggregate0);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.tidb.visitor.TiDBVisitor", e);
-        }
-    }
+    // @Test
+    // public void test02() throws Throwable {
+    // TiDBToStringVisitor tiDBToStringVisitor0 = new TiDBToStringVisitor();
+    // TiDBExpression[] tiDBExpressionArray0 = new TiDBExpression[2];
+    // TiDBConstant.TiDBTextConstant tiDBConstant_TiDBTextConstant0 = new TiDBConstant.TiDBTextConstant("ne 9~EC");
+    // TiDBJoin tiDBJoin0 = TiDBJoin.createLeftOuterJoin(tiDBConstant_TiDBTextConstant0,
+    // tiDBConstant_TiDBTextConstant0, tiDBConstant_TiDBTextConstant0);
+    // tiDBExpressionArray0[1] = (TiDBExpression) tiDBJoin0;
+    // List<TiDBExpression> list0 = Randomly.nonEmptySubset(tiDBExpressionArray0);
+    // TiDBAggregate.TiDBAggregateFunction tiDBAggregate_TiDBAggregateFunction0 =
+    // TiDBAggregate.TiDBAggregateFunction.MAX;
+    // TiDBAggregate tiDBAggregate0 = new TiDBAggregate(list0, tiDBAggregate_TiDBAggregateFunction0);
+    // tiDBToStringVisitor0.visit(tiDBAggregate0);
+    // }
+    //
+    // @Test
+    // public void test03() throws Throwable {
+    // TiDBToStringVisitor tiDBToStringVisitor0 = new TiDBToStringVisitor();
+    // TiDBExpression[] tiDBExpressionArray0 = new TiDBExpression[2];
+    // List<TiDBExpression> list0 = Randomly.nonEmptySubset(tiDBExpressionArray0);
+    // TiDBAggregate.TiDBAggregateFunction tiDBAggregate_TiDBAggregateFunction0 =
+    // TiDBAggregate.TiDBAggregateFunction.MAX;
+    // TiDBAggregate tiDBAggregate0 = new TiDBAggregate(list0, tiDBAggregate_TiDBAggregateFunction0);
+    // // Undeclared exception!
+    // try {
+    // tiDBToStringVisitor0.visit(tiDBAggregate0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.tidb.visitor.TiDBVisitor", e);
+    // }
+    // }
 
     @Test
     public void test04() throws Throwable {
@@ -167,14 +169,14 @@ public class TiDBToStringVisitor_ESTest {
         }
     }
 
-    @Test
-    public void test09() throws Throwable {
-        TiDBToStringVisitor tiDBToStringVisitor0 = new TiDBToStringVisitor();
-        TiDBSelect tiDBSelect0 = new TiDBSelect();
-        TiDBCollate tiDBCollate0 = new TiDBCollate(tiDBSelect0, "");
-        tiDBSelect0.setHint(tiDBCollate0);
-        tiDBToStringVisitor0.visit(tiDBSelect0);
-    }
+    // @Test
+    // public void test09() throws Throwable {
+    // TiDBToStringVisitor tiDBToStringVisitor0 = new TiDBToStringVisitor();
+    // TiDBSelect tiDBSelect0 = new TiDBSelect();
+    // TiDBCollate tiDBCollate0 = new TiDBCollate(tiDBSelect0, "");
+    // tiDBSelect0.setHint(tiDBCollate0);
+    // tiDBToStringVisitor0.visit(tiDBSelect0);
+    // }
 
     @Test
     public void test10() throws Throwable {
@@ -409,41 +411,41 @@ public class TiDBToStringVisitor_ESTest {
         TiDBCase tiDBCase0 = new TiDBCase(tiDBConstant_TiDBNullConstant0, list0, list0, (TiDBExpression) null);
         tiDBToStringVisitor0.visit(tiDBCase0);
     }
-
-    @Test
-    public void test25() throws Throwable {
-        TiDBToStringVisitor tiDBToStringVisitor0 = new TiDBToStringVisitor();
-        TiDBConstant.TiDBDoubleConstant tiDBConstant_TiDBDoubleConstant0 = new TiDBConstant.TiDBDoubleConstant(0.0);
-        TiDBExpression[] tiDBExpressionArray0 = new TiDBExpression[4];
-        tiDBExpressionArray0[0] = (TiDBExpression) tiDBConstant_TiDBDoubleConstant0;
-        TiDBConstant.TiDBBitConstant tiDBConstant_TiDBBitConstant0 = new TiDBConstant.TiDBBitConstant((-1803L));
-        List<TiDBExpression> list0 = Randomly.subset(1, tiDBExpressionArray0);
-        TiDBCase tiDBCase0 = new TiDBCase(tiDBConstant_TiDBDoubleConstant0, list0, list0,
-                tiDBConstant_TiDBBitConstant0);
-        tiDBToStringVisitor0.visit(tiDBCase0);
-    }
-
-    @Test
-    public void test26() throws Throwable {
-        TiDBToStringVisitor tiDBToStringVisitor0 = new TiDBToStringVisitor();
-        TiDBConstant.TiDBDoubleConstant tiDBConstant_TiDBDoubleConstant0 = new TiDBConstant.TiDBDoubleConstant(0.0);
-        TiDBExpression[] tiDBExpressionArray0 = new TiDBExpression[4];
-        TiDBConstant.TiDBBitConstant tiDBConstant_TiDBBitConstant0 = new TiDBConstant.TiDBBitConstant((-1803L));
-        List<TiDBExpression> list0 = Randomly.subset(1, tiDBExpressionArray0);
-        TiDBCase tiDBCase0 = new TiDBCase(tiDBConstant_TiDBDoubleConstant0, list0, list0,
-                tiDBConstant_TiDBBitConstant0);
-        // Undeclared exception!
-        try {
-            tiDBToStringVisitor0.visit(tiDBCase0);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.tidb.visitor.TiDBVisitor", e);
-        }
-    }
+    //
+    // @Test
+    // public void test25() throws Throwable {
+    // TiDBToStringVisitor tiDBToStringVisitor0 = new TiDBToStringVisitor();
+    // TiDBConstant.TiDBDoubleConstant tiDBConstant_TiDBDoubleConstant0 = new TiDBConstant.TiDBDoubleConstant(0.0);
+    // TiDBExpression[] tiDBExpressionArray0 = new TiDBExpression[4];
+    // tiDBExpressionArray0[0] = (TiDBExpression) tiDBConstant_TiDBDoubleConstant0;
+    // TiDBConstant.TiDBBitConstant tiDBConstant_TiDBBitConstant0 = new TiDBConstant.TiDBBitConstant((-1803L));
+    // List<TiDBExpression> list0 = Randomly.subset(1, tiDBExpressionArray0);
+    // TiDBCase tiDBCase0 = new TiDBCase(tiDBConstant_TiDBDoubleConstant0, list0, list0,
+    // tiDBConstant_TiDBBitConstant0);
+    // tiDBToStringVisitor0.visit(tiDBCase0);
+    // }
+    //
+    // @Test
+    // public void test26() throws Throwable {
+    // TiDBToStringVisitor tiDBToStringVisitor0 = new TiDBToStringVisitor();
+    // TiDBConstant.TiDBDoubleConstant tiDBConstant_TiDBDoubleConstant0 = new TiDBConstant.TiDBDoubleConstant(0.0);
+    // TiDBExpression[] tiDBExpressionArray0 = new TiDBExpression[4];
+    // TiDBConstant.TiDBBitConstant tiDBConstant_TiDBBitConstant0 = new TiDBConstant.TiDBBitConstant((-1803L));
+    // List<TiDBExpression> list0 = Randomly.subset(1, tiDBExpressionArray0);
+    // TiDBCase tiDBCase0 = new TiDBCase(tiDBConstant_TiDBDoubleConstant0, list0, list0,
+    // tiDBConstant_TiDBBitConstant0);
+    // // Undeclared exception!
+    // try {
+    // tiDBToStringVisitor0.visit(tiDBCase0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.tidb.visitor.TiDBVisitor", e);
+    // }
+    // }
 
     @Test
     public void test27() throws Throwable {

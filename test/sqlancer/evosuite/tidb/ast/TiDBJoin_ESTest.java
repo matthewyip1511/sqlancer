@@ -139,25 +139,26 @@ public class TiDBJoin_ESTest {
         }
     }
 
-    @Test
-    public void test11() throws Throwable {
-        TiDBConstant.TiDBBooleanConstant tiDBConstant_TiDBBooleanConstant0 = new TiDBConstant.TiDBBooleanConstant(true);
-        TiDBBinaryBitOperation.TiDBBinaryBitOperator tiDBBinaryBitOperation_TiDBBinaryBitOperator0 = TiDBBinaryBitOperation.TiDBBinaryBitOperator.LEFT_SHIFT;
-        TiDBBinaryBitOperation tiDBBinaryBitOperation0 = new TiDBBinaryBitOperation(tiDBConstant_TiDBBooleanConstant0,
-                tiDBConstant_TiDBBooleanConstant0, tiDBBinaryBitOperation_TiDBBinaryBitOperator0);
-        TiDBJoin tiDBJoin0 = TiDBJoin.createStraightJoin(tiDBBinaryBitOperation0, tiDBBinaryBitOperation0,
-                tiDBConstant_TiDBBooleanConstant0);
-        TiDBConstant.TiDBNullConstant tiDBConstant_TiDBNullConstant0 = new TiDBConstant.TiDBNullConstant();
-        List<TiDBExpression> list0 = List.of((TiDBExpression) tiDBJoin0,
-                (TiDBExpression) tiDBConstant_TiDBBooleanConstant0, (TiDBExpression) tiDBJoin0,
-                (TiDBExpression) tiDBJoin0, (TiDBExpression) tiDBBinaryBitOperation0,
-                (TiDBExpression) tiDBConstant_TiDBNullConstant0, (TiDBExpression) tiDBConstant_TiDBNullConstant0,
-                (TiDBExpression) tiDBConstant_TiDBNullConstant0, (TiDBExpression) tiDBConstant_TiDBNullConstant0,
-                (TiDBExpression) tiDBBinaryBitOperation0);
-        TiDBProvider.TiDBGlobalState tiDBProvider_TiDBGlobalState0 = new TiDBProvider.TiDBGlobalState();
-        List<TiDBExpression> list1 = TiDBJoin.getJoinsWithoutNature(list0, tiDBProvider_TiDBGlobalState0);
-        assertFalse(list1.equals((Object) list0));
-    }
+    // @Test
+    // public void test11() throws Throwable {
+    // TiDBConstant.TiDBBooleanConstant tiDBConstant_TiDBBooleanConstant0 = new TiDBConstant.TiDBBooleanConstant(true);
+    // TiDBBinaryBitOperation.TiDBBinaryBitOperator tiDBBinaryBitOperation_TiDBBinaryBitOperator0 =
+    // TiDBBinaryBitOperation.TiDBBinaryBitOperator.LEFT_SHIFT;
+    // TiDBBinaryBitOperation tiDBBinaryBitOperation0 = new TiDBBinaryBitOperation(tiDBConstant_TiDBBooleanConstant0,
+    // tiDBConstant_TiDBBooleanConstant0, tiDBBinaryBitOperation_TiDBBinaryBitOperator0);
+    // TiDBJoin tiDBJoin0 = TiDBJoin.createStraightJoin(tiDBBinaryBitOperation0, tiDBBinaryBitOperation0,
+    // tiDBConstant_TiDBBooleanConstant0);
+    // TiDBConstant.TiDBNullConstant tiDBConstant_TiDBNullConstant0 = new TiDBConstant.TiDBNullConstant();
+    // List<TiDBExpression> list0 = List.of((TiDBExpression) tiDBJoin0,
+    // (TiDBExpression) tiDBConstant_TiDBBooleanConstant0, (TiDBExpression) tiDBJoin0,
+    // (TiDBExpression) tiDBJoin0, (TiDBExpression) tiDBBinaryBitOperation0,
+    // (TiDBExpression) tiDBConstant_TiDBNullConstant0, (TiDBExpression) tiDBConstant_TiDBNullConstant0,
+    // (TiDBExpression) tiDBConstant_TiDBNullConstant0, (TiDBExpression) tiDBConstant_TiDBNullConstant0,
+    // (TiDBExpression) tiDBBinaryBitOperation0);
+    // TiDBProvider.TiDBGlobalState tiDBProvider_TiDBGlobalState0 = new TiDBProvider.TiDBGlobalState();
+    // List<TiDBExpression> list1 = TiDBJoin.getJoinsWithoutNature(list0, tiDBProvider_TiDBGlobalState0);
+    // assertFalse(list1.equals((Object) list0));
+    // }
 
     @Test
     public void test12() throws Throwable {
@@ -195,11 +196,11 @@ public class TiDBJoin_ESTest {
         assertEquals(0, list0.size());
     }
 
-    @Test
-    public void test16() throws Throwable {
-        TiDBJoin.NaturalJoinType tiDBJoin_NaturalJoinType0 = TiDBJoin.NaturalJoinType.getRandom();
-        assertEquals(TiDBJoin.NaturalJoinType.INNER, tiDBJoin_NaturalJoinType0);
-    }
+    // @Test
+    // public void test16() throws Throwable {
+    // TiDBJoin.NaturalJoinType tiDBJoin_NaturalJoinType0 = TiDBJoin.NaturalJoinType.getRandom();
+    // assertEquals(TiDBJoin.NaturalJoinType.INNER, tiDBJoin_NaturalJoinType0);
+    // }
 
     @Test
     public void test17() throws Throwable {

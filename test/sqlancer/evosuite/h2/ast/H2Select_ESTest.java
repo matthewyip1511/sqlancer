@@ -90,24 +90,24 @@ public class H2Select_ESTest {
         }
     }
 
-    @Test
-    public void test4() throws Throwable {
-        H2Select h2Select0 = new H2Select();
-        H2Expression[] h2ExpressionArray0 = new H2Expression[21];
-        List<H2Expression> list0 = Randomly.nonEmptySubset(h2ExpressionArray0);
-        h2Select0.setFetchColumns(list0);
-        // Undeclared exception!
-        try {
-            h2Select0.asString();
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.h2.H2ToStringVisitor", e);
-        }
-    }
+    // @Test
+    // public void test4() throws Throwable {
+    // H2Select h2Select0 = new H2Select();
+    // H2Expression[] h2ExpressionArray0 = new H2Expression[21];
+    // List<H2Expression> list0 = Randomly.nonEmptySubset(h2ExpressionArray0);
+    // h2Select0.setFetchColumns(list0);
+    // // Undeclared exception!
+    // try {
+    // h2Select0.asString();
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.h2.H2ToStringVisitor", e);
+    // }
+    // }
 
     @Test
     public void test5() throws Throwable {

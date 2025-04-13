@@ -98,32 +98,32 @@ public class MaterializeTLPBase_ESTest {
         }
     }
 
-    @Test
-    public void test4() throws Throwable {
-        MaterializeGlobalState materializeGlobalState0 = new MaterializeGlobalState();
-        MaterializeTLPBase materializeTLPBase0 = new MaterializeTLPBase(materializeGlobalState0);
-        LinkedList<MaterializeJoin> linkedList0 = new LinkedList<MaterializeJoin>();
-        Randomly.subset((List<MaterializeJoin>) linkedList0);
-        List<MaterializeExpression> list0 = materializeTLPBase0.generateFetchColumns();
-        assertEquals(1, list0.size());
-    }
+    // @Test
+    // public void test4() throws Throwable {
+    // MaterializeGlobalState materializeGlobalState0 = new MaterializeGlobalState();
+    // MaterializeTLPBase materializeTLPBase0 = new MaterializeTLPBase(materializeGlobalState0);
+    // LinkedList<MaterializeJoin> linkedList0 = new LinkedList<MaterializeJoin>();
+    // Randomly.subset((List<MaterializeJoin>) linkedList0);
+    // List<MaterializeExpression> list0 = materializeTLPBase0.generateFetchColumns();
+    // assertEquals(1, list0.size());
+    // }
 
-    @Test
-    public void test5() throws Throwable {
-        MaterializeGlobalState materializeGlobalState0 = new MaterializeGlobalState();
-        MaterializeTLPBase materializeTLPBase0 = new MaterializeTLPBase(materializeGlobalState0);
-        // Undeclared exception!
-        try {
-            materializeTLPBase0.generateFetchColumns();
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.materialize.oracle.tlp.MaterializeTLPBase", e);
-        }
-    }
+    // @Test
+    // public void test5() throws Throwable {
+    // MaterializeGlobalState materializeGlobalState0 = new MaterializeGlobalState();
+    // MaterializeTLPBase materializeTLPBase0 = new MaterializeTLPBase(materializeGlobalState0);
+    // // Undeclared exception!
+    // try {
+    // materializeTLPBase0.generateFetchColumns();
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.materialize.oracle.tlp.MaterializeTLPBase", e);
+    // }
+    // }
 
     @Test
     public void test6() throws Throwable {

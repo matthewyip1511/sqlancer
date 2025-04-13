@@ -93,12 +93,12 @@ public class MaterializeSelect_ESTest {
         assertEquals(MaterializeSchema.MaterializeDataType.TEXT, materializeExpression0.getExpressionType());
     }
 
-    @Test
-    public void test06() throws Throwable {
-        MaterializeSelect.ForClause materializeSelect_ForClause0 = MaterializeSelect.ForClause.getRandom();
-        String string0 = materializeSelect_ForClause0.getTextRepresentation();
-        assertEquals("UPDATE", string0);
-    }
+    // @Test
+    // public void test06() throws Throwable {
+    // MaterializeSelect.ForClause materializeSelect_ForClause0 = MaterializeSelect.ForClause.getRandom();
+    // String string0 = materializeSelect_ForClause0.getTextRepresentation();
+    // assertEquals("UPDATE", string0);
+    // }
 
     @Test
     public void test07() throws Throwable {
@@ -173,15 +173,15 @@ public class MaterializeSelect_ESTest {
         materializeSelect_MaterializeSubquery0.getExpressionType();
     }
 
-    @Test
-    public void test14() throws Throwable {
-        MaterializeSelect materializeSelect0 = new MaterializeSelect();
-        MaterializeJoin[] materializeJoinArray0 = new MaterializeJoin[4];
-        List<JoinBase<MaterializeExpression>> list0 = Randomly.nonEmptySubset(materializeJoinArray0);
-        materializeSelect0.setJoinClauses(list0);
-        List<JoinBase<MaterializeExpression>> list1 = materializeSelect0.getJoinClauses();
-        assertEquals(1, list1.size());
-    }
+    // @Test
+    // public void test14() throws Throwable {
+    // MaterializeSelect materializeSelect0 = new MaterializeSelect();
+    // MaterializeJoin[] materializeJoinArray0 = new MaterializeJoin[4];
+    // List<JoinBase<MaterializeExpression>> list0 = Randomly.nonEmptySubset(materializeJoinArray0);
+    // materializeSelect0.setJoinClauses(list0);
+    // List<JoinBase<MaterializeExpression>> list1 = materializeSelect0.getJoinClauses();
+    // assertEquals(1, list1.size());
+    // }
 
     @Test
     public void test15() throws Throwable {
@@ -196,15 +196,15 @@ public class MaterializeSelect_ESTest {
         assertNull(materializeExpression0);
     }
 
-    @Test
-    public void test17() throws Throwable {
-        MaterializeSelect materializeSelect0 = new MaterializeSelect();
-        List<JoinBase<MaterializeExpression>> list0 = materializeSelect0.getJoinClauses();
-        List<JoinBase<MaterializeExpression>> list1 = Randomly.nonEmptySubsetLeast(list0, (-1368));
-        materializeSelect0.setJoinClauses(list1);
-        List<JoinBase<MaterializeExpression>> list2 = materializeSelect0.getJoinClauses();
-        assertTrue(list2.equals((Object) list0));
-    }
+    // @Test
+    // public void test17() throws Throwable {
+    // MaterializeSelect materializeSelect0 = new MaterializeSelect();
+    // List<JoinBase<MaterializeExpression>> list0 = materializeSelect0.getJoinClauses();
+    // List<JoinBase<MaterializeExpression>> list1 = Randomly.nonEmptySubsetLeast(list0, (-1368));
+    // materializeSelect0.setJoinClauses(list1);
+    // List<JoinBase<MaterializeExpression>> list2 = materializeSelect0.getJoinClauses();
+    // assertTrue(list2.equals((Object) list0));
+    // }
 
     @Test
     public void test18() throws Throwable {

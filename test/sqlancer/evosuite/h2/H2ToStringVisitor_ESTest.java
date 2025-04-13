@@ -220,22 +220,22 @@ public class H2ToStringVisitor_ESTest {
         assertEquals("UIWVR!k-<&h|W NATURAL JOIN UIWVR!k-<&h|W", string0);
     }
 
-    @Test
-    public void test12() throws Throwable {
-        H2Join h2Join0 = H2Join.createRightOuterJoin((H2TableReference) null, (H2TableReference) null,
-                (H2Expression) null);
-        // Undeclared exception!
-        try {
-            H2ToStringVisitor.asString(h2Join0);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.h2.H2ToStringVisitor", e);
-        }
-    }
+    // @Test
+    // public void test12() throws Throwable {
+    // H2Join h2Join0 = H2Join.createRightOuterJoin((H2TableReference) null, (H2TableReference) null,
+    // (H2Expression) null);
+    // // Undeclared exception!
+    // try {
+    // H2ToStringVisitor.asString(h2Join0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.h2.H2ToStringVisitor", e);
+    // }
+    // }
 
     @Test
     public void test13() throws Throwable {

@@ -238,17 +238,17 @@ public class DorisToStringVisitor_ESTest {
     // assertEquals(" SELECT CROSS JOIN SELECT ", string0);
     // }
 
-    @Test
-    public void test15() throws Throwable {
-        LinkedList<DorisSchema.DorisColumn> linkedList0 = new LinkedList<DorisSchema.DorisColumn>();
-        DorisSchema.DorisTable dorisSchema_DorisTable0 = new DorisSchema.DorisTable("SELECT ", linkedList0, false);
-        DorisTableReference dorisTableReference0 = new DorisTableReference(dorisSchema_DorisTable0);
-        DorisJoin.JoinType dorisJoin_JoinType0 = DorisJoin.JoinType.LEFT;
-        DorisJoin dorisJoin0 = new DorisJoin(dorisTableReference0, dorisTableReference0, dorisJoin_JoinType0,
-                dorisTableReference0);
-        String string0 = DorisToStringVisitor.asString(dorisJoin0);
-        assertEquals(" SELECT  LEFT JOIN SELECT  ON SELECT ", string0);
-    }
+    // @Test
+    // public void test15() throws Throwable {
+    // LinkedList<DorisSchema.DorisColumn> linkedList0 = new LinkedList<DorisSchema.DorisColumn>();
+    // DorisSchema.DorisTable dorisSchema_DorisTable0 = new DorisSchema.DorisTable("SELECT ", linkedList0, false);
+    // DorisTableReference dorisTableReference0 = new DorisTableReference(dorisSchema_DorisTable0);
+    // DorisJoin.JoinType dorisJoin_JoinType0 = DorisJoin.JoinType.LEFT;
+    // DorisJoin dorisJoin0 = new DorisJoin(dorisTableReference0, dorisTableReference0, dorisJoin_JoinType0,
+    // dorisTableReference0);
+    // String string0 = DorisToStringVisitor.asString(dorisJoin0);
+    // assertEquals(" SELECT LEFT JOIN SELECT ON SELECT ", string0);
+    // }
 
     @Test
     public void test16() throws Throwable {

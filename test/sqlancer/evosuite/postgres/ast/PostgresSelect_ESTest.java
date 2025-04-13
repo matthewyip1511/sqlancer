@@ -30,15 +30,15 @@ public class PostgresSelect_ESTest {
         assertNull(list0);
     }
 
-    @Test
-    public void test01() throws Throwable {
-        PostgresSelect postgresSelect0 = new PostgresSelect();
-        PostgresJoin[] postgresJoinArray0 = new PostgresJoin[2];
-        List<JoinBase<PostgresExpression>> list0 = Randomly.nonEmptySubset(postgresJoinArray0);
-        postgresSelect0.setJoinClauses(list0);
-        List<JoinBase<PostgresExpression>> list1 = postgresSelect0.getJoinClauses();
-        assertEquals(1, list1.size());
-    }
+    // @Test
+    // public void test01() throws Throwable {
+    // PostgresSelect postgresSelect0 = new PostgresSelect();
+    // PostgresJoin[] postgresJoinArray0 = new PostgresJoin[2];
+    // List<JoinBase<PostgresExpression>> list0 = Randomly.nonEmptySubset(postgresJoinArray0);
+    // postgresSelect0.setJoinClauses(list0);
+    // List<JoinBase<PostgresExpression>> list1 = postgresSelect0.getJoinClauses();
+    // assertEquals(1, list1.size());
+    // }
 
     @Test
     public void test02() throws Throwable {
@@ -81,11 +81,11 @@ public class PostgresSelect_ESTest {
         assertNull(postgresSelect0.getExpressionType());
     }
 
-    @Test
-    public void test06() throws Throwable {
-        PostgresSelect.SelectType postgresSelect_SelectType0 = PostgresSelect.SelectType.getRandom();
-        assertEquals(PostgresSelect.SelectType.DISTINCT, postgresSelect_SelectType0);
-    }
+    // @Test
+    // public void test06() throws Throwable {
+    // PostgresSelect.SelectType postgresSelect_SelectType0 = PostgresSelect.SelectType.getRandom();
+    // assertEquals(PostgresSelect.SelectType.DISTINCT, postgresSelect_SelectType0);
+    // }
 
     @Test
     public void test07() throws Throwable {

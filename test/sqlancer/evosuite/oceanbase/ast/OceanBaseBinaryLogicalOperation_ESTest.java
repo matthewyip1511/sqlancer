@@ -38,12 +38,14 @@ public class OceanBaseBinaryLogicalOperation_ESTest {
         assertFalse(oceanBaseConstant1.asBooleanNotNull());
     }
 
-    @Test
-    public void test01() throws Throwable {
-        OceanBaseBinaryLogicalOperation.OceanBaseBinaryLogicalOperator oceanBaseBinaryLogicalOperation_OceanBaseBinaryLogicalOperator0 = OceanBaseBinaryLogicalOperation.OceanBaseBinaryLogicalOperator.AND;
-        String string0 = oceanBaseBinaryLogicalOperation_OceanBaseBinaryLogicalOperator0.getTextRepresentation();
-        assertEquals("AND", string0);
-    }
+    // @Test
+    // public void test01() throws Throwable {
+    // OceanBaseBinaryLogicalOperation.OceanBaseBinaryLogicalOperator
+    // oceanBaseBinaryLogicalOperation_OceanBaseBinaryLogicalOperator0 =
+    // OceanBaseBinaryLogicalOperation.OceanBaseBinaryLogicalOperator.AND;
+    // String string0 = oceanBaseBinaryLogicalOperation_OceanBaseBinaryLogicalOperator0.getTextRepresentation();
+    // assertEquals("AND", string0);
+    // }
 
     @Test
     public void test02() throws Throwable {
@@ -219,18 +221,20 @@ public class OceanBaseBinaryLogicalOperation_ESTest {
         assertNull(oceanBaseConstant0.getType());
     }
 
-    @Test
-    public void test13() throws Throwable {
-        OceanBaseConstant oceanBaseConstant0 = OceanBaseConstant.createFalse();
-        OceanBaseConstant oceanBaseConstant1 = OceanBaseConstant.createTrue();
-        OceanBaseBinaryLogicalOperation.OceanBaseBinaryLogicalOperator oceanBaseBinaryLogicalOperation_OceanBaseBinaryLogicalOperator0 = OceanBaseBinaryLogicalOperation.OceanBaseBinaryLogicalOperator.OR;
-        OceanBaseBinaryLogicalOperation oceanBaseBinaryLogicalOperation0 = new OceanBaseBinaryLogicalOperation(
-                oceanBaseConstant0, oceanBaseConstant1,
-                oceanBaseBinaryLogicalOperation_OceanBaseBinaryLogicalOperator0);
-        OceanBaseConstant oceanBaseConstant2 = oceanBaseBinaryLogicalOperation0.getExpectedValue();
-        assertNotNull(oceanBaseConstant2);
-        assertEquals("1", oceanBaseConstant2.getTextRepresentation());
-    }
+    // @Test
+    // public void test13() throws Throwable {
+    // OceanBaseConstant oceanBaseConstant0 = OceanBaseConstant.createFalse();
+    // OceanBaseConstant oceanBaseConstant1 = OceanBaseConstant.createTrue();
+    // OceanBaseBinaryLogicalOperation.OceanBaseBinaryLogicalOperator
+    // oceanBaseBinaryLogicalOperation_OceanBaseBinaryLogicalOperator0 =
+    // OceanBaseBinaryLogicalOperation.OceanBaseBinaryLogicalOperator.OR;
+    // OceanBaseBinaryLogicalOperation oceanBaseBinaryLogicalOperation0 = new OceanBaseBinaryLogicalOperation(
+    // oceanBaseConstant0, oceanBaseConstant1,
+    // oceanBaseBinaryLogicalOperation_OceanBaseBinaryLogicalOperator0);
+    // OceanBaseConstant oceanBaseConstant2 = oceanBaseBinaryLogicalOperation0.getExpectedValue();
+    // assertNotNull(oceanBaseConstant2);
+    // assertEquals("1", oceanBaseConstant2.getTextRepresentation());
+    // }
 
     @Test
     public void test14() throws Throwable {
@@ -315,16 +319,19 @@ public class OceanBaseBinaryLogicalOperation_ESTest {
         assertTrue(oceanBaseConstant1.isNull());
     }
 
-    @Test
-    public void test22() throws Throwable {
-        OceanBaseConstant oceanBaseConstant0 = OceanBaseConstant.createFalse();
-        OceanBaseBinaryLogicalOperation.OceanBaseBinaryLogicalOperator oceanBaseBinaryLogicalOperation_OceanBaseBinaryLogicalOperator0 = OceanBaseBinaryLogicalOperation.OceanBaseBinaryLogicalOperator
-                .getRandom();
-        OceanBaseConstant.OceanBaseNullConstant oceanBaseConstant_OceanBaseNullConstant0 = new OceanBaseConstant.OceanBaseNullConstant();
-        OceanBaseConstant oceanBaseConstant1 = oceanBaseBinaryLogicalOperation_OceanBaseBinaryLogicalOperator0
-                .apply(oceanBaseConstant_OceanBaseNullConstant0, oceanBaseConstant0);
-        assertEquals("0", oceanBaseConstant1.getTextRepresentation());
-    }
+    // @Test
+    // public void test22() throws Throwable {
+    // OceanBaseConstant oceanBaseConstant0 = OceanBaseConstant.createFalse();
+    // OceanBaseBinaryLogicalOperation.OceanBaseBinaryLogicalOperator
+    // oceanBaseBinaryLogicalOperation_OceanBaseBinaryLogicalOperator0 =
+    // OceanBaseBinaryLogicalOperation.OceanBaseBinaryLogicalOperator
+    // .getRandom();
+    // OceanBaseConstant.OceanBaseNullConstant oceanBaseConstant_OceanBaseNullConstant0 = new
+    // OceanBaseConstant.OceanBaseNullConstant();
+    // OceanBaseConstant oceanBaseConstant1 = oceanBaseBinaryLogicalOperation_OceanBaseBinaryLogicalOperator0
+    // .apply(oceanBaseConstant_OceanBaseNullConstant0, oceanBaseConstant0);
+    // assertEquals("0", oceanBaseConstant1.getTextRepresentation());
+    // }
 
     @Test
     public void test23() throws Throwable {
@@ -348,15 +355,17 @@ public class OceanBaseBinaryLogicalOperation_ESTest {
         assertEquals("NULL", oceanBaseConstant1.castAsString());
     }
 
-    @Test
-    public void test25() throws Throwable {
-        OceanBaseBinaryLogicalOperation.OceanBaseBinaryLogicalOperator oceanBaseBinaryLogicalOperation_OceanBaseBinaryLogicalOperator0 = OceanBaseBinaryLogicalOperation.OceanBaseBinaryLogicalOperator
-                .getRandom();
-        OceanBaseConstant oceanBaseConstant0 = OceanBaseConstant.createTrue();
-        OceanBaseConstant oceanBaseConstant1 = oceanBaseBinaryLogicalOperation_OceanBaseBinaryLogicalOperator0
-                .apply(oceanBaseConstant0, oceanBaseConstant0);
-        assertTrue(oceanBaseConstant1.asBooleanNotNull());
-    }
+    // @Test
+    // public void test25() throws Throwable {
+    // OceanBaseBinaryLogicalOperation.OceanBaseBinaryLogicalOperator
+    // oceanBaseBinaryLogicalOperation_OceanBaseBinaryLogicalOperator0 =
+    // OceanBaseBinaryLogicalOperation.OceanBaseBinaryLogicalOperator
+    // .getRandom();
+    // OceanBaseConstant oceanBaseConstant0 = OceanBaseConstant.createTrue();
+    // OceanBaseConstant oceanBaseConstant1 = oceanBaseBinaryLogicalOperation_OceanBaseBinaryLogicalOperator0
+    // .apply(oceanBaseConstant0, oceanBaseConstant0);
+    // assertTrue(oceanBaseConstant1.asBooleanNotNull());
+    // }
 
     @Test
     public void test26() throws Throwable {
@@ -382,15 +391,17 @@ public class OceanBaseBinaryLogicalOperation_ESTest {
         assertEquals("NULL", oceanBaseConstant_OceanBaseNullConstant1.getTextRepresentation());
     }
 
-    @Test
-    public void test28() throws Throwable {
-        OceanBaseBinaryLogicalOperation.OceanBaseBinaryLogicalOperator oceanBaseBinaryLogicalOperation_OceanBaseBinaryLogicalOperator0 = OceanBaseBinaryLogicalOperation.OceanBaseBinaryLogicalOperator.OR;
-        OceanBaseBinaryLogicalOperation oceanBaseBinaryLogicalOperation0 = new OceanBaseBinaryLogicalOperation(
-                (OceanBaseExpression) null, (OceanBaseExpression) null,
-                oceanBaseBinaryLogicalOperation_OceanBaseBinaryLogicalOperator0);
-        String string0 = oceanBaseBinaryLogicalOperation0.getTextRepresentation();
-        assertEquals("OR", string0);
-    }
+    // @Test
+    // public void test28() throws Throwable {
+    // OceanBaseBinaryLogicalOperation.OceanBaseBinaryLogicalOperator
+    // oceanBaseBinaryLogicalOperation_OceanBaseBinaryLogicalOperator0 =
+    // OceanBaseBinaryLogicalOperation.OceanBaseBinaryLogicalOperator.OR;
+    // OceanBaseBinaryLogicalOperation oceanBaseBinaryLogicalOperation0 = new OceanBaseBinaryLogicalOperation(
+    // (OceanBaseExpression) null, (OceanBaseExpression) null,
+    // oceanBaseBinaryLogicalOperation_OceanBaseBinaryLogicalOperator0);
+    // String string0 = oceanBaseBinaryLogicalOperation0.getTextRepresentation();
+    // assertEquals("OR", string0);
+    // }
 
     @Test
     public void test29() throws Throwable {

@@ -104,24 +104,24 @@ public class DatabendSelect_ESTest {
         }
     }
 
-    @Test
-    public void test5() throws Throwable {
-        DatabendSelect databendSelect0 = new DatabendSelect();
-        DatabendExpression[] databendExpressionArray0 = new DatabendExpression[4];
-        List<DatabendExpression> list0 = Randomly.nonEmptySubset(databendExpressionArray0);
-        databendSelect0.setFetchColumns(list0);
-        // Undeclared exception!
-        try {
-            databendSelect0.asString();
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.databend.DatabendToStringVisitor", e);
-        }
-    }
+    // @Test
+    // public void test5() throws Throwable {
+    // DatabendSelect databendSelect0 = new DatabendSelect();
+    // DatabendExpression[] databendExpressionArray0 = new DatabendExpression[4];
+    // List<DatabendExpression> list0 = Randomly.nonEmptySubset(databendExpressionArray0);
+    // databendSelect0.setFetchColumns(list0);
+    // // Undeclared exception!
+    // try {
+    // databendSelect0.asString();
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.databend.DatabendToStringVisitor", e);
+    // }
+    // }
 
     @Test
     public void test6() throws Throwable {

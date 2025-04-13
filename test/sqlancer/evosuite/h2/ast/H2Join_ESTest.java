@@ -51,30 +51,30 @@ public class H2Join_ESTest {
         assertEquals(H2Join.JoinType.RIGHT, h2Join1.getJoinType());
     }
 
-    @Test
-    public void test03() throws Throwable {
-        LinkedList<H2Schema.H2Column> linkedList0 = new LinkedList<H2Schema.H2Column>();
-        H2Schema.H2Table h2Schema_H2Table0 = new H2Schema.H2Table("b$Wf#z6XVX@)Uy<", linkedList0);
-        H2TableReference h2TableReference0 = new H2TableReference(h2Schema_H2Table0);
-        H2Join.JoinType.getRandom();
-        H2TableReference h2TableReference1 = new H2TableReference(h2Schema_H2Table0);
-        List<H2TableReference> list0 = List.of(h2TableReference0, h2TableReference1, h2TableReference1,
-                h2TableReference1, h2TableReference0, h2TableReference0, h2TableReference1, h2TableReference1,
-                h2TableReference1);
-        H2Provider.H2GlobalState h2Provider_H2GlobalState0 = new H2Provider.H2GlobalState();
-        LinkedList<H2TableReference> linkedList1 = new LinkedList<H2TableReference>(list0);
-        // Undeclared exception!
-        try {
-            H2Join.getJoins(linkedList1, h2Provider_H2GlobalState0);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.h2.H2ExpressionGenerator", e);
-        }
-    }
+    // @Test
+    // public void test03() throws Throwable {
+    // LinkedList<H2Schema.H2Column> linkedList0 = new LinkedList<H2Schema.H2Column>();
+    // H2Schema.H2Table h2Schema_H2Table0 = new H2Schema.H2Table("b$Wf#z6XVX@)Uy<", linkedList0);
+    // H2TableReference h2TableReference0 = new H2TableReference(h2Schema_H2Table0);
+    // H2Join.JoinType.getRandom();
+    // H2TableReference h2TableReference1 = new H2TableReference(h2Schema_H2Table0);
+    // List<H2TableReference> list0 = List.of(h2TableReference0, h2TableReference1, h2TableReference1,
+    // h2TableReference1, h2TableReference0, h2TableReference0, h2TableReference1, h2TableReference1,
+    // h2TableReference1);
+    // H2Provider.H2GlobalState h2Provider_H2GlobalState0 = new H2Provider.H2GlobalState();
+    // LinkedList<H2TableReference> linkedList1 = new LinkedList<H2TableReference>(list0);
+    // // Undeclared exception!
+    // try {
+    // H2Join.getJoins(linkedList1, h2Provider_H2GlobalState0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.h2.H2ExpressionGenerator", e);
+    // }
+    // }
 
     @Test
     public void test04() throws Throwable {

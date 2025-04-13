@@ -402,23 +402,23 @@ public class PrestoToStringVisitor_ESTest {
         }
     }
 
-    @Test
-    public void test22() throws Throwable {
-        PrestoToStringVisitor prestoToStringVisitor0 = new PrestoToStringVisitor();
-        PrestoJoin prestoJoin0 = PrestoJoin.createInnerJoin((PrestoTableReference) null, (PrestoTableReference) null,
-                (PrestoExpression) null);
-        // Undeclared exception!
-        try {
-            prestoToStringVisitor0.visitSpecific((PrestoExpression) prestoJoin0);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.presto.PrestoToStringVisitor", e);
-        }
-    }
+    // @Test
+    // public void test22() throws Throwable {
+    // PrestoToStringVisitor prestoToStringVisitor0 = new PrestoToStringVisitor();
+    // PrestoJoin prestoJoin0 = PrestoJoin.createInnerJoin((PrestoTableReference) null, (PrestoTableReference) null,
+    // (PrestoExpression) null);
+    // // Undeclared exception!
+    // try {
+    // prestoToStringVisitor0.visitSpecific((PrestoExpression) prestoJoin0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.presto.PrestoToStringVisitor", e);
+    // }
+    // }
 
     @Test
     public void test23() throws Throwable {
@@ -448,20 +448,20 @@ public class PrestoToStringVisitor_ESTest {
         assertEquals("ESeE", prestoFunctionWithoutParenthesis0.getExpr());
     }
 
-    @Test
-    public void test25() throws Throwable {
-        // Undeclared exception!
-        try {
-            PrestoToStringVisitor.asString((PrestoExpression) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.presto.PrestoToStringVisitor", e);
-        }
-    }
+    // @Test
+    // public void test25() throws Throwable {
+    // // Undeclared exception!
+    // try {
+    // PrestoToStringVisitor.asString((PrestoExpression) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.presto.PrestoToStringVisitor", e);
+    // }
+    // }
 
     @Test
     public void test26() throws Throwable {

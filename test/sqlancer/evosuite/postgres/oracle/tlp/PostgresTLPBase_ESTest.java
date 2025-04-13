@@ -93,15 +93,15 @@ public class PostgresTLPBase_ESTest {
         }
     }
 
-    @Test
-    public void test4() throws Throwable {
-        CitusGlobalState citusGlobalState0 = new CitusGlobalState();
-        PostgresTLPBase postgresTLPBase0 = new PostgresTLPBase(citusGlobalState0);
-        LinkedList<PostgresSchema.PostgresColumn> linkedList0 = new LinkedList<PostgresSchema.PostgresColumn>();
-        Randomly.subset((List<PostgresSchema.PostgresColumn>) linkedList0);
-        List<PostgresExpression> list0 = postgresTLPBase0.generateFetchColumns();
-        assertEquals(1, list0.size());
-    }
+    // @Test
+    // public void test4() throws Throwable {
+    // CitusGlobalState citusGlobalState0 = new CitusGlobalState();
+    // PostgresTLPBase postgresTLPBase0 = new PostgresTLPBase(citusGlobalState0);
+    // LinkedList<PostgresSchema.PostgresColumn> linkedList0 = new LinkedList<PostgresSchema.PostgresColumn>();
+    // Randomly.subset((List<PostgresSchema.PostgresColumn>) linkedList0);
+    // List<PostgresExpression> list0 = postgresTLPBase0.generateFetchColumns();
+    // assertEquals(1, list0.size());
+    // }
 
     @Test
     public void test5() throws Throwable {

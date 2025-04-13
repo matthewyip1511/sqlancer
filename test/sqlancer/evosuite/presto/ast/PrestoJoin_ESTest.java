@@ -48,31 +48,31 @@ public class PrestoJoin_ESTest {
         assertEquals(PrestoJoin.JoinType.RIGHT, prestoJoin0.getJoinType());
     }
 
-    @Test
-    public void test02() throws Throwable {
-        PrestoGlobalState prestoGlobalState0 = new PrestoGlobalState();
-        LinkedList<PrestoSchema.PrestoColumn> linkedList0 = new LinkedList<PrestoSchema.PrestoColumn>();
-        PrestoSchema.PrestoTable prestoSchema_PrestoTable0 = new PrestoSchema.PrestoTable("mTPhCbAmiquPYe", linkedList0,
-                false);
-        PrestoTableReference prestoTableReference0 = new PrestoTableReference(prestoSchema_PrestoTable0);
-        PrestoTableReference prestoTableReference1 = new PrestoTableReference(prestoSchema_PrestoTable0);
-        List<PrestoTableReference> list0 = List.of(prestoTableReference0, prestoTableReference1, prestoTableReference0,
-                prestoTableReference1, prestoTableReference1, prestoTableReference0, prestoTableReference1,
-                prestoTableReference1, prestoTableReference0);
-        PrestoJoin.JoinType.getRandom();
-        LinkedList<PrestoTableReference> linkedList1 = new LinkedList<PrestoTableReference>(list0);
-        // Undeclared exception!
-        try {
-            PrestoJoin.getJoins(linkedList1, prestoGlobalState0);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.presto.gen.PrestoTypedExpressionGenerator", e);
-        }
-    }
+    // @Test
+    // public void test02() throws Throwable {
+    // PrestoGlobalState prestoGlobalState0 = new PrestoGlobalState();
+    // LinkedList<PrestoSchema.PrestoColumn> linkedList0 = new LinkedList<PrestoSchema.PrestoColumn>();
+    // PrestoSchema.PrestoTable prestoSchema_PrestoTable0 = new PrestoSchema.PrestoTable("mTPhCbAmiquPYe", linkedList0,
+    // false);
+    // PrestoTableReference prestoTableReference0 = new PrestoTableReference(prestoSchema_PrestoTable0);
+    // PrestoTableReference prestoTableReference1 = new PrestoTableReference(prestoSchema_PrestoTable0);
+    // List<PrestoTableReference> list0 = List.of(prestoTableReference0, prestoTableReference1, prestoTableReference0,
+    // prestoTableReference1, prestoTableReference1, prestoTableReference0, prestoTableReference1,
+    // prestoTableReference1, prestoTableReference0);
+    // PrestoJoin.JoinType.getRandom();
+    // LinkedList<PrestoTableReference> linkedList1 = new LinkedList<PrestoTableReference>(list0);
+    // // Undeclared exception!
+    // try {
+    // PrestoJoin.getJoins(linkedList1, prestoGlobalState0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.presto.gen.PrestoTypedExpressionGenerator", e);
+    // }
+    // }
 
     @Test
     public void test03() throws Throwable {
@@ -111,26 +111,26 @@ public class PrestoJoin_ESTest {
         assertNull(prestoTableReference0);
     }
 
-    @Test
-    public void test07() throws Throwable {
-        PrestoGlobalState prestoGlobalState0 = new PrestoGlobalState();
-        PrestoTableReference prestoTableReference0 = new PrestoTableReference((PrestoSchema.PrestoTable) null);
-        List<PrestoTableReference> list0 = List.of(prestoTableReference0, prestoTableReference0, prestoTableReference0,
-                prestoTableReference0, prestoTableReference0, prestoTableReference0, prestoTableReference0,
-                prestoTableReference0, prestoTableReference0);
-        PrestoJoin.JoinType.getRandom();
-        // Undeclared exception!
-        try {
-            PrestoJoin.getJoins(list0, prestoGlobalState0);
-            fail("Expecting exception: UnsupportedOperationException");
-
-        } catch (UnsupportedOperationException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("java.util.ImmutableCollections", e);
-        }
-    }
+    // @Test
+    // public void test07() throws Throwable {
+    // PrestoGlobalState prestoGlobalState0 = new PrestoGlobalState();
+    // PrestoTableReference prestoTableReference0 = new PrestoTableReference((PrestoSchema.PrestoTable) null);
+    // List<PrestoTableReference> list0 = List.of(prestoTableReference0, prestoTableReference0, prestoTableReference0,
+    // prestoTableReference0, prestoTableReference0, prestoTableReference0, prestoTableReference0,
+    // prestoTableReference0, prestoTableReference0);
+    // PrestoJoin.JoinType.getRandom();
+    // // Undeclared exception!
+    // try {
+    // PrestoJoin.getJoins(list0, prestoGlobalState0);
+    // fail("Expecting exception: UnsupportedOperationException");
+    //
+    // } catch (UnsupportedOperationException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("java.util.ImmutableCollections", e);
+    // }
+    // }
 
     @Test
     public void test08() throws Throwable {

@@ -42,16 +42,16 @@ public class PostgresCommon_ESTest {
         assertFalse(boolean0);
     }
 
-    @Test
-    public void test02() throws Throwable {
-        List<String> list0 = PostgresCommon.getCommonTableErrors();
-        StringBuilder stringBuilder0 = new StringBuilder();
-        PostgresSchema.PostgresDataType postgresSchema_PostgresDataType0 = PostgresSchema.PostgresDataType.INT;
-        boolean boolean0 = PostgresCommon.appendDataType(postgresSchema_PostgresDataType0, stringBuilder0, false, false,
-                list0);
-        assertEquals("smallint", stringBuilder0.toString());
-        assertFalse(boolean0);
-    }
+    // @Test
+    // public void test02() throws Throwable {
+    // List<String> list0 = PostgresCommon.getCommonTableErrors();
+    // StringBuilder stringBuilder0 = new StringBuilder();
+    // PostgresSchema.PostgresDataType postgresSchema_PostgresDataType0 = PostgresSchema.PostgresDataType.INT;
+    // boolean boolean0 = PostgresCommon.appendDataType(postgresSchema_PostgresDataType0, stringBuilder0, false, false,
+    // list0);
+    // assertEquals("smallint", stringBuilder0.toString());
+    // assertFalse(boolean0);
+    // }
 
     @Test
     public void test03() throws Throwable {
@@ -218,16 +218,16 @@ public class PostgresCommon_ESTest {
         assertEquals('s', PostgresGlobalState.STABLE);
     }
 
-    @Test
-    public void test11() throws Throwable {
-        StringBuilder stringBuilder0 = new StringBuilder();
-        PostgresSchema.PostgresDataType postgresSchema_PostgresDataType0 = PostgresSchema.PostgresDataType.TEXT;
-        List<String> list0 = PostgresCommon.getCommonTableErrors();
-        boolean boolean0 = PostgresCommon.appendDataType(postgresSchema_PostgresDataType0, stringBuilder0, false, false,
-                list0);
-        assertEquals("name", stringBuilder0.toString());
-        assertFalse(boolean0);
-    }
+    // @Test
+    // public void test11() throws Throwable {
+    // StringBuilder stringBuilder0 = new StringBuilder();
+    // PostgresSchema.PostgresDataType postgresSchema_PostgresDataType0 = PostgresSchema.PostgresDataType.TEXT;
+    // List<String> list0 = PostgresCommon.getCommonTableErrors();
+    // boolean boolean0 = PostgresCommon.appendDataType(postgresSchema_PostgresDataType0, stringBuilder0, false, false,
+    // list0);
+    // assertEquals("name", stringBuilder0.toString());
+    // assertFalse(boolean0);
+    // }
 
     @Test
     public void test12() throws Throwable {

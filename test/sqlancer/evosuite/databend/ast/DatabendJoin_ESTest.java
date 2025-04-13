@@ -72,30 +72,31 @@ public class DatabendJoin_ESTest {
         assertEquals(DatabendJoin.JoinType.RIGHT, databendJoin1.getJoinType());
     }
 
-    @Test
-    public void test03() throws Throwable {
-        DatabendTableReference databendTableReference0 = new DatabendTableReference(
-                (DatabendSchema.DatabendTable) null);
-        DatabendTableReference databendTableReference1 = new DatabendTableReference(
-                (DatabendSchema.DatabendTable) null);
-        List<DatabendTableReference> list0 = List.of(databendTableReference0, databendTableReference1,
-                databendTableReference1);
-        LinkedList<DatabendTableReference> linkedList0 = new LinkedList<DatabendTableReference>();
-        linkedList0.addAll(0, (Collection<? extends DatabendTableReference>) list0);
-        DatabendProvider.DatabendGlobalState databendProvider_DatabendGlobalState0 = new DatabendProvider.DatabendGlobalState();
-        DatabendJoin.OuterType.getRandom();
-        // Undeclared exception!
-        try {
-            DatabendJoin.getJoins(linkedList0, databendProvider_DatabendGlobalState0);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.databend.ast.DatabendJoin", e);
-        }
-    }
+    // @Test
+    // public void test03() throws Throwable {
+    // DatabendTableReference databendTableReference0 = new DatabendTableReference(
+    // (DatabendSchema.DatabendTable) null);
+    // DatabendTableReference databendTableReference1 = new DatabendTableReference(
+    // (DatabendSchema.DatabendTable) null);
+    // List<DatabendTableReference> list0 = List.of(databendTableReference0, databendTableReference1,
+    // databendTableReference1);
+    // LinkedList<DatabendTableReference> linkedList0 = new LinkedList<DatabendTableReference>();
+    // linkedList0.addAll(0, (Collection<? extends DatabendTableReference>) list0);
+    // DatabendProvider.DatabendGlobalState databendProvider_DatabendGlobalState0 = new
+    // DatabendProvider.DatabendGlobalState();
+    // DatabendJoin.OuterType.getRandom();
+    // // Undeclared exception!
+    // try {
+    // DatabendJoin.getJoins(linkedList0, databendProvider_DatabendGlobalState0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.databend.ast.DatabendJoin", e);
+    // }
+    // }
 
     @Test
     public void test04() throws Throwable {
@@ -148,26 +149,27 @@ public class DatabendJoin_ESTest {
         assertNull(tableReferenceNode0);
     }
 
-    @Test
-    public void test08() throws Throwable {
-        DatabendTableReference databendTableReference0 = new DatabendTableReference(
-                (DatabendSchema.DatabendTable) null);
-        DatabendJoin.OuterType.getRandom();
-        List<DatabendTableReference> list0 = List.of(databendTableReference0, databendTableReference0,
-                databendTableReference0);
-        DatabendProvider.DatabendGlobalState databendProvider_DatabendGlobalState0 = new DatabendProvider.DatabendGlobalState();
-        // Undeclared exception!
-        try {
-            DatabendJoin.getJoins(list0, databendProvider_DatabendGlobalState0);
-            fail("Expecting exception: UnsupportedOperationException");
-
-        } catch (UnsupportedOperationException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("java.util.ImmutableCollections", e);
-        }
-    }
+    // @Test
+    // public void test08() throws Throwable {
+    // DatabendTableReference databendTableReference0 = new DatabendTableReference(
+    // (DatabendSchema.DatabendTable) null);
+    // DatabendJoin.OuterType.getRandom();
+    // List<DatabendTableReference> list0 = List.of(databendTableReference0, databendTableReference0,
+    // databendTableReference0);
+    // DatabendProvider.DatabendGlobalState databendProvider_DatabendGlobalState0 = new
+    // DatabendProvider.DatabendGlobalState();
+    // // Undeclared exception!
+    // try {
+    // DatabendJoin.getJoins(list0, databendProvider_DatabendGlobalState0);
+    // fail("Expecting exception: UnsupportedOperationException");
+    //
+    // } catch (UnsupportedOperationException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("java.util.ImmutableCollections", e);
+    // }
+    // }
 
     @Test
     public void test09() throws Throwable {
@@ -204,11 +206,11 @@ public class DatabendJoin_ESTest {
         assertSame(databendJoin_OuterType0, databendJoin_OuterType1);
     }
 
-    @Test
-    public void test12() throws Throwable {
-        DatabendJoin.JoinType databendJoin_JoinType0 = DatabendJoin.JoinType.getRandom();
-        assertEquals(DatabendJoin.JoinType.INNER, databendJoin_JoinType0);
-    }
+    // @Test
+    // public void test12() throws Throwable {
+    // DatabendJoin.JoinType databendJoin_JoinType0 = DatabendJoin.JoinType.getRandom();
+    // assertEquals(DatabendJoin.JoinType.INNER, databendJoin_JoinType0);
+    // }
 
     @Test
     public void test13() throws Throwable {

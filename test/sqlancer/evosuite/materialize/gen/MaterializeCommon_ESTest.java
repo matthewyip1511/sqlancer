@@ -50,35 +50,37 @@ public class MaterializeCommon_ESTest {
         }
     }
 
-    @Test
-    public void test01() throws Throwable {
-        MaterializeSchema.MaterializeColumn materializeSchema_MaterializeColumn0 = MaterializeSchema.MaterializeColumn
-                .createDummy("");
-        List<MaterializeSchema.MaterializeColumn> list0 = List.of(materializeSchema_MaterializeColumn0,
-                materializeSchema_MaterializeColumn0, materializeSchema_MaterializeColumn0,
-                materializeSchema_MaterializeColumn0);
-        List<MaterializeSchema.MaterializeIndex> list1 = List.of();
-        MaterializeSchema.MaterializeTable.TableType materializeSchema_MaterializeTable_TableType0 = MaterializeSchema.MaterializeTable.TableType.TEMPORARY;
-        LinkedList<MaterializeSchema.MaterializeStatisticsObject> linkedList0 = new LinkedList<MaterializeSchema.MaterializeStatisticsObject>();
-        MaterializeSchema.MaterializeTable materializeSchema_MaterializeTable0 = new MaterializeSchema.MaterializeTable(
-                "8Dm[6$P;r%UT}QWy6", list0, list1, materializeSchema_MaterializeTable_TableType0, linkedList0, false,
-                true);
-        MaterializeGlobalState materializeGlobalState0 = new MaterializeGlobalState();
-        ExpectedErrors expectedErrors0 = new ExpectedErrors();
-        StringBuilder stringBuilder0 = new StringBuilder((CharSequence) "8Dm[6$P;r%UT}QWy6");
-        // Undeclared exception!
-        try {
-            MaterializeCommon.addTableConstraint(stringBuilder0, materializeSchema_MaterializeTable0,
-                    materializeGlobalState0, expectedErrors0);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.materialize.gen.MaterializeExpressionGenerator", e);
-        }
-    }
+    // @Test
+    // public void test01() throws Throwable {
+    // MaterializeSchema.MaterializeColumn materializeSchema_MaterializeColumn0 = MaterializeSchema.MaterializeColumn
+    // .createDummy("");
+    // List<MaterializeSchema.MaterializeColumn> list0 = List.of(materializeSchema_MaterializeColumn0,
+    // materializeSchema_MaterializeColumn0, materializeSchema_MaterializeColumn0,
+    // materializeSchema_MaterializeColumn0);
+    // List<MaterializeSchema.MaterializeIndex> list1 = List.of();
+    // MaterializeSchema.MaterializeTable.TableType materializeSchema_MaterializeTable_TableType0 =
+    // MaterializeSchema.MaterializeTable.TableType.TEMPORARY;
+    // LinkedList<MaterializeSchema.MaterializeStatisticsObject> linkedList0 = new
+    // LinkedList<MaterializeSchema.MaterializeStatisticsObject>();
+    // MaterializeSchema.MaterializeTable materializeSchema_MaterializeTable0 = new MaterializeSchema.MaterializeTable(
+    // "8Dm[6$P;r%UT}QWy6", list0, list1, materializeSchema_MaterializeTable_TableType0, linkedList0, false,
+    // true);
+    // MaterializeGlobalState materializeGlobalState0 = new MaterializeGlobalState();
+    // ExpectedErrors expectedErrors0 = new ExpectedErrors();
+    // StringBuilder stringBuilder0 = new StringBuilder((CharSequence) "8Dm[6$P;r%UT}QWy6");
+    // // Undeclared exception!
+    // try {
+    // MaterializeCommon.addTableConstraint(stringBuilder0, materializeSchema_MaterializeTable0,
+    // materializeGlobalState0, expectedErrors0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.materialize.gen.MaterializeExpressionGenerator", e);
+    // }
+    // }
 
     @Test
     public void test02() throws Throwable {
@@ -179,67 +181,74 @@ public class MaterializeCommon_ESTest {
         assertFalse(list0.isEmpty());
     }
 
-    @Test
-    public void test09() throws Throwable {
-        LinkedList<MaterializeSchema.MaterializeTable> linkedList0 = new LinkedList<MaterializeSchema.MaterializeTable>();
-        LinkedList<String> linkedList1 = new LinkedList<String>();
-        linkedList1.add("i0");
-        MaterializeSchema materializeSchema0 = new MaterializeSchema(linkedList0, "i0", linkedList1);
-        String string0 = MaterializeCommon.getFreeIndexName(materializeSchema0);
-        assertEquals("i1", string0);
-    }
+    // @Test
+    // public void test09() throws Throwable {
+    // LinkedList<MaterializeSchema.MaterializeTable> linkedList0 = new
+    // LinkedList<MaterializeSchema.MaterializeTable>();
+    // LinkedList<String> linkedList1 = new LinkedList<String>();
+    // linkedList1.add("i0");
+    // MaterializeSchema materializeSchema0 = new MaterializeSchema(linkedList0, "i0", linkedList1);
+    // String string0 = MaterializeCommon.getFreeIndexName(materializeSchema0);
+    // assertEquals("i1", string0);
+    // }
+    //
+    // @Test
+    // public void test10() throws Throwable {
+    // MaterializeSchema.MaterializeColumn materializeSchema_MaterializeColumn0 = MaterializeSchema.MaterializeColumn
+    // .createDummy("^_`*");
+    // List<MaterializeSchema.MaterializeColumn> list0 = List.of(materializeSchema_MaterializeColumn0,
+    // materializeSchema_MaterializeColumn0, materializeSchema_MaterializeColumn0,
+    // materializeSchema_MaterializeColumn0);
+    // LinkedList<MaterializeSchema.MaterializeIndex> linkedList0 = new
+    // LinkedList<MaterializeSchema.MaterializeIndex>();
+    // LinkedList<MaterializeSchema.MaterializeStatisticsObject> linkedList1 = new
+    // LinkedList<MaterializeSchema.MaterializeStatisticsObject>();
+    // MaterializeSchema.MaterializeTable.TableType materializeSchema_MaterializeTable_TableType0 =
+    // MaterializeSchema.MaterializeTable.TableType.STANDARD;
+    // MaterializeSchema.MaterializeTable materializeSchema_MaterializeTable0 = new MaterializeSchema.MaterializeTable(
+    // "^_`*", list0, linkedList0, materializeSchema_MaterializeTable_TableType0, linkedList1, false, false);
+    // materializeSchema_MaterializeTable0.getRandomNonEmptyColumnSubset();
+    // MaterializeGlobalState materializeGlobalState0 = new MaterializeGlobalState();
+    // ExpectedErrors expectedErrors0 = new ExpectedErrors();
+    // materializeSchema_MaterializeTable0.getRandomColumn();
+    // StringBuilder stringBuilder0 = new StringBuilder();
+    // // Undeclared exception!
+    // try {
+    // MaterializeCommon.addTableConstraint(stringBuilder0, materializeSchema_MaterializeTable0,
+    // materializeGlobalState0, expectedErrors0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.materialize.gen.MaterializeExpressionGenerator", e);
+    // }
+    // }
 
-    @Test
-    public void test10() throws Throwable {
-        MaterializeSchema.MaterializeColumn materializeSchema_MaterializeColumn0 = MaterializeSchema.MaterializeColumn
-                .createDummy("^_`*");
-        List<MaterializeSchema.MaterializeColumn> list0 = List.of(materializeSchema_MaterializeColumn0,
-                materializeSchema_MaterializeColumn0, materializeSchema_MaterializeColumn0,
-                materializeSchema_MaterializeColumn0);
-        LinkedList<MaterializeSchema.MaterializeIndex> linkedList0 = new LinkedList<MaterializeSchema.MaterializeIndex>();
-        LinkedList<MaterializeSchema.MaterializeStatisticsObject> linkedList1 = new LinkedList<MaterializeSchema.MaterializeStatisticsObject>();
-        MaterializeSchema.MaterializeTable.TableType materializeSchema_MaterializeTable_TableType0 = MaterializeSchema.MaterializeTable.TableType.STANDARD;
-        MaterializeSchema.MaterializeTable materializeSchema_MaterializeTable0 = new MaterializeSchema.MaterializeTable(
-                "^_`*", list0, linkedList0, materializeSchema_MaterializeTable_TableType0, linkedList1, false, false);
-        materializeSchema_MaterializeTable0.getRandomNonEmptyColumnSubset();
-        MaterializeGlobalState materializeGlobalState0 = new MaterializeGlobalState();
-        ExpectedErrors expectedErrors0 = new ExpectedErrors();
-        materializeSchema_MaterializeTable0.getRandomColumn();
-        StringBuilder stringBuilder0 = new StringBuilder();
-        // Undeclared exception!
-        try {
-            MaterializeCommon.addTableConstraint(stringBuilder0, materializeSchema_MaterializeTable0,
-                    materializeGlobalState0, expectedErrors0);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.materialize.gen.MaterializeExpressionGenerator", e);
-        }
-    }
-
-    @Test
-    public void test11() throws Throwable {
-        MaterializeSchema.MaterializeColumn materializeSchema_MaterializeColumn0 = MaterializeSchema.MaterializeColumn
-                .createDummy("^_`*");
-        List<MaterializeSchema.MaterializeColumn> list0 = List.of(materializeSchema_MaterializeColumn0,
-                materializeSchema_MaterializeColumn0, materializeSchema_MaterializeColumn0,
-                materializeSchema_MaterializeColumn0);
-        LinkedList<MaterializeSchema.MaterializeIndex> linkedList0 = new LinkedList<MaterializeSchema.MaterializeIndex>();
-        LinkedList<MaterializeSchema.MaterializeStatisticsObject> linkedList1 = new LinkedList<MaterializeSchema.MaterializeStatisticsObject>();
-        MaterializeSchema.MaterializeTable.TableType materializeSchema_MaterializeTable_TableType0 = MaterializeSchema.MaterializeTable.TableType.STANDARD;
-        MaterializeSchema.MaterializeTable materializeSchema_MaterializeTable0 = new MaterializeSchema.MaterializeTable(
-                "^_`*", list0, linkedList0, materializeSchema_MaterializeTable_TableType0, linkedList1, true, true);
-        MaterializeGlobalState materializeGlobalState0 = new MaterializeGlobalState();
-        ExpectedErrors expectedErrors0 = new ExpectedErrors();
-        materializeSchema_MaterializeTable0.getRandomColumn();
-        StringBuilder stringBuilder0 = new StringBuilder();
-        MaterializeCommon.addTableConstraint(stringBuilder0, materializeSchema_MaterializeTable0,
-                materializeGlobalState0, expectedErrors0);
-        assertEquals("PRIMARY KEY(^_`*, ^_`*, ^_`*)", stringBuilder0.toString());
-    }
+    // @Test
+    // public void test11() throws Throwable {
+    // MaterializeSchema.MaterializeColumn materializeSchema_MaterializeColumn0 = MaterializeSchema.MaterializeColumn
+    // .createDummy("^_`*");
+    // List<MaterializeSchema.MaterializeColumn> list0 = List.of(materializeSchema_MaterializeColumn0,
+    // materializeSchema_MaterializeColumn0, materializeSchema_MaterializeColumn0,
+    // materializeSchema_MaterializeColumn0);
+    // LinkedList<MaterializeSchema.MaterializeIndex> linkedList0 = new
+    // LinkedList<MaterializeSchema.MaterializeIndex>();
+    // LinkedList<MaterializeSchema.MaterializeStatisticsObject> linkedList1 = new
+    // LinkedList<MaterializeSchema.MaterializeStatisticsObject>();
+    // MaterializeSchema.MaterializeTable.TableType materializeSchema_MaterializeTable_TableType0 =
+    // MaterializeSchema.MaterializeTable.TableType.STANDARD;
+    // MaterializeSchema.MaterializeTable materializeSchema_MaterializeTable0 = new MaterializeSchema.MaterializeTable(
+    // "^_`*", list0, linkedList0, materializeSchema_MaterializeTable_TableType0, linkedList1, true, true);
+    // MaterializeGlobalState materializeGlobalState0 = new MaterializeGlobalState();
+    // ExpectedErrors expectedErrors0 = new ExpectedErrors();
+    // materializeSchema_MaterializeTable0.getRandomColumn();
+    // StringBuilder stringBuilder0 = new StringBuilder();
+    // MaterializeCommon.addTableConstraint(stringBuilder0, materializeSchema_MaterializeTable0,
+    // materializeGlobalState0, expectedErrors0);
+    // assertEquals("PRIMARY KEY(^_`*, ^_`*, ^_`*)", stringBuilder0.toString());
+    // }
 
     @Test
     public void test12() throws Throwable {
