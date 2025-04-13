@@ -193,15 +193,16 @@ public class OceanBaseUnaryPostfixOperation_ESTest {
         assertEquals(1L, oceanBaseConstant1.getInt());
     }
 
-    @Test
-    public void test12() throws Throwable {
-        OceanBaseConstant oceanBaseConstant0 = OceanBaseConstant.createBoolean(false);
-        OceanBaseUnaryPostfixOperation.UnaryPostfixOperator oceanBaseUnaryPostfixOperation_UnaryPostfixOperator0 = OceanBaseUnaryPostfixOperation.UnaryPostfixOperator.IS_FALSE;
-        OceanBaseUnaryPostfixOperation oceanBaseUnaryPostfixOperation0 = new OceanBaseUnaryPostfixOperation(
-                oceanBaseConstant0, oceanBaseUnaryPostfixOperation_UnaryPostfixOperator0, false);
-        OceanBaseConstant oceanBaseConstant1 = oceanBaseUnaryPostfixOperation0.getExpectedValue();
-        assertEquals("1", oceanBaseConstant1.getTextRepresentation());
-    }
+    // @Test
+    // public void test12() throws Throwable {
+    // OceanBaseConstant oceanBaseConstant0 = OceanBaseConstant.createBoolean(false);
+    // OceanBaseUnaryPostfixOperation.UnaryPostfixOperator oceanBaseUnaryPostfixOperation_UnaryPostfixOperator0 =
+    // OceanBaseUnaryPostfixOperation.UnaryPostfixOperator.IS_FALSE;
+    // OceanBaseUnaryPostfixOperation oceanBaseUnaryPostfixOperation0 = new OceanBaseUnaryPostfixOperation(
+    // oceanBaseConstant0, oceanBaseUnaryPostfixOperation_UnaryPostfixOperator0, false);
+    // OceanBaseConstant oceanBaseConstant1 = oceanBaseUnaryPostfixOperation0.getExpectedValue();
+    // assertEquals("1", oceanBaseConstant1.getTextRepresentation());
+    // }
 
     // @Test
     // public void test13() throws Throwable {

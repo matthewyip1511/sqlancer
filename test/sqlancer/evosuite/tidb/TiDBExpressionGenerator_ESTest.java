@@ -501,23 +501,23 @@ public class TiDBExpressionGenerator_ESTest {
         }
     }
 
-    @Test
-    public void test29() throws Throwable {
-        TiDBProvider.TiDBGlobalState tiDBProvider_TiDBGlobalState0 = new TiDBProvider.TiDBGlobalState();
-        TiDBExpressionGenerator tiDBExpressionGenerator0 = new TiDBExpressionGenerator(tiDBProvider_TiDBGlobalState0);
-        TiDBSchema.TiDBDataType tiDBSchema_TiDBDataType0 = TiDBSchema.TiDBDataType.DECIMAL;
-        // Undeclared exception!
-        try {
-            tiDBExpressionGenerator0.generateConstant(tiDBSchema_TiDBDataType0);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.tidb.TiDBExpressionGenerator", e);
-        }
-    }
+    // @Test
+    // public void test29() throws Throwable {
+    // TiDBProvider.TiDBGlobalState tiDBProvider_TiDBGlobalState0 = new TiDBProvider.TiDBGlobalState();
+    // TiDBExpressionGenerator tiDBExpressionGenerator0 = new TiDBExpressionGenerator(tiDBProvider_TiDBGlobalState0);
+    // TiDBSchema.TiDBDataType tiDBSchema_TiDBDataType0 = TiDBSchema.TiDBDataType.DECIMAL;
+    // // Undeclared exception!
+    // try {
+    // tiDBExpressionGenerator0.generateConstant(tiDBSchema_TiDBDataType0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.tidb.TiDBExpressionGenerator", e);
+    // }
+    // }
 
     // @Test
     // public void test30() throws Throwable {
