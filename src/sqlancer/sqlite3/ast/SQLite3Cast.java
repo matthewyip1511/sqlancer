@@ -14,7 +14,7 @@ public final class SQLite3Cast implements SQLite3Expression {
 
     static Connection castDatabase;
 
-    public SQLite3Cast() {
+    private SQLite3Cast() {
     }
 
     public static Optional<Boolean> isTrue(SQLite3Constant value) {
