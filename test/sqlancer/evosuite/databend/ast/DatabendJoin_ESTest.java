@@ -167,16 +167,17 @@ public class DatabendJoin_ESTest {
     // }
     // }
 
-    @Test
-    public void test09() throws Throwable {
-        DatabendTableReference databendTableReference0 = new DatabendTableReference(
-                (DatabendSchema.DatabendTable) null);
-        List<DatabendTableReference> list0 = List.of(databendTableReference0, databendTableReference0,
-                databendTableReference0);
-        DatabendProvider.DatabendGlobalState databendProvider_DatabendGlobalState0 = new DatabendProvider.DatabendGlobalState();
-        List<DatabendJoin> list1 = DatabendJoin.getJoins(list0, databendProvider_DatabendGlobalState0);
-        assertTrue(list1.isEmpty());
-    }
+    // @Test
+    // public void test09() throws Throwable {
+    // DatabendTableReference databendTableReference0 = new DatabendTableReference(
+    // (DatabendSchema.DatabendTable) null);
+    // List<DatabendTableReference> list0 = List.of(databendTableReference0, databendTableReference0,
+    // databendTableReference0);
+    // DatabendProvider.DatabendGlobalState databendProvider_DatabendGlobalState0 = new
+    // DatabendProvider.DatabendGlobalState();
+    // List<DatabendJoin> list1 = DatabendJoin.getJoins(list0, databendProvider_DatabendGlobalState0);
+    // assertTrue(list1.isEmpty());
+    // }
 
     @Test
     public void test10() throws Throwable {

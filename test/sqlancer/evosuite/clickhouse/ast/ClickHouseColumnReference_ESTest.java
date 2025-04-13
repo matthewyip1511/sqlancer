@@ -20,9 +20,6 @@ import sqlancer.common.schema.TableIndex;
 
 public class ClickHouseColumnReference_ESTest {
 
-    private void verifyException(String s, Exception e) {
-    }
-
     @Test
     public void test0() throws Throwable {
         ClickHouseColumnReference clickHouseColumnReference0 = new ClickHouseColumnReference(

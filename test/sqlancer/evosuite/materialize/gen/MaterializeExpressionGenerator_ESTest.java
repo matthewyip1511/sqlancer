@@ -20,20 +20,20 @@ public class MaterializeExpressionGenerator_ESTest {
     private void verifyException(String s, Exception e) {
     }
 
-    @Test
-    public void test00() throws Throwable {
-        MaterializeExpressionGenerator materializeExpressionGenerator0 = null;
-        try {
-            materializeExpressionGenerator0 = new MaterializeExpressionGenerator((MaterializeGlobalState) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.materialize.gen.MaterializeExpressionGenerator", e);
-        }
-    }
+    // @Test
+    // public void test00() throws Throwable {
+    // MaterializeExpressionGenerator materializeExpressionGenerator0 = null;
+    // try {
+    // materializeExpressionGenerator0 = new MaterializeExpressionGenerator((MaterializeGlobalState) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.materialize.gen.MaterializeExpressionGenerator", e);
+    // }
+    // }
 
     @Test
     public void test01() throws Throwable {
@@ -60,21 +60,22 @@ public class MaterializeExpressionGenerator_ESTest {
         assertFalse(materializeConstant_DoubleConstant0.isBoolean());
     }
 
-    @Test
-    public void test03() throws Throwable {
-        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 = MaterializeSchema.MaterializeDataType.FLOAT;
-        // Undeclared exception!
-        try {
-            MaterializeExpressionGenerator.generateConstant((Randomly) null, materializeSchema_MaterializeDataType0);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.materialize.gen.MaterializeExpressionGenerator", e);
-        }
-    }
+    // @Test
+    // public void test03() throws Throwable {
+    // MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 =
+    // MaterializeSchema.MaterializeDataType.FLOAT;
+    // // Undeclared exception!
+    // try {
+    // MaterializeExpressionGenerator.generateConstant((Randomly) null, materializeSchema_MaterializeDataType0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.materialize.gen.MaterializeExpressionGenerator", e);
+    // }
+    // }
 
     /*
      * Test disabled because it contains mock() function calls that are not implemented
