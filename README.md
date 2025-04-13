@@ -139,3 +139,24 @@ Closely related tools:
 * [SQLRight](https://github.com/PSU-Security-Universe/sqlright): coverage-guided DBMS fuzzer, also supporting NoREC and TLP
 * [SQLsmith](https://github.com/anse1/sqlsmith): random SQL query generator used for fuzzing
 * [Squirrel](https://github.com/s3team/Squirrel): coverage-guided DBMS fuzzer
+
+# Sprint 5 Task 2: Documentation
+## Overview
+* Reduction of code smells and technical debt to improve the long-term maintainability(e.g. Testability, centralized logic is easier to test) and scalability of the project.
+  * Common interfaces for table generation across the Databases.
+  * Superclasses to abstract out common logic/methods.
+  * Utility classes that abstract out common logic.
+* Ability to create a JAR file containing only the database that the user specifies.
+  * The JAR file should also contain only the dependencies corresponding to the specified database.
+* Metrics such as security, reliability and duplications issues can be calculated and pinpointed by the setup of SonarQube.
+  * SonarQube has also been integrated into the CI/CD pipeline, this allows the tracking and enforcement of high cohesion and low coupling.
+* The dependency graph helps SQLancer developers to better understand the code base and any future modifications to it.
+## Usage
+* A prominent user story that we identified would be “As a DuckDb/SQLite3/… tester, I want to be able to pack a SQLancer JAR containing only the dependencies of DuckDB/SQLite3, such that the JAR is more lightweight.”
+  * We have included the ability to do so by making use of maven profiles, which can be specified using CLI commands. The specific database being packaged is to be specified when building SQLancer, it can be activated using the -P flag.
+  * Example of these commands include:
+    * `mvn package -DskipTest -P all`
+    * `mvn package -DskipTest -P sqlite3`
+    * `mvn package -DskipTest -P sqlite3,duckdb`
+* Another prominent user story that could be achieved is, “As a SQLancer maintainer, I want to integrate SonarQube into the CI/CD pipeline, so that I can measure and enforce high cohesion and low coupling.”
+  * On every push, the SonarQube analysis would run and the full analysis details can be accessed by the link produced in the CI. The analysis allows for the tracking of metrics like code smells, which could indicate poor design in the codebase that might require refactoring.
