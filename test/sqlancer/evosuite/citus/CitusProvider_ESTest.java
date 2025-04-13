@@ -9,7 +9,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import sqlancer.citus.CitusGlobalState;
 import sqlancer.citus.CitusProvider;
 import sqlancer.common.query.SQLQueryAdapter;
 import sqlancer.postgres.PostgresGlobalState;

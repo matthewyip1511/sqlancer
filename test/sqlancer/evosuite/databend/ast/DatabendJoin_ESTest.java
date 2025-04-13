@@ -7,7 +7,6 @@ package sqlancer.evosuite.databend.ast;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 import org.junit.jupiter.api.Test;
@@ -20,9 +19,6 @@ import sqlancer.databend.DatabendProvider;
 import sqlancer.databend.DatabendSchema;
 
 public class DatabendJoin_ESTest {
-
-    private void verifyException(String s, Exception e) {
-    }
 
     @Test
     public void test00() throws Throwable {

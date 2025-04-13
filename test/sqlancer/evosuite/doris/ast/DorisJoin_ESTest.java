@@ -18,9 +18,6 @@ import sqlancer.doris.DorisSchema;
 
 public class DorisJoin_ESTest {
 
-    private void verifyException(String s, Exception e) {
-    }
-
     @Test
     public void test00() throws Throwable {
         LinkedList<DorisSchema.DorisColumn> linkedList0 = new LinkedList<DorisSchema.DorisColumn>();

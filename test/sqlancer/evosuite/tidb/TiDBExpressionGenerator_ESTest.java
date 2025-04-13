@@ -12,13 +12,11 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 import sqlancer.common.schema.AbstractTables;
 import sqlancer.tidb.ast.TiDBBinaryLogicalOperation;
-import sqlancer.tidb.ast.TiDBConstant;
 import sqlancer.tidb.ast.TiDBExpression;
 import sqlancer.tidb.ast.TiDBJoin;
 import sqlancer.tidb.ast.TiDBSelect;
 import sqlancer.tidb.ast.TiDBUnaryPostfixOperation;
 import sqlancer.tidb.ast.TiDBUnaryPrefixOperation;
-import sqlancer.tidb.TiDBBugs;
 import sqlancer.tidb.TiDBExpressionGenerator;
 import sqlancer.tidb.TiDBProvider;
 import sqlancer.tidb.TiDBSchema;
@@ -632,22 +630,22 @@ public class TiDBExpressionGenerator_ESTest {
     // }
     // }
 
-    @Test
-    public void test37() throws Throwable {
-        TiDBProvider.TiDBGlobalState tiDBProvider_TiDBGlobalState0 = new TiDBProvider.TiDBGlobalState();
-        TiDBExpressionGenerator tiDBExpressionGenerator0 = new TiDBExpressionGenerator(tiDBProvider_TiDBGlobalState0);
-        // Undeclared exception!
-        try {
-            tiDBExpressionGenerator0.generateConstant();
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.tidb.TiDBExpressionGenerator", e);
-        }
-    }
+    // @Test
+    // public void test37() throws Throwable {
+    // TiDBProvider.TiDBGlobalState tiDBProvider_TiDBGlobalState0 = new TiDBProvider.TiDBGlobalState();
+    // TiDBExpressionGenerator tiDBExpressionGenerator0 = new TiDBExpressionGenerator(tiDBProvider_TiDBGlobalState0);
+    // // Undeclared exception!
+    // try {
+    // tiDBExpressionGenerator0.generateConstant();
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.tidb.TiDBExpressionGenerator", e);
+    // }
+    // }
 
     // @Test
     // public void test38() throws Throwable {

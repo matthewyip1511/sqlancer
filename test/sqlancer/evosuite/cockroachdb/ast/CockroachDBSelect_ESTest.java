@@ -17,7 +17,6 @@ import sqlancer.cockroachdb.ast.CockroachDBJoin;
 import sqlancer.cockroachdb.ast.CockroachDBSelect;
 import sqlancer.cockroachdb.CockroachDBProvider;
 import sqlancer.cockroachdb.gen.CockroachDBExpressionGenerator;
-import sqlancer.Randomly;
 import sqlancer.common.ast.JoinBase;
 
 public class CockroachDBSelect_ESTest {

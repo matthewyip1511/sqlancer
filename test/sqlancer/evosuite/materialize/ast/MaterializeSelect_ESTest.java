@@ -12,7 +12,6 @@ import org.junit.jupiter.api.Test;
 import sqlancer.common.ast.JoinBase;
 import sqlancer.materialize.ast.MaterializeConstant;
 import sqlancer.materialize.ast.MaterializeExpression;
-import sqlancer.materialize.ast.MaterializeJoin;
 import sqlancer.materialize.ast.MaterializeSelect;
 import sqlancer.materialize.MaterializeSchema;
 import sqlancer.Randomly;

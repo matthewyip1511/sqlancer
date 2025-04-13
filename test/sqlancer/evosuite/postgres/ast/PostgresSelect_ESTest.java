@@ -12,10 +12,8 @@ import org.junit.jupiter.api.Test;
 
 import sqlancer.common.ast.JoinBase;
 import sqlancer.postgres.ast.PostgresExpression;
-import sqlancer.postgres.ast.PostgresJoin;
 import sqlancer.postgres.ast.PostgresSelect;
 import sqlancer.postgres.PostgresSchema;
-import sqlancer.Randomly;
 
 public class PostgresSelect_ESTest {
 

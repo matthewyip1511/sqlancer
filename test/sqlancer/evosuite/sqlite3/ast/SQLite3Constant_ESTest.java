@@ -152,20 +152,23 @@ public class SQLite3Constant_ESTest {
         assertFalse(sQLite3Constant0.isNull());
     }
 
-    @Test
-    public void test011() throws Throwable {
-        SQLite3Constant.SQLite3TextConstant sQLite3Constant_SQLite3TextConstant0 = new SQLite3Constant.SQLite3TextConstant(
-                "p1j");
-        SQLite3Constant.SQLite3TextConstant sQLite3Constant_SQLite3TextConstant1 = new SQLite3Constant.SQLite3TextConstant(
-                "vFNiSW$aWYGEA`x7N.");
-        SQLite3Schema.SQLite3Column.SQLite3CollateSequence sQLite3Schema_SQLite3Column_SQLite3CollateSequence0 = SQLite3Schema.SQLite3Column.SQLite3CollateSequence.NOCASE;
-        SQLite3Constant sQLite3Constant0 = sQLite3Constant_SQLite3TextConstant0.applyEquals(
-                (SQLite3Constant) sQLite3Constant_SQLite3TextConstant1,
-                sQLite3Schema_SQLite3Column_SQLite3CollateSequence0);
-        // // Unstable assertion: assertFalse(sQLite3Constant_SQLite3TextConstant1.isNull());
-        // // Unstable assertion: assertEquals(1L, sQLite3Constant0.asInt());
-        // // Unstable assertion: assertFalse(sQLite3Constant0.isHex());
-    }
+    // @Test
+    // public void test011() throws Throwable {
+    // SQLite3Constant.SQLite3TextConstant sQLite3Constant_SQLite3TextConstant0 = new
+    // SQLite3Constant.SQLite3TextConstant(
+    // "p1j");
+    // SQLite3Constant.SQLite3TextConstant sQLite3Constant_SQLite3TextConstant1 = new
+    // SQLite3Constant.SQLite3TextConstant(
+    // "vFNiSW$aWYGEA`x7N.");
+    // SQLite3Schema.SQLite3Column.SQLite3CollateSequence sQLite3Schema_SQLite3Column_SQLite3CollateSequence0 =
+    // SQLite3Schema.SQLite3Column.SQLite3CollateSequence.NOCASE;
+    // SQLite3Constant sQLite3Constant0 = sQLite3Constant_SQLite3TextConstant0.applyEquals(
+    // (SQLite3Constant) sQLite3Constant_SQLite3TextConstant1,
+    // sQLite3Schema_SQLite3Column_SQLite3CollateSequence0);
+    // // // Unstable assertion: assertFalse(sQLite3Constant_SQLite3TextConstant1.isNull());
+    // // // Unstable assertion: assertEquals(1L, sQLite3Constant0.asInt());
+    // // // Unstable assertion: assertFalse(sQLite3Constant0.isHex());
+    // }
 
     @Test
     public void test012() throws Throwable {

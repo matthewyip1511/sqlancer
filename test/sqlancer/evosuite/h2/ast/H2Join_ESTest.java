@@ -18,9 +18,6 @@ import sqlancer.h2.H2Schema;
 
 public class H2Join_ESTest {
 
-    private void verifyException(String s, Exception e) {
-    }
-
     @Test
     public void test00() throws Throwable {
         LinkedList<H2Schema.H2Column> linkedList0 = new LinkedList<H2Schema.H2Column>();

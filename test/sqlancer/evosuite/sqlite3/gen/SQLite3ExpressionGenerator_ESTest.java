@@ -12,7 +12,6 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 import sqlancer.common.schema.AbstractTables;
 import sqlancer.common.visitor.UnaryOperation;
-import sqlancer.sqlite3.ast.SQLite3Constant;
 import sqlancer.sqlite3.ast.SQLite3Expression;
 import sqlancer.sqlite3.ast.SQLite3PostfixUnaryOperation;
 import sqlancer.sqlite3.ast.SQLite3Select;

@@ -22,9 +22,6 @@ import sqlancer.presto.PrestoSchema;
 
 public class PrestoJoin_ESTest {
 
-    private void verifyException(String s, Exception e) {
-    }
-
     @Test
     public void test00() throws Throwable {
         PrestoTableReference prestoTableReference0 = new PrestoTableReference((PrestoSchema.PrestoTable) null);

@@ -13,14 +13,12 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 
 import sqlancer.cockroachdb.ast.CockroachDBAggregate;
-import sqlancer.cockroachdb.ast.CockroachDBColumnReference;
 import sqlancer.cockroachdb.ast.CockroachDBConstant;
 import sqlancer.cockroachdb.ast.CockroachDBExpression;
 import sqlancer.cockroachdb.ast.CockroachDBJoin;
 import sqlancer.cockroachdb.ast.CockroachDBNotOperation;
 import sqlancer.cockroachdb.ast.CockroachDBSelect;
 import sqlancer.cockroachdb.ast.CockroachDBUnaryPostfixOperation;
-import sqlancer.cockroachdb.CockroachDBBugs;
 import sqlancer.cockroachdb.CockroachDBProvider;
 import sqlancer.cockroachdb.CockroachDBSchema;
 import sqlancer.cockroachdb.gen.CockroachDBExpressionGenerator;

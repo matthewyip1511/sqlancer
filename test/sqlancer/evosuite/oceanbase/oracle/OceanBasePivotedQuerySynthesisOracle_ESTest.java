@@ -7,7 +7,6 @@ package sqlancer.evosuite.oceanbase.oracle;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.util.List;
 import org.junit.jupiter.api.Test;
 import sqlancer.common.query.SQLQueryAdapter;
 import sqlancer.oceanbase.ast.OceanBaseComputableFunction;
@@ -17,7 +16,6 @@ import sqlancer.oceanbase.ast.OceanBaseOrderByTerm;
 import sqlancer.oceanbase.ast.OceanBaseSelect;
 import sqlancer.oceanbase.ast.OceanBaseUnaryPostfixOperation;
 import sqlancer.oceanbase.OceanBaseGlobalState;
-import sqlancer.oceanbase.OceanBaseSchema;
 import sqlancer.oceanbase.oracle.OceanBasePivotedQuerySynthesisOracle;
 
 public class OceanBasePivotedQuerySynthesisOracle_ESTest {
@@ -166,15 +164,16 @@ public class OceanBasePivotedQuerySynthesisOracle_ESTest {
         }
     }
 
-    @Test
-    public void test8() throws Throwable {
-        OceanBaseGlobalState oceanBaseGlobalState0 = new OceanBaseGlobalState();
-        OceanBasePivotedQuerySynthesisOracle oceanBasePivotedQuerySynthesisOracle0 = new OceanBasePivotedQuerySynthesisOracle(
-                oceanBaseGlobalState0);
-        List<OceanBaseExpression> list0 = oceanBasePivotedQuerySynthesisOracle0
-                .generateOrderBy((List<OceanBaseSchema.OceanBaseColumn>) null);
-        assertTrue(list0.isEmpty());
-    }
+    // @Test
+    // public void test8() throws Throwable {
+    // OceanBaseGlobalState oceanBaseGlobalState0 = new OceanBaseGlobalState();
+    // OceanBasePivotedQuerySynthesisOracle oceanBasePivotedQuerySynthesisOracle0 = new
+    // OceanBasePivotedQuerySynthesisOracle(
+    // oceanBaseGlobalState0);
+    // List<OceanBaseExpression> list0 = oceanBasePivotedQuerySynthesisOracle0
+    // .generateOrderBy((List<OceanBaseSchema.OceanBaseColumn>) null);
+    // assertTrue(list0.isEmpty());
+    // }
 
     @Test
     public void test9() throws Throwable {

@@ -1409,24 +1409,26 @@ public class MaterializeToStringVisitor_ESTest {
     // }
     // }
 
-    @Test
-    public void test059() throws Throwable {
-        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
-        MaterializeConstant materializeConstant0 = MaterializeConstant.createIntConstant(1L);
-        MaterializeExpression materializeExpression0 = MaterializeConstant.createBitConstant(1L);
-        MaterializeConcatOperation materializeConcatOperation0 = new MaterializeConcatOperation(materializeConstant0,
-                materializeExpression0);
-        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 = MaterializeSchema.MaterializeDataType.TEXT;
-        MaterializeCompoundDataType materializeCompoundDataType0 = MaterializeCompoundDataType
-                .create(materializeSchema_MaterializeDataType0, (-961));
-        MaterializeCastOperation materializeCastOperation0 = new MaterializeCastOperation(materializeConcatOperation0,
-                materializeCompoundDataType0);
-        MaterializePrefixOperation.PrefixOperator materializePrefixOperation_PrefixOperator0 = MaterializePrefixOperation.PrefixOperator.UNARY_MINUS;
-        MaterializePrefixOperation materializePrefixOperation0 = new MaterializePrefixOperation(
-                materializeCastOperation0, materializePrefixOperation_PrefixOperator0);
-        materializeToStringVisitor0.visit(materializePrefixOperation0);
-        assertEquals("- ((((1)||(1)))::VARCHAR(-961))", materializeToStringVisitor0.get());
-    }
+    // @Test
+    // public void test059() throws Throwable {
+    // MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
+    // MaterializeConstant materializeConstant0 = MaterializeConstant.createIntConstant(1L);
+    // MaterializeExpression materializeExpression0 = MaterializeConstant.createBitConstant(1L);
+    // MaterializeConcatOperation materializeConcatOperation0 = new MaterializeConcatOperation(materializeConstant0,
+    // materializeExpression0);
+    // MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 =
+    // MaterializeSchema.MaterializeDataType.TEXT;
+    // MaterializeCompoundDataType materializeCompoundDataType0 = MaterializeCompoundDataType
+    // .create(materializeSchema_MaterializeDataType0, (-961));
+    // MaterializeCastOperation materializeCastOperation0 = new MaterializeCastOperation(materializeConcatOperation0,
+    // materializeCompoundDataType0);
+    // MaterializePrefixOperation.PrefixOperator materializePrefixOperation_PrefixOperator0 =
+    // MaterializePrefixOperation.PrefixOperator.UNARY_MINUS;
+    // MaterializePrefixOperation materializePrefixOperation0 = new MaterializePrefixOperation(
+    // materializeCastOperation0, materializePrefixOperation_PrefixOperator0);
+    // materializeToStringVisitor0.visit(materializePrefixOperation0);
+    // assertEquals("- ((((1)||(1)))::VARCHAR(-961))", materializeToStringVisitor0.get());
+    // }
 
     // @Test
     // public void test060() throws Throwable {

@@ -19,9 +19,6 @@ import sqlancer.Randomly;
 
 public class MariaDBJoin_ESTest {
 
-    private void verifyException(String s, Exception e) {
-    }
-
     @Test
     public void test00() throws Throwable {
         MariaDBConstant.MariaDBNullConstant mariaDBConstant_MariaDBNullConstant0 = MariaDBConstant.createNullConstant();

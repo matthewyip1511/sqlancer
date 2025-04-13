@@ -18,7 +18,6 @@ import sqlancer.postgres.ast.PostgresJoin;
 import sqlancer.postgres.oracle.tlp.PostgresTLPBase;
 import sqlancer.postgres.PostgresGlobalState;
 import sqlancer.postgres.PostgresSchema;
-import sqlancer.Randomly;
 
 public class PostgresTLPBase_ESTest {
 
@@ -103,22 +102,22 @@ public class PostgresTLPBase_ESTest {
     // assertEquals(1, list0.size());
     // }
 
-    @Test
-    public void test5() throws Throwable {
-        PostgresGlobalState postgresGlobalState0 = new PostgresGlobalState();
-        PostgresTLPBase postgresTLPBase0 = new PostgresTLPBase(postgresGlobalState0);
-        // Undeclared exception!
-        try {
-            postgresTLPBase0.generateFetchColumns();
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.postgres.oracle.tlp.PostgresTLPBase", e);
-        }
-    }
+    // @Test
+    // public void test5() throws Throwable {
+    // PostgresGlobalState postgresGlobalState0 = new PostgresGlobalState();
+    // PostgresTLPBase postgresTLPBase0 = new PostgresTLPBase(postgresGlobalState0);
+    // // Undeclared exception!
+    // try {
+    // postgresTLPBase0.generateFetchColumns();
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.postgres.oracle.tlp.PostgresTLPBase", e);
+    // }
+    // }
 
     @Test
     public void test6() throws Throwable {

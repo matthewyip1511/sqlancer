@@ -12,7 +12,6 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 import sqlancer.common.ast.newast.NewBetweenOperatorNode;
 import sqlancer.common.ast.newast.NewBinaryOperatorNode;
-import sqlancer.common.ast.newast.NewOrderingTerm;
 import sqlancer.h2.H2ExpressionGenerator;
 import sqlancer.presto.ast.PrestoAggregateFunction;
 import sqlancer.presto.ast.PrestoAtTimeZoneOperator;

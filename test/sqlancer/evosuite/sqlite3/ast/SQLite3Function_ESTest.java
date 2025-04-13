@@ -8,7 +8,6 @@ package sqlancer.evosuite.sqlite3.ast;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
-import sqlancer.Randomly;
 import sqlancer.sqlite3.ast.SQLite3BinaryComparisonOperation;
 import sqlancer.sqlite3.ast.SQLite3BinaryOperation;
 import sqlancer.sqlite3.ast.SQLite3CollateOperation;

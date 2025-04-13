@@ -7,7 +7,6 @@ package sqlancer.evosuite.sqlite3;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.sql.SQLException;
 import org.junit.jupiter.api.Test;
 import sqlancer.sqlite3.SQLite3GlobalState;
 import sqlancer.sqlite3.SQLite3Provider;

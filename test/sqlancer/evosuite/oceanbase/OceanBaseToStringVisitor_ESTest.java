@@ -8,11 +8,8 @@ package sqlancer.evosuite.oceanbase;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import sqlancer.oceanbase.ast.OceanBaseCastOperation;
-import sqlancer.oceanbase.ast.OceanBaseColumnReference;
 import sqlancer.oceanbase.ast.OceanBaseConstant;
 import sqlancer.oceanbase.ast.OceanBaseExpression;
-import sqlancer.oceanbase.ast.OceanBaseOrderByTerm;
-import sqlancer.oceanbase.ast.OceanBaseUnaryPrefixOperation;
 import sqlancer.oceanbase.OceanBaseSchema;
 import sqlancer.oceanbase.OceanBaseToStringVisitor;
 

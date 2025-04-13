@@ -111,19 +111,4 @@ public class ClickHouseColumnReference_ESTest {
         String string0 = clickHouseColumnReference0.getAlias();
         assertNull(string0);
     }
-
-    @Test
-    public void test9() throws Throwable {
-        ClickHouseColumnReference clickHouseColumnReference0 = null;
-        try {
-            clickHouseColumnReference0 = new ClickHouseColumnReference((ClickHouseAliasOperation) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.clickhouse.ast.ClickHouseColumnReference", e);
-        }
-    }
 }

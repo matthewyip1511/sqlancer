@@ -18,7 +18,6 @@ import sqlancer.postgres.ast.PostgresExpression;
 import sqlancer.postgres.ast.PostgresJoin;
 import sqlancer.postgres.ast.PostgresPostfixText;
 import sqlancer.postgres.ast.PostgresSelect;
-import sqlancer.postgres.PostgresGlobalState;
 import sqlancer.postgres.PostgresSchema;
 
 public class PostgresJoin_ESTest {

@@ -10,12 +10,10 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import sqlancer.common.ast.newast.NewOrderingTerm;
 import sqlancer.common.query.SQLQueryAdapter;
-import sqlancer.doris.ast.DorisConstant;
 import sqlancer.doris.ast.DorisExpression;
 import sqlancer.doris.ast.DorisOrderByTerm;
 import sqlancer.doris.ast.DorisSelect;
 import sqlancer.doris.DorisProvider;
-import sqlancer.doris.DorisSchema;
 import sqlancer.doris.oracle.DorisPivotedQuerySynthesisOracle;
 
 public class DorisPivotedQuerySynthesisOracle_ESTest {

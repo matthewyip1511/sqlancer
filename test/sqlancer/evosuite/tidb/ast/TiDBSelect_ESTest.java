@@ -11,7 +11,6 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 import sqlancer.common.ast.JoinBase;
 import sqlancer.tidb.ast.TiDBExpression;
-import sqlancer.tidb.ast.TiDBJoin;
 import sqlancer.tidb.ast.TiDBOrderingTerm;
 import sqlancer.tidb.ast.TiDBSelect;
 

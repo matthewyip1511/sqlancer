@@ -7,17 +7,13 @@ package sqlancer.evosuite.materialize.oracle.tlp;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.util.LinkedList;
-import java.util.List;
 import org.junit.jupiter.api.Test;
 
 import sqlancer.common.gen.ExpressionGenerator;
 import sqlancer.materialize.ast.MaterializeExpression;
-import sqlancer.materialize.ast.MaterializeJoin;
 import sqlancer.materialize.MaterializeGlobalState;
 import sqlancer.materialize.MaterializeSchema;
 import sqlancer.materialize.oracle.tlp.MaterializeTLPBase;
-import sqlancer.Randomly;
 
 public class MaterializeTLPBase_ESTest {
 

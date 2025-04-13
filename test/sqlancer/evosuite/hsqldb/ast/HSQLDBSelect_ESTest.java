@@ -13,7 +13,6 @@ import org.junit.jupiter.api.Test;
 import sqlancer.common.ast.JoinBase;
 import sqlancer.hsqldb.ast.HSQLDBExpression;
 import sqlancer.hsqldb.ast.HSQLDBSelect;
-import sqlancer.Randomly;
 
 public class HSQLDBSelect_ESTest {
 
