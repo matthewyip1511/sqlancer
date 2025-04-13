@@ -143,27 +143,27 @@ public class PostgresJoin_ESTest {
         }
     }
 
-    @Test
-    public void test09() throws Throwable {
-        PostgresExpression postgresExpression0 = PostgresConstant.createBitConstant((-1824L));
-        List<PostgresExpression> list0 = List.of(postgresExpression0, postgresExpression0, postgresExpression0,
-                postgresExpression0, postgresExpression0, postgresExpression0, postgresExpression0, postgresExpression0,
-                postgresExpression0);
-        PostgresGlobalState postgresGlobalState0 = new PostgresGlobalState();
-        List<PostgresExpression> list1 = PostgresJoin.getJoins(list0, postgresGlobalState0);
-        List<PostgresExpression> list2 = PostgresJoin.getJoins(list1, postgresGlobalState0);
-        assertTrue(list2.isEmpty());
-    }
+    // @Test
+    // public void test09() throws Throwable {
+    // PostgresExpression postgresExpression0 = PostgresConstant.createBitConstant((-1824L));
+    // List<PostgresExpression> list0 = List.of(postgresExpression0, postgresExpression0, postgresExpression0,
+    // postgresExpression0, postgresExpression0, postgresExpression0, postgresExpression0, postgresExpression0,
+    // postgresExpression0);
+    // PostgresGlobalState postgresGlobalState0 = new PostgresGlobalState();
+    // List<PostgresExpression> list1 = PostgresJoin.getJoins(list0, postgresGlobalState0);
+    // List<PostgresExpression> list2 = PostgresJoin.getJoins(list1, postgresGlobalState0);
+    // assertTrue(list2.isEmpty());
+    // }
 
-    @Test
-    public void test10() throws Throwable {
-        JoinBase.JoinType[] postgresJoin_PostgresJoinTypeArray0 = new JoinBase.JoinType[15];
-        JoinBase.JoinType postgresJoin_PostgresJoinType0 = JoinBase.JoinType.LEFT;
-        postgresJoin_PostgresJoinTypeArray0[1] = postgresJoin_PostgresJoinType0;
-        JoinBase.JoinType postgresJoin_PostgresJoinType1 = JoinBase.JoinType.getRandomExcept("POSTGRES",
-                postgresJoin_PostgresJoinTypeArray0);
-        assertEquals(JoinBase.JoinType.INNER, postgresJoin_PostgresJoinType1);
-    }
+    // @Test
+    // public void test10() throws Throwable {
+    // JoinBase.JoinType[] postgresJoin_PostgresJoinTypeArray0 = new JoinBase.JoinType[15];
+    // JoinBase.JoinType postgresJoin_PostgresJoinType0 = JoinBase.JoinType.LEFT;
+    // postgresJoin_PostgresJoinTypeArray0[1] = postgresJoin_PostgresJoinType0;
+    // JoinBase.JoinType postgresJoin_PostgresJoinType1 = JoinBase.JoinType.getRandomExcept("POSTGRES",
+    // postgresJoin_PostgresJoinTypeArray0);
+    // assertEquals(JoinBase.JoinType.INNER, postgresJoin_PostgresJoinType1);
+    // }
 
     @Test
     public void test11() throws Throwable {

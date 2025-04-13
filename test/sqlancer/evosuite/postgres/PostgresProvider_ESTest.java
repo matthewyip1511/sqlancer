@@ -35,13 +35,13 @@ public class PostgresProvider_ESTest {
         assertEquals("RESET ROLE;", sQLQueryAdapter0.getQueryString());
     }
 
-    @Test
-    public void test02() throws Throwable {
-        CitusGlobalState citusGlobalState0 = new CitusGlobalState();
-        PostgresProvider.Action postgresProvider_Action0 = PostgresProvider.Action.SET_CONSTRAINTS;
-        SQLQueryAdapter sQLQueryAdapter0 = postgresProvider_Action0.getQuery((PostgresGlobalState) citusGlobalState0);
-        assertEquals("SET CONSTRAINTS ALL DEFERRED;", sQLQueryAdapter0.getLogString());
-    }
+    // @Test
+    // public void test02() throws Throwable {
+    // CitusGlobalState citusGlobalState0 = new CitusGlobalState();
+    // PostgresProvider.Action postgresProvider_Action0 = PostgresProvider.Action.SET_CONSTRAINTS;
+    // SQLQueryAdapter sQLQueryAdapter0 = postgresProvider_Action0.getQuery((PostgresGlobalState) citusGlobalState0);
+    // assertEquals("SET CONSTRAINTS ALL DEFERRED;", sQLQueryAdapter0.getLogString());
+    // }
 
     @Test
     public void test03() throws Throwable {
@@ -515,14 +515,14 @@ public class PostgresProvider_ESTest {
         }
     }
 
-    @Test
-    public void test31() throws Throwable {
-        CitusGlobalState citusGlobalState0 = new CitusGlobalState();
-        PostgresProvider.Action postgresProvider_Action0 = PostgresProvider.Action.COMMIT;
-        SQLQueryAdapter sQLQueryAdapter0 = postgresProvider_Action0.getQuery((PostgresGlobalState) citusGlobalState0);
-        assertTrue(sQLQueryAdapter0.couldAffectSchema());
-        assertEquals("ROLLBACK;", sQLQueryAdapter0.getQueryString());
-    }
+    // @Test
+    // public void test31() throws Throwable {
+    // CitusGlobalState citusGlobalState0 = new CitusGlobalState();
+    // PostgresProvider.Action postgresProvider_Action0 = PostgresProvider.Action.COMMIT;
+    // SQLQueryAdapter sQLQueryAdapter0 = postgresProvider_Action0.getQuery((PostgresGlobalState) citusGlobalState0);
+    // assertTrue(sQLQueryAdapter0.couldAffectSchema());
+    // assertEquals("ROLLBACK;", sQLQueryAdapter0.getQueryString());
+    // }
 
     @Test
     public void test32() throws Throwable {

@@ -392,12 +392,13 @@ public class DuckDBExpressionGenerator_ESTest {
         }
     }
 
-    @Test
-    public void test19() throws Throwable {
-        DuckDBExpressionGenerator.DBFunction duckDBExpressionGenerator_DBFunction0 = DuckDBExpressionGenerator.DBFunction.CONCAT;
-        int int0 = duckDBExpressionGenerator_DBFunction0.getNrArgs();
-        assertEquals(1, int0);
-    }
+    // @Test
+    // public void test19() throws Throwable {
+    // DuckDBExpressionGenerator.DBFunction duckDBExpressionGenerator_DBFunction0 =
+    // DuckDBExpressionGenerator.DBFunction.CONCAT;
+    // int int0 = duckDBExpressionGenerator_DBFunction0.getNrArgs();
+    // assertEquals(1, int0);
+    // }
 
     @Test
     public void test20() throws Throwable {

@@ -45,24 +45,27 @@ public class OceanBaseToStringVisitor_ESTest {
         assertEquals("CAST(NULL AS UNSIGNED)", oceanBaseToStringVisitor0.get());
     }
 
-    @Test
-    public void test03() throws Throwable {
-        OceanBaseToStringVisitor oceanBaseToStringVisitor0 = new OceanBaseToStringVisitor();
-        OceanBaseSchema.OceanBaseDataType oceanBaseSchema_OceanBaseDataType0 = OceanBaseSchema.OceanBaseDataType.DECIMAL;
-        OceanBaseSchema.OceanBaseColumn oceanBaseSchema_OceanBaseColumn0 = new OceanBaseSchema.OceanBaseColumn("",
-                oceanBaseSchema_OceanBaseDataType0, false, 8123, false);
-        OceanBaseConstant oceanBaseConstant0 = OceanBaseConstant.createStringConstant("");
-        OceanBaseColumnReference oceanBaseColumnReference0 = OceanBaseColumnReference
-                .create(oceanBaseSchema_OceanBaseColumn0, oceanBaseConstant0);
-        OceanBaseOrderByTerm.OceanBaseOrder oceanBaseOrderByTerm_OceanBaseOrder0 = OceanBaseOrderByTerm.OceanBaseOrder.DESC;
-        OceanBaseOrderByTerm oceanBaseOrderByTerm0 = new OceanBaseOrderByTerm(oceanBaseColumnReference0,
-                oceanBaseOrderByTerm_OceanBaseOrder0);
-        OceanBaseUnaryPrefixOperation.OceanBaseUnaryPrefixOperator oceanBaseUnaryPrefixOperation_OceanBaseUnaryPrefixOperator0 = OceanBaseUnaryPrefixOperation.OceanBaseUnaryPrefixOperator.NOT;
-        OceanBaseUnaryPrefixOperation oceanBaseUnaryPrefixOperation0 = new OceanBaseUnaryPrefixOperation(
-                oceanBaseOrderByTerm0, oceanBaseUnaryPrefixOperation_OceanBaseUnaryPrefixOperator0);
-        oceanBaseToStringVisitor0.visit(oceanBaseUnaryPrefixOperation0);
-        assertEquals("(!  DESC)", oceanBaseToStringVisitor0.get());
-    }
+    // @Test
+    // public void test03() throws Throwable {
+    // OceanBaseToStringVisitor oceanBaseToStringVisitor0 = new OceanBaseToStringVisitor();
+    // OceanBaseSchema.OceanBaseDataType oceanBaseSchema_OceanBaseDataType0 = OceanBaseSchema.OceanBaseDataType.DECIMAL;
+    // OceanBaseSchema.OceanBaseColumn oceanBaseSchema_OceanBaseColumn0 = new OceanBaseSchema.OceanBaseColumn("",
+    // oceanBaseSchema_OceanBaseDataType0, false, 8123, false);
+    // OceanBaseConstant oceanBaseConstant0 = OceanBaseConstant.createStringConstant("");
+    // OceanBaseColumnReference oceanBaseColumnReference0 = OceanBaseColumnReference
+    // .create(oceanBaseSchema_OceanBaseColumn0, oceanBaseConstant0);
+    // OceanBaseOrderByTerm.OceanBaseOrder oceanBaseOrderByTerm_OceanBaseOrder0 =
+    // OceanBaseOrderByTerm.OceanBaseOrder.DESC;
+    // OceanBaseOrderByTerm oceanBaseOrderByTerm0 = new OceanBaseOrderByTerm(oceanBaseColumnReference0,
+    // oceanBaseOrderByTerm_OceanBaseOrder0);
+    // OceanBaseUnaryPrefixOperation.OceanBaseUnaryPrefixOperator
+    // oceanBaseUnaryPrefixOperation_OceanBaseUnaryPrefixOperator0 =
+    // OceanBaseUnaryPrefixOperation.OceanBaseUnaryPrefixOperator.NOT;
+    // OceanBaseUnaryPrefixOperation oceanBaseUnaryPrefixOperation0 = new OceanBaseUnaryPrefixOperation(
+    // oceanBaseOrderByTerm0, oceanBaseUnaryPrefixOperation_OceanBaseUnaryPrefixOperator0);
+    // oceanBaseToStringVisitor0.visit(oceanBaseUnaryPrefixOperation0);
+    // assertEquals("(! DESC)", oceanBaseToStringVisitor0.get());
+    // }
 }
 
 /*

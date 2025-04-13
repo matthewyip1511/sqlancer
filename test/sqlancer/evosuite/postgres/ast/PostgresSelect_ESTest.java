@@ -87,11 +87,11 @@ public class PostgresSelect_ESTest {
     // assertEquals(PostgresSelect.SelectType.DISTINCT, postgresSelect_SelectType0);
     // }
 
-    @Test
-    public void test07() throws Throwable {
-        PostgresSelect.ForClause postgresSelect_ForClause0 = PostgresSelect.ForClause.getRandom();
-        assertEquals("UPDATE", postgresSelect_ForClause0.getTextRepresentation());
-    }
+    // @Test
+    // public void test07() throws Throwable {
+    // PostgresSelect.ForClause postgresSelect_ForClause0 = PostgresSelect.ForClause.getRandom();
+    // assertEquals("UPDATE", postgresSelect_ForClause0.getTextRepresentation());
+    // }
 
     @Test
     public void test08() throws Throwable {

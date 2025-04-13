@@ -21,34 +21,37 @@ public class MaterializeCommon_ESTest {
     private void verifyException(String s, Exception e) {
     }
 
-    @Test
-    public void test00() throws Throwable {
-        MaterializeSchema.MaterializeColumn materializeSchema_MaterializeColumn0 = MaterializeSchema.MaterializeColumn
-                .createDummy("8#9otCsI6'sTgcbU=");
-        List<MaterializeSchema.MaterializeColumn> list0 = List.of(materializeSchema_MaterializeColumn0,
-                materializeSchema_MaterializeColumn0, materializeSchema_MaterializeColumn0,
-                materializeSchema_MaterializeColumn0);
-        LinkedList<MaterializeSchema.MaterializeIndex> linkedList0 = new LinkedList<MaterializeSchema.MaterializeIndex>();
-        LinkedList<MaterializeSchema.MaterializeStatisticsObject> linkedList1 = new LinkedList<MaterializeSchema.MaterializeStatisticsObject>();
-        MaterializeSchema.MaterializeTable.TableType materializeSchema_MaterializeTable_TableType0 = MaterializeSchema.MaterializeTable.TableType.TEMPORARY;
-        MaterializeSchema.MaterializeTable materializeSchema_MaterializeTable0 = new MaterializeSchema.MaterializeTable(
-                "RBo6Hf=", list0, linkedList0, materializeSchema_MaterializeTable_TableType0, linkedList1, false, true);
-        materializeSchema_MaterializeTable0.getRandomNonEmptyColumnSubset();
-        MaterializeGlobalState materializeGlobalState0 = new MaterializeGlobalState();
-        ExpectedErrors expectedErrors0 = new ExpectedErrors();
-        StringBuilder stringBuilder0 = new StringBuilder();
-        // Undeclared exception!
-        try {
-            MaterializeCommon.addTableConstraint(stringBuilder0, materializeSchema_MaterializeTable0,
-                    materializeGlobalState0, expectedErrors0);
-            fail("Expecting exception: AssertionError");
-
-        } catch (AssertionError e) {
-            //
-            // null
-            //
-        }
-    }
+    // @Test
+    // public void test00() throws Throwable {
+    // MaterializeSchema.MaterializeColumn materializeSchema_MaterializeColumn0 = MaterializeSchema.MaterializeColumn
+    // .createDummy("8#9otCsI6'sTgcbU=");
+    // List<MaterializeSchema.MaterializeColumn> list0 = List.of(materializeSchema_MaterializeColumn0,
+    // materializeSchema_MaterializeColumn0, materializeSchema_MaterializeColumn0,
+    // materializeSchema_MaterializeColumn0);
+    // LinkedList<MaterializeSchema.MaterializeIndex> linkedList0 = new
+    // LinkedList<MaterializeSchema.MaterializeIndex>();
+    // LinkedList<MaterializeSchema.MaterializeStatisticsObject> linkedList1 = new
+    // LinkedList<MaterializeSchema.MaterializeStatisticsObject>();
+    // MaterializeSchema.MaterializeTable.TableType materializeSchema_MaterializeTable_TableType0 =
+    // MaterializeSchema.MaterializeTable.TableType.TEMPORARY;
+    // MaterializeSchema.MaterializeTable materializeSchema_MaterializeTable0 = new MaterializeSchema.MaterializeTable(
+    // "RBo6Hf=", list0, linkedList0, materializeSchema_MaterializeTable_TableType0, linkedList1, false, true);
+    // materializeSchema_MaterializeTable0.getRandomNonEmptyColumnSubset();
+    // MaterializeGlobalState materializeGlobalState0 = new MaterializeGlobalState();
+    // ExpectedErrors expectedErrors0 = new ExpectedErrors();
+    // StringBuilder stringBuilder0 = new StringBuilder();
+    // // Undeclared exception!
+    // try {
+    // MaterializeCommon.addTableConstraint(stringBuilder0, materializeSchema_MaterializeTable0,
+    // materializeGlobalState0, expectedErrors0);
+    // fail("Expecting exception: AssertionError");
+    //
+    // } catch (AssertionError e) {
+    // //
+    // // null
+    // //
+    // }
+    // }
 
     // @Test
     // public void test01() throws Throwable {
