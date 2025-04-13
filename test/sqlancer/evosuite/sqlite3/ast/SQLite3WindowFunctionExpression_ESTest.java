@@ -302,11 +302,12 @@ public class SQLite3WindowFunctionExpression_ESTest {
                 sQLite3WindowFunctionExpression_SQLite3WindowFunctionFrameSpecTerm0);
     }
 
-//    @Test
-//    public void test27() throws Throwable {
-//        SQLite3WindowFunctionExpression.SQLite3FrameSpecKind sQLite3WindowFunctionExpression_SQLite3FrameSpecKind0 = SQLite3WindowFunctionExpression.SQLite3FrameSpecKind
-//                .getRandom();
-//        assertEquals(SQLite3WindowFunctionExpression.SQLite3FrameSpecKind.RANGE,
-//                sQLite3WindowFunctionExpression_SQLite3FrameSpecKind0);
-//    }
+    // @Test
+    // public void test27() throws Throwable {
+    // SQLite3WindowFunctionExpression.SQLite3FrameSpecKind sQLite3WindowFunctionExpression_SQLite3FrameSpecKind0 =
+    // SQLite3WindowFunctionExpression.SQLite3FrameSpecKind
+    // .getRandom();
+    // assertEquals(SQLite3WindowFunctionExpression.SQLite3FrameSpecKind.RANGE,
+    // sQLite3WindowFunctionExpression_SQLite3FrameSpecKind0);
+    // }
 }

@@ -30,26 +30,27 @@ public class MySQLUnaryPrefixOperation_ESTest {
         assertTrue(mySQLConstant1.asBooleanNotNull());
     }
 
-//    @Test
-//    public void test01() throws Throwable {
-//        MySQLUnaryPrefixOperation.MySQLUnaryPrefixOperator mySQLUnaryPrefixOperation_MySQLUnaryPrefixOperator0 = MySQLUnaryPrefixOperation.MySQLUnaryPrefixOperator
-//                .getRandom();
-//        MySQLConstant.MySQLDoubleConstant mySQLConstant_MySQLDoubleConstant0 = new MySQLConstant.MySQLDoubleConstant(
-//                1453.72250628137);
-//        MySQLUnaryPrefixOperation mySQLUnaryPrefixOperation0 = new MySQLUnaryPrefixOperation(
-//                mySQLConstant_MySQLDoubleConstant0, mySQLUnaryPrefixOperation_MySQLUnaryPrefixOperator0);
-//        // Undeclared exception!
-//        try {
-//            mySQLUnaryPrefixOperation0.getExpectedValue();
-//            fail("Expecting exception: UnsupportedOperationException");
-//
-//        } catch (UnsupportedOperationException e) {
-//            //
-//            // not applicable for PQS evaluation!
-//            //
-//            verifyException("sqlancer.mysql.ast.MySQLConstant$MySQLNoPQSConstant", e);
-//        }
-//    }
+    // @Test
+    // public void test01() throws Throwable {
+    // MySQLUnaryPrefixOperation.MySQLUnaryPrefixOperator mySQLUnaryPrefixOperation_MySQLUnaryPrefixOperator0 =
+    // MySQLUnaryPrefixOperation.MySQLUnaryPrefixOperator
+    // .getRandom();
+    // MySQLConstant.MySQLDoubleConstant mySQLConstant_MySQLDoubleConstant0 = new MySQLConstant.MySQLDoubleConstant(
+    // 1453.72250628137);
+    // MySQLUnaryPrefixOperation mySQLUnaryPrefixOperation0 = new MySQLUnaryPrefixOperation(
+    // mySQLConstant_MySQLDoubleConstant0, mySQLUnaryPrefixOperation_MySQLUnaryPrefixOperator0);
+    // // Undeclared exception!
+    // try {
+    // mySQLUnaryPrefixOperation0.getExpectedValue();
+    // fail("Expecting exception: UnsupportedOperationException");
+    //
+    // } catch (UnsupportedOperationException e) {
+    // //
+    // // not applicable for PQS evaluation!
+    // //
+    // verifyException("sqlancer.mysql.ast.MySQLConstant$MySQLNoPQSConstant", e);
+    // }
+    // }
 
     @Test
     public void test02() throws Throwable {
@@ -164,14 +165,15 @@ public class MySQLUnaryPrefixOperation_ESTest {
         }
     }
 
-//    @Test
-//    public void test09() throws Throwable {
-//        MySQLUnaryPrefixOperation.MySQLUnaryPrefixOperator mySQLUnaryPrefixOperation_MySQLUnaryPrefixOperator0 = MySQLUnaryPrefixOperation.MySQLUnaryPrefixOperator
-//                .getRandom();
-//        MySQLConstant mySQLConstant0 = MySQLConstant.createTrue();
-//        MySQLConstant mySQLConstant1 = mySQLUnaryPrefixOperation_MySQLUnaryPrefixOperator0.applyNotNull(mySQLConstant0);
-//        assertFalse(mySQLConstant1.asBooleanNotNull());
-//    }
+    // @Test
+    // public void test09() throws Throwable {
+    // MySQLUnaryPrefixOperation.MySQLUnaryPrefixOperator mySQLUnaryPrefixOperation_MySQLUnaryPrefixOperator0 =
+    // MySQLUnaryPrefixOperation.MySQLUnaryPrefixOperator
+    // .getRandom();
+    // MySQLConstant mySQLConstant0 = MySQLConstant.createTrue();
+    // MySQLConstant mySQLConstant1 = mySQLUnaryPrefixOperation_MySQLUnaryPrefixOperator0.applyNotNull(mySQLConstant0);
+    // assertFalse(mySQLConstant1.asBooleanNotNull());
+    // }
 
     @Test
     public void test10() throws Throwable {

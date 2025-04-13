@@ -932,16 +932,17 @@ public class MySQLToStringVisitor_ESTest {
         assertEquals("(0) IS NOT FALSE", mySQLToStringVisitor0.get());
     }
 
-//    @Test
-//    public void test56() throws Throwable {
-//        MySQLToStringVisitor mySQLToStringVisitor0 = new MySQLToStringVisitor();
-//        MySQLConstant mySQLConstant0 = MySQLConstant.createFalse();
-//        MySQLUnaryPostfixOperation.UnaryPostfixOperator mySQLUnaryPostfixOperation_UnaryPostfixOperator0 = MySQLUnaryPostfixOperation.UnaryPostfixOperator.IS_NULL;
-//        MySQLUnaryPostfixOperation mySQLUnaryPostfixOperation0 = new MySQLUnaryPostfixOperation(mySQLConstant0,
-//                mySQLUnaryPostfixOperation_UnaryPostfixOperator0, true);
-//        mySQLToStringVisitor0.visit(mySQLUnaryPostfixOperation0);
-//        assertEquals("(0) IS NOT NULL", mySQLToStringVisitor0.get());
-//    }
+    // @Test
+    // public void test56() throws Throwable {
+    // MySQLToStringVisitor mySQLToStringVisitor0 = new MySQLToStringVisitor();
+    // MySQLConstant mySQLConstant0 = MySQLConstant.createFalse();
+    // MySQLUnaryPostfixOperation.UnaryPostfixOperator mySQLUnaryPostfixOperation_UnaryPostfixOperator0 =
+    // MySQLUnaryPostfixOperation.UnaryPostfixOperator.IS_NULL;
+    // MySQLUnaryPostfixOperation mySQLUnaryPostfixOperation0 = new MySQLUnaryPostfixOperation(mySQLConstant0,
+    // mySQLUnaryPostfixOperation_UnaryPostfixOperator0, true);
+    // mySQLToStringVisitor0.visit(mySQLUnaryPostfixOperation0);
+    // assertEquals("(0) IS NOT NULL", mySQLToStringVisitor0.get());
+    // }
 
     @Test
     public void test57() throws Throwable {

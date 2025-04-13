@@ -123,20 +123,20 @@ public class HSQLDBToStringVisitor_ESTest {
         assertEquals(" LEFT  JOIN  ON ", string0);
     }
 
-//    @Test
-//    public void test07() throws Throwable {
-//        // Undeclared exception!
-//        try {
-//            HSQLDBToStringVisitor.asString((HSQLDBExpression) null);
-//            fail("Expecting exception: NullPointerException");
-//
-//        } catch (NullPointerException e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//            verifyException("sqlancer.hsqldb.HSQLDBToStringVisitor", e);
-//        }
-//    }
+    // @Test
+    // public void test07() throws Throwable {
+    // // Undeclared exception!
+    // try {
+    // HSQLDBToStringVisitor.asString((HSQLDBExpression) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.hsqldb.HSQLDBToStringVisitor", e);
+    // }
+    // }
 
     @Test
     public void test08() throws Throwable {

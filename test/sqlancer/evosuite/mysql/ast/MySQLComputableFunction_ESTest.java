@@ -662,13 +662,14 @@ public class MySQLComputableFunction_ESTest {
         assertEquals(2, int0);
     }
 
-//    @Test
-//    public void test38() throws Throwable {
-//        MySQLComputableFunction.MySQLFunction mySQLComputableFunction_MySQLFunction0 = MySQLComputableFunction.MySQLFunction
-//                .getRandomFunction();
-//        boolean boolean0 = mySQLComputableFunction_MySQLFunction0.isVariadic();
-//        assertFalse(boolean0);
-//    }
+    // @Test
+    // public void test38() throws Throwable {
+    // MySQLComputableFunction.MySQLFunction mySQLComputableFunction_MySQLFunction0 =
+    // MySQLComputableFunction.MySQLFunction
+    // .getRandomFunction();
+    // boolean boolean0 = mySQLComputableFunction_MySQLFunction0.isVariadic();
+    // assertFalse(boolean0);
+    // }
 
     @Test
     public void test39() throws Throwable {

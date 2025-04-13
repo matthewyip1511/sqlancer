@@ -93,21 +93,21 @@ public class CockroachDBSelect_ESTest {
         }
     }
 
-//    @Test
-//    public void test4() throws Throwable {
-//        CockroachDBSelect cockroachDBSelect0 = new CockroachDBSelect();
-//        CockroachDBExpression[] cockroachDBExpressionArray0 = new CockroachDBExpression[4];
-//        cockroachDBExpressionArray0[1] = (CockroachDBExpression) cockroachDBSelect0;
-//        List<CockroachDBExpression> list0 = Randomly.nonEmptySubset(cockroachDBExpressionArray0);
-//        cockroachDBSelect0.setFetchColumns(list0);
-//        // Undeclared exception!
-//        try {
-//            cockroachDBSelect0.asString();
-//            fail("Expecting exception: StackOverflowError");
-//
-//        } catch (StackOverflowError e) {
-//        }
-//    }
+    // @Test
+    // public void test4() throws Throwable {
+    // CockroachDBSelect cockroachDBSelect0 = new CockroachDBSelect();
+    // CockroachDBExpression[] cockroachDBExpressionArray0 = new CockroachDBExpression[4];
+    // cockroachDBExpressionArray0[1] = (CockroachDBExpression) cockroachDBSelect0;
+    // List<CockroachDBExpression> list0 = Randomly.nonEmptySubset(cockroachDBExpressionArray0);
+    // cockroachDBSelect0.setFetchColumns(list0);
+    // // Undeclared exception!
+    // try {
+    // cockroachDBSelect0.asString();
+    // fail("Expecting exception: StackOverflowError");
+    //
+    // } catch (StackOverflowError e) {
+    // }
+    // }
 
     // @Test
     // public void test5() throws Throwable {
