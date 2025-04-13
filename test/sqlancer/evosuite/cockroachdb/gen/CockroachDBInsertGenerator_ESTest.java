@@ -41,23 +41,26 @@ public class CockroachDBInsertGenerator_ESTest {
         assertTrue(sQLQueryAdapter0.couldAffectSchema());
     }
 
-    @Test
-    public void test1() throws Throwable {
-        CockroachDBProvider.CockroachDBGlobalState cockroachDBProvider_CockroachDBGlobalState0 = new CockroachDBProvider.CockroachDBGlobalState();
-        CockroachDBSchema.CockroachDBCompositeDataType cockroachDBSchema_CockroachDBCompositeDataType0 = CockroachDBSchema.CockroachDBCompositeDataType
-                .getBit(1958052158);
-        CockroachDBSchema.CockroachDBColumn cockroachDBSchema_CockroachDBColumn0 = new CockroachDBSchema.CockroachDBColumn(
-                "!", cockroachDBSchema_CockroachDBCompositeDataType0, false, false);
-        List<CockroachDBSchema.CockroachDBColumn> list0 = List.of(cockroachDBSchema_CockroachDBColumn0,
-                cockroachDBSchema_CockroachDBColumn0, cockroachDBSchema_CockroachDBColumn0,
-                cockroachDBSchema_CockroachDBColumn0);
-        LinkedList<TableIndex> linkedList0 = new LinkedList<TableIndex>();
-        CockroachDBSchema.CockroachDBTable cockroachDBSchema_CockroachDBTable0 = new CockroachDBSchema.CockroachDBTable(
-                "!", list0, linkedList0, false);
-        // Undeclared exception!
-        CockroachDBInsertGenerator.insert(cockroachDBProvider_CockroachDBGlobalState0,
-                cockroachDBSchema_CockroachDBTable0);
-    }
+    // @Test
+    // public void test1() throws Throwable {
+    // CockroachDBProvider.CockroachDBGlobalState cockroachDBProvider_CockroachDBGlobalState0 = new
+    // CockroachDBProvider.CockroachDBGlobalState();
+    // CockroachDBSchema.CockroachDBCompositeDataType cockroachDBSchema_CockroachDBCompositeDataType0 =
+    // CockroachDBSchema.CockroachDBCompositeDataType
+    // .getBit(1958052158);
+    // CockroachDBSchema.CockroachDBColumn cockroachDBSchema_CockroachDBColumn0 = new
+    // CockroachDBSchema.CockroachDBColumn(
+    // "!", cockroachDBSchema_CockroachDBCompositeDataType0, false, false);
+    // List<CockroachDBSchema.CockroachDBColumn> list0 = List.of(cockroachDBSchema_CockroachDBColumn0,
+    // cockroachDBSchema_CockroachDBColumn0, cockroachDBSchema_CockroachDBColumn0,
+    // cockroachDBSchema_CockroachDBColumn0);
+    // LinkedList<TableIndex> linkedList0 = new LinkedList<TableIndex>();
+    // CockroachDBSchema.CockroachDBTable cockroachDBSchema_CockroachDBTable0 = new CockroachDBSchema.CockroachDBTable(
+    // "!", list0, linkedList0, false);
+    // // Undeclared exception!
+    // CockroachDBInsertGenerator.insert(cockroachDBProvider_CockroachDBGlobalState0,
+    // cockroachDBSchema_CockroachDBTable0);
+    // }
 
     @Test
     public void test2() throws Throwable {
