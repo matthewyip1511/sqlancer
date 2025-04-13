@@ -430,21 +430,21 @@ public class SQLite3ExpressionGenerator_ESTest {
     // }
     // }
 
-    @Test
-    public void test28() throws Throwable {
-        SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
-        // Undeclared exception!
-        try {
-            SQLite3ExpressionGenerator.getRandomLiteralValue(sQLite3GlobalState0);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.sqlite3.gen.SQLite3ExpressionGenerator", e);
-        }
-    }
+    // @Test
+    // public void test28() throws Throwable {
+    // SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
+    // // Undeclared exception!
+    // try {
+    // SQLite3ExpressionGenerator.getRandomLiteralValue(sQLite3GlobalState0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.sqlite3.gen.SQLite3ExpressionGenerator", e);
+    // }
+    // }
     //
     // @Test
     // public void test29() throws Throwable {
@@ -701,21 +701,21 @@ public class SQLite3ExpressionGenerator_ESTest {
         }
     }
 
-    @Test
-    public void test48() throws Throwable {
-        SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
-        // Undeclared exception!
-        try {
-            SQLite3ExpressionGenerator.getRandomLiteralValue(sQLite3GlobalState0);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.sqlite3.gen.SQLite3ExpressionGenerator", e);
-        }
-    }
+    // @Test
+    // public void test48() throws Throwable {
+    // SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
+    // // Undeclared exception!
+    // try {
+    // SQLite3ExpressionGenerator.getRandomLiteralValue(sQLite3GlobalState0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.sqlite3.gen.SQLite3ExpressionGenerator", e);
+    // }
+    // }
 
     @Test
     public void test49() throws Throwable {

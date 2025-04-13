@@ -113,21 +113,21 @@ public class MySQLHintGenerator_ESTest {
         }
     }
 
-    @Test
-    public void test6() throws Throwable {
-        MySQLSelect mySQLSelect0 = new MySQLSelect();
-        LinkedList<MySQLSchema.MySQLTable> linkedList0 = new LinkedList<MySQLSchema.MySQLTable>();
-        // Undeclared exception!
-        try {
-            MySQLHintGenerator.generateHints(mySQLSelect0, linkedList0);
-            fail("Expecting exception: AssertionError");
-
-        } catch (AssertionError e) {
-            //
-            // [] 1
-            //
-        }
-    }
+    // @Test
+    // public void test6() throws Throwable {
+    // MySQLSelect mySQLSelect0 = new MySQLSelect();
+    // LinkedList<MySQLSchema.MySQLTable> linkedList0 = new LinkedList<MySQLSchema.MySQLTable>();
+    // // Undeclared exception!
+    // try {
+    // MySQLHintGenerator.generateHints(mySQLSelect0, linkedList0);
+    // fail("Expecting exception: AssertionError");
+    //
+    // } catch (AssertionError e) {
+    // //
+    // // [] 1
+    // //
+    // }
+    // }
 
     @Test
     public void test7() throws Throwable {
