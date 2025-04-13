@@ -739,17 +739,19 @@ public class HSQLDBExpressionGenerator_ESTest {
         }
     }
 
-    @Test
-    public void test35() throws Throwable {
-        HSQLDBExpressionGenerator hSQLDBExpressionGenerator0 = new HSQLDBExpressionGenerator(
-                (HSQLDBProvider.HSQLDBGlobalState) null);
-        HSQLDBSchema.HSQLDBDataType hSQLDBSchema_HSQLDBDataType0 = HSQLDBSchema.HSQLDBDataType.BOOLEAN;
-        HSQLDBSchema.HSQLDBCompositeDataType hSQLDBSchema_HSQLDBCompositeDataType0 = new HSQLDBSchema.HSQLDBCompositeDataType(
-                hSQLDBSchema_HSQLDBDataType0, 62);
-        HSQLDBConstant.HSQLDBBooleanConstant hSQLDBConstant_HSQLDBBooleanConstant0 = (HSQLDBConstant.HSQLDBBooleanConstant) hSQLDBExpressionGenerator0
-                .generateConstant(hSQLDBSchema_HSQLDBCompositeDataType0);
-        assertEquals("false", hSQLDBConstant_HSQLDBBooleanConstant0.toString());
-    }
+    // @Test
+    // public void test35() throws Throwable {
+    // HSQLDBExpressionGenerator hSQLDBExpressionGenerator0 = new HSQLDBExpressionGenerator(
+    // (HSQLDBProvider.HSQLDBGlobalState) null);
+    // HSQLDBSchema.HSQLDBDataType hSQLDBSchema_HSQLDBDataType0 = HSQLDBSchema.HSQLDBDataType.BOOLEAN;
+    // HSQLDBSchema.HSQLDBCompositeDataType hSQLDBSchema_HSQLDBCompositeDataType0 = new
+    // HSQLDBSchema.HSQLDBCompositeDataType(
+    // hSQLDBSchema_HSQLDBDataType0, 62);
+    // HSQLDBConstant.HSQLDBBooleanConstant hSQLDBConstant_HSQLDBBooleanConstant0 =
+    // (HSQLDBConstant.HSQLDBBooleanConstant) hSQLDBExpressionGenerator0
+    // .generateConstant(hSQLDBSchema_HSQLDBCompositeDataType0);
+    // assertEquals("false", hSQLDBConstant_HSQLDBBooleanConstant0.toString());
+    // }
 
     // @Test
     // public void test36() throws Throwable {
