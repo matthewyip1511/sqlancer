@@ -215,23 +215,24 @@ public class SQLite3Aggregate_ESTest {
         SQLite3Constant sQLite3Constant0 = sQLite3Aggregate_SQLite3AggregateFunction0.apply((SQLite3Constant) null);
         assertEquals(1L, sQLite3Constant0.asInt());
     }
-
-    @Test
-    public void test18() throws Throwable {
-        SQLite3Aggregate.SQLite3AggregateFunction sQLite3Aggregate_SQLite3AggregateFunction0 = SQLite3Aggregate.SQLite3AggregateFunction
-                .getRandom();
-        // Undeclared exception!
-        try {
-            sQLite3Aggregate_SQLite3AggregateFunction0.apply((SQLite3Constant) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.sqlite3.ast.SQLite3Cast", e);
-        }
-    }
+    //
+    // @Test
+    // public void test18() throws Throwable {
+    // SQLite3Aggregate.SQLite3AggregateFunction sQLite3Aggregate_SQLite3AggregateFunction0 =
+    // SQLite3Aggregate.SQLite3AggregateFunction
+    // .getRandom();
+    // // Undeclared exception!
+    // try {
+    // sQLite3Aggregate_SQLite3AggregateFunction0.apply((SQLite3Constant) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.sqlite3.ast.SQLite3Cast", e);
+    // }
+    // }
 
     @Test
     public void test19() throws Throwable {

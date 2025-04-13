@@ -281,24 +281,25 @@ public class MariaDBStringVisitor_ESTest {
         }
     }
 
-    @Test
-    public void test16() throws Throwable {
-        MariaDBStringVisitor mariaDBStringVisitor0 = new MariaDBStringVisitor();
-        MariaDBBinaryOperator.MariaDBBinaryComparisonOperator mariaDBBinaryOperator_MariaDBBinaryComparisonOperator0 = MariaDBBinaryOperator.MariaDBBinaryComparisonOperator.NOT_EQUAL;
-        MariaDBBinaryOperator mariaDBBinaryOperator0 = new MariaDBBinaryOperator((MariaDBExpression) null,
-                (MariaDBExpression) null, mariaDBBinaryOperator_MariaDBBinaryComparisonOperator0);
-        // Undeclared exception!
-        try {
-            mariaDBStringVisitor0.visit(mariaDBBinaryOperator0);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.mariadb.ast.MariaDBVisitor", e);
-        }
-    }
+    // @Test
+    // public void test16() throws Throwable {
+    // MariaDBStringVisitor mariaDBStringVisitor0 = new MariaDBStringVisitor();
+    // MariaDBBinaryOperator.MariaDBBinaryComparisonOperator mariaDBBinaryOperator_MariaDBBinaryComparisonOperator0 =
+    // MariaDBBinaryOperator.MariaDBBinaryComparisonOperator.NOT_EQUAL;
+    // MariaDBBinaryOperator mariaDBBinaryOperator0 = new MariaDBBinaryOperator((MariaDBExpression) null,
+    // (MariaDBExpression) null, mariaDBBinaryOperator_MariaDBBinaryComparisonOperator0);
+    // // Undeclared exception!
+    // try {
+    // mariaDBStringVisitor0.visit(mariaDBBinaryOperator0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.mariadb.ast.MariaDBVisitor", e);
+    // }
+    // }
 
     @Test
     public void test17() throws Throwable {

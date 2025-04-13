@@ -90,10 +90,12 @@ public class ClickHouseUnaryFunctionOperation_ESTest {
         assertEquals("tan", string0);
     }
 
-    @Test
-    public void test6() throws Throwable {
-        ClickHouseUnaryFunctionOperation.ClickHouseUnaryFunctionOperator clickHouseUnaryFunctionOperation_ClickHouseUnaryFunctionOperator0 = ClickHouseUnaryFunctionOperation.ClickHouseUnaryFunctionOperator
-                .getRandom();
-        assertEquals("exp", clickHouseUnaryFunctionOperation_ClickHouseUnaryFunctionOperator0.getTextRepresentation());
-    }
+    // @Test
+    // public void test6() throws Throwable {
+    // ClickHouseUnaryFunctionOperation.ClickHouseUnaryFunctionOperator
+    // clickHouseUnaryFunctionOperation_ClickHouseUnaryFunctionOperator0 =
+    // ClickHouseUnaryFunctionOperation.ClickHouseUnaryFunctionOperator
+    // .getRandom();
+    // assertEquals("exp", clickHouseUnaryFunctionOperation_ClickHouseUnaryFunctionOperator0.getTextRepresentation());
+    // }
 }

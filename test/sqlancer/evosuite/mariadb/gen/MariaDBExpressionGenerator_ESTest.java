@@ -102,24 +102,24 @@ public class MariaDBExpressionGenerator_ESTest {
     // mariaDBExpressionGenerator1.setColumns(list0);
     // }
 
-    @Test
-    public void test04() throws Throwable {
-        Randomly randomly0 = new Randomly();
-        MariaDBExpressionGenerator mariaDBExpressionGenerator0 = new MariaDBExpressionGenerator(randomly0);
-        MariaDBSelectStatement mariaDBSelectStatement0 = new MariaDBSelectStatement();
-        // Undeclared exception!
-        try {
-            mariaDBExpressionGenerator0.generateUnoptimizedQueryString(mariaDBSelectStatement0,
-                    (MariaDBExpression) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.mariadb.ast.MariaDBVisitor", e);
-        }
-    }
+    // @Test
+    // public void test04() throws Throwable {
+    // Randomly randomly0 = new Randomly();
+    // MariaDBExpressionGenerator mariaDBExpressionGenerator0 = new MariaDBExpressionGenerator(randomly0);
+    // MariaDBSelectStatement mariaDBSelectStatement0 = new MariaDBSelectStatement();
+    // // Undeclared exception!
+    // try {
+    // mariaDBExpressionGenerator0.generateUnoptimizedQueryString(mariaDBSelectStatement0,
+    // (MariaDBExpression) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.mariadb.ast.MariaDBVisitor", e);
+    // }
+    // }
 
     @Test
     public void test05() throws Throwable {

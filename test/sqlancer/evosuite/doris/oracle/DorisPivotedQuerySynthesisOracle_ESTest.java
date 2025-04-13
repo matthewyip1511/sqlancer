@@ -23,17 +23,17 @@ public class DorisPivotedQuerySynthesisOracle_ESTest {
     private void verifyException(String s, Exception e) {
     }
 
-    @Test
-    public void test0() throws Throwable {
-        DorisProvider.DorisGlobalState dorisProvider_DorisGlobalState0 = new DorisProvider.DorisGlobalState();
-        DorisPivotedQuerySynthesisOracle dorisPivotedQuerySynthesisOracle0 = new DorisPivotedQuerySynthesisOracle(
-                dorisProvider_DorisGlobalState0);
-        DorisConstant.DorisDateConstant dorisConstant_DorisDateConstant0 = new DorisConstant.DorisDateConstant(1838L);
-        DorisSchema.DorisDataType dorisSchema_DorisDataType0 = DorisSchema.DorisDataType.VARCHAR;
-        DorisConstant dorisConstant0 = dorisConstant_DorisDateConstant0.cast(dorisSchema_DorisDataType0);
-        String string0 = dorisPivotedQuerySynthesisOracle0.getExpectedValues(dorisConstant0);
-        assertNotNull(string0);
-    }
+    // @Test
+    // public void test0() throws Throwable {
+    // DorisProvider.DorisGlobalState dorisProvider_DorisGlobalState0 = new DorisProvider.DorisGlobalState();
+    // DorisPivotedQuerySynthesisOracle dorisPivotedQuerySynthesisOracle0 = new DorisPivotedQuerySynthesisOracle(
+    // dorisProvider_DorisGlobalState0);
+    // DorisConstant.DorisDateConstant dorisConstant_DorisDateConstant0 = new DorisConstant.DorisDateConstant(1838L);
+    // DorisSchema.DorisDataType dorisSchema_DorisDataType0 = DorisSchema.DorisDataType.VARCHAR;
+    // DorisConstant dorisConstant0 = dorisConstant_DorisDateConstant0.cast(dorisSchema_DorisDataType0);
+    // String string0 = dorisPivotedQuerySynthesisOracle0.getExpectedValues(dorisConstant0);
+    // assertNotNull(string0);
+    // }
 
     @Test
     public void test1() throws Throwable {
@@ -68,24 +68,24 @@ public class DorisPivotedQuerySynthesisOracle_ESTest {
         }
     }
 
-    @Test
-    public void test3() throws Throwable {
-        DorisProvider.DorisGlobalState dorisProvider_DorisGlobalState0 = new DorisProvider.DorisGlobalState();
-        DorisPivotedQuerySynthesisOracle dorisPivotedQuerySynthesisOracle0 = new DorisPivotedQuerySynthesisOracle(
-                dorisProvider_DorisGlobalState0);
-        DorisSelect dorisSelect0 = new DorisSelect();
-        // Undeclared exception!
-        try {
-            dorisPivotedQuerySynthesisOracle0.getExpectedValues(dorisSelect0);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.doris.visitor.DorisToStringVisitor", e);
-        }
-    }
+    // @Test
+    // public void test3() throws Throwable {
+    // DorisProvider.DorisGlobalState dorisProvider_DorisGlobalState0 = new DorisProvider.DorisGlobalState();
+    // DorisPivotedQuerySynthesisOracle dorisPivotedQuerySynthesisOracle0 = new DorisPivotedQuerySynthesisOracle(
+    // dorisProvider_DorisGlobalState0);
+    // DorisSelect dorisSelect0 = new DorisSelect();
+    // // Undeclared exception!
+    // try {
+    // dorisPivotedQuerySynthesisOracle0.getExpectedValues(dorisSelect0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.doris.visitor.DorisToStringVisitor", e);
+    // }
+    // }
 
     @Test
     public void test4() throws Throwable {

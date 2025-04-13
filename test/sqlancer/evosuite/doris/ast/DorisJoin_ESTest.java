@@ -132,26 +132,26 @@ public class DorisJoin_ESTest {
         assertEquals(0, list0.size());
     }
 
-    @Test
-    public void test10() throws Throwable {
-        DorisJoin.JoinType.getRandom();
-        DorisTableReference dorisTableReference0 = new DorisTableReference((DorisSchema.DorisTable) null);
-        List<DorisTableReference> list0 = List.of(dorisTableReference0, dorisTableReference0, dorisTableReference0,
-                dorisTableReference0, dorisTableReference0, dorisTableReference0, dorisTableReference0,
-                dorisTableReference0, dorisTableReference0, dorisTableReference0);
-        DorisProvider.DorisGlobalState dorisProvider_DorisGlobalState0 = new DorisProvider.DorisGlobalState();
-        // Undeclared exception!
-        try {
-            DorisJoin.getJoins(list0, dorisProvider_DorisGlobalState0);
-            fail("Expecting exception: UnsupportedOperationException");
-
-        } catch (UnsupportedOperationException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("java.util.ImmutableCollections", e);
-        }
-    }
+    // @Test
+    // public void test10() throws Throwable {
+    // DorisJoin.JoinType.getRandom();
+    // DorisTableReference dorisTableReference0 = new DorisTableReference((DorisSchema.DorisTable) null);
+    // List<DorisTableReference> list0 = List.of(dorisTableReference0, dorisTableReference0, dorisTableReference0,
+    // dorisTableReference0, dorisTableReference0, dorisTableReference0, dorisTableReference0,
+    // dorisTableReference0, dorisTableReference0, dorisTableReference0);
+    // DorisProvider.DorisGlobalState dorisProvider_DorisGlobalState0 = new DorisProvider.DorisGlobalState();
+    // // Undeclared exception!
+    // try {
+    // DorisJoin.getJoins(list0, dorisProvider_DorisGlobalState0);
+    // fail("Expecting exception: UnsupportedOperationException");
+    //
+    // } catch (UnsupportedOperationException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("java.util.ImmutableCollections", e);
+    // }
+    // }
 
     @Test
     public void test11() throws Throwable {

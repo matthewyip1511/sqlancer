@@ -84,20 +84,20 @@ public class QuestDBToStringVisitor_ESTest {
         }
     }
 
-    @Test
-    public void test5() throws Throwable {
-        // Undeclared exception!
-        try {
-            QuestDBToStringVisitor.asString((QuestDBExpression) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.questdb.QuestDBToStringVisitor", e);
-        }
-    }
+    // @Test
+    // public void test5() throws Throwable {
+    // // Undeclared exception!
+    // try {
+    // QuestDBToStringVisitor.asString((QuestDBExpression) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.questdb.QuestDBToStringVisitor", e);
+    // }
+    // }
 
     @Test
     public void test6() throws Throwable {

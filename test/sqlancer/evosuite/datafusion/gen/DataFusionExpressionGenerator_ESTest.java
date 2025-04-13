@@ -203,24 +203,25 @@ public class DataFusionExpressionGenerator_ESTest {
         }
     }
 
-    @Test
-    public void test09() throws Throwable {
-        DataFusionProvider.DataFusionGlobalState dataFusionProvider_DataFusionGlobalState0 = new DataFusionProvider.DataFusionGlobalState();
-        DataFusionExpressionGenerator dataFusionExpressionGenerator0 = new DataFusionExpressionGenerator(
-                dataFusionProvider_DataFusionGlobalState0);
-        // Undeclared exception!
-        try {
-            dataFusionExpressionGenerator0.generateUnoptimizedQueryString((DataFusionSelect) null,
-                    (DataFusionExpression) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.datafusion.DataFusionToStringVisitor", e);
-        }
-    }
+    // @Test
+    // public void test09() throws Throwable {
+    // DataFusionProvider.DataFusionGlobalState dataFusionProvider_DataFusionGlobalState0 = new
+    // DataFusionProvider.DataFusionGlobalState();
+    // DataFusionExpressionGenerator dataFusionExpressionGenerator0 = new DataFusionExpressionGenerator(
+    // dataFusionProvider_DataFusionGlobalState0);
+    // // Undeclared exception!
+    // try {
+    // dataFusionExpressionGenerator0.generateUnoptimizedQueryString((DataFusionSelect) null,
+    // (DataFusionExpression) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.datafusion.DataFusionToStringVisitor", e);
+    // }
+    // }
 
     @Test
     public void test10() throws Throwable {

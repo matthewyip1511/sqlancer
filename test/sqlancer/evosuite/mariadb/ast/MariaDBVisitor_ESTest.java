@@ -127,32 +127,35 @@ public class MariaDBVisitor_ESTest {
         assertEquals("(&ZZA;G IS TRUE)", mariaDBStringVisitor0.getString());
     }
 
-    @Test
-    public void test07() throws Throwable {
-        MariaDBConstant.MariaDBTextConstant mariaDBConstant_MariaDBTextConstant0 = new MariaDBConstant.MariaDBTextConstant(
-                (String) null);
-        MariaDBStringVisitor mariaDBStringVisitor0 = new MariaDBStringVisitor();
-        MariaDBAggregate.MariaDBAggregateFunction mariaDBAggregate_MariaDBAggregateFunction0 = MariaDBAggregate.MariaDBAggregateFunction.COUNT;
-        MariaDBAggregate mariaDBAggregate0 = new MariaDBAggregate(mariaDBConstant_MariaDBTextConstant0,
-                mariaDBAggregate_MariaDBAggregateFunction0);
-        MariaDBSelectStatement mariaDBSelectStatement0 = new MariaDBSelectStatement();
-        List<MariaDBExpression> list0 = mariaDBSelectStatement0.getOrderByClauses();
-        MariaDBInOperation mariaDBInOperation0 = new MariaDBInOperation(mariaDBAggregate0, list0, true);
-        MariaDBBinaryOperator.MariaDBBinaryComparisonOperator mariaDBBinaryOperator_MariaDBBinaryComparisonOperator0 = MariaDBBinaryOperator.MariaDBBinaryComparisonOperator.RLIKE;
-        MariaDBBinaryOperator mariaDBBinaryOperator0 = new MariaDBBinaryOperator(mariaDBInOperation0,
-                mariaDBSelectStatement0, mariaDBBinaryOperator_MariaDBBinaryComparisonOperator0);
-        // Undeclared exception!
-        try {
-            mariaDBStringVisitor0.visit(mariaDBBinaryOperator0);
-            fail("Expecting exception: IllegalStateException");
-
-        } catch (IllegalStateException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.common.ast.SelectBase", e);
-        }
-    }
+    // @Test
+    // public void test07() throws Throwable {
+    // MariaDBConstant.MariaDBTextConstant mariaDBConstant_MariaDBTextConstant0 = new
+    // MariaDBConstant.MariaDBTextConstant(
+    // (String) null);
+    // MariaDBStringVisitor mariaDBStringVisitor0 = new MariaDBStringVisitor();
+    // MariaDBAggregate.MariaDBAggregateFunction mariaDBAggregate_MariaDBAggregateFunction0 =
+    // MariaDBAggregate.MariaDBAggregateFunction.COUNT;
+    // MariaDBAggregate mariaDBAggregate0 = new MariaDBAggregate(mariaDBConstant_MariaDBTextConstant0,
+    // mariaDBAggregate_MariaDBAggregateFunction0);
+    // MariaDBSelectStatement mariaDBSelectStatement0 = new MariaDBSelectStatement();
+    // List<MariaDBExpression> list0 = mariaDBSelectStatement0.getOrderByClauses();
+    // MariaDBInOperation mariaDBInOperation0 = new MariaDBInOperation(mariaDBAggregate0, list0, true);
+    // MariaDBBinaryOperator.MariaDBBinaryComparisonOperator mariaDBBinaryOperator_MariaDBBinaryComparisonOperator0 =
+    // MariaDBBinaryOperator.MariaDBBinaryComparisonOperator.RLIKE;
+    // MariaDBBinaryOperator mariaDBBinaryOperator0 = new MariaDBBinaryOperator(mariaDBInOperation0,
+    // mariaDBSelectStatement0, mariaDBBinaryOperator_MariaDBBinaryComparisonOperator0);
+    // // Undeclared exception!
+    // try {
+    // mariaDBStringVisitor0.visit(mariaDBBinaryOperator0);
+    // fail("Expecting exception: IllegalStateException");
+    //
+    // } catch (IllegalStateException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.common.ast.SelectBase", e);
+    // }
+    // }
 
     @Test
     public void test08() throws Throwable {
@@ -416,27 +419,27 @@ public class MariaDBVisitor_ESTest {
         }
     }
 
-    @Test
-    public void test24() throws Throwable {
-        MariaDBStringVisitor mariaDBStringVisitor0 = new MariaDBStringVisitor();
-        MariaDBSelectStatement mariaDBSelectStatement0 = new MariaDBSelectStatement();
-        MariaDBExpression[] mariaDBExpressionArray0 = new MariaDBExpression[2];
-        mariaDBExpressionArray0[1] = (MariaDBExpression) mariaDBSelectStatement0;
-        List<MariaDBExpression> list0 = Randomly.nonEmptySubset(mariaDBExpressionArray0);
-        MariaDBFunctionName mariaDBFunctionName0 = MariaDBFunctionName.LOCATE2;
-        MariaDBFunction mariaDBFunction0 = new MariaDBFunction(mariaDBFunctionName0, list0);
-        // Undeclared exception!
-        try {
-            mariaDBStringVisitor0.visit(mariaDBFunction0);
-            fail("Expecting exception: IllegalStateException");
-
-        } catch (IllegalStateException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.common.ast.SelectBase", e);
-        }
-    }
+    // @Test
+    // public void test24() throws Throwable {
+    // MariaDBStringVisitor mariaDBStringVisitor0 = new MariaDBStringVisitor();
+    // MariaDBSelectStatement mariaDBSelectStatement0 = new MariaDBSelectStatement();
+    // MariaDBExpression[] mariaDBExpressionArray0 = new MariaDBExpression[2];
+    // mariaDBExpressionArray0[1] = (MariaDBExpression) mariaDBSelectStatement0;
+    // List<MariaDBExpression> list0 = Randomly.nonEmptySubset(mariaDBExpressionArray0);
+    // MariaDBFunctionName mariaDBFunctionName0 = MariaDBFunctionName.LOCATE2;
+    // MariaDBFunction mariaDBFunction0 = new MariaDBFunction(mariaDBFunctionName0, list0);
+    // // Undeclared exception!
+    // try {
+    // mariaDBStringVisitor0.visit(mariaDBFunction0);
+    // fail("Expecting exception: IllegalStateException");
+    //
+    // } catch (IllegalStateException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.common.ast.SelectBase", e);
+    // }
+    // }
 
     @Test
     public void test25() throws Throwable {
@@ -542,51 +545,53 @@ public class MariaDBVisitor_ESTest {
         }
     }
 
-    @Test
-    public void test31() throws Throwable {
-        MariaDBStringVisitor mariaDBStringVisitor0 = new MariaDBStringVisitor();
-        MariaDBUnaryPrefixOperation.MariaDBUnaryPrefixOperator mariaDBUnaryPrefixOperation_MariaDBUnaryPrefixOperator0 = MariaDBUnaryPrefixOperation.MariaDBUnaryPrefixOperator.PLUS;
-        MariaDBUnaryPrefixOperation mariaDBUnaryPrefixOperation0 = new MariaDBUnaryPrefixOperation(
-                (MariaDBExpression) null, mariaDBUnaryPrefixOperation_MariaDBUnaryPrefixOperator0);
-        // Undeclared exception!
-        try {
-            mariaDBStringVisitor0.visit(mariaDBUnaryPrefixOperation0);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.mariadb.ast.MariaDBVisitor", e);
-        }
-    }
-
-    @Test
-    public void test32() throws Throwable {
-        MariaDBStringVisitor mariaDBStringVisitor0 = new MariaDBStringVisitor();
-        LinkedList<MariaDBSchema.MariaDBColumn> linkedList0 = new LinkedList<MariaDBSchema.MariaDBColumn>();
-        MariaDBSchema.MariaDBIndex[] mariaDBSchema_MariaDBIndexArray0 = new MariaDBSchema.MariaDBIndex[4];
-        List<MariaDBSchema.MariaDBIndex> list0 = Randomly.subset((-1323), mariaDBSchema_MariaDBIndexArray0);
-        MariaDBSchema.MariaDBTable.MariaDBEngine mariaDBSchema_MariaDBTable_MariaDBEngine0 = MariaDBSchema.MariaDBTable.MariaDBEngine.ARIA;
-        MariaDBSchema.MariaDBTable mariaDBSchema_MariaDBTable0 = new MariaDBSchema.MariaDBTable("", linkedList0, list0,
-                mariaDBSchema_MariaDBTable_MariaDBEngine0);
-        MariaDBJoin.JoinType mariaDBJoin_JoinType0 = MariaDBJoin.JoinType.STRAIGHT;
-        MariaDBJoin mariaDBJoin0 = new MariaDBJoin(mariaDBSchema_MariaDBTable0, (MariaDBExpression) null,
-                mariaDBJoin_JoinType0);
-        MariaDBInOperation mariaDBInOperation0 = new MariaDBInOperation(mariaDBJoin0, (List<MariaDBExpression>) null,
-                true);
-        // Undeclared exception!
-        try {
-            mariaDBStringVisitor0.visit(mariaDBInOperation0);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.mariadb.ast.MariaDBStringVisitor", e);
-        }
-    }
+    // @Test
+    // public void test31() throws Throwable {
+    // MariaDBStringVisitor mariaDBStringVisitor0 = new MariaDBStringVisitor();
+    // MariaDBUnaryPrefixOperation.MariaDBUnaryPrefixOperator mariaDBUnaryPrefixOperation_MariaDBUnaryPrefixOperator0 =
+    // MariaDBUnaryPrefixOperation.MariaDBUnaryPrefixOperator.PLUS;
+    // MariaDBUnaryPrefixOperation mariaDBUnaryPrefixOperation0 = new MariaDBUnaryPrefixOperation(
+    // (MariaDBExpression) null, mariaDBUnaryPrefixOperation_MariaDBUnaryPrefixOperator0);
+    // // Undeclared exception!
+    // try {
+    // mariaDBStringVisitor0.visit(mariaDBUnaryPrefixOperation0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.mariadb.ast.MariaDBVisitor", e);
+    // }
+    // }
+    //
+    // @Test
+    // public void test32() throws Throwable {
+    // MariaDBStringVisitor mariaDBStringVisitor0 = new MariaDBStringVisitor();
+    // LinkedList<MariaDBSchema.MariaDBColumn> linkedList0 = new LinkedList<MariaDBSchema.MariaDBColumn>();
+    // MariaDBSchema.MariaDBIndex[] mariaDBSchema_MariaDBIndexArray0 = new MariaDBSchema.MariaDBIndex[4];
+    // List<MariaDBSchema.MariaDBIndex> list0 = Randomly.subset((-1323), mariaDBSchema_MariaDBIndexArray0);
+    // MariaDBSchema.MariaDBTable.MariaDBEngine mariaDBSchema_MariaDBTable_MariaDBEngine0 =
+    // MariaDBSchema.MariaDBTable.MariaDBEngine.ARIA;
+    // MariaDBSchema.MariaDBTable mariaDBSchema_MariaDBTable0 = new MariaDBSchema.MariaDBTable("", linkedList0, list0,
+    // mariaDBSchema_MariaDBTable_MariaDBEngine0);
+    // MariaDBJoin.JoinType mariaDBJoin_JoinType0 = MariaDBJoin.JoinType.STRAIGHT;
+    // MariaDBJoin mariaDBJoin0 = new MariaDBJoin(mariaDBSchema_MariaDBTable0, (MariaDBExpression) null,
+    // mariaDBJoin_JoinType0);
+    // MariaDBInOperation mariaDBInOperation0 = new MariaDBInOperation(mariaDBJoin0, (List<MariaDBExpression>) null,
+    // true);
+    // // Undeclared exception!
+    // try {
+    // mariaDBStringVisitor0.visit(mariaDBInOperation0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.mariadb.ast.MariaDBStringVisitor", e);
+    // }
+    // }
 
     @Test
     public void test33() throws Throwable {

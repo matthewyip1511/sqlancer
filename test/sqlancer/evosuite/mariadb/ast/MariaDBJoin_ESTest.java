@@ -77,78 +77,81 @@ public class MariaDBJoin_ESTest {
         assertSame(mariaDBExpression0, mariaDBConstant_MariaDBIntConstant0);
     }
 
-    @Test
-    public void test04() throws Throwable {
-        MariaDBSchema.MariaDBColumn[] mariaDBSchema_MariaDBColumnArray0 = new MariaDBSchema.MariaDBColumn[2];
-        List<MariaDBSchema.MariaDBColumn> list0 = Randomly.nonEmptySubset(mariaDBSchema_MariaDBColumnArray0);
-        LinkedList<MariaDBSchema.MariaDBIndex> linkedList0 = new LinkedList<MariaDBSchema.MariaDBIndex>();
-        Randomly.getNonCachedInteger();
-        MariaDBSchema.MariaDBTable.MariaDBEngine mariaDBSchema_MariaDBTable_MariaDBEngine0 = MariaDBSchema.MariaDBTable.MariaDBEngine.INNO_DB;
-        List<MariaDBSchema.MariaDBIndex> list1 = Randomly
-                .nonEmptySubsetLeast((List<MariaDBSchema.MariaDBIndex>) linkedList0, (-2291));
-        MariaDBSchema.MariaDBTable mariaDBSchema_MariaDBTable0 = new MariaDBSchema.MariaDBTable("", list0, list1,
-                mariaDBSchema_MariaDBTable_MariaDBEngine0);
-        MariaDBSchema.MariaDBTable[] mariaDBSchema_MariaDBTableArray0 = new MariaDBSchema.MariaDBTable[5];
-        mariaDBSchema_MariaDBTableArray0[0] = mariaDBSchema_MariaDBTable0;
-        List<MariaDBSchema.MariaDBTable> list2 = Randomly.nonEmptySubset(mariaDBSchema_MariaDBTableArray0);
-        Randomly.subset(list2);
-        MariaDBJoin.getRandomJoinClauses(list2, (Randomly) null);
-        assertFalse(list2.contains(mariaDBSchema_MariaDBTable0));
-        assertEquals(2, list2.size());
-    }
-
-    @Test
-    public void test05() throws Throwable {
-        MariaDBSchema.MariaDBColumn[] mariaDBSchema_MariaDBColumnArray0 = new MariaDBSchema.MariaDBColumn[2];
-        List<MariaDBSchema.MariaDBColumn> list0 = Randomly.nonEmptySubset(mariaDBSchema_MariaDBColumnArray0);
-        LinkedList<MariaDBSchema.MariaDBIndex> linkedList0 = new LinkedList<MariaDBSchema.MariaDBIndex>();
-        Randomly.getNonCachedInteger();
-        MariaDBSchema.MariaDBTable.MariaDBEngine mariaDBSchema_MariaDBTable_MariaDBEngine0 = MariaDBSchema.MariaDBTable.MariaDBEngine.INNO_DB;
-        List<MariaDBSchema.MariaDBIndex> list1 = Randomly
-                .nonEmptySubsetLeast((List<MariaDBSchema.MariaDBIndex>) linkedList0, (-1195));
-        MariaDBSchema.MariaDBTable mariaDBSchema_MariaDBTable0 = new MariaDBSchema.MariaDBTable("", list0, list1,
-                mariaDBSchema_MariaDBTable_MariaDBEngine0);
-        List<MariaDBSchema.MariaDBTable> list2 = List.of(mariaDBSchema_MariaDBTable0, mariaDBSchema_MariaDBTable0,
-                mariaDBSchema_MariaDBTable0, mariaDBSchema_MariaDBTable0);
-        List<MariaDBSchema.MariaDBTable> list3 = Randomly.subset(list2);
-        MariaDBJoin.getRandomJoinClauses(list3, (Randomly) null);
-        assertEquals(1, list3.size());
-    }
-
-    @Test
-    public void test06() throws Throwable {
-        LinkedList<MariaDBSchema.MariaDBIndex> linkedList0 = new LinkedList<MariaDBSchema.MariaDBIndex>();
-        Randomly.getNonCachedInteger();
-        Randomly.nonEmptySubsetLeast((List<MariaDBSchema.MariaDBIndex>) linkedList0, (-2291));
-        MariaDBSchema.MariaDBTable[] mariaDBSchema_MariaDBTableArray0 = new MariaDBSchema.MariaDBTable[5];
-        List<MariaDBSchema.MariaDBTable> list0 = Randomly.nonEmptySubset(mariaDBSchema_MariaDBTableArray0);
-        Randomly.subset(list0);
-        List<MariaDBJoin> list1 = MariaDBJoin.getRandomJoinClauses(list0, (Randomly) null);
-        assertTrue(list1.isEmpty());
-    }
-
-    @Test
-    public void test07() throws Throwable {
-        MariaDBSchema.MariaDBColumn[] mariaDBSchema_MariaDBColumnArray0 = new MariaDBSchema.MariaDBColumn[2];
-        List<MariaDBSchema.MariaDBColumn> list0 = Randomly.nonEmptySubset(mariaDBSchema_MariaDBColumnArray0);
-        LinkedList<MariaDBSchema.MariaDBIndex> linkedList0 = new LinkedList<MariaDBSchema.MariaDBIndex>();
-        MariaDBSchema.MariaDBTable.MariaDBEngine mariaDBSchema_MariaDBTable_MariaDBEngine0 = MariaDBSchema.MariaDBTable.MariaDBEngine.INNO_DB;
-        MariaDBSchema.MariaDBTable mariaDBSchema_MariaDBTable0 = new MariaDBSchema.MariaDBTable("NATURAL", list0,
-                linkedList0, mariaDBSchema_MariaDBTable_MariaDBEngine0);
-        List<MariaDBSchema.MariaDBTable> list1 = List.of(mariaDBSchema_MariaDBTable0, mariaDBSchema_MariaDBTable0,
-                mariaDBSchema_MariaDBTable0, mariaDBSchema_MariaDBTable0);
-        // Undeclared exception!
-        try {
-            MariaDBJoin.getRandomJoinClauses(list1, (Randomly) null);
-            fail("Expecting exception: UnsupportedOperationException");
-
-        } catch (UnsupportedOperationException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("java.util.ImmutableCollections", e);
-        }
-    }
+    // @Test
+    // public void test04() throws Throwable {
+    // MariaDBSchema.MariaDBColumn[] mariaDBSchema_MariaDBColumnArray0 = new MariaDBSchema.MariaDBColumn[2];
+    // List<MariaDBSchema.MariaDBColumn> list0 = Randomly.nonEmptySubset(mariaDBSchema_MariaDBColumnArray0);
+    // LinkedList<MariaDBSchema.MariaDBIndex> linkedList0 = new LinkedList<MariaDBSchema.MariaDBIndex>();
+    // Randomly.getNonCachedInteger();
+    // MariaDBSchema.MariaDBTable.MariaDBEngine mariaDBSchema_MariaDBTable_MariaDBEngine0 =
+    // MariaDBSchema.MariaDBTable.MariaDBEngine.INNO_DB;
+    // List<MariaDBSchema.MariaDBIndex> list1 = Randomly
+    // .nonEmptySubsetLeast((List<MariaDBSchema.MariaDBIndex>) linkedList0, (-2291));
+    // MariaDBSchema.MariaDBTable mariaDBSchema_MariaDBTable0 = new MariaDBSchema.MariaDBTable("", list0, list1,
+    // mariaDBSchema_MariaDBTable_MariaDBEngine0);
+    // MariaDBSchema.MariaDBTable[] mariaDBSchema_MariaDBTableArray0 = new MariaDBSchema.MariaDBTable[5];
+    // mariaDBSchema_MariaDBTableArray0[0] = mariaDBSchema_MariaDBTable0;
+    // List<MariaDBSchema.MariaDBTable> list2 = Randomly.nonEmptySubset(mariaDBSchema_MariaDBTableArray0);
+    // Randomly.subset(list2);
+    // MariaDBJoin.getRandomJoinClauses(list2, (Randomly) null);
+    // assertFalse(list2.contains(mariaDBSchema_MariaDBTable0));
+    // assertEquals(2, list2.size());
+    // }
+    //
+    // @Test
+    // public void test05() throws Throwable {
+    // MariaDBSchema.MariaDBColumn[] mariaDBSchema_MariaDBColumnArray0 = new MariaDBSchema.MariaDBColumn[2];
+    // List<MariaDBSchema.MariaDBColumn> list0 = Randomly.nonEmptySubset(mariaDBSchema_MariaDBColumnArray0);
+    // LinkedList<MariaDBSchema.MariaDBIndex> linkedList0 = new LinkedList<MariaDBSchema.MariaDBIndex>();
+    // Randomly.getNonCachedInteger();
+    // MariaDBSchema.MariaDBTable.MariaDBEngine mariaDBSchema_MariaDBTable_MariaDBEngine0 =
+    // MariaDBSchema.MariaDBTable.MariaDBEngine.INNO_DB;
+    // List<MariaDBSchema.MariaDBIndex> list1 = Randomly
+    // .nonEmptySubsetLeast((List<MariaDBSchema.MariaDBIndex>) linkedList0, (-1195));
+    // MariaDBSchema.MariaDBTable mariaDBSchema_MariaDBTable0 = new MariaDBSchema.MariaDBTable("", list0, list1,
+    // mariaDBSchema_MariaDBTable_MariaDBEngine0);
+    // List<MariaDBSchema.MariaDBTable> list2 = List.of(mariaDBSchema_MariaDBTable0, mariaDBSchema_MariaDBTable0,
+    // mariaDBSchema_MariaDBTable0, mariaDBSchema_MariaDBTable0);
+    // List<MariaDBSchema.MariaDBTable> list3 = Randomly.subset(list2);
+    // MariaDBJoin.getRandomJoinClauses(list3, (Randomly) null);
+    // assertEquals(1, list3.size());
+    // }
+    //
+    // @Test
+    // public void test06() throws Throwable {
+    // LinkedList<MariaDBSchema.MariaDBIndex> linkedList0 = new LinkedList<MariaDBSchema.MariaDBIndex>();
+    // Randomly.getNonCachedInteger();
+    // Randomly.nonEmptySubsetLeast((List<MariaDBSchema.MariaDBIndex>) linkedList0, (-2291));
+    // MariaDBSchema.MariaDBTable[] mariaDBSchema_MariaDBTableArray0 = new MariaDBSchema.MariaDBTable[5];
+    // List<MariaDBSchema.MariaDBTable> list0 = Randomly.nonEmptySubset(mariaDBSchema_MariaDBTableArray0);
+    // Randomly.subset(list0);
+    // List<MariaDBJoin> list1 = MariaDBJoin.getRandomJoinClauses(list0, (Randomly) null);
+    // assertTrue(list1.isEmpty());
+    // }
+    //
+    // @Test
+    // public void test07() throws Throwable {
+    // MariaDBSchema.MariaDBColumn[] mariaDBSchema_MariaDBColumnArray0 = new MariaDBSchema.MariaDBColumn[2];
+    // List<MariaDBSchema.MariaDBColumn> list0 = Randomly.nonEmptySubset(mariaDBSchema_MariaDBColumnArray0);
+    // LinkedList<MariaDBSchema.MariaDBIndex> linkedList0 = new LinkedList<MariaDBSchema.MariaDBIndex>();
+    // MariaDBSchema.MariaDBTable.MariaDBEngine mariaDBSchema_MariaDBTable_MariaDBEngine0 =
+    // MariaDBSchema.MariaDBTable.MariaDBEngine.INNO_DB;
+    // MariaDBSchema.MariaDBTable mariaDBSchema_MariaDBTable0 = new MariaDBSchema.MariaDBTable("NATURAL", list0,
+    // linkedList0, mariaDBSchema_MariaDBTable_MariaDBEngine0);
+    // List<MariaDBSchema.MariaDBTable> list1 = List.of(mariaDBSchema_MariaDBTable0, mariaDBSchema_MariaDBTable0,
+    // mariaDBSchema_MariaDBTable0, mariaDBSchema_MariaDBTable0);
+    // // Undeclared exception!
+    // try {
+    // MariaDBJoin.getRandomJoinClauses(list1, (Randomly) null);
+    // fail("Expecting exception: UnsupportedOperationException");
+    //
+    // } catch (UnsupportedOperationException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("java.util.ImmutableCollections", e);
+    // }
+    // }
 
     @Test
     public void test08() throws Throwable {

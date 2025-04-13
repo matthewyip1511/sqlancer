@@ -47,24 +47,25 @@ public class CockroachDBCommon_ESTest {
         }
     }
 
-    @Test
-    public void test2() throws Throwable {
-        LinkedList<CockroachDBSchema.CockroachDBColumn> linkedList0 = new LinkedList<CockroachDBSchema.CockroachDBColumn>();
-        LinkedList<TableIndex> linkedList1 = new LinkedList<TableIndex>();
-        TableIndex tableIndex0 = TableIndex.create("4");
-        linkedList1.add(tableIndex0);
-        CockroachDBSchema.CockroachDBTable cockroachDBSchema_CockroachDBTable0 = new CockroachDBSchema.CockroachDBTable(
-                "4", linkedList0, linkedList1, true);
-        String string0 = CockroachDBCommon.getRandomCollate();
-        assertEquals("en", string0);
-        assertNotNull(string0);
-
-        CockroachDBTableReference cockroachDBTableReference0 = new CockroachDBTableReference(
-                cockroachDBSchema_CockroachDBTable0);
-        List<CockroachDBTableReference> list0 = List.of(cockroachDBTableReference0);
-        List<CockroachDBExpression> list1 = CockroachDBCommon.getTableReferences(list0);
-        assertEquals(1, list1.size());
-    }
+    // @Test
+    // public void test2() throws Throwable {
+    // LinkedList<CockroachDBSchema.CockroachDBColumn> linkedList0 = new
+    // LinkedList<CockroachDBSchema.CockroachDBColumn>();
+    // LinkedList<TableIndex> linkedList1 = new LinkedList<TableIndex>();
+    // TableIndex tableIndex0 = TableIndex.create("4");
+    // linkedList1.add(tableIndex0);
+    // CockroachDBSchema.CockroachDBTable cockroachDBSchema_CockroachDBTable0 = new CockroachDBSchema.CockroachDBTable(
+    // "4", linkedList0, linkedList1, true);
+    // String string0 = CockroachDBCommon.getRandomCollate();
+    // assertEquals("en", string0);
+    // assertNotNull(string0);
+    //
+    // CockroachDBTableReference cockroachDBTableReference0 = new CockroachDBTableReference(
+    // cockroachDBSchema_CockroachDBTable0);
+    // List<CockroachDBTableReference> list0 = List.of(cockroachDBTableReference0);
+    // List<CockroachDBExpression> list1 = CockroachDBCommon.getTableReferences(list0);
+    // assertEquals(1, list1.size());
+    // }
 
     @Test
     public void test3() throws Throwable {

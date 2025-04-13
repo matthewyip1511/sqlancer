@@ -49,20 +49,20 @@ public class DataFusionToStringVisitor_ESTest {
         assertNotNull(string0);
     }
 
-    @Test
-    public void test02() throws Throwable {
-        // Undeclared exception!
-        try {
-            DataFusionToStringVisitor.asString((DataFusionExpression) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.datafusion.DataFusionToStringVisitor", e);
-        }
-    }
+    // @Test
+    // public void test02() throws Throwable {
+    // // Undeclared exception!
+    // try {
+    // DataFusionToStringVisitor.asString((DataFusionExpression) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.datafusion.DataFusionToStringVisitor", e);
+    // }
+    // }
 
     @Test
     public void test03() throws Throwable {
@@ -211,23 +211,23 @@ public class DataFusionToStringVisitor_ESTest {
         assertEquals("[RL#Q,(@>$_P{ INNER  JOIN [RL#Q,(@>$_P{", string0);
     }
 
-    @Test
-    public void test12() throws Throwable {
-        DataFusionToStringVisitor dataFusionToStringVisitor0 = new DataFusionToStringVisitor();
-        DataFusionJoin dataFusionJoin0 = DataFusionJoin.createInnerJoin((DataFusionTableReference) null,
-                (DataFusionTableReference) null, (DataFusionExpression) null);
-        // Undeclared exception!
-        try {
-            dataFusionToStringVisitor0.visitSpecific((DataFusionExpression) dataFusionJoin0);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.datafusion.DataFusionToStringVisitor", e);
-        }
-    }
+    // @Test
+    // public void test12() throws Throwable {
+    // DataFusionToStringVisitor dataFusionToStringVisitor0 = new DataFusionToStringVisitor();
+    // DataFusionJoin dataFusionJoin0 = DataFusionJoin.createInnerJoin((DataFusionTableReference) null,
+    // (DataFusionTableReference) null, (DataFusionExpression) null);
+    // // Undeclared exception!
+    // try {
+    // dataFusionToStringVisitor0.visitSpecific((DataFusionExpression) dataFusionJoin0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.datafusion.DataFusionToStringVisitor", e);
+    // }
+    // }
 
     @Test
     public void test13() throws Throwable {

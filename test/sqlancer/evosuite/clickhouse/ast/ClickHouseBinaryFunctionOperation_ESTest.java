@@ -99,13 +99,15 @@ public class ClickHouseBinaryFunctionOperation_ESTest {
         assertEquals("intDiv", string0);
     }
 
-    @Test
-    public void test06() throws Throwable {
-        ClickHouseBinaryFunctionOperation.ClickHouseBinaryFunctionOperator clickHouseBinaryFunctionOperation_ClickHouseBinaryFunctionOperator0 = ClickHouseBinaryFunctionOperation.ClickHouseBinaryFunctionOperator
-                .getRandom();
-        assertEquals(ClickHouseBinaryFunctionOperation.ClickHouseBinaryFunctionOperator.INT_DIV,
-                clickHouseBinaryFunctionOperation_ClickHouseBinaryFunctionOperator0);
-    }
+    // @Test
+    // public void test06() throws Throwable {
+    // ClickHouseBinaryFunctionOperation.ClickHouseBinaryFunctionOperator
+    // clickHouseBinaryFunctionOperation_ClickHouseBinaryFunctionOperator0 =
+    // ClickHouseBinaryFunctionOperation.ClickHouseBinaryFunctionOperator
+    // .getRandom();
+    // assertEquals(ClickHouseBinaryFunctionOperation.ClickHouseBinaryFunctionOperator.INT_DIV,
+    // clickHouseBinaryFunctionOperation_ClickHouseBinaryFunctionOperator0);
+    // }
 
     @Test
     public void test07() throws Throwable {

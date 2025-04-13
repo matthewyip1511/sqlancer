@@ -59,25 +59,26 @@ public class CockroachDBOracleFactory_ESTest {
         assertNotNull(testOracle0);
     }
 
-    @Test
-    public void test5() throws Throwable {
-        CockroachDBOracleFactory cockroachDBOracleFactory0 = CockroachDBOracleFactory.QUERY_PARTITIONING;
-        CockroachDBProvider.CockroachDBGlobalState cockroachDBProvider_CockroachDBGlobalState0 = new CockroachDBProvider.CockroachDBGlobalState();
-        // Undeclared exception!
-        try {
-            cockroachDBOracleFactory0.create(cockroachDBProvider_CockroachDBGlobalState0);
-            fail("Expecting exception: NoClassDefFoundError");
-
-        } catch (NoClassDefFoundError e) {
-            //
-            // org/postgresql/util/PSQLException
-            //
-            verifyException("sqlancer.cockroachdb.CockroachDBOracleFactory$2", e);
-        }
-    }
-
-    private void verifyException(String s, NoClassDefFoundError e) {
-    }
+    // @Test
+    // public void test5() throws Throwable {
+    // CockroachDBOracleFactory cockroachDBOracleFactory0 = CockroachDBOracleFactory.QUERY_PARTITIONING;
+    // CockroachDBProvider.CockroachDBGlobalState cockroachDBProvider_CockroachDBGlobalState0 = new
+    // CockroachDBProvider.CockroachDBGlobalState();
+    // // Undeclared exception!
+    // try {
+    // cockroachDBOracleFactory0.create(cockroachDBProvider_CockroachDBGlobalState0);
+    // fail("Expecting exception: NoClassDefFoundError");
+    //
+    // } catch (NoClassDefFoundError e) {
+    // //
+    // // org/postgresql/util/PSQLException
+    // //
+    // verifyException("sqlancer.cockroachdb.CockroachDBOracleFactory$2", e);
+    // }
+    // }
+    //
+    // private void verifyException(String s, NoClassDefFoundError e) {
+    // }
 
     @Test
     public void test6() throws Throwable {

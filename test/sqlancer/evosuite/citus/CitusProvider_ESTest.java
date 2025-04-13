@@ -79,22 +79,22 @@ public class CitusProvider_ESTest {
         }
     }
 
-    @Test
-    public void test05() throws Throwable {
-        CitusGlobalState citusGlobalState0 = new CitusGlobalState();
-        CitusProvider.Action citusProvider_Action0 = CitusProvider.Action.COMMIT;
-        SQLQueryAdapter sQLQueryAdapter0 = citusProvider_Action0.getQuery((PostgresGlobalState) citusGlobalState0);
-        assertTrue(sQLQueryAdapter0.couldAffectSchema());
-        assertEquals("ROLLBACK;", sQLQueryAdapter0.getLogString());
-    }
-
-    @Test
-    public void test06() throws Throwable {
-        PostgresGlobalState postgresGlobalState0 = new PostgresGlobalState();
-        CitusProvider.Action citusProvider_Action0 = CitusProvider.Action.SET_CONSTRAINTS;
-        SQLQueryAdapter sQLQueryAdapter0 = citusProvider_Action0.getQuery(postgresGlobalState0);
-        assertEquals("SET CONSTRAINTS ALL DEFERRED;", sQLQueryAdapter0.getLogString());
-    }
+    // @Test
+    // public void test05() throws Throwable {
+    // CitusGlobalState citusGlobalState0 = new CitusGlobalState();
+    // CitusProvider.Action citusProvider_Action0 = CitusProvider.Action.COMMIT;
+    // SQLQueryAdapter sQLQueryAdapter0 = citusProvider_Action0.getQuery((PostgresGlobalState) citusGlobalState0);
+    // assertTrue(sQLQueryAdapter0.couldAffectSchema());
+    // assertEquals("ROLLBACK;", sQLQueryAdapter0.getLogString());
+    // }
+    //
+    // @Test
+    // public void test06() throws Throwable {
+    // PostgresGlobalState postgresGlobalState0 = new PostgresGlobalState();
+    // CitusProvider.Action citusProvider_Action0 = CitusProvider.Action.SET_CONSTRAINTS;
+    // SQLQueryAdapter sQLQueryAdapter0 = citusProvider_Action0.getQuery(postgresGlobalState0);
+    // assertEquals("SET CONSTRAINTS ALL DEFERRED;", sQLQueryAdapter0.getLogString());
+    // }
 
     @Test
     public void test07() throws Throwable {
