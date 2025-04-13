@@ -27,13 +27,14 @@ public class CockroachDBRegexOperation_ESTest {
         assertEquals("!~", string0);
     }
 
-//    @Test
-//    public void test1() throws Throwable {
-//        CockroachDBRegexOperation.CockroachDBRegexOperator cockroachDBRegexOperation_CockroachDBRegexOperator0 = CockroachDBRegexOperation.CockroachDBRegexOperator
-//                .getRandom();
-//        assertEquals(CockroachDBRegexOperation.CockroachDBRegexOperator.LIKE,
-//                cockroachDBRegexOperation_CockroachDBRegexOperator0);
-//    }
+    // @Test
+    // public void test1() throws Throwable {
+    // CockroachDBRegexOperation.CockroachDBRegexOperator cockroachDBRegexOperation_CockroachDBRegexOperator0 =
+    // CockroachDBRegexOperation.CockroachDBRegexOperator
+    // .getRandom();
+    // assertEquals(CockroachDBRegexOperation.CockroachDBRegexOperator.LIKE,
+    // cockroachDBRegexOperation_CockroachDBRegexOperator0);
+    // }
 
     @Test
     public void test2() throws Throwable {

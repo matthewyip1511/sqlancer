@@ -21,21 +21,22 @@ public class SQLite3Common_ESTest {
     private void verifyException(String s, Exception e) {
     }
 
-//    @Test
-//    public void test00() throws Throwable {
-//        SQLite3Schema.SQLite3Column[] sQLite3Schema_SQLite3ColumnArray0 = new SQLite3Schema.SQLite3Column[2];
-//        SQLite3Schema.SQLite3Column sQLite3Schema_SQLite3Column0 = SQLite3Common.createColumn((-1));
-//        assertEquals("c-1", sQLite3Schema_SQLite3Column0.getName());
-//        assertFalse(sQLite3Schema_SQLite3Column0.isPrimaryKey());
-//
-//        sQLite3Schema_SQLite3ColumnArray0[0] = sQLite3Schema_SQLite3Column0;
-//        List<SQLite3Schema.SQLite3Column> list0 = Randomly.subset(1, sQLite3Schema_SQLite3ColumnArray0);
-//        SQLite3Schema.SQLite3Table.TableKind sQLite3Schema_SQLite3Table_TableKind0 = SQLite3Schema.SQLite3Table.TableKind.MAIN;
-//        SQLite3Schema.SQLite3Table sQLite3Schema_SQLite3Table0 = new SQLite3Schema.SQLite3Table("N", list0,
-//                sQLite3Schema_SQLite3Table_TableKind0, true, true, false, true);
-//        String string0 = SQLite3Common.getFreeColumnName(sQLite3Schema_SQLite3Table0);
-//        assertEquals("c0", string0);
-//    }
+    // @Test
+    // public void test00() throws Throwable {
+    // SQLite3Schema.SQLite3Column[] sQLite3Schema_SQLite3ColumnArray0 = new SQLite3Schema.SQLite3Column[2];
+    // SQLite3Schema.SQLite3Column sQLite3Schema_SQLite3Column0 = SQLite3Common.createColumn((-1));
+    // assertEquals("c-1", sQLite3Schema_SQLite3Column0.getName());
+    // assertFalse(sQLite3Schema_SQLite3Column0.isPrimaryKey());
+    //
+    // sQLite3Schema_SQLite3ColumnArray0[0] = sQLite3Schema_SQLite3Column0;
+    // List<SQLite3Schema.SQLite3Column> list0 = Randomly.subset(1, sQLite3Schema_SQLite3ColumnArray0);
+    // SQLite3Schema.SQLite3Table.TableKind sQLite3Schema_SQLite3Table_TableKind0 =
+    // SQLite3Schema.SQLite3Table.TableKind.MAIN;
+    // SQLite3Schema.SQLite3Table sQLite3Schema_SQLite3Table0 = new SQLite3Schema.SQLite3Table("N", list0,
+    // sQLite3Schema_SQLite3Table_TableKind0, true, true, false, true);
+    // String string0 = SQLite3Common.getFreeColumnName(sQLite3Schema_SQLite3Table0);
+    // assertEquals("c0", string0);
+    // }
 
     @Test
     public void test01() throws Throwable {
@@ -187,31 +188,31 @@ public class SQLite3Common_ESTest {
         }
     }
 
-//    @Test
-//    public void test11() throws Throwable {
-//        LinkedList<SQLite3Schema.SQLite3Table> linkedList0 = new LinkedList<SQLite3Schema.SQLite3Table>();
-//        linkedList0.add((SQLite3Schema.SQLite3Table) null);
-//        List<String> list0 = SQLite3Schema.ROWID_STRINGS;
-//        SQLite3Schema sQLite3Schema0 = new SQLite3Schema(linkedList0, list0);
-//        String string0 = SQLite3Common.getFreeIndexName(sQLite3Schema0);
-//        assertEquals("i0", string0);
-//
-//        List<SQLite3Expression> list1 = SQLite3Common.getTableRefs(linkedList0, sQLite3Schema0);
-//        assertFalse(list1.isEmpty());
-//    }
+    // @Test
+    // public void test11() throws Throwable {
+    // LinkedList<SQLite3Schema.SQLite3Table> linkedList0 = new LinkedList<SQLite3Schema.SQLite3Table>();
+    // linkedList0.add((SQLite3Schema.SQLite3Table) null);
+    // List<String> list0 = SQLite3Schema.ROWID_STRINGS;
+    // SQLite3Schema sQLite3Schema0 = new SQLite3Schema(linkedList0, list0);
+    // String string0 = SQLite3Common.getFreeIndexName(sQLite3Schema0);
+    // assertEquals("i0", string0);
+    //
+    // List<SQLite3Expression> list1 = SQLite3Common.getTableRefs(linkedList0, sQLite3Schema0);
+    // assertFalse(list1.isEmpty());
+    // }
 
-//    @Test
-//    public void test12() throws Throwable {
-//        LinkedList<SQLite3Schema.SQLite3Table> linkedList0 = new LinkedList<SQLite3Schema.SQLite3Table>();
-//        linkedList0.add((SQLite3Schema.SQLite3Table) null);
-//        LinkedList<String> linkedList1 = new LinkedList<String>();
-//        SQLite3Schema sQLite3Schema0 = new SQLite3Schema(linkedList0, linkedList1);
-//        String string0 = SQLite3Common.getFreeIndexName(sQLite3Schema0);
-//        assertEquals("i0", string0);
-//
-//        List<SQLite3Expression> list0 = SQLite3Common.getTableRefs(linkedList0, sQLite3Schema0);
-//        assertEquals(1, list0.size());
-//    }
+    // @Test
+    // public void test12() throws Throwable {
+    // LinkedList<SQLite3Schema.SQLite3Table> linkedList0 = new LinkedList<SQLite3Schema.SQLite3Table>();
+    // linkedList0.add((SQLite3Schema.SQLite3Table) null);
+    // LinkedList<String> linkedList1 = new LinkedList<String>();
+    // SQLite3Schema sQLite3Schema0 = new SQLite3Schema(linkedList0, linkedList1);
+    // String string0 = SQLite3Common.getFreeIndexName(sQLite3Schema0);
+    // assertEquals("i0", string0);
+    //
+    // List<SQLite3Expression> list0 = SQLite3Common.getTableRefs(linkedList0, sQLite3Schema0);
+    // assertEquals(1, list0.size());
+    // }
 
     @Test
     public void test13() throws Throwable {
@@ -257,26 +258,26 @@ public class SQLite3Common_ESTest {
         }
     }
 
-//    @Test
-//    public void test16() throws Throwable {
-//        LinkedList<SQLite3Schema.SQLite3Table> linkedList0 = new LinkedList<SQLite3Schema.SQLite3Table>();
-//        LinkedList<String> linkedList1 = new LinkedList<String>();
-//        linkedList1.add("i0");
-//        SQLite3Schema sQLite3Schema0 = new SQLite3Schema(linkedList0, linkedList1);
-//        String string0 = SQLite3Common.getFreeIndexName(sQLite3Schema0);
-//        assertEquals("i1", string0);
-//    }
+    // @Test
+    // public void test16() throws Throwable {
+    // LinkedList<SQLite3Schema.SQLite3Table> linkedList0 = new LinkedList<SQLite3Schema.SQLite3Table>();
+    // LinkedList<String> linkedList1 = new LinkedList<String>();
+    // linkedList1.add("i0");
+    // SQLite3Schema sQLite3Schema0 = new SQLite3Schema(linkedList0, linkedList1);
+    // String string0 = SQLite3Common.getFreeIndexName(sQLite3Schema0);
+    // assertEquals("i1", string0);
+    // }
 
-//    @Test
-//    public void test17() throws Throwable {
-//        String string0 = SQLite3Common.getIndexedClause(" COLLATE BINARY");
-//        assertEquals("NOT INDEXED", string0);
-//    }
+    // @Test
+    // public void test17() throws Throwable {
+    // String string0 = SQLite3Common.getIndexedClause(" COLLATE BINARY");
+    // assertEquals("NOT INDEXED", string0);
+    // }
 
-//    @Test
-//    public void test18() throws Throwable {
-//        String string0 = SQLite3Common.getRandomCollate();
-//        assertNotNull(string0);
-//        assertEquals(" COLLATE BINARY", string0);
-//    }
+    // @Test
+    // public void test18() throws Throwable {
+    // String string0 = SQLite3Common.getRandomCollate();
+    // assertNotNull(string0);
+    // assertEquals(" COLLATE BINARY", string0);
+    // }
 }

@@ -14,21 +14,26 @@ import sqlancer.cockroachdb.ast.CockroachDBExpression;
 
 public class CockroachDBBinaryComparisonOperator_ESTest {
 
-//    @Test
-//    public void test0() throws Throwable {
-//        CockroachDBBinaryComparisonOperator.CockroachDBComparisonOperator cockroachDBBinaryComparisonOperator_CockroachDBComparisonOperator0 = CockroachDBBinaryComparisonOperator.CockroachDBComparisonOperator
-//                .getRandom();
-//        CockroachDBBinaryComparisonOperator cockroachDBBinaryComparisonOperator0 = new CockroachDBBinaryComparisonOperator(
-//                (CockroachDBExpression) null, (CockroachDBExpression) null,
-//                cockroachDBBinaryComparisonOperator_CockroachDBComparisonOperator0);
-//        assertEquals("=", cockroachDBBinaryComparisonOperator0.getOperatorRepresentation());
-//    }
+    // @Test
+    // public void test0() throws Throwable {
+    // CockroachDBBinaryComparisonOperator.CockroachDBComparisonOperator
+    // cockroachDBBinaryComparisonOperator_CockroachDBComparisonOperator0 =
+    // CockroachDBBinaryComparisonOperator.CockroachDBComparisonOperator
+    // .getRandom();
+    // CockroachDBBinaryComparisonOperator cockroachDBBinaryComparisonOperator0 = new
+    // CockroachDBBinaryComparisonOperator(
+    // (CockroachDBExpression) null, (CockroachDBExpression) null,
+    // cockroachDBBinaryComparisonOperator_CockroachDBComparisonOperator0);
+    // assertEquals("=", cockroachDBBinaryComparisonOperator0.getOperatorRepresentation());
+    // }
 
-//    @Test
-//    public void test1() throws Throwable {
-//        CockroachDBBinaryComparisonOperator.CockroachDBComparisonOperator cockroachDBBinaryComparisonOperator_CockroachDBComparisonOperator0 = CockroachDBBinaryComparisonOperator.CockroachDBComparisonOperator
-//                .getRandom();
-//        String string0 = cockroachDBBinaryComparisonOperator_CockroachDBComparisonOperator0.getTextRepresentation();
-//        assertEquals("=", string0);
-//    }
+    // @Test
+    // public void test1() throws Throwable {
+    // CockroachDBBinaryComparisonOperator.CockroachDBComparisonOperator
+    // cockroachDBBinaryComparisonOperator_CockroachDBComparisonOperator0 =
+    // CockroachDBBinaryComparisonOperator.CockroachDBComparisonOperator
+    // .getRandom();
+    // String string0 = cockroachDBBinaryComparisonOperator_CockroachDBComparisonOperator0.getTextRepresentation();
+    // assertEquals("=", string0);
+    // }
 }

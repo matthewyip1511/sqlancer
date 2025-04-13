@@ -83,14 +83,15 @@ public class SQLite3Aggregate_ESTest {
         }
     }
 
-//    @Test
-//    public void test05() throws Throwable {
-//        SQLite3Aggregate.SQLite3AggregateFunction sQLite3Aggregate_SQLite3AggregateFunction0 = SQLite3Aggregate.SQLite3AggregateFunction.SUM;
-//        SQLite3Aggregate sQLite3Aggregate0 = new SQLite3Aggregate((List<SQLite3Expression>) null,
-//                sQLite3Aggregate_SQLite3AggregateFunction0);
-//        SQLite3Constant sQLite3Constant0 = sQLite3Aggregate0.getExpectedValue();
-//        assertNull(sQLite3Constant0);
-//    }
+    // @Test
+    // public void test05() throws Throwable {
+    // SQLite3Aggregate.SQLite3AggregateFunction sQLite3Aggregate_SQLite3AggregateFunction0 =
+    // SQLite3Aggregate.SQLite3AggregateFunction.SUM;
+    // SQLite3Aggregate sQLite3Aggregate0 = new SQLite3Aggregate((List<SQLite3Expression>) null,
+    // sQLite3Aggregate_SQLite3AggregateFunction0);
+    // SQLite3Constant sQLite3Constant0 = sQLite3Aggregate0.getExpectedValue();
+    // assertNull(sQLite3Constant0);
+    // }
 
     @Test
     public void test06() throws Throwable {
@@ -137,15 +138,17 @@ public class SQLite3Aggregate_ESTest {
         }
     }
 
-//    @Test
-//    public void test10() throws Throwable {
-//        SQLite3Aggregate.SQLite3AggregateFunction sQLite3Aggregate_SQLite3AggregateFunction0 = SQLite3Aggregate.SQLite3AggregateFunction.GROUP_CONCAT;
-//        SQLite3Constant.SQLite3RealConstant sQLite3Constant_SQLite3RealConstant0 = new SQLite3Constant.SQLite3RealConstant(
-//                0.0);
-//        SQLite3Constant sQLite3Constant0 = sQLite3Aggregate_SQLite3AggregateFunction0
-//                .apply(sQLite3Constant_SQLite3RealConstant0);
-//        assertNull(sQLite3Constant0);
-//    }
+    // @Test
+    // public void test10() throws Throwable {
+    // SQLite3Aggregate.SQLite3AggregateFunction sQLite3Aggregate_SQLite3AggregateFunction0 =
+    // SQLite3Aggregate.SQLite3AggregateFunction.GROUP_CONCAT;
+    // SQLite3Constant.SQLite3RealConstant sQLite3Constant_SQLite3RealConstant0 = new
+    // SQLite3Constant.SQLite3RealConstant(
+    // 0.0);
+    // SQLite3Constant sQLite3Constant0 = sQLite3Aggregate_SQLite3AggregateFunction0
+    // .apply(sQLite3Constant_SQLite3RealConstant0);
+    // assertNull(sQLite3Constant0);
+    // }
 
     @Test
     public void test11() throws Throwable {

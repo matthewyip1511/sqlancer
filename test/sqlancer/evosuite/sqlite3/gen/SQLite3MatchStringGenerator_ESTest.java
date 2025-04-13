@@ -46,39 +46,39 @@ public class SQLite3MatchStringGenerator_ESTest {
     // }
     // }
 
-//    @Test
-//    public void test2() throws Throwable {
-//        Randomly randomly0 = new Randomly();
-//        randomly0.getChar();
-//        randomly0.getChar();
-//        String string0 = SQLite3MatchStringGenerator.generateMatchString(randomly0);
-//        assertEquals("NOT  AND  OR NEAR/24NEAR/24", string0);
-//    }
+    // @Test
+    // public void test2() throws Throwable {
+    // Randomly randomly0 = new Randomly();
+    // randomly0.getChar();
+    // randomly0.getChar();
+    // String string0 = SQLite3MatchStringGenerator.generateMatchString(randomly0);
+    // assertEquals("NOT AND OR NEAR/24NEAR/24", string0);
+    // }
 
-//    @Test
-//    public void test3() throws Throwable {
-//        Randomly randomly0 = new Randomly();
-//        randomly0.getChar();
-//        randomly0.getPositiveIntegerInt();
-//        String string0 = SQLite3MatchStringGenerator.generateMatchString(randomly0);
-//        assertEquals("778899 ", string0);
-//    }
+    // @Test
+    // public void test3() throws Throwable {
+    // Randomly randomly0 = new Randomly();
+    // randomly0.getChar();
+    // randomly0.getPositiveIntegerInt();
+    // String string0 = SQLite3MatchStringGenerator.generateMatchString(randomly0);
+    // assertEquals("778899 ", string0);
+    // }
 
-//    @Test
-//    public void test4() throws Throwable {
-//        Randomly randomly0 = new Randomly((-904L));
-//        SQLite3MatchStringGenerator.generateMatchString(randomly0);
-//        String string0 = SQLite3MatchStringGenerator.generateMatchString(randomly0);
-//        assertEquals(" + ", string0);
-//
-//        SQLite3MatchStringGenerator.generateMatchString(randomly0);
-//        String string1 = SQLite3MatchStringGenerator.generateMatchString(randomly0);
-//        assertEquals("NOT c0 OR c0 AND NEAR/28", string1);
-//
-//        SQLite3MatchStringGenerator.generateMatchString(randomly0);
-//        String string2 = SQLite3MatchStringGenerator.generateMatchString(randomly0);
-//        assertEquals("IJJK*LMM ", string2);
-//    }
+    // @Test
+    // public void test4() throws Throwable {
+    // Randomly randomly0 = new Randomly((-904L));
+    // SQLite3MatchStringGenerator.generateMatchString(randomly0);
+    // String string0 = SQLite3MatchStringGenerator.generateMatchString(randomly0);
+    // assertEquals(" + ", string0);
+    //
+    // SQLite3MatchStringGenerator.generateMatchString(randomly0);
+    // String string1 = SQLite3MatchStringGenerator.generateMatchString(randomly0);
+    // assertEquals("NOT c0 OR c0 AND NEAR/28", string1);
+    //
+    // SQLite3MatchStringGenerator.generateMatchString(randomly0);
+    // String string2 = SQLite3MatchStringGenerator.generateMatchString(randomly0);
+    // assertEquals("IJJK*LMM ", string2);
+    // }
 
     // @Test
     // public void test5() throws Throwable {

@@ -39,33 +39,35 @@ public class CockroachDBToStringVisitor_ESTest {
     private void verifyException(String s, Exception e) {
     }
 
-//    @Test
-//    public void test00() throws Throwable {
-//        CockroachDBToStringVisitor cockroachDBToStringVisitor0 = new CockroachDBToStringVisitor();
-//        CockroachDBSchema.CockroachDBCompositeDataType cockroachDBSchema_CockroachDBCompositeDataType0 = CockroachDBSchema.CockroachDBCompositeDataType
-//                .getVarBit(5);
-//        CockroachDBSchema.CockroachDBColumn cockroachDBSchema_CockroachDBColumn0 = new CockroachDBSchema.CockroachDBColumn(
-//                "#@q pUVmV6j9", cockroachDBSchema_CockroachDBCompositeDataType0, true, false);
-//        CockroachDBColumnReference cockroachDBColumnReference0 = new CockroachDBColumnReference(
-//                cockroachDBSchema_CockroachDBColumn0);
-//        CockroachDBExpression[] cockroachDBExpressionArray0 = new CockroachDBExpression[6];
-//        cockroachDBExpressionArray0[0] = (CockroachDBExpression) cockroachDBColumnReference0;
-//        List<CockroachDBExpression> list0 = Randomly.subset(6, cockroachDBExpressionArray0);
-//        List<CockroachDBExpression> list1 = Randomly.subset(6, cockroachDBExpressionArray0);
-//        CockroachDBCaseOperation cockroachDBCaseOperation0 = new CockroachDBCaseOperation(list0, list1,
-//                cockroachDBExpressionArray0[0]);
-//        // Undeclared exception!
-//        try {
-//            cockroachDBToStringVisitor0.visit(cockroachDBCaseOperation0);
-//            fail("Expecting exception: NullPointerException");
-//
-//        } catch (NullPointerException e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//            verifyException("sqlancer.cockroachdb.CockroachDBVisitor", e);
-//        }
-//    }
+    // @Test
+    // public void test00() throws Throwable {
+    // CockroachDBToStringVisitor cockroachDBToStringVisitor0 = new CockroachDBToStringVisitor();
+    // CockroachDBSchema.CockroachDBCompositeDataType cockroachDBSchema_CockroachDBCompositeDataType0 =
+    // CockroachDBSchema.CockroachDBCompositeDataType
+    // .getVarBit(5);
+    // CockroachDBSchema.CockroachDBColumn cockroachDBSchema_CockroachDBColumn0 = new
+    // CockroachDBSchema.CockroachDBColumn(
+    // "#@q pUVmV6j9", cockroachDBSchema_CockroachDBCompositeDataType0, true, false);
+    // CockroachDBColumnReference cockroachDBColumnReference0 = new CockroachDBColumnReference(
+    // cockroachDBSchema_CockroachDBColumn0);
+    // CockroachDBExpression[] cockroachDBExpressionArray0 = new CockroachDBExpression[6];
+    // cockroachDBExpressionArray0[0] = (CockroachDBExpression) cockroachDBColumnReference0;
+    // List<CockroachDBExpression> list0 = Randomly.subset(6, cockroachDBExpressionArray0);
+    // List<CockroachDBExpression> list1 = Randomly.subset(6, cockroachDBExpressionArray0);
+    // CockroachDBCaseOperation cockroachDBCaseOperation0 = new CockroachDBCaseOperation(list0, list1,
+    // cockroachDBExpressionArray0[0]);
+    // // Undeclared exception!
+    // try {
+    // cockroachDBToStringVisitor0.visit(cockroachDBCaseOperation0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.cockroachdb.CockroachDBVisitor", e);
+    // }
+    // }
 
     @Test
     public void test01() throws Throwable {
@@ -189,50 +191,55 @@ public class CockroachDBToStringVisitor_ESTest {
         }
     }
 
-//    @Test
-//    public void test08() throws Throwable {
-//        CockroachDBToStringVisitor cockroachDBToStringVisitor0 = new CockroachDBToStringVisitor();
-//        CockroachDBExpression[] cockroachDBExpressionArray0 = new CockroachDBExpression[3];
-//        CockroachDBConstant.CockroachDBDoubleConstant cockroachDBConstant_CockroachDBDoubleConstant0 = new CockroachDBConstant.CockroachDBDoubleConstant(
-//                2107.9);
-//        CockroachDBExpression cockroachDBExpression0 = CockroachDBConstant.createIntervalConstant((-1943L), (-1L),
-//                (-1943L), (-1943L), (-1L), (-1L));
-//        CockroachDBBetweenOperation.CockroachDBBetweenOperatorType cockroachDBBetweenOperation_CockroachDBBetweenOperatorType0 = CockroachDBBetweenOperation.CockroachDBBetweenOperatorType.NOT_BETWEEN;
-//        CockroachDBBetweenOperation cockroachDBBetweenOperation0 = new CockroachDBBetweenOperation(
-//                cockroachDBConstant_CockroachDBDoubleConstant0, cockroachDBConstant_CockroachDBDoubleConstant0,
-//                cockroachDBExpression0, cockroachDBBetweenOperation_CockroachDBBetweenOperatorType0);
-//        cockroachDBExpressionArray0[0] = (CockroachDBExpression) cockroachDBBetweenOperation0;
-//        CockroachDBNotOperation cockroachDBNotOperation0 = new CockroachDBNotOperation(cockroachDBExpressionArray0[0]);
-//        List<CockroachDBExpression> list0 = Randomly.subset((-2797), cockroachDBExpressionArray0);
-//        CockroachDBConstant.CockroachDBArrayConstant cockroachDBConstant_CockroachDBArrayConstant0 = new CockroachDBConstant.CockroachDBArrayConstant(
-//                list0);
-//        CockroachDBInOperation cockroachDBInOperation0 = new CockroachDBInOperation(
-//                cockroachDBConstant_CockroachDBArrayConstant0, list0);
-//        CockroachDBJoin.JoinType cockroachDBJoin_JoinType0 = CockroachDBJoin.JoinType.FULL;
-//        CockroachDBJoin cockroachDBJoin0 = CockroachDBJoin.createJoin(cockroachDBInOperation0, cockroachDBNotOperation0,
-//                cockroachDBJoin_JoinType0, cockroachDBExpressionArray0[1]);
-//        // Undeclared exception!
-//        try {
-//            cockroachDBToStringVisitor0.visit(cockroachDBJoin0);
-//            fail("Expecting exception: NullPointerException");
-//
-//        } catch (NullPointerException e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//            verifyException("sqlancer.cockroachdb.CockroachDBVisitor", e);
-//        }
-//    }
+    // @Test
+    // public void test08() throws Throwable {
+    // CockroachDBToStringVisitor cockroachDBToStringVisitor0 = new CockroachDBToStringVisitor();
+    // CockroachDBExpression[] cockroachDBExpressionArray0 = new CockroachDBExpression[3];
+    // CockroachDBConstant.CockroachDBDoubleConstant cockroachDBConstant_CockroachDBDoubleConstant0 = new
+    // CockroachDBConstant.CockroachDBDoubleConstant(
+    // 2107.9);
+    // CockroachDBExpression cockroachDBExpression0 = CockroachDBConstant.createIntervalConstant((-1943L), (-1L),
+    // (-1943L), (-1943L), (-1L), (-1L));
+    // CockroachDBBetweenOperation.CockroachDBBetweenOperatorType
+    // cockroachDBBetweenOperation_CockroachDBBetweenOperatorType0 =
+    // CockroachDBBetweenOperation.CockroachDBBetweenOperatorType.NOT_BETWEEN;
+    // CockroachDBBetweenOperation cockroachDBBetweenOperation0 = new CockroachDBBetweenOperation(
+    // cockroachDBConstant_CockroachDBDoubleConstant0, cockroachDBConstant_CockroachDBDoubleConstant0,
+    // cockroachDBExpression0, cockroachDBBetweenOperation_CockroachDBBetweenOperatorType0);
+    // cockroachDBExpressionArray0[0] = (CockroachDBExpression) cockroachDBBetweenOperation0;
+    // CockroachDBNotOperation cockroachDBNotOperation0 = new CockroachDBNotOperation(cockroachDBExpressionArray0[0]);
+    // List<CockroachDBExpression> list0 = Randomly.subset((-2797), cockroachDBExpressionArray0);
+    // CockroachDBConstant.CockroachDBArrayConstant cockroachDBConstant_CockroachDBArrayConstant0 = new
+    // CockroachDBConstant.CockroachDBArrayConstant(
+    // list0);
+    // CockroachDBInOperation cockroachDBInOperation0 = new CockroachDBInOperation(
+    // cockroachDBConstant_CockroachDBArrayConstant0, list0);
+    // CockroachDBJoin.JoinType cockroachDBJoin_JoinType0 = CockroachDBJoin.JoinType.FULL;
+    // CockroachDBJoin cockroachDBJoin0 = CockroachDBJoin.createJoin(cockroachDBInOperation0, cockroachDBNotOperation0,
+    // cockroachDBJoin_JoinType0, cockroachDBExpressionArray0[1]);
+    // // Undeclared exception!
+    // try {
+    // cockroachDBToStringVisitor0.visit(cockroachDBJoin0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.cockroachdb.CockroachDBVisitor", e);
+    // }
+    // }
 
-//    @Test
-//    public void test09() throws Throwable {
-//        CockroachDBToStringVisitor cockroachDBToStringVisitor0 = new CockroachDBToStringVisitor();
-//        CockroachDBConstant.CockroachDBTextConstant cockroachDBConstant_CockroachDBTextConstant0 = new CockroachDBConstant.CockroachDBTextConstant(
-//                (String) null);
-//        cockroachDBToStringVisitor0.visit((CockroachDBConstant) cockroachDBConstant_CockroachDBTextConstant0);
-//        String string0 = cockroachDBToStringVisitor0.getString();
-//        assertNotNull(string0);
-//    }
+    // @Test
+    // public void test09() throws Throwable {
+    // CockroachDBToStringVisitor cockroachDBToStringVisitor0 = new CockroachDBToStringVisitor();
+    // CockroachDBConstant.CockroachDBTextConstant cockroachDBConstant_CockroachDBTextConstant0 = new
+    // CockroachDBConstant.CockroachDBTextConstant(
+    // (String) null);
+    // cockroachDBToStringVisitor0.visit((CockroachDBConstant) cockroachDBConstant_CockroachDBTextConstant0);
+    // String string0 = cockroachDBToStringVisitor0.getString();
+    // assertNotNull(string0);
+    // }
 
     @Test
     public void test10() throws Throwable {
@@ -404,25 +411,27 @@ public class CockroachDBToStringVisitor_ESTest {
         }
     }
 
-//    @Test
-//    public void test20() throws Throwable {
-//        CockroachDBToStringVisitor cockroachDBToStringVisitor0 = new CockroachDBToStringVisitor();
-//        CockroachDBBetweenOperation.CockroachDBBetweenOperatorType cockroachDBBetweenOperation_CockroachDBBetweenOperatorType0 = CockroachDBBetweenOperation.CockroachDBBetweenOperatorType.BETWEEN_SYMMETRIC;
-//        CockroachDBBetweenOperation cockroachDBBetweenOperation0 = new CockroachDBBetweenOperation(
-//                (CockroachDBExpression) null, (CockroachDBExpression) null, (CockroachDBExpression) null,
-//                cockroachDBBetweenOperation_CockroachDBBetweenOperatorType0);
-//        // Undeclared exception!
-//        try {
-//            cockroachDBToStringVisitor0.visit(cockroachDBBetweenOperation0);
-//            fail("Expecting exception: NullPointerException");
-//
-//        } catch (NullPointerException e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//            verifyException("sqlancer.cockroachdb.CockroachDBVisitor", e);
-//        }
-//    }
+    // @Test
+    // public void test20() throws Throwable {
+    // CockroachDBToStringVisitor cockroachDBToStringVisitor0 = new CockroachDBToStringVisitor();
+    // CockroachDBBetweenOperation.CockroachDBBetweenOperatorType
+    // cockroachDBBetweenOperation_CockroachDBBetweenOperatorType0 =
+    // CockroachDBBetweenOperation.CockroachDBBetweenOperatorType.BETWEEN_SYMMETRIC;
+    // CockroachDBBetweenOperation cockroachDBBetweenOperation0 = new CockroachDBBetweenOperation(
+    // (CockroachDBExpression) null, (CockroachDBExpression) null, (CockroachDBExpression) null,
+    // cockroachDBBetweenOperation_CockroachDBBetweenOperatorType0);
+    // // Undeclared exception!
+    // try {
+    // cockroachDBToStringVisitor0.visit(cockroachDBBetweenOperation0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.cockroachdb.CockroachDBVisitor", e);
+    // }
+    // }
 
     @Test
     public void test21() throws Throwable {
@@ -601,16 +610,16 @@ public class CockroachDBToStringVisitor_ESTest {
         assertEquals(CockroachDBJoin.JoinType.INNER, cockroachDBJoin0.getJoinType());
     }
 
-//    @Test
-//    public void test34() throws Throwable {
-//        CockroachDBToStringVisitor cockroachDBToStringVisitor0 = new CockroachDBToStringVisitor();
-//        CockroachDBExpression[] cockroachDBExpressionArray0 = new CockroachDBExpression[8];
-//        List<CockroachDBExpression> list0 = Randomly.subset(cockroachDBExpressionArray0);
-//        CockroachDBCaseOperation cockroachDBCaseOperation0 = new CockroachDBCaseOperation(list0, list0,
-//                cockroachDBExpressionArray0[5]);
-//        cockroachDBToStringVisitor0.visit(cockroachDBCaseOperation0);
-//        assertEquals("CASE END", cockroachDBToStringVisitor0.get());
-//    }
+    // @Test
+    // public void test34() throws Throwable {
+    // CockroachDBToStringVisitor cockroachDBToStringVisitor0 = new CockroachDBToStringVisitor();
+    // CockroachDBExpression[] cockroachDBExpressionArray0 = new CockroachDBExpression[8];
+    // List<CockroachDBExpression> list0 = Randomly.subset(cockroachDBExpressionArray0);
+    // CockroachDBCaseOperation cockroachDBCaseOperation0 = new CockroachDBCaseOperation(list0, list0,
+    // cockroachDBExpressionArray0[5]);
+    // cockroachDBToStringVisitor0.visit(cockroachDBCaseOperation0);
+    // assertEquals("CASE END", cockroachDBToStringVisitor0.get());
+    // }
 
     /*
      * Test disabled because it contains mock() function calls that are not implemented

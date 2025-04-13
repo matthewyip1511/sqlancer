@@ -15,20 +15,20 @@ import sqlancer.common.query.SQLQueryAdapter;
 
 public class CockroachDBSetClusterSettingGenerator_ESTest {
 
-//    @Test
-//    public void test0() throws Throwable {
-//        SQLQueryAdapter sQLQueryAdapter0 = CockroachDBSetClusterSettingGenerator
-//                .create((CockroachDBProvider.CockroachDBGlobalState) null);
-//        assertEquals("SET CLUSTER SETTING  kv.range.backpressure_range_size_multiplier=DEFAULT;",
-//                sQLQueryAdapter0.getQueryString());
-//
-//        SQLQueryAdapter sQLQueryAdapter1 = CockroachDBSetClusterSettingGenerator
-//                .create((CockroachDBProvider.CockroachDBGlobalState) null);
-//        assertEquals("SET CLUSTER SETTING  kv.range.backpressure_range_size_multiplier=1;",
-//                sQLQueryAdapter1.getQueryString());
-//
-//        SQLQueryAdapter sQLQueryAdapter2 = CockroachDBSetClusterSettingGenerator
-//                .create((CockroachDBProvider.CockroachDBGlobalState) null);
-//        assertEquals("SET CLUSTER SETTING kv.range_descriptor_cache.size=2;", sQLQueryAdapter2.getQueryString());
-//    }
+    // @Test
+    // public void test0() throws Throwable {
+    // SQLQueryAdapter sQLQueryAdapter0 = CockroachDBSetClusterSettingGenerator
+    // .create((CockroachDBProvider.CockroachDBGlobalState) null);
+    // assertEquals("SET CLUSTER SETTING kv.range.backpressure_range_size_multiplier=DEFAULT;",
+    // sQLQueryAdapter0.getQueryString());
+    //
+    // SQLQueryAdapter sQLQueryAdapter1 = CockroachDBSetClusterSettingGenerator
+    // .create((CockroachDBProvider.CockroachDBGlobalState) null);
+    // assertEquals("SET CLUSTER SETTING kv.range.backpressure_range_size_multiplier=1;",
+    // sQLQueryAdapter1.getQueryString());
+    //
+    // SQLQueryAdapter sQLQueryAdapter2 = CockroachDBSetClusterSettingGenerator
+    // .create((CockroachDBProvider.CockroachDBGlobalState) null);
+    // assertEquals("SET CLUSTER SETTING kv.range_descriptor_cache.size=2;", sQLQueryAdapter2.getQueryString());
+    // }
 }

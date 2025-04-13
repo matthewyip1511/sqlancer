@@ -89,27 +89,28 @@ public class SQLite3ExpressionGenerator_ESTest {
         assertNotSame(sQLite3ExpressionGenerator1, sQLite3ExpressionGenerator0);
     }
 
-//    @Test
-//    public void test06() throws Throwable {
-//        SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
-//        SQLite3ExpressionGenerator sQLite3ExpressionGenerator0 = new SQLite3ExpressionGenerator(sQLite3GlobalState0);
-//        SQLite3Select sQLite3Select0 = new SQLite3Select();
-//        SQLite3Select sQLite3Select1 = sQLite3ExpressionGenerator0.generateSelect();
-//        String string0 = sQLite3ExpressionGenerator0.generateUnoptimizedQueryString(sQLite3Select1,
-//                (SQLite3Expression) sQLite3Select0);
-//        assertEquals("SELECT SUM(count) FROM (SELECT ALL (((SELECT  FROM )) IS TRUE)  as count FROM )", string0);
-//    }
+    // @Test
+    // public void test06() throws Throwable {
+    // SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
+    // SQLite3ExpressionGenerator sQLite3ExpressionGenerator0 = new SQLite3ExpressionGenerator(sQLite3GlobalState0);
+    // SQLite3Select sQLite3Select0 = new SQLite3Select();
+    // SQLite3Select sQLite3Select1 = sQLite3ExpressionGenerator0.generateSelect();
+    // String string0 = sQLite3ExpressionGenerator0.generateUnoptimizedQueryString(sQLite3Select1,
+    // (SQLite3Expression) sQLite3Select0);
+    // assertEquals("SELECT SUM(count) FROM (SELECT ALL (((SELECT FROM )) IS TRUE) as count FROM )", string0);
+    // }
 
-//    @Test
-//    public void test07() throws Throwable {
-//        SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
-//        SQLite3ExpressionGenerator sQLite3ExpressionGenerator0 = new SQLite3ExpressionGenerator(sQLite3GlobalState0);
-//        SQLite3Select sQLite3Select0 = new SQLite3Select();
-//        SQLite3Constant.SQLite3NullConstant sQLite3Constant_SQLite3NullConstant0 = new SQLite3Constant.SQLite3NullConstant();
-//        String string0 = sQLite3ExpressionGenerator0.generateOptimizedQueryString(sQLite3Select0,
-//                (SQLite3Expression) sQLite3Constant_SQLite3NullConstant0, true);
-//        assertEquals("SELECT ALL COUNT(*) FROM  WHERE (NULL)", string0);
-//    }
+    // @Test
+    // public void test07() throws Throwable {
+    // SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
+    // SQLite3ExpressionGenerator sQLite3ExpressionGenerator0 = new SQLite3ExpressionGenerator(sQLite3GlobalState0);
+    // SQLite3Select sQLite3Select0 = new SQLite3Select();
+    // SQLite3Constant.SQLite3NullConstant sQLite3Constant_SQLite3NullConstant0 = new
+    // SQLite3Constant.SQLite3NullConstant();
+    // String string0 = sQLite3ExpressionGenerator0.generateOptimizedQueryString(sQLite3Select0,
+    // (SQLite3Expression) sQLite3Constant_SQLite3NullConstant0, true);
+    // assertEquals("SELECT ALL COUNT(*) FROM WHERE (NULL)", string0);
+    // }
 
     @Test
     public void test08() throws Throwable {
@@ -231,23 +232,23 @@ public class SQLite3ExpressionGenerator_ESTest {
         }
     }
 
-//    @Test
-//    public void test15() throws Throwable {
-//        SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
-//        SQLite3ExpressionGenerator sQLite3ExpressionGenerator0 = new SQLite3ExpressionGenerator(sQLite3GlobalState0);
-//        SQLite3Select sQLite3Select0 = new SQLite3Select();
-//        // Undeclared exception!
-//        try {
-//            sQLite3ExpressionGenerator0.generateOptimizedQueryString(sQLite3Select0, (SQLite3Expression) sQLite3Select0,
-//                    false);
-//            fail("Expecting exception: StackOverflowError");
-//
-//        } catch (StackOverflowError e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//        }
-//    }
+    // @Test
+    // public void test15() throws Throwable {
+    // SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
+    // SQLite3ExpressionGenerator sQLite3ExpressionGenerator0 = new SQLite3ExpressionGenerator(sQLite3GlobalState0);
+    // SQLite3Select sQLite3Select0 = new SQLite3Select();
+    // // Undeclared exception!
+    // try {
+    // sQLite3ExpressionGenerator0.generateOptimizedQueryString(sQLite3Select0, (SQLite3Expression) sQLite3Select0,
+    // false);
+    // fail("Expecting exception: StackOverflowError");
+    //
+    // } catch (StackOverflowError e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // }
+    // }
 
     // @Test
     // public void test16() throws Throwable {
@@ -461,12 +462,12 @@ public class SQLite3ExpressionGenerator_ESTest {
         }
     }
 
-//    @Test
-//    public void test30() throws Throwable {
-//        SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
-//        SQLite3Expression sQLite3Expression0 = SQLite3ExpressionGenerator.getRandomLiteralValue(sQLite3GlobalState0);
-//        assertNull(sQLite3Expression0.getExplicitCollateSequence());
-//    }
+    // @Test
+    // public void test30() throws Throwable {
+    // SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
+    // SQLite3Expression sQLite3Expression0 = SQLite3ExpressionGenerator.getRandomLiteralValue(sQLite3GlobalState0);
+    // assertNull(sQLite3Expression0.getExplicitCollateSequence());
+    // }
 
     @Test
     public void test31() throws Throwable {
@@ -606,23 +607,23 @@ public class SQLite3ExpressionGenerator_ESTest {
         assertNotSame(sQLite3ExpressionGenerator1, sQLite3ExpressionGenerator0);
     }
 
-//    @Test
-//    public void test41() throws Throwable {
-//        SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
-//        SQLite3ExpressionGenerator sQLite3ExpressionGenerator0 = new SQLite3ExpressionGenerator(sQLite3GlobalState0);
-//        SQLite3Select sQLite3Select0 = sQLite3ExpressionGenerator0.generateSelect();
-//        SQLite3Expression sQLite3Expression0 = sQLite3ExpressionGenerator0.negatePredicate((SQLite3Expression) null);
-//        // Undeclared exception!
-//        try {
-//            sQLite3ExpressionGenerator0.generateOptimizedQueryString(sQLite3Select0, sQLite3Expression0, true);
-//            fail("Expecting exception: AssertionError");
-//
-//        } catch (AssertionError e) {
-//            //
-//            // null
-//            //
-//        }
-//    }
+    // @Test
+    // public void test41() throws Throwable {
+    // SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
+    // SQLite3ExpressionGenerator sQLite3ExpressionGenerator0 = new SQLite3ExpressionGenerator(sQLite3GlobalState0);
+    // SQLite3Select sQLite3Select0 = sQLite3ExpressionGenerator0.generateSelect();
+    // SQLite3Expression sQLite3Expression0 = sQLite3ExpressionGenerator0.negatePredicate((SQLite3Expression) null);
+    // // Undeclared exception!
+    // try {
+    // sQLite3ExpressionGenerator0.generateOptimizedQueryString(sQLite3Select0, sQLite3Expression0, true);
+    // fail("Expecting exception: AssertionError");
+    //
+    // } catch (AssertionError e) {
+    // //
+    // // null
+    // //
+    // }
+    // }
 
     @Test
     public void test42() throws Throwable {

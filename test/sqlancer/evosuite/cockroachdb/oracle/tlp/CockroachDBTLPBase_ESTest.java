@@ -70,19 +70,21 @@ public class CockroachDBTLPBase_ESTest {
         }
     }
 
-//    @Test
-//    public void test3() throws Throwable {
-//        CockroachDBProvider.CockroachDBGlobalState cockroachDBProvider_CockroachDBGlobalState0 = new CockroachDBProvider.CockroachDBGlobalState();
-//        CockroachDBConstant.CockroachDBTextConstant cockroachDBConstant_CockroachDBTextConstant0 = new CockroachDBConstant.CockroachDBTextConstant(
-//                "A@:2TM_e:NjKRL3");
-//        List<CockroachDBExpression> list0 = List.of(
-//                (CockroachDBExpression) cockroachDBConstant_CockroachDBTextConstant0,
-//                (CockroachDBExpression) cockroachDBConstant_CockroachDBTextConstant0,
-//                (CockroachDBExpression) cockroachDBConstant_CockroachDBTextConstant0);
-//        List<CockroachDBExpression> list1 = CockroachDBTLPBase.getJoins(list0,
-//                cockroachDBProvider_CockroachDBGlobalState0);
-//        assertEquals(0, list1.size());
-//    }
+    // @Test
+    // public void test3() throws Throwable {
+    // CockroachDBProvider.CockroachDBGlobalState cockroachDBProvider_CockroachDBGlobalState0 = new
+    // CockroachDBProvider.CockroachDBGlobalState();
+    // CockroachDBConstant.CockroachDBTextConstant cockroachDBConstant_CockroachDBTextConstant0 = new
+    // CockroachDBConstant.CockroachDBTextConstant(
+    // "A@:2TM_e:NjKRL3");
+    // List<CockroachDBExpression> list0 = List.of(
+    // (CockroachDBExpression) cockroachDBConstant_CockroachDBTextConstant0,
+    // (CockroachDBExpression) cockroachDBConstant_CockroachDBTextConstant0,
+    // (CockroachDBExpression) cockroachDBConstant_CockroachDBTextConstant0);
+    // List<CockroachDBExpression> list1 = CockroachDBTLPBase.getJoins(list0,
+    // cockroachDBProvider_CockroachDBGlobalState0);
+    // assertEquals(0, list1.size());
+    // }
 
     @Test
     public void test4() throws Throwable {

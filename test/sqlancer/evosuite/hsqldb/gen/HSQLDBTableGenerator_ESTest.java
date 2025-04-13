@@ -33,17 +33,17 @@ public class HSQLDBTableGenerator_ESTest {
         }
     }
 
-//    @Test
-//    public void test1() throws Throwable {
-//        HSQLDBTableGenerator hSQLDBTableGenerator0 = new HSQLDBTableGenerator();
-//        HSQLDBProvider.HSQLDBGlobalState hSQLDBProvider_HSQLDBGlobalState0 = new HSQLDBProvider.HSQLDBGlobalState();
-//        hSQLDBTableGenerator0.getQuery(hSQLDBProvider_HSQLDBGlobalState0, "");
-//        SQLQueryAdapter sQLQueryAdapter0 = hSQLDBTableGenerator0.getQuery(hSQLDBProvider_HSQLDBGlobalState0, "");
-//        assertEquals("CREATE TABLE (c0 BOOLEAN);", sQLQueryAdapter0.getQueryString());
-//
-//        SQLQueryAdapter sQLQueryAdapter1 = hSQLDBTableGenerator0.getQuery(hSQLDBProvider_HSQLDBGlobalState0, "");
-//        assertEquals("CREATE TABLE (c0 CHAR(6));", sQLQueryAdapter1.getQueryString());
-//    }
+    // @Test
+    // public void test1() throws Throwable {
+    // HSQLDBTableGenerator hSQLDBTableGenerator0 = new HSQLDBTableGenerator();
+    // HSQLDBProvider.HSQLDBGlobalState hSQLDBProvider_HSQLDBGlobalState0 = new HSQLDBProvider.HSQLDBGlobalState();
+    // hSQLDBTableGenerator0.getQuery(hSQLDBProvider_HSQLDBGlobalState0, "");
+    // SQLQueryAdapter sQLQueryAdapter0 = hSQLDBTableGenerator0.getQuery(hSQLDBProvider_HSQLDBGlobalState0, "");
+    // assertEquals("CREATE TABLE (c0 BOOLEAN);", sQLQueryAdapter0.getQueryString());
+    //
+    // SQLQueryAdapter sQLQueryAdapter1 = hSQLDBTableGenerator0.getQuery(hSQLDBProvider_HSQLDBGlobalState0, "");
+    // assertEquals("CREATE TABLE (c0 CHAR(6));", sQLQueryAdapter1.getQueryString());
+    // }
 
     @Test
     public void test2() throws Throwable {

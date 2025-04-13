@@ -618,13 +618,13 @@ public class SQLite3Constant_ESTest {
         assertEquals(8, byteArray1.length);
     }
 
-//    @Test
-//    public void test060() throws Throwable {
-//        Randomly randomly0 = new Randomly(1L);
-//        SQLite3Constant sQLite3Constant0 = SQLite3Constant.getRandomBinaryConstant(randomly0);
-//        byte[] byteArray0 = sQLite3Constant0.asBinary();
-//        assertEquals(0, byteArray0.length);
-//    }
+    // @Test
+    // public void test060() throws Throwable {
+    // Randomly randomly0 = new Randomly(1L);
+    // SQLite3Constant sQLite3Constant0 = SQLite3Constant.getRandomBinaryConstant(randomly0);
+    // byte[] byteArray0 = sQLite3Constant0.asBinary();
+    // assertEquals(0, byteArray0.length);
+    // }
 
     @Test
     public void test061() throws Throwable {

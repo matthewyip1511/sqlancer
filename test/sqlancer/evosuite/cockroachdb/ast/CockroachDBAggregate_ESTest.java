@@ -114,15 +114,17 @@ public class CockroachDBAggregate_ESTest {
         assertEquals(0, list0.size());
     }
 
-//    @Test
-//    public void test6() throws Throwable {
-//        CockroachDBAggregate.CockroachDBAggregateFunction cockroachDBAggregate_CockroachDBAggregateFunction0 = CockroachDBAggregate.CockroachDBAggregateFunction.MIN;
-//        CockroachDBSchema.CockroachDBDataType cockroachDBSchema_CockroachDBDataType0 = cockroachDBAggregate_CockroachDBAggregateFunction0
-//                .getRandomReturnType();
-//        List<CockroachDBAggregate.CockroachDBAggregateFunction> list0 = CockroachDBAggregate.CockroachDBAggregateFunction
-//                .getAggregates(cockroachDBSchema_CockroachDBDataType0);
-//        assertEquals(13, list0.size());
-//    }
+    // @Test
+    // public void test6() throws Throwable {
+    // CockroachDBAggregate.CockroachDBAggregateFunction cockroachDBAggregate_CockroachDBAggregateFunction0 =
+    // CockroachDBAggregate.CockroachDBAggregateFunction.MIN;
+    // CockroachDBSchema.CockroachDBDataType cockroachDBSchema_CockroachDBDataType0 =
+    // cockroachDBAggregate_CockroachDBAggregateFunction0
+    // .getRandomReturnType();
+    // List<CockroachDBAggregate.CockroachDBAggregateFunction> list0 = CockroachDBAggregate.CockroachDBAggregateFunction
+    // .getAggregates(cockroachDBSchema_CockroachDBDataType0);
+    // assertEquals(13, list0.size());
+    // }
 
     @Test
     public void test7() throws Throwable {
@@ -139,11 +141,12 @@ public class CockroachDBAggregate_ESTest {
         assertEquals(1, list0.size());
     }
 
-//    @Test
-//    public void test8() throws Throwable {
-//        CockroachDBAggregate.CockroachDBAggregateFunction cockroachDBAggregate_CockroachDBAggregateFunction0 = CockroachDBAggregate.CockroachDBAggregateFunction
-//                .getRandomMetamorphicOracle();
-//        assertEquals(CockroachDBAggregate.CockroachDBAggregateFunction.SUM,
-//                cockroachDBAggregate_CockroachDBAggregateFunction0);
-//    }
+    // @Test
+    // public void test8() throws Throwable {
+    // CockroachDBAggregate.CockroachDBAggregateFunction cockroachDBAggregate_CockroachDBAggregateFunction0 =
+    // CockroachDBAggregate.CockroachDBAggregateFunction
+    // .getRandomMetamorphicOracle();
+    // assertEquals(CockroachDBAggregate.CockroachDBAggregateFunction.SUM,
+    // cockroachDBAggregate_CockroachDBAggregateFunction0);
+    // }
 }

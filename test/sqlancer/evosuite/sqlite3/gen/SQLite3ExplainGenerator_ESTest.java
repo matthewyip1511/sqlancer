@@ -17,19 +17,19 @@ public class SQLite3ExplainGenerator_ESTest {
     private void verifyException(String s, Exception e) {
     }
 
-//    @Test
-//    public void test0() throws Throwable {
-//        try {
-//            SQLite3ExplainGenerator.explain((SQLite3GlobalState) null);
-//            fail("Expecting exception: NullPointerException");
-//
-//        } catch (NullPointerException e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//            verifyException("sqlancer.sqlite3.gen.SQLite3PragmaGenerator", e);
-//        }
-//    }
+    // @Test
+    // public void test0() throws Throwable {
+    // try {
+    // SQLite3ExplainGenerator.explain((SQLite3GlobalState) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.sqlite3.gen.SQLite3PragmaGenerator", e);
+    // }
+    // }
 
     @Test
     public void test1() throws Throwable {
@@ -46,12 +46,12 @@ public class SQLite3ExplainGenerator_ESTest {
         }
     }
 
-//    @Test
-//    public void test2() throws Throwable {
-//        SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
-//        SQLQueryAdapter sQLQueryAdapter0 = SQLite3ExplainGenerator.explain(sQLite3GlobalState0);
-//        assertEquals("EXPLAIN PRAGMA application_id;", sQLQueryAdapter0.getQueryString());
-//    }
+    // @Test
+    // public void test2() throws Throwable {
+    // SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
+    // SQLQueryAdapter sQLQueryAdapter0 = SQLite3ExplainGenerator.explain(sQLite3GlobalState0);
+    // assertEquals("EXPLAIN PRAGMA application_id;", sQLQueryAdapter0.getQueryString());
+    // }
 
     @Test
     public void test3() throws Throwable {

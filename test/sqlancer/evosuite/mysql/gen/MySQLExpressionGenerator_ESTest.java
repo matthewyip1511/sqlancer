@@ -26,24 +26,24 @@ public class MySQLExpressionGenerator_ESTest {
     private void verifyException(String s, Exception e) {
     }
 
-//    @Test
-//    public void test00() throws Throwable {
-//        MySQLGlobalState mySQLGlobalState0 = new MySQLGlobalState();
-//        MySQLExpressionGenerator mySQLExpressionGenerator0 = new MySQLExpressionGenerator(mySQLGlobalState0);
-//        MySQLSelect mySQLSelect0 = new MySQLSelect();
-//        mySQLSelect0.setWhereClause(mySQLSelect0);
-//        boolean boolean0 = mySQLExpressionGenerator0.mutate(mySQLSelect0);
-//        assertTrue(boolean0);
-//    }
+    // @Test
+    // public void test00() throws Throwable {
+    // MySQLGlobalState mySQLGlobalState0 = new MySQLGlobalState();
+    // MySQLExpressionGenerator mySQLExpressionGenerator0 = new MySQLExpressionGenerator(mySQLGlobalState0);
+    // MySQLSelect mySQLSelect0 = new MySQLSelect();
+    // mySQLSelect0.setWhereClause(mySQLSelect0);
+    // boolean boolean0 = mySQLExpressionGenerator0.mutate(mySQLSelect0);
+    // assertTrue(boolean0);
+    // }
 
-//    @Test
-//    public void test01() throws Throwable {
-//        MySQLGlobalState mySQLGlobalState0 = new MySQLGlobalState();
-//        MySQLExpressionGenerator mySQLExpressionGenerator0 = new MySQLExpressionGenerator(mySQLGlobalState0);
-//        MySQLSelect mySQLSelect0 = mySQLExpressionGenerator0.generateSelect();
-//        boolean boolean0 = mySQLExpressionGenerator0.mutate(mySQLSelect0);
-//        assertFalse(boolean0);
-//    }
+    // @Test
+    // public void test01() throws Throwable {
+    // MySQLGlobalState mySQLGlobalState0 = new MySQLGlobalState();
+    // MySQLExpressionGenerator mySQLExpressionGenerator0 = new MySQLExpressionGenerator(mySQLGlobalState0);
+    // MySQLSelect mySQLSelect0 = mySQLExpressionGenerator0.generateSelect();
+    // boolean boolean0 = mySQLExpressionGenerator0.mutate(mySQLSelect0);
+    // assertFalse(boolean0);
+    // }
 
     @Test
     public void test02() throws Throwable {
@@ -651,21 +651,21 @@ public class MySQLExpressionGenerator_ESTest {
         }
     }
 
-//    @Test
-//    public void test38() throws Throwable {
-//        MySQLGlobalState mySQLGlobalState0 = new MySQLGlobalState();
-//        MySQLExpressionGenerator mySQLExpressionGenerator0 = new MySQLExpressionGenerator(mySQLGlobalState0);
-//        MySQLSelect mySQLSelect0 = new MySQLSelect();
-//        // Undeclared exception!
-//        try {
-//            mySQLExpressionGenerator0.mutate(mySQLSelect0);
-//            fail("Expecting exception: NullPointerException");
-//
-//        } catch (NullPointerException e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//            verifyException("sqlancer.mysql.gen.MySQLExpressionGenerator", e);
-//        }
-//    }
+    // @Test
+    // public void test38() throws Throwable {
+    // MySQLGlobalState mySQLGlobalState0 = new MySQLGlobalState();
+    // MySQLExpressionGenerator mySQLExpressionGenerator0 = new MySQLExpressionGenerator(mySQLGlobalState0);
+    // MySQLSelect mySQLSelect0 = new MySQLSelect();
+    // // Undeclared exception!
+    // try {
+    // mySQLExpressionGenerator0.mutate(mySQLSelect0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.mysql.gen.MySQLExpressionGenerator", e);
+    // }
+    // }
 }

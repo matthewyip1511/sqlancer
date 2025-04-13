@@ -47,11 +47,11 @@ public class SQLite3CreateVirtualRtreeTabelGenerator_ESTest {
         }
     }
 
-//    @Test
-//    public void test2() throws Throwable {
-//        SQLQueryAdapter sQLQueryAdapter0 = SQLite3CreateVirtualRtreeTabelGenerator
-//                .createTableStatement("Iv$YH~u|vG~g-!)G", (SQLite3GlobalState) null);
-//        assertEquals("CREATE VIRTUAL TABLE Iv$YH~u|vG~g-!)G USING rtree_i32(c0, c1, c2);",
-//                sQLQueryAdapter0.getQueryString());
-//    }
+    // @Test
+    // public void test2() throws Throwable {
+    // SQLQueryAdapter sQLQueryAdapter0 = SQLite3CreateVirtualRtreeTabelGenerator
+    // .createTableStatement("Iv$YH~u|vG~g-!)G", (SQLite3GlobalState) null);
+    // assertEquals("CREATE VIRTUAL TABLE Iv$YH~u|vG~g-!)G USING rtree_i32(c0, c1, c2);",
+    // sQLQueryAdapter0.getQueryString());
+    // }
 }

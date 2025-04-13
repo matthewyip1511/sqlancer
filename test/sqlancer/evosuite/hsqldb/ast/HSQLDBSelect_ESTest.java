@@ -28,15 +28,15 @@ public class HSQLDBSelect_ESTest {
         assertTrue(boolean0);
     }
 
-//    @Test
-//    public void test1() throws Throwable {
-//        HSQLDBSelect hSQLDBSelect0 = new HSQLDBSelect();
-//        HSQLDBExpression[] hSQLDBExpressionArray0 = new HSQLDBExpression[5];
-//        List<HSQLDBExpression> list0 = Randomly.nonEmptySubset(hSQLDBExpressionArray0);
-//        hSQLDBSelect0.setJoinList(list0);
-//        List<JoinBase<HSQLDBExpression>> list1 = hSQLDBSelect0.getJoinClauses();
-//        assertEquals(1, list1.size());
-//    }
+    // @Test
+    // public void test1() throws Throwable {
+    // HSQLDBSelect hSQLDBSelect0 = new HSQLDBSelect();
+    // HSQLDBExpression[] hSQLDBExpressionArray0 = new HSQLDBExpression[5];
+    // List<HSQLDBExpression> list0 = Randomly.nonEmptySubset(hSQLDBExpressionArray0);
+    // hSQLDBSelect0.setJoinList(list0);
+    // List<JoinBase<HSQLDBExpression>> list1 = hSQLDBSelect0.getJoinClauses();
+    // assertEquals(1, list1.size());
+    // }
 
     @Test
     public void test2() throws Throwable {

@@ -65,22 +65,22 @@ public class SQLite3TLPBase_ESTest {
         }
     }
 
-//    @Test
-//    public void test3() throws Throwable {
-//        SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
-//        SQLite3TLPBase sQLite3TLPBase0 = new SQLite3TLPBase(sQLite3GlobalState0);
-//        // Undeclared exception!
-//        try {
-//            sQLite3TLPBase0.generateFetchColumns();
-//            fail("Expecting exception: NullPointerException");
-//
-//        } catch (NullPointerException e) {
-//            //
-//            // no message in exception (getMessage() returned null)
-//            //
-//            verifyException("sqlancer.sqlite3.oracle.tlp.SQLite3TLPBase", e);
-//        }
-//    }
+    // @Test
+    // public void test3() throws Throwable {
+    // SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
+    // SQLite3TLPBase sQLite3TLPBase0 = new SQLite3TLPBase(sQLite3GlobalState0);
+    // // Undeclared exception!
+    // try {
+    // sQLite3TLPBase0.generateFetchColumns();
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.sqlite3.oracle.tlp.SQLite3TLPBase", e);
+    // }
+    // }
 
     @Test
     public void test4() throws Throwable {
