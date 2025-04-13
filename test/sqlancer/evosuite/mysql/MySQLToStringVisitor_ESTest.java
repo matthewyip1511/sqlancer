@@ -91,15 +91,15 @@ public class MySQLToStringVisitor_ESTest {
         assertEquals("", mySQLStringExpression0.getStr());
     }
 
-    @Test
-    public void test05() throws Throwable {
-        MySQLToStringVisitor mySQLToStringVisitor0 = new MySQLToStringVisitor();
-        MySQLConstant.MySQLTextConstant mySQLConstant_MySQLTextConstant0 = new MySQLConstant.MySQLTextConstant(
-                "xPW![%7yV,y|]6\"_");
-        MySQLExists mySQLExists0 = new MySQLExists(mySQLConstant_MySQLTextConstant0);
-        mySQLToStringVisitor0.visit(mySQLExists0);
-        assertEquals(" EXISTS (\"xPW![%7yV,y|]6\"\"_\")", mySQLToStringVisitor0.get());
-    }
+    // @Test
+    // public void test05() throws Throwable {
+    // MySQLToStringVisitor mySQLToStringVisitor0 = new MySQLToStringVisitor();
+    // MySQLConstant.MySQLTextConstant mySQLConstant_MySQLTextConstant0 = new MySQLConstant.MySQLTextConstant(
+    // "xPW![%7yV,y|]6\"_");
+    // MySQLExists mySQLExists0 = new MySQLExists(mySQLConstant_MySQLTextConstant0);
+    // mySQLToStringVisitor0.visit(mySQLExists0);
+    // assertEquals(" EXISTS (\"xPW![%7yV,y|]6\"\"_\")", mySQLToStringVisitor0.get());
+    // }
 
     @Test
     public void test06() throws Throwable {

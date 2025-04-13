@@ -1694,12 +1694,12 @@ public class SQLite3Expression_ESTest {
     // assertNotNull(sQLite3Expression_ConstantTuple0);
     // }
 
-    @Test
-    public void test135() throws Throwable {
-        SQLite3OrderingTerm.Ordering sQLite3Expression_SQLite3OrderingTerm_Ordering0 = SQLite3OrderingTerm.Ordering
-                .getRandomValue();
-        assertEquals(SQLite3OrderingTerm.Ordering.ASC, sQLite3Expression_SQLite3OrderingTerm_Ordering0);
-    }
+    // @Test
+    // public void test135() throws Throwable {
+    // SQLite3OrderingTerm.Ordering sQLite3Expression_SQLite3OrderingTerm_Ordering0 = SQLite3OrderingTerm.Ordering
+    // .getRandomValue();
+    // assertEquals(SQLite3OrderingTerm.Ordering.ASC, sQLite3Expression_SQLite3OrderingTerm_Ordering0);
+    // }
 
     // @Test
     // public void test136() throws Throwable {

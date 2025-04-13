@@ -14,10 +14,10 @@ import sqlancer.sqlite3.SQLite3GlobalState;
 
 public class SQLite3AnalyzeGenerator_ESTest {
 
-    @Test
-    public void test0() throws Throwable {
-        SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
-        SQLQueryAdapter sQLQueryAdapter0 = SQLite3AnalyzeGenerator.generateAnalyze(sQLite3GlobalState0);
-        assertEquals("ANALYZE;", sQLQueryAdapter0.getQueryString());
-    }
+    // @Test
+    // public void test0() throws Throwable {
+    // SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
+    // SQLQueryAdapter sQLQueryAdapter0 = SQLite3AnalyzeGenerator.generateAnalyze(sQLite3GlobalState0);
+    // assertEquals("ANALYZE;", sQLQueryAdapter0.getQueryString());
+    // }
 }

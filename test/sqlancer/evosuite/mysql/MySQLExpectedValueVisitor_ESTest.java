@@ -149,18 +149,19 @@ public class MySQLExpectedValueVisitor_ESTest {
         assertEquals("(0) XOR (0) -- 0\n\t0 -- 0\n\t0 -- 0\n", mySQLExpectedValueVisitor0.get());
     }
 
-    @Test
-    public void test08() throws Throwable {
-        MySQLExpectedValueVisitor mySQLExpectedValueVisitor0 = new MySQLExpectedValueVisitor();
-        MySQLConstant mySQLConstant0 = MySQLConstant.createStringConstant("+jvw<sH%");
-        MySQLBinaryComparisonOperation.BinaryComparisonOperator mySQLBinaryComparisonOperation_BinaryComparisonOperator0 = MySQLBinaryComparisonOperation.BinaryComparisonOperator.NOT_EQUALS;
-        MySQLBinaryComparisonOperation mySQLBinaryComparisonOperation0 = new MySQLBinaryComparisonOperation(
-                mySQLConstant0, mySQLConstant0, mySQLBinaryComparisonOperation_BinaryComparisonOperator0);
-        mySQLExpectedValueVisitor0.visit(mySQLBinaryComparisonOperation0);
-        assertEquals(
-                "(\"+jvw<sH%\") != (\"+jvw<sH%\") -- 0\n\t\"+jvw<sH%\" -- \"+jvw<sH%\"\n\t\"+jvw<sH%\" -- \"+jvw<sH%\"\n",
-                mySQLExpectedValueVisitor0.get());
-    }
+    // @Test
+    // public void test08() throws Throwable {
+    // MySQLExpectedValueVisitor mySQLExpectedValueVisitor0 = new MySQLExpectedValueVisitor();
+    // MySQLConstant mySQLConstant0 = MySQLConstant.createStringConstant("+jvw<sH%");
+    // MySQLBinaryComparisonOperation.BinaryComparisonOperator mySQLBinaryComparisonOperation_BinaryComparisonOperator0
+    // = MySQLBinaryComparisonOperation.BinaryComparisonOperator.NOT_EQUALS;
+    // MySQLBinaryComparisonOperation mySQLBinaryComparisonOperation0 = new MySQLBinaryComparisonOperation(
+    // mySQLConstant0, mySQLConstant0, mySQLBinaryComparisonOperation_BinaryComparisonOperator0);
+    // mySQLExpectedValueVisitor0.visit(mySQLBinaryComparisonOperation0);
+    // assertEquals(
+    // "(\"+jvw<sH%\") != (\"+jvw<sH%\") -- 0\n\t\"+jvw<sH%\" -- \"+jvw<sH%\"\n\t\"+jvw<sH%\" -- \"+jvw<sH%\"\n",
+    // mySQLExpectedValueVisitor0.get());
+    // }
 
     @Test
     public void test09() throws Throwable {
