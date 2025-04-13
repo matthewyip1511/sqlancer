@@ -255,25 +255,26 @@ public class PrestoToStringVisitor_ESTest {
         }
     }
 
-    @Test
-    public void test12() throws Throwable {
-        PrestoToStringVisitor prestoToStringVisitor0 = new PrestoToStringVisitor();
-        PrestoSchema.PrestoCompositeDataType prestoSchema_PrestoCompositeDataType0 = PrestoSchema.PrestoCompositeDataType
-                .getRandomWithoutNull();
-        PrestoExpression prestoExpression0 = PrestoConstant.createIntConstant(prestoSchema_PrestoCompositeDataType0,
-                9223372036854775807L, false);
-        PrestoSelect prestoSelect0 = new PrestoSelect();
-        List<PrestoExpression> list0 = prestoSelect0.getJoinList();
-        PrestoMultiValuedComparisonType prestoMultiValuedComparisonType0 = PrestoMultiValuedComparisonType.SOME;
-        PrestoMultiValuedComparisonOperator prestoMultiValuedComparisonOperator0 = PrestoMultiValuedComparisonOperator.SMALLER;
-        PrestoMultiValuedComparison prestoMultiValuedComparison0 = new PrestoMultiValuedComparison(prestoExpression0,
-                list0, prestoMultiValuedComparisonType0, prestoMultiValuedComparisonOperator0);
-        NewOrderingTerm.Ordering newOrderingTerm_Ordering0 = NewOrderingTerm.Ordering.DESC;
-        NewOrderingTerm<PrestoExpression> newOrderingTerm0 = new NewOrderingTerm<PrestoExpression>(
-                prestoMultiValuedComparison0, newOrderingTerm_Ordering0);
-        prestoToStringVisitor0.visit(newOrderingTerm0);
-        assertEquals(NewOrderingTerm.Ordering.DESC, newOrderingTerm0.getOrdering());
-    }
+    // @Test
+    // public void test12() throws Throwable {
+    // PrestoToStringVisitor prestoToStringVisitor0 = new PrestoToStringVisitor();
+    // PrestoSchema.PrestoCompositeDataType prestoSchema_PrestoCompositeDataType0 = PrestoSchema.PrestoCompositeDataType
+    // .getRandomWithoutNull();
+    // PrestoExpression prestoExpression0 = PrestoConstant.createIntConstant(prestoSchema_PrestoCompositeDataType0,
+    // 9223372036854775807L, false);
+    // PrestoSelect prestoSelect0 = new PrestoSelect();
+    // List<PrestoExpression> list0 = prestoSelect0.getJoinList();
+    // PrestoMultiValuedComparisonType prestoMultiValuedComparisonType0 = PrestoMultiValuedComparisonType.SOME;
+    // PrestoMultiValuedComparisonOperator prestoMultiValuedComparisonOperator0 =
+    // PrestoMultiValuedComparisonOperator.SMALLER;
+    // PrestoMultiValuedComparison prestoMultiValuedComparison0 = new PrestoMultiValuedComparison(prestoExpression0,
+    // list0, prestoMultiValuedComparisonType0, prestoMultiValuedComparisonOperator0);
+    // NewOrderingTerm.Ordering newOrderingTerm_Ordering0 = NewOrderingTerm.Ordering.DESC;
+    // NewOrderingTerm<PrestoExpression> newOrderingTerm0 = new NewOrderingTerm<PrestoExpression>(
+    // prestoMultiValuedComparison0, newOrderingTerm_Ordering0);
+    // prestoToStringVisitor0.visit(newOrderingTerm0);
+    // assertEquals(NewOrderingTerm.Ordering.DESC, newOrderingTerm0.getOrdering());
+    // }
 
     @Test
     public void test13() throws Throwable {

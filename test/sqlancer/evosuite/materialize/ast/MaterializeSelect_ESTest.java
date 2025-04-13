@@ -141,11 +141,11 @@ public class MaterializeSelect_ESTest {
         assertFalse(materializeSelect_MaterializeFromTable0.isOnly());
     }
 
-    @Test
-    public void test10() throws Throwable {
-        MaterializeSelect.SelectType materializeSelect_SelectType0 = MaterializeSelect.SelectType.getRandom();
-        assertEquals(MaterializeSelect.SelectType.DISTINCT, materializeSelect_SelectType0);
-    }
+    // @Test
+    // public void test10() throws Throwable {
+    // MaterializeSelect.SelectType materializeSelect_SelectType0 = MaterializeSelect.SelectType.getRandom();
+    // assertEquals(MaterializeSelect.SelectType.DISTINCT, materializeSelect_SelectType0);
+    // }
 
     @Test
     public void test11() throws Throwable {

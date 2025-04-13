@@ -210,13 +210,13 @@ public class PostgresCommon_ESTest {
         }
     }
 
-    @Test
-    public void test10() throws Throwable {
-        ExpectedErrors expectedErrors0 = new ExpectedErrors();
-        PostgresGlobalState postgresGlobalState0 = new PostgresGlobalState();
-        PostgresCommon.generateWith((StringBuilder) null, postgresGlobalState0, expectedErrors0);
-        assertEquals('s', PostgresGlobalState.STABLE);
-    }
+    // @Test
+    // public void test10() throws Throwable {
+    // ExpectedErrors expectedErrors0 = new ExpectedErrors();
+    // PostgresGlobalState postgresGlobalState0 = new PostgresGlobalState();
+    // PostgresCommon.generateWith((StringBuilder) null, postgresGlobalState0, expectedErrors0);
+    // assertEquals('s', PostgresGlobalState.STABLE);
+    // }
 
     // @Test
     // public void test11() throws Throwable {

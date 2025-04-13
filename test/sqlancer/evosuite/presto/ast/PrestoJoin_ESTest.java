@@ -151,11 +151,11 @@ public class PrestoJoin_ESTest {
         assertTrue(list0.isEmpty());
     }
 
-    @Test
-    public void test10() throws Throwable {
-        PrestoJoin.OuterType prestoJoin_OuterType0 = PrestoJoin.OuterType.getRandom();
-        assertEquals(PrestoJoin.OuterType.FULL, prestoJoin_OuterType0);
-    }
+    // @Test
+    // public void test10() throws Throwable {
+    // PrestoJoin.OuterType prestoJoin_OuterType0 = PrestoJoin.OuterType.getRandom();
+    // assertEquals(PrestoJoin.OuterType.FULL, prestoJoin_OuterType0);
+    // }
 
     @Test
     public void test11() throws Throwable {

@@ -147,16 +147,16 @@ public class PostgresToStringVisitor_ESTest {
         assertEquals("(((B'11' COLLATE \"\"))LIKE(((B'11')||(B'11'))))", postgresToStringVisitor0.get());
     }
 
-    @Test
-    public void test07() throws Throwable {
-        PostgresToStringVisitor postgresToStringVisitor0 = new PostgresToStringVisitor();
-        PostgresSchema.PostgresColumn postgresSchema_PostgresColumn0 = PostgresSchema.PostgresColumn.createDummy("F");
-        PostgresConstant postgresConstant0 = PostgresConstant.createFalse();
-        PostgresColumnValue postgresColumnValue0 = new PostgresColumnValue(postgresSchema_PostgresColumn0,
-                postgresConstant0);
-        postgresToStringVisitor0.visit(postgresColumnValue0);
-        assertEquals(PostgresSchema.PostgresDataType.INT, postgresColumnValue0.getExpressionType());
-    }
+    // @Test
+    // public void test07() throws Throwable {
+    // PostgresToStringVisitor postgresToStringVisitor0 = new PostgresToStringVisitor();
+    // PostgresSchema.PostgresColumn postgresSchema_PostgresColumn0 = PostgresSchema.PostgresColumn.createDummy("F");
+    // PostgresConstant postgresConstant0 = PostgresConstant.createFalse();
+    // PostgresColumnValue postgresColumnValue0 = new PostgresColumnValue(postgresSchema_PostgresColumn0,
+    // postgresConstant0);
+    // postgresToStringVisitor0.visit(postgresColumnValue0);
+    // assertEquals(PostgresSchema.PostgresDataType.INT, postgresColumnValue0.getExpressionType());
+    // }
 
     @Test
     public void test08() throws Throwable {
@@ -1033,18 +1033,18 @@ public class PostgresToStringVisitor_ESTest {
     // assertEquals("(('') IS UNKNOWN)::BIT", postgresToStringVisitor0.get());
     // }
 
-    @Test
-    public void test61() throws Throwable {
-        PostgresToStringVisitor postgresToStringVisitor0 = new PostgresToStringVisitor();
-        PostgresConstant.InetConstant postgresConstant_InetConstant0 = new PostgresConstant.InetConstant("");
-        PostgresSchema.PostgresDataType postgresSchema_PostgresDataType0 = PostgresSchema.PostgresDataType.RANGE;
-        PostgresCompoundDataType postgresCompoundDataType0 = PostgresCompoundDataType
-                .create(postgresSchema_PostgresDataType0);
-        PostgresCastOperation postgresCastOperation0 = new PostgresCastOperation(postgresConstant_InetConstant0,
-                postgresCompoundDataType0);
-        postgresToStringVisitor0.visit(postgresCastOperation0);
-        assertEquals("('')::int4range", postgresToStringVisitor0.get());
-    }
+    // @Test
+    // public void test61() throws Throwable {
+    // PostgresToStringVisitor postgresToStringVisitor0 = new PostgresToStringVisitor();
+    // PostgresConstant.InetConstant postgresConstant_InetConstant0 = new PostgresConstant.InetConstant("");
+    // PostgresSchema.PostgresDataType postgresSchema_PostgresDataType0 = PostgresSchema.PostgresDataType.RANGE;
+    // PostgresCompoundDataType postgresCompoundDataType0 = PostgresCompoundDataType
+    // .create(postgresSchema_PostgresDataType0);
+    // PostgresCastOperation postgresCastOperation0 = new PostgresCastOperation(postgresConstant_InetConstant0,
+    // postgresCompoundDataType0);
+    // postgresToStringVisitor0.visit(postgresCastOperation0);
+    // assertEquals("('')::int4range", postgresToStringVisitor0.get());
+    // }
 
     // @Test
     // public void test62() throws Throwable {

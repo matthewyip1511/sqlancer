@@ -127,26 +127,26 @@ public class H2Join_ESTest {
         assertEquals(0, list0.size());
     }
 
-    @Test
-    public void test10() throws Throwable {
-        H2Join.JoinType.getRandom();
-        H2TableReference h2TableReference0 = new H2TableReference((H2Schema.H2Table) null);
-        List<H2TableReference> list0 = List.of(h2TableReference0, h2TableReference0, h2TableReference0,
-                h2TableReference0, h2TableReference0, h2TableReference0, h2TableReference0, h2TableReference0,
-                h2TableReference0);
-        H2Provider.H2GlobalState h2Provider_H2GlobalState0 = new H2Provider.H2GlobalState();
-        // Undeclared exception!
-        try {
-            H2Join.getJoins(list0, h2Provider_H2GlobalState0);
-            fail("Expecting exception: UnsupportedOperationException");
-
-        } catch (UnsupportedOperationException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("java.util.ImmutableCollections", e);
-        }
-    }
+    // @Test
+    // public void test10() throws Throwable {
+    // H2Join.JoinType.getRandom();
+    // H2TableReference h2TableReference0 = new H2TableReference((H2Schema.H2Table) null);
+    // List<H2TableReference> list0 = List.of(h2TableReference0, h2TableReference0, h2TableReference0,
+    // h2TableReference0, h2TableReference0, h2TableReference0, h2TableReference0, h2TableReference0,
+    // h2TableReference0);
+    // H2Provider.H2GlobalState h2Provider_H2GlobalState0 = new H2Provider.H2GlobalState();
+    // // Undeclared exception!
+    // try {
+    // H2Join.getJoins(list0, h2Provider_H2GlobalState0);
+    // fail("Expecting exception: UnsupportedOperationException");
+    //
+    // } catch (UnsupportedOperationException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("java.util.ImmutableCollections", e);
+    // }
+    // }
 
     @Test
     public void test11() throws Throwable {

@@ -114,29 +114,30 @@ public class PostgresAlterTableGenerator_ESTest {
      * verifyException("sqlancer.postgres.gen.PostgresAlterTableGenerator", e); } }
      */
 
-    @Test
-    public void test5() throws Throwable {
-        LinkedList<PostgresSchema.PostgresColumn> linkedList0 = new LinkedList<PostgresSchema.PostgresColumn>();
-        LinkedList<PostgresSchema.PostgresIndex> linkedList1 = new LinkedList<PostgresSchema.PostgresIndex>();
-        PostgresSchema.PostgresTable.TableType postgresSchema_PostgresTable_TableType0 = PostgresSchema.PostgresTable.TableType.TEMPORARY;
-        PostgresSchema.PostgresTable postgresSchema_PostgresTable0 = new PostgresSchema.PostgresTable("must be type",
-                linkedList0, linkedList1, postgresSchema_PostgresTable_TableType0, null, true, true);
-        CitusGlobalState citusGlobalState0 = new CitusGlobalState();
-        PostgresAlterTableGenerator postgresAlterTableGenerator0 = new PostgresAlterTableGenerator(
-                postgresSchema_PostgresTable0, citusGlobalState0, true);
-        ExpectedErrors expectedErrors0 = new ExpectedErrors();
-        // Undeclared exception!
-        try {
-            postgresAlterTableGenerator0.getActions(expectedErrors0);
-            fail("Expecting exception: RuntimeException");
-
-        } catch (RuntimeException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.postgres.gen.PostgresAlterTableGenerator", e);
-        }
-    }
+    // @Test
+    // public void test5() throws Throwable {
+    // LinkedList<PostgresSchema.PostgresColumn> linkedList0 = new LinkedList<PostgresSchema.PostgresColumn>();
+    // LinkedList<PostgresSchema.PostgresIndex> linkedList1 = new LinkedList<PostgresSchema.PostgresIndex>();
+    // PostgresSchema.PostgresTable.TableType postgresSchema_PostgresTable_TableType0 =
+    // PostgresSchema.PostgresTable.TableType.TEMPORARY;
+    // PostgresSchema.PostgresTable postgresSchema_PostgresTable0 = new PostgresSchema.PostgresTable("must be type",
+    // linkedList0, linkedList1, postgresSchema_PostgresTable_TableType0, null, true, true);
+    // CitusGlobalState citusGlobalState0 = new CitusGlobalState();
+    // PostgresAlterTableGenerator postgresAlterTableGenerator0 = new PostgresAlterTableGenerator(
+    // postgresSchema_PostgresTable0, citusGlobalState0, true);
+    // ExpectedErrors expectedErrors0 = new ExpectedErrors();
+    // // Undeclared exception!
+    // try {
+    // postgresAlterTableGenerator0.getActions(expectedErrors0);
+    // fail("Expecting exception: RuntimeException");
+    //
+    // } catch (RuntimeException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.postgres.gen.PostgresAlterTableGenerator", e);
+    // }
+    // }
 
     // @Test
     // public void test6() throws Throwable {

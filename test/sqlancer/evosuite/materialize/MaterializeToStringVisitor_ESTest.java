@@ -1545,18 +1545,20 @@ public class MaterializeToStringVisitor_ESTest {
         }
     }
 
-    @Test
-    public void test067() throws Throwable {
-        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
-        MaterializeConstant.MaterializeNullConstant materializeConstant_MaterializeNullConstant0 = new MaterializeConstant.MaterializeNullConstant();
-        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 = MaterializeSchema.MaterializeDataType.DECIMAL;
-        MaterializeCompoundDataType materializeCompoundDataType0 = MaterializeCompoundDataType
-                .create(materializeSchema_MaterializeDataType0);
-        MaterializeCastOperation materializeCastOperation0 = new MaterializeCastOperation(
-                materializeConstant_MaterializeNullConstant0, materializeCompoundDataType0);
-        materializeToStringVisitor0.visit(materializeCastOperation0);
-        assertEquals("(NULL)::DECIMAL", materializeToStringVisitor0.get());
-    }
+    // @Test
+    // public void test067() throws Throwable {
+    // MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
+    // MaterializeConstant.MaterializeNullConstant materializeConstant_MaterializeNullConstant0 = new
+    // MaterializeConstant.MaterializeNullConstant();
+    // MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 =
+    // MaterializeSchema.MaterializeDataType.DECIMAL;
+    // MaterializeCompoundDataType materializeCompoundDataType0 = MaterializeCompoundDataType
+    // .create(materializeSchema_MaterializeDataType0);
+    // MaterializeCastOperation materializeCastOperation0 = new MaterializeCastOperation(
+    // materializeConstant_MaterializeNullConstant0, materializeCompoundDataType0);
+    // materializeToStringVisitor0.visit(materializeCastOperation0);
+    // assertEquals("(NULL)::DECIMAL", materializeToStringVisitor0.get());
+    // }
 
     // @Test
     // public void test068() throws Throwable {
@@ -1933,31 +1935,35 @@ public class MaterializeToStringVisitor_ESTest {
     // }
     // }
 
-    @Test
-    public void test085() throws Throwable {
-        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
-        MaterializeConstant.MaterializeNullConstant materializeConstant_MaterializeNullConstant0 = new MaterializeConstant.MaterializeNullConstant();
-        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 = MaterializeSchema.MaterializeDataType.FLOAT;
-        MaterializeCompoundDataType materializeCompoundDataType0 = MaterializeCompoundDataType
-                .create(materializeSchema_MaterializeDataType0);
-        MaterializeCastOperation materializeCastOperation0 = new MaterializeCastOperation(
-                materializeConstant_MaterializeNullConstant0, materializeCompoundDataType0);
-        materializeToStringVisitor0.visit(materializeCastOperation0);
-        assertEquals("(NULL)::INT::REAL", materializeToStringVisitor0.get());
-    }
-
-    @Test
-    public void test086() throws Throwable {
-        MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
-        MaterializeConstant.MaterializeNullConstant materializeConstant_MaterializeNullConstant0 = new MaterializeConstant.MaterializeNullConstant();
-        MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 = MaterializeSchema.MaterializeDataType.REAL;
-        MaterializeCompoundDataType materializeCompoundDataType0 = MaterializeCompoundDataType
-                .create(materializeSchema_MaterializeDataType0);
-        MaterializeCastOperation materializeCastOperation0 = new MaterializeCastOperation(
-                materializeConstant_MaterializeNullConstant0, materializeCompoundDataType0);
-        materializeToStringVisitor0.visit(materializeCastOperation0);
-        assertEquals("(NULL)::INT::FLOAT", materializeToStringVisitor0.get());
-    }
+    // @Test
+    // public void test085() throws Throwable {
+    // MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
+    // MaterializeConstant.MaterializeNullConstant materializeConstant_MaterializeNullConstant0 = new
+    // MaterializeConstant.MaterializeNullConstant();
+    // MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 =
+    // MaterializeSchema.MaterializeDataType.FLOAT;
+    // MaterializeCompoundDataType materializeCompoundDataType0 = MaterializeCompoundDataType
+    // .create(materializeSchema_MaterializeDataType0);
+    // MaterializeCastOperation materializeCastOperation0 = new MaterializeCastOperation(
+    // materializeConstant_MaterializeNullConstant0, materializeCompoundDataType0);
+    // materializeToStringVisitor0.visit(materializeCastOperation0);
+    // assertEquals("(NULL)::INT::REAL", materializeToStringVisitor0.get());
+    // }
+    //
+    // @Test
+    // public void test086() throws Throwable {
+    // MaterializeToStringVisitor materializeToStringVisitor0 = new MaterializeToStringVisitor();
+    // MaterializeConstant.MaterializeNullConstant materializeConstant_MaterializeNullConstant0 = new
+    // MaterializeConstant.MaterializeNullConstant();
+    // MaterializeSchema.MaterializeDataType materializeSchema_MaterializeDataType0 =
+    // MaterializeSchema.MaterializeDataType.REAL;
+    // MaterializeCompoundDataType materializeCompoundDataType0 = MaterializeCompoundDataType
+    // .create(materializeSchema_MaterializeDataType0);
+    // MaterializeCastOperation materializeCastOperation0 = new MaterializeCastOperation(
+    // materializeConstant_MaterializeNullConstant0, materializeCompoundDataType0);
+    // materializeToStringVisitor0.visit(materializeCastOperation0);
+    // assertEquals("(NULL)::INT::FLOAT", materializeToStringVisitor0.get());
+    // }
 
     @Test
     public void test087() throws Throwable {

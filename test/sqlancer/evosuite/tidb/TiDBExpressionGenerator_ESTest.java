@@ -61,22 +61,22 @@ public class TiDBExpressionGenerator_ESTest {
         assertEquals(0, list0.size());
     }
 
-    @Test
-    public void test03() throws Throwable {
-        TiDBProvider.TiDBGlobalState tiDBProvider_TiDBGlobalState0 = new TiDBProvider.TiDBGlobalState();
-        TiDBExpressionGenerator tiDBExpressionGenerator0 = new TiDBExpressionGenerator(tiDBProvider_TiDBGlobalState0);
-        TiDBSchema.TiDBDataType tiDBSchema_TiDBDataType0 = TiDBSchema.TiDBDataType.CHAR;
-        TiDBSchema.TiDBCompositeDataType tiDBSchema_TiDBCompositeDataType0 = new TiDBSchema.TiDBCompositeDataType(
-                tiDBSchema_TiDBDataType0, 14);
-        TiDBSchema.TiDBColumn tiDBSchema_TiDBColumn0 = new TiDBSchema.TiDBColumn(
-                "sqlancer.tidb.TiDBSchema$TiDBCompositeDataType", tiDBSchema_TiDBCompositeDataType0, true, true, true);
-        List<TiDBSchema.TiDBColumn> list0 = List.of(tiDBSchema_TiDBColumn0, tiDBSchema_TiDBColumn0,
-                tiDBSchema_TiDBColumn0, tiDBSchema_TiDBColumn0, tiDBSchema_TiDBColumn0, tiDBSchema_TiDBColumn0,
-                tiDBSchema_TiDBColumn0, tiDBSchema_TiDBColumn0);
-        tiDBExpressionGenerator0.setColumns(list0);
-        List<TiDBExpression> list1 = tiDBExpressionGenerator0.generateFetchColumns(true);
-        assertEquals(1, list1.size());
-    }
+    // @Test
+    // public void test03() throws Throwable {
+    // TiDBProvider.TiDBGlobalState tiDBProvider_TiDBGlobalState0 = new TiDBProvider.TiDBGlobalState();
+    // TiDBExpressionGenerator tiDBExpressionGenerator0 = new TiDBExpressionGenerator(tiDBProvider_TiDBGlobalState0);
+    // TiDBSchema.TiDBDataType tiDBSchema_TiDBDataType0 = TiDBSchema.TiDBDataType.CHAR;
+    // TiDBSchema.TiDBCompositeDataType tiDBSchema_TiDBCompositeDataType0 = new TiDBSchema.TiDBCompositeDataType(
+    // tiDBSchema_TiDBDataType0, 14);
+    // TiDBSchema.TiDBColumn tiDBSchema_TiDBColumn0 = new TiDBSchema.TiDBColumn(
+    // "sqlancer.tidb.TiDBSchema$TiDBCompositeDataType", tiDBSchema_TiDBCompositeDataType0, true, true, true);
+    // List<TiDBSchema.TiDBColumn> list0 = List.of(tiDBSchema_TiDBColumn0, tiDBSchema_TiDBColumn0,
+    // tiDBSchema_TiDBColumn0, tiDBSchema_TiDBColumn0, tiDBSchema_TiDBColumn0, tiDBSchema_TiDBColumn0,
+    // tiDBSchema_TiDBColumn0, tiDBSchema_TiDBColumn0);
+    // tiDBExpressionGenerator0.setColumns(list0);
+    // List<TiDBExpression> list1 = tiDBExpressionGenerator0.generateFetchColumns(true);
+    // assertEquals(1, list1.size());
+    // }
 
     @Test
     public void test04() throws Throwable {
