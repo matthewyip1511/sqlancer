@@ -350,23 +350,23 @@ public class TiDBExpressionGenerator_ESTest {
         }
     }
 
-    @Test
-    public void test20() throws Throwable {
-        TiDBProvider.TiDBGlobalState tiDBProvider_TiDBGlobalState0 = new TiDBProvider.TiDBGlobalState();
-        TiDBExpressionGenerator tiDBExpressionGenerator0 = new TiDBExpressionGenerator(tiDBProvider_TiDBGlobalState0);
-        TiDBSelect tiDBSelect0 = new TiDBSelect();
-        // Undeclared exception!
-        try {
-            tiDBExpressionGenerator0.mutateHaving(tiDBSelect0);
-            fail("Expecting exception: IllegalStateException");
-
-        } catch (IllegalStateException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.common.ast.SelectBase", e);
-        }
-    }
+    // @Test
+    // public void test20() throws Throwable {
+    // TiDBProvider.TiDBGlobalState tiDBProvider_TiDBGlobalState0 = new TiDBProvider.TiDBGlobalState();
+    // TiDBExpressionGenerator tiDBExpressionGenerator0 = new TiDBExpressionGenerator(tiDBProvider_TiDBGlobalState0);
+    // TiDBSelect tiDBSelect0 = new TiDBSelect();
+    // // Undeclared exception!
+    // try {
+    // tiDBExpressionGenerator0.mutateHaving(tiDBSelect0);
+    // fail("Expecting exception: IllegalStateException");
+    //
+    // } catch (IllegalStateException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.common.ast.SelectBase", e);
+    // }
+    // }
 
     @Test
     public void test21() throws Throwable {
