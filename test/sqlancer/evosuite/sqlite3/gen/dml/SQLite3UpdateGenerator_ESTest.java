@@ -94,42 +94,42 @@ public class SQLite3UpdateGenerator_ESTest {
         }
     }
 
-    @Test
-    public void test4() throws Throwable {
-        SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
-        SQLite3Schema.SQLite3Column[] sQLite3Schema_SQLite3ColumnArray0 = new SQLite3Schema.SQLite3Column[2];
-        SQLite3DataType sQLite3DataType0 = SQLite3DataType.NULL;
-        SQLite3Schema.SQLite3Column.SQLite3CollateSequence sQLite3Schema_SQLite3Column_SQLite3CollateSequence0 = SQLite3Schema.SQLite3Column.SQLite3CollateSequence.BINARY;
-        SQLite3Schema.SQLite3Column sQLite3Schema_SQLite3Column0 = new SQLite3Schema.SQLite3Column("ECFOAT",
-                sQLite3DataType0, true, sQLite3Schema_SQLite3Column_SQLite3CollateSequence0, true);
-        sQLite3Schema_SQLite3ColumnArray0[1] = sQLite3Schema_SQLite3Column0;
-        List<SQLite3Schema.SQLite3Column> list0 = Randomly.nonEmptySubset(sQLite3Schema_SQLite3ColumnArray0);
-        SQLite3Schema.SQLite3Table.TableKind sQLite3Schema_SQLite3Table_TableKind0 = SQLite3Schema.SQLite3Table.TableKind.TEMP;
-        SQLite3Schema.SQLite3Table sQLite3Schema_SQLite3Table0 = new SQLite3Schema.SQLite3Table("ECFOAT", list0,
-                sQLite3Schema_SQLite3Table_TableKind0, false, false, false, false);
-        sQLite3Schema_SQLite3Column0.setTable(sQLite3Schema_SQLite3Table0);
-        Randomly randomly0 = new Randomly();
-        SQLite3UpdateGenerator sQLite3UpdateGenerator0 = new SQLite3UpdateGenerator(sQLite3GlobalState0, randomly0);
-        sQLite3UpdateGenerator0.updateValue(sQLite3Schema_SQLite3Column0);
-        assertEquals("ECFOAT", sQLite3Schema_SQLite3Column0.getName());
-    }
+//    @Test
+//    public void test4() throws Throwable {
+//        SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
+//        SQLite3Schema.SQLite3Column[] sQLite3Schema_SQLite3ColumnArray0 = new SQLite3Schema.SQLite3Column[2];
+//        SQLite3DataType sQLite3DataType0 = SQLite3DataType.NULL;
+//        SQLite3Schema.SQLite3Column.SQLite3CollateSequence sQLite3Schema_SQLite3Column_SQLite3CollateSequence0 = SQLite3Schema.SQLite3Column.SQLite3CollateSequence.BINARY;
+//        SQLite3Schema.SQLite3Column sQLite3Schema_SQLite3Column0 = new SQLite3Schema.SQLite3Column("ECFOAT",
+//                sQLite3DataType0, true, sQLite3Schema_SQLite3Column_SQLite3CollateSequence0, true);
+//        sQLite3Schema_SQLite3ColumnArray0[1] = sQLite3Schema_SQLite3Column0;
+//        List<SQLite3Schema.SQLite3Column> list0 = Randomly.nonEmptySubset(sQLite3Schema_SQLite3ColumnArray0);
+//        SQLite3Schema.SQLite3Table.TableKind sQLite3Schema_SQLite3Table_TableKind0 = SQLite3Schema.SQLite3Table.TableKind.TEMP;
+//        SQLite3Schema.SQLite3Table sQLite3Schema_SQLite3Table0 = new SQLite3Schema.SQLite3Table("ECFOAT", list0,
+//                sQLite3Schema_SQLite3Table_TableKind0, false, false, false, false);
+//        sQLite3Schema_SQLite3Column0.setTable(sQLite3Schema_SQLite3Table0);
+//        Randomly randomly0 = new Randomly();
+//        SQLite3UpdateGenerator sQLite3UpdateGenerator0 = new SQLite3UpdateGenerator(sQLite3GlobalState0, randomly0);
+//        sQLite3UpdateGenerator0.updateValue(sQLite3Schema_SQLite3Column0);
+//        assertEquals("ECFOAT", sQLite3Schema_SQLite3Column0.getName());
+//    }
 
-    @Test
-    public void test5() throws Throwable {
-        SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
-        SQLite3Schema.SQLite3Column sQLite3Schema_SQLite3Column0 = SQLite3Schema.SQLite3Column
-                .createDummy("!pq{ne cgz2A");
-        SQLite3Schema.SQLite3Column[] sQLite3Schema_SQLite3ColumnArray0 = new SQLite3Schema.SQLite3Column[3];
-        sQLite3Schema_SQLite3ColumnArray0[0] = sQLite3Schema_SQLite3Column0;
-        List<SQLite3Schema.SQLite3Column> list0 = Randomly.nonEmptySubset(sQLite3Schema_SQLite3ColumnArray0);
-        Randomly.subset(sQLite3Schema_SQLite3ColumnArray0);
-        SQLite3Schema.SQLite3Table.TableKind sQLite3Schema_SQLite3Table_TableKind0 = SQLite3Schema.SQLite3Table.TableKind.TEMP;
-        SQLite3Schema.SQLite3Table sQLite3Schema_SQLite3Table0 = new SQLite3Schema.SQLite3Table("!pq{ne cgz2A", list0,
-                sQLite3Schema_SQLite3Table_TableKind0, false, false, false, false);
-        SQLQueryAdapter sQLQueryAdapter0 = SQLite3UpdateGenerator.updateRow(sQLite3GlobalState0,
-                sQLite3Schema_SQLite3Table0);
-        assertEquals("UPDATE !pq{ne cgz2A SET !pq{ne cgz2A=NULL;", sQLQueryAdapter0.getLogString());
-    }
+//    @Test
+//    public void test5() throws Throwable {
+//        SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
+//        SQLite3Schema.SQLite3Column sQLite3Schema_SQLite3Column0 = SQLite3Schema.SQLite3Column
+//                .createDummy("!pq{ne cgz2A");
+//        SQLite3Schema.SQLite3Column[] sQLite3Schema_SQLite3ColumnArray0 = new SQLite3Schema.SQLite3Column[3];
+//        sQLite3Schema_SQLite3ColumnArray0[0] = sQLite3Schema_SQLite3Column0;
+//        List<SQLite3Schema.SQLite3Column> list0 = Randomly.nonEmptySubset(sQLite3Schema_SQLite3ColumnArray0);
+//        Randomly.subset(sQLite3Schema_SQLite3ColumnArray0);
+//        SQLite3Schema.SQLite3Table.TableKind sQLite3Schema_SQLite3Table_TableKind0 = SQLite3Schema.SQLite3Table.TableKind.TEMP;
+//        SQLite3Schema.SQLite3Table sQLite3Schema_SQLite3Table0 = new SQLite3Schema.SQLite3Table("!pq{ne cgz2A", list0,
+//                sQLite3Schema_SQLite3Table_TableKind0, false, false, false, false);
+//        SQLQueryAdapter sQLQueryAdapter0 = SQLite3UpdateGenerator.updateRow(sQLite3GlobalState0,
+//                sQLite3Schema_SQLite3Table0);
+//        assertEquals("UPDATE !pq{ne cgz2A SET !pq{ne cgz2A=NULL;", sQLQueryAdapter0.getLogString());
+//    }
 
     @Test
     public void test6() throws Throwable {

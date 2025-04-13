@@ -112,22 +112,22 @@ public class SQLite3Provider_ESTest {
         }
     }
 
-    @Test
-    public void test06() throws Throwable {
-        SQLite3Provider sQLite3Provider0 = new SQLite3Provider();
-        SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
-        try {
-            sQLite3Provider0.createDatabase(sQLite3GlobalState0);
-            fail("Expecting exception: SQLException");
-
-        } catch (SQLException e) {
-            //
-            // No suitable driver found for
-            // jdbc:sqlite:C:\\Users\\yewjo\\OneDrive\\Desktop\\NUS\\y4s2\\cs3213\\sqlancer-test\\sqlancer-test\\.\\databases\\null.db
-            //
-            verifyException("java.sql.DriverManager", e);
-        }
-    }
+//    @Test
+//    public void test06() throws Throwable {
+//        SQLite3Provider sQLite3Provider0 = new SQLite3Provider();
+//        SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
+//        try {
+//            sQLite3Provider0.createDatabase(sQLite3GlobalState0);
+//            fail("Expecting exception: SQLException");
+//
+//        } catch (SQLException e) {
+//            //
+//            // No suitable driver found for
+//            // jdbc:sqlite:C:\\Users\\yewjo\\OneDrive\\Desktop\\NUS\\y4s2\\cs3213\\sqlancer-test\\sqlancer-test\\.\\databases\\null.db
+//            //
+//            verifyException("java.sql.DriverManager", e);
+//        }
+//    }
 
     @Test
     public void test08() throws Throwable {

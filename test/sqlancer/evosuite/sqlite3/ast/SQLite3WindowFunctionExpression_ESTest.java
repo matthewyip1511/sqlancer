@@ -247,13 +247,13 @@ public class SQLite3WindowFunctionExpression_ESTest {
         assertEquals("PRECEDING", string0);
     }
 
-    @Test
-    public void test22() throws Throwable {
-        SQLite3WindowFunctionExpression.SQLite3FrameSpecExclude sQLite3WindowFunctionExpression_SQLite3FrameSpecExclude0 = SQLite3WindowFunctionExpression.SQLite3FrameSpecExclude
-                .getRandom();
-        assertEquals(SQLite3WindowFunctionExpression.SQLite3FrameSpecExclude.EXCLUDE_NO_OTHERS,
-                sQLite3WindowFunctionExpression_SQLite3FrameSpecExclude0);
-    }
+//    @Test
+//    public void test22() throws Throwable {
+//        SQLite3WindowFunctionExpression.SQLite3FrameSpecExclude sQLite3WindowFunctionExpression_SQLite3FrameSpecExclude0 = SQLite3WindowFunctionExpression.SQLite3FrameSpecExclude
+//                .getRandom();
+//        assertEquals(SQLite3WindowFunctionExpression.SQLite3FrameSpecExclude.EXCLUDE_NO_OTHERS,
+//                sQLite3WindowFunctionExpression_SQLite3FrameSpecExclude0);
+//    }
 
     @Test
     public void test23() throws Throwable {

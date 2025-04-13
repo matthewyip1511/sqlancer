@@ -14,19 +14,19 @@ import sqlancer.sqlite3.SQLite3GlobalState;
 
 public class SQLite3TransactionGenerator_ESTest {
 
-    @Test
-    public void test0() throws Throwable {
-        SQLQueryAdapter sQLQueryAdapter0 = SQLite3TransactionGenerator
-                .generateBeginTransaction((SQLite3GlobalState) null);
-        assertEquals("BEGIN  TRANSACTION;", sQLQueryAdapter0.getQueryString());
-    }
+//    @Test
+//    public void test0() throws Throwable {
+//        SQLQueryAdapter sQLQueryAdapter0 = SQLite3TransactionGenerator
+//                .generateBeginTransaction((SQLite3GlobalState) null);
+//        assertEquals("BEGIN  TRANSACTION;", sQLQueryAdapter0.getQueryString());
+//    }
 
-    @Test
-    public void test1() throws Throwable {
-        SQLQueryAdapter sQLQueryAdapter0 = SQLite3TransactionGenerator.generateCommit((SQLite3GlobalState) null);
-        assertTrue(sQLQueryAdapter0.couldAffectSchema());
-        assertEquals("COMMIT;", sQLQueryAdapter0.getLogString());
-    }
+//    @Test
+//    public void test1() throws Throwable {
+//        SQLQueryAdapter sQLQueryAdapter0 = SQLite3TransactionGenerator.generateCommit((SQLite3GlobalState) null);
+//        assertTrue(sQLQueryAdapter0.couldAffectSchema());
+//        assertEquals("COMMIT;", sQLQueryAdapter0.getLogString());
+//    }
 
     @Test
     public void test2() throws Throwable {

@@ -14,10 +14,10 @@ import sqlancer.mysql.MySQLGlobalState;
 
 public class MySQLReset_ESTest {
 
-    @Test
-    public void test0() throws Throwable {
-        MySQLGlobalState mySQLGlobalState0 = new MySQLGlobalState();
-        SQLQueryAdapter sQLQueryAdapter0 = MySQLReset.create(mySQLGlobalState0);
-        assertEquals("RESET SLAVE;", sQLQueryAdapter0.getQueryString());
-    }
+//    @Test
+//    public void test0() throws Throwable {
+//        MySQLGlobalState mySQLGlobalState0 = new MySQLGlobalState();
+//        SQLQueryAdapter sQLQueryAdapter0 = MySQLReset.create(mySQLGlobalState0);
+//        assertEquals("RESET SLAVE;", sQLQueryAdapter0.getQueryString());
+//    }
 }

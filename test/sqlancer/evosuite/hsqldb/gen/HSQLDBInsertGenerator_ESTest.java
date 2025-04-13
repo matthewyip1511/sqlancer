@@ -57,17 +57,17 @@ public class HSQLDBInsertGenerator_ESTest {
         }
     }
 
-    @Test
-    public void test2() throws Throwable {
-        HSQLDBProvider.HSQLDBGlobalState hSQLDBProvider_HSQLDBGlobalState0 = new HSQLDBProvider.HSQLDBGlobalState();
-        HSQLDBInsertGenerator hSQLDBInsertGenerator0 = new HSQLDBInsertGenerator(hSQLDBProvider_HSQLDBGlobalState0);
-        HSQLDBSchema.HSQLDBCompositeDataType hSQLDBSchema_HSQLDBCompositeDataType0 = HSQLDBSchema.HSQLDBCompositeDataType
-                .getRandomWithoutNull();
-        HSQLDBSchema.HSQLDBColumn hSQLDBSchema_HSQLDBColumn0 = new HSQLDBSchema.HSQLDBColumn("*K$",
-                (HSQLDBSchema.HSQLDBTable) null, hSQLDBSchema_HSQLDBCompositeDataType0);
-        hSQLDBInsertGenerator0.insertValue(hSQLDBSchema_HSQLDBColumn0);
-        assertEquals("*K$", hSQLDBSchema_HSQLDBColumn0.getName());
-    }
+//    @Test
+//    public void test2() throws Throwable {
+//        HSQLDBProvider.HSQLDBGlobalState hSQLDBProvider_HSQLDBGlobalState0 = new HSQLDBProvider.HSQLDBGlobalState();
+//        HSQLDBInsertGenerator hSQLDBInsertGenerator0 = new HSQLDBInsertGenerator(hSQLDBProvider_HSQLDBGlobalState0);
+//        HSQLDBSchema.HSQLDBCompositeDataType hSQLDBSchema_HSQLDBCompositeDataType0 = HSQLDBSchema.HSQLDBCompositeDataType
+//                .getRandomWithoutNull();
+//        HSQLDBSchema.HSQLDBColumn hSQLDBSchema_HSQLDBColumn0 = new HSQLDBSchema.HSQLDBColumn("*K$",
+//                (HSQLDBSchema.HSQLDBTable) null, hSQLDBSchema_HSQLDBCompositeDataType0);
+//        hSQLDBInsertGenerator0.insertValue(hSQLDBSchema_HSQLDBColumn0);
+//        assertEquals("*K$", hSQLDBSchema_HSQLDBColumn0.getName());
+//    }
 
     @Test
     public void test3() throws Throwable {

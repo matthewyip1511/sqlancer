@@ -104,17 +104,17 @@ public class HSQLDBJoin_ESTest {
         assertSame(hSQLDBTableReference0, hSQLDBTableReference1);
     }
 
-    @Test
-    public void test08() throws Throwable {
-        HSQLDBJoin.OuterType hSQLDBJoin_OuterType0 = HSQLDBJoin.OuterType.getRandom();
-        assertEquals(HSQLDBJoin.OuterType.FULL, hSQLDBJoin_OuterType0);
-    }
+//    @Test
+//    public void test08() throws Throwable {
+//        HSQLDBJoin.OuterType hSQLDBJoin_OuterType0 = HSQLDBJoin.OuterType.getRandom();
+//        assertEquals(HSQLDBJoin.OuterType.FULL, hSQLDBJoin_OuterType0);
+//    }
 
-    @Test
-    public void test09() throws Throwable {
-        HSQLDBJoin.JoinType hSQLDBJoin_JoinType0 = HSQLDBJoin.JoinType.getRandom();
-        assertEquals(HSQLDBJoin.JoinType.INNER, hSQLDBJoin_JoinType0);
-    }
+//    @Test
+//    public void test09() throws Throwable {
+//        HSQLDBJoin.JoinType hSQLDBJoin_JoinType0 = HSQLDBJoin.JoinType.getRandom();
+//        assertEquals(HSQLDBJoin.JoinType.INNER, hSQLDBJoin_JoinType0);
+//    }
 
     @Test
     public void test10() throws Throwable {

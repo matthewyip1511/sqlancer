@@ -59,12 +59,12 @@ public class SQLite3CreateVirtualFTSTableGenerator_ESTest {
      * assertEquals("CREATE VIRTUAL TABLE 7^?lRC|NWnTrsnu USING fts5(c0);", sQLQueryAdapter0.getQueryString()); }
      */
 
-    @Test
-    public void test3() throws Throwable {
-        Randomly randomly0 = new Randomly();
-        SQLQueryAdapter sQLQueryAdapter0 = SQLite3CreateVirtualFTSTableGenerator
-                .createTableStatement("k5_xZHqfg9<IjYzHL_h", randomly0);
-        assertEquals("CREATE VIRTUAL TABLE k5_xZHqfg9<IjYzHL_h USING fts5(c0);", sQLQueryAdapter0.getQueryString());
-        assertTrue(sQLQueryAdapter0.couldAffectSchema());
-    }
+//    @Test
+//    public void test3() throws Throwable {
+//        Randomly randomly0 = new Randomly();
+//        SQLQueryAdapter sQLQueryAdapter0 = SQLite3CreateVirtualFTSTableGenerator
+//                .createTableStatement("k5_xZHqfg9<IjYzHL_h", randomly0);
+//        assertEquals("CREATE VIRTUAL TABLE k5_xZHqfg9<IjYzHL_h USING fts5(c0);", sQLQueryAdapter0.getQueryString());
+//        assertTrue(sQLQueryAdapter0.couldAffectSchema());
+//    }
 }

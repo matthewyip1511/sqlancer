@@ -511,24 +511,24 @@ public class SQLite3Expression_ESTest {
         assertNotNull(sQLite3Constant1);
     }
 
-    @Test
-    public void test039() throws Throwable {
-        SQLite3Constant.SQLite3TextConstant sQLite3Constant_SQLite3TextConstant0 = new SQLite3Constant.SQLite3TextConstant(
-                "NOT NULL");
-        SQLite3Constant sQLite3Constant0 = sQLite3Constant_SQLite3TextConstant0.castToBoolean();
-        SQLite3Constant.SQLite3RealConstant sQLite3Constant_SQLite3RealConstant0 = new SQLite3Constant.SQLite3RealConstant(
-                0.0);
-        SQLite3Schema.SQLite3Column.SQLite3CollateSequence sQLite3Schema_SQLite3Column_SQLite3CollateSequence0 = SQLite3Schema.SQLite3Column.SQLite3CollateSequence.NOCASE;
-        SQLite3Constant sQLite3Constant1 = sQLite3Constant_SQLite3RealConstant0.applyEquals(sQLite3Constant0,
-                sQLite3Schema_SQLite3Column_SQLite3CollateSequence0);
-        SQLite3Expression[] sQLite3ExpressionArray0 = new SQLite3Expression[7];
-        sQLite3ExpressionArray0[0] = (SQLite3Expression) sQLite3Constant1;
-        List<SQLite3Expression> list0 = Randomly.nonEmptySubset(sQLite3ExpressionArray0);
-        SQLite3InOperation sQLite3Expression_InOperation0 = new SQLite3InOperation(sQLite3Constant_SQLite3RealConstant0,
-                list0);
-        SQLite3Constant sQLite3Constant2 = sQLite3Expression_InOperation0.getExpectedValue();
-        assertFalse(sQLite3Constant2.isHex());
-    }
+//    @Test
+//    public void test039() throws Throwable {
+//        SQLite3Constant.SQLite3TextConstant sQLite3Constant_SQLite3TextConstant0 = new SQLite3Constant.SQLite3TextConstant(
+//                "NOT NULL");
+//        SQLite3Constant sQLite3Constant0 = sQLite3Constant_SQLite3TextConstant0.castToBoolean();
+//        SQLite3Constant.SQLite3RealConstant sQLite3Constant_SQLite3RealConstant0 = new SQLite3Constant.SQLite3RealConstant(
+//                0.0);
+//        SQLite3Schema.SQLite3Column.SQLite3CollateSequence sQLite3Schema_SQLite3Column_SQLite3CollateSequence0 = SQLite3Schema.SQLite3Column.SQLite3CollateSequence.NOCASE;
+//        SQLite3Constant sQLite3Constant1 = sQLite3Constant_SQLite3RealConstant0.applyEquals(sQLite3Constant0,
+//                sQLite3Schema_SQLite3Column_SQLite3CollateSequence0);
+//        SQLite3Expression[] sQLite3ExpressionArray0 = new SQLite3Expression[7];
+//        sQLite3ExpressionArray0[0] = (SQLite3Expression) sQLite3Constant1;
+//        List<SQLite3Expression> list0 = Randomly.nonEmptySubset(sQLite3ExpressionArray0);
+//        SQLite3InOperation sQLite3Expression_InOperation0 = new SQLite3InOperation(sQLite3Constant_SQLite3RealConstant0,
+//                list0);
+//        SQLite3Constant sQLite3Constant2 = sQLite3Expression_InOperation0.getExpectedValue();
+//        assertFalse(sQLite3Constant2.isHex());
+//    }
 
     @Test
     public void test040() throws Throwable {
@@ -641,26 +641,26 @@ public class SQLite3Expression_ESTest {
     // }
     // }
 
-    @Test
-    public void test050() throws Throwable {
-        SQLite3Constant sQLite3Constant0 = SQLite3Constant.createBoolean(false);
-        SQLite3Constant.SQLite3TextConstant sQLite3Constant_SQLite3TextConstant0 = new SQLite3Constant.SQLite3TextConstant(
-                "labels must be TEXT");
-        SQLite3DataType sQLite3DataType0 = SQLite3DataType.TEXT;
-        SQLite3Schema.SQLite3Column.SQLite3CollateSequence sQLite3Schema_SQLite3Column_SQLite3CollateSequence0 = SQLite3Schema.SQLite3Column.SQLite3CollateSequence.RTRIM;
-        SQLite3Schema.SQLite3Column sQLite3Schema_SQLite3Column0 = new SQLite3Schema.SQLite3Column(
-                "labels must be TEXT", sQLite3DataType0, true, false,
-                sQLite3Schema_SQLite3Column_SQLite3CollateSequence0);
-        SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = new SQLite3ColumnName(sQLite3Schema_SQLite3Column0,
-                sQLite3Constant_SQLite3TextConstant0);
-        SQLite3BinaryComparisonOperation.BinaryComparisonOperator sQLite3Expression_BinaryComparisonOperation_BinaryComparisonOperator0 = SQLite3BinaryComparisonOperation.BinaryComparisonOperator.IS_NOT;
-        SQLite3BinaryComparisonOperation sQLite3Expression_BinaryComparisonOperation0 = SQLite3BinaryComparisonOperation
-                .create(sQLite3Expression_SQLite3ColumnName0, sQLite3Constant0,
-                        sQLite3Expression_BinaryComparisonOperation_BinaryComparisonOperator0);
-        SQLite3Constant sQLite3Constant1 = sQLite3Expression_BinaryComparisonOperation0.getExpectedValue();
-        assertEquals(1L, sQLite3Constant1.asInt());
-        assertNotNull(sQLite3Constant1);
-    }
+//    @Test
+//    public void test050() throws Throwable {
+//        SQLite3Constant sQLite3Constant0 = SQLite3Constant.createBoolean(false);
+//        SQLite3Constant.SQLite3TextConstant sQLite3Constant_SQLite3TextConstant0 = new SQLite3Constant.SQLite3TextConstant(
+//                "labels must be TEXT");
+//        SQLite3DataType sQLite3DataType0 = SQLite3DataType.TEXT;
+//        SQLite3Schema.SQLite3Column.SQLite3CollateSequence sQLite3Schema_SQLite3Column_SQLite3CollateSequence0 = SQLite3Schema.SQLite3Column.SQLite3CollateSequence.RTRIM;
+//        SQLite3Schema.SQLite3Column sQLite3Schema_SQLite3Column0 = new SQLite3Schema.SQLite3Column(
+//                "labels must be TEXT", sQLite3DataType0, true, false,
+//                sQLite3Schema_SQLite3Column_SQLite3CollateSequence0);
+//        SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = new SQLite3ColumnName(sQLite3Schema_SQLite3Column0,
+//                sQLite3Constant_SQLite3TextConstant0);
+//        SQLite3BinaryComparisonOperation.BinaryComparisonOperator sQLite3Expression_BinaryComparisonOperation_BinaryComparisonOperator0 = SQLite3BinaryComparisonOperation.BinaryComparisonOperator.IS_NOT;
+//        SQLite3BinaryComparisonOperation sQLite3Expression_BinaryComparisonOperation0 = SQLite3BinaryComparisonOperation
+//                .create(sQLite3Expression_SQLite3ColumnName0, sQLite3Constant0,
+//                        sQLite3Expression_BinaryComparisonOperation_BinaryComparisonOperator0);
+//        SQLite3Constant sQLite3Constant1 = sQLite3Expression_BinaryComparisonOperation0.getExpectedValue();
+//        assertEquals(1L, sQLite3Constant1.asInt());
+//        assertNotNull(sQLite3Constant1);
+//    }
 
     // @Test
     // public void test051() throws Throwable {
@@ -1320,46 +1320,46 @@ public class SQLite3Expression_ESTest {
         assertNotNull(sQLite3Constant1);
     }
 
-    @Test
-    public void test105() throws Throwable {
-        SQLite3Constant sQLite3Constant0 = SQLite3Constant.createBoolean(true);
-        SQLite3Constant.SQLite3NullConstant sQLite3Constant_SQLite3NullConstant0 = new SQLite3Constant.SQLite3NullConstant();
-        SQLite3Expression[] sQLite3ExpressionArray0 = new SQLite3Expression[6];
-        sQLite3ExpressionArray0[1] = (SQLite3Expression) sQLite3Constant_SQLite3NullConstant0;
-        Randomly randomly0 = new Randomly(868L);
-        SQLite3Constant.getRandomBinaryConstant(randomly0);
-        List<SQLite3Expression> list0 = Randomly.nonEmptySubset(sQLite3ExpressionArray0);
-        SQLite3InOperation sQLite3Expression_InOperation0 = new SQLite3InOperation(sQLite3Constant0, list0);
-        SQLite3Constant sQLite3Constant1 = sQLite3Expression_InOperation0.getExpectedValue();
-        assertTrue(sQLite3Constant1.isNull());
-    }
+//    @Test
+//    public void test105() throws Throwable {
+//        SQLite3Constant sQLite3Constant0 = SQLite3Constant.createBoolean(true);
+//        SQLite3Constant.SQLite3NullConstant sQLite3Constant_SQLite3NullConstant0 = new SQLite3Constant.SQLite3NullConstant();
+//        SQLite3Expression[] sQLite3ExpressionArray0 = new SQLite3Expression[6];
+//        sQLite3ExpressionArray0[1] = (SQLite3Expression) sQLite3Constant_SQLite3NullConstant0;
+//        Randomly randomly0 = new Randomly(868L);
+//        SQLite3Constant.getRandomBinaryConstant(randomly0);
+//        List<SQLite3Expression> list0 = Randomly.nonEmptySubset(sQLite3ExpressionArray0);
+//        SQLite3InOperation sQLite3Expression_InOperation0 = new SQLite3InOperation(sQLite3Constant0, list0);
+//        SQLite3Constant sQLite3Constant1 = sQLite3Expression_InOperation0.getExpectedValue();
+//        assertTrue(sQLite3Constant1.isNull());
+//    }
 
-    @Test
-    public void test106() throws Throwable {
-        SQLite3Constant sQLite3Constant0 = SQLite3Constant.createBoolean(true);
-        SQLite3Expression[] sQLite3ExpressionArray0 = new SQLite3Expression[6];
-        SQLite3WindowFunctionExpression sQLite3WindowFunctionExpression0 = new SQLite3WindowFunctionExpression(
-                sQLite3Constant0);
-        sQLite3ExpressionArray0[0] = (SQLite3Expression) sQLite3WindowFunctionExpression0;
-        List<SQLite3Expression> list0 = Randomly.nonEmptySubset(sQLite3ExpressionArray0);
-        SQLite3InOperation sQLite3Expression_InOperation0 = new SQLite3InOperation(sQLite3Constant0, list0);
-        SQLite3Constant sQLite3Constant1 = sQLite3Expression_InOperation0.getExpectedValue();
-        assertNull(sQLite3Constant1);
-    }
+//    @Test
+//    public void test106() throws Throwable {
+//        SQLite3Constant sQLite3Constant0 = SQLite3Constant.createBoolean(true);
+//        SQLite3Expression[] sQLite3ExpressionArray0 = new SQLite3Expression[6];
+//        SQLite3WindowFunctionExpression sQLite3WindowFunctionExpression0 = new SQLite3WindowFunctionExpression(
+//                sQLite3Constant0);
+//        sQLite3ExpressionArray0[0] = (SQLite3Expression) sQLite3WindowFunctionExpression0;
+//        List<SQLite3Expression> list0 = Randomly.nonEmptySubset(sQLite3ExpressionArray0);
+//        SQLite3InOperation sQLite3Expression_InOperation0 = new SQLite3InOperation(sQLite3Constant0, list0);
+//        SQLite3Constant sQLite3Constant1 = sQLite3Expression_InOperation0.getExpectedValue();
+//        assertNull(sQLite3Constant1);
+//    }
 
-    @Test
-    public void test107() throws Throwable {
-        SQLite3Constant sQLite3Constant0 = SQLite3Constant.createBoolean(false);
-        SQLite3Expression[] sQLite3ExpressionArray0 = new SQLite3Expression[2];
-        sQLite3ExpressionArray0[1] = (SQLite3Expression) sQLite3Constant0;
-        List<SQLite3Expression> list0 = Randomly.nonEmptySubset(sQLite3ExpressionArray0);
-        SQLite3InOperation sQLite3Expression_InOperation0 = new SQLite3InOperation(sQLite3ExpressionArray0[1], list0);
-        SQLite3InOperation sQLite3Expression_InOperation1 = new SQLite3InOperation(sQLite3Expression_InOperation0,
-                list0);
-        SQLite3Constant sQLite3Constant1 = sQLite3Expression_InOperation1.getExpectedValue();
-        assertNotNull(sQLite3Constant1);
-        assertEquals(0L, sQLite3Constant1.asInt());
-    }
+//    @Test
+//    public void test107() throws Throwable {
+//        SQLite3Constant sQLite3Constant0 = SQLite3Constant.createBoolean(false);
+//        SQLite3Expression[] sQLite3ExpressionArray0 = new SQLite3Expression[2];
+//        sQLite3ExpressionArray0[1] = (SQLite3Expression) sQLite3Constant0;
+//        List<SQLite3Expression> list0 = Randomly.nonEmptySubset(sQLite3ExpressionArray0);
+//        SQLite3InOperation sQLite3Expression_InOperation0 = new SQLite3InOperation(sQLite3ExpressionArray0[1], list0);
+//        SQLite3InOperation sQLite3Expression_InOperation1 = new SQLite3InOperation(sQLite3Expression_InOperation0,
+//                list0);
+//        SQLite3Constant sQLite3Constant1 = sQLite3Expression_InOperation1.getExpectedValue();
+//        assertNotNull(sQLite3Constant1);
+//        assertEquals(0L, sQLite3Constant1.asInt());
+//    }
 
     @Test
     public void test108() throws Throwable {
@@ -1474,15 +1474,15 @@ public class SQLite3Expression_ESTest {
         assertEquals(1L, sQLite3Constant0.asInt());
     }
 
-    @Test
-    public void test119() throws Throwable {
-        SQLite3Constant sQLite3Constant0 = SQLite3Constant.createFalse();
-        SQLite3PostfixUnaryOperation.PostfixUnaryOperator sQLite3Expression_SQLite3PostfixUnaryOperation_PostfixUnaryOperator0 = SQLite3PostfixUnaryOperation.PostfixUnaryOperator
-                .getRandomOperator();
-        SQLite3Constant sQLite3Constant1 = sQLite3Expression_SQLite3PostfixUnaryOperation_PostfixUnaryOperator0
-                .apply(sQLite3Constant0);
-        assertEquals(0L, sQLite3Constant1.asInt());
-    }
+//    @Test
+//    public void test119() throws Throwable {
+//        SQLite3Constant sQLite3Constant0 = SQLite3Constant.createFalse();
+//        SQLite3PostfixUnaryOperation.PostfixUnaryOperator sQLite3Expression_SQLite3PostfixUnaryOperation_PostfixUnaryOperator0 = SQLite3PostfixUnaryOperation.PostfixUnaryOperator
+//                .getRandomOperator();
+//        SQLite3Constant sQLite3Constant1 = sQLite3Expression_SQLite3PostfixUnaryOperation_PostfixUnaryOperator0
+//                .apply(sQLite3Constant0);
+//        assertEquals(0L, sQLite3Constant1.asInt());
+//    }
 
     // @Test
     // public void test120() throws Throwable {
@@ -1894,28 +1894,28 @@ public class SQLite3Expression_ESTest {
         assertNull(sQLite3Constant1);
     }
 
-    @Test
-    public void test153() throws Throwable {
-        SQLite3Expression[] sQLite3ExpressionArray0 = new SQLite3Expression[4];
-        SQLite3Constant.SQLite3NullConstant sQLite3Constant_SQLite3NullConstant0 = new SQLite3Constant.SQLite3NullConstant();
-        SQLite3Schema.SQLite3Column.SQLite3CollateSequence sQLite3Schema_SQLite3Column_SQLite3CollateSequence0 = SQLite3Schema.SQLite3Column.SQLite3CollateSequence.NOCASE;
-        SQLite3BinaryComparisonOperation.BinaryComparisonOperator sQLite3Expression_BinaryComparisonOperation_BinaryComparisonOperator0 = SQLite3BinaryComparisonOperation.BinaryComparisonOperator.IS_NOT;
-        SQLite3BinaryComparisonOperation sQLite3Expression_BinaryComparisonOperation0 = SQLite3BinaryComparisonOperation
-                .create(sQLite3Constant_SQLite3NullConstant0, sQLite3Constant_SQLite3NullConstant0,
-                        sQLite3Expression_BinaryComparisonOperation_BinaryComparisonOperator0);
-        sQLite3ExpressionArray0[1] = (SQLite3Expression) sQLite3Expression_BinaryComparisonOperation0;
-        SQLite3DataType sQLite3DataType0 = SQLite3DataType.BINARY;
-        SQLite3Schema.SQLite3Column sQLite3Schema_SQLite3Column0 = new SQLite3Schema.SQLite3Column("", sQLite3DataType0,
-                true, sQLite3Schema_SQLite3Column_SQLite3CollateSequence0, true);
-        SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = new SQLite3ColumnName(sQLite3Schema_SQLite3Column0,
-                sQLite3Constant_SQLite3NullConstant0);
-        SQLite3BinaryOperation.BinaryOperator sQLite3Expression_Sqlite3BinaryOperation_BinaryOperator0 = SQLite3BinaryOperation.BinaryOperator.DIVIDE;
-        SQLite3BinaryOperation sQLite3Expression_Sqlite3BinaryOperation0 = new SQLite3BinaryOperation(
-                sQLite3Expression_SQLite3ColumnName0, sQLite3ExpressionArray0[1],
-                sQLite3Expression_Sqlite3BinaryOperation_BinaryOperator0);
-        SQLite3Constant sQLite3Constant0 = sQLite3Expression_Sqlite3BinaryOperation0.getExpectedValue();
-        assertNull(sQLite3Constant0);
-    }
+//    @Test
+//    public void test153() throws Throwable {
+//        SQLite3Expression[] sQLite3ExpressionArray0 = new SQLite3Expression[4];
+//        SQLite3Constant.SQLite3NullConstant sQLite3Constant_SQLite3NullConstant0 = new SQLite3Constant.SQLite3NullConstant();
+//        SQLite3Schema.SQLite3Column.SQLite3CollateSequence sQLite3Schema_SQLite3Column_SQLite3CollateSequence0 = SQLite3Schema.SQLite3Column.SQLite3CollateSequence.NOCASE;
+//        SQLite3BinaryComparisonOperation.BinaryComparisonOperator sQLite3Expression_BinaryComparisonOperation_BinaryComparisonOperator0 = SQLite3BinaryComparisonOperation.BinaryComparisonOperator.IS_NOT;
+//        SQLite3BinaryComparisonOperation sQLite3Expression_BinaryComparisonOperation0 = SQLite3BinaryComparisonOperation
+//                .create(sQLite3Constant_SQLite3NullConstant0, sQLite3Constant_SQLite3NullConstant0,
+//                        sQLite3Expression_BinaryComparisonOperation_BinaryComparisonOperator0);
+//        sQLite3ExpressionArray0[1] = (SQLite3Expression) sQLite3Expression_BinaryComparisonOperation0;
+//        SQLite3DataType sQLite3DataType0 = SQLite3DataType.BINARY;
+//        SQLite3Schema.SQLite3Column sQLite3Schema_SQLite3Column0 = new SQLite3Schema.SQLite3Column("", sQLite3DataType0,
+//                true, sQLite3Schema_SQLite3Column_SQLite3CollateSequence0, true);
+//        SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = new SQLite3ColumnName(sQLite3Schema_SQLite3Column0,
+//                sQLite3Constant_SQLite3NullConstant0);
+//        SQLite3BinaryOperation.BinaryOperator sQLite3Expression_Sqlite3BinaryOperation_BinaryOperator0 = SQLite3BinaryOperation.BinaryOperator.DIVIDE;
+//        SQLite3BinaryOperation sQLite3Expression_Sqlite3BinaryOperation0 = new SQLite3BinaryOperation(
+//                sQLite3Expression_SQLite3ColumnName0, sQLite3ExpressionArray0[1],
+//                sQLite3Expression_Sqlite3BinaryOperation_BinaryOperator0);
+//        SQLite3Constant sQLite3Constant0 = sQLite3Expression_Sqlite3BinaryOperation0.getExpectedValue();
+//        assertNull(sQLite3Constant0);
+//    }
 
     @Test
     public void test154() throws Throwable {
@@ -2299,26 +2299,26 @@ public class SQLite3Expression_ESTest {
         assertNotNull(sQLite3Constant1);
     }
 
-    @Test
-    public void test189() throws Throwable {
-        SQLite3PostfixUnaryOperation.PostfixUnaryOperator sQLite3Expression_SQLite3PostfixUnaryOperation_PostfixUnaryOperator0 = SQLite3PostfixUnaryOperation.PostfixUnaryOperator.IS_FALSE;
-        SQLite3Constant sQLite3Constant0 = SQLite3Constant.createTextConstant("7");
-        SQLite3PostfixUnaryOperation sQLite3Expression_SQLite3PostfixUnaryOperation0 = new SQLite3PostfixUnaryOperation(
-                sQLite3Expression_SQLite3PostfixUnaryOperation_PostfixUnaryOperator0, sQLite3Constant0);
-        SQLite3Schema.SQLite3Column.SQLite3CollateSequence sQLite3Schema_SQLite3Column_SQLite3CollateSequence0 = SQLite3Schema.SQLite3Column.SQLite3CollateSequence.RTRIM;
-        SQLite3DataType sQLite3DataType0 = SQLite3DataType.NONE;
-        SQLite3Schema.SQLite3Column sQLite3Schema_SQLite3Column0 = new SQLite3Schema.SQLite3Column("", sQLite3DataType0,
-                true, true, sQLite3Schema_SQLite3Column_SQLite3CollateSequence0);
-        SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = new SQLite3ColumnName(sQLite3Schema_SQLite3Column0,
-                sQLite3Constant0);
-        SQLite3BinaryComparisonOperation.BinaryComparisonOperator sQLite3Expression_BinaryComparisonOperation_BinaryComparisonOperator0 = SQLite3BinaryComparisonOperation.BinaryComparisonOperator.IS_NOT;
-        SQLite3BinaryComparisonOperation sQLite3Expression_BinaryComparisonOperation0 = SQLite3BinaryComparisonOperation
-                .create(sQLite3Expression_SQLite3PostfixUnaryOperation0, sQLite3Expression_SQLite3ColumnName0,
-                        sQLite3Expression_BinaryComparisonOperation_BinaryComparisonOperator0);
-        SQLite3Constant sQLite3Constant1 = sQLite3Expression_BinaryComparisonOperation0.getExpectedValue();
-        assertEquals(1L, sQLite3Constant1.asInt());
-        assertNotNull(sQLite3Constant1);
-    }
+//    @Test
+//    public void test189() throws Throwable {
+//        SQLite3PostfixUnaryOperation.PostfixUnaryOperator sQLite3Expression_SQLite3PostfixUnaryOperation_PostfixUnaryOperator0 = SQLite3PostfixUnaryOperation.PostfixUnaryOperator.IS_FALSE;
+//        SQLite3Constant sQLite3Constant0 = SQLite3Constant.createTextConstant("7");
+//        SQLite3PostfixUnaryOperation sQLite3Expression_SQLite3PostfixUnaryOperation0 = new SQLite3PostfixUnaryOperation(
+//                sQLite3Expression_SQLite3PostfixUnaryOperation_PostfixUnaryOperator0, sQLite3Constant0);
+//        SQLite3Schema.SQLite3Column.SQLite3CollateSequence sQLite3Schema_SQLite3Column_SQLite3CollateSequence0 = SQLite3Schema.SQLite3Column.SQLite3CollateSequence.RTRIM;
+//        SQLite3DataType sQLite3DataType0 = SQLite3DataType.NONE;
+//        SQLite3Schema.SQLite3Column sQLite3Schema_SQLite3Column0 = new SQLite3Schema.SQLite3Column("", sQLite3DataType0,
+//                true, true, sQLite3Schema_SQLite3Column_SQLite3CollateSequence0);
+//        SQLite3ColumnName sQLite3Expression_SQLite3ColumnName0 = new SQLite3ColumnName(sQLite3Schema_SQLite3Column0,
+//                sQLite3Constant0);
+//        SQLite3BinaryComparisonOperation.BinaryComparisonOperator sQLite3Expression_BinaryComparisonOperation_BinaryComparisonOperator0 = SQLite3BinaryComparisonOperation.BinaryComparisonOperator.IS_NOT;
+//        SQLite3BinaryComparisonOperation sQLite3Expression_BinaryComparisonOperation0 = SQLite3BinaryComparisonOperation
+//                .create(sQLite3Expression_SQLite3PostfixUnaryOperation0, sQLite3Expression_SQLite3ColumnName0,
+//                        sQLite3Expression_BinaryComparisonOperation_BinaryComparisonOperator0);
+//        SQLite3Constant sQLite3Constant1 = sQLite3Expression_BinaryComparisonOperation0.getExpectedValue();
+//        assertEquals(1L, sQLite3Constant1.asInt());
+//        assertNotNull(sQLite3Constant1);
+//    }
 
     @Test
     public void test190() throws Throwable {

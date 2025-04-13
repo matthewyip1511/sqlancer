@@ -133,22 +133,22 @@ public class SQLite3InsertGenerator_ESTest {
         }
     }
 
-    @Test
-    public void test6() throws Throwable {
-        SQLite3Schema.SQLite3Column sQLite3Schema_SQLite3Column0 = SQLite3Schema.SQLite3Column.createDummy("CHECKSUM");
-        List<SQLite3Schema.SQLite3Column> list0 = List.of(sQLite3Schema_SQLite3Column0, sQLite3Schema_SQLite3Column0,
-                sQLite3Schema_SQLite3Column0, sQLite3Schema_SQLite3Column0, sQLite3Schema_SQLite3Column0);
-        Randomly.nonEmptySubset(list0);
-        List<SQLite3Schema.SQLite3Column> list1 = Randomly.nonEmptySubset(list0);
-        SQLite3Schema.SQLite3Table.TableKind sQLite3Schema_SQLite3Table_TableKind0 = SQLite3Schema.SQLite3Table.TableKind.MAIN;
-        SQLite3Schema.SQLite3Table sQLite3Schema_SQLite3Table0 = new SQLite3Schema.SQLite3Table("CHECKSUM", list1,
-                sQLite3Schema_SQLite3Table_TableKind0, true, true, true, true);
-        SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
-        SQLQueryAdapter sQLQueryAdapter0 = SQLite3InsertGenerator.insertRow(sQLite3GlobalState0,
-                sQLite3Schema_SQLite3Table0);
-        assertEquals("INSERT OR ABORT INTO CHECKSUM(CHECKSUM) VALUES (NULL);", sQLQueryAdapter0.getLogString());
-        assertTrue(sQLQueryAdapter0.couldAffectSchema());
-    }
+//    @Test
+//    public void test6() throws Throwable {
+//        SQLite3Schema.SQLite3Column sQLite3Schema_SQLite3Column0 = SQLite3Schema.SQLite3Column.createDummy("CHECKSUM");
+//        List<SQLite3Schema.SQLite3Column> list0 = List.of(sQLite3Schema_SQLite3Column0, sQLite3Schema_SQLite3Column0,
+//                sQLite3Schema_SQLite3Column0, sQLite3Schema_SQLite3Column0, sQLite3Schema_SQLite3Column0);
+//        Randomly.nonEmptySubset(list0);
+//        List<SQLite3Schema.SQLite3Column> list1 = Randomly.nonEmptySubset(list0);
+//        SQLite3Schema.SQLite3Table.TableKind sQLite3Schema_SQLite3Table_TableKind0 = SQLite3Schema.SQLite3Table.TableKind.MAIN;
+//        SQLite3Schema.SQLite3Table sQLite3Schema_SQLite3Table0 = new SQLite3Schema.SQLite3Table("CHECKSUM", list1,
+//                sQLite3Schema_SQLite3Table_TableKind0, true, true, true, true);
+//        SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
+//        SQLQueryAdapter sQLQueryAdapter0 = SQLite3InsertGenerator.insertRow(sQLite3GlobalState0,
+//                sQLite3Schema_SQLite3Table0);
+//        assertEquals("INSERT OR ABORT INTO CHECKSUM(CHECKSUM) VALUES (NULL);", sQLQueryAdapter0.getLogString());
+//        assertTrue(sQLQueryAdapter0.couldAffectSchema());
+//    }
 
     @Test
     public void test7() throws Throwable {

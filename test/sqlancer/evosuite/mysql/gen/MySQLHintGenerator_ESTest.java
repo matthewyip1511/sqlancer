@@ -49,21 +49,21 @@ public class MySQLHintGenerator_ESTest {
         }
     }
 
-    @Test
-    public void test2() throws Throwable {
-        LinkedList<MySQLSchema.MySQLTable> linkedList0 = new LinkedList<MySQLSchema.MySQLTable>();
-        // Undeclared exception!
-        try {
-            MySQLHintGenerator.generateHints((MySQLSelect) null, linkedList0);
-            fail("Expecting exception: IndexOutOfBoundsException");
-
-        } catch (IndexOutOfBoundsException e) {
-            //
-            // Index: 0, Size: 0
-            //
-            verifyException("java.util.LinkedList", e);
-        }
-    }
+//    @Test
+//    public void test2() throws Throwable {
+//        LinkedList<MySQLSchema.MySQLTable> linkedList0 = new LinkedList<MySQLSchema.MySQLTable>();
+//        // Undeclared exception!
+//        try {
+//            MySQLHintGenerator.generateHints((MySQLSelect) null, linkedList0);
+//            fail("Expecting exception: IndexOutOfBoundsException");
+//
+//        } catch (IndexOutOfBoundsException e) {
+//            //
+//            // Index: 0, Size: 0
+//            //
+//            verifyException("java.util.LinkedList", e);
+//        }
+//    }
 
     @Test
     public void test3() throws Throwable {

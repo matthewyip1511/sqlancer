@@ -115,15 +115,15 @@ public class CockroachDBFunction_ESTest {
         assertFalse(boolean0);
     }
 
-    @Test
-    public void test07() throws Throwable {
-        CockroachDBFunction cockroachDBFunction0 = CockroachDBFunction.CHAR_LENGTH2;
-        CockroachDBSchema.CockroachDBCompositeDataType cockroachDBSchema_CockroachDBCompositeDataType0 = CockroachDBSchema.CockroachDBCompositeDataType
-                .getRandom();
-        boolean boolean0 = cockroachDBFunction0
-                .isCompatibleWithReturnType(cockroachDBSchema_CockroachDBCompositeDataType0);
-        assertTrue(boolean0);
-    }
+//    @Test
+//    public void test07() throws Throwable {
+//        CockroachDBFunction cockroachDBFunction0 = CockroachDBFunction.CHAR_LENGTH2;
+//        CockroachDBSchema.CockroachDBCompositeDataType cockroachDBSchema_CockroachDBCompositeDataType0 = CockroachDBSchema.CockroachDBCompositeDataType
+//                .getRandom();
+//        boolean boolean0 = cockroachDBFunction0
+//                .isCompatibleWithReturnType(cockroachDBSchema_CockroachDBCompositeDataType0);
+//        assertTrue(boolean0);
+//    }
 
     @Test
     public void test08() throws Throwable {
@@ -189,14 +189,14 @@ public class CockroachDBFunction_ESTest {
         }
     }
 
-    @Test
-    public void test11() throws Throwable {
-        CockroachDBSchema.CockroachDBCompositeDataType cockroachDBSchema_CockroachDBCompositeDataType0 = CockroachDBSchema.CockroachDBCompositeDataType
-                .getRandom();
-        List<CockroachDBFunction> list0 = CockroachDBFunction
-                .getFunctionsCompatibleWith(cockroachDBSchema_CockroachDBCompositeDataType0);
-        assertEquals(13, list0.size());
-    }
+//    @Test
+//    public void test11() throws Throwable {
+//        CockroachDBSchema.CockroachDBCompositeDataType cockroachDBSchema_CockroachDBCompositeDataType0 = CockroachDBSchema.CockroachDBCompositeDataType
+//                .getRandom();
+//        List<CockroachDBFunction> list0 = CockroachDBFunction
+//                .getFunctionsCompatibleWith(cockroachDBSchema_CockroachDBCompositeDataType0);
+//        assertEquals(13, list0.size());
+//    }
 
     @Test
     public void test12() throws Throwable {

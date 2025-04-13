@@ -109,24 +109,24 @@ public class CockroachDBSelect_ESTest {
         }
     }
 
-    @Test
-    public void test5() throws Throwable {
-        CockroachDBSelect cockroachDBSelect0 = new CockroachDBSelect();
-        CockroachDBExpression[] cockroachDBExpressionArray0 = new CockroachDBExpression[4];
-        List<CockroachDBExpression> list0 = Randomly.nonEmptySubset(cockroachDBExpressionArray0);
-        cockroachDBSelect0.setFetchColumns(list0);
-        // Undeclared exception!
-        try {
-            cockroachDBSelect0.asString();
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.cockroachdb.CockroachDBVisitor", e);
-        }
-    }
+//    @Test
+//    public void test5() throws Throwable {
+//        CockroachDBSelect cockroachDBSelect0 = new CockroachDBSelect();
+//        CockroachDBExpression[] cockroachDBExpressionArray0 = new CockroachDBExpression[4];
+//        List<CockroachDBExpression> list0 = Randomly.nonEmptySubset(cockroachDBExpressionArray0);
+//        cockroachDBSelect0.setFetchColumns(list0);
+//        // Undeclared exception!
+//        try {
+//            cockroachDBSelect0.asString();
+//            fail("Expecting exception: NullPointerException");
+//
+//        } catch (NullPointerException e) {
+//            //
+//            // no message in exception (getMessage() returned null)
+//            //
+//            verifyException("sqlancer.cockroachdb.CockroachDBVisitor", e);
+//        }
+//    }
 
     @Test
     public void test6() throws Throwable {

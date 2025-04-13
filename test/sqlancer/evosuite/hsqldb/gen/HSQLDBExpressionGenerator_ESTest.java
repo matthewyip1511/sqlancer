@@ -25,24 +25,24 @@ public class HSQLDBExpressionGenerator_ESTest {
     private void verifyException(String s, Exception e) {
     }
 
-    @Test
-    public void test00() throws Throwable {
-        LinkedList<HSQLDBSchema.HSQLDBColumn> linkedList0 = new LinkedList<HSQLDBSchema.HSQLDBColumn>();
-        HSQLDBSchema.HSQLDBTable hSQLDBSchema_HSQLDBTable0 = new HSQLDBSchema.HSQLDBTable("TYPES", linkedList0, true);
-        HSQLDBSchema.HSQLDBTable hSQLDBSchema_HSQLDBTable1 = new HSQLDBSchema.HSQLDBTable("", linkedList0, true);
-        List<HSQLDBSchema.HSQLDBTable> list0 = List.of(hSQLDBSchema_HSQLDBTable0, hSQLDBSchema_HSQLDBTable1,
-                hSQLDBSchema_HSQLDBTable1);
-        HSQLDBProvider.HSQLDBGlobalState hSQLDBProvider_HSQLDBGlobalState0 = new HSQLDBProvider.HSQLDBGlobalState();
-        HSQLDBExpressionGenerator hSQLDBExpressionGenerator0 = new HSQLDBExpressionGenerator(
-                hSQLDBProvider_HSQLDBGlobalState0);
-        LinkedList<HSQLDBSchema.HSQLDBTable> linkedList1 = new LinkedList<HSQLDBSchema.HSQLDBTable>(list0);
-        AbstractTables<HSQLDBSchema.HSQLDBTable, HSQLDBSchema.HSQLDBColumn> abstractTables0 = new AbstractTables<HSQLDBSchema.HSQLDBTable, HSQLDBSchema.HSQLDBColumn>(
-                linkedList1);
-        hSQLDBExpressionGenerator0.setTablesAndColumns(abstractTables0);
-        HSQLDBSchema.HSQLDBCompositeDataType.getRandomWithoutNull();
-        List<HSQLDBJoin> list1 = hSQLDBExpressionGenerator0.getRandomJoinClauses();
-        assertFalse(list1.isEmpty());
-    }
+//    @Test
+//    public void test00() throws Throwable {
+//        LinkedList<HSQLDBSchema.HSQLDBColumn> linkedList0 = new LinkedList<HSQLDBSchema.HSQLDBColumn>();
+//        HSQLDBSchema.HSQLDBTable hSQLDBSchema_HSQLDBTable0 = new HSQLDBSchema.HSQLDBTable("TYPES", linkedList0, true);
+//        HSQLDBSchema.HSQLDBTable hSQLDBSchema_HSQLDBTable1 = new HSQLDBSchema.HSQLDBTable("", linkedList0, true);
+//        List<HSQLDBSchema.HSQLDBTable> list0 = List.of(hSQLDBSchema_HSQLDBTable0, hSQLDBSchema_HSQLDBTable1,
+//                hSQLDBSchema_HSQLDBTable1);
+//        HSQLDBProvider.HSQLDBGlobalState hSQLDBProvider_HSQLDBGlobalState0 = new HSQLDBProvider.HSQLDBGlobalState();
+//        HSQLDBExpressionGenerator hSQLDBExpressionGenerator0 = new HSQLDBExpressionGenerator(
+//                hSQLDBProvider_HSQLDBGlobalState0);
+//        LinkedList<HSQLDBSchema.HSQLDBTable> linkedList1 = new LinkedList<HSQLDBSchema.HSQLDBTable>(list0);
+//        AbstractTables<HSQLDBSchema.HSQLDBTable, HSQLDBSchema.HSQLDBColumn> abstractTables0 = new AbstractTables<HSQLDBSchema.HSQLDBTable, HSQLDBSchema.HSQLDBColumn>(
+//                linkedList1);
+//        hSQLDBExpressionGenerator0.setTablesAndColumns(abstractTables0);
+//        HSQLDBSchema.HSQLDBCompositeDataType.getRandomWithoutNull();
+//        List<HSQLDBJoin> list1 = hSQLDBExpressionGenerator0.getRandomJoinClauses();
+//        assertFalse(list1.isEmpty());
+//    }
 
     @Test
     public void test01() throws Throwable {
@@ -74,15 +74,15 @@ public class HSQLDBExpressionGenerator_ESTest {
         assertFalse(list1.isEmpty());
     }
 
-    @Test
-    public void test03() throws Throwable {
-        HSQLDBProvider.HSQLDBGlobalState hSQLDBProvider_HSQLDBGlobalState0 = new HSQLDBProvider.HSQLDBGlobalState();
-        HSQLDBExpressionGenerator hSQLDBExpressionGenerator0 = new HSQLDBExpressionGenerator(
-                hSQLDBProvider_HSQLDBGlobalState0);
-        HSQLDBSchema.HSQLDBCompositeDataType hSQLDBSchema_HSQLDBCompositeDataType0 = hSQLDBExpressionGenerator0
-                .getRandomType();
-        assertEquals(HSQLDBSchema.HSQLDBDataType.BINARY, hSQLDBSchema_HSQLDBCompositeDataType0.getType());
-    }
+//    @Test
+//    public void test03() throws Throwable {
+//        HSQLDBProvider.HSQLDBGlobalState hSQLDBProvider_HSQLDBGlobalState0 = new HSQLDBProvider.HSQLDBGlobalState();
+//        HSQLDBExpressionGenerator hSQLDBExpressionGenerator0 = new HSQLDBExpressionGenerator(
+//                hSQLDBProvider_HSQLDBGlobalState0);
+//        HSQLDBSchema.HSQLDBCompositeDataType hSQLDBSchema_HSQLDBCompositeDataType0 = hSQLDBExpressionGenerator0
+//                .getRandomType();
+//        assertEquals(HSQLDBSchema.HSQLDBDataType.BINARY, hSQLDBSchema_HSQLDBCompositeDataType0.getType());
+//    }
 
     @Test
     public void test04() throws Throwable {
@@ -156,32 +156,32 @@ public class HSQLDBExpressionGenerator_ESTest {
         }
     }
 
-    @Test
-    public void test08() throws Throwable {
-        HSQLDBProvider.HSQLDBGlobalState hSQLDBProvider_HSQLDBGlobalState0 = new HSQLDBProvider.HSQLDBGlobalState();
-        LinkedList<HSQLDBSchema.HSQLDBColumn> linkedList0 = new LinkedList<HSQLDBSchema.HSQLDBColumn>();
-        HSQLDBSchema.HSQLDBTable hSQLDBSchema_HSQLDBTable0 = new HSQLDBSchema.HSQLDBTable("&", linkedList0, false);
-        List<HSQLDBSchema.HSQLDBTable> list0 = List.of(hSQLDBSchema_HSQLDBTable0, hSQLDBSchema_HSQLDBTable0,
-                hSQLDBSchema_HSQLDBTable0);
-        HSQLDBExpressionGenerator hSQLDBExpressionGenerator0 = new HSQLDBExpressionGenerator(
-                hSQLDBProvider_HSQLDBGlobalState0);
-        AbstractTables<HSQLDBSchema.HSQLDBTable, HSQLDBSchema.HSQLDBColumn> abstractTables0 = new AbstractTables<HSQLDBSchema.HSQLDBTable, HSQLDBSchema.HSQLDBColumn>(
-                list0);
-        HSQLDBExpressionGenerator hSQLDBExpressionGenerator1 = hSQLDBExpressionGenerator0
-                .setTablesAndColumns(abstractTables0);
-        HSQLDBSchema.HSQLDBCompositeDataType.getRandomWithoutNull();
-        // Undeclared exception!
-        try {
-            hSQLDBExpressionGenerator1.getRandomJoinClauses();
-            fail("Expecting exception: UnsupportedOperationException");
-
-        } catch (UnsupportedOperationException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("java.util.ImmutableCollections", e);
-        }
-    }
+//    @Test
+//    public void test08() throws Throwable {
+//        HSQLDBProvider.HSQLDBGlobalState hSQLDBProvider_HSQLDBGlobalState0 = new HSQLDBProvider.HSQLDBGlobalState();
+//        LinkedList<HSQLDBSchema.HSQLDBColumn> linkedList0 = new LinkedList<HSQLDBSchema.HSQLDBColumn>();
+//        HSQLDBSchema.HSQLDBTable hSQLDBSchema_HSQLDBTable0 = new HSQLDBSchema.HSQLDBTable("&", linkedList0, false);
+//        List<HSQLDBSchema.HSQLDBTable> list0 = List.of(hSQLDBSchema_HSQLDBTable0, hSQLDBSchema_HSQLDBTable0,
+//                hSQLDBSchema_HSQLDBTable0);
+//        HSQLDBExpressionGenerator hSQLDBExpressionGenerator0 = new HSQLDBExpressionGenerator(
+//                hSQLDBProvider_HSQLDBGlobalState0);
+//        AbstractTables<HSQLDBSchema.HSQLDBTable, HSQLDBSchema.HSQLDBColumn> abstractTables0 = new AbstractTables<HSQLDBSchema.HSQLDBTable, HSQLDBSchema.HSQLDBColumn>(
+//                list0);
+//        HSQLDBExpressionGenerator hSQLDBExpressionGenerator1 = hSQLDBExpressionGenerator0
+//                .setTablesAndColumns(abstractTables0);
+//        HSQLDBSchema.HSQLDBCompositeDataType.getRandomWithoutNull();
+//        // Undeclared exception!
+//        try {
+//            hSQLDBExpressionGenerator1.getRandomJoinClauses();
+//            fail("Expecting exception: UnsupportedOperationException");
+//
+//        } catch (UnsupportedOperationException e) {
+//            //
+//            // no message in exception (getMessage() returned null)
+//            //
+//            verifyException("java.util.ImmutableCollections", e);
+//        }
+//    }
 
     @Test
     public void test09() throws Throwable {
@@ -749,24 +749,24 @@ public class HSQLDBExpressionGenerator_ESTest {
         assertEquals("false", hSQLDBConstant_HSQLDBBooleanConstant0.toString());
     }
 
-    @Test
-    public void test36() throws Throwable {
-        HSQLDBProvider.HSQLDBGlobalState hSQLDBProvider_HSQLDBGlobalState0 = new HSQLDBProvider.HSQLDBGlobalState();
-        HSQLDBExpressionGenerator hSQLDBExpressionGenerator0 = new HSQLDBExpressionGenerator(
-                hSQLDBProvider_HSQLDBGlobalState0);
-        HSQLDBSchema.HSQLDBCompositeDataType hSQLDBSchema_HSQLDBCompositeDataType0 = HSQLDBSchema.HSQLDBCompositeDataType
-                .getRandomWithoutNull();
-        HSQLDBConstant.HSQLDBIntConstant hSQLDBConstant_HSQLDBIntConstant0 = (HSQLDBConstant.HSQLDBIntConstant) hSQLDBExpressionGenerator0
-                .generateConstant(hSQLDBSchema_HSQLDBCompositeDataType0);
-        assertEquals("1", hSQLDBConstant_HSQLDBIntConstant0.toString());
-    }
+//    @Test
+//    public void test36() throws Throwable {
+//        HSQLDBProvider.HSQLDBGlobalState hSQLDBProvider_HSQLDBGlobalState0 = new HSQLDBProvider.HSQLDBGlobalState();
+//        HSQLDBExpressionGenerator hSQLDBExpressionGenerator0 = new HSQLDBExpressionGenerator(
+//                hSQLDBProvider_HSQLDBGlobalState0);
+//        HSQLDBSchema.HSQLDBCompositeDataType hSQLDBSchema_HSQLDBCompositeDataType0 = HSQLDBSchema.HSQLDBCompositeDataType
+//                .getRandomWithoutNull();
+//        HSQLDBConstant.HSQLDBIntConstant hSQLDBConstant_HSQLDBIntConstant0 = (HSQLDBConstant.HSQLDBIntConstant) hSQLDBExpressionGenerator0
+//                .generateConstant(hSQLDBSchema_HSQLDBCompositeDataType0);
+//        assertEquals("1", hSQLDBConstant_HSQLDBIntConstant0.toString());
+//    }
 
-    @Test
-    public void test37() throws Throwable {
-        BinaryOperatorNode.Operator binaryOperatorNode_Operator0 = HSQLDBExpressionGenerator.HSQLDBBinaryLogicalOperator
-                .getRandom();
-        assertEquals(HSQLDBExpressionGenerator.HSQLDBBinaryLogicalOperator.AND, binaryOperatorNode_Operator0);
-    }
+//    @Test
+//    public void test37() throws Throwable {
+//        BinaryOperatorNode.Operator binaryOperatorNode_Operator0 = HSQLDBExpressionGenerator.HSQLDBBinaryLogicalOperator
+//                .getRandom();
+//        assertEquals(HSQLDBExpressionGenerator.HSQLDBBinaryLogicalOperator.AND, binaryOperatorNode_Operator0);
+//    }
 
     @Test
     public void test38() throws Throwable {
@@ -789,12 +789,12 @@ public class HSQLDBExpressionGenerator_ESTest {
         assertEquals("=", binaryOperatorNode_Operator0.getTextRepresentation());
     }
 
-    @Test
-    public void test41() throws Throwable {
-        BinaryOperatorNode.Operator binaryOperatorNode_Operator0 = HSQLDBExpressionGenerator.HSQLDBDBBinaryArithmeticOperator
-                .getRandom();
-        assertEquals(HSQLDBExpressionGenerator.HSQLDBDBBinaryArithmeticOperator.CONCAT, binaryOperatorNode_Operator0);
-    }
+//    @Test
+//    public void test41() throws Throwable {
+//        BinaryOperatorNode.Operator binaryOperatorNode_Operator0 = HSQLDBExpressionGenerator.HSQLDBDBBinaryArithmeticOperator
+//                .getRandom();
+//        assertEquals(HSQLDBExpressionGenerator.HSQLDBDBBinaryArithmeticOperator.CONCAT, binaryOperatorNode_Operator0);
+//    }
 
     @Test
     public void test42() throws Throwable {

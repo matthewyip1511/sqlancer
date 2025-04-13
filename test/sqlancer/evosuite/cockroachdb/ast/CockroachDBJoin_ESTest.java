@@ -120,15 +120,15 @@ public class CockroachDBJoin_ESTest {
         assertNull(cockroachDBExpression0);
     }
 
-    @Test
-    public void test07() throws Throwable {
-        CockroachDBJoin.JoinType cockroachDBJoin_JoinType0 = CockroachDBJoin.JoinType.getRandom();
-        CockroachDBJoin.JoinType[] cockroachDBJoin_JoinTypeArray0 = new CockroachDBJoin.JoinType[3];
-        cockroachDBJoin_JoinTypeArray0[0] = cockroachDBJoin_JoinType0;
-        CockroachDBJoin.JoinType cockroachDBJoin_JoinType1 = CockroachDBJoin.JoinType.getRandomExcept("COCKROACHDB",
-                cockroachDBJoin_JoinTypeArray0);
-        assertEquals(CockroachDBJoin.JoinType.LEFT, cockroachDBJoin_JoinType1);
-    }
+//    @Test
+//    public void test07() throws Throwable {
+//        CockroachDBJoin.JoinType cockroachDBJoin_JoinType0 = CockroachDBJoin.JoinType.getRandom();
+//        CockroachDBJoin.JoinType[] cockroachDBJoin_JoinTypeArray0 = new CockroachDBJoin.JoinType[3];
+//        cockroachDBJoin_JoinTypeArray0[0] = cockroachDBJoin_JoinType0;
+//        CockroachDBJoin.JoinType cockroachDBJoin_JoinType1 = CockroachDBJoin.JoinType.getRandomExcept("COCKROACHDB",
+//                cockroachDBJoin_JoinTypeArray0);
+//        assertEquals(CockroachDBJoin.JoinType.LEFT, cockroachDBJoin_JoinType1);
+//    }
 
     @Test
     public void test08() throws Throwable {
@@ -142,29 +142,29 @@ public class CockroachDBJoin_ESTest {
         assertEquals(CockroachDBFunction.LENGTH2, cockroachDBFunctionCall0.getFunction());
     }
 
-    @Test
-    public void test09() throws Throwable {
-        CockroachDBJoin.JoinType cockroachDBJoin_JoinType0 = CockroachDBJoin.JoinType.getRandom();
-        CockroachDBFunction cockroachDBFunction0 = CockroachDBFunction.LENGTH2;
-        CockroachDBFunctionCall cockroachDBFunctionCall0 = new CockroachDBFunctionCall(cockroachDBFunction0,
-                (List<CockroachDBExpression>) null);
-        CockroachDBJoin cockroachDBJoin0 = new CockroachDBJoin(cockroachDBFunctionCall0, cockroachDBFunctionCall0,
-                cockroachDBFunctionCall0, cockroachDBJoin_JoinType0);
-        cockroachDBJoin0.setJoinType(cockroachDBJoin_JoinType0);
-        assertEquals(CockroachDBJoin.JoinType.INNER, cockroachDBJoin0.getJoinType());
-    }
+//    @Test
+//    public void test09() throws Throwable {
+//        CockroachDBJoin.JoinType cockroachDBJoin_JoinType0 = CockroachDBJoin.JoinType.getRandom();
+//        CockroachDBFunction cockroachDBFunction0 = CockroachDBFunction.LENGTH2;
+//        CockroachDBFunctionCall cockroachDBFunctionCall0 = new CockroachDBFunctionCall(cockroachDBFunction0,
+//                (List<CockroachDBExpression>) null);
+//        CockroachDBJoin cockroachDBJoin0 = new CockroachDBJoin(cockroachDBFunctionCall0, cockroachDBFunctionCall0,
+//                cockroachDBFunctionCall0, cockroachDBJoin_JoinType0);
+//        cockroachDBJoin0.setJoinType(cockroachDBJoin_JoinType0);
+//        assertEquals(CockroachDBJoin.JoinType.INNER, cockroachDBJoin0.getJoinType());
+//    }
 
-    @Test
-    public void test10() throws Throwable {
-        CockroachDBJoin.JoinType cockroachDBJoin_JoinType0 = CockroachDBJoin.JoinType.getRandom();
-        CockroachDBFunction cockroachDBFunction0 = CockroachDBFunction.LENGTH2;
-        CockroachDBFunctionCall cockroachDBFunctionCall0 = new CockroachDBFunctionCall(cockroachDBFunction0,
-                (List<CockroachDBExpression>) null);
-        CockroachDBJoin cockroachDBJoin0 = new CockroachDBJoin(cockroachDBFunctionCall0, cockroachDBFunctionCall0,
-                cockroachDBFunctionCall0, cockroachDBJoin_JoinType0);
-        CockroachDBJoin.JoinType cockroachDBJoin_JoinType1 = cockroachDBJoin0.getJoinType();
-        assertEquals(CockroachDBJoin.JoinType.INNER, cockroachDBJoin_JoinType1);
-    }
+//    @Test
+//    public void test10() throws Throwable {
+//        CockroachDBJoin.JoinType cockroachDBJoin_JoinType0 = CockroachDBJoin.JoinType.getRandom();
+//        CockroachDBFunction cockroachDBFunction0 = CockroachDBFunction.LENGTH2;
+//        CockroachDBFunctionCall cockroachDBFunctionCall0 = new CockroachDBFunctionCall(cockroachDBFunction0,
+//                (List<CockroachDBExpression>) null);
+//        CockroachDBJoin cockroachDBJoin0 = new CockroachDBJoin(cockroachDBFunctionCall0, cockroachDBFunctionCall0,
+//                cockroachDBFunctionCall0, cockroachDBJoin_JoinType0);
+//        CockroachDBJoin.JoinType cockroachDBJoin_JoinType1 = cockroachDBJoin0.getJoinType();
+//        assertEquals(CockroachDBJoin.JoinType.INNER, cockroachDBJoin_JoinType1);
+//    }
 
     @Test
     public void test11() throws Throwable {

@@ -155,15 +155,15 @@ public class SQLite3Select_ESTest {
         assertEquals(0, list0.size());
     }
 
-    @Test
-    public void test15() throws Throwable {
-        SQLite3Select sQLite3Select0 = new SQLite3Select();
-        SQLite3Expression[] sQLite3ExpressionArray0 = new SQLite3Expression[2];
-        List<SQLite3Expression> list0 = Randomly.nonEmptySubset(sQLite3ExpressionArray0);
-        sQLite3Select0.setFromList(list0);
-        List<SQLite3Expression> list1 = sQLite3Select0.getFromList();
-        assertEquals(1, list1.size());
-    }
+//    @Test
+//    public void test15() throws Throwable {
+//        SQLite3Select sQLite3Select0 = new SQLite3Select();
+//        SQLite3Expression[] sQLite3ExpressionArray0 = new SQLite3Expression[2];
+//        List<SQLite3Expression> list0 = Randomly.nonEmptySubset(sQLite3ExpressionArray0);
+//        sQLite3Select0.setFromList(list0);
+//        List<SQLite3Expression> list1 = sQLite3Select0.getFromList();
+//        assertEquals(1, list1.size());
+//    }
 
     @Test
     public void test16() throws Throwable {

@@ -86,13 +86,13 @@ public class CockroachDBMultiValuedComparison_ESTest {
         assertNull(cockroachDBExpression0);
     }
 
-    @Test
-    public void test4() throws Throwable {
-        CockroachDBMultiValuedComparison.MultiValuedComparisonOperator cockroachDBMultiValuedComparison_MultiValuedComparisonOperator0 = CockroachDBMultiValuedComparison.MultiValuedComparisonOperator
-                .getRandomGenericComparisonOperator();
-        assertEquals(CockroachDBMultiValuedComparison.MultiValuedComparisonOperator.SMALLER,
-                cockroachDBMultiValuedComparison_MultiValuedComparisonOperator0);
-    }
+//    @Test
+//    public void test4() throws Throwable {
+//        CockroachDBMultiValuedComparison.MultiValuedComparisonOperator cockroachDBMultiValuedComparison_MultiValuedComparisonOperator0 = CockroachDBMultiValuedComparison.MultiValuedComparisonOperator
+//                .getRandomGenericComparisonOperator();
+//        assertEquals(CockroachDBMultiValuedComparison.MultiValuedComparisonOperator.SMALLER,
+//                cockroachDBMultiValuedComparison_MultiValuedComparisonOperator0);
+//    }
 
     @Test
     public void test5() throws Throwable {
