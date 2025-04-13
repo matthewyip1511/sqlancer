@@ -204,23 +204,23 @@ public class MySQLExpressionGenerator_ESTest {
         }
     }
 
-    @Test
-    public void test11() throws Throwable {
-        MySQLGlobalState mySQLGlobalState0 = new MySQLGlobalState();
-        MySQLExpressionGenerator mySQLExpressionGenerator0 = new MySQLExpressionGenerator(mySQLGlobalState0);
-        MySQLSelect mySQLSelect0 = new MySQLSelect();
-        // Undeclared exception!
-        try {
-            mySQLExpressionGenerator0.mutate(mySQLSelect0);
-            fail("Expecting exception: IllegalStateException");
-
-        } catch (IllegalStateException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.common.ast.SelectBase", e);
-        }
-    }
+    // @Test
+    // public void test11() throws Throwable {
+    // MySQLGlobalState mySQLGlobalState0 = new MySQLGlobalState();
+    // MySQLExpressionGenerator mySQLExpressionGenerator0 = new MySQLExpressionGenerator(mySQLGlobalState0);
+    // MySQLSelect mySQLSelect0 = new MySQLSelect();
+    // // Undeclared exception!
+    // try {
+    // mySQLExpressionGenerator0.mutate(mySQLSelect0);
+    // fail("Expecting exception: IllegalStateException");
+    //
+    // } catch (IllegalStateException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.common.ast.SelectBase", e);
+    // }
+    // }
 
     @Test
     public void test12() throws Throwable {

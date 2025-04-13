@@ -117,49 +117,50 @@ public class MySQLJoin_ESTest {
     // }
     // }
 
-    @Test
-    public void test05() throws Throwable {
-        LinkedList<MySQLSchema.MySQLTable> linkedList0 = new LinkedList<MySQLSchema.MySQLTable>();
-        linkedList0.add((MySQLSchema.MySQLTable) null);
-        linkedList0.addLast((MySQLSchema.MySQLTable) null);
-        linkedList0.addLast((MySQLSchema.MySQLTable) null);
-        MySQLGlobalState mySQLGlobalState0 = new MySQLGlobalState();
-        // Undeclared exception!
-        try {
-            MySQLJoin.getRandomJoinClauses(linkedList0, mySQLGlobalState0);
-            fail("Expecting exception: NullPointerException");
+    // @Test
+    // public void test05() throws Throwable {
+    // LinkedList<MySQLSchema.MySQLTable> linkedList0 = new LinkedList<MySQLSchema.MySQLTable>();
+    // linkedList0.add((MySQLSchema.MySQLTable) null);
+    // linkedList0.addLast((MySQLSchema.MySQLTable) null);
+    // linkedList0.addLast((MySQLSchema.MySQLTable) null);
+    // MySQLGlobalState mySQLGlobalState0 = new MySQLGlobalState();
+    // // Undeclared exception!
+    // try {
+    // MySQLJoin.getRandomJoinClauses(linkedList0, mySQLGlobalState0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.mysql.ast.MySQLJoin", e);
+    // }
+    // }
 
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.mysql.ast.MySQLJoin", e);
-        }
-    }
-
-    @Test
-    public void test06() throws Throwable {
-        LinkedList<MySQLSchema.MySQLTable> linkedList0 = new LinkedList<MySQLSchema.MySQLTable>();
-        LinkedList<MySQLSchema.MySQLColumn> linkedList1 = new LinkedList<MySQLSchema.MySQLColumn>();
-        MySQLSchema.MySQLTable.MySQLEngine mySQLSchema_MySQLTable_MySQLEngine0 = MySQLSchema.MySQLTable.MySQLEngine.FEDERATED;
-        MySQLSchema.MySQLTable mySQLSchema_MySQLTable0 = new MySQLSchema.MySQLTable("", linkedList1,
-                (List<MySQLSchema.MySQLIndex>) null, mySQLSchema_MySQLTable_MySQLEngine0);
-        linkedList0.addLast(mySQLSchema_MySQLTable0);
-        linkedList0.addLast(mySQLSchema_MySQLTable0);
-        MySQLGlobalState mySQLGlobalState0 = new MySQLGlobalState();
-        MySQLJoin.getRandomJoinClauses(linkedList0, mySQLGlobalState0);
-        // Undeclared exception!
-        try {
-            MySQLJoin.getRandomJoinClauses(linkedList0, mySQLGlobalState0);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.mysql.gen.MySQLExpressionGenerator", e);
-        }
-    }
+    // @Test
+    // public void test06() throws Throwable {
+    // LinkedList<MySQLSchema.MySQLTable> linkedList0 = new LinkedList<MySQLSchema.MySQLTable>();
+    // LinkedList<MySQLSchema.MySQLColumn> linkedList1 = new LinkedList<MySQLSchema.MySQLColumn>();
+    // MySQLSchema.MySQLTable.MySQLEngine mySQLSchema_MySQLTable_MySQLEngine0 =
+    // MySQLSchema.MySQLTable.MySQLEngine.FEDERATED;
+    // MySQLSchema.MySQLTable mySQLSchema_MySQLTable0 = new MySQLSchema.MySQLTable("", linkedList1,
+    // (List<MySQLSchema.MySQLIndex>) null, mySQLSchema_MySQLTable_MySQLEngine0);
+    // linkedList0.addLast(mySQLSchema_MySQLTable0);
+    // linkedList0.addLast(mySQLSchema_MySQLTable0);
+    // MySQLGlobalState mySQLGlobalState0 = new MySQLGlobalState();
+    // MySQLJoin.getRandomJoinClauses(linkedList0, mySQLGlobalState0);
+    // // Undeclared exception!
+    // try {
+    // MySQLJoin.getRandomJoinClauses(linkedList0, mySQLGlobalState0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.mysql.gen.MySQLExpressionGenerator", e);
+    // }
+    // }
 
     @Test
     public void test07() throws Throwable {

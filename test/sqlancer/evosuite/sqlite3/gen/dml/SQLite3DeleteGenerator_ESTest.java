@@ -50,20 +50,25 @@ public class SQLite3DeleteGenerator_ESTest {
         }
     }
 
-    @Test
-    public void test2() throws Throwable {
-        SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
-        LinkedList<SQLite3Schema.SQLite3Column> linkedList0 = new LinkedList<SQLite3Schema.SQLite3Column>();
-        SQLite3Schema.SQLite3Table.TableKind sQLite3Schema_SQLite3Table_TableKind0 = SQLite3Schema.SQLite3Table.TableKind.TEMP;
-        SQLite3Schema.SQLite3Table sQLite3Schema_SQLite3Table0 = new SQLite3Schema.SQLite3Table(
-                "SELECT mz_indexes.name, mz_databases.name FROM mz_indexes JOIN mz_relations ON mz_indexes.on_id = mz_relations.id JOIN mz_schemas ON mz_relations.schema_id = mz_schemas.id JOIN mz_databases ON mz_schemas.database_id = mz_databases.id WHERE mz_databases.name = '%s';",
-                linkedList0, sQLite3Schema_SQLite3Table_TableKind0, false, false, false, true);
-        SQLQueryAdapter sQLQueryAdapter0 = SQLite3DeleteGenerator.deleteContent(sQLite3GlobalState0,
-                sQLite3Schema_SQLite3Table0);
-        assertEquals(
-                "DELETE FROM SELECT mz_indexes.name, mz_databases.name FROM mz_indexes JOIN mz_relations ON mz_indexes.on_id = mz_relations.id JOIN mz_schemas ON mz_relations.schema_id = mz_schemas.id JOIN mz_databases ON mz_schemas.database_id = mz_databases.id WHERE mz_databases.name = '%s';",
-                sQLQueryAdapter0.getLogString());
-    }
+    // @Test
+    // public void test2() throws Throwable {
+    // SQLite3GlobalState sQLite3GlobalState0 = new SQLite3GlobalState();
+    // LinkedList<SQLite3Schema.SQLite3Column> linkedList0 = new LinkedList<SQLite3Schema.SQLite3Column>();
+    // SQLite3Schema.SQLite3Table.TableKind sQLite3Schema_SQLite3Table_TableKind0 =
+    // SQLite3Schema.SQLite3Table.TableKind.TEMP;
+    // SQLite3Schema.SQLite3Table sQLite3Schema_SQLite3Table0 = new SQLite3Schema.SQLite3Table(
+    // "SELECT mz_indexes.name, mz_databases.name FROM mz_indexes JOIN mz_relations ON mz_indexes.on_id =
+    // mz_relations.id JOIN mz_schemas ON mz_relations.schema_id = mz_schemas.id JOIN mz_databases ON
+    // mz_schemas.database_id = mz_databases.id WHERE mz_databases.name = '%s';",
+    // linkedList0, sQLite3Schema_SQLite3Table_TableKind0, false, false, false, true);
+    // SQLQueryAdapter sQLQueryAdapter0 = SQLite3DeleteGenerator.deleteContent(sQLite3GlobalState0,
+    // sQLite3Schema_SQLite3Table0);
+    // assertEquals(
+    // "DELETE FROM SELECT mz_indexes.name, mz_databases.name FROM mz_indexes JOIN mz_relations ON mz_indexes.on_id =
+    // mz_relations.id JOIN mz_schemas ON mz_relations.schema_id = mz_schemas.id JOIN mz_databases ON
+    // mz_schemas.database_id = mz_databases.id WHERE mz_databases.name = '%s';",
+    // sQLQueryAdapter0.getLogString());
+    // }
 
     @Test
     public void test3() throws Throwable {

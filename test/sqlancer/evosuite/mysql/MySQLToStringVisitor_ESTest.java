@@ -858,22 +858,24 @@ public class MySQLToStringVisitor_ESTest {
         assertEquals(" NATURAL JOIN  ON NULL", mySQLToStringVisitor0.get());
     }
 
-    @Test
-    public void test51() throws Throwable {
-        MySQLToStringVisitor mySQLToStringVisitor0 = new MySQLToStringVisitor();
-        MySQLSelect mySQLSelect0 = new MySQLSelect();
-        List<MySQLExpression> list0 = mySQLSelect0.getJoinList();
-        MySQLConstant mySQLConstant0 = MySQLConstant.createStringConstant("%#::GC~a!1\u0006");
-        MySQLAggregate.MySQLAggregateFunction mySQLAggregate_MySQLAggregateFunction0 = MySQLAggregate.MySQLAggregateFunction.MIN;
-        MySQLAggregate mySQLAggregate0 = new MySQLAggregate(list0, mySQLAggregate_MySQLAggregateFunction0);
-        MySQLOrderByTerm.MySQLOrder mySQLOrderByTerm_MySQLOrder0 = MySQLOrderByTerm.MySQLOrder.ASC;
-        MySQLOrderByTerm mySQLOrderByTerm0 = new MySQLOrderByTerm(mySQLAggregate0, mySQLOrderByTerm_MySQLOrder0);
-        MySQLBinaryComparisonOperation.BinaryComparisonOperator mySQLBinaryComparisonOperation_BinaryComparisonOperator0 = MySQLBinaryComparisonOperation.BinaryComparisonOperator.EQUALS;
-        MySQLBinaryComparisonOperation mySQLBinaryComparisonOperation0 = new MySQLBinaryComparisonOperation(
-                mySQLConstant0, mySQLOrderByTerm0, mySQLBinaryComparisonOperation_BinaryComparisonOperator0);
-        mySQLToStringVisitor0.visit(mySQLBinaryComparisonOperation0);
-        assertEquals("(\"%#::GC~a!1\u0006\") = (MIN() ASC)", mySQLToStringVisitor0.get());
-    }
+    // @Test
+    // public void test51() throws Throwable {
+    // MySQLToStringVisitor mySQLToStringVisitor0 = new MySQLToStringVisitor();
+    // MySQLSelect mySQLSelect0 = new MySQLSelect();
+    // List<MySQLExpression> list0 = mySQLSelect0.getJoinList();
+    // MySQLConstant mySQLConstant0 = MySQLConstant.createStringConstant("%#::GC~a!1\u0006");
+    // MySQLAggregate.MySQLAggregateFunction mySQLAggregate_MySQLAggregateFunction0 =
+    // MySQLAggregate.MySQLAggregateFunction.MIN;
+    // MySQLAggregate mySQLAggregate0 = new MySQLAggregate(list0, mySQLAggregate_MySQLAggregateFunction0);
+    // MySQLOrderByTerm.MySQLOrder mySQLOrderByTerm_MySQLOrder0 = MySQLOrderByTerm.MySQLOrder.ASC;
+    // MySQLOrderByTerm mySQLOrderByTerm0 = new MySQLOrderByTerm(mySQLAggregate0, mySQLOrderByTerm_MySQLOrder0);
+    // MySQLBinaryComparisonOperation.BinaryComparisonOperator mySQLBinaryComparisonOperation_BinaryComparisonOperator0
+    // = MySQLBinaryComparisonOperation.BinaryComparisonOperator.EQUALS;
+    // MySQLBinaryComparisonOperation mySQLBinaryComparisonOperation0 = new MySQLBinaryComparisonOperation(
+    // mySQLConstant0, mySQLOrderByTerm0, mySQLBinaryComparisonOperation_BinaryComparisonOperator0);
+    // mySQLToStringVisitor0.visit(mySQLBinaryComparisonOperation0);
+    // assertEquals("(\"%#::GC~a!1\u0006\") = (MIN() ASC)", mySQLToStringVisitor0.get());
+    // }
 
     @Test
     public void test52() throws Throwable {

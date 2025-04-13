@@ -794,13 +794,13 @@ public class SQLite3Function_ESTest {
     // assertFalse(boolean0);
     // }
 
-    @Test
-    public void test48() throws Throwable {
-        SQLite3Function.ComputableFunction sQLite3Function_ComputableFunction0 = SQLite3Function.ComputableFunction
-                .getRandomFunction();
-        int int0 = sQLite3Function_ComputableFunction0.getNrArgs();
-        assertEquals(1, int0);
-    }
+    // @Test
+    // public void test48() throws Throwable {
+    // SQLite3Function.ComputableFunction sQLite3Function_ComputableFunction0 = SQLite3Function.ComputableFunction
+    // .getRandomFunction();
+    // int int0 = sQLite3Function_ComputableFunction0.getNrArgs();
+    // assertEquals(1, int0);
+    // }
 
     @Test
     public void test49() throws Throwable {

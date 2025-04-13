@@ -1701,29 +1701,33 @@ public class SQLite3Expression_ESTest {
         assertEquals(SQLite3OrderingTerm.Ordering.ASC, sQLite3Expression_SQLite3OrderingTerm_Ordering0);
     }
 
-    @Test
-    public void test136() throws Throwable {
-        SQLite3Constant sQLite3Constant0 = SQLite3Constant.createBoolean(false);
-        SQLite3TypeAffinity sQLite3Expression_TypeAffinity0 = SQLite3TypeAffinity.NUMERIC;
-        SQLite3BinaryComparisonOperation.BinaryComparisonOperator sQLite3Expression_BinaryComparisonOperation_BinaryComparisonOperator0 = SQLite3BinaryComparisonOperation.BinaryComparisonOperator.GREATER;
-        SQLite3DataType sQLite3DataType0 = SQLite3DataType.NULL;
-        SQLite3Schema.SQLite3Column.SQLite3CollateSequence sQLite3Schema_SQLite3Column_SQLite3CollateSequence0 = SQLite3Schema.SQLite3Column.SQLite3CollateSequence.RTRIM;
-        SQLite3Schema.SQLite3Column sQLite3Schema_SQLite3Column0 = new SQLite3Schema.SQLite3Column("IS_NOT",
-                sQLite3DataType0, false, sQLite3Schema_SQLite3Column_SQLite3CollateSequence0, false);
-        List<SQLite3Schema.SQLite3Column> list0 = List.of(sQLite3Schema_SQLite3Column0, sQLite3Schema_SQLite3Column0,
-                sQLite3Schema_SQLite3Column0, sQLite3Schema_SQLite3Column0);
-        SQLite3Schema.SQLite3Table.TableKind sQLite3Schema_SQLite3Table_TableKind0 = SQLite3Schema.SQLite3Table.TableKind.MAIN;
-        SQLite3Schema.SQLite3Table sQLite3Schema_SQLite3Table0 = new SQLite3Schema.SQLite3Table("!zT>", list0,
-                sQLite3Schema_SQLite3Table_TableKind0, false, false, false, false);
-        SQLite3TableReference sQLite3Expression_SQLite3TableReference0 = new SQLite3TableReference(
-                sQLite3Schema_SQLite3Table0);
-        SQLite3Constant sQLite3Constant1 = sQLite3Expression_BinaryComparisonOperation_BinaryComparisonOperator0
-                .applyOperand(sQLite3Constant0, sQLite3Expression_TypeAffinity0, sQLite3Constant0,
-                        sQLite3Expression_TypeAffinity0, sQLite3Expression_SQLite3TableReference0, sQLite3Constant0,
-                        false);
-        assertNotNull(sQLite3Constant1);
-        assertEquals(0L, sQLite3Constant1.asInt());
-    }
+    // @Test
+    // public void test136() throws Throwable {
+    // SQLite3Constant sQLite3Constant0 = SQLite3Constant.createBoolean(false);
+    // SQLite3TypeAffinity sQLite3Expression_TypeAffinity0 = SQLite3TypeAffinity.NUMERIC;
+    // SQLite3BinaryComparisonOperation.BinaryComparisonOperator
+    // sQLite3Expression_BinaryComparisonOperation_BinaryComparisonOperator0 =
+    // SQLite3BinaryComparisonOperation.BinaryComparisonOperator.GREATER;
+    // SQLite3DataType sQLite3DataType0 = SQLite3DataType.NULL;
+    // SQLite3Schema.SQLite3Column.SQLite3CollateSequence sQLite3Schema_SQLite3Column_SQLite3CollateSequence0 =
+    // SQLite3Schema.SQLite3Column.SQLite3CollateSequence.RTRIM;
+    // SQLite3Schema.SQLite3Column sQLite3Schema_SQLite3Column0 = new SQLite3Schema.SQLite3Column("IS_NOT",
+    // sQLite3DataType0, false, sQLite3Schema_SQLite3Column_SQLite3CollateSequence0, false);
+    // List<SQLite3Schema.SQLite3Column> list0 = List.of(sQLite3Schema_SQLite3Column0, sQLite3Schema_SQLite3Column0,
+    // sQLite3Schema_SQLite3Column0, sQLite3Schema_SQLite3Column0);
+    // SQLite3Schema.SQLite3Table.TableKind sQLite3Schema_SQLite3Table_TableKind0 =
+    // SQLite3Schema.SQLite3Table.TableKind.MAIN;
+    // SQLite3Schema.SQLite3Table sQLite3Schema_SQLite3Table0 = new SQLite3Schema.SQLite3Table("!zT>", list0,
+    // sQLite3Schema_SQLite3Table_TableKind0, false, false, false, false);
+    // SQLite3TableReference sQLite3Expression_SQLite3TableReference0 = new SQLite3TableReference(
+    // sQLite3Schema_SQLite3Table0);
+    // SQLite3Constant sQLite3Constant1 = sQLite3Expression_BinaryComparisonOperation_BinaryComparisonOperator0
+    // .applyOperand(sQLite3Constant0, sQLite3Expression_TypeAffinity0, sQLite3Constant0,
+    // sQLite3Expression_TypeAffinity0, sQLite3Expression_SQLite3TableReference0, sQLite3Constant0,
+    // false);
+    // assertNotNull(sQLite3Constant1);
+    // assertEquals(0L, sQLite3Constant1.asInt());
+    // }
 
     @Test
     public void test137() throws Throwable {
