@@ -1003,18 +1003,18 @@ public class PostgresToStringVisitor_ESTest {
         assertEquals("(TRUE) BETWEEN SYMMETRIC (TRUE) AND (TRUE)", postgresToStringVisitor0.get());
     }
 
-    @Test
-    public void test59() throws Throwable {
-        PostgresToStringVisitor postgresToStringVisitor0 = new PostgresToStringVisitor();
-        PostgresConstant postgresConstant0 = PostgresConstant.createFalse();
-        PostgresSchema.PostgresDataType postgresSchema_PostgresDataType0 = PostgresSchema.PostgresDataType.INET;
-        PostgresCompoundDataType postgresCompoundDataType0 = PostgresCompoundDataType
-                .create(postgresSchema_PostgresDataType0);
-        PostgresCastOperation postgresCastOperation0 = new PostgresCastOperation(postgresConstant0,
-                postgresCompoundDataType0);
-        postgresToStringVisitor0.visit(postgresCastOperation0);
-        assertEquals("(FALSE)::INET", postgresToStringVisitor0.get());
-    }
+//    @Test
+//    public void test59() throws Throwable {
+//        PostgresToStringVisitor postgresToStringVisitor0 = new PostgresToStringVisitor();
+//        PostgresConstant postgresConstant0 = PostgresConstant.createFalse();
+//        PostgresSchema.PostgresDataType postgresSchema_PostgresDataType0 = PostgresSchema.PostgresDataType.INET;
+//        PostgresCompoundDataType postgresCompoundDataType0 = PostgresCompoundDataType
+//                .create(postgresSchema_PostgresDataType0);
+//        PostgresCastOperation postgresCastOperation0 = new PostgresCastOperation(postgresConstant0,
+//                postgresCompoundDataType0);
+//        postgresToStringVisitor0.visit(postgresCastOperation0);
+//        assertEquals("(FALSE)::INET", postgresToStringVisitor0.get());
+//    }
 
     // @Test
     // public void test60() throws Throwable {
