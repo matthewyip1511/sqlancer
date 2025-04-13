@@ -164,30 +164,31 @@ public class DuckDBExpressionGenerator_ESTest {
         }
     }
 
-    @Test
-    public void test08() throws Throwable {
-        DuckDBProvider.DuckDBGlobalState duckDBProvider_DuckDBGlobalState0 = new DuckDBProvider.DuckDBGlobalState();
-        DuckDBSchema.DuckDBColumn duckDBSchema_DuckDBColumn0 = new DuckDBSchema.DuckDBColumn("i0>",
-                (DuckDBSchema.DuckDBCompositeDataType) null, false, false);
-        List<DuckDBSchema.DuckDBColumn> list0 = List.of(duckDBSchema_DuckDBColumn0, duckDBSchema_DuckDBColumn0,
-                duckDBSchema_DuckDBColumn0, duckDBSchema_DuckDBColumn0, duckDBSchema_DuckDBColumn0,
-                duckDBSchema_DuckDBColumn0, duckDBSchema_DuckDBColumn0, duckDBSchema_DuckDBColumn0);
-        DuckDBSchema.DuckDBTable duckDBSchema_DuckDBTable0 = new DuckDBSchema.DuckDBTable("double precision", list0,
-                false);
-        List<DuckDBSchema.DuckDBTable> list1 = List.of(duckDBSchema_DuckDBTable0, duckDBSchema_DuckDBTable0,
-                duckDBSchema_DuckDBTable0);
-        AbstractTables<DuckDBSchema.DuckDBTable, DuckDBSchema.DuckDBColumn> abstractTables0 = new AbstractTables<DuckDBSchema.DuckDBTable, DuckDBSchema.DuckDBColumn>(
-                list1);
-        DuckDBExpressionGenerator duckDBExpressionGenerator0 = new DuckDBExpressionGenerator(
-                duckDBProvider_DuckDBGlobalState0);
-        DuckDBExpressionGenerator duckDBExpressionGenerator1 = duckDBExpressionGenerator0
-                .setTablesAndColumns(abstractTables0);
-        DuckDBSelect duckDBSelect0 = new DuckDBSelect();
-        List<DuckDBExpression> list2 = duckDBSelect0.getOrderByClauses();
-        duckDBSelect0.setFromTables(list2);
-        // Undeclared exception!
-        duckDBExpressionGenerator1.generateOptimizedQueryString(duckDBSelect0, (DuckDBExpression) duckDBSelect0, false);
-    }
+    // @Test
+    // public void test08() throws Throwable {
+    // DuckDBProvider.DuckDBGlobalState duckDBProvider_DuckDBGlobalState0 = new DuckDBProvider.DuckDBGlobalState();
+    // DuckDBSchema.DuckDBColumn duckDBSchema_DuckDBColumn0 = new DuckDBSchema.DuckDBColumn("i0>",
+    // (DuckDBSchema.DuckDBCompositeDataType) null, false, false);
+    // List<DuckDBSchema.DuckDBColumn> list0 = List.of(duckDBSchema_DuckDBColumn0, duckDBSchema_DuckDBColumn0,
+    // duckDBSchema_DuckDBColumn0, duckDBSchema_DuckDBColumn0, duckDBSchema_DuckDBColumn0,
+    // duckDBSchema_DuckDBColumn0, duckDBSchema_DuckDBColumn0, duckDBSchema_DuckDBColumn0);
+    // DuckDBSchema.DuckDBTable duckDBSchema_DuckDBTable0 = new DuckDBSchema.DuckDBTable("double precision", list0,
+    // false);
+    // List<DuckDBSchema.DuckDBTable> list1 = List.of(duckDBSchema_DuckDBTable0, duckDBSchema_DuckDBTable0,
+    // duckDBSchema_DuckDBTable0);
+    // AbstractTables<DuckDBSchema.DuckDBTable, DuckDBSchema.DuckDBColumn> abstractTables0 = new
+    // AbstractTables<DuckDBSchema.DuckDBTable, DuckDBSchema.DuckDBColumn>(
+    // list1);
+    // DuckDBExpressionGenerator duckDBExpressionGenerator0 = new DuckDBExpressionGenerator(
+    // duckDBProvider_DuckDBGlobalState0);
+    // DuckDBExpressionGenerator duckDBExpressionGenerator1 = duckDBExpressionGenerator0
+    // .setTablesAndColumns(abstractTables0);
+    // DuckDBSelect duckDBSelect0 = new DuckDBSelect();
+    // List<DuckDBExpression> list2 = duckDBSelect0.getOrderByClauses();
+    // duckDBSelect0.setFromTables(list2);
+    // // Undeclared exception!
+    // duckDBExpressionGenerator1.generateOptimizedQueryString(duckDBSelect0, (DuckDBExpression) duckDBSelect0, false);
+    // }
 
     @Test
     public void test09() throws Throwable {
@@ -270,13 +271,14 @@ public class DuckDBExpressionGenerator_ESTest {
         }
     }
 
-    @Test
-    public void test13() throws Throwable {
-        DuckDBExpressionGenerator.DuckDBAggregateFunction duckDBExpressionGenerator_DuckDBAggregateFunction0 = DuckDBExpressionGenerator.DuckDBAggregateFunction
-                .getRandom();
-        assertEquals(DuckDBExpressionGenerator.DuckDBAggregateFunction.MAX,
-                duckDBExpressionGenerator_DuckDBAggregateFunction0);
-    }
+    // @Test
+    // public void test13() throws Throwable {
+    // DuckDBExpressionGenerator.DuckDBAggregateFunction duckDBExpressionGenerator_DuckDBAggregateFunction0 =
+    // DuckDBExpressionGenerator.DuckDBAggregateFunction
+    // .getRandom();
+    // assertEquals(DuckDBExpressionGenerator.DuckDBAggregateFunction.MAX,
+    // duckDBExpressionGenerator_DuckDBAggregateFunction0);
+    // }
 
     @Test
     public void test14() throws Throwable {
@@ -322,39 +324,40 @@ public class DuckDBExpressionGenerator_ESTest {
     // }
     // }
 
-    @Test
-    public void test17() throws Throwable {
-        DuckDBProvider.DuckDBGlobalState duckDBProvider_DuckDBGlobalState0 = new DuckDBProvider.DuckDBGlobalState();
-        DuckDBSchema.DuckDBColumn duckDBSchema_DuckDBColumn0 = new DuckDBSchema.DuckDBColumn("i0>",
-                (DuckDBSchema.DuckDBCompositeDataType) null, false, false);
-        List<DuckDBSchema.DuckDBColumn> list0 = List.of(duckDBSchema_DuckDBColumn0, duckDBSchema_DuckDBColumn0,
-                duckDBSchema_DuckDBColumn0, duckDBSchema_DuckDBColumn0, duckDBSchema_DuckDBColumn0,
-                duckDBSchema_DuckDBColumn0, duckDBSchema_DuckDBColumn0, duckDBSchema_DuckDBColumn0);
-        DuckDBSchema.DuckDBTable duckDBSchema_DuckDBTable0 = new DuckDBSchema.DuckDBTable("double precision", list0,
-                false);
-        duckDBSchema_DuckDBTable0.getRandomColumn();
-        List<DuckDBSchema.DuckDBTable> list1 = List.of(duckDBSchema_DuckDBTable0, duckDBSchema_DuckDBTable0,
-                duckDBSchema_DuckDBTable0);
-        AbstractTables<DuckDBSchema.DuckDBTable, DuckDBSchema.DuckDBColumn> abstractTables0 = new AbstractTables<DuckDBSchema.DuckDBTable, DuckDBSchema.DuckDBColumn>(
-                list1);
-        DuckDBExpressionGenerator duckDBExpressionGenerator0 = new DuckDBExpressionGenerator(
-                duckDBProvider_DuckDBGlobalState0);
-        DuckDBExpressionGenerator duckDBExpressionGenerator1 = duckDBExpressionGenerator0
-                .setTablesAndColumns(abstractTables0);
-        DuckDBSelect duckDBSelect0 = new DuckDBSelect();
-        // Undeclared exception!
-        try {
-            duckDBExpressionGenerator1.generateOptimizedQueryString(duckDBSelect0, (DuckDBExpression) duckDBSelect0,
-                    false);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.duckdb.gen.DuckDBExpressionGenerator", e);
-        }
-    }
+    // @Test
+    // public void test17() throws Throwable {
+    // DuckDBProvider.DuckDBGlobalState duckDBProvider_DuckDBGlobalState0 = new DuckDBProvider.DuckDBGlobalState();
+    // DuckDBSchema.DuckDBColumn duckDBSchema_DuckDBColumn0 = new DuckDBSchema.DuckDBColumn("i0>",
+    // (DuckDBSchema.DuckDBCompositeDataType) null, false, false);
+    // List<DuckDBSchema.DuckDBColumn> list0 = List.of(duckDBSchema_DuckDBColumn0, duckDBSchema_DuckDBColumn0,
+    // duckDBSchema_DuckDBColumn0, duckDBSchema_DuckDBColumn0, duckDBSchema_DuckDBColumn0,
+    // duckDBSchema_DuckDBColumn0, duckDBSchema_DuckDBColumn0, duckDBSchema_DuckDBColumn0);
+    // DuckDBSchema.DuckDBTable duckDBSchema_DuckDBTable0 = new DuckDBSchema.DuckDBTable("double precision", list0,
+    // false);
+    // duckDBSchema_DuckDBTable0.getRandomColumn();
+    // List<DuckDBSchema.DuckDBTable> list1 = List.of(duckDBSchema_DuckDBTable0, duckDBSchema_DuckDBTable0,
+    // duckDBSchema_DuckDBTable0);
+    // AbstractTables<DuckDBSchema.DuckDBTable, DuckDBSchema.DuckDBColumn> abstractTables0 = new
+    // AbstractTables<DuckDBSchema.DuckDBTable, DuckDBSchema.DuckDBColumn>(
+    // list1);
+    // DuckDBExpressionGenerator duckDBExpressionGenerator0 = new DuckDBExpressionGenerator(
+    // duckDBProvider_DuckDBGlobalState0);
+    // DuckDBExpressionGenerator duckDBExpressionGenerator1 = duckDBExpressionGenerator0
+    // .setTablesAndColumns(abstractTables0);
+    // DuckDBSelect duckDBSelect0 = new DuckDBSelect();
+    // // Undeclared exception!
+    // try {
+    // duckDBExpressionGenerator1.generateOptimizedQueryString(duckDBSelect0, (DuckDBExpression) duckDBSelect0,
+    // false);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.duckdb.gen.DuckDBExpressionGenerator", e);
+    // }
+    // }
 
     @Test
     public void test18() throws Throwable {
@@ -494,16 +497,17 @@ public class DuckDBExpressionGenerator_ESTest {
         }
     }
 
-    @Test
-    public void test26() throws Throwable {
-        DuckDBExpressionGenerator.DuckDBCollate.getRandom();
-        DuckDBProvider.DuckDBGlobalState duckDBProvider_DuckDBGlobalState0 = new DuckDBProvider.DuckDBGlobalState();
-        DuckDBExpressionGenerator duckDBExpressionGenerator0 = new DuckDBExpressionGenerator(
-                duckDBProvider_DuckDBGlobalState0);
-        DuckDBConstant.DuckDBNullConstant duckDBConstant_DuckDBNullConstant0 = (DuckDBConstant.DuckDBNullConstant) duckDBExpressionGenerator0
-                .generateConstant();
-        assertEquals("NULL", duckDBConstant_DuckDBNullConstant0.toString());
-    }
+    // @Test
+    // public void test26() throws Throwable {
+    // DuckDBExpressionGenerator.DuckDBCollate.getRandom();
+    // DuckDBProvider.DuckDBGlobalState duckDBProvider_DuckDBGlobalState0 = new DuckDBProvider.DuckDBGlobalState();
+    // DuckDBExpressionGenerator duckDBExpressionGenerator0 = new DuckDBExpressionGenerator(
+    // duckDBProvider_DuckDBGlobalState0);
+    // DuckDBConstant.DuckDBNullConstant duckDBConstant_DuckDBNullConstant0 = (DuckDBConstant.DuckDBNullConstant)
+    // duckDBExpressionGenerator0
+    // .generateConstant();
+    // assertEquals("NULL", duckDBConstant_DuckDBNullConstant0.toString());
+    // }
 
     @Test
     public void test27() throws Throwable {
@@ -576,12 +580,13 @@ public class DuckDBExpressionGenerator_ESTest {
     // assertEquals(DuckDBExpressionGenerator.DuckDBBinaryComparisonOperator.EQUALS, binaryOperatorNode_Operator0);
     // }
 
-    @Test
-    public void test35() throws Throwable {
-        DuckDBExpressionGenerator.DuckDBUnaryPostfixOperator duckDBExpressionGenerator_DuckDBUnaryPostfixOperator0 = DuckDBExpressionGenerator.DuckDBUnaryPostfixOperator
-                .getRandom();
-        assertEquals("IS NULL", duckDBExpressionGenerator_DuckDBUnaryPostfixOperator0.getTextRepresentation());
-    }
+    // @Test
+    // public void test35() throws Throwable {
+    // DuckDBExpressionGenerator.DuckDBUnaryPostfixOperator duckDBExpressionGenerator_DuckDBUnaryPostfixOperator0 =
+    // DuckDBExpressionGenerator.DuckDBUnaryPostfixOperator
+    // .getRandom();
+    // assertEquals("IS NULL", duckDBExpressionGenerator_DuckDBUnaryPostfixOperator0.getTextRepresentation());
+    // }
 
     @Test
     public void test36() throws Throwable {

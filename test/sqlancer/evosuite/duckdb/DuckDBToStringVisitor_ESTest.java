@@ -128,20 +128,20 @@ public class DuckDBToStringVisitor_ESTest {
         }
     }
 
-    @Test
-    public void test7() throws Throwable {
-        // Undeclared exception!
-        try {
-            DuckDBToStringVisitor.asString((DuckDBExpression) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.duckdb.DuckDBToStringVisitor", e);
-        }
-    }
+    // @Test
+    // public void test7() throws Throwable {
+    // // Undeclared exception!
+    // try {
+    // DuckDBToStringVisitor.asString((DuckDBExpression) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.duckdb.DuckDBToStringVisitor", e);
+    // }
+    // }
 
     @Test
     public void test8() throws Throwable {

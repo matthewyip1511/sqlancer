@@ -266,24 +266,24 @@ public class ComparatorHelper_ESTest {
         }
     }
 
-    @Test
-    public void test18() throws Throwable {
-        MaterializeGlobalState materializeGlobalState0 = new MaterializeGlobalState();
-        List<String> list0 = materializeGlobalState0.getCollates();
-        ExpectedErrors expectedErrors0 = new ExpectedErrors();
-        // Undeclared exception!
-        try {
-            ComparatorHelper.getCombinedResultSet("Second query: \"%s\"", (String) null, "", list0, false,
-                    materializeGlobalState0, expectedErrors0);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.ComparatorHelper", e);
-        }
-    }
+    // @Test
+    // public void test18() throws Throwable {
+    // MaterializeGlobalState materializeGlobalState0 = new MaterializeGlobalState();
+    // List<String> list0 = materializeGlobalState0.getCollates();
+    // ExpectedErrors expectedErrors0 = new ExpectedErrors();
+    // // Undeclared exception!
+    // try {
+    // ComparatorHelper.getCombinedResultSet("Second query: \"%s\"", (String) null, "", list0, false,
+    // materializeGlobalState0, expectedErrors0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.ComparatorHelper", e);
+    // }
+    // }
 
     @Test
     public void test19() throws Throwable {

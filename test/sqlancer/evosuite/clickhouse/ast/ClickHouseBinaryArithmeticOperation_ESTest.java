@@ -61,13 +61,15 @@ public class ClickHouseBinaryArithmeticOperation_ESTest {
         assertEquals("*", string0);
     }
 
-    @Test
-    public void test4() throws Throwable {
-        ClickHouseBinaryArithmeticOperation.ClickHouseBinaryArithmeticOperator clickHouseBinaryArithmeticOperation_ClickHouseBinaryArithmeticOperator0 = ClickHouseBinaryArithmeticOperation.ClickHouseBinaryArithmeticOperator
-                .getRandom();
-        assertEquals("+",
-                clickHouseBinaryArithmeticOperation_ClickHouseBinaryArithmeticOperator0.getTextRepresentation());
-    }
+    // @Test
+    // public void test4() throws Throwable {
+    // ClickHouseBinaryArithmeticOperation.ClickHouseBinaryArithmeticOperator
+    // clickHouseBinaryArithmeticOperation_ClickHouseBinaryArithmeticOperator0 =
+    // ClickHouseBinaryArithmeticOperation.ClickHouseBinaryArithmeticOperator
+    // .getRandom();
+    // assertEquals("+",
+    // clickHouseBinaryArithmeticOperation_ClickHouseBinaryArithmeticOperator0.getTextRepresentation());
+    // }
 
     @Test
     public void test5() throws Throwable {

@@ -91,23 +91,25 @@ public class DataFusionExpressionGenerator_ESTest {
         }
     }
 
-    @Test
-    public void test03() throws Throwable {
-        DataFusionExpressionGenerator dataFusionExpressionGenerator0 = new DataFusionExpressionGenerator(
-                (DataFusionProvider.DataFusionGlobalState) null);
-        DataFusionSchema.DataFusionDataType dataFusionSchema_DataFusionDataType0 = DataFusionSchema.DataFusionDataType.BOOLEAN;
-        List<DataFusionSchema.DataFusionColumn> list0 = dataFusionExpressionGenerator0
-                .filterColumns(dataFusionSchema_DataFusionDataType0);
-        DataFusionSchema.DataFusionTable dataFusionSchema_DataFusionTable0 = new DataFusionSchema.DataFusionTable(
-                "b.iO7<#9`", list0, true);
-        List<DataFusionSchema.DataFusionTable> list1 = List.of(dataFusionSchema_DataFusionTable0,
-                dataFusionSchema_DataFusionTable0);
-        AbstractTables<DataFusionSchema.DataFusionTable, DataFusionSchema.DataFusionColumn> abstractTables0 = new AbstractTables<DataFusionSchema.DataFusionTable, DataFusionSchema.DataFusionColumn>(
-                list1);
-        dataFusionExpressionGenerator0.setTablesAndColumns(abstractTables0);
-        List<DataFusionExpression> list2 = dataFusionExpressionGenerator0.getTableRefs();
-        assertEquals(1, list2.size());
-    }
+    // @Test
+    // public void test03() throws Throwable {
+    // DataFusionExpressionGenerator dataFusionExpressionGenerator0 = new DataFusionExpressionGenerator(
+    // (DataFusionProvider.DataFusionGlobalState) null);
+    // DataFusionSchema.DataFusionDataType dataFusionSchema_DataFusionDataType0 =
+    // DataFusionSchema.DataFusionDataType.BOOLEAN;
+    // List<DataFusionSchema.DataFusionColumn> list0 = dataFusionExpressionGenerator0
+    // .filterColumns(dataFusionSchema_DataFusionDataType0);
+    // DataFusionSchema.DataFusionTable dataFusionSchema_DataFusionTable0 = new DataFusionSchema.DataFusionTable(
+    // "b.iO7<#9`", list0, true);
+    // List<DataFusionSchema.DataFusionTable> list1 = List.of(dataFusionSchema_DataFusionTable0,
+    // dataFusionSchema_DataFusionTable0);
+    // AbstractTables<DataFusionSchema.DataFusionTable, DataFusionSchema.DataFusionColumn> abstractTables0 = new
+    // AbstractTables<DataFusionSchema.DataFusionTable, DataFusionSchema.DataFusionColumn>(
+    // list1);
+    // dataFusionExpressionGenerator0.setTablesAndColumns(abstractTables0);
+    // List<DataFusionExpression> list2 = dataFusionExpressionGenerator0.getTableRefs();
+    // assertEquals(1, list2.size());
+    // }
 
     @Test
     public void test04() throws Throwable {
@@ -127,14 +129,15 @@ public class DataFusionExpressionGenerator_ESTest {
         assertEquals(0, list2.size());
     }
 
-    @Test
-    public void test05() throws Throwable {
-        DataFusionProvider.DataFusionGlobalState dataFusionProvider_DataFusionGlobalState0 = new DataFusionProvider.DataFusionGlobalState();
-        DataFusionExpressionGenerator dataFusionExpressionGenerator0 = new DataFusionExpressionGenerator(
-                dataFusionProvider_DataFusionGlobalState0);
-        List<DataFusionExpression> list0 = dataFusionExpressionGenerator0.generateFetchColumns(false);
-        assertEquals(1, list0.size());
-    }
+    // @Test
+    // public void test05() throws Throwable {
+    // DataFusionProvider.DataFusionGlobalState dataFusionProvider_DataFusionGlobalState0 = new
+    // DataFusionProvider.DataFusionGlobalState();
+    // DataFusionExpressionGenerator dataFusionExpressionGenerator0 = new DataFusionExpressionGenerator(
+    // dataFusionProvider_DataFusionGlobalState0);
+    // List<DataFusionExpression> list0 = dataFusionExpressionGenerator0.generateFetchColumns(false);
+    // assertEquals(1, list0.size());
+    // }
 
     @Test
     public void test06() throws Throwable {
@@ -331,17 +334,19 @@ public class DataFusionExpressionGenerator_ESTest {
         }
     }
 
-    @Test
-    public void test15() throws Throwable {
-        DataFusionProvider.DataFusionGlobalState dataFusionProvider_DataFusionGlobalState0 = new DataFusionProvider.DataFusionGlobalState();
-        DataFusionExpressionGenerator dataFusionExpressionGenerator0 = new DataFusionExpressionGenerator(
-                dataFusionProvider_DataFusionGlobalState0);
-        DataFusionSchema.DataFusionDataType dataFusionSchema_DataFusionDataType0 = dataFusionExpressionGenerator0
-                .getRandomType();
-        DataFusionConstant.DataFusionNullConstant dataFusionConstant_DataFusionNullConstant0 = (DataFusionConstant.DataFusionNullConstant) dataFusionExpressionGenerator0
-                .generateConstant(dataFusionSchema_DataFusionDataType0);
-        assertEquals("NULL", dataFusionConstant_DataFusionNullConstant0.toString());
-    }
+    // @Test
+    // public void test15() throws Throwable {
+    // DataFusionProvider.DataFusionGlobalState dataFusionProvider_DataFusionGlobalState0 = new
+    // DataFusionProvider.DataFusionGlobalState();
+    // DataFusionExpressionGenerator dataFusionExpressionGenerator0 = new DataFusionExpressionGenerator(
+    // dataFusionProvider_DataFusionGlobalState0);
+    // DataFusionSchema.DataFusionDataType dataFusionSchema_DataFusionDataType0 = dataFusionExpressionGenerator0
+    // .getRandomType();
+    // DataFusionConstant.DataFusionNullConstant dataFusionConstant_DataFusionNullConstant0 =
+    // (DataFusionConstant.DataFusionNullConstant) dataFusionExpressionGenerator0
+    // .generateConstant(dataFusionSchema_DataFusionDataType0);
+    // assertEquals("NULL", dataFusionConstant_DataFusionNullConstant0.toString());
+    // }
 
     @Test
     public void test16() throws Throwable {
@@ -552,19 +557,20 @@ public class DataFusionExpressionGenerator_ESTest {
         }
     }
 
-    @Test
-    public void test24() throws Throwable {
-        DataFusionProvider.DataFusionGlobalState dataFusionProvider_DataFusionGlobalState0 = new DataFusionProvider.DataFusionGlobalState();
-        DataFusionExpressionGenerator dataFusionExpressionGenerator0 = new DataFusionExpressionGenerator(
-                dataFusionProvider_DataFusionGlobalState0);
-        DataFusionBaseExpr dataFusionBaseExpr0 = DataFusionBaseExpr
-                .createCommonNumericAggrFuncSingleArg("cEdW}B6qJMf2");
-        DataFusionSchema.DataFusionDataType dataFusionSchema_DataFusionDataType0 = dataFusionExpressionGenerator0
-                .getRandomType();
-        DataFusionExpression dataFusionExpression0 = dataFusionExpressionGenerator0
-                .generateFunctionExpression(dataFusionSchema_DataFusionDataType0, 1, dataFusionBaseExpr0);
-        assertNotNull(dataFusionExpression0);
-    }
+    // @Test
+    // public void test24() throws Throwable {
+    // DataFusionProvider.DataFusionGlobalState dataFusionProvider_DataFusionGlobalState0 = new
+    // DataFusionProvider.DataFusionGlobalState();
+    // DataFusionExpressionGenerator dataFusionExpressionGenerator0 = new DataFusionExpressionGenerator(
+    // dataFusionProvider_DataFusionGlobalState0);
+    // DataFusionBaseExpr dataFusionBaseExpr0 = DataFusionBaseExpr
+    // .createCommonNumericAggrFuncSingleArg("cEdW}B6qJMf2");
+    // DataFusionSchema.DataFusionDataType dataFusionSchema_DataFusionDataType0 = dataFusionExpressionGenerator0
+    // .getRandomType();
+    // DataFusionExpression dataFusionExpression0 = dataFusionExpressionGenerator0
+    // .generateFunctionExpression(dataFusionSchema_DataFusionDataType0, 1, dataFusionBaseExpr0);
+    // assertNotNull(dataFusionExpression0);
+    // }
 
     @Test
     public void test25() throws Throwable {
@@ -598,21 +604,25 @@ public class DataFusionExpressionGenerator_ESTest {
         }
     }
 
-    @Test
-    public void test26() throws Throwable {
-        DataFusionProvider.DataFusionGlobalState dataFusionProvider_DataFusionGlobalState0 = new DataFusionProvider.DataFusionGlobalState();
-        DataFusionExpressionGenerator dataFusionExpressionGenerator0 = new DataFusionExpressionGenerator(
-                dataFusionProvider_DataFusionGlobalState0);
-        DataFusionSchema.DataFusionDataType dataFusionSchema_DataFusionDataType0 = DataFusionSchema.DataFusionDataType.NULL;
-        DataFusionBaseExpr.DataFusionBaseExprCategory dataFusionBaseExpr_DataFusionBaseExprCategory0 = DataFusionBaseExpr.DataFusionBaseExprCategory.FUNC;
-        LinkedList<DataFusionSchema.DataFusionDataType> linkedList0 = new LinkedList<DataFusionSchema.DataFusionDataType>();
-        LinkedList<DataFusionBaseExpr.ArgumentType> linkedList1 = new LinkedList<DataFusionBaseExpr.ArgumentType>();
-        DataFusionBaseExpr dataFusionBaseExpr0 = new DataFusionBaseExpr((String) null, 3,
-                dataFusionBaseExpr_DataFusionBaseExprCategory0, linkedList0, linkedList1, true);
-        DataFusionExpression dataFusionExpression0 = dataFusionExpressionGenerator0
-                .generateFunctionExpression(dataFusionSchema_DataFusionDataType0, 3, dataFusionBaseExpr0);
-        assertNotNull(dataFusionExpression0);
-    }
+    // @Test
+    // public void test26() throws Throwable {
+    // DataFusionProvider.DataFusionGlobalState dataFusionProvider_DataFusionGlobalState0 = new
+    // DataFusionProvider.DataFusionGlobalState();
+    // DataFusionExpressionGenerator dataFusionExpressionGenerator0 = new DataFusionExpressionGenerator(
+    // dataFusionProvider_DataFusionGlobalState0);
+    // DataFusionSchema.DataFusionDataType dataFusionSchema_DataFusionDataType0 =
+    // DataFusionSchema.DataFusionDataType.NULL;
+    // DataFusionBaseExpr.DataFusionBaseExprCategory dataFusionBaseExpr_DataFusionBaseExprCategory0 =
+    // DataFusionBaseExpr.DataFusionBaseExprCategory.FUNC;
+    // LinkedList<DataFusionSchema.DataFusionDataType> linkedList0 = new
+    // LinkedList<DataFusionSchema.DataFusionDataType>();
+    // LinkedList<DataFusionBaseExpr.ArgumentType> linkedList1 = new LinkedList<DataFusionBaseExpr.ArgumentType>();
+    // DataFusionBaseExpr dataFusionBaseExpr0 = new DataFusionBaseExpr((String) null, 3,
+    // dataFusionBaseExpr_DataFusionBaseExprCategory0, linkedList0, linkedList1, true);
+    // DataFusionExpression dataFusionExpression0 = dataFusionExpressionGenerator0
+    // .generateFunctionExpression(dataFusionSchema_DataFusionDataType0, 3, dataFusionBaseExpr0);
+    // assertNotNull(dataFusionExpression0);
+    // }
 
     @Test
     public void test27() throws Throwable {

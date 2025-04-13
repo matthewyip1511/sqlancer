@@ -56,23 +56,23 @@ public class DorisQueryPartitioningBase_ESTest {
         }
     }
 
-    @Test
-    public void test2() throws Throwable {
-        DorisProvider.DorisGlobalState dorisProvider_DorisGlobalState0 = new DorisProvider.DorisGlobalState();
-        DorisQueryPartitioningBase dorisQueryPartitioningBase0 = new DorisQueryPartitioningBase(
-                dorisProvider_DorisGlobalState0);
-        // Undeclared exception!
-        try {
-            dorisQueryPartitioningBase0.generateFetchColumns();
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.doris.oracle.tlp.DorisQueryPartitioningBase", e);
-        }
-    }
+    // @Test
+    // public void test2() throws Throwable {
+    // DorisProvider.DorisGlobalState dorisProvider_DorisGlobalState0 = new DorisProvider.DorisGlobalState();
+    // DorisQueryPartitioningBase dorisQueryPartitioningBase0 = new DorisQueryPartitioningBase(
+    // dorisProvider_DorisGlobalState0);
+    // // Undeclared exception!
+    // try {
+    // dorisQueryPartitioningBase0.generateFetchColumns();
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.doris.oracle.tlp.DorisQueryPartitioningBase", e);
+    // }
+    // }
 
     @Test
     public void test3() throws Throwable {

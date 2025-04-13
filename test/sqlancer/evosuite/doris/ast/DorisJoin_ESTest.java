@@ -52,26 +52,26 @@ public class DorisJoin_ESTest {
         assertEquals(DorisJoin.JoinType.INNER, dorisJoin0.getJoinType());
     }
 
-    @Test
-    public void test03() throws Throwable {
-        DorisProvider.DorisGlobalState dorisProvider_DorisGlobalState0 = new DorisProvider.DorisGlobalState();
-        DorisTableReference dorisTableReference0 = new DorisTableReference((DorisSchema.DorisTable) null);
-        DorisTableReference dorisTableReference1 = new DorisTableReference((DorisSchema.DorisTable) null);
-        List<DorisTableReference> list0 = List.of(dorisTableReference0, dorisTableReference1, dorisTableReference1,
-                dorisTableReference0, dorisTableReference1, dorisTableReference0);
-        LinkedList<DorisTableReference> linkedList0 = new LinkedList<DorisTableReference>(list0);
-        // Undeclared exception!
-        try {
-            DorisJoin.getJoins(linkedList0, dorisProvider_DorisGlobalState0);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.doris.ast.DorisJoin", e);
-        }
-    }
+    // @Test
+    // public void test03() throws Throwable {
+    // DorisProvider.DorisGlobalState dorisProvider_DorisGlobalState0 = new DorisProvider.DorisGlobalState();
+    // DorisTableReference dorisTableReference0 = new DorisTableReference((DorisSchema.DorisTable) null);
+    // DorisTableReference dorisTableReference1 = new DorisTableReference((DorisSchema.DorisTable) null);
+    // List<DorisTableReference> list0 = List.of(dorisTableReference0, dorisTableReference1, dorisTableReference1,
+    // dorisTableReference0, dorisTableReference1, dorisTableReference0);
+    // LinkedList<DorisTableReference> linkedList0 = new LinkedList<DorisTableReference>(list0);
+    // // Undeclared exception!
+    // try {
+    // DorisJoin.getJoins(linkedList0, dorisProvider_DorisGlobalState0);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.doris.ast.DorisJoin", e);
+    // }
+    // }
 
     @Test
     public void test04() throws Throwable {

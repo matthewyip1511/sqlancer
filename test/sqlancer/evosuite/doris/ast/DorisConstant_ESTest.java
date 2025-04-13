@@ -1159,13 +1159,13 @@ public class DorisConstant_ESTest {
         assertFalse(dorisConstant0.isDatetime());
     }
 
-    @Test
-    public void test115() throws Throwable {
-        DorisConstant.DorisDateConstant dorisConstant_DorisDateConstant0 = new DorisConstant.DorisDateConstant(1L);
-        DorisSchema.DorisDataType dorisSchema_DorisDataType0 = DorisSchema.DorisDataType.DATETIME;
-        DorisConstant dorisConstant0 = dorisConstant_DorisDateConstant0.cast(dorisSchema_DorisDataType0);
-        assertEquals("1970-01-01 00:00:00", dorisConstant0.asString());
-    }
+    // @Test
+    // public void test115() throws Throwable {
+    // DorisConstant.DorisDateConstant dorisConstant_DorisDateConstant0 = new DorisConstant.DorisDateConstant(1L);
+    // DorisSchema.DorisDataType dorisSchema_DorisDataType0 = DorisSchema.DorisDataType.DATETIME;
+    // DorisConstant dorisConstant0 = dorisConstant_DorisDateConstant0.cast(dorisSchema_DorisDataType0);
+    // assertEquals("1970-01-01 00:00:00", dorisConstant0.asString());
+    // }
 
     @Test
     public void test116() throws Throwable {

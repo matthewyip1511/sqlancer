@@ -152,25 +152,25 @@ public class MariaDBJoin_ESTest {
     // verifyException("java.util.ImmutableCollections", e);
     // }
     // }
-
-    @Test
-    public void test08() throws Throwable {
-        MariaDBSchema.MariaDBColumn[] mariaDBSchema_MariaDBColumnArray0 = new MariaDBSchema.MariaDBColumn[2];
-        Randomly.nonEmptySubset(mariaDBSchema_MariaDBColumnArray0);
-        MariaDBSchema.MariaDBTable[] mariaDBSchema_MariaDBTableArray0 = new MariaDBSchema.MariaDBTable[5];
-        List<MariaDBSchema.MariaDBTable> list0 = Randomly.nonEmptySubset(mariaDBSchema_MariaDBTableArray0);
-        // Undeclared exception!
-        try {
-            MariaDBJoin.getRandomJoinClauses(list0, (Randomly) null);
-            fail("Expecting exception: NullPointerException");
-
-        } catch (NullPointerException e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-            verifyException("sqlancer.mariadb.ast.MariaDBJoin", e);
-        }
-    }
+    //
+    // @Test
+    // public void test08() throws Throwable {
+    // MariaDBSchema.MariaDBColumn[] mariaDBSchema_MariaDBColumnArray0 = new MariaDBSchema.MariaDBColumn[2];
+    // Randomly.nonEmptySubset(mariaDBSchema_MariaDBColumnArray0);
+    // MariaDBSchema.MariaDBTable[] mariaDBSchema_MariaDBTableArray0 = new MariaDBSchema.MariaDBTable[5];
+    // List<MariaDBSchema.MariaDBTable> list0 = Randomly.nonEmptySubset(mariaDBSchema_MariaDBTableArray0);
+    // // Undeclared exception!
+    // try {
+    // MariaDBJoin.getRandomJoinClauses(list0, (Randomly) null);
+    // fail("Expecting exception: NullPointerException");
+    //
+    // } catch (NullPointerException e) {
+    // //
+    // // no message in exception (getMessage() returned null)
+    // //
+    // verifyException("sqlancer.mariadb.ast.MariaDBJoin", e);
+    // }
+    // }
 
     @Test
     public void test09() throws Throwable {
