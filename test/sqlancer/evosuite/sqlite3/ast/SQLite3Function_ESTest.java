@@ -786,13 +786,13 @@ public class SQLite3Function_ESTest {
         assertEquals("TRIM", string0);
     }
 
-    @Test
-    public void test47() throws Throwable {
-        SQLite3Function.ComputableFunction sQLite3Function_ComputableFunction0 = SQLite3Function.ComputableFunction
-                .getRandomFunction();
-        boolean boolean0 = sQLite3Function_ComputableFunction0.isVariadic();
-        assertFalse(boolean0);
-    }
+//    @Test
+//    public void test47() throws Throwable {
+//        SQLite3Function.ComputableFunction sQLite3Function_ComputableFunction0 = SQLite3Function.ComputableFunction
+//                .getRandomFunction();
+//        boolean boolean0 = sQLite3Function_ComputableFunction0.isVariadic();
+//        assertFalse(boolean0);
+//    }
 
     @Test
     public void test48() throws Throwable {

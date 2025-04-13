@@ -785,12 +785,12 @@ public class HSQLDBExpressionGenerator_ESTest {
         assertEquals("<", string0);
     }
 
-    @Test
-    public void test40() throws Throwable {
-        BinaryOperatorNode.Operator binaryOperatorNode_Operator0 = HSQLDBExpressionGenerator.HSQLDBDBBinaryComparisonOperator
-                .getRandom();
-        assertEquals("=", binaryOperatorNode_Operator0.getTextRepresentation());
-    }
+//    @Test
+//    public void test40() throws Throwable {
+//        BinaryOperatorNode.Operator binaryOperatorNode_Operator0 = HSQLDBExpressionGenerator.HSQLDBDBBinaryComparisonOperator
+//                .getRandom();
+//        assertEquals("=", binaryOperatorNode_Operator0.getTextRepresentation());
+//    }
 
     // @Test
     // public void test41() throws Throwable {

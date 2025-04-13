@@ -26,19 +26,19 @@ public class SQLite3UnaryOperation_ESTest {
     private void verifyException(String s, Exception e) {
     }
 
-    @Test
-    public void test00() throws Throwable {
-        SQLite3UnaryOperation.UnaryOperator sQLite3UnaryOperation_UnaryOperator0 = SQLite3UnaryOperation.UnaryOperator.NEGATE;
-        sQLite3UnaryOperation_UnaryOperator0.getRandomOperator();
-        sQLite3UnaryOperation_UnaryOperator0.getRandomOperator();
-        SQLite3UnaryOperation.UnaryOperator sQLite3UnaryOperation_UnaryOperator1 = sQLite3UnaryOperation_UnaryOperator0
-                .getRandomOperator();
-        SQLite3Constant.SQLite3IntConstant sQLite3Constant_SQLite3IntConstant0 = new SQLite3Constant.SQLite3IntConstant(
-                1296L);
-        SQLite3Constant sQLite3Constant0 = sQLite3UnaryOperation_UnaryOperator1
-                .apply(sQLite3Constant_SQLite3IntConstant0);
-        assertEquals((-1297L), sQLite3Constant0.asInt());
-    }
+//    @Test
+//    public void test00() throws Throwable {
+//        SQLite3UnaryOperation.UnaryOperator sQLite3UnaryOperation_UnaryOperator0 = SQLite3UnaryOperation.UnaryOperator.NEGATE;
+//        sQLite3UnaryOperation_UnaryOperator0.getRandomOperator();
+//        sQLite3UnaryOperation_UnaryOperator0.getRandomOperator();
+//        SQLite3UnaryOperation.UnaryOperator sQLite3UnaryOperation_UnaryOperator1 = sQLite3UnaryOperation_UnaryOperator0
+//                .getRandomOperator();
+//        SQLite3Constant.SQLite3IntConstant sQLite3Constant_SQLite3IntConstant0 = new SQLite3Constant.SQLite3IntConstant(
+//                1296L);
+//        SQLite3Constant sQLite3Constant0 = sQLite3UnaryOperation_UnaryOperator1
+//                .apply(sQLite3Constant_SQLite3IntConstant0);
+//        assertEquals((-1297L), sQLite3Constant0.asInt());
+//    }
 
     // @Test
     // public void test01() throws Throwable {

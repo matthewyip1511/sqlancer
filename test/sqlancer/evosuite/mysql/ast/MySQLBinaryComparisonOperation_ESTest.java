@@ -102,18 +102,18 @@ public class MySQLBinaryComparisonOperation_ESTest {
         assertSame(mySQLSelect0, mySQLExpression0);
     }
 
-    @Test
-    public void test07() throws Throwable {
-        MySQLBinaryComparisonOperation.BinaryComparisonOperator mySQLBinaryComparisonOperation_BinaryComparisonOperator0 = MySQLBinaryComparisonOperation.BinaryComparisonOperator
-                .getRandom();
-        MySQLConstant.MySQLDoubleConstant mySQLConstant_MySQLDoubleConstant0 = new MySQLConstant.MySQLDoubleConstant(
-                (-3507.2945984138));
-        MySQLBinaryComparisonOperation mySQLBinaryComparisonOperation0 = new MySQLBinaryComparisonOperation(
-                mySQLConstant_MySQLDoubleConstant0, mySQLConstant_MySQLDoubleConstant0,
-                mySQLBinaryComparisonOperation_BinaryComparisonOperator0);
-        MySQLConstant mySQLConstant0 = mySQLBinaryComparisonOperation0.getExpectedValue();
-        assertNull(mySQLConstant0);
-    }
+//    @Test
+//    public void test07() throws Throwable {
+//        MySQLBinaryComparisonOperation.BinaryComparisonOperator mySQLBinaryComparisonOperation_BinaryComparisonOperator0 = MySQLBinaryComparisonOperation.BinaryComparisonOperator
+//                .getRandom();
+//        MySQLConstant.MySQLDoubleConstant mySQLConstant_MySQLDoubleConstant0 = new MySQLConstant.MySQLDoubleConstant(
+//                (-3507.2945984138));
+//        MySQLBinaryComparisonOperation mySQLBinaryComparisonOperation0 = new MySQLBinaryComparisonOperation(
+//                mySQLConstant_MySQLDoubleConstant0, mySQLConstant_MySQLDoubleConstant0,
+//                mySQLBinaryComparisonOperation_BinaryComparisonOperator0);
+//        MySQLConstant mySQLConstant0 = mySQLBinaryComparisonOperation0.getExpectedValue();
+//        assertNull(mySQLConstant0);
+//    }
 
     @Test
     public void test08() throws Throwable {

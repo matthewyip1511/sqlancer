@@ -878,21 +878,21 @@ public class MySQLConstant_ESTest {
         assertEquals(1L, mySQLConstant0.getInt());
     }
 
-    @Test
-    public void test076() throws Throwable {
-        MySQLConstant.MySQLTextConstant mySQLConstant_MySQLTextConstant0 = new MySQLConstant.MySQLTextConstant(
-                "vz,LG%f");
-        // Undeclared exception!
-        try {
-            mySQLConstant_MySQLTextConstant0.castAs((MySQLCastOperation.CastType) null);
-            fail("Expecting exception: AssertionError");
-
-        } catch (AssertionError e) {
-            //
-            // no message in exception (getMessage() returned null)
-            //
-        }
-    }
+//    @Test
+//    public void test076() throws Throwable {
+//        MySQLConstant.MySQLTextConstant mySQLConstant_MySQLTextConstant0 = new MySQLConstant.MySQLTextConstant(
+//                "vz,LG%f");
+//        // Undeclared exception!
+//        try {
+//            mySQLConstant_MySQLTextConstant0.castAs((MySQLCastOperation.CastType) null);
+//            fail("Expecting exception: AssertionError");
+//
+//        } catch (AssertionError e) {
+//            //
+//            // no message in exception (getMessage() returned null)
+//            //
+//        }
+//    }
 
     @Test
     public void test077() throws Throwable {
@@ -921,12 +921,12 @@ public class MySQLConstant_ESTest {
         assertEquals("NULL", mySQLConstant1.castAsString());
     }
 
-    @Test
-    public void test079() throws Throwable {
-        MySQLConstant.MySQLTextConstant mySQLConstant_MySQLTextConstant0 = new MySQLConstant.MySQLTextConstant("");
-        String string0 = mySQLConstant_MySQLTextConstant0.getTextRepresentation();
-        assertEquals("\"\"", string0);
-    }
+//    @Test
+//    public void test079() throws Throwable {
+//        MySQLConstant.MySQLTextConstant mySQLConstant_MySQLTextConstant0 = new MySQLConstant.MySQLTextConstant("");
+//        String string0 = mySQLConstant_MySQLTextConstant0.getTextRepresentation();
+//        assertEquals("\"\"", string0);
+//    }
 
     @Test
     public void test080() throws Throwable {

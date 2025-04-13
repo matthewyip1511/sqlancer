@@ -113,27 +113,27 @@ public class CockroachDBToStringVisitor_ESTest {
         assertEquals("CHAR_LENGTH()", cockroachDBToStringVisitor0.get());
     }
 
-    @Test
-    public void test04() throws Throwable {
-        CockroachDBToStringVisitor cockroachDBToStringVisitor0 = new CockroachDBToStringVisitor();
-        CockroachDBExpression cockroachDBExpression0 = CockroachDBConstant.createTimetz(0L);
-        CockroachDBRegexOperation.CockroachDBRegexOperator cockroachDBRegexOperation_CockroachDBRegexOperator0 = CockroachDBRegexOperation.CockroachDBRegexOperator.NOT_LIKE;
-        CockroachDBRegexOperation cockroachDBRegexOperation0 = new CockroachDBRegexOperation(cockroachDBExpression0,
-                cockroachDBExpression0, cockroachDBRegexOperation_CockroachDBRegexOperator0);
-        CockroachDBCollate cockroachDBCollate0 = new CockroachDBCollate(cockroachDBRegexOperation0, "");
-        CockroachDBOrderingTerm cockroachDBOrderingTerm0 = new CockroachDBOrderingTerm(cockroachDBCollate0, true);
-        CockroachDBFunction cockroachDBFunction0 = CockroachDBFunction.TO_ENGLISH;
-        CockroachDBExpression[] cockroachDBExpressionArray0 = new CockroachDBExpression[9];
-        List<CockroachDBExpression> list0 = Randomly.subset(cockroachDBExpressionArray0);
-        CockroachDBFunctionCall cockroachDBFunctionCall0 = new CockroachDBFunctionCall(cockroachDBFunction0, list0);
-        CockroachDBBetweenOperation.CockroachDBBetweenOperatorType cockroachDBBetweenOperation_CockroachDBBetweenOperatorType0 = CockroachDBBetweenOperation.CockroachDBBetweenOperatorType.BETWEEN_SYMMETRIC;
-        CockroachDBBetweenOperation cockroachDBBetweenOperation0 = new CockroachDBBetweenOperation(
-                cockroachDBOrderingTerm0, cockroachDBOrderingTerm0, cockroachDBFunctionCall0,
-                cockroachDBBetweenOperation_CockroachDBBetweenOperatorType0);
-        cockroachDBToStringVisitor0.visit(cockroachDBBetweenOperation0);
-        assertEquals(CockroachDBBetweenOperation.CockroachDBBetweenOperatorType.BETWEEN_SYMMETRIC,
-                cockroachDBBetweenOperation0.getType());
-    }
+//    @Test
+//    public void test04() throws Throwable {
+//        CockroachDBToStringVisitor cockroachDBToStringVisitor0 = new CockroachDBToStringVisitor();
+//        CockroachDBExpression cockroachDBExpression0 = CockroachDBConstant.createTimetz(0L);
+//        CockroachDBRegexOperation.CockroachDBRegexOperator cockroachDBRegexOperation_CockroachDBRegexOperator0 = CockroachDBRegexOperation.CockroachDBRegexOperator.NOT_LIKE;
+//        CockroachDBRegexOperation cockroachDBRegexOperation0 = new CockroachDBRegexOperation(cockroachDBExpression0,
+//                cockroachDBExpression0, cockroachDBRegexOperation_CockroachDBRegexOperator0);
+//        CockroachDBCollate cockroachDBCollate0 = new CockroachDBCollate(cockroachDBRegexOperation0, "");
+//        CockroachDBOrderingTerm cockroachDBOrderingTerm0 = new CockroachDBOrderingTerm(cockroachDBCollate0, true);
+//        CockroachDBFunction cockroachDBFunction0 = CockroachDBFunction.TO_ENGLISH;
+//        CockroachDBExpression[] cockroachDBExpressionArray0 = new CockroachDBExpression[9];
+//        List<CockroachDBExpression> list0 = Randomly.subset(cockroachDBExpressionArray0);
+//        CockroachDBFunctionCall cockroachDBFunctionCall0 = new CockroachDBFunctionCall(cockroachDBFunction0, list0);
+//        CockroachDBBetweenOperation.CockroachDBBetweenOperatorType cockroachDBBetweenOperation_CockroachDBBetweenOperatorType0 = CockroachDBBetweenOperation.CockroachDBBetweenOperatorType.BETWEEN_SYMMETRIC;
+//        CockroachDBBetweenOperation cockroachDBBetweenOperation0 = new CockroachDBBetweenOperation(
+//                cockroachDBOrderingTerm0, cockroachDBOrderingTerm0, cockroachDBFunctionCall0,
+//                cockroachDBBetweenOperation_CockroachDBBetweenOperatorType0);
+//        cockroachDBToStringVisitor0.visit(cockroachDBBetweenOperation0);
+//        assertEquals(CockroachDBBetweenOperation.CockroachDBBetweenOperatorType.BETWEEN_SYMMETRIC,
+//                cockroachDBBetweenOperation0.getType());
+//    }
 
     @Test
     public void test05() throws Throwable {

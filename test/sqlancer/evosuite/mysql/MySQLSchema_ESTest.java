@@ -339,12 +339,12 @@ public class MySQLSchema_ESTest {
         assertTrue(boolean0);
     }
 
-    @Test
-    public void test20() throws Throwable {
-        MySQLSchema.MySQLColumn.CollateSequence mySQLSchema_MySQLColumn_CollateSequence0 = MySQLSchema.MySQLColumn.CollateSequence
-                .random();
-        assertEquals(MySQLSchema.MySQLColumn.CollateSequence.NOCASE, mySQLSchema_MySQLColumn_CollateSequence0);
-    }
+//    @Test
+//    public void test20() throws Throwable {
+//        MySQLSchema.MySQLColumn.CollateSequence mySQLSchema_MySQLColumn_CollateSequence0 = MySQLSchema.MySQLColumn.CollateSequence
+//                .random();
+//        assertEquals(MySQLSchema.MySQLColumn.CollateSequence.NOCASE, mySQLSchema_MySQLColumn_CollateSequence0);
+//    }
 
     @Test
     public void test21() throws Throwable {

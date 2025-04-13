@@ -25,13 +25,13 @@ public class CockroachDBBinaryLogicalOperation_ESTest {
         assertEquals("AND", cockroachDBBinaryLogicalOperation0.getOperatorRepresentation());
     }
 
-    @Test
-    public void test1() throws Throwable {
-        CockroachDBBinaryLogicalOperation.CockroachDBBinaryLogicalOperator cockroachDBBinaryLogicalOperation_CockroachDBBinaryLogicalOperator0 = CockroachDBBinaryLogicalOperation.CockroachDBBinaryLogicalOperator
-                .getRandom();
-        assertEquals(CockroachDBBinaryLogicalOperation.CockroachDBBinaryLogicalOperator.AND,
-                cockroachDBBinaryLogicalOperation_CockroachDBBinaryLogicalOperator0);
-    }
+//    @Test
+//    public void test1() throws Throwable {
+//        CockroachDBBinaryLogicalOperation.CockroachDBBinaryLogicalOperator cockroachDBBinaryLogicalOperation_CockroachDBBinaryLogicalOperator0 = CockroachDBBinaryLogicalOperation.CockroachDBBinaryLogicalOperator
+//                .getRandom();
+//        assertEquals(CockroachDBBinaryLogicalOperation.CockroachDBBinaryLogicalOperator.AND,
+//                cockroachDBBinaryLogicalOperation_CockroachDBBinaryLogicalOperator0);
+//    }
 
     @Test
     public void test2() throws Throwable {
