@@ -51,7 +51,7 @@ public class YSQLProvider extends ExpandedProvider<YSQLGlobalState, YSQLOptions>
         super(YSQLGlobalState.class, YSQLOptions.class);
     }
 
-    protected YSQLProvider(Class<YSQLGlobalState> globalClass, Class<YSQLOptions> optionClass) {
+    public YSQLProvider(Class<YSQLGlobalState> globalClass, Class<YSQLOptions> optionClass) {
         super(globalClass, optionClass);
     }
 
@@ -174,7 +174,7 @@ public class YSQLProvider extends ExpandedProvider<YSQLGlobalState, YSQLOptions>
         return con;
     }
 
-    protected void readFunctions(YSQLGlobalState globalState) throws SQLException {
+    public void readFunctions(YSQLGlobalState globalState) throws SQLException {
         SQLQueryAdapter query = new SQLQueryAdapter("SELECT proname, provolatile FROM pg_proc;");
         SQLancerResultSet rs = query.executeAndGet(globalState);
         while (rs.next()) {
@@ -184,7 +184,7 @@ public class YSQLProvider extends ExpandedProvider<YSQLGlobalState, YSQLOptions>
         }
     }
 
-    protected void createTables(YSQLGlobalState globalState, int numTables) throws Exception {
+    public void createTables(YSQLGlobalState globalState, int numTables) throws Exception {
         synchronized (DDL_LOCK) {
             boolean prevCreationFailed = false; // small optimization - wait only after failed requests
             while (globalState.getSchema().getDatabaseTables().size() < numTables) {
@@ -213,7 +213,7 @@ public class YSQLProvider extends ExpandedProvider<YSQLGlobalState, YSQLOptions>
         }
     }
 
-    protected void prepareTables(YSQLGlobalState globalState) throws Exception {
+    public void prepareTables(YSQLGlobalState globalState) throws Exception {
         StatementExecutor<YSQLGlobalState, Action> se = new StatementExecutor<>(globalState, Action.values(),
                 YSQLProvider::mapActions, (q) -> {
                     if (globalState.getSchema().getDatabaseTables().isEmpty()) {

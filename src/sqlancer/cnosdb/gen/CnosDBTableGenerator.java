@@ -28,7 +28,7 @@ public class CnosDBTableGenerator {
         return new CnosDBTableGenerator(tableName).generate();
     }
 
-    protected CnosDBOtherQuery generate() {
+    public CnosDBOtherQuery generate() {
         table = new CnosDBTable(tableName, columnsToBeAdd);
 
         sb.append("CREATE TABLE");

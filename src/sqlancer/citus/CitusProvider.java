@@ -218,7 +218,7 @@ public class CitusProvider extends PostgresProvider {
     }
 
     @Override
-    protected void createTables(PostgresGlobalState globalState, int numTables) throws Exception {
+    public void createTables(PostgresGlobalState globalState, int numTables) throws Exception {
         while (globalState.getSchema().getDatabaseTables().size() < numTables) {
             try {
                 String tableName = DBMSCommon.createTableName(globalState.getSchema().getDatabaseTables().size());
@@ -259,7 +259,7 @@ public class CitusProvider extends PostgresProvider {
     }
 
     @Override
-    protected TestOracle<PostgresGlobalState> getTestOracle(PostgresGlobalState globalState) throws SQLException {
+    public TestOracle<PostgresGlobalState> getTestOracle(PostgresGlobalState globalState) throws SQLException {
         List<TestOracle<PostgresGlobalState>> oracles = ((CitusOptions) globalState
                 .getDbmsSpecificOptions()).citusOracle.stream().map(o -> {
                     try {
@@ -387,7 +387,7 @@ public class CitusProvider extends PostgresProvider {
     }
 
     @Override
-    protected void prepareTables(PostgresGlobalState globalState) throws Exception {
+    public void prepareTables(PostgresGlobalState globalState) throws Exception {
         StatementExecutor<PostgresGlobalState, Action> se = new StatementExecutor<>(globalState, Action.values(),
                 CitusProvider::mapActions, (q) -> {
                     if (globalState.getSchema().getDatabaseTables().isEmpty()) {

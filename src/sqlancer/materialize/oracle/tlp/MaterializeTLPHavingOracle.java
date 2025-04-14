@@ -26,7 +26,7 @@ public class MaterializeTLPHavingOracle extends MaterializeTLPBase {
         havingCheck();
     }
 
-    protected void havingCheck() throws SQLException {
+    public void havingCheck() throws SQLException {
         if (Randomly.getBoolean()) {
             select.setWhereClause(gen.generateExpression(MaterializeDataType.BOOLEAN));
         }
@@ -65,12 +65,12 @@ public class MaterializeTLPHavingOracle extends MaterializeTLPBase {
     }
 
     @Override
-    protected MaterializeExpression generatePredicate() {
+    public MaterializeExpression generatePredicate() {
         return gen.generateHavingClause();
     }
 
     @Override
-    List<MaterializeExpression> generateFetchColumns() {
+    public List<MaterializeExpression> generateFetchColumns() {
         List<MaterializeExpression> expressions = gen.allowAggregates(true)
                 .generateExpressions(Randomly.smallNumber() + 1);
         gen.allowAggregates(false);

@@ -177,7 +177,7 @@ public class MySQLExpressionGenerator extends UntypedExpressionGenerator<MySQLEx
     }
 
     @Override
-    protected MySQLExpression generateColumn() {
+    public MySQLExpression generateColumn() {
         MySQLColumn c = Randomly.fromList(columns);
         MySQLConstant val;
         if (rowVal == null) {
@@ -279,7 +279,7 @@ public class MySQLExpressionGenerator extends UntypedExpressionGenerator<MySQLEx
         return Randomly.fromList(mutators).apply(select);
     }
 
-    boolean mutateDistinct(MySQLSelect select) {
+    public boolean mutateDistinct(MySQLSelect select) {
         MySQLSelect.SelectType selectType = select.getFromOptions();
         if (selectType != MySQLSelect.SelectType.ALL) {
             select.setSelectType(MySQLSelect.SelectType.ALL);
@@ -290,7 +290,7 @@ public class MySQLExpressionGenerator extends UntypedExpressionGenerator<MySQLEx
         }
     }
 
-    boolean mutateWhere(MySQLSelect select) {
+    public boolean mutateWhere(MySQLSelect select) {
         boolean increase = select.getWhereClause() != null;
         if (increase) {
             select.setWhereClause(null);
@@ -300,7 +300,7 @@ public class MySQLExpressionGenerator extends UntypedExpressionGenerator<MySQLEx
         return increase;
     }
 
-    boolean mutateGroupBy(MySQLSelect select) {
+    public boolean mutateGroupBy(MySQLSelect select) {
         boolean increase = select.getGroupByExpressions().size() > 0;
         if (increase) {
             select.clearGroupByExpressions();
@@ -310,7 +310,7 @@ public class MySQLExpressionGenerator extends UntypedExpressionGenerator<MySQLEx
         return increase;
     }
 
-    boolean mutateAnd(MySQLSelect select) {
+    public boolean mutateAnd(MySQLSelect select) {
         if (select.getWhereClause() == null) {
             select.setWhereClause(generateExpression());
         } else {
@@ -321,7 +321,7 @@ public class MySQLExpressionGenerator extends UntypedExpressionGenerator<MySQLEx
         return false;
     }
 
-    boolean mutateOr(MySQLSelect select) {
+    public boolean mutateOr(MySQLSelect select) {
         if (select.getWhereClause() == null) {
             select.setWhereClause(generateExpression());
             return false;

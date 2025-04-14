@@ -119,7 +119,7 @@ public class PostgresPivotedQuerySynthesisOracle
     }
 
     @Override
-    protected Query<SQLConnection> getContainmentCheckQuery(Query<?> query) throws SQLException {
+    public Query<SQLConnection> getContainmentCheckQuery(Query<?> query) throws SQLException {
         StringBuilder sb = new StringBuilder();
         sb.append("SELECT * FROM ("); // ANOTHER SELECT TO USE ORDER BY without restrictions
         sb.append(query.getUnterminatedQueryString());
@@ -135,7 +135,7 @@ public class PostgresPivotedQuerySynthesisOracle
     }
 
     @Override
-    protected String getExpectedValues(PostgresExpression expr) {
+    public String getExpectedValues(PostgresExpression expr) {
         return PostgresVisitor.asExpectedValues(expr);
     }
 

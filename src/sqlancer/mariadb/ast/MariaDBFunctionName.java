@@ -33,7 +33,7 @@ public enum MariaDBFunctionName {
         this.functionAttributes = new ArrayList<>(Arrays.asList(functionAttributes));
     }
 
-    enum FunctionAttribute {
+    public enum FunctionAttribute {
         VARIADIC
     };
 

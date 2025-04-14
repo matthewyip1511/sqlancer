@@ -9,7 +9,7 @@ import sqlancer.common.query.SQLQueryAdapter;
 public class SQLLoggableFactory extends LoggableFactory {
 
     @Override
-    protected Loggable createLoggable(String input, String suffix) {
+    public Loggable createLoggable(String input, String suffix) {
         String completeString = input;
         if (!input.endsWith(";")) {
             completeString += ";";
@@ -35,7 +35,7 @@ public class SQLLoggableFactory extends LoggableFactory {
     }
 
     @Override
-    protected Loggable infoToLoggable(String time, String databaseName, String databaseVersion, long seedValue) {
+    public Loggable infoToLoggable(String time, String databaseName, String databaseVersion, long seedValue) {
         StringBuilder sb = new StringBuilder();
         sb.append("-- Time: ").append(time).append("\n");
         sb.append("-- Database: ").append(databaseName).append("\n");

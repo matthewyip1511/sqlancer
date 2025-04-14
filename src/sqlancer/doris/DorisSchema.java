@@ -389,7 +389,7 @@ public class DorisSchema extends AbstractSchema<DorisGlobalState, DorisTable> {
 
     public static class DorisRowValue extends AbstractRowValue<DorisTables, DorisColumn, DorisConstant> {
 
-        DorisRowValue(DorisTables tables, Map<DorisColumn, DorisConstant> values) {
+        public DorisRowValue(DorisTables tables, Map<DorisColumn, DorisConstant> values) {
             super(tables, values);
         }
 

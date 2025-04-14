@@ -30,7 +30,7 @@ public class DatabendQueryPartitioningBase
         implements TestOracle<DatabendGlobalState> {
 
     DatabendSchema s;
-    DatabendTables targetTables;
+    public DatabendTables targetTables;
     DatabendNewExpressionGenerator gen;
     DatabendSelect select;
 
@@ -69,7 +69,7 @@ public class DatabendQueryPartitioningBase
         select.setWhereClause(null);
     }
 
-    List<DatabendExpression> generateFetchColumns() {
+    public List<DatabendExpression> generateFetchColumns() {
         List<DatabendExpression> columns = new ArrayList<>();
         if (Randomly.getBoolean()) {
             columns.add(new DatabendColumnReference(new DatabendColumn("*", null, false, false)));
@@ -79,7 +79,7 @@ public class DatabendQueryPartitioningBase
         return columns;
     }
 
-    List<DatabendExpression> generateRandomColumns() {
+    public List<DatabendExpression> generateRandomColumns() {
         List<DatabendExpression> columns;
         columns = Randomly.nonEmptySubset(targetTables.getColumns()).stream().map(c -> new DatabendColumnReference(c))
                 .collect(Collectors.toList());
@@ -87,7 +87,7 @@ public class DatabendQueryPartitioningBase
     }
 
     @Override
-    protected ExpressionGenerator<DatabendExpression> getGen() {
+    public ExpressionGenerator<DatabendExpression> getGen() {
         return gen;
     }
 

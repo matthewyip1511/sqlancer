@@ -43,7 +43,7 @@ public class SQLite3TLPGroupByOracle extends SQLite3TLPBase {
     }
 
     @Override
-    List<SQLite3Expression> generateFetchColumns() {
+    public List<SQLite3Expression> generateFetchColumns() {
         return Randomly.nonEmptySubset(targetTables.getColumns()).stream().map(c -> new SQLite3ColumnName(c, null))
                 .collect(Collectors.toList());
     }

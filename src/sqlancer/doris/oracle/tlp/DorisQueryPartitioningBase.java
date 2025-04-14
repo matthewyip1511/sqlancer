@@ -29,7 +29,7 @@ public class DorisQueryPartitioningBase extends TernaryLogicPartitioningOracleBa
         implements TestOracle<DorisGlobalState> {
 
     DorisSchema s;
-    DorisTables targetTables;
+    public DorisTables targetTables;
     DorisNewExpressionGenerator gen;
     DorisSelect select;
 
@@ -64,7 +64,7 @@ public class DorisQueryPartitioningBase extends TernaryLogicPartitioningOracleBa
         select.setWhereClause(null);
     }
 
-    List<DorisExpression> generateFetchColumns() {
+    public List<DorisExpression> generateFetchColumns() {
         List<DorisExpression> columns = new ArrayList<>();
         if (Randomly.getBoolean()) {
             columns.add(new DorisColumnReference(new DorisColumn("*", null, false, false)));
@@ -76,7 +76,7 @@ public class DorisQueryPartitioningBase extends TernaryLogicPartitioningOracleBa
     }
 
     @Override
-    protected ExpressionGenerator<DorisExpression> getGen() {
+    public ExpressionGenerator<DorisExpression> getGen() {
         return gen;
     }
 

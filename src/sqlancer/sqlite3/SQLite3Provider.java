@@ -377,19 +377,19 @@ public class SQLite3Provider extends SQLProviderAdapter<SQLite3GlobalState, SQLi
     }
 
     @Override
-    protected double[] initializeWeightedAverageReward() {
+    public double[] initializeWeightedAverageReward() {
         return new double[Action.values().length];
     }
 
     @Override
-    protected void executeMutator(int index, SQLite3GlobalState globalState) throws Exception {
+    public void executeMutator(int index, SQLite3GlobalState globalState) throws Exception {
         SQLQueryAdapter queryMutateTable = Action.values()[index].getQuery(globalState);
         globalState.executeStatement(queryMutateTable);
 
     }
 
     @Override
-    protected boolean addRowsToAllTables(SQLite3GlobalState globalState) throws Exception {
+    public boolean addRowsToAllTables(SQLite3GlobalState globalState) throws Exception {
         List<SQLite3Table> tablesNoRow = globalState.getSchema().getDatabaseTables().stream()
                 .filter(t -> t.getNrRows(globalState) == 0).collect(Collectors.toList());
         for (SQLite3Table table : tablesNoRow) {

@@ -23,7 +23,7 @@ public class CnosDBTLPHavingOracle extends CnosDBTLPBase {
         havingCheck();
     }
 
-    protected void havingCheck() throws Exception {
+    public void havingCheck() throws Exception {
         if (Randomly.getBoolean()) {
             select.setWhereClause(gen.generateExpression(CnosDBDataType.BOOLEAN));
         }
@@ -51,12 +51,12 @@ public class CnosDBTLPHavingOracle extends CnosDBTLPBase {
     }
 
     @Override
-    protected CnosDBExpression generatePredicate() {
+    public CnosDBExpression generatePredicate() {
         return gen.generateHavingClause();
     }
 
     @Override
-    List<CnosDBExpression> generateFetchColumns() {
+    public List<CnosDBExpression> generateFetchColumns() {
         List<CnosDBExpression> expressions = gen.allowAggregates(true).generateExpressions(Randomly.smallNumber() + 1);
         gen.allowAggregates(false);
         return expressions;

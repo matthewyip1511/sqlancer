@@ -55,7 +55,7 @@ public abstract class MaterializeConstant implements MaterializeExpression {
         }
 
         @Override
-        protected MaterializeConstant isLessThan(MaterializeConstant rightVal) {
+        public MaterializeConstant isLessThan(MaterializeConstant rightVal) {
             if (rightVal.isNull()) {
                 return MaterializeConstant.createNullConstant();
             } else if (rightVal.isString()) {
@@ -110,7 +110,7 @@ public abstract class MaterializeConstant implements MaterializeExpression {
         }
 
         @Override
-        protected MaterializeConstant isLessThan(MaterializeConstant rightVal) {
+        public MaterializeConstant isLessThan(MaterializeConstant rightVal) {
             return MaterializeConstant.createNullConstant();
         }
 
@@ -155,7 +155,7 @@ public abstract class MaterializeConstant implements MaterializeExpression {
         }
 
         @Override
-        protected MaterializeConstant isLessThan(MaterializeConstant rightVal) {
+        public MaterializeConstant isLessThan(MaterializeConstant rightVal) {
             if (rightVal.isNull()) {
                 return MaterializeConstant.createNullConstant();
             } else if (rightVal.isInt()) {
@@ -283,7 +283,7 @@ public abstract class MaterializeConstant implements MaterializeExpression {
         }
 
         @Override
-        protected MaterializeConstant isLessThan(MaterializeConstant rightVal) {
+        public MaterializeConstant isLessThan(MaterializeConstant rightVal) {
             if (rightVal.isNull()) {
                 return MaterializeConstant.createNullConstant();
             } else if (rightVal.isInt()) {
@@ -400,7 +400,7 @@ public abstract class MaterializeConstant implements MaterializeExpression {
         }
 
         @Override
-        protected MaterializeConstant isLessThan(MaterializeConstant rightVal) {
+        public MaterializeConstant isLessThan(MaterializeConstant rightVal) {
             return null;
         }
 

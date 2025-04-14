@@ -2,10 +2,10 @@ package sqlancer.common.ast.newast;
 
 public class NewBetweenOperatorNode<T> {
 
-    protected T left;
-    protected T middle;
-    protected T right;
-    protected boolean isTrue;
+    public T left;
+    public T middle;
+    public T right;
+    public boolean isTrue;
 
     public NewBetweenOperatorNode(T left, T middle, T right, boolean isTrue) {
         this.left = left;

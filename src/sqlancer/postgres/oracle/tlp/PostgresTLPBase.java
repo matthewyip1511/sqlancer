@@ -53,7 +53,7 @@ public class PostgresTLPBase extends TernaryLogicPartitioningOracleBase<Postgres
         generateSelectBase(tables, joins);
     }
 
-    protected List<PostgresJoin> getJoinStatements(PostgresGlobalState globalState, List<PostgresColumn> columns,
+    public List<PostgresJoin> getJoinStatements(PostgresGlobalState globalState, List<PostgresColumn> columns,
             List<PostgresTable> tables) {
         List<PostgresJoin> joinStatements = new ArrayList<>();
         PostgresExpressionGenerator gen = new PostgresExpressionGenerator(globalState).setColumns(columns);
@@ -78,7 +78,7 @@ public class PostgresTLPBase extends TernaryLogicPartitioningOracleBase<Postgres
     }
 
     @SuppressWarnings("unchecked")
-    protected void generateSelectBase(List<PostgresTable> tables, List<PostgresJoin> joins) {
+    public void generateSelectBase(List<PostgresTable> tables, List<PostgresJoin> joins) {
         List<PostgresExpression> tableList = tables.stream().map(t -> new PostgresFromTable(t, Randomly.getBoolean()))
                 .collect(Collectors.toList());
         gen = new PostgresExpressionGenerator(state).setColumns(targetTables.getColumns());
@@ -93,7 +93,7 @@ public class PostgresTLPBase extends TernaryLogicPartitioningOracleBase<Postgres
         }
     }
 
-    List<PostgresExpression> generateFetchColumns() {
+    public List<PostgresExpression> generateFetchColumns() {
         if (Randomly.getBooleanWithRatherLowProbability()) {
             return Arrays.asList(new PostgresColumnValue(PostgresColumn.createDummy("*"), null));
         }
@@ -106,7 +106,7 @@ public class PostgresTLPBase extends TernaryLogicPartitioningOracleBase<Postgres
     }
 
     @Override
-    protected ExpressionGenerator<PostgresExpression> getGen() {
+    public ExpressionGenerator<PostgresExpression> getGen() {
         return gen;
     }
 

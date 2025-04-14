@@ -55,7 +55,7 @@ public class MaterializeTLPBase
     }
 
     @SuppressWarnings("unchecked")
-    protected void generateSelectBase(List<MaterializeTable> tables, List<MaterializeJoin> joins) {
+    public void generateSelectBase(List<MaterializeTable> tables, List<MaterializeJoin> joins) {
         List<MaterializeExpression> tableList = tables.stream()
                 .map(t -> new MaterializeFromTable(t, Randomly.getBoolean())).collect(Collectors.toList());
         gen = new MaterializeExpressionGenerator(state).setColumns(targetTables.getColumns());
@@ -70,7 +70,7 @@ public class MaterializeTLPBase
         }
     }
 
-    List<MaterializeExpression> generateFetchColumns() {
+    public List<MaterializeExpression> generateFetchColumns() {
         if (Randomly.getBooleanWithRatherLowProbability()) {
             return Arrays.asList(new MaterializeColumnValue(MaterializeColumn.createDummy("*"), null));
         }
@@ -83,7 +83,7 @@ public class MaterializeTLPBase
     }
 
     @Override
-    protected ExpressionGenerator<MaterializeExpression> getGen() {
+    public ExpressionGenerator<MaterializeExpression> getGen() {
         return gen;
     }
 

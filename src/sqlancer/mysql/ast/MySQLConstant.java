@@ -51,7 +51,7 @@ public abstract class MySQLConstant implements MySQLExpression {
         }
 
         @Override
-        protected MySQLConstant isLessThan(MySQLConstant rightVal) {
+        public MySQLConstant isLessThan(MySQLConstant rightVal) {
             throw throwException();
         }
 
@@ -151,7 +151,7 @@ public abstract class MySQLConstant implements MySQLExpression {
         }
 
         @Override
-        protected MySQLConstant isLessThan(MySQLConstant rightVal) {
+        public MySQLConstant isLessThan(MySQLConstant rightVal) {
             if (rightVal.isNull()) {
                 return MySQLConstant.createNullConstant();
             } else if (rightVal.isInt()) {
@@ -273,7 +273,7 @@ public abstract class MySQLConstant implements MySQLExpression {
         }
 
         @Override
-        protected MySQLConstant isLessThan(MySQLConstant rightVal) {
+        public MySQLConstant isLessThan(MySQLConstant rightVal) {
             if (rightVal.isInt()) {
                 long intVal = rightVal.getInt();
                 if (isSigned && rightVal.isSigned()) {
@@ -336,7 +336,7 @@ public abstract class MySQLConstant implements MySQLExpression {
         }
 
         @Override
-        protected MySQLConstant isLessThan(MySQLConstant rightVal) {
+        public MySQLConstant isLessThan(MySQLConstant rightVal) {
             return this;
         }
 

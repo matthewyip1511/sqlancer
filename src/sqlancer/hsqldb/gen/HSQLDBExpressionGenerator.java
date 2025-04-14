@@ -93,7 +93,7 @@ public final class HSQLDBExpressionGenerator extends
     }
 
     @Override
-    protected HSQLDBExpression generateExpression(HSQLDBSchema.HSQLDBCompositeDataType type, int depth) {
+    public HSQLDBExpression generateExpression(HSQLDBSchema.HSQLDBCompositeDataType type, int depth) {
         if (depth >= hsqldbGlobalState.getOptions().getMaxExpressionDepth()
                 || Randomly.getBooleanWithSmallProbability()) {
             return generateLeafNode(type);
@@ -121,14 +121,14 @@ public final class HSQLDBExpressionGenerator extends
     }
 
     @Override
-    protected HSQLDBExpression generateColumn(HSQLDBSchema.HSQLDBCompositeDataType type) {
+    public HSQLDBExpression generateColumn(HSQLDBSchema.HSQLDBCompositeDataType type) {
         HSQLDBSchema.HSQLDBColumn column = Randomly
                 .fromList(columns.stream().filter(c -> c.getType() == type).collect(Collectors.toList()));
         return new HSQLDBColumnReference(column);
     }
 
     @Override
-    protected HSQLDBSchema.HSQLDBCompositeDataType getRandomType() {
+    public HSQLDBSchema.HSQLDBCompositeDataType getRandomType() {
         return HSQLDBSchema.HSQLDBCompositeDataType.getRandomWithoutNull();
     }
 

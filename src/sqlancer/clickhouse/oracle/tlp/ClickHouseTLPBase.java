@@ -70,14 +70,14 @@ public class ClickHouseTLPBase extends TernaryLogicPartitioningOracleBase<ClickH
         ComparatorHelper.getResultSetFirstColumnAsString(query, errors, state);
     }
 
-    List<ClickHouseExpression> generateFetchColumns(List<ClickHouseColumnReference> columns) {
+    public List<ClickHouseExpression> generateFetchColumns(List<ClickHouseColumnReference> columns) {
         List<ClickHouseColumnReference> list = Randomly.extractNrRandomColumns(columns,
                 min(1 + Randomly.smallNumber(), columns.size()));
         return list.stream().map(c -> (ClickHouseExpression) c).collect(Collectors.toList());
     }
 
     @Override
-    protected ExpressionGenerator<ClickHouseExpression> getGen() {
+    public ExpressionGenerator<ClickHouseExpression> getGen() {
         return gen;
     }
 

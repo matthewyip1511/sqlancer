@@ -51,12 +51,12 @@ public class PrestoQueryPartitioningHavingTester extends PrestoQueryPartitioning
     }
 
     @Override
-    protected PrestoExpression generatePredicate() {
+    public PrestoExpression generatePredicate() {
         return gen.generateHavingClause();
     }
 
     @Override
-    List<PrestoExpression> generateFetchColumns() {
+    public List<PrestoExpression> generateFetchColumns() {
         return Collections.singletonList(gen.generateHavingClause());
     }
 

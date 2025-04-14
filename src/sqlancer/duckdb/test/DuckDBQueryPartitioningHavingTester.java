@@ -50,12 +50,12 @@ public class DuckDBQueryPartitioningHavingTester extends DuckDBQueryPartitioning
     }
 
     @Override
-    protected DuckDBExpression generatePredicate() {
+    public DuckDBExpression generatePredicate() {
         return gen.generateHavingClause();
     }
 
     @Override
-    List<DuckDBExpression> generateFetchColumns() {
+    public List<DuckDBExpression> generateFetchColumns() {
         return Arrays.asList(gen.generateHavingClause());
     }
 

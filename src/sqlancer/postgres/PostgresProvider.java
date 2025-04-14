@@ -52,7 +52,7 @@ public class PostgresProvider extends ExpandedProvider<PostgresGlobalState, Post
         super(PostgresGlobalState.class, PostgresOptions.class);
     }
 
-    protected PostgresProvider(Class<PostgresGlobalState> globalClass, Class<PostgresOptions> optionClass) {
+    public PostgresProvider(Class<PostgresGlobalState> globalClass, Class<PostgresOptions> optionClass) {
         super(globalClass, optionClass);
     }
 
@@ -215,7 +215,7 @@ public class PostgresProvider extends ExpandedProvider<PostgresGlobalState, Post
         return new SQLConnection(con);
     }
 
-    protected void readFunctions(PostgresGlobalState globalState) throws SQLException {
+    public void readFunctions(PostgresGlobalState globalState) throws SQLException {
         SQLQueryAdapter query = new SQLQueryAdapter("SELECT proname, provolatile FROM pg_proc;");
         SQLancerResultSet rs = query.executeAndGet(globalState);
         while (rs.next()) {
@@ -225,7 +225,7 @@ public class PostgresProvider extends ExpandedProvider<PostgresGlobalState, Post
         }
     }
 
-    protected void createTables(PostgresGlobalState globalState, int numTables) throws Exception {
+    public void createTables(PostgresGlobalState globalState, int numTables) throws Exception {
         while (globalState.getSchema().getDatabaseTables().size() < numTables) {
             try {
                 String tableName = DBMSCommon.createTableName(globalState.getSchema().getDatabaseTables().size());
@@ -238,7 +238,7 @@ public class PostgresProvider extends ExpandedProvider<PostgresGlobalState, Post
         }
     }
 
-    protected void prepareTables(PostgresGlobalState globalState) throws Exception {
+    public void prepareTables(PostgresGlobalState globalState) throws Exception {
         StatementExecutor<PostgresGlobalState, Action> se = new StatementExecutor<>(globalState, Action.values(),
                 PostgresProvider::mapActions, (q) -> {
                     if (globalState.getSchema().getDatabaseTables().isEmpty()) {

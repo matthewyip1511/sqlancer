@@ -43,7 +43,7 @@ public class MySQLProvider extends SQLProviderAdapter<MySQLGlobalState, MySQLOpt
         super(MySQLGlobalState.class, MySQLOptions.class);
     }
 
-    enum Action implements AbstractAction<MySQLGlobalState> {
+    public enum Action implements AbstractAction<MySQLGlobalState> {
         SHOW_TABLES((g) -> new SQLQueryAdapter("SHOW TABLES")), //
         INSERT(MySQLInsertGenerator::insertRow), //
         SET_VARIABLE(MySQLSetGenerator::set), //

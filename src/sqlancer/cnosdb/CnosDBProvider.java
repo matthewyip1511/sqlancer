@@ -31,11 +31,11 @@ public class CnosDBProvider extends ProviderAdapter<CnosDBGlobalState, CnosDBOpt
         super(CnosDBGlobalState.class, CnosDBOptions.class);
     }
 
-    protected CnosDBProvider(Class<CnosDBGlobalState> globalClass, Class<CnosDBOptions> optionClass) {
+    public CnosDBProvider(Class<CnosDBGlobalState> globalClass, Class<CnosDBOptions> optionClass) {
         super(globalClass, optionClass);
     }
 
-    protected static int mapActions(CnosDBGlobalState globalState, Action a) {
+    public static int mapActions(CnosDBGlobalState globalState, Action a) {
         Randomly r = globalState.getRandomly();
         int nrPerformed;
         if (Objects.requireNonNull(a) == Action.INSERT) {
@@ -48,7 +48,7 @@ public class CnosDBProvider extends ProviderAdapter<CnosDBGlobalState, CnosDBOpt
     }
 
     @Override
-    protected void checkViewsAreValid(CnosDBGlobalState globalState) {
+    public void checkViewsAreValid(CnosDBGlobalState globalState) {
     }
 
     @Override
@@ -80,7 +80,7 @@ public class CnosDBProvider extends ProviderAdapter<CnosDBGlobalState, CnosDBOpt
         return connection;
     }
 
-    protected void createTables(CnosDBGlobalState globalState, int numTables) throws Exception {
+    public void createTables(CnosDBGlobalState globalState, int numTables) throws Exception {
         while (globalState.getSchema().getDatabaseTables().size() < numTables) {
             String tableName = String.format("m%d", globalState.getSchema().getDatabaseTables().size());
             CnosDBOtherQuery createTable = CnosDBTableGenerator.generate(tableName);
@@ -88,7 +88,7 @@ public class CnosDBProvider extends ProviderAdapter<CnosDBGlobalState, CnosDBOpt
         }
     }
 
-    protected void prepareTables(CnosDBGlobalState globalState) throws Exception {
+    public void prepareTables(CnosDBGlobalState globalState) throws Exception {
         StatementExecutor<CnosDBGlobalState, Action> se = new StatementExecutor<>(globalState, Action.values(),
                 CnosDBProvider::mapActions, (q) -> {
                     if (globalState.getSchema().getDatabaseTables().isEmpty()) {

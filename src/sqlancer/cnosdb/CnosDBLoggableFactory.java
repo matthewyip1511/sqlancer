@@ -14,7 +14,7 @@ import sqlancer.common.query.Query;
 public class CnosDBLoggableFactory extends LoggableFactory {
 
     @Override
-    protected Loggable createLoggable(String input, String suffix) {
+    public Loggable createLoggable(String input, String suffix) {
         String completeString = input;
         if (!input.endsWith(";")) {
             completeString += ";";
@@ -39,7 +39,7 @@ public class CnosDBLoggableFactory extends LoggableFactory {
     }
 
     @Override
-    protected Loggable infoToLoggable(String time, String databaseName, String databaseVersion, long seedValue) {
+    public Loggable infoToLoggable(String time, String databaseName, String databaseVersion, long seedValue) {
         String sb = "-- Time: " + time + "\n" + "-- Database: " + databaseName + "\n" + "-- Database version: "
                 + databaseVersion + "\n" + "-- seed value: " + seedValue + "\n";
         return new LoggedString(sb);

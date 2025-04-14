@@ -14,7 +14,7 @@ public abstract class CERTOracleBase<S extends SQLGlobalState<?, ?>> implements 
     protected List<String> queryPlan1Sequences;
     protected List<String> queryPlan2Sequences;
 
-    protected enum Mutator {
+    public enum Mutator {
         JOIN, DISTINCT, WHERE, GROUPBY, HAVING, AND, OR, LIMIT;
 
         public static Mutator getRandomExcept(Mutator... exclude) {

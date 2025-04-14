@@ -52,7 +52,7 @@ public final class DuckDBExpressionGenerator extends UntypedExpressionGenerator<
     }
 
     @Override
-    protected DuckDBExpression generateExpression(int depth) {
+    public DuckDBExpression generateExpression(int depth) {
         if (depth >= globalState.getOptions().getMaxExpressionDepth() || Randomly.getBoolean()) {
             return generateLeafNode();
         }
@@ -131,7 +131,7 @@ public final class DuckDBExpressionGenerator extends UntypedExpressionGenerator<
     }
 
     @Override
-    protected DuckDBExpression generateColumn() {
+    public DuckDBExpression generateColumn() {
         DuckDBColumn column = Randomly.fromList(columns);
         return new DuckDBColumnReference(column);
     }

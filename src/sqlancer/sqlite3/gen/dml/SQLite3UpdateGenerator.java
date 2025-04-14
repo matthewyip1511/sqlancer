@@ -103,7 +103,7 @@ public class SQLite3UpdateGenerator extends AbstractUpdateGenerator<SQLite3Colum
     }
 
     @Override
-    protected void updateValue(SQLite3Column column) {
+    public void updateValue(SQLite3Column column) {
         if (column.isIntegerPrimaryKey()) {
             sb.append(SQLite3Visitor.asString(SQLite3Constant.createIntConstant(r.getInteger())));
         } else {

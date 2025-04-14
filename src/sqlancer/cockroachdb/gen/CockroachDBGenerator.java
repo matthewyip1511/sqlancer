@@ -15,7 +15,7 @@ public abstract class CockroachDBGenerator extends AbstractGenerator {
         this.globalState = globalState;
     }
 
-    static void addColumns(StringBuilder sb, List<CockroachDBColumn> columns, boolean allowOrdering) {
+    public static void addColumns(StringBuilder sb, List<CockroachDBColumn> columns, boolean allowOrdering) {
         sb.append("(");
         for (int i = 0; i < columns.size(); i++) {
             if (i != 0) {
